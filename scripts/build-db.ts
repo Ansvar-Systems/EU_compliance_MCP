@@ -249,6 +249,37 @@ function buildDatabase() {
         console.log(`  Loaded ${mappings.length} control mappings`);
       }
     }
+
+    // Load applicability rules
+    const applicabilityDir = join(SEED_DIR, 'applicability');
+    if (existsSync(applicabilityDir)) {
+      const applicabilityFiles = readdirSync(applicabilityDir).filter((f: string) => f.endsWith('.json'));
+
+      const insertApplicability = db.prepare(`
+        INSERT INTO applicability_rules (regulation, sector, subsector, applies, confidence, basis_article, notes)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+      `);
+
+      for (const file of applicabilityFiles) {
+        console.log(`Loading applicability rules from ${file}...`);
+        const content = readFileSync(join(applicabilityDir, file), 'utf-8');
+        const rules = JSON.parse(content);
+
+        for (const rule of rules) {
+          insertApplicability.run(
+            rule.regulation,
+            rule.sector,
+            rule.subsector || null,
+            rule.applies ? 1 : 0,
+            rule.confidence,
+            rule.basis_article || null,
+            rule.notes || null
+          );
+        }
+
+        console.log(`  Loaded ${rules.length} applicability rules`);
+      }
+    }
   } else {
     console.log('No seed directory found. Database created with empty tables.');
     console.log(`Create seed files in: ${SEED_DIR}`);

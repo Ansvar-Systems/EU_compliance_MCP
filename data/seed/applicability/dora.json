@@ -1,0 +1,92 @@
+[
+  {
+    "regulation": "DORA",
+    "sector": "financial",
+    "subsector": "bank",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Credit institutions are in scope under Art 2(1)(a)"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "financial",
+    "subsector": "insurance",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Insurance and reinsurance undertakings are in scope under Art 2(1)(d-e)"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "financial",
+    "subsector": "investment",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Investment firms are in scope under Art 2(1)(b)"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "financial",
+    "subsector": "payment",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Payment institutions and e-money institutions are in scope under Art 2(1)(c)"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "All financial entities as defined in Art 2(1) are in scope"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "ICT third-party service providers to financial entities may be in scope as critical third parties"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Healthcare sector is not within DORA scope (use NIS2)"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Energy sector is not within DORA scope (use NIS2)"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Manufacturing sector is not within DORA scope"
+  },
+  {
+    "regulation": "DORA",
+    "sector": "other",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "DORA applies only to financial sector entities"
+  }
+]

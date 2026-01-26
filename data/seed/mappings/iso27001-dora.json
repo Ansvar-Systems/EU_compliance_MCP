@@ -1,0 +1,106 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "DORA",
+    "articles": ["5", "6", "9", "10"],
+    "coverage": "full",
+    "notes": "Art 5-6 governance requirements, Art 9-10 ICT risk management policies"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "DORA",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Art 5 governance and organisation, Art 6 management body responsibilities"
+  },
+  {
+    "control_id": "A.5.23",
+    "control_name": "Information security for use of cloud services",
+    "regulation": "DORA",
+    "articles": ["28", "29", "30", "31"],
+    "coverage": "full",
+    "notes": "Chapter V covers ICT third-party risk management including cloud services"
+  },
+  {
+    "control_id": "A.5.29",
+    "control_name": "Information security during disruption",
+    "regulation": "DORA",
+    "articles": ["11", "12"],
+    "coverage": "full",
+    "notes": "Art 11 response and recovery, Art 12 backup policies and restoration"
+  },
+  {
+    "control_id": "A.5.30",
+    "control_name": "ICT readiness for business continuity",
+    "regulation": "DORA",
+    "articles": ["11", "12", "13"],
+    "coverage": "full",
+    "notes": "Art 11-13 cover business continuity, backup, restoration, and communication"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "DORA",
+    "articles": ["17", "18", "19", "20"],
+    "coverage": "full",
+    "notes": "Art 17 incident management, Art 19 major incident reporting (4h initial, 72h intermediate, 1 month final)"
+  },
+  {
+    "control_id": "A.8.2",
+    "control_name": "Privileged access rights",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "partial",
+    "notes": "Art 9(4)(c) requires access rights management"
+  },
+  {
+    "control_id": "A.8.5",
+    "control_name": "Secure authentication",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "partial",
+    "notes": "Art 9(4)(c) covers authentication mechanisms"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "DORA",
+    "articles": ["9", "24", "25", "26", "27"],
+    "coverage": "full",
+    "notes": "Art 9 vulnerability management, Chapter IV digital operational resilience testing"
+  },
+  {
+    "control_id": "A.8.16",
+    "control_name": "Monitoring activities",
+    "regulation": "DORA",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Art 9-10 require continuous monitoring of ICT systems"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "partial",
+    "notes": "Art 9(4)(d) covers data protection including cryptographic measures"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "DORA",
+    "articles": ["8"],
+    "coverage": "full",
+    "notes": "Art 8 covers identification of ICT assets including custom-developed systems"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "DORA",
+    "articles": ["24", "25", "26", "27"],
+    "coverage": "full",
+    "notes": "Chapter IV requires comprehensive digital operational resilience testing including TLPT"
+  }
+]

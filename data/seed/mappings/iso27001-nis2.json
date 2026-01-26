@@ -1,0 +1,98 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Art 21(2)(a) explicitly requires policies on risks and information system security"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "NIS2",
+    "articles": ["20", "21"],
+    "coverage": "full",
+    "notes": "Art 20 requires management body accountability, Art 21 requires governance framework"
+  },
+  {
+    "control_id": "A.5.23",
+    "control_name": "Information security for use of cloud services",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "partial",
+    "notes": "Art 21(2)(d) covers supply chain security including cloud services"
+  },
+  {
+    "control_id": "A.5.29",
+    "control_name": "Information security during disruption",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Art 21(2)(c) requires business continuity and crisis management"
+  },
+  {
+    "control_id": "A.5.30",
+    "control_name": "ICT readiness for business continuity",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Art 21(2)(c) explicitly covers backup management, disaster recovery, crisis management"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "NIS2",
+    "articles": ["23", "24"],
+    "coverage": "full",
+    "notes": "Art 23 requires incident notification: early warning (24h), notification (72h), final report (1 month)"
+  },
+  {
+    "control_id": "A.8.2",
+    "control_name": "Privileged access rights",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "partial",
+    "notes": "Art 21(2)(i) requires access control policies"
+  },
+  {
+    "control_id": "A.8.5",
+    "control_name": "Secure authentication",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Art 21(2)(j) explicitly requires multi-factor or continuous authentication"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Art 21(2)(e) requires vulnerability handling and disclosure"
+  },
+  {
+    "control_id": "A.8.16",
+    "control_name": "Monitoring activities",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "partial",
+    "notes": "Art 21(2) covers security monitoring as part of risk management measures"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Art 21(2)(h) explicitly requires cryptography and encryption policies"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "NIS2",
+    "articles": ["21"],
+    "coverage": "partial",
+    "notes": "Art 21(2)(e) covers security in acquisition and development"
+  }
+]
