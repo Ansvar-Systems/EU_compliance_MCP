@@ -39,10 +39,6 @@ interface EurLexMetadata {
 // To add a new regulation: ingest it, and it's automatically monitored
 
 async function fetchEurLexMetadata(celexId: string): Promise<EurLexMetadata | null> {
-  // Use EUR-Lex REST API to get document metadata
-  const metadataUrl = `https://eur-lex.europa.eu/search.html?SUBDOM_INIT=LEGISLATION&DB_TYPE_OF_ACT=regulation&DTS_SUBDOM=LEGISLATION&typeOfActStatus=REGULATION&qid=1&FM_CODED=REG&type=advanced&DTS_DOM=ALL&page=1&lang=en&CELEX=${celexId}`;
-
-  // Alternative: use the document info endpoint
   const infoUrl = `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${celexId}`;
 
   try {
@@ -60,24 +56,50 @@ async function fetchEurLexMetadata(celexId: string): Promise<EurLexMetadata | nu
 
     const html = await response.text();
 
-    // Extract last modified from HTML meta tags or content
+    // Try multiple extraction methods in order of reliability:
+
+    // 1. ELI metadata (works for all document types including UNECE)
+    const eliDateDoc = html.match(/property="eli:date_document"[^>]*content="(\d{4}-\d{2}-\d{2})"/);
+    const eliDatePub = html.match(/property="eli:date_publication"[^>]*content="(\d{4}-\d{2}-\d{2})"/);
+    // Also try the reverse attribute order
+    const eliDateDoc2 = html.match(/content="(\d{4}-\d{2}-\d{2})"[^>]*property="eli:date_document"/);
+    const eliDatePub2 = html.match(/content="(\d{4}-\d{2}-\d{2})"[^>]*property="eli:date_publication"/);
+
+    // 2. Visible text patterns
     const dateMatch = html.match(/Date of document:\s*(\d{2}\/\d{2}\/\d{4})/i);
-    const lastModMatch = html.match(/ELI.*?(\d{4}-\d{2}-\d{2})/i);
+
+    // 3. Generic ELI date pattern (fallback)
+    const genericEli = html.match(/eli[^>]*(\d{4}-\d{2}-\d{2})/i);
+
     const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
 
-    // Check for consolidated versions indicator
-    const hasConsolidated = html.includes('Consolidated text') || html.includes('consolidated version');
+    // Use the best available date (prefer publication date for tracking updates)
+    const lastModified =
+      eliDatePub?.[1] || eliDatePub2?.[1] ||
+      eliDateDoc?.[1] || eliDateDoc2?.[1] ||
+      genericEli?.[1] ||
+      (dateMatch?.[1] ? convertDateFormat(dateMatch[1]) : null) ||
+      'unknown';
 
     return {
       celexId,
-      lastModified: lastModMatch?.[1] || dateMatch?.[1] || 'unknown',
+      lastModified,
       title: titleMatch?.[1]?.trim() || 'Unknown',
-      dateDocument: dateMatch?.[1] || 'unknown',
+      dateDocument: eliDateDoc?.[1] || eliDateDoc2?.[1] || 'unknown',
     };
   } catch (error) {
     console.error(`Error fetching metadata for ${celexId}:`, error);
     return null;
   }
+}
+
+// Convert DD/MM/YYYY to YYYY-MM-DD
+function convertDateFormat(date: string): string {
+  const parts = date.split('/');
+  if (parts.length === 3) {
+    return `${parts[2]}-${parts[1]}-${parts[0]}`;
+  }
+  return date;
 }
 
 // Sync mode: update database with current EUR-Lex versions
