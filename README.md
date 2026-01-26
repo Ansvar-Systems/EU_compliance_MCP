@@ -26,47 +26,27 @@ An open-source [Model Context Protocol](https://modelcontextprotocol.io/) server
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/Ansvar-Systems/EU_compliance_MCP.git
-cd EU_compliance_MCP
-
-# Install dependencies
-npm install
-
-# Build the database from seed files
-npm run build:db
-
-# Build TypeScript
-npm run build
-```
-
-## Usage with Claude Desktop
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "eu-compliance": {
-      "command": "node",
-      "args": ["/path/to/EU_compliance_MCP/dist/index.js"]
-    }
-  }
-}
-```
-
-Or use npx (after publishing to npm):
+Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
 
 ```json
 {
   "mcpServers": {
     "eu-compliance": {
       "command": "npx",
-      "args": ["-y", "eu-compliance-mcp"]
+      "args": ["-y", "github:Ansvar-Systems/EU_compliance_MCP"]
     }
   }
 }
+```
+
+Restart Claude Desktop. The server will be built automatically on first run.
+
+### Local Development
+
+```bash
+git clone https://github.com/Ansvar-Systems/EU_compliance_MCP.git
+cd EU_compliance_MCP
+npm install  # Builds TypeScript and database automatically
 ```
 
 ## Available Tools

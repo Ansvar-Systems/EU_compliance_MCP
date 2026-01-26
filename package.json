@@ -16,6 +16,7 @@
     "ingest": "tsx scripts/ingest-eurlex.ts",
     "check-updates": "tsx scripts/check-updates.ts",
     "lint": "eslint src --ext .ts",
+    "prepare": "npm run build && npm run build:db",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -43,7 +44,9 @@
   },
   "files": [
     "dist",
-    "data/seed"
+    "data",
+    "scripts",
+    "src"
   ],
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",
