@@ -20,6 +20,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: npm ci --ignore-scripts
+      - run: npm rebuild better-sqlite3
       - run: npm run build
       - run: npm run build:db
       - run: npm publish --access public --provenance --ignore-scripts
