@@ -10,7 +10,7 @@ description: |
 author: Ansvar Systems
 authorUrl: https://ansvar.ai
 repository: https://github.com/ansvar-systems/eu-regulations-mcp
-license: MIT
+license: Apache-2.0
 
 categories:
   - legal-and-compliance

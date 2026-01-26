@@ -36,7 +36,7 @@
     "llm"
   ],
   "author": "Ansvar Systems <hello@ansvar.ai> (https://ansvar.ai)",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ansvar-Systems/EU_compliance_MCP.git"

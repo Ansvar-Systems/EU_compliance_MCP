@@ -219,9 +219,7 @@ We build AI-accelerated threat modeling tools for automotive and financial servi
 
 ## License
 
-MIT License. Use it however you want. Keep the attribution.
-
-The "EU Regulations MCP" name and Ansvar Systems branding are trademarks.
+Apache License 2.0. See [LICENSE](./LICENSE) for details.
 
 ---
 
