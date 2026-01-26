@@ -254,6 +254,14 @@ To trigger auto-update (re-ingest all + publish):
 
 ---
 
+## Disclaimer
+
+**This tool is not legal advice.** Regulation text is sourced verbatim from EUR-Lex and UNECE. Control mappings, applicability rules, and cross-references are interpretive aids — useful for compliance research, but not a substitute for qualified legal counsel.
+
+Always verify against official sources for compliance decisions.
+
+---
+
 ## About Ansvar Systems
 
 We build AI-accelerated threat modeling tools for automotive and financial services. This MCP server powers our internal compliance workflows — we're sharing it because navigating EU regulations shouldn't require a law degree.
