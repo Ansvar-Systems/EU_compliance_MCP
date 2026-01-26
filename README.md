@@ -13,14 +13,16 @@ An open-source [Model Context Protocol](https://modelcontextprotocol.io/) server
 
 ## Regulations (Phase 1)
 
-| Regulation | Status | Articles |
-|------------|--------|----------|
-| GDPR | Sample | 5 |
-| NIS2 | Pending | - |
-| DORA | Pending | - |
-| AI Act | Pending | - |
-| Cyber Resilience Act | Pending | - |
-| EU Cybersecurity Act | Pending | - |
+| Regulation | Status | Articles | Definitions |
+|------------|--------|----------|-------------|
+| GDPR | ✅ Complete | 99 | 23 |
+| NIS2 | ✅ Complete | 46 | 37 |
+| DORA | ✅ Complete | 64 | 64 |
+| AI Act | ✅ Complete | 113 | 65 |
+| Cyber Resilience Act | ✅ Complete | 71 | 49 |
+| EU Cybersecurity Act | ✅ Complete | 69 | 21 |
+
+**Total: 462 articles, 259 definitions**
 
 ## Installation
 
@@ -119,6 +121,35 @@ Look up official definitions from regulations.
 Input: { term: "personal data" }
 Returns: Definition from GDPR Article 4
 ```
+
+## Data Sources
+
+All regulation text is sourced directly from [EUR-Lex](https://eur-lex.europa.eu/) using the official HTML format.
+
+### Ingesting Regulations
+
+```bash
+# Ingest a regulation from EUR-Lex
+npm run ingest -- 32016R0679 data/seed/gdpr.json
+
+# Check for regulation updates
+npm run check-updates
+```
+
+Known CELEX IDs:
+- `32016R0679` - GDPR
+- `32022L2555` - NIS2
+- `32022R2554` - DORA
+- `32024R1689` - AI Act
+- `32024R2847` - Cyber Resilience Act
+- `32019R0881` - EU Cybersecurity Act
+
+### Control Mappings & Applicability
+
+| Data Type | Count |
+|-----------|-------|
+| ISO 27001:2022 Control Mappings | 39 |
+| Sector Applicability Rules | 27 |
 
 ## Development
 
