@@ -32,12 +32,19 @@ Thank you for your interest in contributing to the EU Regulations MCP Server! Th
 
 ### Additional Regulations
 
-We welcome contributions adding new EU regulations. To add a regulation:
+We welcome contributions adding new EU regulations. Adding a regulation is **one command**:
 
-1. Create a JSON file in `data/seed/` following the existing structure
-2. Use the EUR-Lex ingestion script: `npm run ingest -- <CELEX_ID> data/seed/<name>.json`
-3. Verify article and definition counts match the source
-4. Update README.md with the new regulation
+```bash
+npx tsx scripts/ingest-eurlex.ts <CELEX_ID> data/seed/<name>.json
+npm run build:db
+```
+
+That's it! The regulation is automatically:
+- Added to the database
+- Monitored by the daily EUR-Lex freshness checker
+- Included in auto-update workflows
+
+After ingesting, update README.md with the new regulation counts.
 
 ### Cross-Reference Mappings
 
@@ -96,4 +103,4 @@ Open an issue or reach out at hello@ansvar.ai.
 
 ---
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+By contributing, you agree that your contributions will be licensed under the Apache License 2.0.

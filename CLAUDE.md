@@ -23,6 +23,7 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 | AI_ACT | EU AI Act | 32024R1689 | EUR-Lex |
 | CRA | Cyber Resilience Act | 32024R2847 | EUR-Lex |
 | CYBERSECURITY_ACT | EU Cybersecurity Act | 32019R0881 | EUR-Lex |
+| EIDAS2 | European Digital Identity (eIDAS 2.0) | 02014R0910-20241018 | EUR-Lex (consolidated) |
 | UN_R155 | Vehicle Cybersecurity (UNECE) | 42021X0387 | EUR-Lex/UNECE |
 | UN_R156 | Vehicle Software Updates (UNECE) | 42021X0388 | EUR-Lex/UNECE |
 
@@ -157,10 +158,22 @@ Manual trigger with `auto_update: true`:
 - `.github/workflows/check-updates.yml` - Daily workflow
 - `.github/workflows/publish.yml` - npm publish on tag
 
+## GitHub Actions Secrets
+
+For maintainers and forks:
+
+| Secret | Required For | How to Get |
+|--------|--------------|------------|
+| `NPM_TOKEN` | `publish.yml` | npm → Access Tokens → Generate (Automation) |
+
+The `GITHUB_TOKEN` is automatic and used for:
+- Creating/updating issues in `check-updates.yml`
+- Pushing tags in auto-update mode
+
 ## Phase 2 Roadmap
 
 - [x] UN R156 (Software Update Management)
 - [x] Daily freshness monitoring
-- [ ] eIDAS 2.0 (Digital Identity)
-- [ ] ISO 27001 full control mappings
-- [ ] NIST CSF mappings
+- [x] eIDAS 2.0 (Digital Identity)
+- [x] ISO 27001 full control mappings (122 mappings across all 9 regulations)
+- [x] NIST CSF mappings (158 mappings across all 9 regulations)
