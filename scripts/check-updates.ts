@@ -80,6 +80,47 @@ async function fetchEurLexMetadata(celexId: string): Promise<EurLexMetadata | nu
   }
 }
 
+// Sync mode: update database with current EUR-Lex versions
+async function syncVersions(): Promise<void> {
+  console.log('Syncing EUR-Lex versions to database...\n');
+
+  if (!existsSync(DB_PATH)) {
+    console.log('Database not found. Run `npm run build:db` first.');
+    process.exit(1);
+  }
+
+  const db = new Database(DB_PATH);
+
+  const sources = db.prepare(`
+    SELECT regulation, celex_id FROM source_registry
+    WHERE celex_id IS NOT NULL AND celex_id != ''
+  `).all() as SourceRecord[];
+
+  const updateStmt = db.prepare(`
+    UPDATE source_registry SET eur_lex_version = ?, last_fetched = ?
+    WHERE regulation = ?
+  `);
+
+  const now = new Date().toISOString();
+  let updated = 0;
+
+  for (const source of sources) {
+    process.stdout.write(`${source.regulation}: `);
+    const metadata = await fetchEurLexMetadata(source.celex_id);
+
+    if (metadata && metadata.lastModified !== 'unknown') {
+      updateStmt.run(metadata.lastModified, now, source.regulation);
+      console.log(`synced to ${metadata.lastModified}`);
+      updated++;
+    } else {
+      console.log('skipped (unknown version)');
+    }
+  }
+
+  db.close();
+  console.log(`\n✓ Synced ${updated} regulation(s)`);
+}
+
 async function checkForUpdates(): Promise<void> {
   console.log('Checking EUR-Lex for regulation updates...\n');
 
@@ -126,20 +167,38 @@ async function checkForUpdates(): Promise<void> {
     const lastFetched = source.last_fetched || 'never';
     const eurLexVersion = metadata.lastModified;
 
-    if (source.eur_lex_version && source.eur_lex_version !== eurLexVersion) {
+    // Helper to compare dates (returns true if eurLex is newer)
+    const isNewer = (eurLex: string, local: string): boolean => {
+      if (eurLex === 'unknown' || !eurLex) return false;
+      try {
+        const eurLexDate = new Date(eurLex);
+        const localDate = new Date(local);
+        return eurLexDate > localDate;
+      } catch {
+        return false;
+      }
+    };
+
+    if (eurLexVersion === 'unknown') {
+      // UNECE or non-standard documents - can't auto-check
+      console.log('MANUAL CHECK REQUIRED');
+      console.log(`  Source type: Non-standard (UNECE/consolidated)`);
+      console.log(`  Last fetched: ${lastFetched}`);
+    } else if (!source.eur_lex_version) {
+      // First time checking - record the version but don't flag as update
+      console.log('VERSION NOT TRACKED');
+      console.log(`  EUR-Lex version: ${eurLexVersion}`);
+      console.log(`  Run ingest again to record version`);
+    } else if (isNewer(eurLexVersion, source.eur_lex_version)) {
+      // EUR-Lex has a newer version
       console.log('UPDATE AVAILABLE');
       console.log(`  Local version:  ${source.eur_lex_version}`);
       console.log(`  EUR-Lex version: ${eurLexVersion}`);
       updates.push({
         id: source.regulation,
         celex_id: source.celex_id,
-        reason: `Version changed: ${source.eur_lex_version} -> ${eurLexVersion}`
+        reason: `Newer version: ${source.eur_lex_version} -> ${eurLexVersion}`
       });
-    } else if (!source.eur_lex_version) {
-      // First time checking - record the version but don't flag as update
-      console.log('VERSION NOT TRACKED');
-      console.log(`  EUR-Lex version: ${eurLexVersion}`);
-      console.log(`  Run ingest again to record version`);
     } else if (source.quality_status !== 'complete') {
       console.log(`INCOMPLETE (${source.quality_status})`);
       updates.push({
@@ -149,6 +208,7 @@ async function checkForUpdates(): Promise<void> {
       });
     } else {
       console.log('UP TO DATE');
+      console.log(`  EUR-Lex version: ${eurLexVersion}`);
       console.log(`  Last fetched: ${lastFetched}`);
     }
   }
@@ -196,7 +256,17 @@ export async function updateSourceRegistry(
   `).run(regulation, celexId, now.split('T')[0], now, articleCount, articleCount);
 }
 
-checkForUpdates().catch(err => {
-  console.error('Error:', err);
-  process.exit(1);
-});
+// Main execution
+const args = process.argv.slice(2);
+
+if (args.includes('--sync')) {
+  syncVersions().catch(err => {
+    console.error('Error:', err);
+    process.exit(1);
+  });
+} else {
+  checkForUpdates().catch(err => {
+    console.error('Error:', err);
+    process.exit(1);
+  });
+}

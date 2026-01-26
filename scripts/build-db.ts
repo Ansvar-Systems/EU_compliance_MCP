@@ -212,11 +212,13 @@ function buildDatabase() {
         }
       }
 
-      // Update source registry
+      // Update source registry with timestamps
+      const now = new Date().toISOString();
+      const eurLexVersion = regulation.effective_date || now.split('T')[0];
       db.prepare(`
-        INSERT INTO source_registry (regulation, celex_id, articles_expected, articles_parsed, quality_status)
-        VALUES (?, ?, ?, ?, 'complete')
-      `).run(regulation.id, regulation.celex_id, regulation.articles.length, regulation.articles.length);
+        INSERT INTO source_registry (regulation, celex_id, eur_lex_version, last_fetched, articles_expected, articles_parsed, quality_status)
+        VALUES (?, ?, ?, ?, ?, ?, 'complete')
+      `).run(regulation.id, regulation.celex_id, eurLexVersion, now, regulation.articles.length, regulation.articles.length);
 
       console.log(`  Loaded ${regulation.articles.length} articles, ${regulation.definitions?.length || 0} definitions`);
     }
