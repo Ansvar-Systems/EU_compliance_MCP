@@ -1,0 +1,99 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SMITHERY CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# Configuration for the Smithery MCP registry.
+# https://smithery.ai
+#
+# Smithery is a registry for discovering and sharing MCP servers.
+# Submitting your server here helps users find it.
+#
+# To submit:
+#   1. Push this file to your repository
+#   2. Go to https://smithery.ai/submit
+#   3. Enter your GitHub repository URL
+#
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────────────────
+# BASIC INFO
+# ───────────────────────────────────────────────────────────────────────────
+
+# Package name (should match package.json)
+name: your-mcp-server
+
+# Human-readable description
+description: MCP server providing access to [Your Content Domain]
+
+# Version (should match package.json)
+version: "0.1.0"
+
+# ───────────────────────────────────────────────────────────────────────────
+# RUNTIME
+# ───────────────────────────────────────────────────────────────────────────
+
+# Runtime environment
+runtime: node
+
+# Entry point (relative to package root)
+entrypoint: dist/index.js
+
+# ───────────────────────────────────────────────────────────────────────────
+# TRANSPORT
+# ───────────────────────────────────────────────────────────────────────────
+
+# Transport type (stdio for local execution)
+transport:
+  type: stdio
+
+# ───────────────────────────────────────────────────────────────────────────
+# METADATA
+# ───────────────────────────────────────────────────────────────────────────
+
+metadata:
+  # Author information
+  author: Ansvar Systems AB
+
+  # License (should match package.json)
+  license: Apache-2.0
+
+  # Homepage URL
+  homepage: https://github.com/ansvar-systems/your-mcp-server
+
+  # Documentation URL (if different from homepage)
+  documentation: https://github.com/ansvar-systems/your-mcp-server#readme
+
+  # Tags for discovery
+  tags:
+    - compliance
+    - legal
+    - regulations
+    - ansvar
+
+  # Category
+  category: legal
+
+  # Supported languages/regions
+  languages:
+    - en
+
+  # Minimum Node.js version
+  node_version: ">=18"
+
+# ───────────────────────────────────────────────────────────────────────────
+# TOOLS
+# ───────────────────────────────────────────────────────────────────────────
+# List the tools provided by this server
+
+tools:
+  - name: search_content
+    description: Full-text search across all content
+
+  - name: get_item
+    description: Retrieve a specific item by identifier
+
+  - name: list_sources
+    description: List available sources and their contents
+
+  - name: lookup_definition
+    description: Look up the official definition of a term

@@ -1,0 +1,129 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# NPM PUBLISH WORKFLOW
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# Automatically publishes to npm when a version tag is pushed.
+#
+# To trigger:
+#   1. Update version in package.json
+#   2. Commit: git commit -am "Release v0.2.0"
+#   3. Tag: git tag v0.2.0
+#   4. Push: git push origin main --tags
+#
+# Requirements:
+#   - NPM_TOKEN secret configured in repository settings
+#   - Repository has id-token: write permission for provenance
+#
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on tags like v0.1.0, v1.0.0, etc.
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEST JOB
+  # ─────────────────────────────────────────────────────────────────────────
+  # Run tests before publishing
+  # ─────────────────────────────────────────────────────────────────────────
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # PUBLISH JOB
+  # ─────────────────────────────────────────────────────────────────────────
+  # Publish to npm with provenance
+  # ─────────────────────────────────────────────────────────────────────────
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write  # Required for npm provenance
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      # ─────────────────────────────────────────────────────────────────────
+      # PUBLISH
+      # ─────────────────────────────────────────────────────────────────────
+      # --access public: Publish as public package
+      # --provenance: Include build provenance (requires id-token permission)
+      # ─────────────────────────────────────────────────────────────────────
+
+      - name: Publish to npm
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # DOCKER JOB (OPTIONAL)
+  # ─────────────────────────────────────────────────────────────────────────
+  # Uncomment to also publish to Docker Hub
+  # Requires DOCKER_USERNAME and DOCKER_TOKEN secrets
+  # ─────────────────────────────────────────────────────────────────────────
+
+  # docker:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Get version from tag
+  #       id: version
+  #       run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+  #
+  #     - name: Login to Docker Hub
+  #       uses: docker/login-action@v3
+  #       with:
+  #         username: ${{ secrets.DOCKER_USERNAME }}
+  #         password: ${{ secrets.DOCKER_TOKEN }}
+  #
+  #     - name: Build and push
+  #       uses: docker/build-push-action@v5
+  #       with:
+  #         push: true
+  #         tags: |
+  #           ansvar/your-mcp-server:latest
+  #           ansvar/your-mcp-server:${{ steps.version.outputs.VERSION }}

@@ -1,0 +1,94 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# GIT IGNORE
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────────────────
+# NODE
+# ───────────────────────────────────────────────────────────────────────────
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test coverage
+coverage/
+
+# npm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ───────────────────────────────────────────────────────────────────────────
+# DATA
+# ───────────────────────────────────────────────────────────────────────────
+
+# Database file (regenerated from seed data)
+# Uncomment this line if you want to exclude the database from git
+# data/database.db
+
+# SQLite journal files
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# ───────────────────────────────────────────────────────────────────────────
+# ENVIRONMENT
+# ───────────────────────────────────────────────────────────────────────────
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# ───────────────────────────────────────────────────────────────────────────
+# IDE
+# ───────────────────────────────────────────────────────────────────────────
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ───────────────────────────────────────────────────────────────────────────
+# OS
+# ───────────────────────────────────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ───────────────────────────────────────────────────────────────────────────
+# MISC
+# ───────────────────────────────────────────────────────────────────────────
+
+# TypeScript incremental compilation
+*.tsbuildinfo
+
+# Lock files (keep package-lock.json, ignore others)
+yarn.lock
+pnpm-lock.yaml
+
+# Temporary files
+tmp/
+temp/
+*.tmp

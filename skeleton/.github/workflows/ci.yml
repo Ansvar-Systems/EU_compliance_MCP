@@ -1,0 +1,114 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# CONTINUOUS INTEGRATION WORKFLOW
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# Runs on every push and pull request to ensure code quality.
+#
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/*'
+      - 'fix/*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # BUILD AND TEST
+  # ─────────────────────────────────────────────────────────────────────────
+
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Test on multiple Node.js versions
+        node-version: [18, 20, 22]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+
+      # ─────────────────────────────────────────────────────────────────────
+      # COVERAGE (only on Node 20)
+      # ─────────────────────────────────────────────────────────────────────
+
+      - name: Run tests with coverage
+        if: matrix.node-version == 20
+        run: npm run test:coverage
+
+      - name: Upload coverage report
+        if: matrix.node-version == 20
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # LINT (OPTIONAL)
+  # ─────────────────────────────────────────────────────────────────────────
+  # Uncomment if you have ESLint configured
+  # ─────────────────────────────────────────────────────────────────────────
+
+  # lint:
+  #   runs-on: ubuntu-latest
+  #
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: '20'
+  #         cache: 'npm'
+  #
+  #     - name: Install dependencies
+  #       run: npm ci --ignore-scripts
+  #
+  #     - name: Lint
+  #       run: npm run lint
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # TYPE CHECK
+  # ─────────────────────────────────────────────────────────────────────────
+
+  typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Type check
+        run: npx tsc --noEmit

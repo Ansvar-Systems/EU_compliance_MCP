@@ -1,0 +1,97 @@
+{
+  "compilerOptions": {
+    // ═══════════════════════════════════════════════════════════════════════
+    // OUTPUT CONFIGURATION
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // Target ES2022 for modern Node.js features
+    "target": "ES2022",
+
+    // Use ESNext modules (ES modules, not CommonJS)
+    "module": "ESNext",
+
+    // Use bundler-style module resolution
+    // This is the modern approach for Node.js with ES modules
+    "moduleResolution": "bundler",
+
+    // Output compiled JS to dist/ directory
+    "outDir": "./dist",
+
+    // Source files are in src/ directory
+    "rootDir": "./src",
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // DECLARATION FILES
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // Generate .d.ts declaration files
+    "declaration": true,
+
+    // Generate .d.ts.map files for debugging
+    "declarationMap": true,
+
+    // Generate source maps for debugging
+    "sourceMap": true,
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // STRICT MODE
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // Enable all strict type checking options
+    "strict": true,
+
+    // Ensure 'this' is typed correctly
+    "noImplicitThis": true,
+
+    // Report errors for unused locals
+    "noUnusedLocals": true,
+
+    // Report errors for unused parameters
+    "noUnusedParameters": true,
+
+    // Report errors for fallthrough cases in switch
+    "noFallthroughCasesInSwitch": true,
+
+    // Report errors for unreachable code
+    "noImplicitReturns": true,
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // INTEROP
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // Enable interop between CommonJS and ES modules
+    "esModuleInterop": true,
+
+    // Allow JSON imports
+    "resolveJsonModule": true,
+
+    // Skip type checking of declaration files (faster)
+    "skipLibCheck": true,
+
+    // Allow synthetic default imports
+    "allowSyntheticDefaultImports": true,
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // EMIT
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // Preserve import statements for better tree shaking
+    "verbatimModuleSyntax": false,
+
+    // Ensure consistent casing in imports
+    "forceConsistentCasingInFileNames": true
+  },
+
+  // Include source files
+  "include": [
+    "src/**/*"
+  ],
+
+  // Exclude these directories
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests",
+    "scripts"
+  ]
+}
