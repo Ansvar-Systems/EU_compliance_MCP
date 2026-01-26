@@ -2,7 +2,7 @@
 
 **The first open-source MCP server for European cybersecurity regulations.**
 
-Query DORA, NIS2, GDPR, the EU AI Act, Cyber Resilience Act, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query DORA, NIS2, GDPR, the EU AI Act, Cyber Resilience Act, UN R155/R156, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 Built by [Ansvar Systems](https://ansvar.ai) — Stockholm, Sweden
 
@@ -26,12 +26,14 @@ No more tab-switching. No more "wait, what article was that?" Just ask.
 | **EU AI Act** | Full text, 113 articles, 68 definitions | ✅ |
 | **Cyber Resilience Act** | Full text, 71 articles, 51 definitions | ✅ |
 | **EU Cybersecurity Act** | Full text, 69 articles, 22 definitions | ✅ |
+| **UN R155** (Vehicle Cybersecurity) | Full text, 12 sections + 5 annexes, 13 definitions | ✅ |
+| **UN R156** (Vehicle Software Updates) | Full text, 12 sections + 4 annexes, 11 definitions | ✅ |
 
-**Total: 462 articles, 273 definitions across 6 regulations**
+**Total: 495 articles, 297 definitions across 8 regulations**
 
 Plus:
 - **39 ISO 27001:2022 control mappings** to regulation requirements
-- **27 sector applicability rules** for determining which regulations apply
+- **43 sector applicability rules** for determining which regulations apply
 
 ---
 
@@ -112,7 +114,7 @@ List available regulations or show detailed structure.
 
 ```
 "List all regulations"
-→ Returns overview of all 6 regulations with article counts
+→ Returns overview of all 8 regulations with article counts
 ```
 
 ### `get_definitions`
@@ -160,6 +162,10 @@ Once connected, just ask naturally:
 - *"Does the EU AI Act apply to my recruitment screening tool?"*
 - *"What are the essential cybersecurity requirements under the Cyber Resilience Act?"*
 - *"Which regulations apply to a healthcare organization in Germany?"*
+- *"What threats must be mitigated under UN R155 Annex 5?"*
+- *"What is a Cybersecurity Management System (CSMS) under R155?"*
+- *"What are the requirements for OTA software updates under R156?"*
+- *"What is RXSWIN and how is it used in R156?"*
 
 ---
 
@@ -168,6 +174,7 @@ Once connected, just ask naturally:
 All content is sourced from official public sources:
 
 - **[EUR-Lex](https://eur-lex.europa.eu/)** — Official EU law portal (CC BY 4.0)
+- **[UNECE](https://unece.org/)** — UN Economic Commission for Europe (UN R155, R156)
 - **[ENISA](https://enisa.europa.eu/)** — EU Agency for Cybersecurity guidance
 
 No copyrighted ISO standards are included. For ISO 27001 full text, you'll need to purchase licenses from ISO.
@@ -194,18 +201,39 @@ npm run dev
 npm run build
 ```
 
-### Ingesting New Regulations
+### Adding New Regulations
+
+Adding a regulation is a single command — it's automatically monitored for updates:
 
 ```bash
-# Ingest a regulation from EUR-Lex
-npm run ingest -- 32016R0679 data/seed/gdpr.json
-
-# Check for regulation updates
-npm run check-updates
-
-# Rebuild the database
+# Ingest an EU regulation from EUR-Lex
+npx tsx scripts/ingest-eurlex.ts 32024R1183 data/seed/eidas2.json
 npm run build:db
+
+# That's it. The regulation is now:
+# - In the database
+# - Automatically monitored by daily EUR-Lex checker
+# - Included in auto-update workflow
 ```
+
+### Freshness Monitoring
+
+A GitHub Actions workflow runs daily at 6 AM UTC to ensure regulations stay current:
+
+- **Checks EUR-Lex RSS feeds** for recent legislative changes
+- **Compares versions** against local database
+- **Creates GitHub issues** when updates are available
+- **Auto-closes issues** when regulations are current
+
+To manually check for updates:
+
+```bash
+npm run check-updates
+```
+
+To trigger auto-update (re-ingest all + publish):
+1. Go to Actions → Daily EUR-Lex Update Check
+2. Run workflow with `auto_update: true`
 
 ---
 
