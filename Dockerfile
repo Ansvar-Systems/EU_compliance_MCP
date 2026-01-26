@@ -59,6 +59,11 @@ RUN chown -R nodejs:nodejs /app
 USER nodejs
 
 ENV NODE_ENV=production
+ENV PORT=3000
 
-# Start the MCP server
-CMD ["node", "dist/index.js"]
+# Expose HTTP port for Smithery hosted deployment
+EXPOSE 3000
+
+# Start the HTTP MCP server (for Smithery hosted deployment)
+# Use "node dist/index.js" for local stdio mode
+CMD ["node", "dist/http-server.js"]
