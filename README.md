@@ -1,112 +1,200 @@
-# EU Compliance MCP Server
+# EU Regulations MCP Server
 
-An open-source [Model Context Protocol](https://modelcontextprotocol.io/) server providing access to EU cybersecurity regulations. Query GDPR, NIS2, DORA, AI Act, and more directly from Claude.
+**The first open-source MCP server for European cybersecurity regulations.**
 
-## Features
+Query DORA, NIS2, GDPR, the EU AI Act, Cyber Resilience Act, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
-- **Full-text search** across all EU regulations
-- **Article retrieval** with chapter and cross-reference context
-- **Cross-framework comparison** (e.g., "How do DORA and NIS2 incident timelines differ?")
-- **ISO 27001:2022 control mapping** to regulation requirements
-- **Applicability checker** based on sector and entity type
-- **Official definitions** from regulation text
+Built by [Ansvar Systems](https://ansvar.ai) — Stockholm, Sweden
 
-## Regulations (Phase 1)
+---
 
-| Regulation | Status | Articles | Definitions |
-|------------|--------|----------|-------------|
-| GDPR | ✅ Complete | 99 | 26 |
-| NIS2 | ✅ Complete | 46 | 41 |
-| DORA | ✅ Complete | 64 | 65 |
-| AI Act | ✅ Complete | 113 | 68 |
-| Cyber Resilience Act | ✅ Complete | 71 | 51 |
-| EU Cybersecurity Act | ✅ Complete | 69 | 22 |
+## Why This Exists
 
-**Total: 462 articles, 273 definitions**
+European cybersecurity compliance is fragmented across dozens of PDFs, EUR-Lex pages, and regulatory documents. We built this for our own threat modeling work and figured others might find it useful.
 
-## Installation
+No more tab-switching. No more "wait, what article was that?" Just ask.
 
-Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+---
+
+## What's Included
+
+| Regulation | Coverage | Status |
+|------------|----------|--------|
+| **DORA** (Digital Operational Resilience Act) | Full text, 64 articles, 65 definitions | ✅ |
+| **NIS2** (Network and Information Security Directive) | Full text, 46 articles, 41 definitions | ✅ |
+| **GDPR** (General Data Protection Regulation) | Full text, 99 articles, 26 definitions | ✅ |
+| **EU AI Act** | Full text, 113 articles, 68 definitions | ✅ |
+| **Cyber Resilience Act** | Full text, 71 articles, 51 definitions | ✅ |
+| **EU Cybersecurity Act** | Full text, 69 articles, 22 definitions | ✅ |
+
+**Total: 462 articles, 273 definitions across 6 regulations**
+
+Plus:
+- **39 ISO 27001:2022 control mappings** to regulation requirements
+- **27 sector applicability rules** for determining which regulations apply
+
+---
+
+## Quick Start
+
+### Claude Desktop
+
+Add to your `claude_desktop_config.json`:
+
+**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
   "mcpServers": {
-    "eu-compliance": {
+    "eu-regulations": {
       "command": "npx",
-      "args": ["-y", "github:Ansvar-Systems/EU_compliance_MCP"]
+      "args": ["-y", "@ansvar/eu-regulations-mcp"]
     }
   }
 }
 ```
 
-Restart Claude Desktop. The server will be built automatically on first run.
+Restart Claude Desktop. Done.
 
-### Local Development
+### Cursor / VS Code
+
+```json
+{
+  "mcp.servers": {
+    "eu-regulations": {
+      "command": "npx",
+      "args": ["-y", "@ansvar/eu-regulations-mcp"]
+    }
+  }
+}
+```
+
+### Docker (Self-Hosted)
 
 ```bash
-git clone https://github.com/Ansvar-Systems/EU_compliance_MCP.git
-cd EU_compliance_MCP
-npm install  # Builds TypeScript and database automatically
+docker run -d --name eu-regs-mcp \
+  ansvar/eu-regulations-mcp:latest
 ```
+
+### From Source
+
+```bash
+git clone https://github.com/ansvar-systems/eu-regulations-mcp
+cd eu-regulations-mcp
+npm install
+npm run build
+npm start
+```
+
+---
 
 ## Available Tools
 
-### search_regulations
-Search across all regulations for matching articles.
+### `search_regulations`
+Full-text search across all regulations.
 
 ```
-Query: "incident reporting requirements"
-Returns: Relevant articles with highlighted snippets
+"Search for incident reporting requirements across all regulations"
+→ Returns matching articles from DORA, NIS2, GDPR with context
 ```
 
-### get_article
-Retrieve a specific article's full text.
+### `get_article`
+Retrieve a specific article with full text and context.
 
 ```
-Input: { regulation: "GDPR", article: "33" }
-Returns: Full article text with context
+"Get DORA Article 17"
+→ Returns ICT-related incident management process requirements
 ```
 
-### list_regulations
-List available regulations or show structure of a specific one.
-
-### compare_requirements
-Compare how different regulations address the same topic.
+### `list_regulations`
+List available regulations or show detailed structure.
 
 ```
-Input: { topic: "incident reporting", regulations: ["DORA", "NIS2", "GDPR"] }
-Returns: Side-by-side comparison with timelines
+"List all regulations"
+→ Returns overview of all 6 regulations with article counts
 ```
 
-### map_controls
+### `get_definitions`
+Get official definitions from any regulation.
+
+```
+"What does NIS2 define as an 'essential entity'?"
+→ Returns Article 3 definition + criteria
+```
+
+### `compare_requirements`
+Side-by-side comparison between frameworks.
+
+```
+"Compare incident reporting timelines between DORA and NIS2"
+→ DORA: 4 hours (major), 24 hours (intermediate)
+→ NIS2: 24 hours (early warning), 72 hours (full notification)
+```
+
+### `check_applicability`
+Determine if a regulation applies to an entity type.
+
+```
+"Does DORA apply to a Swedish fintech with 50 employees?"
+→ Yes, if providing financial services covered under Article 2
+```
+
+### `map_controls`
 Map ISO 27001:2022 controls to regulation requirements.
 
 ```
-Input: { framework: "ISO27001", control: "A.6.8" }
-Returns: Which articles satisfy this control
+"Which regulations require access control (A.5.15)?"
+→ Returns mappings to GDPR Art 32, DORA Art 9, NIS2 Art 21
 ```
 
-### check_applicability
-Determine which regulations apply to your organization.
+---
 
-```
-Input: { sector: "financial", subsector: "bank" }
-Returns: GDPR, DORA, NIS2 with confidence levels
-```
+## Example Queries
 
-### get_definitions
-Look up official definitions from regulations.
+Once connected, just ask naturally:
 
-```
-Input: { term: "personal data" }
-Returns: Definition from GDPR Article 4
-```
+- *"What are the risk management requirements under NIS2 Article 21?"*
+- *"How long do I have to report a security incident under DORA?"*
+- *"Compare GDPR breach notification with NIS2 incident reporting"*
+- *"Does the EU AI Act apply to my recruitment screening tool?"*
+- *"What are the essential cybersecurity requirements under the Cyber Resilience Act?"*
+- *"Which regulations apply to a healthcare organization in Germany?"*
+
+---
 
 ## Data Sources
 
-All regulation text is sourced directly from [EUR-Lex](https://eur-lex.europa.eu/) using the official HTML format.
+All content is sourced from official public sources:
 
-### Ingesting Regulations
+- **[EUR-Lex](https://eur-lex.europa.eu/)** — Official EU law portal (CC BY 4.0)
+- **[ENISA](https://enisa.europa.eu/)** — EU Agency for Cybersecurity guidance
+
+No copyrighted ISO standards are included. For ISO 27001 full text, you'll need to purchase licenses from ISO.
+
+---
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/ansvar-systems/eu-regulations-mcp
+cd eu-regulations-mcp
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Run in development
+npm run dev
+
+# Build for production
+npm run build
+```
+
+### Ingesting New Regulations
 
 ```bash
 # Ingest a regulation from EUR-Lex
@@ -114,86 +202,41 @@ npm run ingest -- 32016R0679 data/seed/gdpr.json
 
 # Check for regulation updates
 npm run check-updates
-```
 
-Known CELEX IDs:
-- `32016R0679` - GDPR
-- `32022L2555` - NIS2
-- `32022R2554` - DORA
-- `32024R1689` - AI Act
-- `32024R2847` - Cyber Resilience Act
-- `32019R0881` - EU Cybersecurity Act
-
-### Control Mappings & Applicability
-
-| Data Type | Count |
-|-----------|-------|
-| ISO 27001:2022 Control Mappings | 39 |
-| Sector Applicability Rules | 27 |
-
-## Development
-
-```bash
-# Run tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Build
-npm run build
-
-# Run in development
-npm run dev
-```
-
-## Adding Regulations
-
-Create a JSON file in `data/seed/`:
-
-```json
-{
-  "id": "REGULATION_ID",
-  "full_name": "Full Regulation Name",
-  "celex_id": "32024RXXXX",
-  "effective_date": "2024-01-01",
-  "articles": [
-    {
-      "number": "1",
-      "title": "Article Title",
-      "text": "Article text...",
-      "chapter": "I"
-    }
-  ],
-  "definitions": [
-    {
-      "term": "term name",
-      "definition": "definition text",
-      "article": "4"
-    }
-  ]
-}
-```
-
-Then rebuild the database:
-
-```bash
+# Rebuild the database
 npm run build:db
 ```
 
-## License
+---
 
-Apache-2.0
+## About Ansvar Systems
 
-## Contributing
+We build AI-accelerated threat modeling tools for automotive and financial services. This MCP server powers our internal compliance workflows — we're sharing it because navigating EU regulations shouldn't require a law degree.
 
-Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting PRs.
-
-## Acknowledgments
-
-- Regulation text sourced from [EUR-Lex](https://eur-lex.europa.eu/) (CC BY 4.0)
-- Built with the [MCP SDK](https://github.com/modelcontextprotocol/sdk)
+**[ansvar.ai](https://ansvar.ai)** — Threat modeling in days, not weeks.
 
 ---
 
-Made with care by [Ansvar Systems](https://ansvar.ai)
+## License
+
+MIT License. Use it however you want. Keep the attribution.
+
+The "EU Regulations MCP" name and Ansvar Systems branding are trademarks.
+
+---
+
+## Contributing
+
+PRs welcome, especially for:
+- Additional regulation coverage
+- Improved cross-references
+- National transposition details
+- Bug fixes and improvements
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+---
+
+<p align="center">
+  <sub>Built with care in Stockholm, Sweden</sub>
+</p>

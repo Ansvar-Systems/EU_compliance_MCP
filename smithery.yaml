@@ -1,0 +1,64 @@
+# Smithery Registry Configuration
+# https://smithery.ai
+
+name: eu-regulations-mcp
+title: EU Regulations MCP
+description: |
+  The first open-source MCP server for European cybersecurity regulations.
+  Query DORA, NIS2, GDPR, EU AI Act, Cyber Resilience Act, and more directly from Claude, Cursor, or any MCP-compatible client.
+
+author: Ansvar Systems
+authorUrl: https://ansvar.ai
+repository: https://github.com/ansvar-systems/eu-regulations-mcp
+license: MIT
+
+categories:
+  - legal-and-compliance
+  - reference-data
+  - regulatory
+
+tags:
+  - gdpr
+  - nis2
+  - dora
+  - ai-act
+  - cyber-resilience-act
+  - eu-regulations
+  - compliance
+  - cybersecurity
+  - european-union
+
+# Installation configuration
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@ansvar/eu-regulations-mcp']
+    })
+
+# Tools provided by this server
+tools:
+  - name: search_regulations
+    description: Full-text search across all EU regulations
+
+  - name: get_article
+    description: Retrieve a specific article with full text and context
+
+  - name: list_regulations
+    description: List available regulations and their structure
+
+  - name: compare_requirements
+    description: Side-by-side comparison between frameworks
+
+  - name: map_controls
+    description: Map ISO 27001 controls to regulation requirements
+
+  - name: check_applicability
+    description: Determine if regulations apply to an entity type
+
+  - name: get_definitions
+    description: Look up official definitions from regulations

@@ -39,7 +39,7 @@ function getDatabase(): Database.Database {
 
 const server = new Server(
   {
-    name: 'eu-compliance-mcp',
+    name: 'eu-regulations-mcp',
     version: '0.1.0',
   },
   {
@@ -285,7 +285,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('EU Compliance MCP server started');
+  console.error('EU Regulations MCP server started');
 }
 
 main().catch((error) => {
