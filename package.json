@@ -20,7 +20,8 @@
     "check-updates": "tsx scripts/check-updates.ts",
     "sync-versions": "tsx scripts/check-updates.ts --sync",
     "lint": "eslint src --ext .ts",
-    "postinstall": "test -f dist/index.js || npm run build"
+    "prepublishOnly": "npm run build && npm run build:db",
+    "postinstall": "(test -f dist/index.js || npm run build) && (test -f data/regulations.db || npm run build:db)"
   },
   "keywords": [
     "mcp",
