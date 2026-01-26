@@ -21,7 +21,7 @@ jobs:
 
       - run: npm ci --ignore-scripts
       - run: npm run build
-      # Database is pre-built and committed in data/regulations.db
+      - run: npm run build:db
       - run: npm publish --access public --provenance --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
