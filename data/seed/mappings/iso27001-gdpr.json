@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "GDPR",
+    "articles": ["24", "32"],
+    "coverage": "partial",
+    "notes": "GDPR requires appropriate technical and organisational measures (Art 32) and controller responsibility (Art 24)"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "GDPR",
+    "articles": ["33", "34"],
+    "coverage": "full",
+    "notes": "GDPR requires notification of personal data breaches within 72 hours (Art 33) and communication to data subjects (Art 34)"
+  },
+  {
+    "control_id": "A.8.10",
+    "control_name": "Information deletion",
+    "regulation": "GDPR",
+    "articles": ["17"],
+    "coverage": "full",
+    "notes": "Right to erasure ('right to be forgotten') - Art 17"
+  },
+  {
+    "control_id": "A.8.11",
+    "control_name": "Data masking",
+    "regulation": "GDPR",
+    "articles": ["32"],
+    "coverage": "partial",
+    "notes": "GDPR recommends pseudonymisation as a security measure (Art 32)"
+  },
+  {
+    "control_id": "A.8.12",
+    "control_name": "Data leakage prevention",
+    "regulation": "GDPR",
+    "articles": ["32", "33"],
+    "coverage": "partial",
+    "notes": "Security of processing and breach notification requirements"
+  }
+]

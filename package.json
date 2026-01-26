@@ -1,0 +1,57 @@
+{
+  "name": "eu-compliance-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for EU cybersecurity regulations (GDPR, NIS2, DORA, AI Act, CRA, Cybersecurity Act)",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "eu-compliance-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "tsx src/index.ts",
+    "build:db": "tsx scripts/build-db.ts",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "compliance",
+    "gdpr",
+    "nis2",
+    "dora",
+    "ai-act",
+    "eu-regulations",
+    "cybersecurity"
+  ],
+  "author": "Ansvar Systems",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansvar-Systems/EU_compliance_MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP/issues"
+  },
+  "homepage": "https://github.com/Ansvar-Systems/EU_compliance_MCP#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "data/seed"
+  ],
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.0.10",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "better-sqlite3": "^12.6.2"
+  }
+}
