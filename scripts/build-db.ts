@@ -203,7 +203,7 @@ function buildDatabase() {
       // Insert definitions
       if (regulation.definitions) {
         const insertDefinition = db.prepare(`
-          INSERT INTO definitions (regulation, term, definition, article)
+          INSERT OR IGNORE INTO definitions (regulation, term, definition, article)
           VALUES (?, ?, ?, ?)
         `);
 
