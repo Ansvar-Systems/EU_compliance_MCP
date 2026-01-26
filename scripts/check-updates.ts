@@ -35,15 +35,8 @@ interface EurLexMetadata {
   consolidatedVersions?: string[];
 }
 
-// Known regulations to monitor
-const MONITORED_REGULATIONS = [
-  { celex_id: '32016R0679', id: 'GDPR', name: 'General Data Protection Regulation' },
-  { celex_id: '32022L2555', id: 'NIS2', name: 'NIS2 Directive' },
-  { celex_id: '32022R2554', id: 'DORA', name: 'Digital Operational Resilience Act' },
-  { celex_id: '32024R1689', id: 'AI_ACT', name: 'Artificial Intelligence Act' },
-  { celex_id: '32024R2847', id: 'CRA', name: 'Cyber Resilience Act' },
-  { celex_id: '32019R0881', id: 'CYBERSECURITY_ACT', name: 'EU Cybersecurity Act' },
-];
+// No hardcoded list - source_registry table IS the source of truth
+// To add a new regulation: ingest it, and it's automatically monitored
 
 async function fetchEurLexMetadata(celexId: string): Promise<EurLexMetadata | null> {
   // Use EUR-Lex REST API to get document metadata
@@ -98,32 +91,32 @@ async function checkForUpdates(): Promise<void> {
 
   const db = new Database(DB_PATH, { readonly: true });
 
-  // Get current source registry
+  // Get all regulations from source_registry - this IS the source of truth
   const sources = db.prepare(`
     SELECT regulation, celex_id, eur_lex_version, last_fetched, quality_status
     FROM source_registry
+    WHERE celex_id IS NOT NULL AND celex_id != ''
+    ORDER BY regulation
   `).all() as SourceRecord[];
 
-  const sourceMap = new Map(sources.map(s => [s.celex_id, s]));
+  if (sources.length === 0) {
+    console.log('No regulations found in source_registry.');
+    console.log('Ingest regulations first with: npx tsx scripts/ingest-eurlex.ts <CELEX_ID> <output.json>');
+    db.close();
+    process.exit(0);
+  }
 
+  console.log(`Found ${sources.length} regulation(s) to check\n`);
   console.log('Status Report');
   console.log('='.repeat(80));
 
   const updates: Array<{ id: string; celex_id: string; reason: string }> = [];
 
-  for (const reg of MONITORED_REGULATIONS) {
-    const source = sourceMap.get(reg.celex_id);
-
-    process.stdout.write(`\n${reg.id.padEnd(20)} (${reg.celex_id}): `);
-
-    if (!source) {
-      console.log('NOT INGESTED');
-      updates.push({ id: reg.id, celex_id: reg.celex_id, reason: 'Not yet ingested' });
-      continue;
-    }
+  for (const source of sources) {
+    process.stdout.write(`\n${source.regulation.padEnd(20)} (${source.celex_id}): `);
 
     // Fetch current EUR-Lex metadata
-    const metadata = await fetchEurLexMetadata(reg.celex_id);
+    const metadata = await fetchEurLexMetadata(source.celex_id);
 
     if (!metadata) {
       console.log('FETCH FAILED');
@@ -133,14 +126,27 @@ async function checkForUpdates(): Promise<void> {
     const lastFetched = source.last_fetched || 'never';
     const eurLexVersion = metadata.lastModified;
 
-    if (source.eur_lex_version !== eurLexVersion && source.eur_lex_version) {
+    if (source.eur_lex_version && source.eur_lex_version !== eurLexVersion) {
       console.log('UPDATE AVAILABLE');
       console.log(`  Local version:  ${source.eur_lex_version}`);
       console.log(`  EUR-Lex version: ${eurLexVersion}`);
-      updates.push({ id: reg.id, celex_id: reg.celex_id, reason: `Version changed: ${source.eur_lex_version} -> ${eurLexVersion}` });
+      updates.push({
+        id: source.regulation,
+        celex_id: source.celex_id,
+        reason: `Version changed: ${source.eur_lex_version} -> ${eurLexVersion}`
+      });
+    } else if (!source.eur_lex_version) {
+      // First time checking - record the version but don't flag as update
+      console.log('VERSION NOT TRACKED');
+      console.log(`  EUR-Lex version: ${eurLexVersion}`);
+      console.log(`  Run ingest again to record version`);
     } else if (source.quality_status !== 'complete') {
       console.log(`INCOMPLETE (${source.quality_status})`);
-      updates.push({ id: reg.id, celex_id: reg.celex_id, reason: `Quality status: ${source.quality_status}` });
+      updates.push({
+        id: source.regulation,
+        celex_id: source.celex_id,
+        reason: `Quality status: ${source.quality_status}`
+      });
     } else {
       console.log('UP TO DATE');
       console.log(`  Last fetched: ${lastFetched}`);
@@ -168,6 +174,10 @@ async function checkForUpdates(): Promise<void> {
     }
     console.log('\nThen: npm run build:db');
   }
+
+  // Output for CI: write CELEX IDs to file for workflow to use
+  const celexList = sources.map(s => s.celex_id).join('|');
+  console.log(`\n::set-output name=celex_pattern::${celexList}`);
 }
 
 // Also provide a function to update the source registry after ingestion

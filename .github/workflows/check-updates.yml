@@ -37,8 +37,25 @@ jobs:
       - name: Build TypeScript
         run: npm run build
 
+      - name: Get Monitored CELEX IDs from Database
+        id: celex
+        run: |
+          echo "Reading monitored regulations from database..."
+
+          # Extract CELEX IDs from source_registry table
+          CELEX_IDS=$(sqlite3 data/regulations.db "SELECT celex_id FROM source_registry WHERE celex_id IS NOT NULL AND celex_id != '' ORDER BY regulation" | tr '\n' '|' | sed 's/|$//')
+
+          if [ -z "$CELEX_IDS" ]; then
+            echo "No regulations found in database"
+            echo "celex_pattern=" >> $GITHUB_OUTPUT
+          else
+            echo "Monitoring: $CELEX_IDS"
+            echo "celex_pattern=$CELEX_IDS" >> $GITHUB_OUTPUT
+          fi
+
       - name: Check EUR-Lex RSS Feeds
         id: rss
+        if: steps.celex.outputs.celex_pattern != ''
         run: |
           echo "Checking EUR-Lex RSS feeds for legislative updates..."
 
@@ -53,8 +70,8 @@ jobs:
             echo "Recent EUR-Lex legislative updates:"
             grep -oP '<title>\K[^<]+' eurlex_rss.xml | head -20 || echo "No items found"
 
-            # Check for our monitored CELEX IDs in recent updates
-            MONITORED="32016R0679|32022L2555|32022R2554|32024R1689|32024R2847|32019R0881"
+            # Check for monitored CELEX IDs (read from database)
+            MONITORED="${{ steps.celex.outputs.celex_pattern }}"
             if grep -qE "$MONITORED" eurlex_rss.xml; then
               echo "rss_match=true" >> $GITHUB_OUTPUT
               echo "Found matching regulation in RSS feed!"
@@ -209,15 +226,14 @@ jobs:
 
       - name: Re-ingest All Regulations
         run: |
-          echo "Re-ingesting all monitored regulations..."
+          echo "Re-ingesting all monitored regulations from database..."
 
-          # Re-ingest each regulation
-          npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json || true
-          npx tsx scripts/ingest-eurlex.ts 32022L2555 data/seed/nis2.json || true
-          npx tsx scripts/ingest-eurlex.ts 32022R2554 data/seed/dora.json || true
-          npx tsx scripts/ingest-eurlex.ts 32024R1689 data/seed/ai_act.json || true
-          npx tsx scripts/ingest-eurlex.ts 32024R2847 data/seed/cra.json || true
-          npx tsx scripts/ingest-eurlex.ts 32019R0881 data/seed/cybersecurity_act.json || true
+          # Read all regulations from source_registry and re-ingest each
+          sqlite3 data/regulations.db "SELECT regulation, celex_id FROM source_registry WHERE celex_id IS NOT NULL AND celex_id != ''" | while IFS='|' read -r reg celex; do
+            echo "Re-ingesting $reg ($celex)..."
+            OUTPUT_FILE="data/seed/${reg,,}.json"  # lowercase regulation name
+            npx tsx scripts/ingest-eurlex.ts "$celex" "$OUTPUT_FILE" || echo "Warning: Failed to ingest $reg"
+          done
 
       - name: Rebuild Database
         run: npm run build:db
