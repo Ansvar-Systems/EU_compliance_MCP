@@ -15,14 +15,14 @@ An open-source [Model Context Protocol](https://modelcontextprotocol.io/) server
 
 | Regulation | Status | Articles | Definitions |
 |------------|--------|----------|-------------|
-| GDPR | ✅ Complete | 99 | 23 |
-| NIS2 | ✅ Complete | 46 | 37 |
-| DORA | ✅ Complete | 64 | 64 |
-| AI Act | ✅ Complete | 113 | 65 |
-| Cyber Resilience Act | ✅ Complete | 71 | 49 |
-| EU Cybersecurity Act | ✅ Complete | 69 | 21 |
+| GDPR | ✅ Complete | 99 | 26 |
+| NIS2 | ✅ Complete | 46 | 41 |
+| DORA | ✅ Complete | 64 | 65 |
+| AI Act | ✅ Complete | 113 | 68 |
+| Cyber Resilience Act | ✅ Complete | 71 | 51 |
+| EU Cybersecurity Act | ✅ Complete | 69 | 22 |
 
-**Total: 462 articles, 259 definitions**
+**Total: 462 articles, 273 definitions**
 
 ## Installation
 

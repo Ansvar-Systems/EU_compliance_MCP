@@ -284,188 +284,208 @@
   ],
   "definitions": [
     {
+      "term": "network and information system",
+      "definition": "(a) an electronic communications network as defined in Article 2, point (1), of Directive (EU) 2018/1972; (b) any device or group of interconnected or related devices, one or more of which, pursuant to a programme, carry out automatic processing of digital data; or (c) digital data stored, processed, retrieved or transmitted by elements covered under points (a) and (b) for the purposes of their operation, use, protection and maintenance;",
+      "article": "6"
+    },
+    {
       "term": "security of network and information systems",
-      "definition": "the ability of network and information systems to resist, at a given level of confidence, any event that may compromise the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, those network and information systems",
+      "definition": "the ability of network and information systems to resist, at a given level of confidence, any event that may compromise the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, those network and information systems;",
       "article": "6"
     },
     {
       "term": "cybersecurity",
-      "definition": "cybersecurity as defined in Article 2, point (1), of Regulation (EU) 2019/881",
+      "definition": "cybersecurity as defined in Article 2, point (1), of Regulation (EU) 2019/881;",
       "article": "6"
     },
     {
       "term": "national cybersecurity strategy",
-      "definition": "a coherent framework of a Member State providing strategic objectives and priorities in the area of cybersecurity and the governance to achieve them in that Member State",
+      "definition": "a coherent framework of a Member State providing strategic objectives and priorities in the area of cybersecurity and the governance to achieve them in that Member State;",
       "article": "6"
     },
     {
       "term": "near miss",
-      "definition": "an event that could have compromised the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems, but that was successfully prevented from materialising or that did not materialise",
+      "definition": "an event that could have compromised the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems, but that was successfully prevented from materialising or that did not materialise;",
       "article": "6"
     },
     {
       "term": "incident",
-      "definition": "an event compromising the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems",
+      "definition": "an event compromising the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems;",
       "article": "6"
     },
     {
       "term": "large-scale cybersecurity incident",
-      "definition": "an incident which causes a level of disruption that exceeds a Member State's capacity to respond to it or which has a significant impact on at least two Member States",
+      "definition": "an incident which causes a level of disruption that exceeds a Member State's capacity to respond to it or which has a significant impact on at least two Member States;",
       "article": "6"
     },
     {
       "term": "incident handling",
-      "definition": "any actions and procedures aiming to prevent, detect, analyse, and contain or to respond to and recover from an incident",
+      "definition": "any actions and procedures aiming to prevent, detect, analyse, and contain or to respond to and recover from an incident;",
       "article": "6"
     },
     {
       "term": "risk",
-      "definition": "the potential for loss or disruption caused by an incident and is to be expressed as a combination of the magnitude of such loss or disruption and the likelihood of occurrence of the incident",
+      "definition": "the potential for loss or disruption caused by an incident and is to be expressed as a combination of the magnitude of such loss or disruption and the likelihood of occurrence of the incident;",
       "article": "6"
     },
     {
       "term": "cyber threat",
-      "definition": "a cyber threat as defined in Article 2, point (8), of Regulation (EU) 2019/881",
+      "definition": "a cyber threat as defined in Article 2, point (8), of Regulation (EU) 2019/881;",
       "article": "6"
     },
     {
       "term": "significant cyber threat",
-      "definition": "a cyber threat which, based on its technical characteristics, can be assumed to have the potential to have a severe impact on the network and information systems of an entity or the users of the entity's services by causing considerable material or non-material damage",
+      "definition": "a cyber threat which, based on its technical characteristics, can be assumed to have the potential to have a severe impact on the network and information systems of an entity or the users of the entity's services by causing considerable material or non-material damage;",
       "article": "6"
     },
     {
       "term": "ict product",
-      "definition": "an ICT product as defined in Article 2, point (12), of Regulation (EU) 2019/881",
+      "definition": "an ICT product as defined in Article 2, point (12), of Regulation (EU) 2019/881;",
       "article": "6"
     },
     {
       "term": "ict service",
-      "definition": "an ICT service as defined in Article 2, point (13), of Regulation (EU) 2019/881",
+      "definition": "an ICT service as defined in Article 2, point (13), of Regulation (EU) 2019/881;",
       "article": "6"
     },
     {
       "term": "ict process",
-      "definition": "an ICT process as defined in Article 2, point (14), of Regulation (EU) 2019/881",
+      "definition": "an ICT process as defined in Article 2, point (14), of Regulation (EU) 2019/881;",
       "article": "6"
     },
     {
       "term": "vulnerability",
-      "definition": "a weakness, susceptibility or flaw of ICT products or ICT services that can be exploited by a cyber threat",
+      "definition": "a weakness, susceptibility or flaw of ICT products or ICT services that can be exploited by a cyber threat;",
       "article": "6"
     },
     {
       "term": "standard",
-      "definition": "a standard as defined in Article 2, point (1), of Regulation (EU) No 1025/2012 of the European Parliament and of the Council (29)",
+      "definition": "a standard as defined in Article 2, point (1), of Regulation (EU) No 1025/2012 of the European Parliament and of the Council (29);",
       "article": "6"
     },
     {
       "term": "technical specification",
-      "definition": "a technical specification as defined in Article 2, point (4), of Regulation (EU) No 1025/2012",
+      "definition": "a technical specification as defined in Article 2, point (4), of Regulation (EU) No 1025/2012;",
       "article": "6"
     },
     {
       "term": "internet exchange point",
-      "definition": "a network facility which enables the interconnection of more than two independent networks (autonomous systems), primarily for the purpose of facilitating the exchange of internet traffic, which provides interconnection only for autonomous systems and which neither requires the internet traffic passing between any pair of participating autonomous systems to pass through any third autonomous system nor alters or otherwise interferes with such traffic",
+      "definition": "a network facility which enables the interconnection of more than two independent networks (autonomous systems), primarily for the purpose of facilitating the exchange of internet traffic, which provides interconnection only for autonomous systems and which neither requires the internet traffic passing between any pair of participating autonomous systems to pass through any third autonomous system nor alters or otherwise interferes with such traffic;",
+      "article": "6"
+    },
+    {
+      "term": "domain name system",
+      "definition": "a hierarchical distributed naming system which enables the identification of internet services and resources, allowing end-user devices to use internet routing and connectivity services to reach those services and resources;",
       "article": "6"
     },
     {
       "term": "dns service provider",
-      "definition": "an entity that provides: (a) publicly available recursive domain name resolution services for internet end-users",
+      "definition": "an entity that provides: (a) publicly available recursive domain name resolution services for internet end-users; or (b) authoritative domain name resolution services for third-party use, with the exception of root name servers;",
+      "article": "6"
+    },
+    {
+      "term": "top-level domain name registry",
+      "definition": "an entity which has been delegated a specific TLD and is responsible for administering the TLD including the registration of domain names under the TLD and the technical operation of the TLD, including the operation of its name servers, the maintenance of its databases and the distribution of TLD zone files across name servers, irrespective of whether any of those operations are carried out by the entity itself or are outsourced, but excluding situations where TLD names are used by a registry only for its own use;",
       "article": "6"
     },
     {
       "term": "entity providing domain name registration services",
-      "definition": "a registrar or an agent acting on behalf of registrars, such as a privacy or proxy registration service provider or reseller",
+      "definition": "a registrar or an agent acting on behalf of registrars, such as a privacy or proxy registration service provider or reseller;",
       "article": "6"
     },
     {
       "term": "digital service",
-      "definition": "a service as defined in Article 1(1), point (b), of Directive (EU) 2015/1535 of the European Parliament and of the Council (30)",
+      "definition": "a service as defined in Article 1(1), point (b), of Directive (EU) 2015/1535 of the European Parliament and of the Council (30);",
       "article": "6"
     },
     {
       "term": "trust service",
-      "definition": "a trust service as defined in Article 3, point (16), of Regulation (EU) No 910/2014",
+      "definition": "a trust service as defined in Article 3, point (16), of Regulation (EU) No 910/2014;",
       "article": "6"
     },
     {
       "term": "trust service provider",
-      "definition": "a trust service provider as defined in Article 3, point (19), of Regulation (EU) No 910/2014",
+      "definition": "a trust service provider as defined in Article 3, point (19), of Regulation (EU) No 910/2014;",
       "article": "6"
     },
     {
       "term": "qualified trust service",
-      "definition": "a qualified trust service as defined in Article 3, point (17), of Regulation (EU) No 910/2014",
+      "definition": "a qualified trust service as defined in Article 3, point (17), of Regulation (EU) No 910/2014;",
       "article": "6"
     },
     {
       "term": "qualified trust service provider",
-      "definition": "a qualified trust service provider as defined in Article 3, point (20), of Regulation (EU) No 910/2014",
+      "definition": "a qualified trust service provider as defined in Article 3, point (20), of Regulation (EU) No 910/2014;",
       "article": "6"
     },
     {
       "term": "online marketplace",
-      "definition": "an online marketplace as defined in Article 2, point (n), of Directive 2005/29/EC of the European Parliament and of the Council (31)",
+      "definition": "an online marketplace as defined in Article 2, point (n), of Directive 2005/29/EC of the European Parliament and of the Council (31);",
       "article": "6"
     },
     {
       "term": "online search engine",
-      "definition": "an online search engine as defined in Article 2, point (5), of Regulation (EU) 2019/1150 of the European Parliament and of the Council (32)",
+      "definition": "an online search engine as defined in Article 2, point (5), of Regulation (EU) 2019/1150 of the European Parliament and of the Council (32);",
       "article": "6"
     },
     {
       "term": "cloud computing service",
-      "definition": "a digital service that enables on-demand administration and broad remote access to a scalable and elastic pool of shareable computing resources, including where such resources are distributed across several locations",
+      "definition": "a digital service that enables on-demand administration and broad remote access to a scalable and elastic pool of shareable computing resources, including where such resources are distributed across several locations;",
       "article": "6"
     },
     {
       "term": "data centre service",
-      "definition": "a service that encompasses structures, or groups of structures, dedicated to the centralised accommodation, interconnection and operation of IT and network equipment providing data storage, processing and transport services together with all the facilities and infrastructures for power distribution and environmental control",
+      "definition": "a service that encompasses structures, or groups of structures, dedicated to the centralised accommodation, interconnection and operation of IT and network equipment providing data storage, processing and transport services together with all the facilities and infrastructures for power distribution and environmental control;",
       "article": "6"
     },
     {
       "term": "content delivery network",
-      "definition": "a network of geographically distributed servers for the purpose of ensuring high availability, accessibility or fast delivery of digital content and services to internet users on behalf of content and service providers",
+      "definition": "a network of geographically distributed servers for the purpose of ensuring high availability, accessibility or fast delivery of digital content and services to internet users on behalf of content and service providers;",
       "article": "6"
     },
     {
       "term": "social networking services platform",
-      "definition": "a platform that enables end-users to connect, share, discover and communicate with each other across multiple devices, in particular via chats, posts, videos and recommendations",
+      "definition": "a platform that enables end-users to connect, share, discover and communicate with each other across multiple devices, in particular via chats, posts, videos and recommendations;",
       "article": "6"
     },
     {
       "term": "representative",
-      "definition": "a natural or legal person established in the Union explicitly designated to act on behalf of a DNS service provider, a TLD name registry, an entity providing domain name registration services, a cloud computing service provider, a data centre service provider, a content delivery network provider, a managed service provider, a managed security service provider, or a provider of an online marketplace, of an online search engine or of a social networking services platform that is not established in the Union, which may be addressed by a competent authority or a CSIRT in the place of the entity itself with regard to the obligations of that entity under this Directive",
+      "definition": "a natural or legal person established in the Union explicitly designated to act on behalf of a DNS service provider, a TLD name registry, an entity providing domain name registration services, a cloud computing service provider, a data centre service provider, a content delivery network provider, a managed service provider, a managed security service provider, or a provider of an online marketplace, of an online search engine or of a social networking services platform that is not established in the Union, which may be addressed by a competent authority or a CSIRT in the place of the entity itself with regard to the obligations of that entity under this Directive;",
       "article": "6"
     },
     {
       "term": "public administration entity",
-      "definition": "an entity recognised as such in a Member State in accordance with national law, not including the judiciary, parliaments or central banks, which complies with the following criteria: (a) it is established for the purpose of meeting needs in the general interest and does not have an industrial or commercial character",
+      "definition": "an entity recognised as such in a Member State in accordance with national law, not including the judiciary, parliaments or central banks, which complies with the following criteria: (a) it is established for the purpose of meeting needs in the general interest and does not have an industrial or commercial character; (b) it has legal personality or is entitled by law to act on behalf of another entity with legal personality; (c) it is financed, for the most part, by the State, regional authorities or by other bodies governed by public law, is subject to management supervision by those authorities or bodies, or has an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional authorities or by other bodies governed by public law; (d) it has the power to address to natural or legal persons administrative or regulatory decisions affecting their rights in the cross-border movement of persons, goods, services or capital;",
       "article": "6"
     },
     {
       "term": "public electronic communications network",
-      "definition": "a public electronic communications network as defined in Article 2, point (8), of Directive (EU) 2018/1972",
+      "definition": "a public electronic communications network as defined in Article 2, point (8), of Directive (EU) 2018/1972;",
       "article": "6"
     },
     {
       "term": "electronic communications service",
-      "definition": "an electronic communications service as defined in Article 2, point (4), of Directive (EU) 2018/1972",
+      "definition": "an electronic communications service as defined in Article 2, point (4), of Directive (EU) 2018/1972;",
       "article": "6"
     },
     {
       "term": "entity",
-      "definition": "a natural or legal person created and recognised as such under the national law of its place of establishment, which may, acting under its own name, exercise rights and be subject to obligations",
+      "definition": "a natural or legal person created and recognised as such under the national law of its place of establishment, which may, acting under its own name, exercise rights and be subject to obligations;",
       "article": "6"
     },
     {
       "term": "managed service provider",
-      "definition": "an entity that provides services related to the installation, management, operation or maintenance of ICT products, networks, infrastructure, applications or any other network and information systems, via assistance or active administration carried out either on customers' premises or remotely",
+      "definition": "an entity that provides services related to the installation, management, operation or maintenance of ICT products, networks, infrastructure, applications or any other network and information systems, via assistance or active administration carried out either on customers' premises or remotely;",
       "article": "6"
     },
     {
       "term": "managed security service provider",
-      "definition": "a managed service provider that carries out or provides assistance for activities relating to cybersecurity risk management",
+      "definition": "a managed service provider that carries out or provides assistance for activities relating to cybersecurity risk management;",
+      "article": "6"
+    },
+    {
+      "term": "research organisation",
+      "definition": "an entity which has as its primary goal to conduct applied research or experimental development with a view to exploiting the results of that research for commercial purposes, but which does not include educational institutions. COORDINATED CYBERSECURITY FRAMEWORKS",
       "article": "6"
     }
   ]

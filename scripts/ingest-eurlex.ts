@@ -138,8 +138,15 @@ function parseArticles(html: string, celexId: string): { articles: Article[]; de
       .replace(/\s+/g, ' ')
       .replace(/[\u2018\u2019]/g, "'"); // Curly quotes to straight
 
-    // Parse definitions like: (1) 'personal data' means definition;
-    const defRegex = /\((\d+)\)\s*'([^']+)'\s+means\s+([^;]+);/g;
+    // Parse definitions by extracting content between consecutive numbered entries
+    // This handles:
+    // - Complex definitions with internal periods/semicolons
+    // - 'term' or 'alternate' means... patterns (NIS2 Art 6)
+    // - 'term1', 'term2' and 'term3' mean... patterns (CRA Art 3)
+    // - 'term' of the something means... patterns (GDPR Art 4)
+    // - mean, respectively... patterns (CRA Art 3)
+    // - means: (a) ... patterns (complex definitions with sub-parts)
+    const defRegex = /\((\d+)\)\s*'([^']+)'(?:[^(]*?)means?[,:;]?\s+(.+?)(?=\(\d+\)\s*'|$)/g;
     let defMatch;
     while ((defMatch = defRegex.exec(normalizedText)) !== null) {
       const term = defMatch[2].trim().toLowerCase();

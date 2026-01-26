@@ -392,322 +392,327 @@
   "definitions": [
     {
       "term": "digital operational resilience",
-      "definition": "the ability of a financial entity to build, assure and review its operational integrity and reliability by ensuring, either directly or indirectly through the use of services provided by ICT third-party service providers, the full range of ICT-related capabilities needed to address the security of the network and information systems which a financial entity uses, and which support the continued provision of financial services and their quality, including throughout disruptions",
+      "definition": "the ability of a financial entity to build, assure and review its operational integrity and reliability by ensuring, either directly or indirectly through the use of services provided by ICT third-party service providers, the full range of ICT-related capabilities needed to address the security of the network and information systems which a financial entity uses, and which support the continued provision of financial services and their quality, including throughout disruptions;",
       "article": "3"
     },
     {
       "term": "network and information system",
-      "definition": "a network and information system as defined in Article 6, point 1, of Directive (EU) 2022/2555",
+      "definition": "a network and information system as defined in Article 6, point 1, of Directive (EU) 2022/2555;",
       "article": "3"
     },
     {
       "term": "legacy ict system",
-      "definition": "an ICT system that has reached the end of its lifecycle (end-of-life), that is not suitable for upgrades or fixes, for technological or commercial reasons, or is no longer supported by its supplier or by an ICT third-party service provider, but that is still in use and supports the functions of the financial entity",
+      "definition": "an ICT system that has reached the end of its lifecycle (end-of-life), that is not suitable for upgrades or fixes, for technological or commercial reasons, or is no longer supported by its supplier or by an ICT third-party service provider, but that is still in use and supports the functions of the financial entity;",
       "article": "3"
     },
     {
       "term": "security of network and information systems",
-      "definition": "security of network and information systems as defined in Article 6, point 2, of Directive (EU) 2022/2555",
+      "definition": "security of network and information systems as defined in Article 6, point 2, of Directive (EU) 2022/2555;",
       "article": "3"
     },
     {
       "term": "ict risk",
-      "definition": "any reasonably identifiable circumstance in relation to the use of network and information systems which, if materialised, may compromise the security of the network and information systems, of any technology dependent tool or process, of operations and processes, or of the provision of services by producing adverse effects in the digital or physical environment",
+      "definition": "any reasonably identifiable circumstance in relation to the use of network and information systems which, if materialised, may compromise the security of the network and information systems, of any technology dependent tool or process, of operations and processes, or of the provision of services by producing adverse effects in the digital or physical environment;",
       "article": "3"
     },
     {
       "term": "information asset",
-      "definition": "a collection of information, either tangible or intangible, that is worth protecting",
+      "definition": "a collection of information, either tangible or intangible, that is worth protecting;",
       "article": "3"
     },
     {
       "term": "ict asset",
-      "definition": "a software or hardware asset in the network and information systems used by the financial entity",
+      "definition": "a software or hardware asset in the network and information systems used by the financial entity;",
       "article": "3"
     },
     {
       "term": "ict-related incident",
-      "definition": "a single event or a series of linked events unplanned by the financial entity that compromises the security of the network and information systems, and have an adverse impact on the availability, authenticity, integrity or confidentiality of data, or on the services provided by the financial entity",
+      "definition": "a single event or a series of linked events unplanned by the financial entity that compromises the security of the network and information systems, and have an adverse impact on the availability, authenticity, integrity or confidentiality of data, or on the services provided by the financial entity;",
       "article": "3"
     },
     {
       "term": "operational or security payment-related incident",
-      "definition": "a single event or a series of linked events unplanned by the financial entities referred to in Article 2(1), points (a) to (d), whether ICT-related or not, that has an adverse impact on the availability, authenticity, integrity or confidentiality of payment-related data, or on the payment-related services provided by the financial entity",
+      "definition": "a single event or a series of linked events unplanned by the financial entities referred to in Article 2(1), points (a) to (d), whether ICT-related or not, that has an adverse impact on the availability, authenticity, integrity or confidentiality of payment-related data, or on the payment-related services provided by the financial entity;",
       "article": "3"
     },
     {
       "term": "major ict-related incident",
-      "definition": "an ICT-related incident that has a high adverse impact on the network and information systems that support critical or important functions of the financial entity",
+      "definition": "an ICT-related incident that has a high adverse impact on the network and information systems that support critical or important functions of the financial entity;",
       "article": "3"
     },
     {
       "term": "major operational or security payment-related incident",
-      "definition": "an operational or security payment-related incident that has a high adverse impact on the payment-related services provided",
+      "definition": "an operational or security payment-related incident that has a high adverse impact on the payment-related services provided;",
       "article": "3"
     },
     {
       "term": "cyber threat",
-      "definition": "'cyber threat' as defined in Article 2, point (8), of Regulation (EU) 2019/881",
+      "definition": "'cyber threat' as defined in Article 2, point (8), of Regulation (EU) 2019/881;",
       "article": "3"
     },
     {
       "term": "significant cyber threat",
-      "definition": "a cyber threat the technical characteristics of which indicate that it could have the potential to result in a major ICT-related incident or a major operational or security payment-related incident",
+      "definition": "a cyber threat the technical characteristics of which indicate that it could have the potential to result in a major ICT-related incident or a major operational or security payment-related incident;",
       "article": "3"
     },
     {
       "term": "cyber-attack",
-      "definition": "a malicious ICT-related incident caused by means of an attempt perpetrated by any threat actor to destroy, expose, alter, disable, steal or gain unauthorised access to, or make unauthorised use of, an asset",
+      "definition": "a malicious ICT-related incident caused by means of an attempt perpetrated by any threat actor to destroy, expose, alter, disable, steal or gain unauthorised access to, or make unauthorised use of, an asset;",
       "article": "3"
     },
     {
       "term": "threat intelligence",
-      "definition": "information that has been aggregated, transformed, analysed, interpreted or enriched to provide the necessary context for decision-making and to enable relevant and sufficient understanding in order to mitigate the impact of an ICT-related incident or of a cyber threat, including the technical details of a cyber-attack, those responsible for the attack and their modus operandi and motivations",
+      "definition": "information that has been aggregated, transformed, analysed, interpreted or enriched to provide the necessary context for decision-making and to enable relevant and sufficient understanding in order to mitigate the impact of an ICT-related incident or of a cyber threat, including the technical details of a cyber-attack, those responsible for the attack and their modus operandi and motivations;",
       "article": "3"
     },
     {
       "term": "vulnerability",
-      "definition": "a weakness, susceptibility or flaw of an asset, system, process or control that can be exploited",
+      "definition": "a weakness, susceptibility or flaw of an asset, system, process or control that can be exploited;",
       "article": "3"
     },
     {
       "term": "threat-led penetration testing (tlpt)",
-      "definition": "a framework that mimics the tactics, techniques and procedures of real-life threat actors perceived as posing a genuine cyber threat, that delivers a controlled, bespoke, intelligence-led (red team) test of the financial entity's critical live production systems",
+      "definition": "a framework that mimics the tactics, techniques and procedures of real-life threat actors perceived as posing a genuine cyber threat, that delivers a controlled, bespoke, intelligence-led (red team) test of the financial entity's critical live production systems;",
       "article": "3"
     },
     {
       "term": "ict third-party risk",
-      "definition": "an ICT risk that may arise for a financial entity in relation to its use of ICT services provided by ICT third-party service providers or by subcontractors of the latter, including through outsourcing arrangements",
+      "definition": "an ICT risk that may arise for a financial entity in relation to its use of ICT services provided by ICT third-party service providers or by subcontractors of the latter, including through outsourcing arrangements;",
       "article": "3"
     },
     {
       "term": "ict third-party service provider",
-      "definition": "an undertaking providing ICT services",
+      "definition": "an undertaking providing ICT services;",
       "article": "3"
     },
     {
       "term": "ict intra-group service provider",
-      "definition": "an undertaking that is part of a financial group and that provides predominantly ICT services to financial entities within the same group or to financial entities belonging to the same institutional protection scheme, including to their parent undertakings, subsidiaries, branches or other entities that are under common ownership or control",
+      "definition": "an undertaking that is part of a financial group and that provides predominantly ICT services to financial entities within the same group or to financial entities belonging to the same institutional protection scheme, including to their parent undertakings, subsidiaries, branches or other entities that are under common ownership or control;",
       "article": "3"
     },
     {
       "term": "ict services",
-      "definition": "digital and data services provided through ICT systems to one or more internal or external users on an ongoing basis, including hardware as a service and hardware services which includes the provision of technical support via software or firmware updates by the hardware provider, excluding traditional analogue telephone services",
+      "definition": "digital and data services provided through ICT systems to one or more internal or external users on an ongoing basis, including hardware as a service and hardware services which includes the provision of technical support via software or firmware updates by the hardware provider, excluding traditional analogue telephone services;",
       "article": "3"
     },
     {
       "term": "critical or important function",
-      "definition": "a function, the disruption of which would materially impair the financial performance of a financial entity, or the soundness or continuity of its services and activities, or the discontinued, defective or failed performance of that function would materially impair the continuing compliance of a financial entity with the conditions and obligations of its authorisation, or with its other obligations under applicable financial services law",
+      "definition": "a function, the disruption of which would materially impair the financial performance of a financial entity, or the soundness or continuity of its services and activities, or the discontinued, defective or failed performance of that function would materially impair the continuing compliance of a financial entity with the conditions and obligations of its authorisation, or with its other obligations under applicable financial services law;",
       "article": "3"
     },
     {
       "term": "critical ict third-party service provider",
-      "definition": "an ICT third-party service provider designated as critical in accordance with Article 31",
+      "definition": "an ICT third-party service provider designated as critical in accordance with Article 31;",
       "article": "3"
     },
     {
       "term": "ict third-party service provider established in a third country",
-      "definition": "an ICT third-party service provider that is a legal person established in a third-country and that has entered into a contractual arrangement with a financial entity for the provision of ICT services",
+      "definition": "an ICT third-party service provider that is a legal person established in a third-country and that has entered into a contractual arrangement with a financial entity for the provision of ICT services;",
       "article": "3"
     },
     {
       "term": "subsidiary",
-      "definition": "a subsidiary undertaking within the meaning of Article 2, point (10), and Article 22 of Directive 2013/34/EU",
+      "definition": "a subsidiary undertaking within the meaning of Article 2, point (10), and Article 22 of Directive 2013/34/EU;",
       "article": "3"
     },
     {
       "term": "group",
-      "definition": "a group as defined in Article 2, point (11), of Directive 2013/34/EU",
+      "definition": "a group as defined in Article 2, point (11), of Directive 2013/34/EU;",
       "article": "3"
     },
     {
       "term": "parent undertaking",
-      "definition": "a parent undertaking within the meaning of Article 2, point (9), and Article 22 of Directive 2013/34/EU",
+      "definition": "a parent undertaking within the meaning of Article 2, point (9), and Article 22 of Directive 2013/34/EU;",
       "article": "3"
     },
     {
       "term": "ict subcontractor established in a third country",
-      "definition": "an ICT subcontractor that is a legal person established in a third-country and that has entered into a contractual arrangement either with an ICT third-party service provider, or with an ICT third-party service provider established in a third country",
+      "definition": "an ICT subcontractor that is a legal person established in a third-country and that has entered into a contractual arrangement either with an ICT third-party service provider, or with an ICT third-party service provider established in a third country;",
       "article": "3"
     },
     {
       "term": "ict concentration risk",
-      "definition": "an exposure to individual or multiple related critical ICT third-party service providers creating a degree of dependency on such providers so that the unavailability, failure or other type of shortfall of such provider may potentially endanger the ability of a financial entity to deliver critical or important functions, or cause it to suffer other types of adverse effects, including large losses, or endanger the financial stability of the Union as a whole",
+      "definition": "an exposure to individual or multiple related critical ICT third-party service providers creating a degree of dependency on such providers so that the unavailability, failure or other type of shortfall of such provider may potentially endanger the ability of a financial entity to deliver critical or important functions, or cause it to suffer other types of adverse effects, including large losses, or endanger the financial stability of the Union as a whole;",
       "article": "3"
     },
     {
       "term": "management body",
-      "definition": "a management body as defined in Article 4(1), point (36), of Directive 2014/65/EU, Article 3(1), point (7), of Directive 2013/36/EU, Article 2(1), point (s), of Directive 2009/65/EC of the European Parliament and of the Council (31), Article 2(1), point (45), of Regulation (EU) No 909/2014, Article 3(1), point (20), of Regulation (EU) 2016/1011, and in the relevant provision of the Regulation on markets in crypto-assets, or the equivalent persons who effectively run the entity or have key functions in accordance with relevant Union or national law",
+      "definition": "a management body as defined in Article 4(1), point (36), of Directive 2014/65/EU, Article 3(1), point (7), of Directive 2013/36/EU, Article 2(1), point (s), of Directive 2009/65/EC of the European Parliament and of the Council (31), Article 2(1), point (45), of Regulation (EU) No 909/2014, Article 3(1), point (20), of Regulation (EU) 2016/1011, and in the relevant provision of the Regulation on markets in crypto-assets, or the equivalent persons who effectively run the entity or have key functions in accordance with relevant Union or national law;",
       "article": "3"
     },
     {
       "term": "credit institution",
-      "definition": "a credit institution as defined in Article 4(1), point (1), of Regulation (EU) No 575/2013 of the European Parliament and of the Council (32)",
+      "definition": "a credit institution as defined in Article 4(1), point (1), of Regulation (EU) No 575/2013 of the European Parliament and of the Council (32);",
       "article": "3"
     },
     {
       "term": "institution exempted pursuant to directive 2013/36/eu",
-      "definition": "an entity as referred to in Article 2(5), points (4) to (23), of Directive 2013/36/EU",
+      "definition": "an entity as referred to in Article 2(5), points (4) to (23), of Directive 2013/36/EU;",
       "article": "3"
     },
     {
       "term": "investment firm",
-      "definition": "an investment firm as defined in Article 4(1), point (1), of Directive 2014/65/EU",
+      "definition": "an investment firm as defined in Article 4(1), point (1), of Directive 2014/65/EU;",
       "article": "3"
     },
     {
       "term": "small and non-interconnected investment firm",
-      "definition": "an investment firm that meets the conditions laid out in Article 12(1) of Regulation (EU) 2019/2033 of the European Parliament and of the Council (33)",
+      "definition": "an investment firm that meets the conditions laid out in Article 12(1) of Regulation (EU) 2019/2033 of the European Parliament and of the Council (33);",
       "article": "3"
     },
     {
       "term": "payment institution",
-      "definition": "a payment institution as defined in Article 4, point (4), of Directive (EU) 2015/2366",
+      "definition": "a payment institution as defined in Article 4, point (4), of Directive (EU) 2015/2366;",
       "article": "3"
     },
     {
       "term": "payment institution exempted pursuant to directive (eu) 2015/2366",
-      "definition": "a payment institution exempted pursuant to Article 32(1) of Directive (EU) 2015/2366",
+      "definition": "a payment institution exempted pursuant to Article 32(1) of Directive (EU) 2015/2366;",
       "article": "3"
     },
     {
       "term": "account information service provider",
-      "definition": "an account information service provider as referred to in Article 33(1) of Directive (EU) 2015/2366",
+      "definition": "an account information service provider as referred to in Article 33(1) of Directive (EU) 2015/2366;",
       "article": "3"
     },
     {
       "term": "electronic money institution",
-      "definition": "an electronic money institution as defined in Article 2, point (1), of Directive 2009/110/EC of the European Parliament and of the Council",
+      "definition": "an electronic money institution as defined in Article 2, point (1), of Directive 2009/110/EC of the European Parliament and of the Council;",
       "article": "3"
     },
     {
       "term": "electronic money institution exempted pursuant to directive 2009/110/ec",
-      "definition": "an electronic money institution benefitting from a waiver as referred to in Article 9(1) of Directive 2009/110/EC",
+      "definition": "an electronic money institution benefitting from a waiver as referred to in Article 9(1) of Directive 2009/110/EC;",
       "article": "3"
     },
     {
       "term": "central counterparty",
-      "definition": "a central counterparty as defined in Article 2, point (1), of Regulation (EU) No 648/2012",
+      "definition": "a central counterparty as defined in Article 2, point (1), of Regulation (EU) No 648/2012;",
       "article": "3"
     },
     {
       "term": "trade repository",
-      "definition": "a trade repository as defined in Article 2, point (2), of Regulation (EU) No 648/2012",
+      "definition": "a trade repository as defined in Article 2, point (2), of Regulation (EU) No 648/2012;",
       "article": "3"
     },
     {
       "term": "central securities depository",
-      "definition": "a central securities depository as defined in Article 2(1), point (1), of Regulation (EU) No 909/2014",
+      "definition": "a central securities depository as defined in Article 2(1), point (1), of Regulation (EU) No 909/2014;",
       "article": "3"
     },
     {
       "term": "trading venue",
-      "definition": "a trading venue as defined in Article 4(1), point (24), of Directive 2014/65/EU",
+      "definition": "a trading venue as defined in Article 4(1), point (24), of Directive 2014/65/EU;",
       "article": "3"
     },
     {
       "term": "manager of alternative investment funds",
-      "definition": "a manager of alternative investment funds as defined in Article 4(1), point (b), of Directive 2011/61/EU",
+      "definition": "a manager of alternative investment funds as defined in Article 4(1), point (b), of Directive 2011/61/EU;",
       "article": "3"
     },
     {
       "term": "management company",
-      "definition": "a management company as defined in Article 2(1), point (b), of Directive 2009/65/EC",
+      "definition": "a management company as defined in Article 2(1), point (b), of Directive 2009/65/EC;",
       "article": "3"
     },
     {
       "term": "data reporting service provider",
-      "definition": "a data reporting service provider within the meaning of Regulation (EU) No 600/2014, as referred to in Article 2(1), points (34) to (36) thereof",
+      "definition": "a data reporting service provider within the meaning of Regulation (EU) No 600/2014, as referred to in Article 2(1), points (34) to (36) thereof;",
       "article": "3"
     },
     {
       "term": "insurance undertaking",
-      "definition": "an insurance undertaking as defined in Article 13, point (1), of Directive 2009/138/EC",
+      "definition": "an insurance undertaking as defined in Article 13, point (1), of Directive 2009/138/EC;",
       "article": "3"
     },
     {
       "term": "reinsurance undertaking",
-      "definition": "a reinsurance undertaking as defined in Article 13, point (4), of Directive 2009/138/EC",
+      "definition": "a reinsurance undertaking as defined in Article 13, point (4), of Directive 2009/138/EC;",
       "article": "3"
     },
     {
       "term": "insurance intermediary",
-      "definition": "an insurance intermediary as defined in Article 2(1), point (3), of Directive (EU) 2016/97 of the European Parliament and of the Council (34)",
+      "definition": "an insurance intermediary as defined in Article 2(1), point (3), of Directive (EU) 2016/97 of the European Parliament and of the Council (34);",
       "article": "3"
     },
     {
       "term": "ancillary insurance intermediary",
-      "definition": "an ancillary insurance intermediary as defined in Article 2(1), point (4), of Directive (EU) 2016/97",
+      "definition": "an ancillary insurance intermediary as defined in Article 2(1), point (4), of Directive (EU) 2016/97;",
       "article": "3"
     },
     {
       "term": "reinsurance intermediary",
-      "definition": "a reinsurance intermediary as defined in Article 2(1), point (5), of Directive (EU) 2016/97",
+      "definition": "a reinsurance intermediary as defined in Article 2(1), point (5), of Directive (EU) 2016/97;",
       "article": "3"
     },
     {
       "term": "institution for occupational retirement provision",
-      "definition": "an institution for occupational retirement provision as defined in Article 6, point (1), of Directive (EU) 2016/2341",
+      "definition": "an institution for occupational retirement provision as defined in Article 6, point (1), of Directive (EU) 2016/2341;",
       "article": "3"
     },
     {
       "term": "small institution for occupational retirement provision",
-      "definition": "an institution for occupational retirement provision which operates pension schemes which together have less than 100 members in total",
+      "definition": "an institution for occupational retirement provision which operates pension schemes which together have less than 100 members in total;",
       "article": "3"
     },
     {
       "term": "credit rating agency",
-      "definition": "a credit rating agency as defined in Article 3(1), point (b), of Regulation (EC) No 1060/2009",
+      "definition": "a credit rating agency as defined in Article 3(1), point (b), of Regulation (EC) No 1060/2009;",
       "article": "3"
     },
     {
       "term": "crypto-asset service provider",
-      "definition": "a crypto-asset service provider as defined in the relevant provision of the Regulation on markets in crypto-assets",
+      "definition": "a crypto-asset service provider as defined in the relevant provision of the Regulation on markets in crypto-assets;",
       "article": "3"
     },
     {
       "term": "issuer of asset-referenced tokens",
-      "definition": "an issuer of asset-referenced tokens as defined in the relevant provision of the Regulation on markets in crypto-assets",
+      "definition": "an issuer of asset-referenced tokens as defined in the relevant provision of the Regulation on markets in crypto-assets;",
       "article": "3"
     },
     {
       "term": "administrator of critical benchmarks",
-      "definition": "an administrator of 'critical benchmarks' as defined in Article 3(1), point (25), of Regulation (EU) 2016/1011",
+      "definition": "an administrator of 'critical benchmarks' as defined in Article 3(1), point (25), of Regulation (EU) 2016/1011;",
       "article": "3"
     },
     {
       "term": "crowdfunding service provider",
-      "definition": "a crowdfunding service provider as defined in Article 2(1), point (e), of Regulation (EU) 2020/1503 of the European Parliament and of the Council (35)",
+      "definition": "a crowdfunding service provider as defined in Article 2(1), point (e), of Regulation (EU) 2020/1503 of the European Parliament and of the Council (35);",
       "article": "3"
     },
     {
       "term": "securitisation repository",
-      "definition": "a securitisation repository as defined in Article 2, point (23), of Regulation (EU) 2017/2402 of the European Parliament and of the Council (36)",
+      "definition": "a securitisation repository as defined in Article 2, point (23), of Regulation (EU) 2017/2402 of the European Parliament and of the Council (36);",
       "article": "3"
     },
     {
       "term": "microenterprise",
-      "definition": "a financial entity, other than a trading venue, a central counterparty, a trade repository or a central securities depository, which employs fewer than 10 persons and has an annual turnover and/or annual balance sheet total that does not exceed EUR 2 million",
+      "definition": "a financial entity, other than a trading venue, a central counterparty, a trade repository or a central securities depository, which employs fewer than 10 persons and has an annual turnover and/or annual balance sheet total that does not exceed EUR 2 million;",
       "article": "3"
     },
     {
       "term": "lead overseer",
-      "definition": "the European Supervisory Authority appointed in accordance with Article 31(1), point (b) of this Regulation",
+      "definition": "the European Supervisory Authority appointed in accordance with Article 31(1), point (b) of this Regulation;",
       "article": "3"
     },
     {
       "term": "joint committee",
-      "definition": "the committee referred to in Article 54 of Regulations (EU) No 1093/2010, (EU) No 1094/2010 and (EU) No 1095/2010",
+      "definition": "the committee referred to in Article 54 of Regulations (EU) No 1093/2010, (EU) No 1094/2010 and (EU) No 1095/2010;",
       "article": "3"
     },
     {
       "term": "small enterprise",
-      "definition": "a financial entity that employs 10 or more persons, but fewer than 50 persons, and has an annual turnover and/or annual balance sheet total that exceeds EUR 2 million, but does not exceed EUR 10 million",
+      "definition": "a financial entity that employs 10 or more persons, but fewer than 50 persons, and has an annual turnover and/or annual balance sheet total that exceeds EUR 2 million, but does not exceed EUR 10 million;",
       "article": "3"
     },
     {
       "term": "medium-sized enterprise",
-      "definition": "a financial entity that is not a small enterprise and employs fewer than 250 persons and has an annual turnover that does not exceed EUR 50 million and/or an annual balance sheet that does not exceed EUR 43 million",
+      "definition": "a financial entity that is not a small enterprise and employs fewer than 250 persons and has an annual turnover that does not exceed EUR 50 million and/or an annual balance sheet that does not exceed EUR 43 million;",
+      "article": "3"
+    },
+    {
+      "term": "public authority",
+      "definition": "any government or other public administration entity, including national central banks.",
       "article": "3"
     }
   ]

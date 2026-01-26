@@ -422,107 +422,112 @@
   "definitions": [
     {
       "term": "cybersecurity",
-      "definition": "the activities necessary to protect network and information systems, the users of such systems, and other persons affected by cyber threats",
+      "definition": "the activities necessary to protect network and information systems, the users of such systems, and other persons affected by cyber threats;",
       "article": "2"
     },
     {
       "term": "network and information system",
-      "definition": "a network and information system as defined in point (1) of Article 4 of Directive (EU) 2016/1148",
+      "definition": "a network and information system as defined in point (1) of Article 4 of Directive (EU) 2016/1148;",
       "article": "2"
     },
     {
       "term": "national strategy on the security of network and information systems",
-      "definition": "a national strategy on the security of network and information systems as defined in point (3) of Article 4 of Directive (EU) 2016/1148",
+      "definition": "a national strategy on the security of network and information systems as defined in point (3) of Article 4 of Directive (EU) 2016/1148;",
       "article": "2"
     },
     {
       "term": "operator of essential services",
-      "definition": "an operator of essential services as defined in point (4) of Article 4 of Directive (EU) 2016/1148",
+      "definition": "an operator of essential services as defined in point (4) of Article 4 of Directive (EU) 2016/1148;",
       "article": "2"
     },
     {
       "term": "digital service provider",
-      "definition": "a digital service provider as defined in point (6) of Article 4 of Directive (EU) 2016/1148",
+      "definition": "a digital service provider as defined in point (6) of Article 4 of Directive (EU) 2016/1148;",
       "article": "2"
     },
     {
       "term": "incident",
-      "definition": "an incident as defined in point (7) of Article 4 of Directive (EU) 2016/1148",
+      "definition": "an incident as defined in point (7) of Article 4 of Directive (EU) 2016/1148;",
       "article": "2"
     },
     {
       "term": "incident handling",
-      "definition": "incident handling as defined in point (8) of Article 4 of Directive (EU) 2016/1148",
+      "definition": "incident handling as defined in point (8) of Article 4 of Directive (EU) 2016/1148;",
       "article": "2"
     },
     {
       "term": "cyber threat",
-      "definition": "any potential circumstance, event or action that could damage, disrupt or otherwise adversely impact network and information systems, the users of such systems and other persons",
+      "definition": "any potential circumstance, event or action that could damage, disrupt or otherwise adversely impact network and information systems, the users of such systems and other persons;",
       "article": "2"
     },
     {
       "term": "european cybersecurity certification scheme",
-      "definition": "a comprehensive set of rules, technical requirements, standards and procedures that are established at Union level and that apply to the certification or conformity assessment of specific ICT products, ICT services or ICT processes",
+      "definition": "a comprehensive set of rules, technical requirements, standards and procedures that are established at Union level and that apply to the certification or conformity assessment of specific ICT products, ICT services or ICT processes;",
       "article": "2"
     },
     {
       "term": "national cybersecurity certification scheme",
-      "definition": "a comprehensive set of rules, technical requirements, standards and procedures developed and adopted by a national public authority and that apply to the certification or conformity assessment of ICT products, ICT services and ICT processes falling under the scope of the specific scheme",
+      "definition": "a comprehensive set of rules, technical requirements, standards and procedures developed and adopted by a national public authority and that apply to the certification or conformity assessment of ICT products, ICT services and ICT processes falling under the scope of the specific scheme;",
       "article": "2"
     },
     {
       "term": "european cybersecurity certificate",
-      "definition": "a document issued by a relevant body, attesting that a given ICT product, ICT service or ICT process has been evaluated for compliance with specific security requirements laid down in a European cybersecurity certification scheme",
+      "definition": "a document issued by a relevant body, attesting that a given ICT product, ICT service or ICT process has been evaluated for compliance with specific security requirements laid down in a European cybersecurity certification scheme;",
       "article": "2"
     },
     {
       "term": "ict product",
-      "definition": "an element or a group of elements of a network or information system",
+      "definition": "an element or a group of elements of a network or information system;",
       "article": "2"
     },
     {
       "term": "ict service",
-      "definition": "a service consisting fully or mainly in the transmission, storing, retrieving or processing of information by means of network and information systems",
+      "definition": "a service consisting fully or mainly in the transmission, storing, retrieving or processing of information by means of network and information systems;",
       "article": "2"
     },
     {
       "term": "ict process",
-      "definition": "a set of activities performed to design, develop, deliver or maintain an ICT product or ICT service",
+      "definition": "a set of activities performed to design, develop, deliver or maintain an ICT product or ICT service;",
       "article": "2"
     },
     {
       "term": "accreditation",
-      "definition": "accreditation as defined in point (10) of Article 2 of Regulation (EC) No 765/2008",
+      "definition": "accreditation as defined in point (10) of Article 2 of Regulation (EC) No 765/2008;",
       "article": "2"
     },
     {
       "term": "national accreditation body",
-      "definition": "a national accreditation body as defined in point (11) of Article 2 of Regulation (EC) No 765/2008",
+      "definition": "a national accreditation body as defined in point (11) of Article 2 of Regulation (EC) No 765/2008;",
       "article": "2"
     },
     {
       "term": "conformity assessment",
-      "definition": "a conformity assessment as defined in point (12) of Article 2 of Regulation (EC) No 765/2008",
+      "definition": "a conformity assessment as defined in point (12) of Article 2 of Regulation (EC) No 765/2008;",
       "article": "2"
     },
     {
       "term": "conformity assessment body",
-      "definition": "a conformity assessment body as defined in point (13) of Article 2 of Regulation (EC) No 765/2008",
+      "definition": "a conformity assessment body as defined in point (13) of Article 2 of Regulation (EC) No 765/2008;",
       "article": "2"
     },
     {
       "term": "standard",
-      "definition": "a standard as defined in point (1) of Article 2 of Regulation (EU) No 1025/2012",
+      "definition": "a standard as defined in point (1) of Article 2 of Regulation (EU) No 1025/2012;",
       "article": "2"
     },
     {
       "term": "technical specification",
-      "definition": "a document that prescribes the technical requirements to be met by, or conformity assessment procedures relating to, an ICT product, ICT service or ICT process",
+      "definition": "a document that prescribes the technical requirements to be met by, or conformity assessment procedures relating to, an ICT product, ICT service or ICT process;",
       "article": "2"
     },
     {
       "term": "assurance level",
-      "definition": "a basis for confidence that an ICT product, ICT service or ICT process meets the security requirements of a specific European cybersecurity certification scheme, indicates the level at which an ICT product, ICT service or ICT process has been evaluated but as such does not measure the security of the ICT product, ICT service or ICT process concerned",
+      "definition": "a basis for confidence that an ICT product, ICT service or ICT process meets the security requirements of a specific European cybersecurity certification scheme, indicates the level at which an ICT product, ICT service or ICT process has been evaluated but as such does not measure the security of the ICT product, ICT service or ICT process concerned;",
+      "article": "2"
+    },
+    {
+      "term": "conformity self-assessment",
+      "definition": "an action carried out by a manufacturer or provider of ICT products, ICT services or ICT processes, which evaluates whether those ICT products, ICT services or ICT processes meet the requirements of a specific European cybersecurity certification scheme. TITLE II ENISA (THE EUROPEAN UNION AGENCY FOR CYBERSECURITY) Mandate and objectives",
       "article": "2"
     }
   ]
