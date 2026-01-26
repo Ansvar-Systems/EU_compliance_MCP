@@ -80,7 +80,7 @@ docker run -d --name eu-regs-mcp \
 ### From Source
 
 ```bash
-git clone https://github.com/ansvar-systems/eu-regulations-mcp
+git clone https://github.com/Ansvar-Systems/EU_compliance_MCP
 cd eu-regulations-mcp
 npm install
 npm run build
@@ -178,7 +178,7 @@ No copyrighted ISO standards are included. For ISO 27001 full text, you'll need 
 
 ```bash
 # Clone the repository
-git clone https://github.com/ansvar-systems/eu-regulations-mcp
+git clone https://github.com/Ansvar-Systems/EU_compliance_MCP
 cd eu-regulations-mcp
 
 # Install dependencies

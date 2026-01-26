@@ -39,10 +39,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ansvar-systems/eu-regulations-mcp.git"
+    "url": "git+https://github.com/Ansvar-Systems/EU_compliance_MCP.git"
   },
   "bugs": {
-    "url": "https://github.com/ansvar-systems/eu-regulations-mcp/issues"
+    "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP/issues"
   },
   "homepage": "https://ansvar.ai",
   "engines": {
