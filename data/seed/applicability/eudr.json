@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "EUDR",
+    "sector": "manufacturing",
+    "subsector": "food",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Food manufacturers using relevant commodities must conduct due diligence"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "manufacturing",
+    "subsector": "furniture",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Wood-based product manufacturers must comply"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "manufacturing",
+    "subsector": "rubber",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Rubber product manufacturers must conduct due diligence"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "other",
+    "subsector": "importers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Importers of cattle, cocoa, coffee, oil palm, rubber, soya, wood must comply"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "other",
+    "subsector": "traders",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Traders of covered commodities have due diligence obligations"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "digital_infrastructure",
+    "subsector": "online_marketplaces",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Online marketplaces selling covered products may have obligations"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial sector not directly in scope"
+  },
+  {
+    "regulation": "EUDR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not in scope"
+  }
+]

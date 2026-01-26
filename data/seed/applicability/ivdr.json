@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "IVDR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "IVDR regulates in vitro diagnostic medical devices for human use"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "healthcare",
+    "subsector": "laboratories",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Clinical laboratories using IVD devices are within scope"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "manufacturing",
+    "subsector": "diagnostics",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Manufacturers of IVD devices must obtain CE marking and comply with IVDR"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "digital_infrastructure",
+    "subsector": "software",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "Software intended for IVD purposes is covered"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial sector not in scope"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector not in scope"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "other",
+    "subsector": "research",
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Research-use only products are explicitly excluded from IVDR scope"
+  },
+  {
+    "regulation": "IVDR",
+    "sector": "other",
+    "subsector": "importers_distributors",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Importers and distributors of IVD devices have specific obligations"
+  }
+]

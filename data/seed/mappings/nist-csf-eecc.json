@@ -1,0 +1,90 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "EECC",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Electronic communications regulatory framework"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "EECC",
+    "articles": ["40", "41"],
+    "coverage": "full",
+    "notes": "Security risk management for networks"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "EECC",
+    "articles": ["5", "6", "7"],
+    "coverage": "full",
+    "notes": "NRA and operator responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Security measures and policies"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Security risk assessment requirements"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Access control for network systems"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "EECC",
+    "articles": ["40", "126"],
+    "coverage": "full",
+    "notes": "Communications data protection"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "EECC",
+    "articles": ["40", "126"],
+    "coverage": "full",
+    "notes": "Network communications security"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Network monitoring requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Security incident notification to NRAs"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Business continuity for communications"
+  }
+]

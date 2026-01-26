@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "MICA",
+    "articles": ["68", "75"],
+    "coverage": "full",
+    "notes": "ICT security policies for crypto-asset service providers"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "MICA",
+    "articles": ["68", "75"],
+    "coverage": "full",
+    "notes": "Governance arrangements for CASPs"
+  },
+  {
+    "control_id": "A.5.7",
+    "control_name": "Threat intelligence",
+    "regulation": "MICA",
+    "articles": ["68"],
+    "coverage": "partial",
+    "notes": "Security monitoring requirements"
+  },
+  {
+    "control_id": "A.5.24",
+    "control_name": "Information security incident management planning and preparation",
+    "regulation": "MICA",
+    "articles": ["68"],
+    "coverage": "full",
+    "notes": "Business continuity and incident response"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "MICA",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Comprehensive framework for crypto-asset markets"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "MICA",
+    "articles": ["68", "75"],
+    "coverage": "full",
+    "notes": "Record keeping for crypto transactions"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "MICA",
+    "articles": ["68", "75"],
+    "coverage": "full",
+    "notes": "Access controls for crypto-asset custody"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "MICA",
+    "articles": ["68"],
+    "coverage": "full",
+    "notes": "Cryptographic controls for digital assets"
+  }
+]

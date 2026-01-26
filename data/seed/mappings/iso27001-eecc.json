@@ -1,0 +1,74 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "EECC",
+    "articles": ["40", "41"],
+    "coverage": "full",
+    "notes": "Security policies required for electronic communications networks"
+  },
+  {
+    "control_id": "A.5.5",
+    "control_name": "Contact with authorities",
+    "regulation": "EECC",
+    "articles": ["5", "6", "40"],
+    "coverage": "full",
+    "notes": "Coordination with national regulatory authorities"
+  },
+  {
+    "control_id": "A.5.7",
+    "control_name": "Threat intelligence",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "partial",
+    "notes": "Security threat awareness for network operators"
+  },
+  {
+    "control_id": "A.5.24",
+    "control_name": "Information security incident management planning and preparation",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Incident preparedness for network operators"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EECC",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Comprehensive framework for electronic communications"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "EECC",
+    "articles": ["102", "103"],
+    "coverage": "full",
+    "notes": "Privacy protections for communications"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "full",
+    "notes": "Security incident reporting to authorities"
+  },
+  {
+    "control_id": "A.7.4",
+    "control_name": "Physical security monitoring",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "partial",
+    "notes": "Physical security of network infrastructure"
+  },
+  {
+    "control_id": "A.8.22",
+    "control_name": "Segregation of networks",
+    "regulation": "EECC",
+    "articles": ["40"],
+    "coverage": "partial",
+    "notes": "Network architecture security requirements"
+  }
+]

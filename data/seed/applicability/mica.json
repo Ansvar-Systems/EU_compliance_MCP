@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "MICA",
+    "sector": "financial",
+    "subsector": "crypto_assets",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "MiCA regulates crypto-asset service providers and issuers"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "financial",
+    "subsector": "exchanges",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Crypto exchanges must be authorized as CASPs"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "financial",
+    "subsector": "banks",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Credit institutions can provide crypto-asset services under MiCA"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "digital_infrastructure",
+    "subsector": "blockchain",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Blockchain/DLT infrastructure providers offering crypto services are in scope"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not in scope"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector not in scope"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Manufacturing sector not in scope"
+  },
+  {
+    "regulation": "MICA",
+    "sector": "other",
+    "subsector": "stablecoin_issuers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "16",
+    "notes": "Asset-referenced token and e-money token issuers have specific requirements"
+  }
+]

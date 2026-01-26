@@ -13,8 +13,9 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 - `scripts/` - Ingestion and build scripts
 - `tests/` - Vitest test suite
 
-## Regulations Included
+## Regulations Included (37 Total)
 
+### Core Data Protection & Cybersecurity
 | ID | Regulation | CELEX | Source |
 |----|------------|-------|--------|
 | GDPR | General Data Protection Regulation | 32016R0679 | EUR-Lex |
@@ -23,10 +24,63 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 | AI_ACT | EU AI Act | 32024R1689 | EUR-Lex |
 | CRA | Cyber Resilience Act | 32024R2847 | EUR-Lex |
 | CYBERSECURITY_ACT | EU Cybersecurity Act | 32019R0881 | EUR-Lex |
-| EIDAS2 | European Digital Identity (eIDAS 2.0) | 02014R0910-20241018 | EUR-Lex (consolidated) |
+| CYBER_SOLIDARITY | Cyber Solidarity Act | 32025R0038 | EUR-Lex |
+| EPRIVACY | ePrivacy Directive | 02002L0058-20091219 | EUR-Lex |
+| LED | Law Enforcement Directive | 32016L0680 | EUR-Lex |
+| EUCC | EU Common Criteria Certification | 32024R0482 | EUR-Lex |
+
+### Digital Services & Identity
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
+| EIDAS2 | European Digital Identity (eIDAS 2.0) | 02014R0910-20241018 | EUR-Lex |
 | DATA_ACT | Data Act | 32023R2854 | EUR-Lex |
 | DSA | Digital Services Act | 32022R2065 | EUR-Lex |
 | DMA | Digital Markets Act | 32022R1925 | EUR-Lex |
+| DGA | Data Governance Act | 32022R0868 | EUR-Lex |
+| EECC | European Electronic Communications Code | 32018L1972 | EUR-Lex |
+
+### Healthcare & Medical
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
+| EHDS | European Health Data Space | 32025R0327 | EUR-Lex |
+| MDR | Medical Device Regulation | 32017R0745 | EUR-Lex |
+| IVDR | In Vitro Diagnostic Regulation | 32017R0746 | EUR-Lex |
+
+### Financial Services
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
+| MICA | Markets in Crypto-Assets | 32023R1114 | EUR-Lex |
+| PSD2 | Payment Services Directive 2 | 32015L2366 | EUR-Lex |
+| MIFID2 | Markets in Financial Instruments Directive II | 32014L0065 | EUR-Lex |
+| MIFIR | Markets in Financial Instruments Regulation | 32014R0600 | EUR-Lex |
+| AIFMD | Alternative Investment Fund Managers Directive | 32011L0061 | EUR-Lex |
+| SFDR | Sustainable Finance Disclosure Regulation | 32019R2088 | EUR-Lex |
+| EU_TAXONOMY | EU Taxonomy Regulation | 32020R0852 | EUR-Lex |
+
+### Product Safety & Liability
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
+| GPSR | General Product Safety Regulation | 32023R0988 | EUR-Lex |
+| MACHINERY | Machinery Regulation | 32023R1230 | EUR-Lex |
+| PLD | Product Liability Directive | 32024L2853 | EUR-Lex |
+| RED | Radio Equipment Directive | 32014L0053 | EUR-Lex |
+
+### Critical Infrastructure
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
+| CER | Critical Entities Resilience Directive | 32022L2557 | EUR-Lex |
+
+### Sustainability & Supply Chain
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
+| CSRD | Corporate Sustainability Reporting Directive | 32022L2464 | EUR-Lex |
+| CSDDD | Corporate Sustainability Due Diligence Directive | 32024L1760 | EUR-Lex |
+| CBAM | Carbon Border Adjustment Mechanism | 32023R0956 | EUR-Lex |
+| EUDR | EU Deforestation Regulation | 32023R1115 | EUR-Lex |
+
+### Automotive
+| ID | Regulation | CELEX | Source |
+|----|------------|-------|--------|
 | UN_R155 | Vehicle Cybersecurity (UNECE) | 42021X0387 | EUR-Lex/UNECE |
 | UN_R156 | Vehicle Software Updates (UNECE) | 42021X0388 | EUR-Lex/UNECE |
 
@@ -173,14 +227,24 @@ The `GITHUB_TOKEN` is automatic and used for:
 - Creating/updating issues in `check-updates.yml`
 - Pushing tags in auto-update mode
 
-## Phase 2 Roadmap
+## Current Statistics
 
-- [x] UN R156 (Software Update Management) ✅
-- [x] Daily freshness monitoring ✅
-- [x] eIDAS 2.0 (Digital Identity) ✅
-- [x] ISO 27001 full control mappings (143 mappings across all 12 regulations) ✅
-- [x] NIST CSF mappings (179 mappings across all 12 regulations) ✅
-- [x] Data Act (data sharing and cloud switching) ✅
-- [x] Digital Services Act (online platform regulation) ✅
-- [x] Digital Markets Act (gatekeeper regulation) ✅
-- [x] Full applicability rules for all regulations (105 rules) ✅
+| Category | Count |
+|----------|-------|
+| Regulations | 37 |
+| Articles | 2,278 |
+| Definitions | 1,145 |
+| ISO 27001 Mappings | 313 |
+| NIST CSF 2.0 Mappings | 373 |
+| Applicability Rules | 305 |
+
+## Completed Features
+
+- [x] 37 EU regulations from EUR-Lex with full text
+- [x] Daily freshness monitoring via GitHub Actions
+- [x] Auto-update mode for re-ingestion from EUR-Lex
+- [x] ISO 27001:2022 control mappings (313 mappings across all regulations)
+- [x] NIST CSF 2.0 control mappings (373 mappings across all regulations)
+- [x] Sector applicability rules (305 rules across all regulations)
+- [x] Full-text search via SQLite FTS5
+- [x] Cross-regulation comparison tools

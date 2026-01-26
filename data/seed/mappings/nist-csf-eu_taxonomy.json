@@ -1,0 +1,34 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Taxonomy framework for sustainable activities"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["8", "18"],
+    "coverage": "full",
+    "notes": "Disclosure obligations and responsibilities"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["8", "10"],
+    "coverage": "partial",
+    "notes": "Inventory of taxonomy-aligned activities"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["8"],
+    "coverage": "partial",
+    "notes": "Protection of taxonomy disclosure data"
+  }
+]

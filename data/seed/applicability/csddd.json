@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "CSDDD",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Large manufacturing companies must conduct human rights and environmental due diligence"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Large financial undertakings are in scope"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Large energy companies must conduct value chain due diligence"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Large transport companies must conduct value chain due diligence"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Large healthcare companies must conduct value chain due diligence"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Large digital companies must conduct value chain due diligence"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "other",
+    "subsector": "third_country_companies",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Third-country companies with significant EU turnover are in scope"
+  },
+  {
+    "regulation": "CSDDD",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Public bodies not in scope"
+  }
+]

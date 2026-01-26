@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "LED",
+    "sector": "public_administration",
+    "subsector": "law_enforcement",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "LED applies to competent authorities processing data for law enforcement purposes"
+  },
+  {
+    "regulation": "LED",
+    "sector": "public_administration",
+    "subsector": "judiciary",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Courts and judicial authorities processing criminal data are covered"
+  },
+  {
+    "regulation": "LED",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Private sector covered by GDPR, not LED (except when acting for law enforcement)"
+  },
+  {
+    "regulation": "LED",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector covered by GDPR, not LED"
+  },
+  {
+    "regulation": "LED",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Private digital services covered by GDPR, not LED"
+  },
+  {
+    "regulation": "LED",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector covered by GDPR, not LED"
+  },
+  {
+    "regulation": "LED",
+    "sector": "transport",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Transport sector covered by GDPR, not LED"
+  },
+  {
+    "regulation": "LED",
+    "sector": "other",
+    "subsector": "private_security",
+    "applies": false,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Private security firms typically covered by GDPR unless acting for authorities"
+  }
+]

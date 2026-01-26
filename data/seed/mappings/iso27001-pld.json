@@ -1,0 +1,26 @@
+[
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "PLD",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Liability framework for defective products"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "PLD",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Evidence preservation for liability claims"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "PLD",
+    "articles": ["2", "6"],
+    "coverage": "full",
+    "notes": "Software defects can establish product liability"
+  }
+]

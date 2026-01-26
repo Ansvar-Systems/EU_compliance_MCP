@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "RED",
+    "articles": ["3", "10"],
+    "coverage": "partial",
+    "notes": "Security requirements for radio equipment"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "RED",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Framework for radio equipment market access"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "RED",
+    "articles": ["10", "11", "12"],
+    "coverage": "full",
+    "notes": "Technical documentation and conformity records"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "RED",
+    "articles": ["3"],
+    "coverage": "partial",
+    "notes": "Security requirements including encryption for connected devices"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "RED",
+    "articles": ["3"],
+    "coverage": "partial",
+    "notes": "Software security for radio equipment"
+  }
+]

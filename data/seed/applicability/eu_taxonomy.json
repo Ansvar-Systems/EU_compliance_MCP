@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "EU Taxonomy applies to financial market participants for sustainability disclosures"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "financial",
+    "subsector": "asset_managers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "5",
+    "notes": "Financial products must disclose Taxonomy alignment"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "8",
+    "notes": "Large undertakings must disclose Taxonomy-eligible activities under CSRD"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "8",
+    "notes": "Energy companies must disclose Taxonomy alignment for climate activities"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "8",
+    "notes": "Transport companies must disclose Taxonomy-eligible activities"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "8",
+    "notes": "Large digital companies subject to CSRD must report Taxonomy alignment"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "8",
+    "notes": "Large healthcare companies subject to CSRD must report Taxonomy alignment"
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "4",
+    "notes": "Member States must use Taxonomy for public measures and green bonds"
+  }
+]

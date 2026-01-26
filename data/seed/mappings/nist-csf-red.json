@@ -1,0 +1,58 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "RED",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Radio equipment regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "RED",
+    "articles": ["3"],
+    "coverage": "full",
+    "notes": "Essential requirements for radio equipment"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "RED",
+    "articles": ["10", "11", "12", "13"],
+    "coverage": "full",
+    "notes": "Economic operator obligations"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "RED",
+    "articles": ["10", "11", "12"],
+    "coverage": "full",
+    "notes": "Supply chain requirements for radio equipment"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "RED",
+    "articles": ["3"],
+    "coverage": "partial",
+    "notes": "Privacy safeguards in radio equipment"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "RED",
+    "articles": ["3"],
+    "coverage": "partial",
+    "notes": "Network protection for radio communications"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "RED",
+    "articles": ["40", "41"],
+    "coverage": "full",
+    "notes": "Non-compliance reporting to authorities"
+  }
+]

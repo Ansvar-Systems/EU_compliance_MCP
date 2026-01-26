@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "MIFIR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Markets in financial instruments context"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "MIFIR",
+    "articles": ["22", "23", "24"],
+    "coverage": "full",
+    "notes": "Trading venue and competent authority responsibilities"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "MIFIR",
+    "articles": ["25", "26", "27"],
+    "coverage": "full",
+    "notes": "Transaction reporting and record keeping"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "MIFIR",
+    "articles": ["25", "26"],
+    "coverage": "full",
+    "notes": "Transaction data protection requirements"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "MIFIR",
+    "articles": ["26"],
+    "coverage": "full",
+    "notes": "Secure transaction reporting transmission"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "MIFIR",
+    "articles": ["26", "27"],
+    "coverage": "full",
+    "notes": "Reporting to competent authorities"
+  }
+]

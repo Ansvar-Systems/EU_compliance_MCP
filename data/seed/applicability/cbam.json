@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "CBAM",
+    "sector": "manufacturing",
+    "subsector": "steel",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Steel importers must comply with CBAM reporting and certificates"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "manufacturing",
+    "subsector": "aluminium",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Aluminium importers must comply with CBAM"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "manufacturing",
+    "subsector": "cement",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Cement importers must comply with CBAM"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "manufacturing",
+    "subsector": "fertilizers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Fertilizer importers must comply with CBAM"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "energy",
+    "subsector": "electricity",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Electricity importers must comply with CBAM"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "energy",
+    "subsector": "hydrogen",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Hydrogen importers must comply with CBAM"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial sector not in scope"
+  },
+  {
+    "regulation": "CBAM",
+    "sector": "other",
+    "subsector": "customs_declarants",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "4",
+    "notes": "Customs declarants of CBAM goods must register"
+  }
+]

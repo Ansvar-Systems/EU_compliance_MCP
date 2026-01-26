@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "EECC",
+    "sector": "digital_infrastructure",
+    "subsector": "telecoms",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "EECC establishes framework for electronic communications networks and services"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "digital_infrastructure",
+    "subsector": "internet_services",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Internet access services and interpersonal communications services covered"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "digital_infrastructure",
+    "subsector": "messaging_apps",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Number-independent interpersonal communications services (OTT) are in scope"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "National regulatory authorities enforce EECC"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial sector not directly regulated, but uses regulated services"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not directly regulated, but uses regulated services"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "manufacturing",
+    "subsector": "terminal_equipment",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Terminal equipment manufacturers have certain obligations"
+  },
+  {
+    "regulation": "EECC",
+    "sector": "other",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "EECC primarily applies to electronic communications sector"
+  }
+]

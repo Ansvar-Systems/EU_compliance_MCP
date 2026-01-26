@@ -1,0 +1,98 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "MICA",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Markets in crypto-assets regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "MICA",
+    "articles": ["64", "65"],
+    "coverage": "full",
+    "notes": "Risk management for crypto-asset service providers"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "MICA",
+    "articles": ["59", "60"],
+    "coverage": "full",
+    "notes": "CASP governance and responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "MICA",
+    "articles": ["64", "65"],
+    "coverage": "full",
+    "notes": "ICT security policies for CASPs"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "MICA",
+    "articles": ["64"],
+    "coverage": "full",
+    "notes": "Third-party service provider management"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "MICA",
+    "articles": ["64"],
+    "coverage": "full",
+    "notes": "ICT system vulnerability assessment"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "MICA",
+    "articles": ["64", "70"],
+    "coverage": "full",
+    "notes": "Access controls for crypto-asset custody"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "MICA",
+    "articles": ["64", "70"],
+    "coverage": "full",
+    "notes": "Crypto-asset safeguarding"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "MICA",
+    "articles": ["64"],
+    "coverage": "full",
+    "notes": "Secure transmission protocols"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "MICA",
+    "articles": ["64"],
+    "coverage": "full",
+    "notes": "ICT system monitoring requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "MICA",
+    "articles": ["64"],
+    "coverage": "full",
+    "notes": "ICT incident reporting"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "MICA",
+    "articles": ["64"],
+    "coverage": "full",
+    "notes": "Business continuity and disaster recovery"
+  }
+]

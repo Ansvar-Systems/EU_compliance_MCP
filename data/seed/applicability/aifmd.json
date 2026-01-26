@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "AIFMD",
+    "sector": "financial",
+    "subsector": "fund_managers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "AIFMD regulates managers of alternative investment funds"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "financial",
+    "subsector": "hedge_funds",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Hedge fund managers are within scope"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "financial",
+    "subsector": "private_equity",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Private equity fund managers are within scope"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "financial",
+    "subsector": "real_estate_funds",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Real estate fund managers are within scope"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "financial",
+    "subsector": "depositaries",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "21",
+    "notes": "Depositaries of AIFs have specific obligations"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not in scope"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector not in scope"
+  },
+  {
+    "regulation": "AIFMD",
+    "sector": "other",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "AIFMD specifically targets alternative investment fund managers"
+  }
+]

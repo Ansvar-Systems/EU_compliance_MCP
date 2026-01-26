@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "DGA",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "DGA establishes framework for re-use of public sector data"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "digital_infrastructure",
+    "subsector": "data_intermediaries",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "10",
+    "notes": "Data intermediation services must be notified"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Healthcare data sharing organizations may be covered"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Financial data sharing organizations may be covered"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "other",
+    "subsector": "data_altruism",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "16",
+    "notes": "Data altruism organizations can register for EU recognition"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": false,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Manufacturing not directly in scope unless operating data services"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Energy data sharing may fall under DGA"
+  },
+  {
+    "regulation": "DGA",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Transport data sharing may fall under DGA"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "IVDR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "In vitro diagnostic device regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "IVDR",
+    "articles": ["10", "14"],
+    "coverage": "full",
+    "notes": "Risk management for IVD devices"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "IVDR",
+    "articles": ["10", "11", "15"],
+    "coverage": "full",
+    "notes": "Manufacturer and authorized representative duties"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "IVDR",
+    "articles": ["10", "22"],
+    "coverage": "full",
+    "notes": "Supply chain controls for IVD devices"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "IVDR",
+    "articles": ["24", "25", "26"],
+    "coverage": "full",
+    "notes": "UDI system and device identification"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "IVDR",
+    "articles": ["100", "101"],
+    "coverage": "partial",
+    "notes": "EUDAMED database security"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "IVDR",
+    "articles": ["82", "83", "84"],
+    "coverage": "full",
+    "notes": "Vigilance reporting and incident notification"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "IVDR",
+    "articles": ["82", "83"],
+    "coverage": "full",
+    "notes": "Serious incident reporting procedures"
+  }
+]

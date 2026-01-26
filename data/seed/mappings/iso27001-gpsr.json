@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "GPSR",
+    "articles": ["9", "10"],
+    "coverage": "partial",
+    "notes": "Product safety management policies"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "GPSR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "General product safety requirements"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "GPSR",
+    "articles": ["9", "10", "11", "12"],
+    "coverage": "full",
+    "notes": "Technical documentation and traceability"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "GPSR",
+    "articles": ["20", "21"],
+    "coverage": "full",
+    "notes": "Product safety incident notification"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "GPSR",
+    "articles": ["6", "7"],
+    "coverage": "partial",
+    "notes": "Safety requirements for connected products"
+  }
+]

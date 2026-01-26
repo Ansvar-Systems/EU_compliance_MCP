@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "EPRIVACY",
+    "articles": ["4", "14"],
+    "coverage": "full",
+    "notes": "Policies required for security of electronic communications"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EPRIVACY",
+    "articles": ["1", "3"],
+    "coverage": "full",
+    "notes": "Establishes privacy requirements for electronic communications"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "EPRIVACY",
+    "articles": ["6", "9"],
+    "coverage": "full",
+    "notes": "Traffic data and location data retention rules"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "EPRIVACY",
+    "articles": ["5", "6", "9", "13"],
+    "coverage": "full",
+    "notes": "Core privacy protections for electronic communications"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "EPRIVACY",
+    "articles": ["4"],
+    "coverage": "full",
+    "notes": "Breach notification requirements for communications providers"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "EPRIVACY",
+    "articles": ["5"],
+    "coverage": "full",
+    "notes": "Confidentiality of communications and prohibition of interception"
+  },
+  {
+    "control_id": "A.8.10",
+    "control_name": "Information deletion",
+    "regulation": "EPRIVACY",
+    "articles": ["6"],
+    "coverage": "full",
+    "notes": "Traffic data erasure requirements"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "EPRIVACY",
+    "articles": ["4"],
+    "coverage": "partial",
+    "notes": "Security measures including encryption for communications"
+  }
+]

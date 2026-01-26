@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "IVDR",
+    "articles": ["10", "23"],
+    "coverage": "full",
+    "notes": "Quality management system and cybersecurity requirements"
+  },
+  {
+    "control_id": "A.5.8",
+    "control_name": "Information security in project management",
+    "regulation": "IVDR",
+    "articles": ["10", "56"],
+    "coverage": "full",
+    "notes": "Security in IVD device design and development"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "IVDR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Regulatory framework for in vitro diagnostic devices"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "IVDR",
+    "articles": ["10", "24"],
+    "coverage": "full",
+    "notes": "Technical documentation and UDI-DI requirements"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "IVDR",
+    "articles": ["82", "83", "84"],
+    "coverage": "full",
+    "notes": "Vigilance reporting for serious incidents"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "IVDR",
+    "articles": ["10"],
+    "coverage": "full",
+    "notes": "Device configuration and software version control"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "IVDR",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Security measures for connected IVD devices"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "IVDR",
+    "articles": ["10"],
+    "coverage": "full",
+    "notes": "Software requirements in general safety and performance"
+  }
+]

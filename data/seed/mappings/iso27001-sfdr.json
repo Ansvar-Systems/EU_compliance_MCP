@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "SFDR",
+    "articles": ["3", "4"],
+    "coverage": "partial",
+    "notes": "Policies on integration of sustainability risks in investment decisions"
+  },
+  {
+    "control_id": "A.5.10",
+    "control_name": "Acceptable use of information and other associated assets",
+    "regulation": "SFDR",
+    "articles": ["4", "7"],
+    "coverage": "partial",
+    "notes": "Rules on use of sustainability information for disclosure"
+  },
+  {
+    "control_id": "A.5.12",
+    "control_name": "Classification of information",
+    "regulation": "SFDR",
+    "articles": ["8", "9"],
+    "coverage": "full",
+    "notes": "Financial products classified by sustainability characteristics"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "SFDR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Establishes disclosure requirements for financial services sector"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "SFDR",
+    "articles": ["10", "11"],
+    "coverage": "partial",
+    "notes": "Website disclosures and periodic reporting requirements"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "SFDR",
+    "articles": ["1"],
+    "coverage": "partial",
+    "notes": "SFDR complements GDPR requirements"
+  }
+]

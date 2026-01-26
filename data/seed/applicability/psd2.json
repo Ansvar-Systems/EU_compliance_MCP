@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "PSD2",
+    "sector": "financial",
+    "subsector": "payment_services",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "PSD2 regulates payment service providers in the EU"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "financial",
+    "subsector": "banks",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Credit institutions providing payment services must comply"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "financial",
+    "subsector": "fintechs",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Payment institutions and electronic money institutions are in scope"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "digital_infrastructure",
+    "subsector": "payment_gateways",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Technical service providers supporting payment services may be in scope"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "other",
+    "subsector": "account_information",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Account information service providers (AISPs) are regulated"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "other",
+    "subsector": "payment_initiation",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Payment initiation service providers (PISPs) are regulated"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not in scope"
+  },
+  {
+    "regulation": "PSD2",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector not in scope"
+  }
+]

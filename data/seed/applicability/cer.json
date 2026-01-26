@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "CER",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "CER applies to critical entities in energy sector"
+  },
+  {
+    "regulation": "CER",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "CER applies to critical entities in transport sector"
+  },
+  {
+    "regulation": "CER",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "CER applies to critical entities in banking and financial market infrastructure"
+  },
+  {
+    "regulation": "CER",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "CER applies to critical entities in health sector"
+  },
+  {
+    "regulation": "CER",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "CER applies to critical digital infrastructure operators"
+  },
+  {
+    "regulation": "CER",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Central government public administration entities may be in scope"
+  },
+  {
+    "regulation": "CER",
+    "sector": "manufacturing",
+    "subsector": "food",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Food production, processing and distribution entities may be critical"
+  },
+  {
+    "regulation": "CER",
+    "sector": "other",
+    "subsector": "space",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Space sector operators may be designated as critical entities"
+  }
+]

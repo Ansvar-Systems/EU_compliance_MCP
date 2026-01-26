@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "MACHINERY",
+    "articles": ["10", "18"],
+    "coverage": "partial",
+    "notes": "Security policies for machinery with digital components"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "MACHINERY",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Health and safety requirements for machinery"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "MACHINERY",
+    "articles": ["10", "11", "12"],
+    "coverage": "full",
+    "notes": "Technical documentation requirements"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "MACHINERY",
+    "articles": ["18"],
+    "coverage": "partial",
+    "notes": "Software configuration for safety functions"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "MACHINERY",
+    "articles": ["18"],
+    "coverage": "partial",
+    "notes": "Security for connected machinery"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "MACHINERY",
+    "articles": ["18"],
+    "coverage": "full",
+    "notes": "Software safety requirements including cybersecurity"
+  }
+]

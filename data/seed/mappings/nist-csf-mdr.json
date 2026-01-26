@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "MDR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Medical device regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "MDR",
+    "articles": ["10", "14"],
+    "coverage": "full",
+    "notes": "Risk management for medical devices"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "MDR",
+    "articles": ["10", "11", "15"],
+    "coverage": "full",
+    "notes": "Manufacturer and authorized representative duties"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "MDR",
+    "articles": ["10", "25"],
+    "coverage": "full",
+    "notes": "Supply chain controls for medical devices"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "MDR",
+    "articles": ["27", "28", "29"],
+    "coverage": "full",
+    "notes": "UDI system and device identification"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "MDR",
+    "articles": ["110", "111"],
+    "coverage": "partial",
+    "notes": "EUDAMED database security"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "MDR",
+    "articles": ["87", "88", "89"],
+    "coverage": "full",
+    "notes": "Vigilance reporting and incident notification"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "MDR",
+    "articles": ["87", "88"],
+    "coverage": "full",
+    "notes": "Serious incident reporting procedures"
+  }
+]

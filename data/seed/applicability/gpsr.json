@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "GPSR",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "GPSR applies to manufacturers of consumer products placed on EU market"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "manufacturing",
+    "subsector": "consumer_goods",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "All consumer products must meet general safety requirements"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "digital_infrastructure",
+    "subsector": "online_marketplaces",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "22",
+    "notes": "Online marketplaces have specific obligations under GPSR"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "other",
+    "subsector": "importers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "11",
+    "notes": "Importers have specific verification and documentation obligations"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "other",
+    "subsector": "distributors",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "12",
+    "notes": "Distributors must verify product compliance before making available"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial services not in scope"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Medical devices have separate regulation (MDR)"
+  },
+  {
+    "regulation": "GPSR",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "26",
+    "notes": "Market surveillance authorities enforce GPSR"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "CER",
+    "articles": ["13", "14"],
+    "coverage": "full",
+    "notes": "Resilience policies for critical entities"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "CER",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Critical entity resilience responsibilities"
+  },
+  {
+    "control_id": "A.5.5",
+    "control_name": "Contact with authorities",
+    "regulation": "CER",
+    "articles": ["9", "15"],
+    "coverage": "full",
+    "notes": "Cooperation with competent authorities"
+  },
+  {
+    "control_id": "A.5.24",
+    "control_name": "Information security incident management planning and preparation",
+    "regulation": "CER",
+    "articles": ["13", "14"],
+    "coverage": "full",
+    "notes": "Incident response and resilience measures"
+  },
+  {
+    "control_id": "A.5.29",
+    "control_name": "Information security during disruption",
+    "regulation": "CER",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Business continuity for critical services"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "CER",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Critical entity resilience requirements"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "CER",
+    "articles": ["15"],
+    "coverage": "full",
+    "notes": "Incident notification to competent authorities"
+  },
+  {
+    "control_id": "A.7.1",
+    "control_name": "Physical security perimeters",
+    "regulation": "CER",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Physical resilience measures for critical infrastructure"
+  },
+  {
+    "control_id": "A.7.5",
+    "control_name": "Protecting against physical and environmental threats",
+    "regulation": "CER",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Protection against natural and man-made threats"
+  }
+]

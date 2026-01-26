@@ -1,0 +1,58 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "EPRIVACY",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Privacy in electronic communications context"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "EPRIVACY",
+    "articles": ["4", "5"],
+    "coverage": "full",
+    "notes": "Security policies for communications services"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "EPRIVACY",
+    "articles": ["5"],
+    "coverage": "full",
+    "notes": "Confidentiality of communications access controls"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "EPRIVACY",
+    "articles": ["4", "5"],
+    "coverage": "full",
+    "notes": "Protection of stored communications data"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "EPRIVACY",
+    "articles": ["5"],
+    "coverage": "full",
+    "notes": "Confidentiality of communications in transit"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "EPRIVACY",
+    "articles": ["4"],
+    "coverage": "full",
+    "notes": "Security monitoring requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "EPRIVACY",
+    "articles": ["4"],
+    "coverage": "full",
+    "notes": "Security breach notification requirements"
+  }
+]
