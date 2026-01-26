@@ -1,0 +1,77 @@
+[
+  {
+    "regulation": "CRA",
+    "sector": "manufacturing",
+    "subsector": "iot_devices",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "IoT devices with network connectivity are products with digital elements; must meet essential cybersecurity requirements"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "manufacturing",
+    "subsector": "consumer_electronics",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Smart home devices, wearables, connected appliances are in scope"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "manufacturing",
+    "subsector": "industrial_equipment",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Industrial control systems, PLCs with digital elements are in scope; may be Important Products Class I/II"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "digital_infrastructure",
+    "subsector": "software_vendor",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Commercial software products are in scope; open-source non-commercial may be exempt (Art 2(8))"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "transport",
+    "subsector": "automotive_supplier",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "Aftermarket ECUs and connected vehicle components in scope; OEM components may be covered by R155/R156"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "healthcare",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "Connected medical devices in scope unless covered by MDR; health IoT devices covered"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "energy",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "Smart meters, grid equipment with digital elements in scope; may be Important Products"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "financial",
+    "applies": false,
+    "confidence": "likely",
+    "notes": "Financial services themselves not in scope; but connected devices/software used by financial sector covered"
+  },
+  {
+    "regulation": "CRA",
+    "sector": "public_administration",
+    "applies": false,
+    "confidence": "likely",
+    "notes": "CRA applies to product manufacturers/importers, not end-users; public sector is a user, not producer"
+  }
+]

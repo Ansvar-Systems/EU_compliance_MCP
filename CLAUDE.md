@@ -24,6 +24,9 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 | CRA | Cyber Resilience Act | 32024R2847 | EUR-Lex |
 | CYBERSECURITY_ACT | EU Cybersecurity Act | 32019R0881 | EUR-Lex |
 | EIDAS2 | European Digital Identity (eIDAS 2.0) | 02014R0910-20241018 | EUR-Lex (consolidated) |
+| DATA_ACT | Data Act | 32023R2854 | EUR-Lex |
+| DSA | Digital Services Act | 32022R2065 | EUR-Lex |
+| DMA | Digital Markets Act | 32022R1925 | EUR-Lex |
 | UN_R155 | Vehicle Cybersecurity (UNECE) | 42021X0387 | EUR-Lex/UNECE |
 | UN_R156 | Vehicle Software Updates (UNECE) | 42021X0388 | EUR-Lex/UNECE |
 
@@ -172,8 +175,12 @@ The `GITHUB_TOKEN` is automatic and used for:
 
 ## Phase 2 Roadmap
 
-- [x] UN R156 (Software Update Management)
-- [x] Daily freshness monitoring
-- [x] eIDAS 2.0 (Digital Identity)
-- [x] ISO 27001 full control mappings (122 mappings across all 9 regulations)
-- [x] NIST CSF mappings (158 mappings across all 9 regulations)
+- [x] UN R156 (Software Update Management) ✅
+- [x] Daily freshness monitoring ✅
+- [x] eIDAS 2.0 (Digital Identity) ✅
+- [x] ISO 27001 full control mappings (143 mappings across all 12 regulations) ✅
+- [x] NIST CSF mappings (179 mappings across all 12 regulations) ✅
+- [x] Data Act (data sharing and cloud switching) ✅
+- [x] Digital Services Act (online platform regulation) ✅
+- [x] Digital Markets Act (gatekeeper regulation) ✅
+- [x] Full applicability rules for all regulations (105 rules) ✅

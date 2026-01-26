@@ -1,0 +1,130 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "CRA",
+    "articles": ["1", "2", "3", "4"],
+    "coverage": "full",
+    "notes": "CRA Art 1-4 define scope for products with digital elements"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "CRA",
+    "articles": ["10", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10 manufacturer obligations, Annex I requires documented risk assessment"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "CRA",
+    "articles": ["10", "18", "19", "20"],
+    "coverage": "full",
+    "notes": "Art 10 manufacturer, Art 18 importer, Art 19 distributor, Art 20 EU representative obligations"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "CRA",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Art 10 secure development policies, Art 11 vulnerability handling policies"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "CRA",
+    "articles": ["13", "18", "19"],
+    "coverage": "full",
+    "notes": "Art 13 SBOM requirements, Art 18-19 supply chain verification"
+  },
+  {
+    "control_id": "ID.AM-02",
+    "control_name": "Software platforms and applications inventories",
+    "regulation": "CRA",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Art 13 requires SBOM (Software Bill of Materials)"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "CRA",
+    "articles": ["10", "11", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10-11 vulnerability handling, Annex I Part II vulnerability requirements"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "CRA",
+    "articles": ["Annex I"],
+    "coverage": "full",
+    "notes": "Annex I requires threat modeling in product design"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "CRA",
+    "articles": ["10", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10 and Annex I require documented risk mitigation"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "CRA",
+    "articles": ["Annex I"],
+    "coverage": "full",
+    "notes": "Annex I Part I requires data confidentiality protection"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "CRA",
+    "articles": ["Annex I"],
+    "coverage": "full",
+    "notes": "Annex I Part I requires secure communication mechanisms"
+  },
+  {
+    "control_id": "PR.PS-01",
+    "control_name": "Configuration management practices established",
+    "regulation": "CRA",
+    "articles": ["10", "Annex I"],
+    "coverage": "full",
+    "notes": "Annex I Part I requires secure default configuration"
+  },
+  {
+    "control_id": "PR.PS-02",
+    "control_name": "Software is maintained and updated",
+    "regulation": "CRA",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Art 10-11 require 5-year security update support"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "CRA",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Art 10-11 require vulnerability assessment and analysis"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "CRA",
+    "articles": ["14"],
+    "coverage": "full",
+    "notes": "Art 14 requires notification of exploited vulnerabilities within 24h"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "CRA",
+    "articles": ["14"],
+    "coverage": "full",
+    "notes": "Art 14 requires notification to ENISA and national CSIRTs"
+  }
+]

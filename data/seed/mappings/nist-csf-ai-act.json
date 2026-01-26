@@ -1,0 +1,138 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "AI_ACT",
+    "articles": ["1", "2", "5", "6"],
+    "coverage": "full",
+    "notes": "Art 1-2 scope, Art 5 prohibited practices, Art 6 high-risk classification"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "AI_ACT",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9 comprehensive risk management system for high-risk AI"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "AI_ACT",
+    "articles": ["16", "26", "27"],
+    "coverage": "full",
+    "notes": "Art 16 provider, Art 26 deployer, Art 27 fundamental rights obligations"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "AI_ACT",
+    "articles": ["9", "15", "17"],
+    "coverage": "full",
+    "notes": "Art 9 risk management, Art 15 robustness, Art 17 quality management"
+  },
+  {
+    "control_id": "GV.OV-01",
+    "control_name": "Cybersecurity risk management oversight",
+    "regulation": "AI_ACT",
+    "articles": ["72"],
+    "coverage": "full",
+    "notes": "Art 72 post-market monitoring obligations"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "AI_ACT",
+    "articles": ["18", "71"],
+    "coverage": "full",
+    "notes": "Art 18 technical documentation, Art 71 EU AI database registration"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "AI_ACT",
+    "articles": ["9", "15"],
+    "coverage": "full",
+    "notes": "Art 9 risk identification, Art 15 robustness requirements"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "AI_ACT",
+    "articles": ["9", "15"],
+    "coverage": "full",
+    "notes": "Art 9 threat assessment in risk management, Art 15 adversarial robustness"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "AI_ACT",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9 requires risk mitigation measures throughout lifecycle"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "AI_ACT",
+    "articles": ["14"],
+    "coverage": "full",
+    "notes": "Art 14 human oversight includes access controls"
+  },
+  {
+    "control_id": "PR.AT-01",
+    "control_name": "Awareness and training provided",
+    "regulation": "AI_ACT",
+    "articles": ["4", "14"],
+    "coverage": "full",
+    "notes": "Art 4 AI literacy requirements, Art 14 trained human oversight"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "AI_ACT",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Art 10 data governance includes data protection measures"
+  },
+  {
+    "control_id": "PR.DS-10",
+    "control_name": "Data is disposed of properly",
+    "regulation": "AI_ACT",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Art 10 data governance includes retention policies"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "AI_ACT",
+    "articles": ["12", "72"],
+    "coverage": "full",
+    "notes": "Art 12 automatic logging, Art 72 post-market monitoring"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "AI_ACT",
+    "articles": ["12", "72"],
+    "coverage": "full",
+    "notes": "Art 12 logging for analysis, Art 72 incident analysis"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "AI_ACT",
+    "articles": ["73"],
+    "coverage": "full",
+    "notes": "Art 73 serious incident reporting requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "AI_ACT",
+    "articles": ["73"],
+    "coverage": "full",
+    "notes": "Art 73 requires reporting to market surveillance authorities"
+  }
+]

@@ -127,18 +127,18 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: 'map_controls',
-      description: 'Map ISO 27001:2022 controls to EU regulation requirements. Shows which articles satisfy specific security controls.',
+      description: 'Map security framework controls to EU regulation requirements. Shows which articles satisfy specific security controls.',
       inputSchema: {
         type: 'object',
         properties: {
           framework: {
             type: 'string',
-            enum: ['ISO27001'],
-            description: 'Control framework (currently only ISO27001 supported)',
+            enum: ['ISO27001', 'NIST_CSF'],
+            description: 'Control framework: ISO27001 (ISO 27001:2022) or NIST_CSF (NIST Cybersecurity Framework)',
           },
           control: {
             type: 'string',
-            description: 'Optional: specific control ID (e.g., "A.5.1", "A.6.8")',
+            description: 'Optional: specific control ID (e.g., "A.5.1" for ISO27001, "PR.AC-1" for NIST CSF)',
           },
           regulation: {
             type: 'string',

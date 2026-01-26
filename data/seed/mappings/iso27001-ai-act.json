@@ -1,0 +1,114 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "AI_ACT",
+    "articles": ["9", "17"],
+    "coverage": "full",
+    "notes": "Art 9 risk management system, Art 17 quality management system for high-risk AI"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "AI_ACT",
+    "articles": ["16", "26", "27"],
+    "coverage": "full",
+    "notes": "Art 16 provider obligations, Art 26 deployer obligations, Art 27 fundamental rights impact assessment"
+  },
+  {
+    "control_id": "A.5.8",
+    "control_name": "Information security in project management",
+    "regulation": "AI_ACT",
+    "articles": ["9", "10", "17"],
+    "coverage": "full",
+    "notes": "Art 9-10 risk management and data governance, Art 17 quality management throughout AI lifecycle"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "AI_ACT",
+    "articles": ["1", "2", "5", "6"],
+    "coverage": "full",
+    "notes": "Art 1-2 scope, Art 5 prohibited practices, Art 6 high-risk AI classification"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "AI_ACT",
+    "articles": ["12", "18", "19"],
+    "coverage": "full",
+    "notes": "Art 12 automatic logging, Art 18 technical documentation, Art 19 record keeping requirements"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "AI_ACT",
+    "articles": ["10", "15"],
+    "coverage": "full",
+    "notes": "Art 10 data governance including privacy requirements, Art 15 data minimisation for biometric AI"
+  },
+  {
+    "control_id": "A.6.3",
+    "control_name": "Information security awareness, education and training",
+    "regulation": "AI_ACT",
+    "articles": ["4", "14"],
+    "coverage": "full",
+    "notes": "Art 4 AI literacy requirements, Art 14 human oversight requires trained personnel"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "AI_ACT",
+    "articles": ["73"],
+    "coverage": "full",
+    "notes": "Art 73 requires reporting of serious incidents and malfunctioning of high-risk AI systems"
+  },
+  {
+    "control_id": "A.8.2",
+    "control_name": "Privileged access rights",
+    "regulation": "AI_ACT",
+    "articles": ["14", "15"],
+    "coverage": "partial",
+    "notes": "Art 14-15 human oversight and access controls for AI system operation"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "AI_ACT",
+    "articles": ["9", "15"],
+    "coverage": "partial",
+    "notes": "Art 9 risk management includes security vulnerabilities, Art 15 robustness requirements"
+  },
+  {
+    "control_id": "A.8.10",
+    "control_name": "Information deletion",
+    "regulation": "AI_ACT",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Art 10 data governance includes data retention and deletion policies"
+  },
+  {
+    "control_id": "A.8.16",
+    "control_name": "Monitoring activities",
+    "regulation": "AI_ACT",
+    "articles": ["12", "72"],
+    "coverage": "full",
+    "notes": "Art 12 automatic logging and monitoring, Art 72 post-market monitoring obligations"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "AI_ACT",
+    "articles": ["9", "10", "17"],
+    "coverage": "full",
+    "notes": "Art 9 risk management, Art 10 data governance, Art 17 quality management throughout lifecycle"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "AI_ACT",
+    "articles": ["9", "15", "43"],
+    "coverage": "full",
+    "notes": "Art 9 testing under risk management, Art 15 accuracy and robustness testing, Art 43 conformity assessment"
+  }
+]

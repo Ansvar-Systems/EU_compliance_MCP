@@ -1,0 +1,68 @@
+[
+  {
+    "regulation": "UN_R156",
+    "sector": "transport",
+    "subsector": "automotive_oem",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Applies to vehicle manufacturers (OEMs) for type approval of vehicles that allow software updates (categories M, N, O, R, S, T)"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "transport",
+    "subsector": "automotive_supplier",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "7",
+    "notes": "Tier 1/2 suppliers providing software components must support OEM SUMS requirements"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "transport",
+    "subsector": "fleet_operator",
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "R156 applies to type approval, not vehicle operation; fleet operators receive updates as end users"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "manufacturing",
+    "subsector": "automotive_components",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "7",
+    "notes": "ECU and software component manufacturers must provide RXSWIN and support OTA update mechanisms"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "digital_infrastructure",
+    "subsector": "telematics",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "7",
+    "notes": "OTA update infrastructure providers (backend servers, CDN) must meet security requirements for software distribution"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "financial",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "R156 is specific to vehicle software updates; financial services not in scope"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "healthcare",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "R156 is specific to vehicle software updates; healthcare not in scope"
+  },
+  {
+    "regulation": "UN_R156",
+    "sector": "energy",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "R156 is specific to vehicle software updates; energy sector not in scope"
+  }
+]

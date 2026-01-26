@@ -1,0 +1,90 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["46", "47", "51"],
+    "coverage": "full",
+    "notes": "Art 46-47 certification requirements, Art 51 security objectives for certification schemes"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["4", "5", "6", "7"],
+    "coverage": "full",
+    "notes": "ENISA objectives and tasks (Art 4-7) define EU cybersecurity coordination roles"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["1", "2", "46"],
+    "coverage": "full",
+    "notes": "Art 1-2 scope, Art 46 EU cybersecurity certification framework"
+  },
+  {
+    "control_id": "A.5.35",
+    "control_name": "Independent review of information security",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["56", "58", "60"],
+    "coverage": "full",
+    "notes": "Art 56-60 conformity assessment bodies and third-party certification requirements"
+  },
+  {
+    "control_id": "A.5.36",
+    "control_name": "Compliance with policies, rules and standards for information security",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51", "52", "54"],
+    "coverage": "full",
+    "notes": "Art 51 security objectives, Art 52 assurance levels (basic/substantial/high), Art 54 certification criteria"
+  },
+  {
+    "control_id": "A.6.3",
+    "control_name": "Information security awareness, education and training",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["10", "12"],
+    "coverage": "partial",
+    "notes": "Art 10 capacity building, Art 12 knowledge development and information"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["8", "22"],
+    "coverage": "partial",
+    "notes": "Art 8 operational cooperation, Art 22 EU Cybersecurity Certification Group coordinates incident response"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51", "54"],
+    "coverage": "full",
+    "notes": "Art 51(f) requires minimising known vulnerabilities, Art 54 specifies vulnerability management requirements"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51"],
+    "coverage": "partial",
+    "notes": "Art 51(c-d) requires protection of data confidentiality and integrity through appropriate measures"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51", "52"],
+    "coverage": "partial",
+    "notes": "Art 51(a) security by design, Art 52 assurance levels define development rigor requirements"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["52", "56", "58"],
+    "coverage": "full",
+    "notes": "Art 52 assurance levels require testing, Art 56-58 conformity assessment procedures"
+  }
+]

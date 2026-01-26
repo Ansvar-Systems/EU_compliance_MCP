@@ -1,0 +1,82 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "DSA",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Art 1-3 define scope for intermediary services in the EU"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "DSA",
+    "articles": ["34", "35"],
+    "coverage": "full",
+    "notes": "Art 34-35 require VLOPs to identify, analyze, and mitigate systemic risks"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "DSA",
+    "articles": ["11", "41"],
+    "coverage": "full",
+    "notes": "Art 11 points of contact, Art 41 compliance officers for VLOPs"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "DSA",
+    "articles": ["14", "34"],
+    "coverage": "full",
+    "notes": "Art 14 terms and conditions, Art 34 VLOP risk policies"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "DSA",
+    "articles": ["34"],
+    "coverage": "full",
+    "notes": "Art 34 requires VLOPs to identify systemic risks including manipulation"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "DSA",
+    "articles": ["35"],
+    "coverage": "full",
+    "notes": "Art 35 requires reasonable, proportionate mitigation measures"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "DSA",
+    "articles": ["16", "34"],
+    "coverage": "full",
+    "notes": "Art 16 notice mechanism monitoring, Art 34 systemic risk monitoring"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "DSA",
+    "articles": ["16", "20"],
+    "coverage": "full",
+    "notes": "Art 16 notice assessment, Art 20 illegal content analysis"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "DSA",
+    "articles": ["16", "17"],
+    "coverage": "full",
+    "notes": "Art 16-17 notice-and-action and statement of reasons procedures"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "DSA",
+    "articles": ["18", "42"],
+    "coverage": "full",
+    "notes": "Art 18 criminal offense reporting, Art 42 data access for researchers"
+  }
+]

@@ -1,7 +1,7 @@
 import type { Database } from 'better-sqlite3';
 
 export interface MapControlsInput {
-  framework: 'ISO27001';
+  framework: 'ISO27001' | 'NIST_CSF';
   control?: string;
   regulation?: string;
 }
@@ -23,7 +23,7 @@ export async function mapControls(
   db: Database,
   input: MapControlsInput
 ): Promise<ControlMapping[]> {
-  const { control, regulation } = input;
+  const { framework, control, regulation } = input;
 
   let sql = `
     SELECT
@@ -34,10 +34,10 @@ export async function mapControls(
       coverage,
       notes
     FROM control_mappings
-    WHERE 1=1
+    WHERE framework = ?
   `;
 
-  const params: string[] = [];
+  const params: string[] = [framework];
 
   if (control) {
     sql += ` AND control_id = ?`;

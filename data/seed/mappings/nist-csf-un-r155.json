@@ -1,0 +1,130 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "UN_R155",
+    "articles": ["1"],
+    "coverage": "full",
+    "notes": "Section 1 scope for vehicle cybersecurity type approval"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 CSMS requires documented risk management"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.2 organizational roles for cybersecurity"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 requires CSMS policies and procedures"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.3 supplier and service provider risk management"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 CSMS requires vehicle system inventory"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.5 vulnerability identification, Annex 5 threat/vulnerability list"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Section 7 threat assessment, Annex 5 comprehensive threat catalogue"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Section 7 risk mitigation, Annex 5 mitigations for each threat"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Annex 5 Part A.3.1 data protection mitigations"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Annex 5 communication security mitigations"
+  },
+  {
+    "control_id": "PR.PS-01",
+    "control_name": "Configuration management practices established",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 CSMS includes secure configuration"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.4 monitoring and threat detection"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.4 analysis of detected threats"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.4 response to cyber attacks"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "partial",
+    "notes": "Section 7 CSMS includes recovery procedures"
+  }
+]

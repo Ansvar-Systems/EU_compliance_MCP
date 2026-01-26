@@ -54,6 +54,7 @@ CREATE TABLE definitions (
 -- Control mappings
 CREATE TABLE control_mappings (
   id INTEGER PRIMARY KEY,
+  framework TEXT NOT NULL DEFAULT 'ISO27001',
   control_id TEXT NOT NULL,
   control_name TEXT NOT NULL,
   regulation TEXT NOT NULL REFERENCES regulations(id),
@@ -113,13 +114,18 @@ INSERT INTO definitions (regulation, term, definition, article) VALUES
   ('DORA', 'ICT-related incident', 'a single event or a series of linked events unplanned by the financial entity that compromises the security of the network and information systems', '3');
 
 -- Sample control mappings (ISO 27001:2022)
-INSERT INTO control_mappings (control_id, control_name, regulation, articles, coverage, notes) VALUES
-  ('A.5.1', 'Policies for information security', 'GDPR', '["24", "32"]', 'partial', 'GDPR requires appropriate technical and organisational measures'),
-  ('A.5.1', 'Policies for information security', 'NIS2', '["21"]', 'full', 'NIS2 explicitly requires security policies'),
-  ('A.5.1', 'Policies for information security', 'DORA', '["9", "10"]', 'full', 'DORA Chapter II covers ICT risk management framework'),
-  ('A.6.8', 'Information security event reporting', 'GDPR', '["33", "34"]', 'full', 'Data breach notification requirements'),
-  ('A.6.8', 'Information security event reporting', 'NIS2', '["23"]', 'full', 'Incident reporting to CSIRT'),
-  ('A.6.8', 'Information security event reporting', 'DORA', '["17", "19"]', 'full', 'ICT incident reporting requirements');
+INSERT INTO control_mappings (framework, control_id, control_name, regulation, articles, coverage, notes) VALUES
+  ('ISO27001', 'A.5.1', 'Policies for information security', 'GDPR', '["24", "32"]', 'partial', 'GDPR requires appropriate technical and organisational measures'),
+  ('ISO27001', 'A.5.1', 'Policies for information security', 'NIS2', '["21"]', 'full', 'NIS2 explicitly requires security policies'),
+  ('ISO27001', 'A.5.1', 'Policies for information security', 'DORA', '["9", "10"]', 'full', 'DORA Chapter II covers ICT risk management framework'),
+  ('ISO27001', 'A.6.8', 'Information security event reporting', 'GDPR', '["33", "34"]', 'full', 'Data breach notification requirements'),
+  ('ISO27001', 'A.6.8', 'Information security event reporting', 'NIS2', '["23"]', 'full', 'Incident reporting to CSIRT'),
+  ('ISO27001', 'A.6.8', 'Information security event reporting', 'DORA', '["17", "19"]', 'full', 'ICT incident reporting requirements'),
+  -- Sample NIST CSF mappings
+  ('NIST_CSF', 'GV.PO-01', 'Cybersecurity policy', 'GDPR', '["24", "32"]', 'partial', 'GDPR requires appropriate policies'),
+  ('NIST_CSF', 'GV.PO-01', 'Cybersecurity policy', 'NIS2', '["21"]', 'full', 'NIS2 explicitly requires security policies'),
+  ('NIST_CSF', 'RS.MA-01', 'Incident response plan is executed', 'GDPR', '["33", "34"]', 'full', 'Breach notification requirements'),
+  ('NIST_CSF', 'RS.MA-01', 'Incident response plan is executed', 'NIS2', '["23"]', 'full', 'Incident reporting to CSIRT');
 
 -- Sample applicability rules
 INSERT INTO applicability_rules (regulation, sector, subsector, applies, confidence, basis_article, notes) VALUES

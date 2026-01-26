@@ -1,0 +1,71 @@
+[
+  {
+    "regulation": "DSA",
+    "sector": "digital_infrastructure",
+    "subsector": "vlop",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "33",
+    "notes": "Very Large Online Platforms (45M+ EU users) have enhanced obligations including risk assessments and audits"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "digital_infrastructure",
+    "subsector": "hosting_provider",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "6",
+    "notes": "Hosting services must implement notice-and-action, designate points of contact, report to authorities"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "digital_infrastructure",
+    "subsector": "cloud_provider",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "6",
+    "notes": "Cloud services are hosting services under DSA; liability exemptions require no actual knowledge"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "digital_infrastructure",
+    "subsector": "cdn_provider",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "5",
+    "notes": "CDN and caching services are intermediary services with conduit/caching liability rules"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "digital_infrastructure",
+    "subsector": "isp",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "4",
+    "notes": "Internet access providers are mere conduit services with basic obligations"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "other",
+    "subsector": "online_marketplace",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "30",
+    "notes": "Online marketplaces must verify traders (KYBC), display product safety info, random compliance checks"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "financial",
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Financial services themselves not in scope; but platforms offering financial products may be"
+  },
+  {
+    "regulation": "DSA",
+    "sector": "manufacturing",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "DSA applies to intermediary services, not product manufacturers directly"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 requires Software Update Management System (SUMS) with documented policies"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.1.2 requires defined organizational processes for software update management"
+  },
+  {
+    "control_id": "A.5.8",
+    "control_name": "Information security in project management",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 SUMS covers software update lifecycle including OTA updates"
+  },
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "partial",
+    "notes": "Section 7 implies supplier management for software components affecting vehicle type"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "UN_R156",
+    "articles": ["1", "5"],
+    "coverage": "full",
+    "notes": "Section 1 scope, Section 5 type approval requirements for software updates"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "partial",
+    "notes": "Section 7.1.3 requires documentation of software update processes including failures"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 SUMS addresses security-relevant software updates and patches"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.1.2 requires RXSWIN (Rx Software Identification Number) for version tracking"
+  },
+  {
+    "control_id": "A.8.15",
+    "control_name": "Logging",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "partial",
+    "notes": "Section 7 requires documentation and traceability of software updates"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2 requires integrity verification of software updates using cryptographic mechanisms"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 integrates SUMS into vehicle development and maintenance lifecycle"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "UN_R156",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2 requires testing and validation before software updates are released"
+  },
+  {
+    "control_id": "A.8.32",
+    "control_name": "Change management",
+    "regulation": "UN_R156",
+    "articles": ["7", "8"],
+    "coverage": "full",
+    "notes": "Section 7 SUMS manages software changes, Section 8 covers vehicle type modifications"
+  }
+]

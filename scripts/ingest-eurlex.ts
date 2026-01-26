@@ -40,6 +40,14 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32024R1689': { id: 'AI_ACT', full_name: 'Artificial Intelligence Act', effective_date: '2024-08-01' },
   '32024R2847': { id: 'CRA', full_name: 'Cyber Resilience Act', effective_date: '2024-12-10' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
+  '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
+  // Digital Single Market regulations
+  '32023R2854': { id: 'DATA_ACT', full_name: 'Data Act', effective_date: '2025-09-12' },
+  '32022R2065': { id: 'DSA', full_name: 'Digital Services Act', effective_date: '2024-02-17' },
+  '32022R1925': { id: 'DMA', full_name: 'Digital Markets Act', effective_date: '2023-05-02' },
+  // UN Regulations (adopted by EU)
+  '42021X0387': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system', effective_date: '2021-01-22' },
+  '42025X0005': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system (Supplement 3)', effective_date: '2025-01-10' },
 };
 
 async function fetchEurLexHtml(celexId: string): Promise<string> {
@@ -189,7 +197,7 @@ async function ingestRegulation(celexId: string, outputPath: string): Promise<vo
     full_name: metadata?.full_name || `Regulation ${celexId}`,
     celex_id: celexId,
     effective_date: metadata?.effective_date,
-    eur_lex_url: `https://eur-lex.europa.eu/eli/reg/2016/679/oj`,
+    eur_lex_url: `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${celexId}`,
     articles,
     definitions,
   };

@@ -1,0 +1,130 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7 requires Cyber Security Management System (CSMS) with documented policies"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.2 requires defined organizational roles for cybersecurity"
+  },
+  {
+    "control_id": "A.5.8",
+    "control_name": "Information security in project management",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Section 7 CSMS covers vehicle development lifecycle, Annex 5 lists threats to mitigate"
+  },
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.3 requires managing cybersecurity risks from suppliers and service providers"
+  },
+  {
+    "control_id": "A.5.20",
+    "control_name": "Addressing information security within supplier agreements",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.3 requires supplier contracts to address cybersecurity requirements"
+  },
+  {
+    "control_id": "A.5.29",
+    "control_name": "Information security during disruption",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "partial",
+    "notes": "Annex 5 includes availability threats; CSMS must address operational continuity"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "UN_R155",
+    "articles": ["1", "5"],
+    "coverage": "full",
+    "notes": "Section 1 scope, Section 5 type approval requirements for vehicle cybersecurity"
+  },
+  {
+    "control_id": "A.6.3",
+    "control_name": "Information security awareness, education and training",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "partial",
+    "notes": "Section 7.2.2.2 implies competent personnel for CSMS implementation"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.4 requires monitoring, detecting and responding to cyber attacks"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.5 requires identification and remediation of vulnerabilities"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "partial",
+    "notes": "Section 7 CSMS includes secure configuration management for vehicle systems"
+  },
+  {
+    "control_id": "A.8.16",
+    "control_name": "Monitoring activities",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.4 requires monitoring and detection of cyber threats"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Annex 5 Part A.3.1 lists cryptographic controls as mitigations for threats"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.2 requires cybersecurity in vehicle type development process"
+  },
+  {
+    "control_id": "A.8.26",
+    "control_name": "Application security requirements",
+    "regulation": "UN_R155",
+    "articles": ["7", "Annex 5"],
+    "coverage": "full",
+    "notes": "Annex 5 defines security requirements for vehicle software and communications"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "UN_R155",
+    "articles": ["7"],
+    "coverage": "full",
+    "notes": "Section 7.2.2.2 requires testing and validation of cybersecurity measures"
+  }
+]

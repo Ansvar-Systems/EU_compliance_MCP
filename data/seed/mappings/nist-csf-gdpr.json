@@ -1,0 +1,178 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "GDPR",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "GDPR Art 1-3 define organizational context for data protection compliance"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "GDPR",
+    "articles": ["24", "32"],
+    "coverage": "full",
+    "notes": "Art 24 controller responsibility, Art 32 security of processing based on risk"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "GDPR",
+    "articles": ["24", "26", "37", "38", "39"],
+    "coverage": "full",
+    "notes": "Controller/processor responsibilities (Art 24, 26), DPO designation and tasks (Art 37-39)"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "GDPR",
+    "articles": ["24", "32"],
+    "coverage": "partial",
+    "notes": "Art 24 requires appropriate policies, Art 32 security measures"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "GDPR",
+    "articles": ["30"],
+    "coverage": "partial",
+    "notes": "Art 30 requires records of processing activities including data categories"
+  },
+  {
+    "control_id": "ID.AM-02",
+    "control_name": "Software platforms and applications inventories",
+    "regulation": "GDPR",
+    "articles": ["30", "32"],
+    "coverage": "partial",
+    "notes": "Art 30 records of processing, Art 32 implies knowledge of systems processing data"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "GDPR",
+    "articles": ["32", "35"],
+    "coverage": "partial",
+    "notes": "Art 32 risk assessment for security, Art 35 DPIA for high-risk processing"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "GDPR",
+    "articles": ["32", "35"],
+    "coverage": "partial",
+    "notes": "Art 32 requires protection against threats, Art 35 threat identification in DPIA"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "GDPR",
+    "articles": ["32", "35"],
+    "coverage": "full",
+    "notes": "Art 32 appropriate security measures, Art 35 measures to address risks"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "GDPR",
+    "articles": ["25", "32"],
+    "coverage": "partial",
+    "notes": "Art 25 data protection by design, Art 32 access control as security measure"
+  },
+  {
+    "control_id": "PR.AA-03",
+    "control_name": "Users and services are authenticated",
+    "regulation": "GDPR",
+    "articles": ["32"],
+    "coverage": "partial",
+    "notes": "Art 32 requires appropriate technical measures including authentication"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "GDPR",
+    "articles": ["25", "32"],
+    "coverage": "full",
+    "notes": "Art 25 data minimization by default, Art 32 access control measures"
+  },
+  {
+    "control_id": "PR.AT-01",
+    "control_name": "Awareness and training provided",
+    "regulation": "GDPR",
+    "articles": ["39", "47"],
+    "coverage": "partial",
+    "notes": "Art 39 DPO tasks include awareness, Art 47 BCR training requirements"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "GDPR",
+    "articles": ["32"],
+    "coverage": "full",
+    "notes": "Art 32 explicitly mentions encryption and pseudonymisation"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "GDPR",
+    "articles": ["32"],
+    "coverage": "full",
+    "notes": "Art 32 requires appropriate security for data transmission"
+  },
+  {
+    "control_id": "PR.DS-10",
+    "control_name": "Data is disposed of properly",
+    "regulation": "GDPR",
+    "articles": ["5", "17"],
+    "coverage": "full",
+    "notes": "Art 5 storage limitation, Art 17 right to erasure"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "GDPR",
+    "articles": ["32"],
+    "coverage": "partial",
+    "notes": "Art 32 implies monitoring as part of security measures"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "GDPR",
+    "articles": ["33"],
+    "coverage": "full",
+    "notes": "Art 33 requires assessing breach impact for notification"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "GDPR",
+    "articles": ["33", "34"],
+    "coverage": "full",
+    "notes": "Art 33 breach notification to authority, Art 34 notification to data subjects"
+  },
+  {
+    "control_id": "RS.CO-02",
+    "control_name": "Incidents are reported internally",
+    "regulation": "GDPR",
+    "articles": ["33"],
+    "coverage": "full",
+    "notes": "Art 33 requires internal awareness to notify within 72 hours"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "GDPR",
+    "articles": ["33", "34"],
+    "coverage": "full",
+    "notes": "Art 33 notification to supervisory authority, Art 34 to data subjects"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "GDPR",
+    "articles": ["32"],
+    "coverage": "partial",
+    "notes": "Art 32(1)(c) ability to restore availability and access to data"
+  }
+]

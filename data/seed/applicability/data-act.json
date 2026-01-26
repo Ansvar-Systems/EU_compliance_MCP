@@ -1,0 +1,71 @@
+[
+  {
+    "regulation": "DATA_ACT",
+    "sector": "manufacturing",
+    "subsector": "iot_devices",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "3",
+    "notes": "Manufacturers of connected products must enable user access to generated data"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "manufacturing",
+    "subsector": "consumer_electronics",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "3",
+    "notes": "Smart devices must make data accessible to users and third parties they designate"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "digital_infrastructure",
+    "subsector": "cloud_provider",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "23",
+    "notes": "Cloud providers must enable switching and ensure interoperability; no switching charges after transition period"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "digital_infrastructure",
+    "subsector": "software_vendor",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "23",
+    "notes": "Data processing services must comply with switching and portability requirements"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "transport",
+    "subsector": "automotive_oem",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "3",
+    "notes": "Connected vehicles generate data that must be accessible to users; aftermarket repair data access"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "energy",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "3",
+    "notes": "Smart meters and energy management devices must provide data access"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "healthcare",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "3",
+    "notes": "Connected medical devices and health wearables must enable data portability"
+  },
+  {
+    "regulation": "DATA_ACT",
+    "sector": "public_administration",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "14",
+    "notes": "Public sector bodies can request access to private sector data in exceptional circumstances"
+  }
+]

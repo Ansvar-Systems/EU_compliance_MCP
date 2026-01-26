@@ -2,7 +2,7 @@
 
 **The first open-source MCP server for European cybersecurity regulations.**
 
-Query DORA, NIS2, GDPR, the EU AI Act, Cyber Resilience Act, UN R155/R156, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query DORA, NIS2, GDPR, the EU AI Act, Cyber Resilience Act, eIDAS 2.0, UN R155/R156, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 Built by [Ansvar Systems](https://ansvar.ai) — Stockholm, Sweden
 
@@ -26,14 +26,20 @@ No more tab-switching. No more "wait, what article was that?" Just ask.
 | **EU AI Act** | Full text, 113 articles, 68 definitions | ✅ |
 | **Cyber Resilience Act** | Full text, 71 articles, 51 definitions | ✅ |
 | **EU Cybersecurity Act** | Full text, 69 articles, 22 definitions | ✅ |
+| **eIDAS 2.0** (European Digital Identity) | Full text, 49 articles, 57 definitions | ✅ |
+| **Data Act** | Full text, 50 articles, 42 definitions | ✅ |
+| **Digital Services Act** (DSA) | Full text, 93 articles, 24 definitions | ✅ |
+| **Digital Markets Act** (DMA) | Full text, 54 articles, 33 definitions | ✅ |
 | **UN R155** (Vehicle Cybersecurity) | Full text, 12 sections + 5 annexes, 13 definitions | ✅ |
 | **UN R156** (Vehicle Software Updates) | Full text, 12 sections + 4 annexes, 11 definitions | ✅ |
 
-**Total: 495 articles, 297 definitions across 8 regulations**
+**Total: 741 articles, 453 definitions across 12 regulations**
 
 Plus:
-- **39 ISO 27001:2022 control mappings** to regulation requirements
-- **43 sector applicability rules** for determining which regulations apply
+- **322 security framework control mappings**:
+  - 143 ISO 27001:2022 controls mapped to regulation requirements
+  - 179 NIST CSF controls mapped to regulation requirements
+- **105 sector applicability rules** for determining which regulations apply
 
 ---
 
@@ -114,7 +120,7 @@ List available regulations or show detailed structure.
 
 ```
 "List all regulations"
-→ Returns overview of all 8 regulations with article counts
+→ Returns overview of all 9 regulations with article counts
 ```
 
 ### `get_definitions`
@@ -143,11 +149,14 @@ Determine if a regulation applies to an entity type.
 ```
 
 ### `map_controls`
-Map ISO 27001:2022 controls to regulation requirements.
+Map security framework controls to regulation requirements. Supports ISO 27001:2022 and NIST CSF.
 
 ```
-"Which regulations require access control (A.5.15)?"
+"Which regulations require access control (ISO 27001 A.5.15)?"
 → Returns mappings to GDPR Art 32, DORA Art 9, NIS2 Art 21
+
+"Map NIST CSF incident response controls to EU regulations"
+→ Returns RS.MA-01 mappings to GDPR Art 33-34, NIS2 Art 23, DORA Art 17-19
 ```
 
 ---
@@ -166,6 +175,14 @@ Once connected, just ask naturally:
 - *"What is a Cybersecurity Management System (CSMS) under R155?"*
 - *"What are the requirements for OTA software updates under R156?"*
 - *"What is RXSWIN and how is it used in R156?"*
+- *"What is an EU Digital Identity Wallet under eIDAS 2.0?"*
+- *"What are the trust service provider requirements in eIDAS?"*
+- *"What are my data access rights under the Data Act?"*
+- *"How do cloud switching requirements work in the Data Act?"*
+- *"What are the notice-and-action requirements under the DSA?"*
+- *"What obligations do Very Large Online Platforms have under DSA?"*
+- *"What is a gatekeeper under the Digital Markets Act?"*
+- *"What interoperability requirements does the DMA impose on messaging apps?"*
 
 ---
 

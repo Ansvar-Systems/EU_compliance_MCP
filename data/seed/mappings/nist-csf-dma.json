@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "DMA",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Art 1-3 define scope for gatekeepers and core platform services"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "DMA",
+    "articles": ["5", "6"],
+    "coverage": "partial",
+    "notes": "Art 5-6 gatekeeper obligations include data handling requirements"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "DMA",
+    "articles": ["15"],
+    "coverage": "partial",
+    "notes": "Art 15 compliance reports require documentation of services"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "DMA",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Art 5-6 restrict data combination and mandate user consent"
+  },
+  {
+    "control_id": "PR.DS-10",
+    "control_name": "Data is disposed of properly",
+    "regulation": "DMA",
+    "articles": ["6"],
+    "coverage": "partial",
+    "notes": "Art 6 data portability supports user-controlled deletion"
+  }
+]

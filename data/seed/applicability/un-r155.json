@@ -1,0 +1,68 @@
+[
+  {
+    "regulation": "UN_R155",
+    "sector": "transport",
+    "subsector": "automotive_oem",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Applies to vehicle manufacturers (OEMs) for type approval of vehicles in categories M, N, O, and L with electronic control units"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "transport",
+    "subsector": "automotive_supplier",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "7",
+    "notes": "Tier 1/2 suppliers must support OEM CSMS requirements; OEMs responsible for supply chain cybersecurity"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "transport",
+    "subsector": "fleet_operator",
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "R155 applies to type approval, not vehicle operation; fleet operators are end users"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "manufacturing",
+    "subsector": "automotive_components",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "7",
+    "notes": "Component manufacturers (ECUs, sensors, connectivity modules) indirectly affected through OEM requirements"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "digital_infrastructure",
+    "subsector": "telematics",
+    "applies": true,
+    "confidence": "possible",
+    "basis_article": "Annex 5",
+    "notes": "Telematics and connected services providers may be affected through backend server security requirements"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "financial",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "R155 is specific to vehicle type approval; financial services not in scope"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "healthcare",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "R155 is specific to vehicle type approval; healthcare not in scope"
+  },
+  {
+    "regulation": "UN_R155",
+    "sector": "energy",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "R155 is specific to vehicle type approval; energy sector not in scope (though EV charging infrastructure has separate requirements)"
+  }
+]

@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS definitions (
 -- Control mappings
 CREATE TABLE IF NOT EXISTS control_mappings (
   id INTEGER PRIMARY KEY,
+  framework TEXT NOT NULL DEFAULT 'ISO27001',
   control_id TEXT NOT NULL,
   control_name TEXT NOT NULL,
   regulation TEXT NOT NULL REFERENCES regulations(id),
@@ -230,13 +231,22 @@ function buildDatabase() {
         const content = readFileSync(join(mappingsDir, file), 'utf-8');
         const mappings = JSON.parse(content);
 
+        // Detect framework from filename
+        let framework = 'ISO27001';
+        if (file.startsWith('nist-csf-')) {
+          framework = 'NIST_CSF';
+        } else if (file.startsWith('iso27001-')) {
+          framework = 'ISO27001';
+        }
+
         const insertMapping = db.prepare(`
-          INSERT INTO control_mappings (control_id, control_name, regulation, articles, coverage, notes)
-          VALUES (?, ?, ?, ?, ?, ?)
+          INSERT INTO control_mappings (framework, control_id, control_name, regulation, articles, coverage, notes)
+          VALUES (?, ?, ?, ?, ?, ?, ?)
         `);
 
         for (const mapping of mappings) {
           insertMapping.run(
+            framework,
             mapping.control_id,
             mapping.control_name,
             mapping.regulation,
@@ -246,7 +256,7 @@ function buildDatabase() {
           );
         }
 
-        console.log(`  Loaded ${mappings.length} control mappings`);
+        console.log(`  Loaded ${mappings.length} ${framework} control mappings`);
       }
     }
 
