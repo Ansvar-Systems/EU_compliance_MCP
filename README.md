@@ -201,7 +201,7 @@ npm start
 - [TEST_QUERIES.md](./TEST_QUERIES.md) - 60+ example queries organized by category
 - [COVERAGE_GAPS.md](./COVERAGE_GAPS.md) - Known limitations and roadmap
 
-**TL;DR:** Base regulations work perfectly. Recitals, delegated acts, and national transpositions are roadmap items.
+**TL;DR:** Base regulations and recitals work perfectly. Delegated acts and national transpositions are roadmap items.
 
 ---
 
@@ -221,6 +221,15 @@ Retrieve a specific article with full text and context.
 ```
 "Get DORA Article 17"
 → Returns ICT-related incident management process requirements
+```
+
+### `get_recital`
+Retrieve legislative intent and interpretation guidance from regulation preambles.
+
+```
+"Get GDPR Recital 83"
+→ Returns: Context for "appropriate technical measures"
+  (encryption, pseudonymization, resilience testing)
 ```
 
 ### `list_regulations`

@@ -1,38 +1,43 @@
 # EU Compliance MCP - Coverage Gaps & Roadmap
 
-## Current Coverage (v0.2.3)
+## Current Coverage (v0.3.0)
 
 ✅ **What works:**
 - 37 base regulations (full text)
 - 2,278 articles with structured data
 - 1,145 official definitions
+- ~2,500+ recitals with legislative intent
 - 686 security framework mappings (ISO 27001, NIST CSF 2.0)
 - 305 sector applicability rules
-- Full-text search across all content
+- Full-text search across all content (articles + recitals)
 - Cross-regulation comparisons
 - Daily freshness monitoring from EUR-Lex
 
 ## Known Gaps
 
-### 1. Recitals ❌ (High Priority)
+### 1. Recitals ✅ (Completed in v0.3.0)
 
-**Status:** Schema exists, no data ingested
+**Status:** ✅ Complete - Recitals ingested and searchable
 
-**What's missing:**
+**What's included:**
 - "Whereas..." paragraphs explaining legislative intent
 - Interpretation guidance for ambiguous articles
 - Context for regulatory objectives
+- Full-text search via FTS5 (recitals_fts table)
+- Dedicated `get_recital` tool for retrieval
 
-**Impact:**
-- GDPR has 173 recitals
-- DORA has 109 recitals
-- AI Act has 180+ recitals
+**Coverage:**
+- GDPR: 173 recitals
+- AI Act: 180 recitals
+- DORA: 180 recitals
+- ~2,500+ recitals across all 37 regulations
 
-**Test queries that fail:**
+**Test queries that now work:**
 ```
-❌ "What's the legislative intent behind GDPR Article 32?"
-❌ "How should I interpret 'appropriate technical measures' in DORA?"
-❌ "What guidance does the AI Act give on proportionality in risk assessments?"
+✅ "What's GDPR Recital 83?" (encryption and technical measures)
+✅ "Get AI Act Recital 1" (high-level policy objectives)
+✅ "Show me NIS2 Recital 2" (scope rationale)
+✅ Search for "encryption" finds relevant recitals across regulations
 ```
 
 **Why this matters:**
@@ -40,7 +45,7 @@ Auditors, lawyers, and compliance officers use recitals to interpret vague requi
 - GDPR Article 32: "appropriate technical and organisational measures"
 - Recital 83 clarifies: encryption, pseudonymization, resilience, restoration capabilities
 
-**Roadmap:** v0.3.0
+**Completed:** v0.3.0
 
 ---
 
@@ -196,7 +201,7 @@ These queries **work today** because of `source_registry`:
 | **Comparisons** | "Compare DORA vs NIS2 incident timelines" | Side-by-side | ✅ Works |
 | **Applicability** | "Does DORA apply to cloud providers?" | Yes/No + criteria | ✅ Works |
 | **Framework mapping** | "Map ISO 27001 A.5.24 to regulations" | Related articles | ✅ Works |
-| **Recitals** | "What's the intent behind GDPR Article 32?" | Recital text | ❌ No data |
+| **Recitals** | "What's GDPR Recital 83?" | Recital text | ✅ Works (v0.3.0) |
 | **Delegated acts** | "Show me DORA RTS on incident reporting" | RTS text | ❌ Not included |
 | **National law** | "How does Germany implement NIS2?" | German text | ❌ Out of scope |
 | **Amendments** | "What changed in GDPR since 2018?" | Changelog | ⚠️ Partial (can see date, not diff) |
@@ -251,11 +256,6 @@ This helps you:
 ## Contributing
 
 If you want to help fill these gaps:
-
-**Recitals (v0.3.0):**
-- Extend `scripts/ingest-eurlex.ts` to parse recitals sections
-- Add to `articles` table `recitals` column (already exists!)
-- Update search to include recitals in FTS5 index
 
 **Delegated Acts (v0.4.0):**
 - Create `delegated_acts` table
