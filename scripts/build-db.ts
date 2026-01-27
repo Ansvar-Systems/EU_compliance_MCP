@@ -151,6 +151,22 @@ CREATE TRIGGER IF NOT EXISTS recitals_au AFTER UPDATE ON recitals BEGIN
   INSERT INTO recitals_fts(rowid, regulation, recital_number, text)
   VALUES (new.id, new.regulation, new.recital_number, new.text);
 END;
+
+-- Evidence requirements table
+CREATE TABLE IF NOT EXISTS evidence_requirements (
+  id INTEGER PRIMARY KEY,
+  regulation TEXT NOT NULL REFERENCES regulations(id),
+  article TEXT NOT NULL,
+  requirement_summary TEXT NOT NULL,
+  evidence_type TEXT NOT NULL CHECK(evidence_type IN ('document', 'log', 'test_result', 'certification', 'policy', 'procedure')),
+  artifact_name TEXT NOT NULL,
+  artifact_example TEXT,
+  description TEXT,
+  retention_period TEXT,
+  auditor_questions TEXT,
+  maturity_levels TEXT,
+  cross_references TEXT
+);
 `;
 
 interface RegulationSeed {
@@ -352,6 +368,45 @@ function buildDatabase() {
         }
 
         console.log(`  Loaded ${rules.length} applicability rules`);
+      }
+    }
+
+    // Load evidence requirements
+    const evidenceDir = join(SEED_DIR, 'evidence');
+    if (existsSync(evidenceDir)) {
+      const evidenceFiles = readdirSync(evidenceDir).filter((f: string) => f.endsWith('.json'));
+
+      const insertEvidence = db.prepare(`
+        INSERT INTO evidence_requirements (
+          regulation, article, requirement_summary, evidence_type,
+          artifact_name, artifact_example, description, retention_period,
+          auditor_questions, maturity_levels, cross_references
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `);
+
+      for (const file of evidenceFiles) {
+        console.log(`Loading evidence requirements from ${file}...`);
+        const content = readFileSync(join(evidenceDir, file), 'utf-8');
+        const requirements = JSON.parse(content);
+
+        for (const req of requirements) {
+          insertEvidence.run(
+            req.regulation,
+            req.article,
+            req.requirement_summary,
+            req.evidence_type,
+            req.artifact_name,
+            req.artifact_example || null,
+            req.description || null,
+            req.retention_period || null,
+            req.auditor_questions ? JSON.stringify(req.auditor_questions) : null,
+            req.maturity_levels ? JSON.stringify(req.maturity_levels) : null,
+            req.cross_references ? JSON.stringify(req.cross_references) : null
+          );
+        }
+
+        console.log(`  Loaded ${requirements.length} evidence requirements`);
       }
     }
   } else {

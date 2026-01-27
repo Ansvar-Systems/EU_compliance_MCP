@@ -16,18 +16,36 @@ export interface SearchResult {
 }
 
 /**
- * Escape special FTS5 query characters to prevent syntax errors.
- * FTS5 uses double quotes for phrase queries and has special operators.
+ * Escape special FTS5 query characters and build optimal search query.
+ * Uses adaptive logic:
+ * - Short queries (1-3 words): AND logic with exact matching for precision
+ * - Long queries (4+ words): OR logic with prefix matching for recall
+ * This prevents empty results on complex queries while maintaining precision on simple ones.
  */
 function escapeFts5Query(query: string): string {
-  // Remove characters that have special meaning in FTS5
-  // and wrap each word in double quotes for exact matching
-  return query
+  // Common stopwords that add noise to searches
+  const stopwords = new Set(['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']);
+
+  // Remove special FTS5 characters and split into words
+  const words = query
     .replace(/['"]/g, '') // Remove quotes
     .split(/\s+/)
-    .filter(word => word.length > 0)
-    .map(word => `"${word}"`)
-    .join(' ');
+    .filter(word => word.length > 2 && !stopwords.has(word.toLowerCase())); // Filter short words and stopwords
+
+  if (words.length === 0) {
+    return '';
+  }
+
+  if (words.length <= 3) {
+    // Short queries: Use AND logic with exact matching for precision
+    // Example: "incident reporting" → "incident" "reporting"
+    return words.map(word => `"${word}"`).join(' ');
+  } else {
+    // Long queries: Use OR logic with prefix matching for better recall
+    // Example: "incident reporting notification timeline" → incident* OR reporting* OR notification* OR timeline*
+    // BM25 will still rank documents with more matches higher
+    return words.map(word => `${word}*`).join(' OR ');
+  }
 }
 
 export async function searchRegulations(

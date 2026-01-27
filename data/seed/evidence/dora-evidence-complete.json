@@ -1,0 +1,223 @@
+[
+  {
+    "regulation": "DORA",
+    "article": "8",
+    "requirement_summary": "Identification and classification of ICT assets",
+    "evidence_type": "document",
+    "artifact_name": "ICT Asset Inventory",
+    "artifact_example": "ICT_Asset_Inventory_2025.xlsx",
+    "description": "Complete inventory of all ICT assets including hardware, software, data, and network components with classification",
+    "retention_period": "Duration of asset lifecycle + 3 years",
+    "auditor_questions": [
+      "Show me your complete ICT asset inventory",
+      "How do you classify assets by criticality?",
+      "How frequently is the inventory updated?",
+      "Show me the mapping between assets and critical/important functions"
+    ],
+    "maturity_levels": {
+      "basic": "Asset inventory exists with basic categorization",
+      "intermediate": "Automated discovery, regular updates, criticality classification",
+      "advanced": "Real-time asset tracking, automated vulnerability correlation, dependency mapping"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "DORA",
+    "article": "9",
+    "requirement_summary": "Protection and prevention measures",
+    "evidence_type": "document",
+    "artifact_name": "ICT Security Controls Matrix",
+    "artifact_example": "ICT_Security_Controls_2025.pdf",
+    "description": "Documentation of implemented protection and prevention controls including network security, access controls, and cryptography",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your network security architecture diagram",
+      "What cryptographic controls do you use for data at rest and in transit?",
+      "How do you manage access controls and segregation of duties?",
+      "Show me your ICT change management procedures"
+    ],
+    "maturity_levels": {
+      "basic": "Basic firewalls, antivirus, access controls in place",
+      "intermediate": "Network segmentation, encryption, documented change management",
+      "advanced": "Zero-trust architecture, automated threat prevention, continuous security validation"
+    },
+    "cross_references": ["GDPR:32", "NIS2:21"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "10",
+    "requirement_summary": "Detection capabilities",
+    "evidence_type": "log",
+    "artifact_name": "Security Monitoring Logs",
+    "artifact_example": "SIEM_Logs_2025-01.csv",
+    "description": "Logs from security information and event management (SIEM) systems showing detection capabilities",
+    "retention_period": "12 months minimum",
+    "auditor_questions": [
+      "Show me your security monitoring and detection tools",
+      "How do you detect anomalies and potential security events?",
+      "What is your mean time to detect (MTTD) for security incidents?",
+      "Show me alerts generated in the past month and how they were handled"
+    ],
+    "maturity_levels": {
+      "basic": "Basic log collection and manual review",
+      "intermediate": "SIEM with automated alerting, correlation rules",
+      "advanced": "AI/ML-based threat detection, automated response, threat hunting"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "DORA",
+    "article": "12",
+    "requirement_summary": "Backup policies and restoration procedures",
+    "evidence_type": "test_result",
+    "artifact_name": "Backup Restoration Test Report",
+    "artifact_example": "Backup_Restore_Test_2025-Q1.pdf",
+    "description": "Test results demonstrating successful backup and restoration of critical data and systems",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your backup policy and schedule",
+      "When was the last backup restoration test?",
+      "What is your Recovery Time Objective (RTO) and Recovery Point Objective (RPO)?",
+      "Show me evidence that backups are stored in immutable format and tested regularly"
+    ],
+    "maturity_levels": {
+      "basic": "Regular backups performed, annual restoration tests",
+      "intermediate": "Automated backups, quarterly restoration tests, RTO/RPO defined",
+      "advanced": "Continuous data protection, automated failover, sub-hour RTO/RPO"
+    },
+    "cross_references": ["DORA:11"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "13",
+    "requirement_summary": "Learning and evolving from incidents",
+    "evidence_type": "document",
+    "artifact_name": "Lessons Learned Register",
+    "artifact_example": "Lessons_Learned_2025.pdf",
+    "description": "Documentation of lessons learned from incidents and how they were incorporated into framework improvements",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me lessons learned from major incidents in the past year",
+      "How do you incorporate lessons learned into your ICT risk framework?",
+      "What changes were made as a result of this incident?",
+      "How do you communicate lessons learned across the organization?"
+    ],
+    "maturity_levels": {
+      "basic": "Post-incident reviews documented",
+      "intermediate": "Structured lessons learned process, corrective actions tracked",
+      "advanced": "Continuous learning culture, predictive analytics from incident patterns"
+    },
+    "cross_references": ["DORA:17"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "14",
+    "requirement_summary": "Communication during ICT incidents",
+    "evidence_type": "document",
+    "artifact_name": "Crisis Communication Plan",
+    "artifact_example": "Crisis_Communication_Plan_2025.pdf",
+    "description": "Documented procedures for internal and external communication during ICT-related incidents",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me your crisis communication plan",
+      "Who is responsible for communicating with stakeholders during incidents?",
+      "How do you communicate with clients about incidents affecting their services?",
+      "Show me communication templates for different incident scenarios"
+    ],
+    "maturity_levels": {
+      "basic": "Communication procedures exist",
+      "intermediate": "Templates ready, escalation paths defined, stakeholder lists current",
+      "advanced": "Automated notifications, multi-channel communication, real-time updates"
+    },
+    "cross_references": ["DORA:11", "DORA:19"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "18",
+    "requirement_summary": "Classification of ICT-related incidents",
+    "evidence_type": "document",
+    "artifact_name": "Incident Classification Matrix",
+    "artifact_example": "Incident_Classification_Matrix.pdf",
+    "description": "Criteria for classifying incidents by priority, severity, and criticality of impacted services",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your incident classification criteria",
+      "How do you determine if an incident is 'major'?",
+      "What factors do you consider when assessing incident severity?",
+      "Show me examples of incidents at each classification level"
+    ],
+    "maturity_levels": {
+      "basic": "Classification criteria documented",
+      "intermediate": "Automated classification scoring, clear thresholds",
+      "advanced": "AI-assisted classification, real-time impact assessment"
+    },
+    "cross_references": ["DORA:17", "DORA:19"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "26",
+    "requirement_summary": "Threat-Led Penetration Testing (TLPT)",
+    "evidence_type": "test_result",
+    "artifact_name": "TLPT Report",
+    "artifact_example": "TLPT_Report_2025.pdf",
+    "description": "Advanced penetration testing results simulating real-world attack scenarios",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your most recent TLPT report",
+      "Who conducted the TLPT (internal/external testers)?",
+      "What attack scenarios were tested?",
+      "Show me the remediation plan for identified vulnerabilities",
+      "How do you manage risk during TLPT execution?"
+    ],
+    "maturity_levels": {
+      "basic": "TLPT conducted as required (typically 3-year cycle)",
+      "intermediate": "Regular TLPT, testers from approved pool, comprehensive scenarios",
+      "advanced": "Continuous red team exercises, automated threat intelligence integration"
+    },
+    "cross_references": ["DORA:24"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "29",
+    "requirement_summary": "Assessment of ICT concentration risk",
+    "evidence_type": "document",
+    "artifact_name": "Concentration Risk Assessment",
+    "artifact_example": "Concentration_Risk_Assessment_2025.pdf",
+    "description": "Analysis of dependencies on specific ICT third-party providers and concentration risk",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your ICT concentration risk assessment",
+      "Which providers create concentration risk for your organization?",
+      "How do you mitigate concentration risk?",
+      "What alternative providers have you identified for critical services?"
+    ],
+    "maturity_levels": {
+      "basic": "Concentration risk identified for major providers",
+      "intermediate": "Regular assessment, mitigation strategies, diversification plan",
+      "advanced": "Continuous monitoring, automated risk scoring, multi-cloud architecture"
+    },
+    "cross_references": ["DORA:28"]
+  },
+  {
+    "regulation": "DORA",
+    "article": "30",
+    "requirement_summary": "Key contractual provisions with ICT third-party providers",
+    "evidence_type": "document",
+    "artifact_name": "ICT Contract Template with DORA Clauses",
+    "artifact_example": "ICT_Contract_Template_DORA.docx",
+    "description": "Standardized contract template including all mandatory DORA provisions for ICT services",
+    "retention_period": "Duration of contract + 7 years",
+    "auditor_questions": [
+      "Show me a sample contract with ICT third-party provider",
+      "Does it include all mandatory DORA clauses (Art 30)?",
+      "How do you ensure audit rights are preserved?",
+      "Show me termination rights and exit assistance provisions"
+    ],
+    "maturity_levels": {
+      "basic": "Contracts include basic DORA clauses",
+      "intermediate": "Standardized template, legal review process, compliance checklist",
+      "advanced": "Automated contract compliance monitoring, clause library management"
+    },
+    "cross_references": ["DORA:28"]
+  }
+]

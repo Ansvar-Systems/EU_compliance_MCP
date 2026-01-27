@@ -13,6 +13,7 @@ import { compareRequirements, type CompareInput } from './compare.js';
 import { mapControls, type MapControlsInput } from './map.js';
 import { checkApplicability, type ApplicabilityInput } from './applicability.js';
 import { getDefinitions, type DefinitionsInput } from './definitions.js';
+import { getEvidenceRequirements, type EvidenceInput } from './evidence.js';
 
 interface ToolDefinition {
   name: string;
@@ -174,7 +175,7 @@ export const TOOLS: ToolDefinition[] = [
   },
   {
     name: 'check_applicability',
-    description: 'Determine which EU regulations apply to an organization based on sector and characteristics.',
+    description: 'Determine which EU regulations apply to an organization based on sector and characteristics. Supports tiered detail levels for optimal response length.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -195,6 +196,11 @@ export const TOOLS: ToolDefinition[] = [
           type: 'string',
           enum: ['sme', 'large'],
           description: 'Optional: organization size',
+        },
+        detail_level: {
+          type: 'string',
+          enum: ['summary', 'requirements', 'full'],
+          description: 'Optional: level of detail (summary=executive overview only, requirements=include key requirements, full=complete details with basis articles). Default: full',
         },
       },
       required: ['sector'],
@@ -224,6 +230,32 @@ export const TOOLS: ToolDefinition[] = [
     handler: async (db, args) => {
       const input = args as unknown as DefinitionsInput;
       return await getDefinitions(db, input);
+    },
+  },
+  {
+    name: 'get_evidence_requirements',
+    description: 'Get compliance evidence and audit artifacts required for specific regulation requirements. Shows what documents, logs, and test results auditors will ask for, including retention periods and maturity levels.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        regulation: {
+          type: 'string',
+          description: 'Optional: filter to specific regulation (e.g., "DORA", "GDPR")',
+        },
+        article: {
+          type: 'string',
+          description: 'Optional: filter to specific article (e.g., "6", "32")',
+        },
+        evidence_type: {
+          type: 'string',
+          enum: ['document', 'log', 'test_result', 'certification', 'policy', 'procedure'],
+          description: 'Optional: filter by evidence type',
+        },
+      },
+    },
+    handler: async (db, args) => {
+      const input = args as unknown as EvidenceInput;
+      return await getEvidenceRequirements(db, input);
     },
   },
 ];

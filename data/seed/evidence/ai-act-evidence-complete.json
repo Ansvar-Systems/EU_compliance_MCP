@@ -1,0 +1,332 @@
+[
+  {
+    "regulation": "AI_ACT",
+    "article": "9",
+    "requirement_summary": "Risk management system for high-risk AI",
+    "evidence_type": "document",
+    "artifact_name": "AI Risk Management System Documentation",
+    "artifact_example": "AI_Risk_Management_System_2025.pdf",
+    "description": "Continuous iterative process for identifying, analyzing, estimating, and evaluating risks throughout AI system lifecycle",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your AI risk management documentation",
+      "How do you identify and analyze risks throughout the AI lifecycle?",
+      "What risk mitigation measures are implemented?",
+      "How do you test and validate risk management effectiveness?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk register for AI systems, annual risk reviews",
+      "intermediate": "Iterative risk management process, documented testing procedures, post-market monitoring",
+      "advanced": "Continuous automated risk assessment, real-time monitoring, predictive risk analytics"
+    },
+    "cross_references": ["DORA:6", "NIS2:21"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "10",
+    "requirement_summary": "Data governance for training/testing datasets",
+    "evidence_type": "document",
+    "artifact_name": "AI Data Governance Policy",
+    "artifact_example": "AI_Data_Governance_2025.pdf",
+    "description": "Data governance practices for training, validation, and testing datasets including bias detection",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your data governance practices for AI training data",
+      "How do you ensure training data is relevant, representative, and free from bias?",
+      "What bias detection and mitigation measures are in place?",
+      "How do you document data provenance and quality?"
+    ],
+    "maturity_levels": {
+      "basic": "Data quality checks, basic bias detection",
+      "intermediate": "Comprehensive data governance framework, statistical bias testing, data lineage tracking",
+      "advanced": "Automated bias detection, continuous data quality monitoring, fairness metrics dashboards"
+    },
+    "cross_references": ["GDPR:5"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "11",
+    "requirement_summary": "Technical documentation",
+    "evidence_type": "document",
+    "artifact_name": "AI System Technical Documentation",
+    "artifact_example": "AI_Technical_Documentation_2025.pdf",
+    "description": "Comprehensive technical documentation demonstrating compliance and enabling assessment",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me the technical documentation for your AI systems",
+      "Does it include system design, development process, training methodology?",
+      "How is the documentation kept up-to-date with system changes?",
+      "Can you demonstrate conformity assessment based on this documentation?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic technical specifications documented",
+      "intermediate": "Comprehensive documentation including architecture, training data, performance metrics",
+      "advanced": "Living documentation with automated updates, version control, traceability matrix"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "12",
+    "requirement_summary": "Record-keeping and logging",
+    "evidence_type": "log",
+    "artifact_name": "AI System Activity Logs",
+    "artifact_example": "AI_Activity_Logs_2025.csv",
+    "description": "Automatic logs of AI system operations enabling traceability and accountability",
+    "retention_period": "Duration appropriate to system purpose (min 6 months)",
+    "auditor_questions": [
+      "Show me your AI system logging capabilities",
+      "What information is automatically logged (inputs, outputs, decisions)?",
+      "How long are logs retained and how are they protected?",
+      "Can you trace individual AI decisions through the logs?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic input/output logging",
+      "intermediate": "Comprehensive logging including decision factors, timestamps, user identification",
+      "advanced": "Immutable audit trails, real-time log analysis, anomaly detection"
+    },
+    "cross_references": ["GDPR:5"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "13",
+    "requirement_summary": "Transparency and information to deployers",
+    "evidence_type": "document",
+    "artifact_name": "AI System Instructions for Use",
+    "artifact_example": "AI_Instructions_For_Use_2025.pdf",
+    "description": "Clear instructions and information for deployers including capabilities, limitations, and appropriate use",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me the instructions for use provided to AI system deployers",
+      "Does it clearly state the AI's intended purpose and limitations?",
+      "What information is provided about expected performance and accuracy?",
+      "How do you communicate risks and mitigation measures to deployers?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic user documentation",
+      "intermediate": "Comprehensive instructions including limitations, performance metrics, risk warnings",
+      "advanced": "Interactive documentation, contextual help, automated compliance checking"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "14",
+    "requirement_summary": "Human oversight",
+    "evidence_type": "document",
+    "artifact_name": "Human Oversight Framework",
+    "artifact_example": "AI_Human_Oversight_2025.pdf",
+    "description": "Measures enabling effective human oversight including intervention and override capabilities",
+    "retention_period": "Duration of AI system + 5 years",
+    "auditor_questions": [
+      "Show me your human oversight framework for AI systems",
+      "What capabilities exist for humans to intervene or override AI decisions?",
+      "How are oversight personnel trained and qualified?",
+      "Show me examples of human intervention in AI decision-making"
+    ],
+    "maturity_levels": {
+      "basic": "Manual review capability, basic override functions",
+      "intermediate": "Structured oversight framework, trained oversight personnel, documented intervention protocols",
+      "advanced": "Risk-based automated escalation, real-time oversight dashboards, AI-assisted oversight"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "15",
+    "requirement_summary": "Accuracy, robustness, and cybersecurity",
+    "evidence_type": "test_result",
+    "artifact_name": "AI System Accuracy and Robustness Testing",
+    "artifact_example": "AI_Testing_Results_2025.pdf",
+    "description": "Test results demonstrating appropriate accuracy, robustness against errors, and cybersecurity resilience",
+    "retention_period": "Duration of AI system + 5 years",
+    "auditor_questions": [
+      "Show me accuracy testing results for your AI systems",
+      "How do you test robustness against adversarial inputs or data drift?",
+      "What cybersecurity testing has been performed (adversarial attacks, poisoning)?",
+      "How frequently is testing repeated and what are the acceptance criteria?"
+    ],
+    "maturity_levels": {
+      "basic": "Initial accuracy validation, basic security testing",
+      "intermediate": "Regular accuracy monitoring, adversarial testing, documented performance metrics",
+      "advanced": "Continuous accuracy monitoring, automated adversarial testing, real-time drift detection"
+    },
+    "cross_references": ["NIS2:21", "DORA:10"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "16",
+    "requirement_summary": "Quality management system",
+    "evidence_type": "document",
+    "artifact_name": "AI Quality Management System",
+    "artifact_example": "AI_QMS_2025.pdf",
+    "description": "Quality management system ensuring compliance with AI Act requirements",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your AI quality management system documentation",
+      "How does the QMS ensure ongoing compliance with AI Act requirements?",
+      "What quality assurance processes are in place for AI development?",
+      "Show me evidence of QMS effectiveness reviews"
+    ],
+    "maturity_levels": {
+      "basic": "Basic quality procedures for AI development",
+      "intermediate": "Formal QMS with documented procedures, regular audits, corrective actions",
+      "advanced": "ISO-certified QMS, continuous improvement, automated quality metrics"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "17",
+    "requirement_summary": "Conformity assessment",
+    "evidence_type": "certification",
+    "artifact_name": "AI System Conformity Assessment",
+    "artifact_example": "AI_Conformity_Certificate_2025.pdf",
+    "description": "Conformity assessment results or self-assessment demonstrating compliance with AI Act requirements",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your AI conformity assessment documentation",
+      "Was internal or third-party assessment performed?",
+      "What standards were used for the assessment?",
+      "How do you maintain conformity as the AI system evolves?"
+    ],
+    "maturity_levels": {
+      "basic": "Self-assessment against AI Act requirements",
+      "intermediate": "Structured conformity assessment, gap analysis, remediation tracking",
+      "advanced": "Third-party certification, continuous conformity monitoring, automated compliance checks"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "19",
+    "requirement_summary": "Conformity assessment procedures",
+    "evidence_type": "document",
+    "artifact_name": "Conformity Assessment Procedure Documentation",
+    "artifact_example": "AI_Conformity_Procedure_2025.pdf",
+    "description": "Documentation of conformity assessment procedures and methodologies used",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your conformity assessment procedures",
+      "What methodology do you use for assessing AI Act compliance?",
+      "How frequently is conformity assessment repeated?",
+      "What triggers a new conformity assessment (substantial modifications)?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic assessment checklist",
+      "intermediate": "Documented assessment procedures, regular reassessment schedule",
+      "advanced": "Automated conformity monitoring, continuous assessment, change impact analysis"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "26",
+    "requirement_summary": "Post-market monitoring",
+    "evidence_type": "document",
+    "artifact_name": "AI Post-Market Monitoring Plan",
+    "artifact_example": "AI_Post_Market_Monitoring_2025.pdf",
+    "description": "Post-market monitoring system collecting and analyzing data on AI system performance",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your post-market monitoring plan for AI systems",
+      "What data do you collect on deployed AI system performance?",
+      "How do you identify and respond to performance degradation or bias drift?",
+      "Show me examples of corrective actions taken based on monitoring data"
+    ],
+    "maturity_levels": {
+      "basic": "Basic performance monitoring, incident tracking",
+      "intermediate": "Structured monitoring plan, regular performance reviews, documented corrective actions",
+      "advanced": "Automated performance monitoring, real-time alerts, predictive maintenance"
+    },
+    "cross_references": ["DORA:10"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "27",
+    "requirement_summary": "Fundamental rights impact assessment",
+    "evidence_type": "document",
+    "artifact_name": "Fundamental Rights Impact Assessment",
+    "artifact_example": "AI_FRIA_2025.pdf",
+    "description": "Assessment of AI system's impact on fundamental rights prior to deployment",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your fundamental rights impact assessment for this AI system",
+      "What fundamental rights were identified as potentially impacted?",
+      "What mitigation measures were implemented?",
+      "How do you monitor ongoing fundamental rights impacts?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic rights impact screening",
+      "intermediate": "Comprehensive FRIA covering all relevant rights, documented mitigations",
+      "advanced": "Continuous rights impact monitoring, stakeholder engagement, third-party validation"
+    },
+    "cross_references": ["GDPR:35"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "61",
+    "requirement_summary": "Serious incident reporting",
+    "evidence_type": "document",
+    "artifact_name": "AI Serious Incident Report",
+    "artifact_example": "AI_Incident_Report_2025.pdf",
+    "description": "Report of serious incidents involving AI systems to market surveillance authorities",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me your AI incident reporting procedures",
+      "What constitutes a 'serious incident' for your AI systems?",
+      "How quickly are serious incidents reported to authorities?",
+      "Show me examples of serious incidents and resulting corrective actions"
+    ],
+    "maturity_levels": {
+      "basic": "Basic incident reporting process",
+      "intermediate": "Structured incident classification, timely reporting, root cause analysis",
+      "advanced": "Automated incident detection, integrated reporting systems, proactive risk mitigation"
+    },
+    "cross_references": ["DORA:17", "NIS2:23"]
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "72",
+    "requirement_summary": "Record-keeping obligations for deployers",
+    "evidence_type": "log",
+    "artifact_name": "AI System Deployment Records",
+    "artifact_example": "AI_Deployment_Records_2025.csv",
+    "description": "Records maintained by deployers regarding AI system use and monitoring",
+    "retention_period": "6 months minimum (or as required by sector regulation)",
+    "auditor_questions": [
+      "Show me your AI deployment record-keeping practices",
+      "What information do you track about AI system usage?",
+      "How do you monitor AI system performance in production?",
+      "Can you demonstrate traceability of AI decisions to specific deployments?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic deployment logs",
+      "intermediate": "Comprehensive deployment records, usage tracking, performance metrics",
+      "advanced": "Automated record-keeping, integrated monitoring, analytics dashboards"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "AI_ACT",
+    "article": "Annex III",
+    "requirement_summary": "High-risk AI classification (credit scoring, loan decisions)",
+    "evidence_type": "document",
+    "artifact_name": "High-Risk AI System Classification",
+    "artifact_example": "AI_High_Risk_Classification_2025.pdf",
+    "description": "Documentation classifying AI systems as high-risk under Annex III (creditworthiness assessment)",
+    "retention_period": "Duration of AI system + 10 years",
+    "auditor_questions": [
+      "Show me your classification of AI systems as high-risk or not",
+      "For credit scoring/loan decision AI, what Annex III categories apply?",
+      "How do you ensure all high-risk obligations are met?",
+      "What risk mitigation measures are specific to financial decision-making?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic classification assessment",
+      "intermediate": "Documented classification methodology, regular reassessment, compliance tracking",
+      "advanced": "Automated classification checking, integrated compliance monitoring, expert review"
+    },
+    "cross_references": []
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "regulation": "GDPR",
+    "article": "5",
+    "requirement_summary": "Principles of lawful processing",
+    "evidence_type": "document",
+    "artifact_name": "Data Processing Principles Documentation",
+    "artifact_example": "GDPR_Processing_Principles_2025.pdf",
+    "description": "Documentation demonstrating adherence to lawfulness, fairness, transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity and confidentiality",
+    "retention_period": "Duration of processing + 3 years",
+    "auditor_questions": [
+      "Show me how you ensure lawfulness of processing",
+      "What is your legal basis for processing this personal data?",
+      "How do you implement data minimisation?",
+      "Show me your data retention schedule and deletion procedures"
+    ],
+    "maturity_levels": {
+      "basic": "Principles documented, basic procedures in place",
+      "intermediate": "Automated retention enforcement, regular reviews",
+      "advanced": "Privacy by design embedded in all systems, automated compliance monitoring"
+    },
+    "cross_references": ["GDPR:6", "GDPR:25"]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "6",
+    "requirement_summary": "Lawfulness of processing",
+    "evidence_type": "document",
+    "artifact_name": "Legal Basis Assessment",
+    "artifact_example": "Legal_Basis_Assessment_CustomerData.pdf",
+    "description": "Documentation of legal basis for each processing activity (consent, contract, legal obligation, vital interests, public task, legitimate interests)",
+    "retention_period": "Duration of processing + 3 years",
+    "auditor_questions": [
+      "What is the legal basis for processing this data?",
+      "Show me consent records (if applicable)",
+      "For legitimate interests, show me your balancing test",
+      "How do you document legal basis for each processing activity?"
+    ],
+    "maturity_levels": {
+      "basic": "Legal basis identified for main processing activities",
+      "intermediate": "Documented for all activities, regular reviews",
+      "advanced": "Automated legal basis tracking, integrated with data inventory"
+    },
+    "cross_references": ["GDPR:30"]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "7",
+    "requirement_summary": "Conditions for consent",
+    "evidence_type": "log",
+    "artifact_name": "Consent Records",
+    "artifact_example": "Consent_Records_2025.csv",
+    "description": "Records of all consents obtained including timestamp, purpose, withdrawal mechanism",
+    "retention_period": "Duration of consent + 3 years",
+    "auditor_questions": [
+      "Show me consent records for this data subject",
+      "How do you ensure consent is freely given, specific, informed, and unambiguous?",
+      "How can data subjects withdraw consent?",
+      "Show me evidence that consent mechanism is compliant (no pre-ticked boxes, clear language)"
+    ],
+    "maturity_levels": {
+      "basic": "Consent records maintained",
+      "intermediate": "Granular consent, easy withdrawal, audit trail",
+      "advanced": "Consent preference center, real-time consent propagation across systems"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "13",
+    "requirement_summary": "Information to be provided when data collected from subject",
+    "evidence_type": "document",
+    "artifact_name": "Privacy Notice",
+    "artifact_example": "Privacy_Notice_CustomerPortal.pdf",
+    "description": "Privacy notices provided to data subjects at point of data collection",
+    "retention_period": "Duration of processing",
+    "auditor_questions": [
+      "Show me the privacy notice provided to data subjects",
+      "Does it include all mandatory information (identity, purposes, legal basis, recipients, retention, rights)?",
+      "How do you ensure privacy notices are clear and accessible?",
+      "Show me different versions for different data collection points"
+    ],
+    "maturity_levels": {
+      "basic": "Privacy notices exist and cover mandatory information",
+      "intermediate": "Layered notices, multiple languages, regular updates",
+      "advanced": "Just-in-time notices, personalized information, interactive explanations"
+    },
+    "cross_references": ["GDPR:14"]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "16",
+    "requirement_summary": "Right to rectification",
+    "evidence_type": "log",
+    "artifact_name": "Rectification Requests Log",
+    "artifact_example": "Rectification_Log_2025.csv",
+    "description": "Log of all rectification requests and actions taken",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me rectification requests from the past year",
+      "What is your process for verifying and implementing corrections?",
+      "How do you communicate rectifications to third parties who received the data?",
+      "What is your average response time for rectification requests?"
+    ],
+    "maturity_levels": {
+      "basic": "Rectification process exists, manual handling",
+      "intermediate": "Automated workflow, timeline tracking",
+      "advanced": "Self-service data correction portal, real-time propagation"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "17",
+    "requirement_summary": "Right to erasure (right to be forgotten)",
+    "evidence_type": "log",
+    "artifact_name": "Erasure Requests Log",
+    "artifact_example": "Erasure_Log_2025.csv",
+    "description": "Log of all erasure requests, assessment of applicability, and deletion actions",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me erasure requests and how they were handled",
+      "How do you assess whether erasure is required or an exception applies?",
+      "How do you ensure complete deletion across all systems and backups?",
+      "Show me evidence of deletion confirmation sent to data subjects"
+    ],
+    "maturity_levels": {
+      "basic": "Erasure requests handled manually, basic deletion",
+      "intermediate": "Documented assessment process, comprehensive deletion across systems",
+      "advanced": "Automated deletion workflows, blockchain-based deletion certificates"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "18",
+    "requirement_summary": "Right to restriction of processing",
+    "evidence_type": "log",
+    "artifact_name": "Processing Restriction Log",
+    "artifact_example": "Restriction_Log_2025.csv",
+    "description": "Log of requests to restrict processing and technical implementation",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me restriction requests and how you implemented them",
+      "How do you technically restrict processing while retaining data?",
+      "How do you notify recipients of data about restrictions?",
+      "What controls prevent restricted data from being processed?"
+    ],
+    "maturity_levels": {
+      "basic": "Manual restriction flags in systems",
+      "intermediate": "Automated restriction across all systems, access controls",
+      "advanced": "Real-time restriction enforcement, automated recipient notifications"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "20",
+    "requirement_summary": "Right to data portability",
+    "evidence_type": "log",
+    "artifact_name": "Data Portability Requests Log",
+    "artifact_example": "Portability_Log_2025.csv",
+    "description": "Log of data portability requests and structured data exports provided",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me data portability requests and exports provided",
+      "In what structured format do you provide data (CSV, JSON, XML)?",
+      "How do you ensure data is provided in machine-readable format?",
+      "Can you demonstrate direct transmission to another controller?"
+    ],
+    "maturity_levels": {
+      "basic": "Manual data extraction and export",
+      "intermediate": "Automated export in structured formats (JSON, CSV)",
+      "advanced": "Self-service portability, API-based direct transmission, real-time sync"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "21",
+    "requirement_summary": "Right to object",
+    "evidence_type": "log",
+    "artifact_name": "Objection Requests Log",
+    "artifact_example": "Objection_Log_2025.csv",
+    "description": "Log of objections to processing and actions taken",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me objection requests and outcomes",
+      "How do you assess whether compelling legitimate grounds override the objection?",
+      "How do you communicate objection rights to data subjects?",
+      "Show me evidence of cessation of processing after objection (where applicable)"
+    ],
+    "maturity_levels": {
+      "basic": "Objection process exists, manual assessment",
+      "intermediate": "Documented assessment criteria, automated processing stoppage",
+      "advanced": "Self-service objection portal, real-time processing updates"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "22",
+    "requirement_summary": "Automated decision-making and profiling",
+    "evidence_type": "document",
+    "artifact_name": "Automated Decision-Making Register",
+    "artifact_example": "Automated_Decisions_Register.xlsx",
+    "description": "Register of all automated decision-making processes with legal/significant effects",
+    "retention_period": "Duration of processing + 3 years",
+    "auditor_questions": [
+      "Show me your register of automated decisions",
+      "For this automated decision, what is the logic involved?",
+      "How do data subjects request human intervention?",
+      "Show me safeguards for automated decisions (right to explanation, contest, human review)"
+    ],
+    "maturity_levels": {
+      "basic": "Automated decisions identified, basic safeguards",
+      "intermediate": "Meaningful information provided, human review process",
+      "advanced": "Explainable AI, automated transparency reports, decision audit trails"
+    },
+    "cross_references": ["AI_ACT:13", "AI_ACT:14"]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "28",
+    "requirement_summary": "Processor obligations and contracts",
+    "evidence_type": "document",
+    "artifact_name": "Data Processing Agreement (DPA)",
+    "artifact_example": "DPA_CloudProvider_2025.pdf",
+    "description": "Data processing agreements with all processors containing mandatory clauses",
+    "retention_period": "Duration of contract + 7 years",
+    "auditor_questions": [
+      "Show me DPAs with your data processors",
+      "Do they include all mandatory elements (Art 28(3))?",
+      "How do you ensure processors only process on your instructions?",
+      "Show me processor audit rights and evidence of audits conducted"
+    ],
+    "maturity_levels": {
+      "basic": "DPAs in place with standard clauses",
+      "intermediate": "Comprehensive DPAs, regular processor assessments",
+      "advanced": "Automated processor compliance monitoring, continuous audit capabilities"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "30",
+    "requirement_summary": "Records of processing activities",
+    "evidence_type": "document",
+    "artifact_name": "Record of Processing Activities (ROPA)",
+    "artifact_example": "ROPA_2025.xlsx",
+    "description": "Complete record of all processing activities with required information",
+    "retention_period": "Current + 3 years after processing ceases",
+    "auditor_questions": [
+      "Show me your complete ROPA",
+      "Does it include all required elements (Art 30)?",
+      "How frequently do you update the ROPA?",
+      "Show me the ROPA entry for this specific processing activity"
+    ],
+    "maturity_levels": {
+      "basic": "ROPA exists with main processing activities",
+      "intermediate": "Comprehensive ROPA, regular updates, stakeholder validation",
+      "advanced": "Automated ROPA generation, real-time updates from data flow mapping"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "34",
+    "requirement_summary": "Communication of personal data breach to data subject",
+    "evidence_type": "document",
+    "artifact_name": "Breach Notification to Data Subjects",
+    "artifact_example": "Subject_Breach_Notification_2025-001.pdf",
+    "description": "Notifications sent to data subjects about high-risk breaches",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me breach notifications sent to data subjects",
+      "How do you assess whether a breach requires subject notification (high risk)?",
+      "What information do you provide to subjects (nature, contact, consequences, measures)?",
+      "Show me evidence of when notification was sent (without undue delay)"
+    ],
+    "maturity_levels": {
+      "basic": "Subject notification process exists",
+      "intermediate": "Risk assessment framework, notification templates, timeline tracking",
+      "advanced": "Automated risk scoring, multi-channel notifications, personalized impact assessment"
+    },
+    "cross_references": ["GDPR:33"]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "35",
+    "requirement_summary": "Data Protection Impact Assessment (DPIA)",
+    "evidence_type": "document",
+    "artifact_name": "Data Protection Impact Assessment",
+    "artifact_example": "DPIA_CustomerProfiling_2025.pdf",
+    "description": "DPIA for high-risk processing operations",
+    "retention_period": "Duration of processing + 3 years",
+    "auditor_questions": [
+      "Show me DPIAs for your high-risk processing",
+      "How do you identify when a DPIA is required?",
+      "Does the DPIA include all required elements (systematic description, necessity, risks, safeguards)?",
+      "Show me DPO review and approval of this DPIA"
+    ],
+    "maturity_levels": {
+      "basic": "DPIAs conducted for obvious high-risk processing",
+      "intermediate": "DPIA screening process, structured methodology, stakeholder consultation",
+      "advanced": "Automated DPIA triggers, risk quantification, continuous monitoring"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "37",
+    "requirement_summary": "Designation of Data Protection Officer",
+    "evidence_type": "document",
+    "artifact_name": "DPO Appointment Letter",
+    "artifact_example": "DPO_Appointment_2025.pdf",
+    "description": "Official designation of Data Protection Officer with contact details published",
+    "retention_period": "Duration of appointment + 7 years",
+    "auditor_questions": [
+      "Show me DPO appointment documentation",
+      "Is the DPO involved in all data protection matters?",
+      "How do you ensure DPO independence and absence of conflicts of interest?",
+      "Show me published contact details for data subjects and authorities"
+    ],
+    "maturity_levels": {
+      "basic": "DPO appointed and contact published",
+      "intermediate": "DPO has resources, independence, reports to highest management",
+      "advanced": "DPO function integrated across organization, proactive involvement in all projects"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "GDPR",
+    "article": "44",
+    "requirement_summary": "International data transfers",
+    "evidence_type": "document",
+    "artifact_name": "International Transfer Impact Assessment (TIA)",
+    "artifact_example": "TIA_USCloudProvider_2025.pdf",
+    "description": "Assessment and safeguards for transfers of personal data to third countries",
+    "retention_period": "Duration of transfer + 3 years",
+    "auditor_questions": [
+      "Show me your register of international data transfers",
+      "What transfer mechanism do you use (adequacy decision, SCCs, BCRs)?",
+      "Show me your transfer impact assessment for this third country",
+      "What supplementary measures have you implemented?"
+    ],
+    "maturity_levels": {
+      "basic": "Standard Contractual Clauses (SCCs) in place",
+      "intermediate": "Transfer impact assessments, supplementary technical measures",
+      "advanced": "Automated transfer monitoring, encryption in transit and at rest, data localization options"
+    },
+    "cross_references": []
+  }
+]

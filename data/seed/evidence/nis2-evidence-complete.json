@@ -1,0 +1,310 @@
+[
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Risk analysis and information system security policies",
+    "evidence_type": "document",
+    "artifact_name": "Cybersecurity Risk Analysis",
+    "artifact_example": "NIS2_Risk_Analysis_2025.pdf",
+    "description": "Risk analysis documentation and information system security policies",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your cybersecurity risk analysis",
+      "How do you identify and assess cybersecurity risks?",
+      "Show me your information system security policies",
+      "How do you ensure policies reflect state-of-the-art and relevant standards?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk analysis performed, basic security policies documented",
+      "intermediate": "Regular risk assessments, policies aligned with standards (ISO 27001, NIST)",
+      "advanced": "Continuous risk monitoring, dynamic policy updates, automated compliance checking"
+    },
+    "cross_references": ["DORA:6", "GDPR:32"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Incident handling procedures",
+    "evidence_type": "document",
+    "artifact_name": "Incident Handling Procedures",
+    "artifact_example": "NIS2_Incident_Handling_2025.pdf",
+    "description": "Documented procedures for detecting, responding to, and recovering from cybersecurity incidents",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your incident handling procedures",
+      "How do you detect, classify, and respond to incidents?",
+      "What is your escalation process?",
+      "Show me incident response playbooks for different scenarios"
+    ],
+    "maturity_levels": {
+      "basic": "Incident procedures documented",
+      "intermediate": "Scenario-specific playbooks, regular drills, lessons learned process",
+      "advanced": "Automated incident response, AI-assisted classification, integrated SOAR platform"
+    },
+    "cross_references": ["DORA:17", "GDPR:33"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Business continuity and disaster recovery",
+    "evidence_type": "test_result",
+    "artifact_name": "Business Continuity Test Results",
+    "artifact_example": "BCP_DR_Test_2025.pdf",
+    "description": "Test results for business continuity and disaster recovery capabilities",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your business continuity and disaster recovery plans",
+      "When were they last tested?",
+      "What scenarios did you test (cyberattack, infrastructure failure, natural disaster)?",
+      "Show me identified gaps and remediation actions"
+    ],
+    "maturity_levels": {
+      "basic": "BCP and DR plans exist, annual testing",
+      "intermediate": "Regular testing with diverse scenarios, automated failover",
+      "advanced": "Continuous resilience validation, chaos engineering, sub-hour recovery"
+    },
+    "cross_references": ["DORA:11"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Supply chain security",
+    "evidence_type": "document",
+    "artifact_name": "Supply Chain Security Assessment",
+    "artifact_example": "Supply_Chain_Security_2025.pdf",
+    "description": "Security assessment of suppliers and service providers including security-related aspects of relationships",
+    "retention_period": "Duration of relationship + 5 years",
+    "auditor_questions": [
+      "Show me your supply chain security assessment process",
+      "How do you assess cybersecurity of direct suppliers?",
+      "What security requirements do you impose on suppliers?",
+      "Show me supplier security incident notification procedures"
+    ],
+    "maturity_levels": {
+      "basic": "Basic supplier security questionnaires",
+      "intermediate": "Third-party risk assessments, contractual security requirements",
+      "advanced": "Continuous supplier security monitoring, automated risk scoring, threat intelligence sharing"
+    },
+    "cross_references": ["DORA:28"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Security in acquisition, development, and maintenance",
+    "evidence_type": "document",
+    "artifact_name": "Secure SDLC Policy",
+    "artifact_example": "Secure_SDLC_2025.pdf",
+    "description": "Security policies and procedures for software/system acquisition, development, and maintenance including vulnerability handling",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your secure development lifecycle (SDLC) policies",
+      "How do you integrate security into development?",
+      "Show me your vulnerability management process",
+      "How do you handle vulnerability disclosure?"
+    ],
+    "maturity_levels": {
+      "basic": "Security requirements in development, basic vulnerability scanning",
+      "intermediate": "Secure SDLC framework, automated security testing, vulnerability SLAs",
+      "advanced": "DevSecOps, continuous security validation, shift-left security, automated remediation"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Effectiveness assessment of cybersecurity measures",
+    "evidence_type": "test_result",
+    "artifact_name": "Security Controls Effectiveness Report",
+    "artifact_example": "Controls_Effectiveness_2025.pdf",
+    "description": "Assessment results showing effectiveness of implemented cybersecurity measures",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your process for assessing effectiveness of cybersecurity measures",
+      "What metrics do you use to measure effectiveness?",
+      "Show me latest effectiveness assessment results",
+      "What improvements were made based on assessments?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual effectiveness review",
+      "intermediate": "Continuous control testing, metrics-based assessment",
+      "advanced": "Real-time effectiveness monitoring, automated control validation, predictive analytics"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Cyber hygiene and security training",
+    "evidence_type": "log",
+    "artifact_name": "Security Training Records",
+    "artifact_example": "Security_Training_2025.csv",
+    "description": "Records of cybersecurity training provided to all personnel",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me cybersecurity training records for all employees",
+      "What topics are covered in security awareness training?",
+      "How frequently do employees receive training?",
+      "Show me phishing simulation results and outcomes"
+    ],
+    "maturity_levels": {
+      "basic": "Annual security awareness training",
+      "intermediate": "Role-based training, regular phishing simulations, completion tracking",
+      "advanced": "Continuous learning, gamification, personalized training based on risk behavior"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Cryptography and encryption policies",
+    "evidence_type": "document",
+    "artifact_name": "Cryptography Policy",
+    "artifact_example": "Cryptography_Policy_2025.pdf",
+    "description": "Policies on cryptographic controls and encryption usage",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your cryptography and encryption policies",
+      "What encryption standards do you use for data at rest and in transit?",
+      "How do you manage cryptographic keys?",
+      "Show me encryption implementation for this system"
+    ],
+    "maturity_levels": {
+      "basic": "Encryption used for sensitive data, basic key management",
+      "intermediate": "Strong encryption standards (AES-256), centralized key management, regular rotation",
+      "advanced": "Hardware security modules (HSM), quantum-resistant algorithms, automated key lifecycle"
+    },
+    "cross_references": ["GDPR:32"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Human resources security and access control",
+    "evidence_type": "document",
+    "artifact_name": "Access Control Policy",
+    "artifact_example": "Access_Control_Policy_2025.pdf",
+    "description": "Human resources security procedures and access control policies including asset management",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your access control policies",
+      "How do you implement principle of least privilege?",
+      "Show me user access review procedures and latest review results",
+      "How do you handle access revocation for terminated employees?"
+    ],
+    "maturity_levels": {
+      "basic": "Access control policies exist, manual reviews",
+      "intermediate": "Role-based access control (RBAC), quarterly access reviews, automated provisioning/deprovisioning",
+      "advanced": "Zero-trust architecture, continuous access validation, just-in-time access, privileged access management"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Multi-factor authentication",
+    "evidence_type": "document",
+    "artifact_name": "MFA Implementation Report",
+    "artifact_example": "MFA_Implementation_2025.pdf",
+    "description": "Documentation of multi-factor authentication implementation across systems",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me MFA implementation status across all systems",
+      "What percentage of users use MFA?",
+      "What MFA methods are supported (SMS, authenticator app, hardware token)?",
+      "Show me MFA enforcement for privileged accounts"
+    ],
+    "maturity_levels": {
+      "basic": "MFA available for critical systems",
+      "intermediate": "MFA mandatory for all remote access and privileged accounts",
+      "advanced": "Passwordless authentication, risk-based adaptive MFA, biometric authentication"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "NIS2",
+    "article": "21",
+    "requirement_summary": "Secured communications",
+    "evidence_type": "document",
+    "artifact_name": "Secured Communications Policy",
+    "artifact_example": "Secured_Comms_2025.pdf",
+    "description": "Policies and implementation for secured voice, video, and text communications including emergency systems",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me your secured communications policies",
+      "What tools do you use for secured communications (encrypted email, messaging)?",
+      "How do you secure emergency communication systems?",
+      "Show me encryption implementation for communication channels"
+    ],
+    "maturity_levels": {
+      "basic": "Encrypted email, basic secure messaging",
+      "intermediate": "End-to-end encrypted communications for all sensitive exchanges",
+      "advanced": "Unified secured communications platform, quantum-resistant encryption, secure by default"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "NIS2",
+    "article": "23",
+    "requirement_summary": "72-hour incident notification",
+    "evidence_type": "document",
+    "artifact_name": "CSIRT Incident Notification (72h)",
+    "artifact_example": "CSIRT_Notification_72h_INC-2025-001.pdf",
+    "description": "Comprehensive incident notification submitted to CSIRT within 72 hours",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me 72-hour incident notifications",
+      "Does it include initial assessment, severity, impact, and indicators of compromise?",
+      "How do you update early warnings with additional information?",
+      "Show me timeline from awareness to 72-hour notification submission"
+    ],
+    "maturity_levels": {
+      "basic": "72-hour notifications submitted with required information",
+      "intermediate": "Structured templates, automated information gathering, timeline tracking",
+      "advanced": "Real-time incident data aggregation, automated CSIRT submissions, predictive impact assessment"
+    },
+    "cross_references": ["DORA:19"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "23",
+    "requirement_summary": "Final incident report (1 month)",
+    "evidence_type": "document",
+    "artifact_name": "Final Incident Report",
+    "artifact_example": "Final_Report_INC-2025-001.pdf",
+    "description": "Final incident report including root cause, impact, and mitigation measures",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me final incident reports",
+      "Does it include detailed description, severity, root cause, mitigation measures?",
+      "Was the final report submitted within 1 month of incident notification?",
+      "Show me evidence of lessons learned incorporated into defenses"
+    ],
+    "maturity_levels": {
+      "basic": "Final reports submitted with required elements",
+      "intermediate": "Comprehensive root cause analysis, quantified impact assessment, detailed remediation",
+      "advanced": "Automated report generation, integrated lessons learned, predictive prevention measures"
+    },
+    "cross_references": ["DORA:17", "DORA:19"]
+  },
+  {
+    "regulation": "NIS2",
+    "article": "20",
+    "requirement_summary": "Corporate accountability and governance",
+    "evidence_type": "document",
+    "artifact_name": "Management Body Approval of Cybersecurity",
+    "artifact_example": "Board_Approval_Cybersecurity_2025.pdf",
+    "description": "Evidence of management body approval and oversight of cybersecurity risk measures",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me evidence that management body approved cybersecurity measures",
+      "How frequently does management receive cybersecurity risk reports?",
+      "Show me training records for management body on cybersecurity risks",
+      "What is the governance structure for cybersecurity risk management?"
+    ],
+    "maturity_levels": {
+      "basic": "Management informed of cybersecurity, annual approvals",
+      "intermediate": "Quarterly board reporting, documented approvals, management training",
+      "advanced": "Real-time executive dashboards, board-level CISO, integrated into enterprise risk management"
+    },
+    "cross_references": []
+  }
+]
