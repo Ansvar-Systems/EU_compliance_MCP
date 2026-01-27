@@ -190,6 +190,16 @@ npm start
 
 ---
 
+## Testing & Coverage
+
+**Want to try it out?**
+- [TEST_QUERIES.md](./TEST_QUERIES.md) - 60+ example queries organized by category
+- [COVERAGE_GAPS.md](./COVERAGE_GAPS.md) - Known limitations and roadmap
+
+**TL;DR:** Base regulations work perfectly. Recitals, delegated acts, and national transpositions are roadmap items.
+
+---
+
 ## Available Tools
 
 ### `search_regulations`
