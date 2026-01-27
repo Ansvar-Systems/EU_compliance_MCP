@@ -143,6 +143,33 @@ This isn't just for security teams. If you're building **anything** that touches
 
 ---
 
+## 🗺️ Roadmap & Your Input
+
+### Current Status: v0.4.1
+✅ 37 regulations with 3,508 recitals  
+✅ Full-text search across articles and recitals  
+✅ Webhook notifications for EUR-Lex updates  
+✅ ISO 27001 & NIST CSF control mappings  
+
+### What's Next: Validation Phase
+
+We're evaluating **delegated acts and technical standards** support (v0.5.0):
+- EBA/EIOPA/ESMA technical standards (RTS/ITS)
+- Commission delegated regulations
+- Implementing acts with detailed requirements
+- Harmonized standards (AI Act, CRA, MDR/IVDR)
+
+**📊 Your input shapes the roadmap!** Survey launching soon after v0.4.1 release.
+
+**Example queries this would enable:**
+- "Show me DORA incident reporting RTS (EBA/2024/XXX)"
+- "AI Act harmonized standards for cybersecurity"
+- "NIS2 implementing act notification templates"
+
+📁 **Documentation:** See `docs/demand-validation-2026-q1.md` for validation framework
+
+---
+
 ## Installation
 
 ### For Users (Recommended)
