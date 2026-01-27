@@ -4,8 +4,8 @@ node_modules/
 # Build output
 dist/
 
-# Database (built from seed)
-data/regulations.db
+# Database now committed (shipped with package)
+# data/regulations.db
 
 # Environment
 .env
