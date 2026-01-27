@@ -284,10 +284,16 @@ For maintainers and forks:
 | Secret | Required For | How to Get |
 |--------|--------------|------------|
 | `NPM_TOKEN` | `publish.yml` | npm → Access Tokens → Generate (Automation) |
+| `SLACK_WEBHOOK_URL` | `check-updates.yml` (optional) | Slack → Create Incoming Webhook |
+| `DISCORD_WEBHOOK_URL` | `check-updates.yml` (optional) | Discord → Server Settings → Webhooks |
+| `DISCORD_MENTION_ROLE_ID` | `check-updates.yml` (optional) | Discord role ID for mentions |
+| `GENERIC_WEBHOOK_URL` | `check-updates.yml` (optional) | Any HTTPS endpoint for JSON payloads |
 
 The `GITHUB_TOKEN` is automatic and used for:
 - Creating/updating issues in `check-updates.yml`
 - Pushing tags in auto-update mode
+
+**Webhook Notifications:** All webhook secrets are optional. The workflow will skip webhook notifications if secrets are not configured, but will continue to create GitHub issues. Use `continue-on-error: true` to ensure webhook failures don't break the workflow.
 
 ## Current Statistics
 
