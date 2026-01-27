@@ -1,8 +1,10 @@
 # EU Regulations MCP Server
 
-**The first open-source MCP server for European cybersecurity regulations.**
+**The EUR-Lex alternative for the AI age.**
 
-Query **37 EU regulations** including DORA, NIS2, GDPR, AI Act, MiFID II, EHDS, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query **37 EU regulations** — from GDPR and AI Act to DORA, MiFID II, eIDAS, Medical Device Regulation, and more — directly from Claude, Cursor, or any MCP-compatible client.
+
+If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
 
 Built by [Ansvar Systems](https://ansvar.ai) — Stockholm, Sweden
 
@@ -10,9 +12,15 @@ Built by [Ansvar Systems](https://ansvar.ai) — Stockholm, Sweden
 
 ## Why This Exists
 
-European cybersecurity compliance is fragmented across dozens of PDFs, EUR-Lex pages, and regulatory documents. We built this for our own threat modeling work and figured others might find it useful.
+EU compliance is scattered across EUR-Lex PDFs, official journals, and regulatory sites. Whether you're:
+- A **developer** implementing GDPR data rights or NIS2 incident reporting
+- A **product team** navigating AI Act risk assessments or Medical Device conformity
+- A **compliance officer** mapping ISO 27001 to DORA requirements
+- A **legal researcher** comparing PSD2 authentication vs. eIDAS trust services
 
-No more tab-switching. No more "wait, what article was that?" Just ask.
+...you shouldn't need a law degree and 47 browser tabs. Ask Claude. Get the exact article. With context.
+
+This MCP server makes EU regulations **searchable, cross-referenceable, and AI-readable**.
 
 ---
 
@@ -88,6 +96,43 @@ Plus:
   - 313 ISO 27001:2022 controls mapped to regulation requirements
   - 373 NIST CSF 2.0 controls mapped to regulation requirements
 - **305 sector applicability rules** for determining which regulations apply
+
+---
+
+## Who This Is For
+
+This isn't just for security teams. If you're building **anything** that touches the EU market, you need these regulations:
+
+**🏦 Fintech & Banking**
+- Payment processors → PSD2, DORA, MiFID II
+- Crypto platforms → MiCA, DORA
+- Trading systems → MiFIR, DORA
+- Fund management → AIFMD, SFDR
+
+**🏥 Healthcare & MedTech**
+- Health apps → GDPR, EHDS, MDR
+- Medical devices → MDR, IVDR, CRA
+- Clinical systems → NIS2, GDPR, EHDS
+
+**🤖 AI & Machine Learning**
+- Any AI system → EU AI Act (high-risk classification)
+- HR tech, recruitment → AI Act + GDPR
+- Content moderation → DSA, AI Act
+
+**🏭 IoT & Connected Products**
+- Smart devices → CRA, RED, GDPR
+- Industrial IoT → Machinery, NIS2, CRA
+- Automotive → UN R155/R156, CRA
+
+**☁️ SaaS & Digital Platforms**
+- Cloud services → Data Act, GDPR, NIS2
+- Marketplaces → DSA, DMA, Consumer Rights
+- B2B platforms → Data Act, DGA
+
+**📱 Consumer Tech**
+- Mobile apps → GDPR, DSA, ePrivacy, CRA
+- E-commerce → GDPR, Consumer Rights, DSA
+- Social platforms → DSA, DMA, GDPR
 
 ---
 
@@ -168,7 +213,7 @@ List available regulations or show detailed structure.
 
 ```
 "List all regulations"
-→ Returns overview of all 9 regulations with article counts
+→ Returns overview of all 37 regulations with article counts
 ```
 
 ### `get_definitions`
@@ -231,6 +276,28 @@ Once connected, just ask naturally:
 - *"What obligations do Very Large Online Platforms have under DSA?"*
 - *"What is a gatekeeper under the Digital Markets Act?"*
 - *"What interoperability requirements does the DMA impose on messaging apps?"*
+
+---
+
+## Why Not Just Use EUR-Lex?
+
+EUR-Lex is authoritative. It's also **designed for lawyers, not developers**.
+
+| EUR-Lex | This MCP Server |
+|---------|-----------------|
+| Search by CELEX number | Search by plain English: *"incident reporting timeline"* |
+| Navigate 100+ page PDFs | Get the exact article with context |
+| Manual cross-referencing | `compare_requirements` tool does it instantly |
+| "Which regulations apply to me?" → research for days | `check_applicability` tool → answer in seconds |
+| Copy-paste article text | Article + definitions + related requirements |
+| Check 37 sites for updates | Daily automated freshness checks |
+| No API, no integration | MCP protocol → AI-native |
+
+**Example:**
+- EUR-Lex: Download DORA PDF → Ctrl+F "incident" → Read Article 17 → Google "What's a major incident?" → Cross-reference NIS2 → Repeat for 5 regulations
+- This MCP: *"Compare incident reporting requirements across DORA, NIS2, and CRA"* → Done.
+
+This isn't replacing EUR-Lex. It's making it **usable in 2026**.
 
 ---
 
@@ -312,9 +379,11 @@ Always verify against official sources for compliance decisions.
 
 ## About Ansvar Systems
 
-We build AI-accelerated threat modeling tools for automotive and financial services. This MCP server powers our internal compliance workflows — we're sharing it because navigating EU regulations shouldn't require a law degree.
+We build AI-accelerated threat modeling and compliance tools for automotive, financial services, and healthcare. This MCP server started as our internal reference tool — turns out everyone building for EU markets has the same EUR-Lex frustrations.
 
-**[ansvar.ai](https://ansvar.ai)** — Threat modeling in days, not weeks.
+So we're open-sourcing it. Navigating 37 regulations shouldn't require a legal team.
+
+**[ansvar.ai](https://ansvar.ai)** — Stockholm, Sweden
 
 ---
 
