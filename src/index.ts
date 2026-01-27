@@ -12,6 +12,7 @@ import { dirname, join } from 'path';
 
 import { searchRegulations, type SearchInput } from './tools/search.js';
 import { getArticle, type GetArticleInput } from './tools/article.js';
+import { getRecital, type GetRecitalInput } from './tools/recital.js';
 import { listRegulations, type ListInput } from './tools/list.js';
 import { compareRequirements, type CompareInput } from './tools/compare.js';
 import { mapControls, type MapControlsInput } from './tools/map.js';
@@ -91,6 +92,24 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           },
         },
         required: ['regulation', 'article'],
+      },
+    },
+    {
+      name: 'get_recital',
+      description: 'Retrieve the full text of a specific recital from a regulation. Recitals provide context and interpretation guidance for articles.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          regulation: {
+            type: 'string',
+            description: 'Regulation ID (e.g., "GDPR", "NIS2", "DORA")',
+          },
+          recital_number: {
+            type: 'number',
+            description: 'Recital number (e.g., 1, 83)',
+          },
+        },
+        required: ['regulation', 'recital_number'],
       },
     },
     {
@@ -224,6 +243,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
         return {
           content: [{ type: 'text', text: JSON.stringify(article, null, 2) }],
+        };
+      }
+
+      case 'get_recital': {
+        const input = args as unknown as GetRecitalInput;
+        const recital = await getRecital(database, input);
+        if (!recital) {
+          return {
+            content: [{ type: 'text', text: `Recital ${input.recital_number} not found in ${input.regulation}` }],
+            isError: true,
+          };
+        }
+        return {
+          content: [{ type: 'text', text: JSON.stringify(recital, null, 2) }],
         };
       }
 
