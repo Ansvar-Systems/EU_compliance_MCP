@@ -3,12 +3,14 @@
 /**
  * Ingest EU regulations from EUR-Lex.
  *
- * Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file>
+ * Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]
  * Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json
+ * Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser
  */
 
 import { writeFileSync } from 'fs';
 import { JSDOM } from 'jsdom';
+import { fetchEurLexWithBrowser } from './ingest-eurlex-browser.js';
 
 interface Article {
   number: string;
@@ -57,7 +59,13 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '42025X0005': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system (Supplement 3)', effective_date: '2025-01-10' },
 };
 
-async function fetchEurLexHtml(celexId: string): Promise<string> {
+async function fetchEurLexHtml(celexId: string, useBrowser = false): Promise<string> {
+  if (useBrowser) {
+    console.log('Using Puppeteer to bypass WAF...');
+    return fetchEurLexWithBrowser(celexId);
+  }
+
+  // Fallback to direct fetch (will fail with WAF)
   const url = `https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:${celexId}`;
   console.log(`Fetching: ${url}`);
 
@@ -254,13 +262,13 @@ function parseArticles(html: string, celexId: string): { articles: Article[]; de
   return { articles: deduplicatedArticles, definitions };
 }
 
-async function ingestRegulation(celexId: string, outputPath: string): Promise<void> {
+async function ingestRegulation(celexId: string, outputPath: string, useBrowser = false): Promise<void> {
   const metadata = REGULATION_METADATA[celexId];
   if (!metadata) {
     console.warn(`Unknown CELEX ID: ${celexId}. Using generic metadata.`);
   }
 
-  const html = await fetchEurLexHtml(celexId);
+  const html = await fetchEurLexHtml(celexId, useBrowser);
   console.log(`Fetched ${html.length} bytes`);
 
   // Parse recitals BEFORE articles
@@ -296,11 +304,16 @@ async function ingestRegulation(celexId: string, outputPath: string): Promise<vo
 }
 
 // Main
-const [,, celexId, outputPath] = process.argv;
+const args = process.argv.slice(2);
+const useBrowser = args.includes('--browser');
+const [celexId, outputPath] = args.filter(arg => arg !== '--browser');
 
 if (!celexId || !outputPath) {
-  console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file>');
+  console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]');
   console.log('Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json');
+  console.log('Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
+  console.log('\nOptions:');
+  console.log('  --browser    Use Puppeteer to bypass EUR-Lex WAF challenges');
   console.log('\nKnown CELEX IDs:');
   Object.entries(REGULATION_METADATA).forEach(([id, meta]) => {
     console.log(`  ${id} - ${meta.id} (${meta.full_name})`);
@@ -308,7 +321,11 @@ if (!celexId || !outputPath) {
   process.exit(1);
 }
 
-ingestRegulation(celexId, outputPath).catch(err => {
+if (useBrowser) {
+  console.log('Browser mode enabled - using Puppeteer to fetch content\n');
+}
+
+ingestRegulation(celexId, outputPath, useBrowser).catch(err => {
   console.error('Error:', err);
   process.exit(1);
 });
