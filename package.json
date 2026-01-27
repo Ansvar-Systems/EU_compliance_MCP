@@ -64,6 +64,7 @@
     "@types/better-sqlite3": "^7.6.13",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^25.0.10",
+    "puppeteer": "^24.36.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
