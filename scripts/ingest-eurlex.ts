@@ -75,6 +75,80 @@ async function fetchEurLexHtml(celexId: string): Promise<string> {
   return response.text();
 }
 
+function parseRecitals(html: string): Recital[] {
+  const dom = new JSDOM(html);
+  const doc = dom.window.document;
+
+  const recitals: Recital[] = [];
+  const allText = doc.body?.textContent || '';
+  const lines = allText.split('\n').map(l => l.trim()).filter(l => l);
+
+  let inRecitalsSection = false;
+  let currentRecital: { number: number; lines: string[] } | null = null;
+
+  for (const line of lines) {
+    // Detect start of recitals section
+    if (line.match(/^Having regard to/i) || line.match(/^Whereas:/i)) {
+      inRecitalsSection = true;
+      continue;
+    }
+
+    // Detect end of recitals (usually "HAVE ADOPTED" or "Article 1")
+    if (line.match(/^HAVE ADOPTED/i) || line.match(/^Article\s+1$/i)) {
+      inRecitalsSection = false;
+      if (currentRecital && currentRecital.lines.length > 0) {
+        recitals.push({
+          recital_number: currentRecital.number,
+          text: currentRecital.lines.join('\n\n'),
+        });
+      }
+      break;
+    }
+
+    if (!inRecitalsSection) continue;
+
+    // Match recital number: "(1)", "(123)", etc.
+    const recitalMatch = line.match(/^\((\d+)\)/);
+    if (recitalMatch) {
+      // Save previous recital
+      if (currentRecital && currentRecital.lines.length > 0) {
+        recitals.push({
+          recital_number: currentRecital.number,
+          text: currentRecital.lines.join('\n\n'),
+        });
+      }
+
+      // Start new recital
+      currentRecital = {
+        number: parseInt(recitalMatch[1]),
+        lines: [],
+      };
+
+      // Add remaining text after number
+      const textAfterNumber = line.substring(recitalMatch[0].length).trim();
+      if (textAfterNumber) {
+        currentRecital.lines.push(textAfterNumber);
+      }
+      continue;
+    }
+
+    // Add line to current recital
+    if (currentRecital && line.length > 0) {
+      currentRecital.lines.push(line);
+    }
+  }
+
+  // Don't forget the last recital
+  if (currentRecital && currentRecital.lines.length > 0) {
+    recitals.push({
+      recital_number: currentRecital.number,
+      text: currentRecital.lines.join('\n\n'),
+    });
+  }
+
+  return recitals;
+}
+
 function parseArticles(html: string, celexId: string): { articles: Article[]; definitions: Definition[] } {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
@@ -189,6 +263,10 @@ async function ingestRegulation(celexId: string, outputPath: string): Promise<vo
   const html = await fetchEurLexHtml(celexId);
   console.log(`Fetched ${html.length} bytes`);
 
+  // Parse recitals BEFORE articles
+  const recitals = parseRecitals(html);
+  console.log(`Parsed ${recitals.length} recitals`);
+
   const { articles, definitions } = parseArticles(html, celexId);
   console.log(`Parsed ${articles.length} articles, ${definitions.length} definitions`);
 
@@ -207,12 +285,14 @@ async function ingestRegulation(celexId: string, outputPath: string): Promise<vo
     eur_lex_url: `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${celexId}`,
     articles,
     definitions,
+    recitals,
   };
 
   writeFileSync(outputPath, JSON.stringify(regulation, null, 2));
   console.log(`\nSaved to: ${outputPath}`);
   console.log(`Articles: ${articles.length}`);
   console.log(`Definitions: ${definitions.length}`);
+  console.log(`Recitals: ${recitals.length}`);
 }
 
 // Main
