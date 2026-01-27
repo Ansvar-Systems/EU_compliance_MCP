@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "MIFID2",
+    "articles": ["16", "17"],
+    "coverage": "full",
+    "notes": "Organizational requirements and algorithmic trading controls"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "MIFID2",
+    "articles": ["9", "16"],
+    "coverage": "full",
+    "notes": "Management body responsibilities and compliance function"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "MIFID2",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Comprehensive framework for investment services"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "MIFID2",
+    "articles": ["16", "25"],
+    "coverage": "full",
+    "notes": "Record keeping and client information requirements"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "MIFID2",
+    "articles": ["16"],
+    "coverage": "partial",
+    "notes": "Client data protection requirements"
+  },
+  {
+    "control_id": "A.8.1",
+    "control_name": "User endpoint devices",
+    "regulation": "MIFID2",
+    "articles": ["17"],
+    "coverage": "partial",
+    "notes": "Controls for algorithmic trading systems"
+  },
+  {
+    "control_id": "A.8.4",
+    "control_name": "Access to source code",
+    "regulation": "MIFID2",
+    "articles": ["17"],
+    "coverage": "partial",
+    "notes": "Algorithm source code access controls"
+  },
+  {
+    "control_id": "A.8.6",
+    "control_name": "Capacity management",
+    "regulation": "MIFID2",
+    "articles": ["17", "48"],
+    "coverage": "full",
+    "notes": "System capacity and resilience requirements"
+  }
+]

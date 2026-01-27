@@ -1,0 +1,139 @@
+title: "[Feedback] Delegated Acts & Technical Standards Support"
+labels: ["user-feedback", "enhancement", "delegated-acts"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Should we add delegated acts and technical standards?
+
+        We're considering expanding the MCP server to include:
+        - **Commission delegated regulations** (supplementing acts)
+        - **EBA/EIOPA/ESMA technical standards** (RTS/ITS for financial sector)
+        - **Implementing acts** (detailed application rules)
+        - **Harmonized standards** (referenced by regulations like AI Act, CRA)
+
+        ## What this would enable
+
+        **Example queries:**
+        - "Show me DORA RTS on incident reporting format (EBA/2024/XXX)"
+        - "What are AI Act harmonized standards for cybersecurity?"
+        - "NIS2 implementing act notification templates"
+        - "eIDAS 2.0 technical specifications for trust services"
+        - "Medical Device Regulation common specifications"
+
+        ## Trade-offs
+
+        **Benefits:**
+        - Complete compliance picture (principles + implementation details)
+        - Reduce EUR-Lex navigation time even further
+        - Map controls to actual technical requirements
+
+        **Costs:**
+        - +3 weeks development time
+        - +5-7MB database size (2,000-3,000 additional articles)
+        - More complex ingestion scripts (multiple authority sources)
+        - Maintenance overhead (more documents to monitor)
+
+        ---
+
+        **Help us prioritize!** Your feedback determines our roadmap.
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgently do you need this?
+      description: Be honest - this helps us prioritize accurately
+      options:
+        - "🔴 Blocking current work (need it now)"
+        - "🟡 Needed within 3 months (planned compliance project)"
+        - "🟢 Needed within 6 months (future initiative)"
+        - "🔵 Nice to have eventually (low priority)"
+        - "⚪ Not needed (current scope is sufficient)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: regulations
+    attributes:
+      label: Which regulations' delegated acts do you need?
+      description: Check all that apply (helps us prioritize which to add first)
+      options:
+        - label: "**DORA** - Financial sector incident reporting, testing, third-party risk"
+        - label: "**AI Act** - Harmonized standards for high-risk AI systems"
+        - label: "**NIS2** - Incident notification formats, security measures"
+        - label: "**MiCA** - Crypto-asset technical requirements (EBA/ESMA)"
+        - label: "**eIDAS 2.0** - Trust service provider technical specifications"
+        - label: "**GDPR** - Standard contractual clauses, certification criteria"
+        - label: "**MDR/IVDR** - Medical device common specifications"
+        - label: "**CRA** - Cyber Resilience Act security requirements"
+        - label: "**PSD2** - Strong customer authentication RTS"
+        - label: "**Other** (please describe below)"
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What would you use this for?
+      description: "Specific use cases help us understand value. Examples: 'Build incident reporting UI', 'Map DORA to our controls', 'Generate compliance checklist'"
+      placeholder: |
+        Example: "We're implementing DORA compliance and need to reference the EBA RTS on ICT risk management (EBA/RTS/2024/XX). Currently have to context-switch between EUR-Lex tabs constantly."
+
+        Example: "Building an AI system governance tool - need to cross-reference AI Act articles with actual harmonized standards for conformity assessment."
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific_standards
+    attributes:
+      label: Any specific delegated acts you need?
+      description: "CELEX IDs, regulation numbers, or descriptive names"
+      placeholder: |
+        Example: "EBA/RTS/2024/XX (DORA ICT risk management)"
+        Example: "Commission Delegated Regulation (EU) 2024/XXX on AI Act harmonized standards"
+
+  - type: dropdown
+    id: current_workaround
+    attributes:
+      label: What's your current workaround?
+      options:
+        - "Manual EUR-Lex searches (very time-consuming)"
+        - "Downloaded PDFs (hard to search across documents)"
+        - "Third-party compliance platform (expensive)"
+        - "Internal document repository (out of sync)"
+        - "No workaround - just need it"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: willingness_to_test
+    attributes:
+      label: Willingness to help
+      options:
+        - label: "I'd be willing to beta test this feature"
+        - label: "I'd be willing to provide feedback on UX"
+        - label: "I'd be willing to validate accuracy of ingested standards"
+        - label: "I'd consider sponsoring development (GitHub Sponsors)"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: "Anything else we should know? Industry sector, team size, compliance deadlines?"
+      placeholder: |
+        Example: "Financial services, 50-person team, DORA compliance deadline March 2025"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        ## What happens next?
+
+        1. **Survey period:** 2 weeks from launch
+        2. **Decision criteria:**
+           - 20+ engaged responses + high urgency → Full implementation (v0.5.0)
+           - 10-20 responses + medium urgency → Phased approach (DORA-only v0.4.5)
+           - <10 responses → Defer, focus on other features
+        3. **Results published:** In `docs/demand-validation-2026-q1.md`
+        4. **Roadmap updated:** Based on validated demand
+
+        Thank you for helping shape the project! 🚀

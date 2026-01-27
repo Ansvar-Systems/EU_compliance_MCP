@@ -1,0 +1,58 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "GPSR",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "General product safety regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "GPSR",
+    "articles": ["6", "9"],
+    "coverage": "full",
+    "notes": "Product safety risk assessment"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "GPSR",
+    "articles": ["9", "10", "11"],
+    "coverage": "full",
+    "notes": "Economic operator responsibilities"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "GPSR",
+    "articles": ["9", "10", "11", "12"],
+    "coverage": "full",
+    "notes": "Supply chain traceability requirements"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "GPSR",
+    "articles": ["9", "18"],
+    "coverage": "full",
+    "notes": "Product traceability and documentation"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "GPSR",
+    "articles": ["19", "20", "21"],
+    "coverage": "full",
+    "notes": "Product safety notifications via Safety Gate"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "GPSR",
+    "articles": ["19", "20"],
+    "coverage": "full",
+    "notes": "Dangerous product response procedures"
+  }
+]

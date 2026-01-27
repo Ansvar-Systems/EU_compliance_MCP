@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "RED",
+    "sector": "manufacturing",
+    "subsector": "electronics",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "RED applies to manufacturers of radio equipment placed on EU market"
+  },
+  {
+    "regulation": "RED",
+    "sector": "manufacturing",
+    "subsector": "telecommunications",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Telecom equipment manufacturers must comply"
+  },
+  {
+    "regulation": "RED",
+    "sector": "manufacturing",
+    "subsector": "iot_devices",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "IoT and connected devices using radio spectrum are covered"
+  },
+  {
+    "regulation": "RED",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Radio infrastructure equipment manufacturers are in scope"
+  },
+  {
+    "regulation": "RED",
+    "sector": "other",
+    "subsector": "importers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "12",
+    "notes": "Importers must verify CE marking and conformity"
+  },
+  {
+    "regulation": "RED",
+    "sector": "other",
+    "subsector": "distributors",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "13",
+    "notes": "Distributors must verify compliance before making available"
+  },
+  {
+    "regulation": "RED",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial sector not in scope"
+  },
+  {
+    "regulation": "RED",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Medical radio devices may be covered (also see MDR)"
+  }
+]

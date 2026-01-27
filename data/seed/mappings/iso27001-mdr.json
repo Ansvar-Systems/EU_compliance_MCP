@@ -1,0 +1,82 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "MDR",
+    "articles": ["10", "23"],
+    "coverage": "full",
+    "notes": "Quality management system and cybersecurity requirements"
+  },
+  {
+    "control_id": "A.5.8",
+    "control_name": "Information security in project management",
+    "regulation": "MDR",
+    "articles": ["10", "61"],
+    "coverage": "full",
+    "notes": "Security considerations in device design and development"
+  },
+  {
+    "control_id": "A.5.23",
+    "control_name": "Information security for use of cloud services",
+    "regulation": "MDR",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Connected device security requirements"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "MDR",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Comprehensive regulatory framework for medical devices"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "MDR",
+    "articles": ["10", "87"],
+    "coverage": "full",
+    "notes": "Technical documentation and UDI requirements"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "MDR",
+    "articles": ["87", "88", "89"],
+    "coverage": "full",
+    "notes": "Vigilance reporting for serious incidents"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "MDR",
+    "articles": ["10"],
+    "coverage": "full",
+    "notes": "Device configuration and version control requirements"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "MDR",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Security measures for connected medical devices"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "MDR",
+    "articles": ["10"],
+    "coverage": "full",
+    "notes": "Software safety and security requirements in Annex I"
+  },
+  {
+    "control_id": "A.8.31",
+    "control_name": "Separation of development, test and production environments",
+    "regulation": "MDR",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Quality management includes development environment controls"
+  }
+]

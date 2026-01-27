@@ -1,0 +1,69 @@
+[
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "digital_infrastructure",
+    "subsector": "cloud_provider",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "46",
+    "notes": "Cloud services eligible for EU cybersecurity certification under EUCS scheme (in development)"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "digital_infrastructure",
+    "subsector": "software_vendor",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "46",
+    "notes": "ICT products and services can obtain EU cybersecurity certification; schemes cover various product categories"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "manufacturing",
+    "subsector": "iot_devices",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "46",
+    "notes": "IoT devices eligible for certification under EUCC (Common Criteria based) or future schemes"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "public_administration",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "48",
+    "notes": "Public sector may require certified products/services; Art 48 allows Member States to mandate certification"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "financial",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "46",
+    "notes": "Financial entities may use certified products to demonstrate compliance with DORA requirements"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "energy",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "46",
+    "notes": "Critical infrastructure operators may require certified products under NIS2 implementation"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "healthcare",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "46",
+    "notes": "Healthcare IT products can be certified; may align with MDR cybersecurity requirements"
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "sector": "transport",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "46",
+    "notes": "Transport sector IT systems eligible for certification; may support UN R155 compliance"
+  }
+]

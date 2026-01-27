@@ -1,0 +1,82 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["1", "3"],
+    "coverage": "full",
+    "notes": "Establishes EU-wide cybersecurity policy framework"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["3", "4", "5"],
+    "coverage": "full",
+    "notes": "National and Cross-Border Cyber Hubs have defined responsibilities"
+  },
+  {
+    "control_id": "A.5.5",
+    "control_name": "Contact with authorities",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["3", "12"],
+    "coverage": "full",
+    "notes": "Framework for coordination with national authorities"
+  },
+  {
+    "control_id": "A.5.6",
+    "control_name": "Contact with special interest groups",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["12", "14"],
+    "coverage": "full",
+    "notes": "EU Cybersecurity Reserve includes private sector providers"
+  },
+  {
+    "control_id": "A.5.7",
+    "control_name": "Threat intelligence",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["3", "4", "5", "6"],
+    "coverage": "full",
+    "notes": "European Cybersecurity Alert System for threat detection"
+  },
+  {
+    "control_id": "A.5.24",
+    "control_name": "Information security incident management planning and preparation",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["9", "10", "11"],
+    "coverage": "full",
+    "notes": "Cybersecurity Emergency Mechanism for incident preparedness"
+  },
+  {
+    "control_id": "A.5.25",
+    "control_name": "Assessment and decision on information security events",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["6", "7", "8"],
+    "coverage": "full",
+    "notes": "Alert system for assessing cyber threats across EU"
+  },
+  {
+    "control_id": "A.5.26",
+    "control_name": "Response to information security incidents",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["12", "13", "14"],
+    "coverage": "full",
+    "notes": "EU Cybersecurity Reserve provides rapid incident response"
+  },
+  {
+    "control_id": "A.5.29",
+    "control_name": "Information security during disruption",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Cybersecurity Emergency Mechanism for significant incidents"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["6", "7"],
+    "coverage": "full",
+    "notes": "Cross-border information sharing through Cyber Hubs"
+  }
+]

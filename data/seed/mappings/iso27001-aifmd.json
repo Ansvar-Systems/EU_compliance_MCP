@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "AIFMD",
+    "articles": ["12", "18"],
+    "coverage": "full",
+    "notes": "General operating conditions and risk management policies"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "AIFMD",
+    "articles": ["8", "12"],
+    "coverage": "full",
+    "notes": "Management responsibilities and organizational requirements"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "AIFMD",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Authorization and operating requirements for AIFMs"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "AIFMD",
+    "articles": ["22", "23"],
+    "coverage": "full",
+    "notes": "Transparency and disclosure requirements"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "AIFMD",
+    "articles": ["12"],
+    "coverage": "partial",
+    "notes": "Investor information protection"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "AIFMD",
+    "articles": ["12", "21"],
+    "coverage": "partial",
+    "notes": "Access controls for fund assets and information"
+  }
+]

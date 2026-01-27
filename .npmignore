@@ -1,0 +1,33 @@
+# NPM ignore - explicitly include files that are gitignored but needed for npm
+# The database file should be built during prepublishOnly and included in the package
+
+# Development only
+.github/
+tests/
+*.test.ts
+tsconfig.json
+vitest.config.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment (exclude from npm)
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# Source maps (optional - keep them for now)
+# *.map

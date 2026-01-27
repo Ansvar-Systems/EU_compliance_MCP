@@ -1,0 +1,90 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["1", "2", "46"],
+    "coverage": "full",
+    "notes": "Art 1-2 scope, Art 46 EU cybersecurity certification framework"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51", "52"],
+    "coverage": "full",
+    "notes": "Art 51 security objectives, Art 52 assurance levels (basic/substantial/high)"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["4", "5", "6", "7"],
+    "coverage": "full",
+    "notes": "ENISA objectives and tasks define EU cybersecurity coordination"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["46", "47", "51"],
+    "coverage": "full",
+    "notes": "Art 46-47 certification requirements, Art 51 security objectives"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51", "54"],
+    "coverage": "full",
+    "notes": "Art 51(f) minimizing vulnerabilities, Art 54 vulnerability management"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51", "52"],
+    "coverage": "full",
+    "notes": "Art 51-52 security objectives and assurance requirements"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51"],
+    "coverage": "partial",
+    "notes": "Art 51(c-d) data confidentiality and integrity"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["51"],
+    "coverage": "partial",
+    "notes": "Art 51(c-d) data confidentiality and integrity in transit"
+  },
+  {
+    "control_id": "PR.AT-01",
+    "control_name": "Awareness and training provided",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["10", "12"],
+    "coverage": "partial",
+    "notes": "Art 10 capacity building, Art 12 knowledge development"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["8", "22"],
+    "coverage": "partial",
+    "notes": "Art 8 operational cooperation, Art 22 coordination"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "CYBERSECURITY_ACT",
+    "articles": ["8", "22"],
+    "coverage": "partial",
+    "notes": "Art 8 operational cooperation framework"
+  }
+]

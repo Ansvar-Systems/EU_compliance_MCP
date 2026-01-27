@@ -1,0 +1,97 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "0.4.1",
+  "id": "REPLACE-WITH-YOUR-APP-ID",
+  "packageName": "com.ansvar.eu-regulations",
+  "developer": {
+    "name": "Ansvar Systems",
+    "websiteUrl": "https://ansvar.ai",
+    "privacyUrl": "https://ansvar.ai/privacy",
+    "termsOfUseUrl": "https://ansvar.ai/terms"
+  },
+  "icons": {
+    "color": "icons/color.png",
+    "outline": "icons/outline.png"
+  },
+  "name": {
+    "short": "EU Regulations",
+    "full": "EU Regulations Compliance Reference"
+  },
+  "description": {
+    "short": "Search 37 EU regulations (GDPR, DORA, NIS2, AI Act, etc.) directly in Teams",
+    "full": "Query EU cybersecurity and compliance regulations (GDPR, DORA, NIS2, AI Act, CRA, eIDAS, MiFID II, and 30 more) with full-text search, definitions, and control mappings. Built by Ansvar Systems for compliance teams, developers, and legal researchers."
+  },
+  "accentColor": "#0078D4",
+  "composeExtensions": [
+    {
+      "botId": "REPLACE-WITH-YOUR-BOT-ID",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "searchRegulations",
+          "type": "query",
+          "title": "Search Regulations",
+          "description": "Search across EU regulations",
+          "initialRun": false,
+          "fetchTask": false,
+          "context": ["compose", "commandBox"],
+          "parameters": [
+            {
+              "name": "query",
+              "title": "Search Query",
+              "description": "E.g., 'incident reporting', 'GDPR breach notification'",
+              "inputType": "text"
+            }
+          ]
+        },
+        {
+          "id": "getArticle",
+          "type": "query",
+          "title": "Get Article",
+          "description": "Get a specific article (e.g., GDPR 17)",
+          "initialRun": false,
+          "fetchTask": false,
+          "context": ["compose", "commandBox"],
+          "parameters": [
+            {
+              "name": "regulation",
+              "title": "Regulation",
+              "description": "E.g., GDPR, NIS2, DORA",
+              "inputType": "text"
+            },
+            {
+              "name": "article",
+              "title": "Article Number",
+              "description": "E.g., 17, 33",
+              "inputType": "text"
+            }
+          ]
+        }
+      ],
+      "messageHandlers": [
+        {
+          "type": "link",
+          "value": {
+            "domains": [
+              "ansvar.ai",
+              "eur-lex.europa.eu"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "ansvar.ai",
+    "YOUR-API-DOMAIN.com"
+  ],
+  "webApplicationInfo": {
+    "id": "REPLACE-WITH-YOUR-APP-ID",
+    "resource": "api://YOUR-API-DOMAIN.com/REPLACE-WITH-YOUR-APP-ID"
+  }
+}

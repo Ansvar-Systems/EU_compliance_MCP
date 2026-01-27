@@ -1,0 +1,85 @@
+{
+  "name": "@ansvar/eu-regulations-mcp",
+  "version": "0.4.1",
+  "description": "The first open-source MCP server for European cybersecurity regulations. Query DORA, NIS2, GDPR, EU AI Act, and more directly from Claude.",
+  "main": "dist/index.js",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "bin": {
+    "eu-regulations-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/http-server.ts",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http-server.js",
+    "build:db": "tsx scripts/build-db.ts",
+    "ingest": "tsx scripts/ingest-eurlex.ts",
+    "check-updates": "tsx scripts/check-updates.ts",
+    "sync-versions": "tsx scripts/check-updates.ts --sync",
+    "ingest:with-browser": "tsx scripts/ingest-eurlex-browser.ts",
+    "reingest:all": "tsx scripts/bulk-reingest-all.ts",
+    "migrate:postgres": "tsx scripts/migrate-to-postgres.ts",
+    "lint": "eslint src --ext .ts",
+    "prepare": "test -f dist/index.js || npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "compliance",
+    "gdpr",
+    "nis2",
+    "dora",
+    "ai-act",
+    "eu-regulations",
+    "cybersecurity",
+    "cyber-resilience-act",
+    "european-union",
+    "legal",
+    "regulatory",
+    "claude",
+    "llm"
+  ],
+  "author": "Ansvar Systems <hello@ansvar.ai> (https://ansvar.ai)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansvar-Systems/EU_compliance_MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP/issues"
+  },
+  "homepage": "https://ansvar.ai",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "data",
+    "scripts",
+    "src"
+  ],
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.0",
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^25.0.10",
+    "@types/pg": "^8.11.10",
+    "puppeteer": "^24.36.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "better-sqlite3": "^12.6.2",
+    "jsdom": "^27.4.0",
+    "pg": "^8.13.2"
+  }
+}

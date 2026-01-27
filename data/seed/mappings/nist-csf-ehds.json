@@ -1,0 +1,98 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "EHDS",
+    "articles": ["1", "2", "50"],
+    "coverage": "full",
+    "notes": "EHDS defines scope, context, and applicability to health data holders"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "EHDS",
+    "articles": ["55", "57"],
+    "coverage": "full",
+    "notes": "Health data access bodies responsible for risk management"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "EHDS",
+    "articles": ["55", "57", "60", "61"],
+    "coverage": "full",
+    "notes": "Health data access bodies, data holders, and data users responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "EHDS",
+    "articles": ["66", "73"],
+    "coverage": "full",
+    "notes": "Data minimisation and secure processing environment policies"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "EHDS",
+    "articles": ["77", "78", "79"],
+    "coverage": "full",
+    "notes": "Dataset description, quality label, and EU dataset catalogue"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "EHDS",
+    "articles": ["73"],
+    "coverage": "partial",
+    "notes": "Secure processing environment security requirements"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "EHDS",
+    "articles": ["67", "68"],
+    "coverage": "full",
+    "notes": "Health data access applications and data permits"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "EHDS",
+    "articles": ["67", "68", "72"],
+    "coverage": "full",
+    "notes": "Data permits and simplified access procedures"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "EHDS",
+    "articles": ["73", "86"],
+    "coverage": "full",
+    "notes": "Secure processing environment and storage requirements"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "EHDS",
+    "articles": ["73", "75"],
+    "coverage": "full",
+    "notes": "Secure processing and HealthData@EU cross-border infrastructure"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "EHDS",
+    "articles": ["73"],
+    "coverage": "partial",
+    "notes": "Secure processing environment monitoring"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "EHDS",
+    "articles": ["59", "63"],
+    "coverage": "full",
+    "notes": "Reporting by health data access bodies and enforcement"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "SFDR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Sustainability disclosure requirements context"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "SFDR",
+    "articles": ["3", "4"],
+    "coverage": "full",
+    "notes": "Financial market participant responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "SFDR",
+    "articles": ["4", "5"],
+    "coverage": "partial",
+    "notes": "Policies integrating sustainability risks"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "SFDR",
+    "articles": ["7", "8", "9"],
+    "coverage": "partial",
+    "notes": "Financial product sustainability data inventories"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "SFDR",
+    "articles": ["12", "13"],
+    "coverage": "partial",
+    "notes": "Protection of sustainability disclosure data"
+  }
+]

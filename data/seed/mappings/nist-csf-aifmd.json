@@ -1,0 +1,58 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "AIFMD",
+    "articles": ["1", "2", "3", "4"],
+    "coverage": "full",
+    "notes": "Alternative investment fund management context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "AIFMD",
+    "articles": ["15", "16"],
+    "coverage": "full",
+    "notes": "Risk management requirements for AIFMs"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "AIFMD",
+    "articles": ["18", "19", "20"],
+    "coverage": "full",
+    "notes": "AIFM organizational requirements"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "AIFMD",
+    "articles": ["20"],
+    "coverage": "full",
+    "notes": "Delegation arrangements and oversight"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "AIFMD",
+    "articles": ["21"],
+    "coverage": "full",
+    "notes": "Depositary asset safekeeping"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "AIFMD",
+    "articles": ["22", "24"],
+    "coverage": "partial",
+    "notes": "Record keeping and reporting data protection"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "AIFMD",
+    "articles": ["24", "25"],
+    "coverage": "full",
+    "notes": "Reporting to competent authorities"
+  }
+]

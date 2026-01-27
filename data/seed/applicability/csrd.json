@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "CSRD",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Large financial undertakings must report under CSRD"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Large manufacturing companies must provide sustainability reports"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Large energy companies must provide sustainability reports"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Large transport companies must provide sustainability reports"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Large healthcare companies must provide sustainability reports"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Large digital companies must provide sustainability reports"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Public bodies generally not in scope"
+  },
+  {
+    "regulation": "CSRD",
+    "sector": "other",
+    "subsector": "listed_smes",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Listed SMEs (except micro) must report with simplified standards"
+  }
+]

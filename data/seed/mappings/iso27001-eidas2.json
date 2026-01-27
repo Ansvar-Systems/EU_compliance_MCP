@@ -1,0 +1,106 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "EIDAS2",
+    "articles": ["19", "24"],
+    "coverage": "full",
+    "notes": "Art 19 security requirements for trust services, Art 24 qualified trust service provider requirements"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "EIDAS2",
+    "articles": ["17", "20"],
+    "coverage": "full",
+    "notes": "Art 17 supervisory body responsibilities, Art 20 trust service provider obligations"
+  },
+  {
+    "control_id": "A.5.15",
+    "control_name": "Access control",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "6b"],
+    "coverage": "full",
+    "notes": "Art 6a-6b EUDI Wallet authentication and access control requirements"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EIDAS2",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Art 1-3 define scope, definitions, and legal framework for electronic identification and trust services"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "6c", "11a"],
+    "coverage": "full",
+    "notes": "Art 6a wallet privacy requirements, Art 6c user control over data, Art 11a unique identifier protection"
+  },
+  {
+    "control_id": "A.5.35",
+    "control_name": "Independent review of information security",
+    "regulation": "EIDAS2",
+    "articles": ["17", "20", "21"],
+    "coverage": "full",
+    "notes": "Art 17 supervisory audits, Art 20-21 conformity assessment for trust service providers"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "EIDAS2",
+    "articles": ["19"],
+    "coverage": "full",
+    "notes": "Art 19(2) requires notification of security breaches within 24 hours to supervisory body"
+  },
+  {
+    "control_id": "A.8.2",
+    "control_name": "Privileged access rights",
+    "regulation": "EIDAS2",
+    "articles": ["24"],
+    "coverage": "partial",
+    "notes": "Art 24 qualified trust service provider must implement access controls"
+  },
+  {
+    "control_id": "A.8.5",
+    "control_name": "Secure authentication",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "8", "29"],
+    "coverage": "full",
+    "notes": "Art 6a wallet authentication, Art 8 assurance levels, Art 29 qualified electronic signature requirements"
+  },
+  {
+    "control_id": "A.8.7",
+    "control_name": "Protection against malware",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "19"],
+    "coverage": "partial",
+    "notes": "Art 6a wallet security requirements, Art 19 security measures for trust services"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "EIDAS2",
+    "articles": ["26", "29", "32", "38"],
+    "coverage": "full",
+    "notes": "Art 26 advanced electronic signatures, Art 29 qualified signatures, Art 32 qualified seals, Art 38 qualified timestamps"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "24"],
+    "coverage": "partial",
+    "notes": "Art 6a wallet certification requirements, Art 24 trust service provider security measures"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "20", "21"],
+    "coverage": "full",
+    "notes": "Art 6a wallet certification, Art 20-21 conformity assessment for trust services"
+  }
+]

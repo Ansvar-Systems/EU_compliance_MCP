@@ -1,0 +1,98 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "PSD2",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Payment services regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "PSD2",
+    "articles": ["95", "97"],
+    "coverage": "full",
+    "notes": "Operational and security risk management"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "PSD2",
+    "articles": ["5", "11"],
+    "coverage": "full",
+    "notes": "Payment institution governance requirements"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "PSD2",
+    "articles": ["95"],
+    "coverage": "full",
+    "notes": "Security policies for payment services"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "PSD2",
+    "articles": ["19"],
+    "coverage": "full",
+    "notes": "Outsourcing of operational functions"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "PSD2",
+    "articles": ["97"],
+    "coverage": "full",
+    "notes": "Strong customer authentication requirements"
+  },
+  {
+    "control_id": "PR.AA-03",
+    "control_name": "Users and services are authenticated",
+    "regulation": "PSD2",
+    "articles": ["97", "98"],
+    "coverage": "full",
+    "notes": "Multi-factor authentication for payments"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "PSD2",
+    "articles": ["95", "97"],
+    "coverage": "full",
+    "notes": "Payment data protection requirements"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "PSD2",
+    "articles": ["95", "97", "98"],
+    "coverage": "full",
+    "notes": "Secure communication channels"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "PSD2",
+    "articles": ["95"],
+    "coverage": "full",
+    "notes": "Transaction monitoring requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "PSD2",
+    "articles": ["96"],
+    "coverage": "full",
+    "notes": "Major incident reporting to competent authorities"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "PSD2",
+    "articles": ["95"],
+    "coverage": "full",
+    "notes": "Business continuity for payment services"
+  }
+]

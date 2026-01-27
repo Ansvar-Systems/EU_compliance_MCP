@@ -1,0 +1,34 @@
+[
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "EUDR",
+    "articles": ["8", "9", "10"],
+    "coverage": "full",
+    "notes": "Supply chain due diligence for deforestation-free products"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EUDR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Deforestation-free supply chain requirements"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "EUDR",
+    "articles": ["9", "12"],
+    "coverage": "full",
+    "notes": "Due diligence statements and traceability records"
+  },
+  {
+    "control_id": "A.8.12",
+    "control_name": "Data leakage prevention",
+    "regulation": "EUDR",
+    "articles": ["9"],
+    "coverage": "partial",
+    "notes": "Protection of supply chain traceability data"
+  }
+]

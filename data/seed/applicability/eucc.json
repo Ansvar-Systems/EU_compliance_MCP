@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "EUCC",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "EUCC establishes cybersecurity certification for ICT products"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "manufacturing",
+    "subsector": "ict_products",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Manufacturers of ICT products can seek EUCC certification"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Public sector may require EUCC certified products in procurement"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Financial sector may require certified ICT products under DORA"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Healthcare may require certified ICT products for sensitive systems"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Critical infrastructure may require certified products under NIS2"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Transport sector may require certified ICT products"
+  },
+  {
+    "regulation": "EUCC",
+    "sector": "other",
+    "subsector": "certification_bodies",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "5",
+    "notes": "Conformity assessment bodies must be accredited to issue EUCC certificates"
+  }
+]

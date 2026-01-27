@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "SFDR",
+    "sector": "financial",
+    "subsector": "asset_managers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "SFDR applies to financial market participants including asset managers"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "financial",
+    "subsector": "insurance",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Insurance undertakings making IBIPs available are in scope"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "financial",
+    "subsector": "pension_funds",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "IORPs (pension funds) are in scope"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "financial",
+    "subsector": "investment_advisers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Financial advisers must make sustainability-related disclosures"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "financial",
+    "subsector": "banks",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Credit institutions providing portfolio management are in scope"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not directly in scope"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector not directly in scope (but may be investees)"
+  },
+  {
+    "regulation": "SFDR",
+    "sector": "other",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "SFDR specifically targets financial sector"
+  }
+]

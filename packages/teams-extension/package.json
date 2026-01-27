@@ -1,0 +1,9 @@
+{
+  "name": "@ansvar/eu-regulations-teams",
+  "version": "0.4.1",
+  "description": "Microsoft Teams message extension for EU regulations",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate-manifest.js"
+  }
+}

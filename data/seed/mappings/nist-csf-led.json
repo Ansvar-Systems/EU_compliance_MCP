@@ -1,0 +1,74 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "LED",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Law enforcement data processing context"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "LED",
+    "articles": ["19", "20", "21"],
+    "coverage": "full",
+    "notes": "Controller and processor responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "LED",
+    "articles": ["29", "30"],
+    "coverage": "full",
+    "notes": "Security of processing policies"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "LED",
+    "articles": ["29"],
+    "coverage": "full",
+    "notes": "Access controls for law enforcement data"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "LED",
+    "articles": ["12", "29"],
+    "coverage": "full",
+    "notes": "Differentiation between categories of personal data"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "LED",
+    "articles": ["29"],
+    "coverage": "full",
+    "notes": "Security of stored law enforcement data"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "LED",
+    "articles": ["29", "35"],
+    "coverage": "full",
+    "notes": "Security of data transfers"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "LED",
+    "articles": ["29"],
+    "coverage": "full",
+    "notes": "Logging and monitoring requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "LED",
+    "articles": ["30", "31"],
+    "coverage": "full",
+    "notes": "Personal data breach notification"
+  }
+]

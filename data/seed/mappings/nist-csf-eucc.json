@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "EUCC",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Common Criteria cybersecurity certification context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "EUCC",
+    "articles": ["3", "4"],
+    "coverage": "full",
+    "notes": "Security evaluation and assurance levels"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "EUCC",
+    "articles": ["18", "19", "20"],
+    "coverage": "full",
+    "notes": "NCCAs, CABs, and certification body roles"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "EUCC",
+    "articles": ["7", "8", "9"],
+    "coverage": "full",
+    "notes": "Vulnerability analysis during certification"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "EUCC",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Security targets and protection profiles"
+  },
+  {
+    "control_id": "PR.PS-01",
+    "control_name": "Configuration management practices established",
+    "regulation": "EUCC",
+    "articles": ["35", "36"],
+    "coverage": "full",
+    "notes": "ICT product configuration management"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "EUCC",
+    "articles": ["28", "29"],
+    "coverage": "partial",
+    "notes": "Ongoing surveillance requirements"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "EUCC",
+    "articles": ["28", "30"],
+    "coverage": "full",
+    "notes": "Vulnerability disclosure and reporting"
+  }
+]

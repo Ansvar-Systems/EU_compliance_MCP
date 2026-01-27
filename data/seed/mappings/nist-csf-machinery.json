@@ -1,0 +1,58 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "MACHINERY",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Machinery and related products regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "MACHINERY",
+    "articles": ["5", "10"],
+    "coverage": "full",
+    "notes": "Risk assessment and risk reduction for machinery"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "MACHINERY",
+    "articles": ["10", "11", "12", "13"],
+    "coverage": "full",
+    "notes": "Manufacturer and economic operator obligations"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "MACHINERY",
+    "articles": ["10", "11", "12"],
+    "coverage": "full",
+    "notes": "Supply chain obligations for machinery"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "MACHINERY",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Technical documentation requirements"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "MACHINERY",
+    "articles": ["5"],
+    "coverage": "partial",
+    "notes": "Digital components data protection"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "MACHINERY",
+    "articles": ["43", "44"],
+    "coverage": "full",
+    "notes": "Non-compliance reporting to authorities"
+  }
+]

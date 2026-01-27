@@ -1,0 +1,90 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "EHDS",
+    "articles": ["57", "66", "73"],
+    "coverage": "full",
+    "notes": "Health data access bodies must establish security policies for data processing"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "EHDS",
+    "articles": ["55", "57", "60", "61"],
+    "coverage": "full",
+    "notes": "Health data access bodies, data holders, and data users have defined responsibilities"
+  },
+  {
+    "control_id": "A.5.10",
+    "control_name": "Acceptable use of information and other associated assets",
+    "regulation": "EHDS",
+    "articles": ["53", "66"],
+    "coverage": "full",
+    "notes": "Strict rules on purposes for which health data can be processed for secondary use"
+  },
+  {
+    "control_id": "A.5.12",
+    "control_name": "Classification of information",
+    "regulation": "EHDS",
+    "articles": ["14", "51", "78"],
+    "coverage": "full",
+    "notes": "Health data categories defined with priority classifications and quality labels"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EHDS",
+    "articles": ["1", "2", "50"],
+    "coverage": "full",
+    "notes": "EHDS establishes comprehensive legal framework for health data"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "EHDS",
+    "articles": ["7", "14", "77", "79"],
+    "coverage": "full",
+    "notes": "Dataset catalogues and EHR systems must maintain records"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "EHDS",
+    "articles": ["3", "4", "7", "8", "66", "71"],
+    "coverage": "full",
+    "notes": "Comprehensive rights including access, portability, restriction, and opt-out"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "EHDS",
+    "articles": ["67", "68", "73"],
+    "coverage": "full",
+    "notes": "Data permits and secure processing environments required"
+  },
+  {
+    "control_id": "A.8.10",
+    "control_name": "Information deletion",
+    "regulation": "EHDS",
+    "articles": ["8", "71"],
+    "coverage": "partial",
+    "notes": "Right to restrict access and opt-out from secondary use"
+  },
+  {
+    "control_id": "A.8.11",
+    "control_name": "Data masking",
+    "regulation": "EHDS",
+    "articles": ["66", "73"],
+    "coverage": "full",
+    "notes": "Data minimisation and secure processing with anonymization"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "EHDS",
+    "articles": ["73"],
+    "coverage": "full",
+    "notes": "Secure processing environment requires encryption"
+  }
+]

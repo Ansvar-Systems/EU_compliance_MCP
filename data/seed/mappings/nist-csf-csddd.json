@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "CSDDD",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Corporate due diligence regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "CSDDD",
+    "articles": ["7", "8"],
+    "coverage": "full",
+    "notes": "Due diligence risk management"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "CSDDD",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Due diligence responsibilities"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "CSDDD",
+    "articles": ["6", "7", "8"],
+    "coverage": "full",
+    "notes": "Value chain due diligence requirements"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "CSDDD",
+    "articles": ["6", "11"],
+    "coverage": "partial",
+    "notes": "Supply chain mapping and documentation"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "CSDDD",
+    "articles": ["14", "15"],
+    "coverage": "full",
+    "notes": "Grievance mechanism and reporting"
+  }
+]

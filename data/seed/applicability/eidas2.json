@@ -1,0 +1,86 @@
+[
+  {
+    "regulation": "EIDAS2",
+    "sector": "public_administration",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Public sector bodies must accept EU Digital Identity Wallets and notified eID schemes for cross-border authentication"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "financial",
+    "subsector": "bank",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "12b",
+    "notes": "Banks required to accept EUDI Wallets for customer authentication under AML requirements by late 2027"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "financial",
+    "subsector": "insurance",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "12b",
+    "notes": "Insurance companies required to accept EUDI Wallets for customer identification under AML requirements"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "healthcare",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "12b",
+    "notes": "Healthcare providers may be required to accept EUDI Wallets; health credentials (vaccination, prescriptions) can be stored in wallets"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "transport",
+    "subsector": "aviation",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "12b",
+    "notes": "Airlines and airports may accept EUDI Wallets for passenger identification and travel documents"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "digital_infrastructure",
+    "subsector": "vlop",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "12b",
+    "notes": "Very Large Online Platforms (as defined in DSA) must offer EUDI Wallet login option by late 2027"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "digital_infrastructure",
+    "subsector": "trust_services",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "13",
+    "notes": "Qualified trust service providers (QTSPs) directly regulated; must meet security and liability requirements"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "digital_infrastructure",
+    "subsector": "identity_provider",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "6a",
+    "notes": "EUDI Wallet providers and identity verification services must comply with wallet issuance requirements"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "manufacturing",
+    "applies": false,
+    "confidence": "likely",
+    "notes": "Manufacturing not directly in scope unless providing trust services or requiring strong customer authentication"
+  },
+  {
+    "regulation": "EIDAS2",
+    "sector": "energy",
+    "applies": false,
+    "confidence": "likely",
+    "notes": "Energy sector not directly in scope; may use EUDI Wallets for customer onboarding but not mandated"
+  }
+]

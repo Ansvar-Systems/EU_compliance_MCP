@@ -1,0 +1,130 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "CRA",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Art 10-11 require manufacturers to have policies for secure development and vulnerability handling"
+  },
+  {
+    "control_id": "A.5.8",
+    "control_name": "Information security in project management",
+    "regulation": "CRA",
+    "articles": ["10", "13"],
+    "coverage": "full",
+    "notes": "Art 10 security throughout product lifecycle, Art 13 product documentation requirements"
+  },
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "CRA",
+    "articles": ["13", "18", "19"],
+    "coverage": "full",
+    "notes": "Art 13 SBOM requirements, Art 18-19 importer and distributor obligations for supply chain security"
+  },
+  {
+    "control_id": "A.5.20",
+    "control_name": "Addressing information security within supplier agreements",
+    "regulation": "CRA",
+    "articles": ["13", "18"],
+    "coverage": "full",
+    "notes": "Art 13 technical documentation including component information, Art 18 importer verification duties"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "CRA",
+    "articles": ["1", "2", "3", "4"],
+    "coverage": "full",
+    "notes": "Art 1-4 define scope, applicability, and CE marking requirements for digital products"
+  },
+  {
+    "control_id": "A.6.3",
+    "control_name": "Information security awareness, education and training",
+    "regulation": "CRA",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Art 10(6) requires manufacturers to have competent personnel for cybersecurity"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "CRA",
+    "articles": ["14"],
+    "coverage": "full",
+    "notes": "Art 14 requires notification of exploited vulnerabilities within 24 hours to ENISA and national CSIRTs"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "CRA",
+    "articles": ["10", "11", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10 vulnerability handling, Art 11 coordinated disclosure, Annex I Part II vulnerability requirements"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "CRA",
+    "articles": ["10", "Annex I"],
+    "coverage": "full",
+    "notes": "Annex I Part I requires secure default configuration with no known vulnerabilities"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "CRA",
+    "articles": ["Annex I"],
+    "coverage": "full",
+    "notes": "Annex I Part I requires protection of confidentiality, integrity with state-of-the-art cryptography"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "CRA",
+    "articles": ["10", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10 requires security throughout product lifecycle, Annex I mandates secure by design"
+  },
+  {
+    "control_id": "A.8.26",
+    "control_name": "Application security requirements",
+    "regulation": "CRA",
+    "articles": ["Annex I"],
+    "coverage": "full",
+    "notes": "Annex I Part I essential cybersecurity requirements: confidentiality, integrity, availability, authentication"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "CRA",
+    "articles": ["10", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10 secure development, Annex I requires products delivered without known exploitable vulnerabilities"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "CRA",
+    "articles": ["10", "24", "Annex I"],
+    "coverage": "full",
+    "notes": "Art 10 requires testing, Art 24 conformity assessment, Annex I requires documented risk assessment"
+  },
+  {
+    "control_id": "A.8.31",
+    "control_name": "Separation of development, test and production environments",
+    "regulation": "CRA",
+    "articles": ["10"],
+    "coverage": "partial",
+    "notes": "Art 10 implies separation through secure development process requirements"
+  },
+  {
+    "control_id": "A.8.32",
+    "control_name": "Change management",
+    "regulation": "CRA",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Art 10 security updates, Art 11 requires 5-year support period for security patches"
+  }
+]

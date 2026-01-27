@@ -1,0 +1,26 @@
+[
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "CBAM",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Carbon border adjustment mechanism requirements"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "CBAM",
+    "articles": ["7", "8", "9"],
+    "coverage": "full",
+    "notes": "CBAM reporting and documentation requirements"
+  },
+  {
+    "control_id": "A.8.12",
+    "control_name": "Data leakage prevention",
+    "regulation": "CBAM",
+    "articles": ["10", "11"],
+    "coverage": "partial",
+    "notes": "Protection of emissions data and declarations"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "MIFIR",
+    "sector": "financial",
+    "subsector": "investment_firms",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "MiFIR establishes uniform requirements for trading and transparency"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "financial",
+    "subsector": "trading_venues",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Trading venues must comply with pre and post-trade transparency"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "financial",
+    "subsector": "banks",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Credit institutions providing investment services must comply"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "financial",
+    "subsector": "ccps",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "CCPs and persons with proprietary rights to benchmarks are in scope"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Digital infrastructure not directly in scope"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Healthcare sector not in scope"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Energy sector generally not in scope unless trading financial instruments"
+  },
+  {
+    "regulation": "MIFIR",
+    "sector": "other",
+    "subsector": "third_country_firms",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Third-country firms providing services in EU must comply"
+  }
+]

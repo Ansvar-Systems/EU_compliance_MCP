@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "EPRIVACY",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "ePrivacy Directive applies to electronic communications sector"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "digital_infrastructure",
+    "subsector": "telecoms",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Telecom providers must ensure confidentiality of communications"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "digital_infrastructure",
+    "subsector": "internet_services",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Internet service providers and OTT services are covered"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "5",
+    "notes": "Financial services using electronic communications must comply (cookies, direct marketing)"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "5",
+    "notes": "Healthcare entities using electronic communications must comply"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "5",
+    "notes": "Any entity using cookies or electronic direct marketing must comply"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Public sector websites must comply with cookie and tracking rules"
+  },
+  {
+    "regulation": "EPRIVACY",
+    "sector": "other",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "5",
+    "notes": "Any organization with a website or electronic marketing is likely subject to ePrivacy"
+  }
+]

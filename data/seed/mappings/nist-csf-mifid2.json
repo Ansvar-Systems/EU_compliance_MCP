@@ -1,0 +1,74 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "MIFID2",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Investment services regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "MIFID2",
+    "articles": ["16", "17"],
+    "coverage": "full",
+    "notes": "Organizational and risk management requirements"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "MIFID2",
+    "articles": ["9", "16"],
+    "coverage": "full",
+    "notes": "Management body and compliance responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "MIFID2",
+    "articles": ["16", "17"],
+    "coverage": "full",
+    "notes": "IT systems and security policies"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "MIFID2",
+    "articles": ["16"],
+    "coverage": "full",
+    "notes": "Outsourcing arrangements requirements"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "MIFID2",
+    "articles": ["16", "25"],
+    "coverage": "partial",
+    "notes": "Client asset safeguarding requirements"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "MIFID2",
+    "articles": ["16", "66"],
+    "coverage": "full",
+    "notes": "Transaction record protection"
+  },
+  {
+    "control_id": "PR.IR-01",
+    "control_name": "Incident response plan exists",
+    "regulation": "MIFID2",
+    "articles": ["16", "17"],
+    "coverage": "full",
+    "notes": "Business continuity arrangements"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "MIFID2",
+    "articles": ["16", "17"],
+    "coverage": "full",
+    "notes": "Business continuity and disaster recovery"
+  }
+]

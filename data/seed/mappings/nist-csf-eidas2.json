@@ -1,0 +1,114 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "EIDAS2",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Art 1-3 scope for electronic identification and trust services"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "EIDAS2",
+    "articles": ["19", "24"],
+    "coverage": "full",
+    "notes": "Art 19 security requirements, Art 24 qualified trust service requirements"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "EIDAS2",
+    "articles": ["17", "20"],
+    "coverage": "full",
+    "notes": "Art 17 supervisory body, Art 20 trust service provider obligations"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "EIDAS2",
+    "articles": ["19", "24"],
+    "coverage": "full",
+    "notes": "Art 19 security policies, Art 24 qualified provider requirements"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "EIDAS2",
+    "articles": ["22"],
+    "coverage": "partial",
+    "notes": "Art 22 trusted lists of qualified providers"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "EIDAS2",
+    "articles": ["19", "24"],
+    "coverage": "full",
+    "notes": "Art 19-24 security measures and risk management"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "6b", "8"],
+    "coverage": "full",
+    "notes": "Art 6a-6b EUDI Wallet, Art 8 assurance levels"
+  },
+  {
+    "control_id": "PR.AA-03",
+    "control_name": "Users and services are authenticated",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "8", "29"],
+    "coverage": "full",
+    "notes": "Art 6a wallet authentication, Art 8 assurance, Art 29 qualified signatures"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "EIDAS2",
+    "articles": ["6a", "6c"],
+    "coverage": "full",
+    "notes": "Art 6a-6c user control over identity and data sharing"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "EIDAS2",
+    "articles": ["19", "24"],
+    "coverage": "full",
+    "notes": "Art 19 security measures, Art 24 qualified provider security"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "EIDAS2",
+    "articles": ["19", "26", "29"],
+    "coverage": "full",
+    "notes": "Art 19 security, Art 26 advanced signatures, Art 29 qualified signatures"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "EIDAS2",
+    "articles": ["19"],
+    "coverage": "full",
+    "notes": "Art 19(2) security breach assessment"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "EIDAS2",
+    "articles": ["19"],
+    "coverage": "full",
+    "notes": "Art 19(2) breach notification within 24 hours"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "EIDAS2",
+    "articles": ["19"],
+    "coverage": "full",
+    "notes": "Art 19(2) notification to supervisory body"
+  }
+]

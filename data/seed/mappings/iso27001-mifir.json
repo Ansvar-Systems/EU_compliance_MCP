@@ -1,0 +1,42 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "MIFIR",
+    "articles": ["1", "2"],
+    "coverage": "partial",
+    "notes": "Framework for trading transparency and reporting"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "MIFIR",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Uniform requirements for trading venues"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "MIFIR",
+    "articles": ["25", "26"],
+    "coverage": "full",
+    "notes": "Transaction reporting and record keeping"
+  },
+  {
+    "control_id": "A.8.12",
+    "control_name": "Data leakage prevention",
+    "regulation": "MIFIR",
+    "articles": ["1", "25"],
+    "coverage": "partial",
+    "notes": "Controls for trade data protection"
+  },
+  {
+    "control_id": "A.8.16",
+    "control_name": "Monitoring activities",
+    "regulation": "MIFIR",
+    "articles": ["25", "26"],
+    "coverage": "full",
+    "notes": "Transaction monitoring and reporting"
+  }
+]

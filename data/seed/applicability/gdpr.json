@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "GDPR",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies to all sectors processing personal data of EU residents"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies, with special category data provisions (Art 9) for health data"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies to all sectors processing personal data"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies to all sectors processing personal data"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies to all sectors processing personal data"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies to public authorities, with specific provisions in Art 6"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "GDPR applies to all sectors processing personal data"
+  },
+  {
+    "regulation": "GDPR",
+    "sector": "other",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "GDPR likely applies if processing personal data of EU residents"
+  }
+]

@@ -1,0 +1,5 @@
+# Git attributes for EU Compliance MCP Server
+
+# Binary files - no diff attempts, no merge attempts
+*.db binary
+*.db -diff

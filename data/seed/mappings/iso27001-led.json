@@ -1,0 +1,74 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "LED",
+    "articles": ["19", "29"],
+    "coverage": "full",
+    "notes": "Security policies required for law enforcement data processing"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "LED",
+    "articles": ["32", "33", "34"],
+    "coverage": "full",
+    "notes": "Data protection officer designation and controller responsibilities"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "LED",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Legal framework for law enforcement data processing"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "LED",
+    "articles": ["24", "25"],
+    "coverage": "full",
+    "notes": "Logging and record-keeping requirements"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "LED",
+    "articles": ["4", "8", "9", "13", "14", "15", "16"],
+    "coverage": "full",
+    "notes": "Data subject rights and data protection principles"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "LED",
+    "articles": ["30", "31"],
+    "coverage": "full",
+    "notes": "Personal data breach notification to supervisory authority"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "LED",
+    "articles": ["19", "29"],
+    "coverage": "full",
+    "notes": "Access controls for law enforcement data"
+  },
+  {
+    "control_id": "A.8.10",
+    "control_name": "Information deletion",
+    "regulation": "LED",
+    "articles": ["5", "16"],
+    "coverage": "full",
+    "notes": "Data minimization and right to erasure"
+  },
+  {
+    "control_id": "A.8.11",
+    "control_name": "Data masking",
+    "regulation": "LED",
+    "articles": ["4", "19"],
+    "coverage": "partial",
+    "notes": "Distinction between data subjects and pseudonymization"
+  }
+]

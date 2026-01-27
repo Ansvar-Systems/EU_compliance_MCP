@@ -1,0 +1,90 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "CER",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Critical entities resilience regulatory context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "CER",
+    "articles": ["12", "13"],
+    "coverage": "full",
+    "notes": "Risk assessment for critical entities"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "CER",
+    "articles": ["9", "13"],
+    "coverage": "full",
+    "notes": "Critical entity resilience responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "CER",
+    "articles": ["13", "14"],
+    "coverage": "full",
+    "notes": "Resilience policies for critical entities"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "CER",
+    "articles": ["12"],
+    "coverage": "full",
+    "notes": "National risk assessment requirements"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "CER",
+    "articles": ["12", "13"],
+    "coverage": "full",
+    "notes": "Threat identification for critical infrastructure"
+  },
+  {
+    "control_id": "PR.IR-01",
+    "control_name": "Incident response plan exists",
+    "regulation": "CER",
+    "articles": ["13", "14"],
+    "coverage": "full",
+    "notes": "Incident response and resilience measures"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "CER",
+    "articles": ["13"],
+    "coverage": "partial",
+    "notes": "Physical and technical monitoring measures"
+  },
+  {
+    "control_id": "RS.CO-02",
+    "control_name": "Incidents are reported internally",
+    "regulation": "CER",
+    "articles": ["15"],
+    "coverage": "full",
+    "notes": "Internal incident notification processes"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "CER",
+    "articles": ["9", "15"],
+    "coverage": "full",
+    "notes": "Incident notification to competent authorities"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "CER",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Business continuity for critical services"
+  }
+]

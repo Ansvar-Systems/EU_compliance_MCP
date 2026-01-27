@@ -1,0 +1,26 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "partial",
+    "notes": "Governance policies for sustainability reporting"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "full",
+    "notes": "Sustainability reporting legal requirements"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "full",
+    "notes": "Sustainability data record keeping"
+  }
+]

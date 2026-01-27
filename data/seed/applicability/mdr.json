@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "MDR",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "MDR regulates medical devices used in healthcare settings"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "healthcare",
+    "subsector": "hospitals",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "5",
+    "notes": "Health institutions using medical devices must ensure compliance"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "manufacturing",
+    "subsector": "medical_devices",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Manufacturers of medical devices must obtain CE marking"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "digital_infrastructure",
+    "subsector": "software",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "2",
+    "notes": "Software as a Medical Device (SaMD) falls under MDR"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial sector not in scope of medical device regulation"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "energy",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Energy sector not in scope"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "transport",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Transport sector not in scope"
+  },
+  {
+    "regulation": "MDR",
+    "sector": "other",
+    "subsector": "importers_distributors",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Importers and distributors of medical devices have specific obligations"
+  }
+]

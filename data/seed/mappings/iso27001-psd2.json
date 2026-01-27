@@ -1,0 +1,82 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "PSD2",
+    "articles": ["5", "95"],
+    "coverage": "full",
+    "notes": "Security policies for payment service providers"
+  },
+  {
+    "control_id": "A.5.2",
+    "control_name": "Information security roles and responsibilities",
+    "regulation": "PSD2",
+    "articles": ["5", "11"],
+    "coverage": "full",
+    "notes": "Governance and internal control requirements"
+  },
+  {
+    "control_id": "A.5.24",
+    "control_name": "Information security incident management planning and preparation",
+    "regulation": "PSD2",
+    "articles": ["96"],
+    "coverage": "full",
+    "notes": "Incident reporting framework for PSPs"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "PSD2",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Authorization and operating requirements for PSPs"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "PSD2",
+    "articles": ["5", "40"],
+    "coverage": "full",
+    "notes": "Record keeping and transparency requirements"
+  },
+  {
+    "control_id": "A.5.34",
+    "control_name": "Privacy and protection of PII",
+    "regulation": "PSD2",
+    "articles": ["94"],
+    "coverage": "full",
+    "notes": "Data protection requirements for payment data"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "PSD2",
+    "articles": ["96"],
+    "coverage": "full",
+    "notes": "Major incident notification requirements"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "PSD2",
+    "articles": ["66", "67", "97"],
+    "coverage": "full",
+    "notes": "Strong customer authentication requirements"
+  },
+  {
+    "control_id": "A.8.5",
+    "control_name": "Secure authentication",
+    "regulation": "PSD2",
+    "articles": ["97", "98"],
+    "coverage": "full",
+    "notes": "SCA and secure communication requirements"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "PSD2",
+    "articles": ["95", "97"],
+    "coverage": "full",
+    "notes": "Encryption requirements for payment transactions"
+  }
+]

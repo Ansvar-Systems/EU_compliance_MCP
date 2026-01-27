@@ -1,0 +1,34 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["1", "8"],
+    "coverage": "partial",
+    "notes": "Framework requires policies for sustainability reporting"
+  },
+  {
+    "control_id": "A.5.12",
+    "control_name": "Classification of information",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["3", "10", "11", "12", "13", "14", "15"],
+    "coverage": "full",
+    "notes": "Classification criteria for environmentally sustainable activities"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["1", "2", "8"],
+    "coverage": "full",
+    "notes": "Establishes legal framework for sustainable finance classification"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "EU_TAXONOMY",
+    "articles": ["8"],
+    "coverage": "full",
+    "notes": "Disclosure requirements for Taxonomy-aligned activities"
+  }
+]

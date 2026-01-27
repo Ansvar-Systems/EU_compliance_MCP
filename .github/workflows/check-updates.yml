@@ -1,0 +1,427 @@
+name: Daily EUR-Lex Update Check
+
+on:
+  schedule:
+    # Run daily at 6 AM UTC (7 AM CET / 8 AM CEST)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      auto_update:
+        description: 'Automatically re-ingest and publish if updates found'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    outputs:
+      updates_found: ${{ steps.check.outputs.updates_found }}
+      update_summary: ${{ steps.check.outputs.update_summary }}
+      issue_url: ${{ steps.create-issue.outputs.issue_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Get Monitored CELEX IDs from Database
+        id: celex
+        run: |
+          echo "Reading monitored regulations from database..."
+
+          # Extract CELEX IDs from source_registry table
+          CELEX_IDS=$(sqlite3 data/regulations.db "SELECT celex_id FROM source_registry WHERE celex_id IS NOT NULL AND celex_id != '' ORDER BY regulation" | tr '\n' '|' | sed 's/|$//')
+
+          if [ -z "$CELEX_IDS" ]; then
+            echo "No regulations found in database"
+            echo "celex_pattern=" >> $GITHUB_OUTPUT
+          else
+            echo "Monitoring: $CELEX_IDS"
+            echo "celex_pattern=$CELEX_IDS" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check EUR-Lex RSS Feeds
+        id: rss
+        if: steps.celex.outputs.celex_pattern != ''
+        run: |
+          echo "Checking EUR-Lex RSS feeds for legislative updates..."
+
+          # EUR-Lex Official Journal L series (legislation) RSS feed
+          RSS_URL="https://eur-lex.europa.eu/EN/RSS/rss_ojl.xml"
+
+          # Download and parse RSS feed
+          curl -s "$RSS_URL" -o eurlex_rss.xml || echo "RSS fetch failed"
+
+          if [ -f eurlex_rss.xml ]; then
+            # Extract recent items (last 7 days worth)
+            echo "Recent EUR-Lex legislative updates:"
+            grep -oP '<title>\K[^<]+' eurlex_rss.xml | head -20 || echo "No items found"
+
+            # Check for monitored CELEX IDs (read from database)
+            MONITORED="${{ steps.celex.outputs.celex_pattern }}"
+            if grep -qE "$MONITORED" eurlex_rss.xml; then
+              echo "rss_match=true" >> $GITHUB_OUTPUT
+              echo "Found matching regulation in RSS feed!"
+            else
+              echo "rss_match=false" >> $GITHUB_OUTPUT
+              echo "No monitored regulations in recent RSS"
+            fi
+          else
+            echo "rss_match=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check for Regulation Updates
+        id: check
+        run: |
+          echo "Running comprehensive update check..."
+
+          # Run the check-updates script and capture output
+          npm run check-updates 2>&1 | tee check_output.txt
+
+          # Check if updates were found
+          if grep -q "need attention" check_output.txt; then
+            echo "updates_found=true" >> $GITHUB_OUTPUT
+
+            # Extract the summary safely (no injection risk - we control the script)
+            SUMMARY=$(grep -A 50 "need attention" check_output.txt | head -20)
+            # Use delimiter for multiline output
+            echo "update_summary<<EOF" >> $GITHUB_OUTPUT
+            echo "$SUMMARY" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "updates_found=false" >> $GITHUB_OUTPUT
+            echo "update_summary=All regulations up to date" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create or Update Issue
+        id: create-issue
+        if: steps.check.outputs.updates_found == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'EUR-Lex Regulation Updates Available';
+            const updateSummary = `${{ steps.check.outputs.update_summary }}`;
+
+            const body = `## EUR-Lex Update Check - ${new Date().toISOString().split('T')[0]}
+
+            The daily EUR-Lex update check found regulations that need attention:
+
+            \`\`\`
+            ${updateSummary}
+            \`\`\`
+
+            ### Next Steps
+
+            1. Review the changes on EUR-Lex
+            2. Re-ingest affected regulations:
+               \`\`\`bash
+               npm run ingest -- <CELEX_ID> data/seed/<regulation>.json
+               npm run build:db
+               \`\`\`
+            3. Test locally with MCP Inspector
+            4. Bump version and publish
+
+            Or trigger auto-update via workflow dispatch with \`auto_update: true\`.
+
+            ---
+            *This issue was automatically created by the daily EUR-Lex update checker.*`;
+
+            // Find existing open issue
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: ['eur-lex-update']
+            });
+
+            let issueNumber;
+            if (issues.data.length > 0) {
+              // Update existing issue
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues.data[0].number,
+                body: body
+              });
+              issueNumber = issues.data[0].number;
+              console.log(`Updated issue #${issueNumber}`);
+            } else {
+              // Create new issue
+              const newIssue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['eur-lex-update']
+              });
+              issueNumber = newIssue.data.number;
+              console.log(`Created new issue #${issueNumber}`);
+            }
+
+            // Set output for webhook notifications
+            const issueUrl = `${{ github.server_url }}/${{ github.repository }}/issues/${issueNumber}`;
+            core.setOutput('issue_url', issueUrl);
+
+      - name: Close Issue if Up to Date
+        if: steps.check.outputs.updates_found == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: ['eur-lex-update']
+            });
+
+            for (const issue of issues.data) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+                state_reason: 'completed'
+              });
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `All regulations are now up to date as of ${new Date().toISOString().split('T')[0]}.`
+              });
+
+              console.log(`Closed issue #${issue.number}`);
+            }
+
+  auto-update:
+    needs: check-updates
+    if: |
+      needs.check-updates.outputs.updates_found == 'true' &&
+      github.event.inputs.auto_update == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Re-ingest All Regulations
+        run: |
+          echo "Re-ingesting all monitored regulations from database..."
+
+          # Read all regulations from source_registry and re-ingest each
+          sqlite3 data/regulations.db "SELECT regulation, celex_id FROM source_registry WHERE celex_id IS NOT NULL AND celex_id != ''" | while IFS='|' read -r reg celex; do
+            echo "Re-ingesting $reg ($celex)..."
+            OUTPUT_FILE="data/seed/${reg,,}.json"  # lowercase regulation name
+            npx tsx scripts/ingest-eurlex.ts "$celex" "$OUTPUT_FILE" || echo "Warning: Failed to ingest $reg"
+          done
+
+      - name: Rebuild Database
+        run: npm run build:db
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Bump Patch Version
+        id: version
+        run: |
+          # Get current version
+          CURRENT=$(node -p "require('./package.json').version")
+          echo "Current version: $CURRENT"
+
+          # Bump patch version
+          npm version patch --no-git-tag-version
+
+          NEW=$(node -p "require('./package.json').version")
+          echo "New version: $NEW"
+          echo "new_version=$NEW" >> $GITHUB_OUTPUT
+
+      - name: Commit and Tag
+        run: |
+          git add -A
+          git commit -m "chore: auto-update EUR-Lex regulations to v${{ steps.version.outputs.new_version }}
+
+          Automated update triggered by daily EUR-Lex check.
+
+          Co-Authored-By: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
+          git tag "v${{ steps.version.outputs.new_version }}"
+          git push origin main --tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # The tag push will trigger the publish.yml workflow
+
+  notify-webhooks:
+    needs: check-updates
+    if: needs.check-updates.outputs.updates_found == 'true'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Parse Update Summary
+        id: parse
+        run: |
+          SUMMARY="${{ needs.check-updates.outputs.update_summary }}"
+          COUNT=$(echo "$SUMMARY" | grep -oP '\d+(?= regulation)' || echo "0")
+          echo "update_count=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Send Slack Notification
+        if: env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          SUMMARY="${{ needs.check-updates.outputs.update_summary }}"
+          ISSUE_URL="${{ needs.check-updates.outputs.issue_url }}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          COUNT="${{ steps.parse.outputs.update_count }}"
+
+          cat > slack.json <<'EOF'
+          {
+            "text": "⚠️ EUR-Lex Regulation Updates Detected",
+            "blocks": [
+              {
+                "type": "header",
+                "text": {"type": "plain_text", "text": "⚠️ EUR-Lex Updates"}
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*$COUNT regulation(s) need attention*\n\n```\n$SUMMARY\n```"
+                }
+              },
+              {
+                "type": "actions",
+                "elements": [
+                  {
+                    "type": "button",
+                    "text": {"type": "plain_text", "text": "📋 View Issue"},
+                    "url": "$ISSUE_URL"
+                  },
+                  {
+                    "type": "button",
+                    "text": {"type": "plain_text", "text": "🔄 Workflow"},
+                    "url": "$RUN_URL"
+                  }
+                ]
+              }
+            ]
+          }
+          EOF
+
+          sed -i "s|\$COUNT|$COUNT|g" slack.json
+          sed -i "s|\$SUMMARY|$SUMMARY|g" slack.json
+          sed -i "s|\$ISSUE_URL|$ISSUE_URL|g" slack.json
+          sed -i "s|\$RUN_URL|$RUN_URL|g" slack.json
+
+          curl -X POST "$SLACK_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d @slack.json \
+            || echo "Slack notification failed (non-blocking)"
+
+      - name: Send Discord Notification
+        if: env.DISCORD_WEBHOOK_URL != ''
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_MENTION_ROLE_ID: ${{ secrets.DISCORD_MENTION_ROLE_ID }}
+        run: |
+          SUMMARY="${{ needs.check-updates.outputs.update_summary }}"
+          ISSUE_URL="${{ needs.check-updates.outputs.issue_url }}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          COUNT="${{ steps.parse.outputs.update_count }}"
+          MENTION="${DISCORD_MENTION_ROLE_ID:+<@&$DISCORD_MENTION_ROLE_ID>}"
+
+          cat > discord.json <<'EOF'
+          {
+            "content": "$MENTION EUR-Lex updates detected",
+            "embeds": [{
+              "title": "⚠️ EUR-Lex Update Check",
+              "description": "**$COUNT regulation(s) need attention**",
+              "color": 15844367,
+              "fields": [
+                {
+                  "name": "Details",
+                  "value": "```\n$SUMMARY\n```",
+                  "inline": false
+                },
+                {
+                  "name": "Links",
+                  "value": "[📋 Issue]($ISSUE_URL) • [🔄 Workflow]($RUN_URL)",
+                  "inline": false
+                }
+              ],
+              "footer": {"text": "EU Compliance MCP"},
+              "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            }]
+          }
+          EOF
+
+          sed -i "s|\$MENTION|$MENTION|g" discord.json
+          sed -i "s|\$COUNT|$COUNT|g" discord.json
+          sed -i "s|\$SUMMARY|${SUMMARY//$'\n'/\\n}|g" discord.json
+          sed -i "s|\$ISSUE_URL|$ISSUE_URL|g" discord.json
+          sed -i "s|\$RUN_URL|$RUN_URL|g" discord.json
+
+          curl -X POST "$DISCORD_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d @discord.json \
+            || echo "Discord notification failed (non-blocking)"
+
+      - name: Send Generic Webhook
+        if: env.GENERIC_WEBHOOK_URL != ''
+        env:
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+        run: |
+          TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          ISSUE_URL="${{ needs.check-updates.outputs.issue_url }}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          SUMMARY="${{ needs.check-updates.outputs.update_summary }}"
+          COUNT="${{ steps.parse.outputs.update_count }}"
+
+          cat > payload.json <<EOF
+          {
+            "event": "regulation_update_detected",
+            "timestamp": "$TIMESTAMP",
+            "repository": "${{ github.repository }}",
+            "run_url": "$RUN_URL",
+            "issue_url": "$ISSUE_URL",
+            "summary": {
+              "total_monitored": 37,
+              "updates_found": $COUNT,
+              "details": $(echo "$SUMMARY" | jq -Rs .)
+            }
+          }
+          EOF
+
+          curl -X POST "$GENERIC_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d @payload.json \
+            || echo "Generic webhook failed (non-blocking)"

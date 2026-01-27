@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "digital_infrastructure",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Cyber Solidarity Act strengthens EU cyber threat detection and incident response"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "public_administration",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "3",
+    "notes": "National Cyber Hubs and competent authorities are central to the Act"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "financial",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Critical sectors including finance benefit from EU Cybersecurity Reserve"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Healthcare is a critical sector covered by cyber solidarity measures"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Energy is a critical sector covered by cyber solidarity measures"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Transport is a critical sector covered by cyber solidarity measures"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": false,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "General manufacturing not directly targeted, but may benefit from incident response"
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "sector": "other",
+    "subsector": "cybersecurity_providers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "12",
+    "notes": "Managed security service providers can join EU Cybersecurity Reserve"
+  }
+]

@@ -1,0 +1,677 @@
+openapi: 3.0.3
+info:
+  title: EU Regulations Compliance API
+  version: 0.4.1
+  description: |
+    Searchable access to 37 EU cybersecurity and data protection regulations.
+    Supports full-text search, article retrieval, control framework mappings (ISO 27001, NIST CSF),
+    and sector applicability rules.
+
+    **Key Features:**
+    - 2,278 articles across 37 regulations (GDPR, NIS2, DORA, AI Act, CRA, etc.)
+    - 3,508 recitals with contextual guidance
+    - 1,121 official definitions
+    - 686 control mappings (ISO 27001:2022, NIST CSF 2.0)
+    - 305 sector applicability rules
+
+  contact:
+    name: Ansvar Systems
+    email: hello@ansvar.ai
+    url: https://ansvar.ai
+  license:
+    name: MIT
+    url: https://github.com/Ansvar-Systems/EU_compliance_MCP/blob/main/LICENSE
+
+servers:
+  - url: https://eu-regulations-api.ansvar.ai
+    description: Production server
+  - url: https://staging-eu-regulations-api.ansvar.ai
+    description: Staging server
+  - url: http://localhost:3000
+    description: Local development
+
+tags:
+  - name: health
+    description: Health check and service status
+  - name: search
+    description: Full-text search across regulations
+  - name: articles
+    description: Article retrieval and listing
+  - name: recitals
+    description: Recital retrieval (contextual guidance)
+  - name: definitions
+    description: Official term definitions
+  - name: regulations
+    description: Regulation metadata and structure
+  - name: mappings
+    description: Control framework mappings (ISO 27001, NIST CSF)
+  - name: applicability
+    description: Sector applicability rules
+
+security:
+  - BearerAuth: []
+  - ApiKeyAuth: []
+
+paths:
+  /health:
+    get:
+      summary: Health check
+      description: Returns service health status and database connection info
+      operationId: getHealth
+      tags:
+        - health
+      security: []  # No auth required
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+              example:
+                status: healthy
+                timestamp: "2026-01-27T16:20:48.239Z"
+                database:
+                  connected: true
+                  pool:
+                    total: 20
+                    idle: 18
+                    waiting: 0
+                service: eu-regulations-api
+                version: 0.4.1
+
+  /api/search:
+    post:
+      summary: Search regulations
+      description: |
+        Full-text search across articles and recitals using BM25 ranking.
+        Supports filtering by regulation and result limiting.
+      operationId: searchRegulations
+      tags:
+        - search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchRequest'
+            examples:
+              incident_reporting:
+                summary: Search for incident reporting requirements
+                value:
+                  query: "incident reporting"
+                  limit: 5
+              gdpr_only:
+                summary: Search within GDPR only
+                value:
+                  query: "personal data processing"
+                  regulations: ["GDPR"]
+                  limit: 10
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/articles/{regulation}/{articleNumber}:
+    get:
+      summary: Get specific article
+      description: Retrieve a specific article by regulation ID and article number
+      operationId: getArticle
+      tags:
+        - articles
+      parameters:
+        - name: regulation
+          in: path
+          required: true
+          description: Regulation ID (e.g., GDPR, NIS2, DORA)
+          schema:
+            type: string
+            example: GDPR
+        - name: articleNumber
+          in: path
+          required: true
+          description: Article number (can include letters, e.g., "17", "5a")
+          schema:
+            type: string
+            example: "17"
+      responses:
+        '200':
+          description: Article found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/articles/{regulation}:
+    get:
+      summary: List all articles for a regulation
+      description: Get all articles for a specific regulation with basic metadata
+      operationId: listArticles
+      tags:
+        - articles
+      parameters:
+        - name: regulation
+          in: path
+          required: true
+          description: Regulation ID
+          schema:
+            type: string
+            example: NIS2
+      responses:
+        '200':
+          description: List of articles
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleListResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/recitals/{regulation}/{recitalNumber}:
+    get:
+      summary: Get specific recital
+      description: Retrieve a specific recital by regulation ID and recital number
+      operationId: getRecital
+      tags:
+        - recitals
+      parameters:
+        - name: regulation
+          in: path
+          required: true
+          description: Regulation ID
+          schema:
+            type: string
+            example: GDPR
+        - name: recitalNumber
+          in: path
+          required: true
+          description: Recital number
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Recital found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecitalResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/definitions:
+    get:
+      summary: Search definitions
+      description: Search for term definitions across regulations
+      operationId: getDefinitions
+      tags:
+        - definitions
+      parameters:
+        - name: term
+          in: query
+          required: false
+          description: Term to search (partial match)
+          schema:
+            type: string
+            example: personal data
+        - name: regulation
+          in: query
+          required: false
+          description: Filter by regulation ID
+          schema:
+            type: string
+            example: GDPR
+      responses:
+        '200':
+          description: List of definitions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefinitionsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/regulations:
+    get:
+      summary: List all regulations
+      description: Get metadata for all available regulations
+      operationId: listRegulations
+      tags:
+        - regulations
+      responses:
+        '200':
+          description: List of regulations
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegulationsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/regulations/{regulationId}:
+    get:
+      summary: Get regulation details
+      description: Get detailed information about a specific regulation including structure
+      operationId: getRegulation
+      tags:
+        - regulations
+      parameters:
+        - name: regulationId
+          in: path
+          required: true
+          description: Regulation ID
+          schema:
+            type: string
+            example: GDPR
+      responses:
+        '200':
+          description: Regulation details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegulationDetailResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/mappings/{framework}:
+    get:
+      summary: Get control framework mappings
+      description: Get mappings between control frameworks (ISO 27001, NIST CSF) and regulations
+      operationId: getControlMappings
+      tags:
+        - mappings
+      parameters:
+        - name: framework
+          in: path
+          required: true
+          description: Control framework
+          schema:
+            type: string
+            enum: [ISO27001, NIST_CSF]
+            example: ISO27001
+        - name: controlId
+          in: query
+          required: false
+          description: Specific control ID
+          schema:
+            type: string
+            example: A.5.1
+        - name: regulation
+          in: query
+          required: false
+          description: Filter by regulation
+          schema:
+            type: string
+            example: DORA
+      responses:
+        '200':
+          description: Control mappings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MappingsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/applicability/{sector}:
+    get:
+      summary: Check regulation applicability
+      description: Determine which regulations apply to a specific sector
+      operationId: checkApplicability
+      tags:
+        - applicability
+      parameters:
+        - name: sector
+          in: path
+          required: true
+          description: Business sector
+          schema:
+            type: string
+            enum:
+              - financial
+              - healthcare
+              - energy
+              - transport
+              - digital_infrastructure
+              - public_administration
+              - manufacturing
+              - other
+            example: financial
+        - name: subsector
+          in: query
+          required: false
+          description: Specific subsector (e.g., "bank", "insurance")
+          schema:
+            type: string
+            example: bank
+      responses:
+        '200':
+          description: Applicability rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicabilityResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Microsoft Entra ID (Azure AD) JWT token
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for service-to-service authentication
+
+  schemas:
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+        timestamp:
+          type: string
+          format: date-time
+        database:
+          type: object
+          properties:
+            connected:
+              type: boolean
+            pool:
+              type: object
+              properties:
+                total:
+                  type: integer
+                idle:
+                  type: integer
+                waiting:
+                  type: integer
+        service:
+          type: string
+        version:
+          type: string
+
+    SearchRequest:
+      type: object
+      required:
+        - query
+      properties:
+        query:
+          type: string
+          description: Search query (full-text search)
+          example: "incident reporting"
+        regulations:
+          type: array
+          items:
+            type: string
+          description: Filter by specific regulations
+          example: ["GDPR", "NIS2"]
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 50
+          default: 10
+          description: Maximum number of results
+
+    SearchResponse:
+      type: object
+      properties:
+        query:
+          type: string
+        regulations:
+          type: string
+        count:
+          type: integer
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SearchResult'
+
+    SearchResult:
+      type: object
+      properties:
+        regulation:
+          type: string
+        article:
+          type: string
+        title:
+          type: string
+        text:
+          type: string
+          description: Full article text (may be truncated for display)
+        chapter:
+          type: string
+        relevance:
+          type: number
+          format: float
+          description: BM25 relevance score
+
+    ArticleResponse:
+      type: object
+      properties:
+        regulation:
+          type: string
+        article:
+          type: string
+        title:
+          type: string
+        text:
+          type: string
+        chapter:
+          type: string
+        recitals:
+          type: array
+          items:
+            type: integer
+          description: Related recital numbers
+        cross_references:
+          type: string
+          nullable: true
+
+    ArticleListResponse:
+      type: object
+      properties:
+        regulation:
+          type: string
+        count:
+          type: integer
+        articles:
+          type: array
+          items:
+            type: object
+            properties:
+              number:
+                type: string
+              title:
+                type: string
+              chapter:
+                type: string
+
+    RecitalResponse:
+      type: object
+      properties:
+        regulation:
+          type: string
+        recital_number:
+          type: integer
+        text:
+          type: string
+        related_articles:
+          type: string
+          nullable: true
+
+    DefinitionsResponse:
+      type: object
+      properties:
+        count:
+          type: integer
+        definitions:
+          type: array
+          items:
+            type: object
+            properties:
+              regulation:
+                type: string
+              term:
+                type: string
+              definition:
+                type: string
+              article:
+                type: string
+
+    RegulationsResponse:
+      type: object
+      properties:
+        count:
+          type: integer
+        regulations:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              full_name:
+                type: string
+              celex_id:
+                type: string
+              effective_date:
+                type: string
+              eur_lex_url:
+                type: string
+
+    RegulationDetailResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        full_name:
+          type: string
+        celex_id:
+          type: string
+        effective_date:
+          type: string
+        article_count:
+          type: integer
+        chapters:
+          type: array
+          items:
+            type: object
+            properties:
+              chapter:
+                type: string
+              articles:
+                type: array
+                items:
+                  type: string
+
+    MappingsResponse:
+      type: object
+      properties:
+        framework:
+          type: string
+        count:
+          type: integer
+        mappings:
+          type: array
+          items:
+            type: object
+            properties:
+              control_id:
+                type: string
+              control_name:
+                type: string
+              regulation:
+                type: string
+              articles:
+                type: string
+              coverage:
+                type: string
+                enum: [full, partial, related]
+              notes:
+                type: string
+
+    ApplicabilityResponse:
+      type: object
+      properties:
+        sector:
+          type: string
+        count:
+          type: integer
+        rules:
+          type: array
+          items:
+            type: object
+            properties:
+              regulation:
+                type: string
+              applies:
+                type: boolean
+              confidence:
+                type: string
+                enum: [definite, likely, possible]
+              basis_article:
+                type: string
+              notes:
+                type: string
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+
+  responses:
+    BadRequest:
+      description: Invalid request parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: Bad Request
+            message: Query parameter is required
+
+    Unauthorized:
+      description: Missing or invalid authentication
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: Unauthorized
+            message: Invalid or expired token
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: Not Found
+            message: Article 999 not found in GDPR

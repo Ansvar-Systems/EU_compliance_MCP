@@ -1,0 +1,28 @@
+{
+  "name": "@ansvar/eu-regulations-mcp-server",
+  "version": "0.4.1",
+  "description": "MCP server for EU regulations (stdio/HTTP)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "eu-regulations-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/http-server.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ansvar/eu-regulations-core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "better-sqlite3": "^12.6.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

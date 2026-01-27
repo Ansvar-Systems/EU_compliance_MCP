@@ -1,0 +1,210 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "DORA",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "DORA Art 1-2 define scope for financial entities and ICT third-party providers"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "DORA",
+    "articles": ["5", "6", "9"],
+    "coverage": "full",
+    "notes": "Art 5-6 governance, Art 9 ICT risk management framework requirements"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "DORA",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Art 5 governance and organisation, Art 6 management body responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "DORA",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Art 9-10 require documented ICT risk management policies"
+  },
+  {
+    "control_id": "GV.OV-01",
+    "control_name": "Cybersecurity risk management oversight",
+    "regulation": "DORA",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Art 5-6 require management body oversight of ICT risk"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "DORA",
+    "articles": ["28", "29", "30", "31"],
+    "coverage": "full",
+    "notes": "Chapter V comprehensive ICT third-party risk management"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "DORA",
+    "articles": ["8"],
+    "coverage": "full",
+    "notes": "Art 8 requires identification and documentation of ICT assets"
+  },
+  {
+    "control_id": "ID.AM-02",
+    "control_name": "Software platforms and applications inventories",
+    "regulation": "DORA",
+    "articles": ["8"],
+    "coverage": "full",
+    "notes": "Art 8 requires inventory of all ICT systems and applications"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "DORA",
+    "articles": ["9", "24", "25"],
+    "coverage": "full",
+    "notes": "Art 9 vulnerability management, Art 24-25 digital resilience testing"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "DORA",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Art 9-10 require threat identification in risk management"
+  },
+  {
+    "control_id": "ID.RA-05",
+    "control_name": "Risk responses are identified",
+    "regulation": "DORA",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Art 9-10 require risk mitigation strategies"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9(4)(c) requires access rights management"
+  },
+  {
+    "control_id": "PR.AA-03",
+    "control_name": "Users and services are authenticated",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9(4)(c) covers authentication mechanisms"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9(4)(c) requires access rights management"
+  },
+  {
+    "control_id": "PR.AT-01",
+    "control_name": "Awareness and training provided",
+    "regulation": "DORA",
+    "articles": ["13"],
+    "coverage": "full",
+    "notes": "Art 13(6) requires ICT security awareness programmes"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9(4)(d) covers data protection including encryption"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "DORA",
+    "articles": ["9"],
+    "coverage": "full",
+    "notes": "Art 9(4)(d) covers network security and data transmission"
+  },
+  {
+    "control_id": "PR.PS-01",
+    "control_name": "Configuration management practices established",
+    "regulation": "DORA",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Art 9-10 require secure configuration of ICT systems"
+  },
+  {
+    "control_id": "PR.IR-01",
+    "control_name": "Incident response plan exists",
+    "regulation": "DORA",
+    "articles": ["17"],
+    "coverage": "full",
+    "notes": "Art 17 requires comprehensive ICT-related incident management process"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "DORA",
+    "articles": ["9", "10"],
+    "coverage": "full",
+    "notes": "Art 9-10 require continuous monitoring of ICT systems"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "DORA",
+    "articles": ["17", "18"],
+    "coverage": "full",
+    "notes": "Art 17 incident detection, Art 18 incident classification"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "DORA",
+    "articles": ["17", "18", "19"],
+    "coverage": "full",
+    "notes": "Art 17 incident management, Art 18-19 classification and reporting"
+  },
+  {
+    "control_id": "RS.CO-02",
+    "control_name": "Incidents are reported internally",
+    "regulation": "DORA",
+    "articles": ["17"],
+    "coverage": "full",
+    "notes": "Art 17 requires internal incident communication procedures"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "DORA",
+    "articles": ["19", "20"],
+    "coverage": "full",
+    "notes": "Art 19 major incident reporting (4h, 72h, 1 month), Art 20 information sharing"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "DORA",
+    "articles": ["11", "12"],
+    "coverage": "full",
+    "notes": "Art 11 response and recovery, Art 12 backup policies and restoration"
+  },
+  {
+    "control_id": "RC.CO-03",
+    "control_name": "Recovery activities are communicated",
+    "regulation": "DORA",
+    "articles": ["13", "19"],
+    "coverage": "full",
+    "notes": "Art 13 communication policies, Art 19 final incident report"
+  }
+]

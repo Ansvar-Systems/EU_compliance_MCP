@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "EUCC",
+    "articles": ["1", "3"],
+    "coverage": "full",
+    "notes": "EUCC establishes cybersecurity certification policies"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "EUCC",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "EU-wide certification scheme requirements"
+  },
+  {
+    "control_id": "A.5.36",
+    "control_name": "Conformance with policies, rules and standards for information security",
+    "regulation": "EUCC",
+    "articles": ["4", "5", "6", "7"],
+    "coverage": "full",
+    "notes": "Common Criteria evaluation and assurance levels"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "EUCC",
+    "articles": ["8", "9"],
+    "coverage": "full",
+    "notes": "Configuration management in evaluation process"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "EUCC",
+    "articles": ["6"],
+    "coverage": "full",
+    "notes": "Cryptographic controls evaluated under Common Criteria"
+  },
+  {
+    "control_id": "A.8.25",
+    "control_name": "Secure development life cycle",
+    "regulation": "EUCC",
+    "articles": ["6", "8"],
+    "coverage": "full",
+    "notes": "Development security evaluated in certification"
+  },
+  {
+    "control_id": "A.8.28",
+    "control_name": "Secure coding",
+    "regulation": "EUCC",
+    "articles": ["6"],
+    "coverage": "full",
+    "notes": "Code security evaluated under Common Criteria"
+  },
+  {
+    "control_id": "A.8.29",
+    "control_name": "Security testing in development and acceptance",
+    "regulation": "EUCC",
+    "articles": ["4", "5", "6"],
+    "coverage": "full",
+    "notes": "Comprehensive security testing in evaluation"
+  }
+]

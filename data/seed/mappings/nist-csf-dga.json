@@ -1,0 +1,58 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "DGA",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Data governance regulatory context"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "DGA",
+    "articles": ["10", "11", "12"],
+    "coverage": "full",
+    "notes": "Data intermediation services responsibilities"
+  },
+  {
+    "control_id": "GV.PO-01",
+    "control_name": "Cybersecurity policy",
+    "regulation": "DGA",
+    "articles": ["5", "12"],
+    "coverage": "full",
+    "notes": "Security policies for data intermediation services"
+  },
+  {
+    "control_id": "PR.AA-01",
+    "control_name": "Identities and credentials for authorized users",
+    "regulation": "DGA",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Access controls for protected data re-use"
+  },
+  {
+    "control_id": "PR.AA-05",
+    "control_name": "Access permissions and authorizations are managed",
+    "regulation": "DGA",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "Data access authorization controls"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "DGA",
+    "articles": ["5", "11"],
+    "coverage": "full",
+    "notes": "Data governance and cataloguing requirements"
+  },
+  {
+    "control_id": "PR.DS-02",
+    "control_name": "Data-in-transit is protected",
+    "regulation": "DGA",
+    "articles": ["5", "12"],
+    "coverage": "full",
+    "notes": "Secure data transmission for sharing"
+  }
+]

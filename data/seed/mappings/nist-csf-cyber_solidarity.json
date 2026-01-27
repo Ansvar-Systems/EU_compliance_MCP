@@ -1,0 +1,90 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Cyber solidarity framework and SOC infrastructure context"
+  },
+  {
+    "control_id": "GV.RM-01",
+    "control_name": "Risk management objectives",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["3", "4"],
+    "coverage": "full",
+    "notes": "European Cybersecurity Shield risk management"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["5", "6"],
+    "coverage": "full",
+    "notes": "National and cross-border SOC responsibilities"
+  },
+  {
+    "control_id": "GV.SC-01",
+    "control_name": "Supply chain risk management program",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["15", "16"],
+    "coverage": "full",
+    "notes": "Managed security services and supply chain"
+  },
+  {
+    "control_id": "ID.RA-01",
+    "control_name": "Vulnerabilities in assets are identified",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["12"],
+    "coverage": "full",
+    "notes": "Coordinated vulnerability testing"
+  },
+  {
+    "control_id": "ID.RA-03",
+    "control_name": "Internal and external threats are identified",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["4", "7"],
+    "coverage": "full",
+    "notes": "Threat detection and analysis capabilities"
+  },
+  {
+    "control_id": "DE.CM-01",
+    "control_name": "Networks and network services are monitored",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["4", "5", "6"],
+    "coverage": "full",
+    "notes": "SOC monitoring infrastructure"
+  },
+  {
+    "control_id": "DE.AE-02",
+    "control_name": "Potentially adverse events are analyzed",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["7", "8"],
+    "coverage": "full",
+    "notes": "Cyber threat analysis and correlation"
+  },
+  {
+    "control_id": "RS.MA-01",
+    "control_name": "Incident response plan is executed",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["10", "11"],
+    "coverage": "full",
+    "notes": "Cyber emergency mechanism response"
+  },
+  {
+    "control_id": "RS.CO-03",
+    "control_name": "Information is shared with designated external parties",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["7", "8", "9"],
+    "coverage": "full",
+    "notes": "Cross-border information sharing"
+  },
+  {
+    "control_id": "RC.RP-01",
+    "control_name": "Recovery plan is executed",
+    "regulation": "CYBER_SOLIDARITY",
+    "articles": ["13", "14"],
+    "coverage": "full",
+    "notes": "Mutual assistance and recovery support"
+  }
+]

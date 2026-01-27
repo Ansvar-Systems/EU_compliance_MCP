@@ -1,0 +1,74 @@
+[
+  {
+    "regulation": "PLD",
+    "sector": "manufacturing",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Product Liability Directive applies to manufacturers of defective products"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "digital_infrastructure",
+    "subsector": "software",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "2",
+    "notes": "Software and AI systems are covered as products under new PLD"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "healthcare",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Medical products causing harm are covered"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "other",
+    "subsector": "importers",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "3",
+    "notes": "Importers can be liable as if they were manufacturers"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "other",
+    "subsector": "online_platforms",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "3",
+    "notes": "Online platforms may be liable in certain circumstances"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "financial",
+    "subsector": null,
+    "applies": false,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Financial services are not products under PLD"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "energy",
+    "subsector": null,
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "1",
+    "notes": "Energy products causing defects may be covered"
+  },
+  {
+    "regulation": "PLD",
+    "sector": "transport",
+    "subsector": null,
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "1",
+    "notes": "Defective vehicles and transport equipment covered"
+  }
+]

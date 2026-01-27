@@ -1,0 +1,34 @@
+[
+  {
+    "control_id": "GV.OC-01",
+    "control_name": "Organizational context",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "full",
+    "notes": "Corporate sustainability reporting context"
+  },
+  {
+    "control_id": "GV.RR-01",
+    "control_name": "Organizational roles and responsibilities",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "full",
+    "notes": "Management responsibility for sustainability reporting"
+  },
+  {
+    "control_id": "ID.AM-01",
+    "control_name": "Inventories of assets",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "partial",
+    "notes": "Sustainability data collection and management"
+  },
+  {
+    "control_id": "PR.DS-01",
+    "control_name": "Data-at-rest is protected",
+    "regulation": "CSRD",
+    "articles": ["1"],
+    "coverage": "partial",
+    "notes": "Sustainability data integrity"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "CSDDD",
+    "articles": ["5", "7"],
+    "coverage": "partial",
+    "notes": "Due diligence policies including data handling"
+  },
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "CSDDD",
+    "articles": ["6", "7", "8"],
+    "coverage": "full",
+    "notes": "Supply chain due diligence requirements"
+  },
+  {
+    "control_id": "A.5.21",
+    "control_name": "Managing information security in the ICT supply chain",
+    "regulation": "CSDDD",
+    "articles": ["6", "7"],
+    "coverage": "partial",
+    "notes": "Value chain risk assessment"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "CSDDD",
+    "articles": ["1", "2"],
+    "coverage": "full",
+    "notes": "Corporate due diligence obligations"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "CSDDD",
+    "articles": ["11"],
+    "coverage": "full",
+    "notes": "Due diligence documentation requirements"
+  },
+  {
+    "control_id": "A.6.8",
+    "control_name": "Information security event reporting",
+    "regulation": "CSDDD",
+    "articles": ["14", "15"],
+    "coverage": "partial",
+    "notes": "Grievance mechanism and reporting"
+  }
+]

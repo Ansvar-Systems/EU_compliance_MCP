@@ -1,0 +1,66 @@
+[
+  {
+    "control_id": "A.5.1",
+    "control_name": "Policies for information security",
+    "regulation": "DATA_ACT",
+    "articles": ["5", "8"],
+    "coverage": "partial",
+    "notes": "Art 5 data sharing policies, Art 8 technical protection measures for trade secrets"
+  },
+  {
+    "control_id": "A.5.10",
+    "control_name": "Acceptable use of information and other associated assets",
+    "regulation": "DATA_ACT",
+    "articles": ["4", "5", "6"],
+    "coverage": "full",
+    "notes": "Art 4-6 define acceptable use conditions for product data access and sharing"
+  },
+  {
+    "control_id": "A.5.12",
+    "control_name": "Classification of information",
+    "regulation": "DATA_ACT",
+    "articles": ["8"],
+    "coverage": "partial",
+    "notes": "Art 8 requires identification and protection of trade secrets in data sharing"
+  },
+  {
+    "control_id": "A.5.31",
+    "control_name": "Legal, statutory, regulatory and contractual requirements",
+    "regulation": "DATA_ACT",
+    "articles": ["1", "2", "3"],
+    "coverage": "full",
+    "notes": "Art 1-3 define scope and obligations for data holders and recipients"
+  },
+  {
+    "control_id": "A.5.33",
+    "control_name": "Protection of records",
+    "regulation": "DATA_ACT",
+    "articles": ["4", "31"],
+    "coverage": "partial",
+    "notes": "Art 4 product data retention, Art 31 international data access safeguards"
+  },
+  {
+    "control_id": "A.8.3",
+    "control_name": "Information access restriction",
+    "regulation": "DATA_ACT",
+    "articles": ["4", "5", "6"],
+    "coverage": "full",
+    "notes": "Art 4-6 define access rights and restrictions for product data"
+  },
+  {
+    "control_id": "A.8.10",
+    "control_name": "Information deletion",
+    "regulation": "DATA_ACT",
+    "articles": ["23"],
+    "coverage": "full",
+    "notes": "Art 23 requires data retrieval and deletion capabilities for cloud switching"
+  },
+  {
+    "control_id": "A.8.24",
+    "control_name": "Use of cryptography",
+    "regulation": "DATA_ACT",
+    "articles": ["8"],
+    "coverage": "partial",
+    "notes": "Art 8 technical measures to protect trade secrets may include encryption"
+  }
+]
