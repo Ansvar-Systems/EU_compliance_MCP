@@ -6,38 +6,104 @@
 - 37 base regulations (full text)
 - 2,278 articles with structured data
 - 1,145 official definitions
-- ~2,500+ recitals with legislative intent
+- 173 GDPR recitals (infrastructure complete, other 36 regulations blocked by WAF)
 - 686 security framework mappings (ISO 27001, NIST CSF 2.0)
 - 305 sector applicability rules
-- Full-text search across all content (articles + recitals)
+- Full-text search across all content (articles + recitals where available)
 - Cross-regulation comparisons
-- Daily freshness monitoring from EUR-Lex
+
+⚠️ **Degraded:**
+- Daily freshness monitoring may be affected by EUR-Lex WAF
+- Recital ingestion blocked for 36/37 regulations
+
+---
+
+## ⚠️ CRITICAL: EUR-Lex WAF Blocking (2026-01-27)
+
+**Status:** All automated EUR-Lex ingestion blocked by AWS WAF
+
+**Discovered:** 2026-01-27 09:33 UTC during recitals re-ingestion
+
+**Impact:**
+- ❌ Cannot re-ingest regulations with recitals (36/37 regulations blocked)
+- ❌ Daily freshness monitoring potentially affected
+- ❌ Auto-update workflow broken
+- ✅ Existing data in database continues to work
+
+**Technical details:**
+- EUR-Lex returns 2036-byte AWS WAF JavaScript challenge page
+- Challenge requires browser JavaScript execution to obtain token
+- Headless HTTP requests (node-fetch, axios) cannot pass challenge
+- All CELEX IDs affected, both regulations and directives
+
+**Example error:**
+```bash
+$ npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json
+Fetching: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679
+Fetched 2036 bytes
+Parsed 0 recitals
+Parsed 0 articles
+No articles found! The HTML structure may have changed.
+```
+
+**Workarounds:**
+
+1. **Puppeteer/Playwright (recommended for v0.3.2):**
+   - Use headless browser to execute JavaScript challenge
+   - Handles WAF token automatically
+   - ~2-3 seconds per regulation (vs 200ms currently)
+
+2. **Official EUR-Lex API:**
+   - Check if EUR-Lex offers authenticated API access
+   - Request API key for open-source MCP server
+   - Most reliable long-term solution
+
+3. **Pre-ingested data package (v1.0 consideration):**
+   - Create separate `@ansvar/eu-regulations-data` npm package
+   - Pre-ingest all regulations via Puppeteer
+   - MCP server downloads pre-ingested JSON
+   - Decouples users from EUR-Lex availability
+
+**Why GDPR has recitals but others don't:**
+- GDPR was re-ingested with recitals feature before WAF was deployed
+- Other 36 regulations were originally ingested before recitals feature existed
+- Attempted bulk re-ingestion hit WAF challenge
+
+**Next steps:** See [HANDOVER-2026-01-27-recitals-v0.3.0.md](../docs/HANDOVER-2026-01-27-recitals-v0.3.0.md) for detailed technical analysis and implementation plan.
+
+---
 
 ## Known Gaps
 
-### 1. Recitals ✅ (Completed in v0.3.0)
+### 1. Recitals ⚠️ (Infrastructure complete v0.3.0, data blocked by WAF)
 
-**Status:** ✅ Complete - Recitals ingested and searchable
+**Status:** ⚠️ Partial - Infrastructure complete, data ingestion blocked
 
-**What's included:**
-- "Whereas..." paragraphs explaining legislative intent
-- Interpretation guidance for ambiguous articles
-- Context for regulatory objectives
-- Full-text search via FTS5 (recitals_fts table)
-- Dedicated `get_recital` tool for retrieval
+**What's working:**
+- ✅ Database schema (recitals table + FTS5 search)
+- ✅ `get_recital` MCP tool implementation
+- ✅ Enhanced `search_regulations` includes recitals
+- ✅ 50/50 tests passing
+- ✅ GDPR recitals fully available (173 recitals)
 
-**Coverage:**
-- GDPR: 173 recitals
-- AI Act: 180 recitals
-- DORA: 180 recitals
-- ~2,500+ recitals across all 37 regulations
+**What's blocked:**
+- ❌ 36/37 regulations have no recitals data
+- ❌ EUR-Lex WAF prevents automated re-ingestion
+- ❌ Cannot fetch HTML to parse recitals
 
-**Test queries that now work:**
+**Actual coverage:**
+- GDPR: 173 recitals ✅
+- AI Act: 0 recitals ❌ (expected ~180)
+- DORA: 0 recitals ❌ (expected ~180)
+- NIS2: 0 recitals ❌ (expected ~144)
+- Other 33 regulations: 0 recitals ❌
+
+**Test queries:**
 ```
-✅ "What's GDPR Recital 83?" (encryption and technical measures)
-✅ "Get AI Act Recital 1" (high-level policy objectives)
-✅ "Show me NIS2 Recital 2" (scope rationale)
-✅ Search for "encryption" finds relevant recitals across regulations
+✅ "What's GDPR Recital 83?" (works - encryption and technical measures)
+❌ "Get AI Act Recital 1" (returns null - no data ingested)
+❌ "Show me NIS2 Recital 2" (returns null - no data ingested)
+⚠️ Search for "encryption" finds GDPR recitals only
 ```
 
 **Why this matters:**
@@ -45,7 +111,10 @@ Auditors, lawyers, and compliance officers use recitals to interpret vague requi
 - GDPR Article 32: "appropriate technical and organisational measures"
 - Recital 83 clarifies: encryption, pseudonymization, resilience, restoration capabilities
 
-**Completed:** v0.3.0
+**Roadmap:**
+- v0.3.1: Honest documentation (this release)
+- v0.3.2: Puppeteer-based ingestion to bypass WAF
+- v0.4.0: Full recitals coverage (~2,500+ across all regulations)
 
 ---
 

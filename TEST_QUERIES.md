@@ -36,10 +36,10 @@ Use these queries to test the MCP server and understand its capabilities.
 
 ```
 "What's GDPR Recital 83?" (encryption and technical measures context)
-"Show me AI Act Recital 1" (high-level policy objectives)
-"Get NIS2 Recital 2" (scope and essential entities rationale)
 "What guidance does GDPR Recital 39 give on data protection by design?"
 ```
+
+**Current limitation:** Only GDPR recitals available (173). Other 36 regulations blocked by EUR-Lex WAF protection deployed 2026-01-27. See [COVERAGE_GAPS.md](./COVERAGE_GAPS.md#critical-eur-lex-waf-blocking-2026-01-27) for details.
 
 **Use case:** Recitals explain the "why" behind articles. They provide:
 - Legislative intent and policy objectives
@@ -258,7 +258,7 @@ Connect via MCP client and test.
 | Definitions | ✅ Complete | 1,145 | Official definitions |
 | Framework Mappings | ✅ Complete | 686 | ISO 27001, NIST CSF |
 | Applicability Rules | ✅ Complete | 305 | Sector-based |
-| Recitals | ✅ Complete | ~2,500+ | Legislative intent (v0.3.0) |
+| Recitals | ⚠️ Partial | 173 (GDPR only) | EUR-Lex WAF blocking (v0.3.0) |
 | Delegated Acts | ❌ Missing | 0 | v0.4.0 |
 | National Laws | ❌ Out of scope | 0 | Post-v1.0 |
 | Historical Versions | ⚠️ Partial | N/A | Current only |

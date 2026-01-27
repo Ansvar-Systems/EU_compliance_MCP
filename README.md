@@ -201,7 +201,7 @@ npm start
 - [TEST_QUERIES.md](./TEST_QUERIES.md) - 60+ example queries organized by category
 - [COVERAGE_GAPS.md](./COVERAGE_GAPS.md) - Known limitations and roadmap
 
-**TL;DR:** Base regulations and recitals work perfectly. Delegated acts and national transpositions are roadmap items.
+**TL;DR:** Base regulations work perfectly. Recitals available for GDPR (173); other regulations blocked by EUR-Lex WAF protection (2026-01-27). Delegated acts and national transpositions are roadmap items.
 
 ---
 
