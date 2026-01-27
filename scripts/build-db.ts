@@ -172,6 +172,11 @@ interface RegulationSeed {
     definition: string;
     article: string;
   }>;
+  recitals?: Array<{
+    number: number;
+    text: string;
+    related_articles?: string[];
+  }>;
 }
 
 function buildDatabase() {
@@ -249,6 +254,23 @@ function buildDatabase() {
         }
       }
 
+      // Insert recitals
+      if (regulation.recitals) {
+        const insertRecital = db.prepare(`
+          INSERT OR IGNORE INTO recitals (regulation, recital_number, text, related_articles)
+          VALUES (?, ?, ?, ?)
+        `);
+
+        for (const recital of regulation.recitals) {
+          insertRecital.run(
+            regulation.id,
+            recital.number,
+            recital.text,
+            recital.related_articles ? JSON.stringify(recital.related_articles) : null
+          );
+        }
+      }
+
       // Update source registry with timestamps
       const now = new Date().toISOString();
       const eurLexVersion = regulation.effective_date || now.split('T')[0];
@@ -258,6 +280,9 @@ function buildDatabase() {
       `).run(regulation.id, regulation.celex_id, eurLexVersion, now, regulation.articles.length, regulation.articles.length);
 
       console.log(`  Loaded ${regulation.articles.length} articles, ${regulation.definitions?.length || 0} definitions`);
+      if (regulation.recitals && regulation.recitals.length > 0) {
+        console.log(`  Loaded ${regulation.recitals.length} recitals`);
+      }
     }
 
     // Load mappings
