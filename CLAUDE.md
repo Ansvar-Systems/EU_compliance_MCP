@@ -196,7 +196,7 @@ The package ships with a **pre-built database** (`data/regulations.db`, ~15MB) c
 
 | Component | Count | Size |
 |-----------|-------|------|
-| Articles | 2,278 | ~8MB |
+| Articles | 2,311 | ~8MB |
 | Recitals | 3,508 (33/37 regulations) | ~5MB |
 | Definitions | 1,145 | ~1MB |
 | Control Mappings | 686 | ~500KB |
@@ -300,7 +300,7 @@ The `GITHUB_TOKEN` is automatic and used for:
 | Category | Count |
 |----------|-------|
 | Regulations | 37 |
-| Articles | 2,278 |
+| Articles | 2,311 |
 | Recitals | 3,508 (33/37 regulations) |
 | Definitions | 1,145 |
 | ISO 27001 Mappings | 313 |
