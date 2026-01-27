@@ -11,6 +11,10 @@
 [![Recitals](https://img.shields.io/badge/recitals-3500%2B-blue)](docs/COVERAGE_GAPS.md)
 [![Hosted](https://img.shields.io/badge/Azure-hosted-0078D4)](https://eu-regulations-mcp.jollysea-916ea475.westeurope.azurecontainerapps.io/health)
 
+<a href="https://glama.ai/mcp/servers/@Mortalus/eu-regulations">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@Mortalus/eu-regulations/badge" />
+</a>
+
 Query **37 EU regulations** — from GDPR and AI Act to DORA, MiFID II, eIDAS, Medical Device Regulation, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
