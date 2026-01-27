@@ -6,7 +6,7 @@
 # Build command: docker buildx build --platform linux/amd64 -t <image> .
 
 # Build stage
-FROM --platform=linux/amd64 node:20-alpine AS builder
+FROM --platform=linux/amd64 node:24-alpine AS builder
 
 # Install build tools for native modules
 RUN apk add --no-cache python3 make g++
@@ -36,7 +36,7 @@ RUN pnpm -r build
 RUN npm run build
 
 # Production stage
-FROM --platform=linux/amd64 node:20-alpine AS production
+FROM --platform=linux/amd64 node:24-alpine AS production
 
 # Install build tools for native modules (better-sqlite3)
 RUN apk add --no-cache python3 make g++
@@ -57,8 +57,8 @@ COPY --from=builder /app/dist ./dist
 # Install production dependencies only (ignore prepare script - we already have dist/)
 RUN pnpm install --frozen-lockfile --prod --ignore-scripts
 
-# Rebuild better-sqlite3 for this platform
-RUN cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run install
+# Rebuild better-sqlite3 for this platform (Node v24 + Linux)
+RUN pnpm rebuild better-sqlite3
 
 # Clean up build tools
 RUN apk del python3 make g++ && \
