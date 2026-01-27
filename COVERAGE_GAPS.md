@@ -293,7 +293,7 @@ This helps you:
 
 If you want to help fill these gaps:
 
-**Delegated Acts (v0.4.0):**
+**Delegated Acts (v0.5.0):**
 - Create `delegated_acts` table
 - New ingestion script for ESA websites
 - Track parent regulation relationships
