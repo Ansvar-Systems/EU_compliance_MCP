@@ -145,30 +145,29 @@ This isn't just for security teams. If you're building **anything** that touches
 
 ---
 
-## 🗺️ Roadmap & Your Input
+## 🎬 See It In Action
 
-### Current Status: v0.4.1
-✅ 37 regulations with 3,508 recitals  
-✅ Full-text search across articles and recitals  
-✅ Webhook notifications for EUR-Lex updates  
-✅ ISO 27001 & NIST CSF control mappings  
+### Live Demo
 
-### What's Next: Validation Phase
+*Visual demo coming soon - showing Claude Desktop answering: "Compare incident reporting requirements between DORA and NIS2"*
 
-We're evaluating **delegated acts and technical standards** support (v0.5.0):
-- EBA/EIOPA/ESMA technical standards (RTS/ITS)
-- Commission delegated regulations
-- Implementing acts with detailed requirements
-- Harmonized standards (AI Act, CRA, MDR/IVDR)
+**Try it yourself:**
+```
+"What are the key differences between GDPR Article 33 and NIS2 Article 23 for incident notification?"
 
-**📊 Your input shapes the roadmap!** Survey launching soon after v0.4.1 release.
+"Map DORA Article 17 (ICT risk management) to ISO 27001:2022 controls"
 
-**Example queries this would enable:**
-- "Show me DORA incident reporting RTS (EBA/2024/XXX)"
-- "AI Act harmonized standards for cybersecurity"
-- "NIS2 implementing act notification templates"
+"Which regulations apply to a B2B SaaS platform processing health data in the EU?"
+```
 
-📁 **Documentation:** See `docs/demand-validation-2026-q1.md` for validation framework
+### Why This Works
+
+**Smart Context Management:**
+- Search returns **relevant snippets**, not entire regulations
+- Article retrieval includes **token usage warnings** for large content
+- Cross-references help navigate without loading everything
+
+**See [ROADMAP.md](ROADMAP.md) for upcoming features (delegated acts, technical standards)**
 
 ---
 
@@ -288,12 +287,14 @@ docker run -d --name eu-regs-mcp \
 ## Available Tools
 
 ### `search_regulations`
-Full-text search across all regulations.
+Full-text search across all regulations. Returns **smart snippets** (32 tokens each, safe for context).
 
 ```
 "Search for incident reporting requirements across all regulations"
 → Returns matching articles from DORA, NIS2, GDPR with context
 ```
+
+**Token usage:** Low (snippets only)
 
 ### `get_article`
 Retrieve a specific article with full text and context.
@@ -302,6 +303,8 @@ Retrieve a specific article with full text and context.
 "Get DORA Article 17"
 → Returns ICT-related incident management process requirements
 ```
+
+**⚠️ Token usage:** Variable (500-70,000 tokens per article). Large articles (MDR, IVDR, Machinery) include truncation warnings. Use search first to find relevant articles.
 
 ### `get_recital`
 Retrieve legislative intent and interpretation guidance from regulation preambles.
@@ -507,11 +510,33 @@ All webhook notifications use `continue-on-error: true`, so failures won't break
 
 ---
 
-## Disclaimer
+## ⚠️ Important Disclaimers
 
-**This tool is not legal advice.** Regulation text is sourced verbatim from EUR-Lex and UNECE. Control mappings, applicability rules, and cross-references are interpretive aids — useful for compliance research, but not a substitute for qualified legal counsel.
+### Legal Advice
 
-Always verify against official sources for compliance decisions.
+> **🚨 THIS TOOL IS NOT LEGAL ADVICE 🚨**
+>
+> Regulation text is sourced verbatim from EUR-Lex and UNECE (official public sources). However:
+> - **Control mappings** (ISO 27001, NIST CSF) are interpretive aids, not official guidance
+> - **Applicability rules** are generalizations, not legal determinations
+> - **Cross-references** are research helpers, not compliance mandates
+>
+> **Always verify against official sources and consult qualified legal counsel for compliance decisions.**
+
+### Token Usage
+
+> **⚠️ Context Window Warning**
+>
+> Some articles are very large (e.g., MDR Article 123 = ~70,000 tokens). The MCP server:
+> - **Search tool**: Returns smart snippets (safe for context)
+> - **Get article tool**: Returns full text (may consume significant tokens)
+> - **Recommendation**: Use search first, then fetch specific articles as needed
+>
+> Claude Desktop has a 200k token context window. Monitor your usage when retrieving multiple large articles.
+
+### ISO Standards Copyright
+
+**No copyrighted ISO standards are included.** Control mappings reference ISO 27001:2022 control IDs only (e.g., "A.5.1", "A.8.2"). The actual text of ISO standards requires a paid license from ISO. This tool helps map regulations to controls but doesn't replace the standard itself.
 
 ---
 

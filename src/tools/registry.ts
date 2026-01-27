@@ -28,7 +28,7 @@ interface ToolDefinition {
 export const TOOLS: ToolDefinition[] = [
   {
     name: 'search_regulations',
-    description: 'Search across all EU regulations for articles matching a query. Returns relevant articles with snippets highlighting matches.',
+    description: 'Search across all EU regulations for articles matching a query. Returns relevant articles with snippets highlighting matches. Token-efficient: returns 32-token snippets per match (safe for context).',
     inputSchema: {
       type: 'object',
       properties: {
@@ -55,7 +55,7 @@ export const TOOLS: ToolDefinition[] = [
   },
   {
     name: 'get_article',
-    description: 'Retrieve the full text of a specific article from a regulation.',
+    description: 'Retrieve the full text of a specific article from a regulation. WARNING: Token usage varies (500-70,000 tokens per article). Large articles are automatically truncated at 50,000 characters (~12,500 tokens) with a notice. Use search_regulations first to find relevant articles.',
     inputSchema: {
       type: 'object',
       properties: {
