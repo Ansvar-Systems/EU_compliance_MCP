@@ -50,6 +50,7 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32024R2847': { id: 'CRA', full_name: 'Cyber Resilience Act', effective_date: '2024-12-10' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
+  '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   // Digital Single Market regulations
   '32023R2854': { id: 'DATA_ACT', full_name: 'Data Act', effective_date: '2025-09-12' },
   '32022R2065': { id: 'DSA', full_name: 'Digital Services Act', effective_date: '2024-02-17' },
@@ -172,7 +173,7 @@ function parseArticles(html: string, celexId: string): { articles: Article[]; de
   let currentArticle: { number: string; title?: string; lines: string[] } | null = null;
 
   for (const line of lines) {
-    const articleStart = line.match(/^Article\s+(\d+)$/i);
+    const articleStart = line.match(/^Article\s+(\d+[a-z]?)$/i);
     if (articleStart) {
       if (currentArticle && currentArticle.lines.length > 0) {
         articles.push({
@@ -221,7 +222,21 @@ function parseArticles(html: string, celexId: string): { articles: Article[]; de
     }
   }
   const deduplicatedArticles = Array.from(articleMap.values())
-    .sort((a, b) => parseInt(a.number) - parseInt(b.number));
+    .sort((a, b) => {
+      // Extract numeric and letter parts (e.g., "5a" -> [5, "a"])
+      const matchA = a.number.match(/^(\d+)([a-z]?)$/);
+      const matchB = b.number.match(/^(\d+)([a-z]?)$/);
+      if (!matchA || !matchB) return 0;
+      
+      const numA = parseInt(matchA[1]);
+      const numB = parseInt(matchB[1]);
+      
+      // Sort by number first
+      if (numA !== numB) return numA - numB;
+      
+      // Then by letter (empty string sorts before letters)
+      return (matchA[2] || '').localeCompare(matchB[2] || '');
+    });
 
   // Extract definitions from Article 4 (or similar definitions article)
   // Find definitions article from deduplicated list

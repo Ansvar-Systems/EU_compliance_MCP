@@ -3,25 +3,17 @@
     "control_id": "A.5.1",
     "control_name": "Policies for information security",
     "regulation": "EIDAS2",
-    "articles": ["19", "24"],
+    "articles": ["19a", "24"],
     "coverage": "full",
-    "notes": "Art 19 security requirements for trust services, Art 24 qualified trust service provider requirements"
+    "notes": "Art 19a security requirements for trust services, Art 24 qualified trust service provider requirements"
   },
   {
     "control_id": "A.5.2",
     "control_name": "Information security roles and responsibilities",
     "regulation": "EIDAS2",
-    "articles": ["17", "20"],
-    "coverage": "full",
-    "notes": "Art 17 supervisory body responsibilities, Art 20 trust service provider obligations"
-  },
-  {
-    "control_id": "A.5.15",
-    "control_name": "Access control",
-    "regulation": "EIDAS2",
-    "articles": ["6a", "6b"],
-    "coverage": "full",
-    "notes": "Art 6a-6b EUDI Wallet authentication and access control requirements"
+    "articles": ["20"],
+    "coverage": "partial",
+    "notes": "Art 20 supervisory body responsibilities and trust service provider obligations"
   },
   {
     "control_id": "A.5.31",
@@ -35,25 +27,25 @@
     "control_id": "A.5.34",
     "control_name": "Privacy and protection of PII",
     "regulation": "EIDAS2",
-    "articles": ["6a", "6c", "11a"],
-    "coverage": "full",
-    "notes": "Art 6a wallet privacy requirements, Art 6c user control over data, Art 11a unique identifier protection"
+    "articles": ["11a"],
+    "coverage": "partial",
+    "notes": "Art 11a unique identifier protection"
   },
   {
     "control_id": "A.5.35",
     "control_name": "Independent review of information security",
     "regulation": "EIDAS2",
-    "articles": ["17", "20", "21"],
+    "articles": ["20", "21"],
     "coverage": "full",
-    "notes": "Art 17 supervisory audits, Art 20-21 conformity assessment for trust service providers"
+    "notes": "Art 20-21 conformity assessment and supervisory audits for trust service providers"
   },
   {
     "control_id": "A.6.8",
     "control_name": "Information security event reporting",
     "regulation": "EIDAS2",
-    "articles": ["19"],
+    "articles": ["19a"],
     "coverage": "full",
-    "notes": "Art 19(2) requires notification of security breaches within 24 hours to supervisory body"
+    "notes": "Art 19a(1)(b) requires notification of security breaches within 24 hours to supervisory body"
   },
   {
     "control_id": "A.8.2",
@@ -67,17 +59,17 @@
     "control_id": "A.8.5",
     "control_name": "Secure authentication",
     "regulation": "EIDAS2",
-    "articles": ["6a", "8", "29"],
-    "coverage": "full",
-    "notes": "Art 6a wallet authentication, Art 8 assurance levels, Art 29 qualified electronic signature requirements"
+    "articles": ["8", "29"],
+    "coverage": "partial",
+    "notes": "Art 8 assurance levels, Art 29 qualified electronic signature requirements"
   },
   {
     "control_id": "A.8.7",
     "control_name": "Protection against malware",
     "regulation": "EIDAS2",
-    "articles": ["6a", "19"],
+    "articles": ["19a"],
     "coverage": "partial",
-    "notes": "Art 6a wallet security requirements, Art 19 security measures for trust services"
+    "notes": "Art 19a security measures for trust services"
   },
   {
     "control_id": "A.8.24",
@@ -91,16 +83,16 @@
     "control_id": "A.8.25",
     "control_name": "Secure development life cycle",
     "regulation": "EIDAS2",
-    "articles": ["6a", "24"],
+    "articles": ["24"],
     "coverage": "partial",
-    "notes": "Art 6a wallet certification requirements, Art 24 trust service provider security measures"
+    "notes": "Art 24 trust service provider security measures"
   },
   {
     "control_id": "A.8.29",
     "control_name": "Security testing in development and acceptance",
     "regulation": "EIDAS2",
-    "articles": ["6a", "20", "21"],
+    "articles": ["20", "21"],
     "coverage": "full",
-    "notes": "Art 6a wallet certification, Art 20-21 conformity assessment for trust services"
+    "notes": "Art 20-21 conformity assessment for trust services"
   }
 ]

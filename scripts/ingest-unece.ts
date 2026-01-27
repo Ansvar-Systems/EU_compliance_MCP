@@ -151,7 +151,7 @@ function parseUnRegulation(html: string, celexId: string): { articles: Article[]
 
       currentSection = {
         number: sectionNum,
-        title: R155_SECTION_TITLES[sectionNum] || sectionHeaderMatch[2].trim(),
+        title: getSectionTitle(sectionNum, metadata?.id || 'UN_R155') || sectionHeaderMatch[2].trim(),
         lines: [],
       };
       currentAnnex = null;
@@ -273,9 +273,23 @@ function parseUnRegulation(html: string, celexId: string): { articles: Article[]
     if (aIsAnnex && !bIsAnnex) return 1;
     if (!aIsAnnex && bIsAnnex) return -1;
     if (aIsAnnex && bIsAnnex) {
-      return parseInt(a.number.replace('Annex ', '')) - parseInt(b.number.replace('Annex ', ''));
+      // Extract numeric part from "Annex 5" or "Annex 5a"
+      const matchA = a.number.match(/Annex (\d+)([a-z]?)/);
+      const matchB = b.number.match(/Annex (\d+)([a-z]?)/);
+      if (!matchA || !matchB) return 0;
+      const numA = parseInt(matchA[1]);
+      const numB = parseInt(matchB[1]);
+      if (numA !== numB) return numA - numB;
+      return (matchA[2] || '').localeCompare(matchB[2] || '');
     }
-    return parseInt(a.number) - parseInt(b.number);
+    // Regular numbered sections - handle sub-sections like "5a"
+    const matchA = a.number.match(/^(\d+)([a-z]?)$/);
+    const matchB = b.number.match(/^(\d+)([a-z]?)$/);
+    if (!matchA || !matchB) return 0;
+    const numA = parseInt(matchA[1]);
+    const numB = parseInt(matchB[1]);
+    if (numA !== numB) return numA - numB;
+    return (matchA[2] || '').localeCompare(matchB[2] || '');
   });
 
   return { articles: sortedArticles, definitions };
