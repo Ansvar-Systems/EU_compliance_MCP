@@ -37,14 +37,24 @@ Use these queries to test the MCP server and understand its capabilities.
 ```
 "What's GDPR Recital 83?" (encryption and technical measures context)
 "What guidance does GDPR Recital 39 give on data protection by design?"
+"Get AI Act Recital 1" (scope and objectives of AI regulation)
+"What does NIS2 Recital 2 say about cybersecurity threats?"
+"Show me DORA Recital 50" (incident classification guidance)
+"What's the legislative intent behind CRA Article 10?" (use recitals for context)
 ```
 
-**Current limitation:** Only GDPR recitals available (173). Other 36 regulations blocked by EUR-Lex WAF protection deployed 2026-01-27. See [COVERAGE_GAPS.md](./COVERAGE_GAPS.md#critical-eur-lex-waf-blocking-2026-01-27) for details.
+**Coverage:** 3,508 recitals from 33 regulations (GDPR: 173, AI Act: 180, NIS2: 144, DORA: 106, and 29 more).
 
 **Use case:** Recitals explain the "why" behind articles. They provide:
 - Legislative intent and policy objectives
 - Interpretation guidance for ambiguous requirements
 - Context for proportionality and risk-based approaches
+
+**Search integration:** Full-text search returns both articles (binding requirements) and recitals (legislative context):
+```
+"Search for 'encryption' in GDPR"
+→ Returns Article 32 (security requirements) + Recital 83 (technical measures context)
+```
 
 ### Cross-Regulation Comparisons
 
@@ -256,9 +266,9 @@ Connect via MCP client and test.
 | Base Regulations | ✅ Complete | 37 | All EUR-Lex texts |
 | Articles | ✅ Complete | 2,278 | Full text + metadata |
 | Definitions | ✅ Complete | 1,145 | Official definitions |
+| Recitals | ✅ Complete | 3,508 | 33/37 regulations (v0.3.1) |
 | Framework Mappings | ✅ Complete | 686 | ISO 27001, NIST CSF |
 | Applicability Rules | ✅ Complete | 305 | Sector-based |
-| Recitals | ⚠️ Partial | 173 (GDPR only) | EUR-Lex WAF blocking (v0.3.0) |
 | Delegated Acts | ❌ Missing | 0 | v0.4.0 |
 | National Laws | ❌ Out of scope | 0 | Post-v1.0 |
 | Historical Versions | ⚠️ Partial | N/A | Current only |
@@ -274,7 +284,7 @@ Connect via MCP client and test.
 
 **Don't:**
 - Use CELEX numbers in questions (the MCP understands regulation names)
-- Ask for recitals/delegated acts (not yet available)
+- Ask for delegated acts/technical standards (not yet available - v0.4.0)
 - Expect national law variations (directives are EU-level only)
 
 **Pro Tips:**
