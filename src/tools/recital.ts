@@ -18,6 +18,16 @@ export async function getRecital(
 ): Promise<Recital | null> {
   const { regulation, recital_number } = input;
 
+  // Validate recital_number is a safe integer
+  if (!Number.isInteger(recital_number) || !Number.isFinite(recital_number)) {
+    return null;
+  }
+
+  // Reject negative or unrealistic recital numbers
+  if (recital_number < 1 || recital_number > 10000) {
+    return null;
+  }
+
   const sql = `
     SELECT
       regulation,

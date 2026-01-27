@@ -34,7 +34,14 @@ export async function searchRegulations(
   db: Database,
   input: SearchInput
 ): Promise<SearchResult[]> {
-  const { query, regulations, limit = 10 } = input;
+  let { query, regulations, limit = 10 } = input;
+
+  // Validate and sanitize limit parameter
+  if (!Number.isFinite(limit) || limit < 0) {
+    limit = 10; // Default to safe value
+  }
+  // Cap at reasonable maximum
+  limit = Math.min(Math.floor(limit), 1000);
 
   if (!query || query.trim().length === 0) {
     return [];
