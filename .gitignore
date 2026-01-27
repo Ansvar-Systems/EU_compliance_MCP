@@ -34,4 +34,3 @@ internal/
 # MCP Registry tokens and local configs
 .mcpregistry_*
 .playwright-mcp/
-server.json

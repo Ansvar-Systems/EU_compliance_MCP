@@ -1,4 +1,4 @@
-name: Publish to npm
+name: Publish to npm & MCP Registry
 
 on:
   push:
@@ -19,10 +19,72 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Get version from tag
+        id: version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "📦 Version: $VERSION"
+
+      - name: Update server.json version
+        run: |
+          sed -i 's/"version": "[^"]*"/"version": "${{ steps.version.outputs.VERSION }}"/' server.json
+          echo "✅ Updated server.json to version ${{ steps.version.outputs.VERSION }}"
+
       - run: npm ci --ignore-scripts
       - run: npm rebuild better-sqlite3
       - run: npm run build
       - run: npm run build:db
-      - run: npm publish --access public --provenance --ignore-scripts
+
+      - name: Publish to npm
+        run: npm publish --access public --provenance --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Get MCP Publisher Private Key from Key Vault
+        id: mcp-key
+        run: |
+          PRIVATE_KEY=$(az keyvault secret show \
+            --vault-name kv-ansvar-dev \
+            --name mcp-publisher-private-key \
+            --query value -o tsv)
+          echo "::add-mask::$PRIVATE_KEY"
+          echo "PRIVATE_KEY=$PRIVATE_KEY" >> $GITHUB_OUTPUT
+          echo "✅ Retrieved MCP publisher key from Key Vault"
+
+      - name: Install MCP Publisher
+        run: |
+          curl -L -o mcp-publisher.tar.gz \
+            https://github.com/modelcontextprotocol/registry/releases/download/v1.4.0/mcp-publisher_linux_amd64.tar.gz
+          tar -xzf mcp-publisher.tar.gz
+          chmod +x mcp-publisher
+          sudo mv mcp-publisher /usr/local/bin/
+          mcp-publisher --version
+
+      - name: Authenticate with MCP Registry
+        env:
+          PRIVATE_KEY: ${{ steps.mcp-key.outputs.PRIVATE_KEY }}
+        run: |
+          mcp-publisher login dns -domain ansvar.eu -private-key "$PRIVATE_KEY"
+          echo "✅ Authenticated with MCP registry"
+
+      - name: Publish to MCP Registry
+        run: |
+          mcp-publisher publish
+          echo "✅ Published to MCP registry"
+
+      - name: Deployment Summary
+        run: |
+          echo "## 🎉 Publication Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** \`${{ steps.version.outputs.VERSION }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📦 Published To:" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ npm: https://www.npmjs.com/package/@ansvar/eu-regulations-mcp/v/${{ steps.version.outputs.VERSION }}" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ MCP Registry: https://registry.modelcontextprotocol.io" >> $GITHUB_STEP_SUMMARY
+          echo "- ⏳ PulseMCP: Will auto-sync within 1-7 days" >> $GITHUB_STEP_SUMMARY
