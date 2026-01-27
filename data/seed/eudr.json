@@ -1,9 +1,8 @@
 {
   "id": "EUDR",
-  "full_name": "EU Deforestation Regulation",
+  "full_name": "Regulation 32023R1115",
   "celex_id": "32023R1115",
-  "effective_date": "2024-12-30",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg/2023/1115/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1115",
   "articles": [
     {
       "number": "1",
@@ -396,6 +395,356 @@
       "term": "relevant legislation of the country of production",
       "definition": "the laws applicable in the country of production concerning the legal status of the area of production in terms of: (a) land use rights; (b) environmental protection; (c) forest-related rules, including forest management and biodiversity conservation, where directly related to wood harvesting; (d) third parties' rights; (e) labour rights; (f) human rights protected under international law; (g) the principle of free, prior and informed consent (FPIC), including as set out in the UN Declaration on the Rights of Indigenous Peoples; (h) tax, anti-corruption, trade and customs regulations.",
       "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Forests provide a broad variety of environmental, economic and social benefits, including timber and non-wood forest products and environmental services essential for humankind, as they harbour most of the Earth’s terrestrial biodiversity. They maintain ecosystem functions, help protect the climate system, provide clean air and play a vital role for the purification of waters and soils as well as for water retention and recharge. Large forest areas act as a moisture source and help prevent desertification of continental regions. In addition, forests provide subsistence and income to approximately one third of the world’s population and the destruction of forests has serious consequences for the livelihoods of the most vulnerable people, including indigenous peoples and local communities who depend heavily on forest ecosystems. Furthermore, deforestation and forest degradation reduce essential carbon sinks. Deforestation and forest degradation also increase the likelihood of contact between wild animals, farmed animals and humans, thereby increasing the risk of spreading new diseases and the risks of new epidemics and pandemics."
+    },
+    {
+      "recital_number": 2,
+      "text": "Deforestation and forest degradation are taking place at an alarming rate. The Food and Agriculture Organization of the United Nations (FAO) estimates that 420 million hectares of forest – about 10 % of the world’s remaining forests, equalling an area larger than the European Union – have been lost worldwide between 1990 and 2020. Deforestation and forest degradation are, in turn, important drivers of global warming and biodiversity loss – the two most important environmental challenges of our time. Yet, every year the world continues to lose 10 million hectares of forest. Forests are also heavily impacted by climate change and many challenges will need to be addressed to ensure the adaptability and resilience of forests in the coming decades."
+    },
+    {
+      "recital_number": 3,
+      "text": "Deforestation and forest degradation contribute to the global climate crisis in multiple ways. Most importantly, they increase greenhouse gas emissions through associated forest fires, permanently removing carbon sink capacities, decreasing the climate change resilience of the affected area and substantially reducing its biodiversity and resilience to diseases and pests. Deforestation alone accounts for 11 % of greenhouse gas emissions as stated in the Intergovernmental Panel on Climate Change (IPCC) special report on climate change and land of 2019."
+    },
+    {
+      "recital_number": 4,
+      "text": "Climate breakdown induces the loss of biodiversity globally and biodiversity loss aggravates climate change, they are thus inextricably linked, as recent studies have confirmed. Biodiversity and healthy ecosystems are fundamental to climate-resilient development. Insects, birds and mammals act as pollinators and seed dispersers and can help store carbon more efficiently, directly or indirectly. Forests also ensure the continuous replenishment of water resources and the prevention of droughts and their deleterious effects on local communities, including indigenous peoples. Drastically reducing deforestation and forest degradation and systemically restoring forests and other ecosystems is the single largest nature-based opportunity for climate mitigation."
+    },
+    {
+      "recital_number": 5,
+      "text": "Biodiversity is essential for the resilience of ecosystems and their services both at local and at global level. Over half of the global gross domestic product depends on nature and the services it provides. Three major economic sectors – construction, agriculture, and food and drink – all highly depend on nature. Biodiversity loss threatens sustainable water cycles and food systems, putting food security and nutrition at risk. More than 75 % of global food crop types rely on animal pollination. Furthermore, several industrial sectors rely on genetic diversity and ecosystem services as critical inputs for production, in particular for medicines, including antimicrobials."
+    },
+    {
+      "recital_number": 6,
+      "text": "Climate change, biodiversity loss and deforestation are concerns of the highest global importance, affecting the survival of humanity and sustained living conditions on Earth. The acceleration of climate change, biodiversity loss and environmental degradation, paired with tangible examples of their devastating effects on nature, human living conditions and local economies, have led to the recognition of the green transition as the defining objective of our time and a matter of gender equality and of intergenerational equity."
+    },
+    {
+      "recital_number": 7,
+      "text": "Environmental human rights defenders, who strive to protect and promote human rights relating to the environment, including access to clean water, air, and land are often the target of persecution and lethal attacks. Those attacks disproportionately affect indigenous peoples. According to 2020 reports, more than two thirds of victims of those attacks were working to defend the world’s forests from deforestation and industrial development."
+    },
+    {
+      "recital_number": 8,
+      "text": "Union consumption is a considerable driver of deforestation and forest degradation on a global scale. The impact assessment of this Regulation estimated that without appropriate regulatory intervention, the Union’s consumption and production of six commodities (cattle, cocoa, coffee, oil palm, soya and wood) alone would rise to approximately 248 000 hectares of deforestation annually by 2030."
+    },
+    {
+      "recital_number": 9,
+      "text": "As regards the situation of forests within the Union, the State of Europe’s Forests 2020 report states that, between 1990 and 2020, the area of forests in Europe has increased by 9 %, carbon stored in the biomass has grown by 50 % and wood supply has risen by 40 %. Primary and naturally regenerating forests are at risk, inter alia, from intensive management, and their unique biodiversity and structural features are in danger. Furthermore, the European Environment Agency has noted that less than 5 % of European forest areas are now considered to be undisturbed or natural, whereas 10 % of European forest areas have been classified as intensively managed. Forest ecosystems have to cope with multiple pressures caused by climate change, ranging from extreme weather patterns to pests, and with human-related activities that negatively affect ecosystems and habitats. In particular, intensively managed even-aged forests through clear-cutting and deadwood removal can have a severe impact on whole habitats."
+    },
+    {
+      "recital_number": 10,
+      "text": "In 2019, the Commission adopted several initiatives to address the global environmental crises, including specific actions on deforestation. In its communication of 23 July 2019 on Stepping up EU Action to Protect and Restore the World’s Forests (‘Communication on Stepping up EU Action to Protect and Restore the World’s Forests’), the Commission identified as a priority the reduction of the Union consumption footprint on land and encouraged the consumption of products from deforestation-free supply chains in the Union. In its communication of 11 December 2019 on the European Green Deal, the Commission set out a new growth strategy that aims to transform the Union into a fair and prosperous society, with a modern, resource-efficient and competitive economy built on sustainable and rule-based free trade, where there are no net emissions of greenhouse gases in 2050, where economic growth is decoupled from resource use and no person or place is left behind. It aims to protect, conserve and enhance the Union’s natural capital, and protect the health and well-being of citizens and future generations from environment-related risks and impacts. Furthermore, the European Green Deal aims to provide citizens and future generations with, inter alia, fresh air, clean water, healthy soil and biodiversity. To that end, the communication of the Commission of 20 May 2020 on a EU Biodiversity Strategy for 2030: Bringing nature back into our lives (the ‘EU Biodiversity Strategy for 2030’) the communication of the Commission of 20 May 2020 on a Farm to Fork Strategy for a fair, healthy and environmentally-friendly food system (the ‘Farm to Fork’ strategy), the communication of the Commission of 16 July 2021 on a new EU Forest Strategy for 2030, the communication of the Commission of 12 May 2021 on the Pathway to a Healthy Planet for All, EU Action Plan: ‘Towards Zero Pollution for Air, Water and Soil’ and other relevant strategies, such as the communication of the Commission of 30 June 2021 on a long-term Vision for the EU’s Rural Areas – Towards stronger, connected, resilient and prosperous rural areas by 2040, developed under the European Green Deal, further highlight the importance of action on forest protection and resilience. In particular, the EU Biodiversity Strategy for 2030 aims to protect nature and reverse the degradation of ecosystems. Finally, the communication of the Commission of 11 October 2018 on a sustainable Bioeconomy for Europe: Strengthening the connection between economy, society and the environment enhances the protection of the environment and ecosystems while addressing the growing demand for food, feed, energy, materials and products by seeking new ways to produce and consume."
+    },
+    {
+      "recital_number": 11,
+      "text": "Member States have repeatedly expressed their concern about persistent deforestation and forest degradation. They have emphasised that since current policies and action at global level on conservation, restoration and sustainable management of forests do not suffice to halt deforestation, forest degradation and biodiversity loss, enhanced Union action is needed in order to contribute more effectively to the achievement of the Sustainable Development Goals (SDGs) under the 2030 Agenda for Sustainable Development, which was adopted by all United Nations (UN) Member States in 2015. The Council has specifically supported the Commission announcement in its communication on Stepping up EU Action to Protect and Restore the World’s Forests that it would assess additional regulatory and non-regulatory measures and that it would present proposals for both types of measures. The Union and Member States have also endorsed the UN Decade of Action for the SDGs, the UN Decade on Ecosystem Restoration and the UN Decade of Family Farming."
+    },
+    {
+      "recital_number": 12,
+      "text": "The European Parliament has highlighted that ongoing destruction, degradation and conversion of the world’s forests and natural ecosystems, as well as human rights violations, are linked, to a large extent, to the expansion of agricultural production – in particular by converting forests to agricultural land dedicated to producing a number of high-demand commodities and products. On 22 October 2020, the European Parliament adopted a resolution, in accordance with Article 225 of the Treaty on the Functioning of the European Union (TFEU), requesting the Commission to submit, on the basis of Article 192(1) TFEU, a proposal for an ‘EU legal framework to halt and reverse EU-driven global deforestation’ based on mandatory due diligence."
+    },
+    {
+      "recital_number": 13,
+      "text": "Combating deforestation and forest degradation constitutes an important part of the package of measures needed to reduce greenhouse gas emissions and to comply with the Union’s commitments under the European Green Deal as well as with the Paris Agreement adopted under the United Nations Framework Convention on Climate Change (3) (the ‘Paris Agreement’), and the Eighth Environment Action Programme adopted by Decision (EU) 2022/591 of the European Parliament and of the Council (4), and with the legally binding commitment under Regulation (EU) 2021/1119 of the European Parliament and of the Council (5) to reach climate neutrality at the latest by 2050 and reduce greenhouse gas emissions by at least 55 % compared to 1990 levels by 2030."
+    },
+    {
+      "recital_number": 14,
+      "text": "Combating deforestation and forest degradation constitutes also an important part of the package of measures needed to combat biodiversity loss and to comply with the Union’s commitments under the UN Convention on Biological Diversity (CBD) (6), the European Green Deal, the EU Biodiversity Strategy for 2030 and the accompanying Union nature restoration objectives."
+    },
+    {
+      "recital_number": 15,
+      "text": "Primary forests are unique and irreplaceable. Plantation forests and planted forests have a different biodiversity composition and provide different ecosystem services compared to primary and naturally regenerating forests."
+    },
+    {
+      "recital_number": 16,
+      "text": "Agricultural expansion drives almost 90 % of global deforestation, with more than half of forest loss being due to conversion of forest into cropland, whereas livestock grazing is responsible for almost 40 % of forest loss."
+    },
+    {
+      "recital_number": 17,
+      "text": "Production of feed for livestock can contribute to deforestation and forest degradation. Promoting alternative, sustainable agricultural practices can address environmental and climate challenges, and prevent deforestation and forest degradation worldwide. Incentives to adopt more balanced, healthier and more nutritious diets and a more sustainable lifestyle can decrease the pressure on land and resources."
+    },
+    {
+      "recital_number": 18,
+      "text": "The Union imported and consumed one third of the globally traded agricultural products associated with deforestation between 1990 and 2008. Over that period, Union consumption was responsible for 10 % of worldwide deforestation associated with the production of goods or the provision of services. Even if the relative share of Union consumption is decreasing, Union consumption is a disproportionally large driver of deforestation. The Union should therefore take action to minimise global deforestation and forest degradation driven by its consumption of certain commodities and products and thereby seek to reduce its contribution to greenhouse gas emissions and global biodiversity loss as well as promote sustainable production and consumption patterns in the Union and globally. To have the greatest impact, Union policy should aim at influencing the global market, not only supply chains to the Union. Partnerships and efficient international cooperation, including free trade agreements, with producer and consumer countries are fundamental in that respect."
+    },
+    {
+      "recital_number": 19,
+      "text": "The Union is committed to promoting and implementing ambitious environment and climate policies across the world, in accordance with the Charter of Fundamental Rights of the European Union, in particular Article 37 thereof which provides that a high level of environmental protection and the improvement of the quality of the environment is to be integrated into the policies of the Union and ensured in accordance with the principle of sustainable development. As part of the external dimension of the European Green Deal, action under this Regulation should take into account the importance of existing global agreements, commitments and frameworks contributing to the reduction of deforestation and forest degradation such as the UN Strategic Plan for Forests 2017-2030 and its Global Forest Goals, the UN Framework Convention on Climate Change (UNFCCC) and the Paris Agreement, the CBD and its Post-2020 Global Biodiversity Framework, the global Strategic Plan for Biodiversity 2011-2020 and its Aichi Biodiversity Targets, and the UN Convention to Combat Desertification, as well as the multilateral framework in support of tackling the root causes of deforestation and forest degradation, such as the SDGs and the UN Declaration on the Rights of Indigenous Peoples."
+    },
+    {
+      "recital_number": 20,
+      "text": "Halting deforestation and restoring degraded forests is an essential part of the SDGs. This Regulation should contribute in particular to meeting the goals regarding life on land (SDG 15), climate action (SDG 13), responsible consumption and production (SDG 12), zero hunger (SDG 2) and good health and well-being (SDG 3). The relevant target 15.2 to halt deforestation by 2020 has not been met, underlining the urgency of ambitious and effective action."
+    },
+    {
+      "recital_number": 21,
+      "text": "This Regulation should also respond to the New York Declaration on Forests, a non-legally binding political declaration that endorses a global timeline to cut natural forest loss in half by 2020 and to strive to end it by 2030. The Declaration was endorsed by dozens of governments, many of the world’s biggest companies, and influential civil society and indigenous peoples’ organisations. It also called on the private sector to meet the goal of eliminating deforestation from the production of agricultural commodities such as palm oil, soy, paper and beef products by no later than 2020, a goal that was not achieved. In addition, this Regulation should contribute to the UN Strategic Plan for Forests 2017-2030 whose Global Forest Goal 1 is to reverse the loss of forest cover worldwide through sustainable forest management, including protection, restoration, afforestation and reforestation, and increase efforts to prevent forest degradation and contribute to the global effort of addressing climate change."
+    },
+    {
+      "recital_number": 22,
+      "text": "This Regulation should also respond to the Glasgow Leaders’ Declaration on Forests and Land Use issued at the November 2021 UN Climate Change Conference, which recognises that ‘to meet our land use, climate, biodiversity and Sustainable Development Goals, both globally and nationally, will require transformative further action in the interconnected areas of sustainable production and consumption; infrastructure development; trade, finance and investment; and support for smallholders, indigenous peoples, and local communities’. The signatories committed to working collectively to halt and reverse forest loss and land degradation by 2030 and stressed that they would strengthen their shared efforts to facilitate trade and development policies, internationally and domestically, that promote sustainable development and sustainable commodity production and consumption, and that work to countries’ mutual benefit."
+    },
+    {
+      "recital_number": 23,
+      "text": "As a member of World Trade Organization (WTO), the Union is committed to promoting a universal, rule-based, open, transparent, predictable, inclusive, non-discriminatory and equitable multilateral trading system under the WTO, as well as an open, sustainable, and assertive trade policy. The scope of this Regulation should therefore include commodities and products produced within the Union as well as commodities and products imported to the Union."
+    },
+    {
+      "recital_number": 24,
+      "text": "The challenges the world is facing in climate change and biodiversity loss can only be dealt with by global action. The Union should be a strong global actor, leading both by example as well as by taking the lead in international cooperation to create an open and fair multilateral system where sustainable trade acts as a key enabler of the green transition to fight climate change and reverse biodiversity loss."
+    },
+    {
+      "recital_number": 25,
+      "text": "This Regulation also follows the communications of the Commission of 22 June 2022 on the power of trade partnerships: together for green and just economic growth and of 18 February 2021 on Trade Policy Review – An Open, Sustainable and Assertive Trade Policy, which stated that with new internal and external challenges and more particularly a new, more sustainable growth model as defined by the European Green Deal and the European Digital Strategy, contained in the communication of the Commission of 19 February 2020 on Shaping Europe’s digital future, the Union needs a new trade policy strategy – one that will support achieving its domestic and external policy objectives and promote greater sustainability in line with its commitment to fully implement the SDGs. Trade policy needs to play a full role in the Union’s recovery from the COVID-19 pandemic and in the green and digital transformations of the economy and towards building a more resilient Union in the world."
+    },
+    {
+      "recital_number": 26,
+      "text": "In line with its communication of 22 June 2022 on the power of trade partnerships: together for green and just economic growth, the Commission is stepping up engagement with trade partners to foster compliance with international labour and environmental standards. The communication envisages robust chapters on sustainable development, containing clauses on deforestation and forest degradation. Ensuring enforcement of current and the conclusion of new trade agreements with such chapters will complement the objectives of this Regulation."
+    },
+    {
+      "recital_number": 27,
+      "text": "This Regulation should be complementary to other measures proposed in the communication on Stepping up EU Action to Protect and Restore the World’s Forests, in particular working in partnership with producer countries, to support them in addressing root causes of deforestation, such as weak governance, ineffective law enforcement and corruption, and strengthening international cooperation with major consumer countries by, inter alia, encouraging trade in deforestation-free products and the adoption of similar measures, to avoid products coming from supply chains associated with deforestation and forest degradation being placed on their markets."
+    },
+    {
+      "recital_number": 28,
+      "text": "This Regulation should take into account the principle of policy coherence for development and serve to promote and facilitate cooperation with developing countries, particularly with the least developed countries (LDCs), inter alia through the provision of technical and financial assistance, where possible and relevant."
+    },
+    {
+      "recital_number": 29,
+      "text": "In coordination with Member States, the Commission should continue to work in partnership with producer countries, and more generally in cooperation with international organisations and bodies as well as with relevant stakeholders active on the ground through multi-stakeholder dialogues. The Commission should reinforce its support and incentives with regard to protecting forests and the transition to deforestation-free production, acknowledging and strengthening the role and rights of indigenous peoples, local communities, smallholders and micro, small and medium-sized enterprises (SMEs), improving governance and land tenure, increasing law enforcement and promoting sustainable forest management, with an emphasis on closer-to-nature forestry practices, based on science-based indicators and thresholds, ecotourism, climate-resilient agriculture, diversification, agro-ecology and agroforestry. In doing so, the Commission should fully recognise the role and rights of indigenous peoples and local communities in protecting forests, taking into account the principle of free, prior and informed consent (FPIC). Building upon the experience and lessons learned in the context of existing initiatives, the Union and the Member States should work towards partnerships with producer countries, at their request, and address global challenges while meeting local needs and paying attention to the challenges faced by smallholders, in line with the communication on Stepping up EU Action to Protect and Restore the World’s Forests. The partnership approach should help producer countries and parts thereof in protecting, restoring and sustainably using forest, hence contributing to the objective of this Regulation to reduce deforestation and forest degradation, including through the use of digital technologies, geospatial information and capacity building."
+    },
+    {
+      "recital_number": 30,
+      "text": "Operators and traders should be bound by the obligations under this Regulation regardless of whether the making available on the market takes place through traditional or online means. This Regulation should therefore ensure that in every supply chain there is an operator within the meaning of this Regulation who is established in the Union and can be held accountable in the event of non-fulfilment of the obligations under this Regulation. The Commission and the Member States should monitor the implementation of this Regulation and identify whether digital and technological developments require further specifications or initiatives, as appropriate, in the future."
+    },
+    {
+      "recital_number": 31,
+      "text": "Another important action announced in the communication on Stepping up EU Action to Protect and Restore the World’s Forests is the establishment of the EU Observatory on deforestation, forest degradation, changes in the world’s forest cover and associated drivers (‘EU Observatory’) launched by the Commission in order to better monitor changes in the world’s forest cover and related drivers. Building on existing monitoring tools, including Copernicus products and other publicly or privately available sources, the EU Observatory should facilitate access to information on supply chains for public entities, consumers and business, providing easy-to-understand data and information linking deforestation, forest degradation and changes in the world’s forest cover to Union demand for, and trade in, commodities and products. The EU Observatory should thus support the implementation of this Regulation by providing scientific evidence with regard to global deforestation and forest degradation and related trade. The EU Observatory should provide for land cover maps, including with time series since the cut-off date defined in this Regulation, and a range of classes allowing landscape composition to be examined. The EU Observatory should participate in the development of an early warning system combining research and monitoring capacity. As regards this Regulation, when technically feasible, the objective of the early warning system should be to be part of a platform that can assist the competent authorities, operators, traders and other relevant stakeholders and that can provide continuous monitoring and early notification of possible deforestation or forest degradation activities. That platform should be operational as soon as possible. The EU Observatory should cooperate with the competent authorities, relevant international organisations and bodies, research institutes, non-governmental organisations, operators, traders, third countries and other relevant stakeholders."
+    },
+    {
+      "recital_number": 32,
+      "text": "The existing Union legal framework focuses on tackling illegal logging and associated trade and does not address deforestation directly. It consists of Regulation (EU) No 995/2010 of the European Parliament and of the Council (7) and Council Regulation (EC) No 2173/2005 (8). Both Regulations were evaluated in a Fitness Check which determined that, while the legislation has had a positive impact on forest governance, the objectives of the two Regulations – namely to curb illegal logging and related trade, and to reduce the consumption of illegally harvested timber in the Union – have not been met and it was concluded that focusing solely on the legality of timber was not sufficient to meet the set objectives."
+    },
+    {
+      "recital_number": 33,
+      "text": "Available reports confirm that a sizeable part of ongoing deforestation is legal in accordance with the laws of the country of production. A report by the Forest Policy Trade and Finance Initiative published in May 2021 estimates that between 2013 and 2019, around 30 % of deforestation destined to commercial agriculture in tropical countries was legal. Available data tend to focus on countries with weak governance – the global share of deforestation that is illegal might be lower, but already provide clear data signalling that leaving out deforestation that is legal in the country of production undermines the effectiveness of policy measures."
+    },
+    {
+      "recital_number": 34,
+      "text": "The impact assessment of possible policy measures to address Union-driven deforestation and forest degradation, the Council conclusions of 16 December 2019 and the resolution of the European Parliament of 22 October 2020 clearly identify the need to establish deforestation and forest degradation as the guiding criteria for future Union measures. A focus only on legality could potentially entail a risk of lowered environmental standards with a view to obtaining market access. Therefore, the new Union legal framework should address both legality and whether the production of relevant commodities and relevant products is deforestation-free."
+    },
+    {
+      "recital_number": 35,
+      "text": "The definition of ‘deforestation-free’ should be sufficiently broad to cover deforestation and forest degradation, should provide legal clarity, and should be measurable based on quantitative, objective and internationally recognised data."
+    },
+    {
+      "recital_number": 36,
+      "text": "For the purposes of this Regulation, agricultural use should be defined as the use of land for the purpose of agriculture. In this regard, the Commission should develop guidelines in order to clarify the interpretation of this definition, in particular in relation to the conversion of forest to land the purpose of which is not agricultural use."
+    },
+    {
+      "recital_number": 37,
+      "text": "In line with FAO definitions, agroforestry systems, including where crops are grown under tree cover, as well as agrisilvicultural, silvopastoral and agrosilvopastoral systems, should not be considered forests, but as constituting agricultural use."
+    },
+    {
+      "recital_number": 38,
+      "text": "This Regulation should cover commodities the Union consumption of which is the most relevant in terms of driving global deforestation and forest degradation and for which a Union policy intervention could bring the highest benefits per unit value of trade. An extensive review of relevant scientific literature, namely of primary sources estimating the impact of Union consumption on global deforestation and linking that environmental footprint to specific commodities, was carried out as a part of the study supporting the impact assessment for this Regulation and cross-checked by means of extensive consultation with stakeholders. That process delivered a first list of eight commodities. Wood was directly included in the scope as it was already covered by Regulation (EU) No 995/2010. According to a recent research paper (9) used for the efficiency analysis, seven commodities represent the largest share of Union-driven deforestation of the eight commodities analysed in that research paper: oil palm (34,0 %), soya (32,8 %), wood (8,6 %), cocoa (7,5 %), coffee (7,0 %), cattle (5,0 %) and rubber (3,4 %)."
+    },
+    {
+      "recital_number": 39,
+      "text": "To ensure that this Regulation achieves its objectives, it is important to ensure that feed used for livestock falling within the scope of this Regulation does not lead to deforestation. Therefore, operators placing on the market or exporting relevant products that contain or have been made using cattle which have been fed with relevant products that contain or have been made using other relevant commodities or relevant products, should ensure, as part of their due diligence system, that the feed is deforestation-free. In that case, geolocation requirements under this Regulation should be limited to referring to the geographical location of each of the establishments where the cattle were raised, and no geolocation information should be required for the feed itself. If the competent authority obtains or is made aware of relevant information, including information based on substantiated concerns submitted by third parties, that there is a risk of the feed not being in compliance with this Regulation, the competent authority should immediately request detailed information on such feed. If the feed has already been subject to due diligence in a previous step of the supply chain, operators should use as evidence the relevant invoices, reference numbers of relevant due diligence statements or any other relevant documentation indicating that the feed is deforestation-free and they could be required to make that evidence available to competent authorities upon request. The evidence should cover the lifetime of the animals, up to a maximum of five years."
+    },
+    {
+      "recital_number": 40,
+      "text": "Bearing in mind that the use of recycled relevant commodities and relevant products should be encouraged, and that including such commodities and products in the scope of this Regulation would place a disproportionate burden on operators, used commodities and products that have completed their lifecycle, and would otherwise be disposed of as waste, as defined in Article 3, point (1), of Directive 2008/98/EC of the European Parliament and of the Council (10) should be excluded from the scope of this Regulation. However, this should not apply to certain by-products of the manufacturing process."
+    },
+    {
+      "recital_number": 41,
+      "text": "This Regulation should lay down obligations concerning relevant commodities and relevant products in order to effectively combat deforestation and forest degradation, and to promote deforestation-free supply chains, while taking into account the protection of human rights and the rights of indigenous peoples and local communities, both in the Union and in third countries."
+    },
+    {
+      "recital_number": 42,
+      "text": "When assessing the risk of non-compliance of relevant commodities and relevant products intended to be placed on the market or exported, violations of human rights that are associated with deforestation or forest degradation, including rights of indigenous peoples, local communities and customary tenure rights holders, should be taken into account."
+    },
+    {
+      "recital_number": 43,
+      "text": "Many international organisations and bodies, such as the FAO, the IPCC, the UN Environment Programme, and the International Union for the Conservation of Nature, have been active, and international agreements, such as the Paris Agreement and the CBD, have been concluded in the field of deforestation and forest degradation, and the definitions in this Regulation build on that work."
+    },
+    {
+      "recital_number": 44,
+      "text": "It is essential that this Regulation also address the issue of forest degradation. The definition of forest degradation should be based on internationally agreed concepts and ensure that the associated obligations can be easily fulfilled by operators and competent authorities. Those obligations should be operationally measurable and verifiable, as well as clear and unambiguous, to provide legal certainty. In that context, this Regulation should focus on key elements of forest degradation that are measurable and verifiable, and that are particularly relevant to avoid environmental impacts, based on the most up-to-date scientific data. For that purpose, the definition of forest degradation should build on internationally agreed concepts that are defined by the FAO. The definition of forest degradation should be reviewed, in accordance with this Regulation, to assess whether it should be extended to cover a broader scope of forest degradation drivers and of forest ecosystems worldwide to further support the environmental objectives of this Regulation, taking into account progress made in international discussions on the matter, as well as the diversity of forest ecosystems and practices around the world. The review should be conducted on the basis of an in-depth analysis, in close cooperation with the Member States, and in consultation with relevant stakeholders, international organisations and bodies and the scientific community."
+    },
+    {
+      "recital_number": 45,
+      "text": "This Regulation should ensure a proper balance between the protection of the legitimate expectations of operators and traders placing relevant commodities and relevant products on the market or exporting them, while minimising sudden disruption to supply chains, and the fundamental right to protection of the environment as established in Article 37 of the Charter of Fundamental Rights of the European Union. To that end, a cut-off date should be set to provide a basis for the evaluation of whether land concerned has been subject to deforestation or forest degradation, so that no commodities and products falling within the scope of this Regulation can be placed on the market or exported, if they were produced on land subject to deforestation or forest degradation after that date."
+    },
+    {
+      "recital_number": 46,
+      "text": "The cut-off date should correspond to existing international commitments set out in the SDGs and the New York Declaration on Forests, which pursue the ambitions of halting deforestation, restoring degraded forests and substantially increasing afforestation and reforestation globally by 2020, and thus should be set on 31 December 2020. That date is also consistent with the Commission’s announcement of its intention to combat deforestation in the communication on Stepping up EU Action to Protect and Restore the World’s Forests, the European Green Deal, the EU Biodiversity Strategy for 2030 as well as in the Farm to Fork strategy. In line with the precautionary principle, the cut-off date indicated in the Commission proposal for this Regulation precedes the date of entry into force of this Regulation. The cut-off date was chosen in order to prevent an anticipated acceleration of activities leading to deforestation and forest degradation between the announcement in the Commission proposal and the date of entry into force of this Regulation. This Regulation should acknowledge the environmental objective pursued and confirm the proposed cut-off date to ensure that the producers and operators which have caused deforestation and forest degradation during the period of negotiation of this Regulation are not allowed to place the relevant commodities and relevant products concerned on the market or to export them."
+    },
+    {
+      "recital_number": 47,
+      "text": "The limitations on the exercise of the fundamental rights and the protection of the legitimate expectations of operators and traders resulting from the choice of the cut-off date should be proportionate to, and strictly necessary for, pursuing the general interest objective of environmental protection. To contribute to that objective, this Regulation should not apply to relevant commodities and relevant products produced before the date of entry into force of this Regulation. The deferred application of provisions of this Regulation governing obligations for operators and traders who intend to place relevant commodities and relevant products on the market or to export them also provides them a reasonable period of time to adapt to the new requirements of this Regulation."
+    },
+    {
+      "recital_number": 48,
+      "text": "To strengthen the Union’s contribution to halting deforestation and forest degradation, and to ensure that relevant products from supply chains related to deforestation and forest degradation are not placed on the market or exported, relevant products should not be placed or made available on the market or exported unless they are deforestation-free and have been produced in accordance with the relevant legislation of the country of production. To confirm that this is the case, they should always be accompanied by a due diligence statement."
+    },
+    {
+      "recital_number": 49,
+      "text": "On the basis of a systemic approach, operators should take the appropriate steps in order to ensure that the relevant products that they intend to place on the market comply with the deforestation-free and legality requirements of this Regulation. To that end, operators should establish and implement due diligence systems. Those due diligence systems should include three elements, namely information requirements, risk assessment and risk mitigation measures, complemented by reporting obligations. The due diligence systems should be designed to provide access to information about the sources and suppliers of the commodities and products being placed on the market, including information demonstrating that the absence of deforestation and forest degradation and legality requirements are fulfilled, inter alia, by identifying the country of production or parts thereof and including the geolocation coordinates of relevant plots of land. Those geolocation coordinates that rely on timing, positioning and/or Earth observation could make use of space data and services delivered under the Union’s Space programme (EGNOS/Galileo and Copernicus). On the basis of that information, operators should carry out a risk assessment. Where a risk is identified, operators should mitigate that risk to achieve no or only a negligible risk. The operator should only be allowed to place relevant products on the market or export them if the operator concludes, after exercising due diligence, that there is no or only a negligible risk that the relevant products do not comply with this Regulation."
+    },
+    {
+      "recital_number": 50,
+      "text": "When sourcing products, reasonable efforts should be undertaken to ensure that a fair price is paid to producers, in particular smallholders, so as to enable a living income and effectively address poverty as a root cause of deforestation."
+    },
+    {
+      "recital_number": 51,
+      "text": "Operators should formally take responsibility for the compliance of the relevant products that they intend to place on the market or export by making available due diligence statements. This Regulation should provide a template for such statements. Such due diligence statements are expected to facilitate enforcement of this Regulation by the competent authorities and courts as well as increase compliance by operators."
+    },
+    {
+      "recital_number": 52,
+      "text": "In order to recognise good practice, certification or other third-party verified schemes could be used in the risk assessment procedure. They should not, however, substitute the operator’s responsibility as regards due diligence."
+    },
+    {
+      "recital_number": 53,
+      "text": "Traders should be responsible for collecting and keeping information to ensure the transparency of the supply chain of relevant products which they make available on the market. Non-SME traders have a significant influence on supply chains and play an important role in ensuring that supply chains are deforestation-free. They should therefore have the same obligations as operators, take responsibility for the compliance of the relevant products with this Regulation and ensure, prior to making the relevant products available on the market, that they have exercised due diligence in accordance with this Regulation and have concluded that there is no or only a negligible risk that the relevant products do not comply with this Regulation."
+    },
+    {
+      "recital_number": 54,
+      "text": "In order to foster transparency and facilitate enforcement, operators which do not fall under the categories of SMEs, including microenterprises, or natural persons should, on an annual basis, publicly report on their due diligence system, including on the steps taken to fulfil their obligations."
+    },
+    {
+      "recital_number": 55,
+      "text": "Operators should be able to receive substantiated concerns from interested parties, including by electronic means, and should thoroughly investigate all substantiated concerns received."
+    },
+    {
+      "recital_number": 56,
+      "text": "Other Union legal acts that provide for due diligence requirements in the value chain with regard to adverse impacts on human rights or on the environment should apply in so far as there are no specific provisions with the same objective, nature and effect in this Regulation which can be adapted in the light of future amendments to Union legal acts. The existence of this Regulation should not exclude the application of other Union legal acts that lay down requirements regarding value chain due diligence. Where such other Union legal acts provide for more specific provisions or add requirements to the provisions laid down in this Regulation, such provisions should be applied in conjunction with this Regulation. Furthermore, where this Regulation contains more specific provisions, they should not be interpreted in a way that undermines the effective application of other Union legal acts on due diligence or the achievement of their general aim. It should be possible for the Commission to issue clear and easy to understand guidelines for the compliance of operators and traders, in particular SMEs, with this Regulation."
+    },
+    {
+      "recital_number": 57,
+      "text": "Respecting the rights of indigenous peoples with regard to forests and the principle of FPIC, including as set out in the UN Declaration on the rights of indigenous peoples, contributes towards protecting biodiversity, mitigating climate change and addressing the related public interest concerns. Indigenous peoples possess traditional knowledge of ecological and medical value, and very often offer a model of sustainable use of forest resources. This can contribute to in-situ conservation, in line with the CBD. Furthermore, studies suggest that forest-dwelling indigenous peoples play a dual role in combating climate change: first, they normally resist the occupation and deforestation of the lands they have inhabited for generations; and second, some indigenous communities consider it their responsibility to protect the forests in order to mitigate climate change."
+    },
+    {
+      "recital_number": 58,
+      "text": "The principles set out in the 1992 Rio Declaration on Environment and Development of the UN, in particular, Principle 10 concerning the importance of public awareness and participation in environmental issues and Principle 22 concerning the vital role of indigenous people in environmental management and development, are important in the context of securing sustainable forest management."
+    },
+    {
+      "recital_number": 59,
+      "text": "The concept of FPIC of indigenous peoples has been developed over the years following the approval of the International Labour Organisation Indigenous and Tribal Peoples Convention, 1989 (No 169), and it is reflected in the UN Declaration on the Protection of the Rights of Indigenous Peoples. It aims to be a safeguard to ensure that potential impacts on indigenous peoples will be considered in the decision-making process of projects affecting them."
+    },
+    {
+      "recital_number": 60,
+      "text": "Operators falling within the scope of other Union legal acts that set out due diligence requirements in the value chain with regard to adverse impacts on human rights or on the environment should be in a position to fulfil the reporting obligations under this Regulation by including the required information when reporting under the other Union legal acts."
+    },
+    {
+      "recital_number": 61,
+      "text": "The responsibility for enforcing this Regulation should lie with the Member States, and the competent authorities of the Member States should ensure full compliance with this Regulation. A uniform enforcement of this Regulation as regards relevant products entering or leaving the market can only be achieved through systematic exchange of information and cooperation amongst competent authorities, customs authorities and the Commission."
+    },
+    {
+      "recital_number": 62,
+      "text": "The effective and efficient implementation and enforcement of this Regulation are essential to achieving its goals. To that end, the Commission should set up and manage an information system to support the operators and the competent authorities in presenting and accessing the necessary information on relevant products placed on the market. The operators should submit the due diligence statements through the information system. The information system should be accessible to competent authorities and customs authorities to facilitate the fulfilment of their obligations under this Regulation and should facilitate the transfer of information between Member States, competent authorities and customs authorities. The non-commercially sensitive data should also be accessible to a wider public, subject to the data being anonymised, apart from information concerning the list of final judgments against legal persons for infringements of this Regulation and the penalties imposed on them, and should be provided in an open and machine-readable format in line with the Union’s Open Data Policy as set out in Directive (EU) 2019/1024 of the European Parliament and of the Council (11)."
+    },
+    {
+      "recital_number": 63,
+      "text": "For the relevant products entering or leaving the market, competent authorities should be tasked with checking compliance of relevant products with this Regulation based, inter alia, on the due diligence statements submitted by the operators. The role of customs authorities should be to ensure that a reference to the due diligence statement is made available to them where applicable. In addition, as from the moment the electronic interface is in place to exchange information between customs authorities and competent authorities, customs authorities should examine the status of the due diligence statement after an initial risk analysis has been carried out by competent authorities in the information system. Customs authorities should take appropriate action, such as to suspend or refuse a relevant commodity or relevant product if requested to do so on the basis of the status of the due diligence statement in the information system. That specific organisation of controls renders Chapter VII of Regulation (EU) 2019/1020 of the European Parliament and of the Council (12) inapplicable in so far as the application and enforcement of this Regulation is concerned."
+    },
+    {
+      "recital_number": 64,
+      "text": "Member States should ensure that adequate financial resources are always available for the appropriate staffing and equipping of the competent authorities. A high level of resources is needed in order to carry out checks efficiently and stable resources should be provided at a level appropriate to the enforcement needs at any given moment. Member States should have the possibility to supplement public financing by recovering from the relevant economic operators the costs incurred when carrying out checks in relation to relevant commodities and relevant products that were found to be non-compliant."
+    },
+    {
+      "recital_number": 65,
+      "text": "This Regulation is without prejudice to other Union legal acts on goods and products entering or leaving the market, in particular Regulation (EU) No 952/2013 of the European Parliament and of the Council (13) as regards the powers of customs authorities and customs controls. Importers should be reminded that Articles 220, 254, 256, 257 and 258 of that Regulation provide that products entering the market that require further processing are to be placed under the appropriate customs procedure allowing such processing. Generally, the release for free circulation or export should not be deemed to be proof of compliance with Union law, since such a release or export does not necessarily include a complete control of compliance."
+    },
+    {
+      "recital_number": 66,
+      "text": "In order to optimise the control process, including by minimising the administrative burden, for relevant products entering or leaving the market, it is necessary to set up an interoperable electronic interface that enables the automatic transfer of data between customs systems and the information systems of competent authorities. The European Union Single Window Environment for Customs is the natural candidate to enable such data transfer. The interface should be highly automated and easy-to-use, and should facilitate processes for customs authorities and operators. Moreover, in view of the limited differences between the data that are to be made available to customs authorities and that are to be included in the due diligence statement, it is appropriate to propose also a ‘business-to-government’ approach whereby traders and economic operators make available the due diligence statement of a relevant product through the national single window environment for customs and that statement is automatically transmitted to the information system under this Regulation used by competent authorities. Customs authorities and competent authorities should contribute to the determination of the data to be transmitted and any other technical requirement."
+    },
+    {
+      "recital_number": 67,
+      "text": "The risk of non-compliant products being placed on the market or exported varies depending on the commodity and product as well as on its country of origin and production or parts thereof. Operators sourcing commodities and products from countries or parts thereof that present a low risk of growing, harvesting or producing relevant commodities in violation of this Regulation should be subject to fewer obligations, thereby reducing compliance costs and administrative burden, unless the operator knows or has reason to believe that there is a risk of non-compliance with this Regulation. Where a competent authority becomes aware of a risk that this Regulation is being circumvented, for example where a relevant commodity or relevant product produced in a high-risk country is subsequently processed in a low risk country or parts thereof from where it is placed on or enters or leaves the market and the due diligence statement or the customs declaration indicates that the relevant commodity or relevant product was produced in a low-risk country, the competent authority should verify by means of further checks whether there is any non-compliance and, if necessary, take appropriate action, such as the seizure of the relevant commodity or relevant product and the suspension of the placing on the market or of the export of the relevant commodity or relevant product, as well as carry out further checks. The competent authorities should be required to apply enhanced scrutiny to relevant commodities and relevant products from high-risk countries or parts thereof."
+    },
+    {
+      "recital_number": 68,
+      "text": "Furthermore, the Commission should assess the deforestation and forest degradation risk at the level of a country or parts thereof based on a range of criteria that reflect quantitative, objective and internationally recognised data, and indications that the countries are actively engaged in fighting deforestation and forest degradation. Such benchmarking information should make it easier for operators in the Union to exercise due diligence and for competent authorities to monitor and enforce compliance, while also providing an incentive for producer countries to increase the sustainability of their agricultural production systems and reduce their deforestation impact. This should help to make supply chains more transparent and sustainable. The benchmarking system should be based on a three-tier system for classification of countries as low, standard or high risk. In order to ensure appropriate transparency and clarity, the Commission should in particular make publicly available the data being used for benchmarking, the reasons for the proposed change of classification and the reply of the country concerned. For relevant products from low-risk countries or parts thereof operators should be allowed to exercise simplified due diligence. For relevant products from high-risk countries or parts thereof competent authorities should be required to apply enhanced scrutiny. The Commission should be empowered to adopt implementing acts to establish the list of countries or parts thereof that present a low or high risk."
+    },
+    {
+      "recital_number": 69,
+      "text": "The Commission should cooperate with countries which are classified or could be classified as high risk, and with relevant stakeholders in those countries, in order to work towards reducing the level of risk."
+    },
+    {
+      "recital_number": 70,
+      "text": "Competent authorities should carry out checks at regular intervals on operators and traders to verify that they effectively fulfil the obligations laid down in this Regulation. Moreover, competent authorities should carry out checks on the basis of relevant information in their possession, including substantiated concerns submitted by third parties. Competent authorities should use a risk-based approach to identify the checks to be carried out. In respect of relevant products from countries or parts thereof classified as high risk, the respective operators and traders and the volumes of their share of relevant commodities and relevant products, a twofold approach that provides comprehensive coverage should apply. Competent authorities should thus be required to check on a certain percentage of operators and traders, whilst also covering a specific percentage of relevant products. In respect of relevant products from countries or parts thereof classified as low or standard risk, competent authorities should be required to check at least a certain percentage of operators and traders. The level of checks should be higher for relevant products from high-risk countries or parts thereof whereas it could be lower for standard or low-risk countries or parts thereof. In its review of this Regulation, the Commission should evaluate and identify quantified objectives for the annual checks to be carried out by competent authorities that are appropriate to ensure the enforcement of this Regulation and a harmonised approach across the Union."
+    },
+    {
+      "recital_number": 71,
+      "text": "The checks carried out on operators and traders by competent authorities should cover the due diligence systems and the compliance of the relevant products with this Regulation. The checks should be based on a risk-based plan which contains risk criteria to enable competent authorities to carry out a risk analysis of the due diligence statements submitted by operators and traders. The risk criteria should take into account the risk of deforestation associated to relevant commodities in the country of production, the history of non-compliance of operators and traders with the obligations of this Regulation and any other relevant information available to competent authorities. The risk analysis of due diligence statements should enable the competent authorities to identify those operators, traders and relevant products that need to be checked. That risk analysis should be carried out using electronic data processing techniques in the information system through which the due diligence statements are submitted. Where necessary and technically possible, competent authorities, after consultation and in close cooperation with authorities of third countries, should also be able to carry out checks in situ."
+    },
+    {
+      "recital_number": 72,
+      "text": "In cases where the risk analysis of the due diligence statements reveals a high risk of non-compliance of specific relevant products, the competent authorities should be able to take immediate interim measures to prevent the placing or making available on the market or the export of those products. In cases where such relevant products were entering or leaving the market, the competent authorities should request from the customs authorities the suspension of the release for free circulation or of export, to enable competent authorities to carry out the necessary checks. Such requests should be communicated by means of the interface system between customs authorities and competent authorities. The suspension of the placing or making available on the market, of the release for free circulation or of export should be limited to three working days, or 72 hours in the case of perishable relevant products, except where the competent authorities require additional time to assess the compliance of the relevant commodities and relevant products with this Regulation. In such cases, the competent authorities should take additional interim measures to extend the suspension period or, in the case of relevant products entering or leaving the market, request an extension from the customs authorities."
+    },
+    {
+      "recital_number": 73,
+      "text": "The competent authorities should regularly update their plans of checks on the basis of the results of implementing those checks. Those operators showing a consistent track record of compliance could be subject to less frequent checks."
+    },
+    {
+      "recital_number": 74,
+      "text": "In order to ensure implementation and effective enforcement of this Regulation, Member States should have the power to withdraw and recall non-compliant products and take appropriate corrective actions. They should also ensure that infringements of this Regulation by operators and traders are subject to effective, proportionate and dissuasive penalties."
+    },
+    {
+      "recital_number": 75,
+      "text": "In order to increase the accountability of operators and traders, the Commission should publish on its website the list of final judgments against legal persons for infringements of this Regulation and the penalties imposed on them. That information could help competent authorities, other operators and traders carry out their risk assessments and increase the awareness of consumers and civil society as regards operators and traders who infringe this Regulation."
+    },
+    {
+      "recital_number": 76,
+      "text": "The implementation of this Regulation will require sufficient resources and capacity. In that context, in addition to national resources, Member States should, as much as possible, use the opportunities and possibilities for support that are available at Union level and other means, including cohesion funds and capacity-building instruments, in particular in the context of the Technical Support Instrument, established by Regulation (EU) 2021/240 of the European Parliament and of the Council (14)."
+    },
+    {
+      "recital_number": 77,
+      "text": "Taking into account the international character of deforestation and forest degradation and related trade, competent authorities should cooperate with each other, with customs authorities of the Member States, with the Commission and with the administrative authorities of third countries. Competent authorities should also cooperate with the competent authorities for the supervision and enforcement of other Union legal acts that set out due diligence requirements in the value chain with regard to adverse impacts on human rights or on the environment."
+    },
+    {
+      "recital_number": 78,
+      "text": "According to settled case law of the Court of Justice of the European Union, it is for the courts of the Member States to ensure judicial protection of a person’s rights under Union law. Furthermore, Article 19(1) of the Treaty on European Union (TEU) requires Member States to provide remedies that are sufficient to ensure effective judicial protection in the fields covered by Union law. In this respect, Member States should ensure that the public, including natural or legal persons submitting substantiated concerns in accordance with this Regulation, has access to justice in line with the obligations that Member States have agreed to as parties to the UN Economic Commission for Europe (UNECE) Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters of 25 June 1998 (the ‘Aarhus Convention’)."
+    },
+    {
+      "recital_number": 79,
+      "text": "In order to ensure that this Regulation remain relevant and in line with trade, scientific and technological developments, the power to adopt acts in accordance with Article 290 of the TFEU should be delegated to the Commission in respect of the list of CN codes of relevant products set out in Annex I to this Regulation. It is of particular importance that the Commission carry out appropriate consultations during its preparatory work, including at expert level, and that those consultations be conducted in accordance with the principles laid down in the Interinstitutional Agreement of 13 April 2016 on Better Law-Making (15). In particular, to ensure equal participation in the preparation of delegated acts, the European Parliament and the Council receive all documents at the same time as Member States’ experts, and their experts systematically have access to meetings of Commission expert groups dealing with the preparation of delegated acts."
+    },
+    {
+      "recital_number": 80,
+      "text": "Regulation (EU) No 995/2010 prohibits the placing of illegally harvested timber and timber products on the Union market. It lays down obligations for operators placing timber on the market for the first time to exercise due diligence and for traders to keep a traceable record of their suppliers and customers. This Regulation should maintain the obligation to ensure the legality of relevant products, including wood and wood products, placed on the market and should complement that obligation with a requirement on sustainability. Regulation (EU) No 995/2010 and the related Commission Implementing Regulation (EU) No 607/2012 (16) are therefore rendered redundant by this Regulation and should be repealed. Timber and timber products as defined in Article 2, point (a), of Regulation (EU) No 995/2010 are the equivalent of wood and wood products that are listed in Annex I to this Regulation and that contain or have been made using wood."
+    },
+    {
+      "recital_number": 81,
+      "text": "Regulation (EC) No 2173/2005 establishes a Forest Law Enforcement, Governance and Trade (FLEGT) licensing scheme for imports of timber into the Union. The licensing scheme is implemented through voluntary partnership agreements (VPAs) with timber producing countries, intended to halt illegal logging and to enhance forest governance and related trade. This Regulation should build upon the positive results achieved under FLEGT, especially in terms of enhanced stakeholders’ participation and improved forest governance. In specific cases, VPAs could complement this Regulation with regard to the legality of timber products. To respect ongoing bilateral commitments and to preserve the progress achieved with partner countries that have an operating system in place (FLEGT licensing stage) and work, where relevant and agreed, with current VPA partners towards them reaching that stage, this Regulation should include a provision declaring that wood and wood products that are covered by a valid FLEGT license are deemed to comply with the legality requirement of Regulation (EC) No 2173/2005."
+    },
+    {
+      "recital_number": 82,
+      "text": "While this Regulation addresses deforestation and forest degradation, as envisaged in the communication on Stepping up EU Action to Protect and Restore the World’s Forests, protecting forests should not lead to the conversion or degradation of other natural ecosystems. Ecosystems, including managed ecosystems, such as wetlands, savannahs and peatlands are highly significant to global efforts to combat climate change and the biodiversity crisis, as well as other SDGs and their conversion or degradation require particular urgent action and need to be prevented. In light of the Union’s footprint on non-forest natural ecosystems, the Commission should evaluate and, where appropriate, present a legislative proposal on extending the scope of this Regulation to other wooded land at the latest one year after the date of entry into force of this Regulation. Moreover, no later than two years after that date of entry into force, the Commission should evaluate and, where appropriate, present a legislative proposal on, extending the scope of this Regulation to other natural ecosystems, including other land with high carbon stocks and with a high biodiversity value such as grasslands, peatlands and wetlands. Ecosystems are also increasingly under pressure from conversion and degradation due to commodity production for the Union market. The Commission should also assess the need and feasibility of extending the scope to further commodities at the latest two years after the date of entry into force of this Regulation. At the same time, the Commission should also undertake a review of the list of CN codes of relevant products set out in Annex I to this Regulation."
+    },
+    {
+      "recital_number": 83,
+      "text": "Taking into account the request made by the European Parliament in its resolution ‘An EU legal framework to halt and reverse EU-driven global deforestation’ of 22 October 2020 and that made by the vast majority of the almost 1,2 million participants in the Commission’s public consultation, the Commission should focus its evaluation and any future legislative proposal on an extension of the scope of this Regulation to non-forest ecosystems and their conversion and degradation."
+    },
+    {
+      "recital_number": 84,
+      "text": "Where, for the purposes of this Regulation, it is necessary to process personal data, those data are to be handled in accordance with Union law on the protection of personal data. Any processing of personal data under this Regulation is subject to Regulation (EU) 2016/679 of the European Parliament and of the Council (17) and Regulation (EU) 2018/1725 of the European Parliament and of the Council (18), as applicable."
+    },
+    {
+      "recital_number": 85,
+      "text": "Since the objective of this Regulation, namely fighting against deforestation and forest degradation by reducing the contribution of consumption in the Union, cannot be sufficiently achieved by the Member States but can rather, by reason of its scale, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the TEU. In accordance with the principle of proportionality, as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve that objective."
+    },
+    {
+      "recital_number": 86,
+      "text": "Operators, traders and competent authorities should be given a reasonable period in order to prepare themselves to meet the requirements of this Regulation,"
+    },
+    {
+      "recital_number": 86,
+      "text": "Operators, traders and competent authorities should be given a reasonable period in order to prepare themselves to meet the requirements of this Regulation,"
     }
   ]
 }

@@ -90,9 +90,16 @@ async function ingestRegulation(regulation: Regulation): Promise<IngestionResult
     const scriptPath = join(process.cwd(), 'scripts', scriptName);
 
     // SECURITY: Using execFile (not exec) to prevent command injection
+    const args = ['tsx', scriptPath, regulation.celexId, regulation.filepath];
+
+    // Add --browser flag for EUR-Lex regulations to bypass WAF
+    if (!isUNECE) {
+      args.push('--browser');
+    }
+
     const { stdout, stderr } = await execFileAsync(
       'npx',
-      ['tsx', scriptPath, regulation.celexId, regulation.filepath],
+      args,
       {
         timeout: TIMEOUT_MS,
         cwd: process.cwd(),

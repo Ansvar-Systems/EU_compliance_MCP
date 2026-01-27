@@ -1,9 +1,8 @@
 {
   "id": "IVDR",
-  "full_name": "In Vitro Diagnostic Medical Devices Regulation",
+  "full_name": "Regulation 32017R0746",
   "celex_id": "32017R0746",
-  "effective_date": "2022-05-26",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg/2017/746/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
   "articles": [
     {
       "number": "1",
@@ -1031,6 +1030,416 @@
       "term": "harmonised standard",
       "definition": "a European standard as defined in point (1)(c) of Article 2 of Regulation (EU) No 1025/2012;",
       "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Directive 98/79/EC of the European Parliament and of the Council (3) constitutes the Union regulatory framework for in vitro diagnostic medical devices. However, a fundamental revision of that Directive is needed to establish a robust, transparent, predictable and sustainable regulatory framework for in vitro diagnostic medical devices which ensures a high level of safety and health whilst supporting innovation."
+    },
+    {
+      "recital_number": 2,
+      "text": "This Regulation aims to ensure the smooth functioning of the internal market as regards in vitro diagnostic medical devices, taking as a base a high level of protection of health for patients and users, and taking into account the small and medium-sized enterprises that are active in this sector. At the same time, this Regulation sets high standards of quality and safety for in vitro diagnostic medical devices in order to meet common safety concerns as regards such products. Both objectives are being pursued simultaneously and are inseparably linked whilst one not being secondary to the other. As regards Article 114 of the Treaty on the Functioning of the European Union (TFEU), this Regulation harmonises the rules for the placing on the market and putting into service of in vitro diagnostic medical devices and their accessories on the Union market thus allowing them to benefit from the principle of free movement of goods. As regards Article 168(4)(c) TFEU, this Regulation sets high standards of quality and safety for in vitro diagnostic medical devices by ensuring, among other things, that data generated in performance studies are reliable and robust and that the safety of subjects participating in performance studies is protected."
+    },
+    {
+      "recital_number": 3,
+      "text": "This Regulation does not seek to harmonise rules relating to the further making available on the market of in vitro diagnostic medical devices after they have already been put into service, such as in the context of second-hand sales."
+    },
+    {
+      "recital_number": 4,
+      "text": "Key elements of the existing regulatory approach, such as the supervision of notified bodies, risk classification, conformity assessment procedures, performance evaluation and performance studies, vigilance and market surveillance should be significantly reinforced, whilst provisions ensuring transparency and traceability regarding in vitro diagnostic medical devices should be introduced, to improve health and safety."
+    },
+    {
+      "recital_number": 5,
+      "text": "To the extent possible, guidance developed for in vitro diagnostic medical devices at international level, in particular in the context of the Global Harmonization Task Force and its follow-up initiative, the International Medical Devices Regulators Forum, should be taken into account to promote the global convergence of regulations which contributes to a high level of safety protection worldwide, and to facilitate trade, in particular in the provisions on Unique Device Identification, general safety and performance requirements, technical documentation, classification rules, conformity assessment procedures and clinical evidence."
+    },
+    {
+      "recital_number": 6,
+      "text": "There are specific features of in vitro diagnostic medical devices, in particular in terms of risk classification, conformity assessment procedures and clinical evidence, and of the in vitro diagnostic medical device sector which require the adoption of specific legislation, distinct from the legislation on other medical devices, whereas the horizontal aspects common to both sectors should be aligned."
+    },
+    {
+      "recital_number": 7,
+      "text": "The scope of application of this Regulation should be clearly delimited from other legislation concerning products, such as medical devices, general laboratory products and products for research use only."
+    },
+    {
+      "recital_number": 8,
+      "text": "It should be the responsibility of the Member States to decide on a case-by-case basis whether or not a product falls within the scope of this Regulation. In order to ensure consistent qualification decisions in that regard across all Member States, particularly with regard to borderline cases, the Commission should be allowed to, on its own initiative or at the duly substantiated request of a Member State, having consulted the Medical Device Coordination Group (‘MDCG’), decide on a case-by-case basis whether or not a specific product, category or group of products falls within the scope of this Regulation. When deliberating on the regulatory status of products in borderline cases involving medicinal products, human tissues and cells, biocidal products or food products, the Commission should ensure an appropriate level of consultation of the European Medicines Agency, the European Chemicals Agency and the European Food Safety Authority, as relevant."
+    },
+    {
+      "recital_number": 9,
+      "text": "It appears that it is possible that divergent national rules regarding the provision of information and counselling in relation to genetic testing might only have an impact on the smooth functioning of the internal market to a limited extent. Therefore, it is appropriate to lay down only limited requirements in this regard in this Regulation, having regard to the need to ensure constant respect of the principles of proportionality and subsidiarity."
+    },
+    {
+      "recital_number": 10,
+      "text": "It should be made clear that all tests that provide information on the predisposition to a medical condition or a disease, such as genetic tests, and tests that provide information to predict treatment response or reactions, such as companion diagnostics, are in vitro diagnostic medical devices."
+    },
+    {
+      "recital_number": 11,
+      "text": "Companion diagnostics are essential for defining patients' eligibility for specific treatment with a medicinal product through the quantitative or qualitative determination of specific markers identifying subjects at a higher risk of developing an adverse reaction to the medicinal product in question or identifying patients in the population for whom the therapeutic product has been adequately studied, and found safe and effective. Such biomarker or biomarkers can be present in healthy subjects and/or in patients."
+    },
+    {
+      "recital_number": 12,
+      "text": "Devices that are used with a view to monitoring treatment with a medicinal product in order to ensure that the concentration of relevant substances in the human body is within the therapeutic window are not considered to be companion diagnostics."
+    },
+    {
+      "recital_number": 13,
+      "text": "The requirement to reduce risks as far as possible should be fulfilled taking into account the generally acknowledged state of the art in the field of medicine."
+    },
+    {
+      "recital_number": 14,
+      "text": "Safety aspects addressed by Directive 2014/30/EU of the European Parliament and of the Council (4) are an integral part of the general safety and performance requirements laid down in this Regulation for devices. Consequently, this Regulation should be considered a lex specialis in relation to that Directive."
+    },
+    {
+      "recital_number": 15,
+      "text": "This Regulation should include requirements regarding the design and manufacture of devices emitting ionizing radiation without affecting the application of Council Directive 2013/59/Euratom (5) which pursues other objectives."
+    },
+    {
+      "recital_number": 16,
+      "text": "This Regulation should include requirements for devices' safety and performance characteristics which are developed in such a way as to prevent occupational injuries, including protection from radiation."
+    },
+    {
+      "recital_number": 17,
+      "text": "It is necessary to clarify that software in its own right, when specifically intended by the manufacturer to be used for one or more of the medical purposes set out in the definition of an in vitro diagnostic medical device, qualifies as an in vitro diagnostic medical device, while software for general purposes, even when used in a healthcare setting, or software intended for well-being purposes is not an in vitro diagnostic medical device. The qualification of software, either as a device or an accessory, is independent of the software's location or the type of interconnection between the software and a device."
+    },
+    {
+      "recital_number": 18,
+      "text": "The definitions in this Regulation regarding the devices themselves, the making available of devices, economic operators, users and specific processes, the conformity assessment, clinical evidence, post-market surveillance, vigilance and market surveillance, standards and other technical specifications, should be aligned with well-established practice in the field at Union and international level in order to enhance legal certainty."
+    },
+    {
+      "recital_number": 19,
+      "text": "It should be made clear that it is essential that devices offered to persons in the Union by means of information society services within the meaning of Directive (EU) 2015/1535 of the European Parliament and of the Council (6) and devices used in the context of a commercial activity to provide a diagnostic or therapeutic service to persons within the Union comply with the requirements of this Regulation, where the product in question is placed on the market or the service is provided in the Union."
+    },
+    {
+      "recital_number": 20,
+      "text": "To recognise the important role of standardisation in the field of in vitro diagnostic medical devices, compliance with harmonised standards as defined in Regulation (EU) No 1025/2012 of the European Parliament and of the Council (7) should be a means for manufacturers to demonstrate conformity with the general safety and performance requirements and other legal requirements, such as those relating to quality and risk management, laid down in this Regulation."
+    },
+    {
+      "recital_number": 21,
+      "text": "Directive 98/79/EC allows the Commission to adopt common technical specifications for specific categories of in vitro diagnostic medical devices. In areas where no harmonised standards exist or where they are insufficient, the Commission should be empowered to lay down common specifications which provide a means of complying with the general safety and performance requirements and the requirements for performance studies and performance evaluation and/or post-market follow-up, laid down in this Regulation."
+    },
+    {
+      "recital_number": 22,
+      "text": "Common specifications (‘CS’) should be developed after consulting the relevant stakeholders and taking account of the European and international standards."
+    },
+    {
+      "recital_number": 23,
+      "text": "The rules applicable to devices should be aligned, where appropriate, with the New Legislative Framework for the Marketing of Products, which consists of Regulation (EC) No 765/2008 of the European Parliament and of the Council (8) and Decision No 768/2008/EC of the European Parliament and of the Council (9)."
+    },
+    {
+      "recital_number": 24,
+      "text": "The rules on Union market surveillance and control of products entering the Union market laid down in Regulation (EC) No 765/2008 apply to devices covered by this Regulation which does not prevent Member States from choosing the competent authorities to carry out those tasks."
+    },
+    {
+      "recital_number": 25,
+      "text": "It is appropriate to set out clearly the general obligations of the different economic operators, including importers and distributors, building on the New Legislative Framework for the Marketing of Products, without prejudice to the specific obligations laid down in the various parts of this Regulation, to enhance understanding of the requirements laid down in this Regulation and thus to improve regulatory compliance by the relevant operators."
+    },
+    {
+      "recital_number": 26,
+      "text": "For the purpose of this Regulation, the activities of distributors should be deemed to include acquisition, holding and supplying of devices."
+    },
+    {
+      "recital_number": 27,
+      "text": "Several of the obligations on manufacturers, such as performance evaluation or vigilance reporting, that were set out only in the Annexes to Directive 98/79/EC, should be incorporated into the enacting provisions of this Regulation to facilitate its application."
+    },
+    {
+      "recital_number": 28,
+      "text": "To ensure the highest level of health protection, the rules governing in vitro diagnostic medical devices, manufactured and used within a single health institution only, should be clarified and strengthened. That use should be understood to include measurement and delivery of results."
+    },
+    {
+      "recital_number": 29,
+      "text": "Health institutions should have the possibility of manufacturing, modifying and using devices in-house and thereby addressing, on a non-industrial scale, the specific needs of target patient groups which cannot be met at the appropriate level of performance by an equivalent device available on the market. In that context, it is appropriate to provide that certain rules of this Regulation, as regards devices manufactured and used only within health institutions, including hospitals as well as institutions, such as laboratories and public health institutes that support the health care system and/or address patient needs, but which do not treat or care for patients directly, should not apply, since the aims of this Regulation would still be met in a proportionate manner. It should be noted that the concept of ‘health institution’ does not cover establishments primarily claiming to pursue health interests or healthy lifestyles, such as gyms, spas, wellness and fitness centres. As a result, the exemption applicable to health institutions does not apply to such establishments."
+    },
+    {
+      "recital_number": 30,
+      "text": "In view of the fact that natural or legal persons can claim compensation for damage caused by a defective device in accordance with applicable Union and national law, it is appropriate to require manufacturers to have measures in place to provide sufficient financial coverage in respect of their potential liability under Council Directive 85/374/EEC (10). Such measures should be proportionate to the risk class, type of device and the size of the enterprise. In this context, it is also appropriate to lay down rules concerning the facilitation, by a competent authority, of the provision of information to persons who may have been injured by a defective device."
+    },
+    {
+      "recital_number": 31,
+      "text": "To ensure that devices manufactured in series production continue to be in conformity with the requirements of this Regulation and that experience from the use of the devices they manufacture is taken into account for the production process, all manufacturers should have a quality management system and a post-market surveillance system in place which should be proportionate to the risk class and the type of the device in question. In addition, in order to minimize risks or prevent incidents related to devices, manufacturers should establish a system for risk management and a system for reporting incidents and field safety corrective actions."
+    },
+    {
+      "recital_number": 32,
+      "text": "The risk management system should be carefully aligned with and reflected in the performance evaluation process for the device, including the clinical risks to be addressed as part of performance studies, performance evaluation and post-market performance follow-up. The risk management and performance evaluation processes should be inter-dependent and should be regularly updated."
+    },
+    {
+      "recital_number": 33,
+      "text": "It should be ensured that supervision and control of the manufacture of devices, as well as post-market surveillance and vigilance activities concerning them, are carried out within the manufacturer's organisation by a person responsible for regulatory compliance who fulfils minimum conditions of qualification."
+    },
+    {
+      "recital_number": 34,
+      "text": "For manufacturers who are not established in the Union, the authorised representative plays a pivotal role in ensuring the compliance of the devices produced by those manufacturers and in serving as their contact person established in the Union. Given that pivotal role, for the purposes of enforcement it is appropriate to make the authorised representative legally liable for defective devices in the event that a manufacturer established outside the Union has not complied with its general obligations. The liability of the authorised representative provided for in this Regulation is without prejudice to the provisions of Directive 85/374/EEC, and accordingly the authorised representative should be jointly and severally liable with the importer and the manufacturer. The tasks of an authorised representative should be defined in a written mandate. Considering the role of authorised representatives, the minimum requirements they should meet should be clearly defined, including the requirement of having available a person who fulfils minimum conditions of qualification which should be similar to those for a manufacturer's person responsible for regulatory compliance."
+    },
+    {
+      "recital_number": 35,
+      "text": "To ensure legal certainty in respect of the obligations incumbent on economic operators, it is necessary to clarify when a distributor, importer or other person is to be considered the manufacturer of a device."
+    },
+    {
+      "recital_number": 36,
+      "text": "Parallel trade in products already placed on the market is a lawful form of trade within the internal market on the basis of Article 34 TFEU subject to the limitations arising from the need for protection of health and safety and from the need for protection of intellectual property rights provided for under Article 36 TFEU. Application of the principle of parallel trade is, however, subject to different interpretations in the Member States. The conditions, in particular the requirements for relabelling and repackaging, should therefore be specified in this Regulation, taking into account the case-law of the Court of Justice (11) in other relevant sectors and existing good practice in the field of in vitro diagnostic medical devices."
+    },
+    {
+      "recital_number": 37,
+      "text": "Devices should, as a general rule, bear the CE marking to indicate their conformity with this Regulation so that they can move freely within the Union and be put into service in accordance with their intended purpose. Member States should not create obstacles to the placing on the market or putting into service of devices that comply with the requirements laid down in this Regulation. However, Member States should be allowed to decide whether to restrict the use of any specific type of device in relation to aspects that are not covered by this Regulation."
+    },
+    {
+      "recital_number": 38,
+      "text": "The traceability of devices by means of a Unique Device Identification system (UDI system) based on international guidance should significantly enhance the effectiveness of the post-market safety-related activities for devices, which is owing to improved incident reporting, targeted field safety corrective actions and better monitoring by competent authorities. It should also help to reduce medical errors and to fight against falsified devices. Use of the UDI system should also improve purchasing and waste disposal policies and stock-management by health institutions and other economic operators and, where possible, be compatible with other authentication systems already in place in those settings."
+    },
+    {
+      "recital_number": 39,
+      "text": "The UDI system should apply to all devices placed on the market except devices for performance studies, and be based on internationally recognised principles including definitions that are compatible with those used by major trade partners. In order for the UDI system to become functional in time for the application of this Regulation, detailed rules should be laid down in this Regulation and in Regulation (EU) 2017/745 of the European Parliament and of the Council (12)."
+    },
+    {
+      "recital_number": 40,
+      "text": "Transparency and adequate access to information, appropriately presented for the intended user, are essential in the public interest, to protect public health, to empower patients and healthcare professionals and to enable them to make informed decisions, to provide a sound basis for regulatory decision-making and to build confidence in the regulatory system."
+    },
+    {
+      "recital_number": 41,
+      "text": "One key aspect in fulfilling the objectives of this Regulation is the creation of a European database on medical devices (Eudamed) that should integrate different electronic systems to collate and process information regarding devices on the market and the relevant economic operators, certain aspects of conformity assessment, notified bodies, certificates, performance studies, vigilance and market surveillance. The objectives of the database are to enhance overall transparency, including through better access to information for the public and healthcare professionals, to avoid multiple reporting requirements, to enhance coordination between Member States and to streamline and facilitate the flow of information between economic operators, notified bodies or sponsors and Member States as well as between Member States among themselves and with the Commission. Within the internal market, this can be ensured effectively only at Union level and the Commission should therefore further develop and manage the European databank on medical devices set up by Commission Decision 2010/227/EU (13)."
+    },
+    {
+      "recital_number": 42,
+      "text": "To facilitate the functioning of Eudamed, an internationally recognised medical device nomenclature should be available free of charge to manufacturers and other natural or legal persons required by this Regulation to use that nomenclature. Furthermore, that nomenclature should be available, where reasonably practicable, free of charge also to other stakeholders."
+    },
+    {
+      "recital_number": 43,
+      "text": "Eudamed's electronic systems regarding devices on the market, the relevant economic operators and certificates should enable the public to be adequately informed about devices on the Union market. The electronic system on performance studies should serve as a tool for the cooperation between Member States and for enabling sponsors to submit, on a voluntary basis, a single application for several Member States and to report serious adverse events, device deficiencies and related updates. The electronic system on vigilance should enable manufacturers to report serious incidents and other reportable events and to support the coordination of the evaluation of such incidents and events by competent authorities. The electronic system regarding market surveillance should be a tool for the exchange of information between competent authorities."
+    },
+    {
+      "recital_number": 44,
+      "text": "In respect of data collated and processed through the electronic systems of Eudamed, Directive 95/46/EC of the European Parliament and of the Council (14) applies to the processing of personal data carried out in the Member States, under the supervision of the Member States' competent authorities, in particular the public independent authorities designated by the Member States. Regulation (EC) No 45/2001 of the European Parliament and of the Council (15) applies to the processing of personal data carried out by the Commission within the framework of this Regulation, under the supervision of the European Data Protection Supervisor. In accordance with Regulation (EC) No 45/2001, the Commission should be designated as the controller of Eudamed and its electronic systems."
+    },
+    {
+      "recital_number": 45,
+      "text": "For class C and D devices, manufacturers should summarise the main safety and performance aspects of the device and the outcome of the performance evaluation in a document that should be publicly available."
+    },
+    {
+      "recital_number": 46,
+      "text": "The proper functioning of notified bodies is crucial for ensuring a high level of health and safety protection and citizens' confidence in the system. Designation and monitoring of notified bodies by the Member States, in accordance with detailed and strict criteria, should therefore be subject to controls at Union level."
+    },
+    {
+      "recital_number": 47,
+      "text": "Notified bodies' assessments of manufacturers' technical documentation, in particular documentation on performance evaluation, should be critically evaluated by the authority responsible for notified bodies. That evaluation should be part of the risk-based approach to the oversight and monitoring activities of notified bodies and should be based on sampling of the relevant documentation."
+    },
+    {
+      "recital_number": 48,
+      "text": "The position of notified bodies vis-à-vis manufacturers should be strengthened, including with regard to their right and duty to carry out unannounced on-site audits and to conduct physical or laboratory tests on devices to ensure continuous compliance by manufacturers after receipt of the original certification."
+    },
+    {
+      "recital_number": 49,
+      "text": "To increase transparency with regard to the oversight of notified bodies by national authorities, the authorities responsible for notified bodies should publish information on the national measures governing the assessment, designation and monitoring of notified bodies. In accordance with good administrative practice, this information should be kept up to date by those authorities in particular to reflect relevant, significant or substantive changes to the procedures in question."
+    },
+    {
+      "recital_number": 50,
+      "text": "The Member State in which a notified body is established should be responsible for enforcing the requirements of this Regulation with regard to that notified body."
+    },
+    {
+      "recital_number": 51,
+      "text": "In view, in particular, of the responsibility of Member States for the organisation and delivery of health services and medical care, they should be allowed to lay down additional requirements on notified bodies designated for the conformity assessment of devices and established on their territory as far as issues that are not regulated in this Regulation are concerned. Any such additional requirements laid down should not affect more specific horizontal Union legislation on notified bodies and equal treatment of notified bodies."
+    },
+    {
+      "recital_number": 52,
+      "text": "For class D devices, competent authorities should be informed about certificates granted by notified bodies and be given the right to scrutinise the assessment conducted by notified bodies."
+    },
+    {
+      "recital_number": 53,
+      "text": "For class D devices for which no CS exist it is appropriate to provide that where it is the first certification for that specific type of device and there is no similar device on the market having the same intended purpose and based on similar technology, notified bodies should, in addition to the laboratory testing of the performance claimed by the manufacturer and the compliance of the device by the EU reference laboratories, be obliged to request expert panels to scrutinise their performance evaluation assessment reports. The consultation of expert panels in relation to the performance evaluation should lead to a harmonised evaluation of high-risk in vitro diagnostic medical devices by sharing expertise on performance aspects and developing CS on categories of devices that have undergone that consultation process."
+    },
+    {
+      "recital_number": 54,
+      "text": "To enhance patient safety and to take due account of technological progress, the current classification system for devices set out in Directive 98/79/EC should be fundamentally changed, in line with international practice, and the corresponding conformity assessment procedures should be accordingly adapted."
+    },
+    {
+      "recital_number": 55,
+      "text": "It is necessary, in particular for the purpose of the conformity assessment procedures, to classify devices in four risk classes and to establish a set of robust risk-based classification rules, in line with international practice."
+    },
+    {
+      "recital_number": 56,
+      "text": "The conformity assessment procedure for class A devices should be carried out, as a general rule, under the sole responsibility of manufacturers, since such devices pose a low risk to patients. For class B, class C and class D devices, an appropriate level of involvement of a notified body should be compulsory."
+    },
+    {
+      "recital_number": 57,
+      "text": "The conformity assessment procedures for devices should be further strengthened and streamlined whilst the requirements for notified bodies as regards the performance of their assessments should be clearly specified to ensure a level playing field."
+    },
+    {
+      "recital_number": 58,
+      "text": "It is appropriate that certificates of free sale contain information that makes it possible to use Eudamed in order to obtain information on the device, in particular with regard to whether it is on the market, withdrawn from the market or recalled, and on any certificate on its conformity."
+    },
+    {
+      "recital_number": 59,
+      "text": "It is necessary to clarify the requirements regarding batch release verification for the highest risk devices."
+    },
+    {
+      "recital_number": 60,
+      "text": "EU reference laboratories should be enabled to verify by laboratory testing the performance claimed by the manufacturer and the compliance of devices presenting the highest risk with the applicable CS, when such CS are available, or with other solutions chosen by the manufacturer to ensure a level of safety and performance that is at least equivalent."
+    },
+    {
+      "recital_number": 61,
+      "text": "To ensure a high level of safety and performance, demonstration of compliance with the general safety and performance requirements laid down in this Regulation should be based on clinical evidence. It is necessary to clarify the requirements for the demonstration of the clinical evidence, that is based on data on scientific validity, and the analytical performance and clinical performance of the device. To allow for a structured and transparent process, generating reliable and robust data, sourcing and assessment of available scientific information and data generated in performance studies should be based on a performance evaluation plan."
+    },
+    {
+      "recital_number": 62,
+      "text": "As a general rule, clinical evidence should be sourced from performance studies that have been carried out under the responsibility of a sponsor. It should be possible both for the manufacturer and for another natural or legal person to be the sponsor taking responsibility for the performance study."
+    },
+    {
+      "recital_number": 63,
+      "text": "It is necessary to ensure that the clinical evidence of devices is updated throughout their lifecycle. Such updating entails the planned monitoring of scientific developments and changes in medical practice by the manufacturer. Relevant new information should then trigger a reassessment of the clinical evidence of the device thus ensuring safety and performance through a continuous process of performance evaluation."
+    },
+    {
+      "recital_number": 64,
+      "text": "It should be recognised that the concept of clinical benefit for in vitro diagnostic medical devices is fundamentally different from that which applies in the case of pharmaceuticals or of therapeutic medical devices, since the benefit of in vitro diagnostic medical devices lies in providing accurate medical information on patients, where appropriate, assessed against medical information obtained through the use of other diagnostic options and technologies, whereas the final clinical outcome for the patient is dependent on further diagnostic and/or therapeutic options which could be available."
+    },
+    {
+      "recital_number": 65,
+      "text": "Where specific devices have no analytical or clinical performance or specific performance requirements are not applicable, it is appropriate to justify in the performance evaluation plan, and related reports, omissions relating to such requirements."
+    },
+    {
+      "recital_number": 66,
+      "text": "The rules on performance studies should be in line with well-established international guidance in this field, such as the international standard ISO 14155:2011 on good clinical practice for clinical investigations of medical devices for human subjects, so as to make it easier for the results of performance studies conducted in the Union to be accepted as documentation outside the Union and to make it easier for the results of performance studies conducted outside the Union in accordance with international guidelines to be accepted within the Union. In addition, the rules should be in line with the most recent version of the World Medical Association Declaration of Helsinki on Ethical Principles for Medical Research Involving Human Subjects."
+    },
+    {
+      "recital_number": 67,
+      "text": "It should be left to the Member State where a performance study is to be conducted to determine the appropriate authority to be involved in the assessment of the application to conduct a performance study and to organise the involvement of ethics committees within the timelines for the authorisation of that performance study as set out in this Regulation. Such decisions are a matter of internal organisation for each Member State. In that context, Member States should ensure the involvement of laypersons, in particular patients or patients' organisations. They should also ensure that the necessary expertise is available."
+    },
+    {
+      "recital_number": 68,
+      "text": "An electronic system should be set up at Union level to ensure that every interventional clinical performance study and other performance study involving risks for the subjects of the studies is recorded and reported in a publicly accessible database. To protect the right to protection of personal data, recognised by Article 8 of the Charter of Fundamental Rights of the European Union (‘the Charter’), no personal data of subjects participating in a performance study should be recorded in the electronic system. To ensure synergies with the area of clinical trials on medicinal products, the electronic system on performance studies should be interoperable with the EU database to be set up for clinical trials on medicinal products for human use."
+    },
+    {
+      "recital_number": 69,
+      "text": "Where an interventional clinical performance study or another performance study involving risks for the subjects is to be conducted in more than one Member State, the sponsor should have the possibility of submitting a single application in order to reduce administrative burden. In order to allow for resource-sharing and to ensure consistency regarding the assessment of the health and safety-related aspects of the device for performance study and of the scientific design of that performance study, the procedure for the assessment of such single application should be coordinated between the Member States under the direction of a coordinating Member State. Such coordinated assessment should not include the assessment of intrinsically national, local and ethical aspects of a performance study, including informed consent. For an initial period of seven years from the date of application of this Regulation, Member States should be able to participate on a voluntary basis in the coordinated assessment. After that period, all Member States should be obliged to participate in the coordinated assessment. The Commission, based on the experience gained from the voluntary coordination between Member States, should draw up a report on the application of the relevant provisions regarding the coordinated assessment procedure. In the event that the findings of the report are negative, the Commission should submit a proposal to extend the period of participation on a voluntary basis in the coordinated assessment procedure."
+    },
+    {
+      "recital_number": 70,
+      "text": "Sponsors should report certain adverse events and device deficiencies that occur during interventional clinical performance studies and other performance studies involving risks for the subjects to the Member States in which those studies are being conducted. Member States should have the possibility of terminating or suspending the studies or revoking the authorisation for those studies, if considered necessary to ensure a high level of protection of the subjects participating in such studies. Such information should be communicated to the other Member States."
+    },
+    {
+      "recital_number": 71,
+      "text": "The sponsor of a performance study should submit a summary of results of the performance study that is easily understandable for the intended user together with the performance study report, where applicable, within the timelines laid down in this Regulation. Where it is not possible to submit the summary of the results within the defined timelines for scientific reasons, the sponsor should justify this and specify when the results will be submitted."
+    },
+    {
+      "recital_number": 72,
+      "text": "With exemption of some general requirements, this Regulation should only cover performance studies intended to gather scientific data for the purpose of demonstrating conformity of devices."
+    },
+    {
+      "recital_number": 73,
+      "text": "It is necessary to clarify that performance studies using left-over specimens need not be authorised. Nevertheless, the general requirements and other additional requirements with regard to data protection and the requirements applicable to procedures that are performed in accordance with national law such as ethical review should continue to apply to all performance studies, including when using left-over specimens."
+    },
+    {
+      "recital_number": 74,
+      "text": "The principles of replacement, reduction and refinement in the area of animal experimentation laid down in the Directive 2010/63/EU of the European Parliament and the Council (16) should be observed. In particular, the unnecessary duplication of tests and studies should be avoided."
+    },
+    {
+      "recital_number": 75,
+      "text": "Manufacturers should play an active role during the post-market phase by systematically and actively gathering information from post-market experience with their devices in order to update their technical documentation and cooperate with the national competent authorities in charge of vigilance and market surveillance activities. To that end, manufacturers should establish a comprehensive post-market surveillance system, set up under their quality management system and based on a post-market surveillance plan. Relevant data and information gathered through post-market surveillance, as well as lessons learned from any implemented preventive and/or corrective actions, should be used to update any relevant part of technical documentation, such as those relating to risk assessment and performance evaluation, and should also serve the purposes of transparency."
+    },
+    {
+      "recital_number": 76,
+      "text": "In order to better protect health and safety regarding devices on the market, the electronic system on vigilance for devices should be made more effective by creating a central portal at Union level for reporting serious incidents and field safety corrective actions."
+    },
+    {
+      "recital_number": 77,
+      "text": "Member States should take appropriate measures to raise awareness among healthcare professionals, users and patients about the importance of reporting incidents. Healthcare professionals, users and patients should be encouraged and enabled to report suspected serious incidents at national level using harmonised formats. The national competent authorities should inform manufacturers of any suspected serious incident and, where a manufacturer confirms that such an incident might have occurred, the authorities concerned should ensure that appropriate follow-up action is taken in order to minimise recurrence of such incidents."
+    },
+    {
+      "recital_number": 78,
+      "text": "The evaluation of reported serious incidents and field safety corrective actions should be conducted at national level but coordination should be ensured where similar incidents have occurred or field safety corrective actions have to be carried out in more than one Member State, with the objective of sharing resources and ensuring consistency regarding the corrective action."
+    },
+    {
+      "recital_number": 79,
+      "text": "In the context of the investigation of incidents, the competent authorities should take into account, where appropriate, the information provided by and views of relevant stakeholders, including patient and healthcare professionals' organisations and manufacturers' associations."
+    },
+    {
+      "recital_number": 80,
+      "text": "The reporting of serious adverse events or device deficiencies during interventional clinical performance studies and other performance studies involving risks for the subjects, and the reporting of serious incidents occurring after a device has been placed on the market should be clearly distinguished to avoid double reporting."
+    },
+    {
+      "recital_number": 81,
+      "text": "Rules on market surveillance should be included in this Regulation to reinforce the rights and obligations of the national competent authorities, to ensure effective coordination of their market surveillance activities and to clarify the applicable procedures."
+    },
+    {
+      "recital_number": 82,
+      "text": "Any statistically significant increase in the number or severity of incidents that are not serious or in expected erroneous results that could have a significant impact on the benefit-risk analysis and which could lead to unacceptable risks should be reported to the competent authorities in order to permit their assessment and the adoption of appropriate measures."
+    },
+    {
+      "recital_number": 83,
+      "text": "An expert committee, the MDCG, composed of persons designated by the Member States based on their role and expertise in the field of medical devices including in vitro diagnostic medical devices, should be established in accordance with the conditions and modalities defined in Regulation (EU) 2017/745 to fulfil the tasks conferred on it by this Regulation and by Regulation (EU) 2017/745, to provide advice to the Commission and to assist the Commission and the Member States in ensuring a harmonised implementation of this Regulation. The MDCG should be able to establish subgroups in order to have access to necessary in-depth technical expertise in the field of medical devices including in vitro diagnostic medical devices. When establishing subgroups, appropriate consideration should be given to the possibility of involving existing groups at Union level in the field of medical devices."
+    },
+    {
+      "recital_number": 84,
+      "text": "Closer coordination between national competent authorities through information exchange and coordinated assessments under the direction of a coordinating authority is essential for ensuring a uniform high level of health and safety protection within the internal market, in particular in the areas of performance studies and vigilance. The principle of coordinated exchange and assessment should also apply across other authority activities described in this Regulation, such as the designation of notified bodies and should be encouraged in the area of market surveillance of devices. Joint working, coordination and communication of activities should also lead to more efficient use of resources and expertise at national level."
+    },
+    {
+      "recital_number": 85,
+      "text": "The Commission should provide scientific, technical and corresponding logistical support to coordinating national authorities and ensure that the regulatory system for devices is effectively and uniformly implemented at Union level based on sound scientific evidence."
+    },
+    {
+      "recital_number": 86,
+      "text": "The Union and, where appropriate, the Member States should actively participate in international regulatory cooperation in the field of devices to facilitate the exchange of safety-related information regarding devices and foster the further development of international regulatory guidelines that promote the adoption in other jurisdictions of regulations that lead to a level of health and safety protection equivalent to that set by this Regulation."
+    },
+    {
+      "recital_number": 87,
+      "text": "Member States should take all necessary measures to ensure that the provisions of this Regulation are implemented, including by laying down effective, proportionate and dissuasive penalties for their infringement."
+    },
+    {
+      "recital_number": 88,
+      "text": "Whilst this Regulation should not affect the right of Member States to levy fees for activities at national level, Member States should, in order to ensure transparency, inform the Commission and the other Member States before they decide on the level and structure of such fees. In order to further ensure transparency, the structure and level of the fees should be publicly available on request."
+    },
+    {
+      "recital_number": 89,
+      "text": "This Regulation respects the fundamental rights and observes the principles recognised in particular by the Charter and in particular human dignity, the integrity of the person, the protection of personal data, the freedom of art and science, the freedom to conduct business and the right to property. This Regulation should be applied by the Member States in accordance with those rights and principles."
+    },
+    {
+      "recital_number": 90,
+      "text": "The power to adopt delegated acts in accordance with Article 290 TFEU should be delegated to the Commission in order to amend certain non-essential provisions of this Regulation. It is of particular importance that the Commission carry out appropriate consultations during its preparatory work, including at expert level, and that those consultations be conducted in accordance with the principles laid down in the Interinstitutional Agreement of 13 April 2016 on Better Law Making (17). In particular, to ensure equal participation in the preparation of delegated acts, the European Parliament and the Council receive all documents at the same time as Member States' experts, and their experts systematically have access to meetings of Commission expert groups dealing with preparation of delegated acts."
+    },
+    {
+      "recital_number": 91,
+      "text": "In order to ensure uniform conditions for the implementation of this Regulation, implementing powers should be conferred on the Commission. Those powers should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council (18)."
+    },
+    {
+      "recital_number": 92,
+      "text": "The advisory procedure should be used for implementing acts that set out the form and presentation of the data elements of manufacturers' summaries of safety and performance, and that establish the model for certificates of free sale, given that such implementing acts are of a procedural nature and do not directly have an impact on health and safety at Union level."
+    },
+    {
+      "recital_number": 93,
+      "text": "The Commission should adopt immediately applicable implementing acts where, in duly justified cases relating to the extension to the territory of the Union of a national derogation from the applicable conformity assessment procedures, imperative grounds of urgency so require."
+    },
+    {
+      "recital_number": 94,
+      "text": "In order to enable it to designate issuing entities and EU reference laboratories, implementing powers should be conferred on the Commission."
+    },
+    {
+      "recital_number": 95,
+      "text": "To allow economic operators, especially SMEs, notified bodies, Member States and the Commission to adapt to the changes introduced by this Regulation and to ensure its proper application, it is appropriate to provide for a sufficient transitional period for that adaptation and for the organisational arrangements that are to be made. However, certain parts of the Regulation that directly affect Member States and the Commission should be implemented as soon as possible. It is also particularly important that, by the date of application of this Regulation, a sufficient number of notified bodies be designated in accordance with the new requirements so as to avoid any shortage of devices on the market. Nonetheless, it is necessary that any designation of a notified body in accordance with the requirements of this Regulation prior to the date of its application be without prejudice to the validity of the designation of those notified bodies under Directive 98/79/EC and to their capacity to continue issuing valid certificates under that Directive until the date of application of this Regulation."
+    },
+    {
+      "recital_number": 96,
+      "text": "In order to ensure a smooth transition to the new rules for registration of devices and of certificates, the obligation to submit the relevant information to the electronic systems set up at Union level pursuant to this Regulation should, in the event that the corresponding IT systems are developed according to plan, only become fully effective from 18 months after the date of application of this Regulation. During this transitional period, certain provisions of Directive 98/79/EC should remain in force. However, in order to avoid multiple registrations, economic operators and notified bodies who register in the relevant electronic systems set up at Union level pursuant to this Regulation should be considered to be in compliance with the registration requirements adopted by the Member States pursuant to those provisions."
+    },
+    {
+      "recital_number": 97,
+      "text": "In order to provide for a smooth introduction of the UDI system, the moment of application of the obligation to place the UDI carrier on the label of the device should vary from one to five years after the date of application of this Regulation depending upon the class of the device concerned."
+    },
+    {
+      "recital_number": 98,
+      "text": "Directive 98/79/EC should be repealed to ensure that only one set of rules applies to the placing of in vitro diagnostic medical devices on the market and the related aspects covered by this Regulation. Manufacturers' obligations as regards the making available of documentation regarding devices they placed on the market and manufacturers' and Member States' obligations as regards vigilance activities for devices placed on the market pursuant to that Directive should however continue to apply. While it should be left to Member States to decide how to organise vigilance activities, it is desirable for them to have the possibility of reporting adverse incidents related to devices placed on the market pursuant to that Directive using the same tools as those for reporting on devices placed on the market pursuant to this Regulation. However, Decision 2010/227/EU adopted in implementation of that Directive and Council Directives 90/385/EEC (19) and 93/42/EEC (20) should also be repealed as from the date when Eudamed becomes fully functional."
+    },
+    {
+      "recital_number": 99,
+      "text": "The requirements of this Regulation should be applicable to all devices placed on the market or put into service from the date of application of this Regulation. However, in order to provide for a smooth transition it should be possible, for a limited period of time from that date, for devices to be placed on the market or put into service by virtue of a valid certificate issued pursuant to Directive 98/79/EC."
+    },
+    {
+      "recital_number": 100,
+      "text": "The European Data Protection Supervisor has given an opinion (21) pursuant to Article 28(2) of Regulation (EC) No 45/2001."
+    },
+    {
+      "recital_number": 101,
+      "text": "Since the objectives of this Regulation, namely to ensure the smooth functioning of the internal market as regards medical devices and to ensure high standards of quality and safety for in vitro diagnostic medical devices, thus ensuring a high level of protection of health and safety of patients, users and other persons, cannot be sufficiently achieved by the Member States but can rather, by reason of its scale and effects, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve those objectives,"
+    },
+    {
+      "recital_number": 101,
+      "text": "Since the objectives of this Regulation, namely to ensure the smooth functioning of the internal market as regards medical devices and to ensure high standards of quality and safety for in vitro diagnostic medical devices, thus ensuring a high level of protection of health and safety of patients, users and other persons, cannot be sufficiently achieved by the Member States but can rather, by reason of its scale and effects, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve those objectives,"
     }
   ]
 }

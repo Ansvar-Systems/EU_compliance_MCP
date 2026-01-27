@@ -1,9 +1,8 @@
 {
   "id": "EUCC",
-  "full_name": "EU Common Criteria Cybersecurity Certification",
+  "full_name": "Regulation 32024R0482",
   "celex_id": "32024R0482",
-  "effective_date": "2024-02-27",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg_impl/2024/482/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0482",
   "articles": [
     {
       "number": "1",
@@ -381,6 +380,144 @@
       "term": "market surveillance authority",
       "definition": "an authority defined in Article 3(4) of Regulation (EU) 2019/1020.",
       "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "This Regulation specifies the roles, rules and obligations, as well as the structure of the European Common Criteria-based cybersecurity certification scheme (EUCC) in accordance with the European cybersecurity certification framework set out in Regulation (EU) 2019/881. The EUCC builds on the Mutual Recognition Agreement (‘MRA’) of Information Technology Security Certificates of the Senior Officials Group Information Systems Security (2) (‘SOG-IS’) using the Common Criteria, including the group’s procedures and documents."
+    },
+    {
+      "recital_number": 2,
+      "text": "The scheme should be based on established international standards. Common Criteria is an international standard for information security evaluation published, for instance, as ISO/IEC 15408 Information security, cybersecurity and privacy protection — Evaluation criteria for IT security. It is based on third party evaluation and envisages seven Evaluation Assurance Levels (‘EAL’). The Common Criteria is accompanied by the Common Evaluation Methodology, published, for instance, as ISO/IEC 18045 - Information security, cybersecurity and privacy protection - Evaluation criteria for IT security - Methodology for IT security evaluation. Specifications and documents that apply the provisions of this Regulation may relate to a publicly available standard that mirrors the standard used in certification under this Regulation, such as Common Criteria for Information Technology Security Evaluation and Common Methodology for Information Technology Security Evaluation."
+    },
+    {
+      "recital_number": 3,
+      "text": "The EUCC uses the Common Criteria’s vulnerability assessment family (AVA_VAN), components 1 to 5. The five components provide all the main determinants and dependencies for analysing vulnerabilities of ICT products. As the components correspond to the assurance levels in this Regulation, they allow for a well-informed choice of assurance, based on the evaluations carried out of the security requirements and the risk associated with the intended use of the ICT product. The applicant for an EUCC certificate should provide the documentation related to the intended use of the ICT product and the analysis of the levels of risks associated with such usage in order to enable the conformity assessment body to evaluate the suitability of the assurance level selected. Where the evaluation and certification activities are performed by the same conformity assessment body, the applicant should submit the requested information only once."
+    },
+    {
+      "recital_number": 4,
+      "text": "A technical domain is a reference framework that covers a group of ICT products that have specific and similar security functionality that mitigates attacks where the characteristics are common to a given assurance level. A technical domain describes in state-of-the-art documents the specific security requirements as well as additional evaluation methods, techniques and tools that apply to the certification of ICT products that are covered by this technical domain. A technical domain therefore also fosters harmonisation of the evaluation of covered ICT products. Two technical domains are currently widely used for certification at levels AVA_VAN.4 and AVA_VAN.5. The first technical domain is the ‘Smart cards and similar devices’ technical domain, where significant portions of the required security functionality depend on specific, tailored and often separable hardware elements (e.g. smart card hardware, integrated circuits, smart card composite products, Trusted Platform Modules as used in Trusted Computing, or digital tachograph cards). The second technical domain is ‘Hardware devices with security boxes’, where significant portions of the required security functionality depend upon a hardware physical envelope (referred to as a ‘Security Box’) that is designed to resist direct attacks, e.g. payment terminals, tachograph vehicle units, smart meters, access control terminals and Hardware Security Modules)."
+    },
+    {
+      "recital_number": 5,
+      "text": "When applying for certification, the applicant should relate its reasoning for selecting an assurance level to the objectives laid down in Article 51 of Regulation (EU) 2019/881, and to the selection of components from the catalogue of security functional requirements and security assurance requirements contained in Common Criteria. Certification bodies should assess the appropriateness of the chosen assurance level and ensure that the chosen level is commensurate with the level of risk associated with the intended use of the ICT product."
+    },
+    {
+      "recital_number": 6,
+      "text": "Under the Common Criteria, certification is carried out against a security target which encompasses a definition of the ICT product’s security problem as well as the security objectives that address the security problem. The security problem provides details on the intended use of the ICT product and the risks associated with such use. A select set of security requirements responds to both the security problem and security objectives of an ICT product."
+    },
+    {
+      "recital_number": 7,
+      "text": "Protection profiles are an effective means to predetermine the common criteria that are applicable to a given category of ICT products and therefore also an essential element in the certification process of ICT products covered by the protection profile. A protection profile is used to assess future security targets that fall under the given ICT product category addressed by that protection profile. They further streamline and enhance the efficiency of the ICT product certification process and help users to specify an ICT product’s functionality correctly and effectively. Protection profiles should thus be considered as integral part of the ICT process leading to the certification of ICT products."
+    },
+    {
+      "recital_number": 8,
+      "text": "In order to enable their role in the ICT process supporting the development and delivery of a certified ICT product, protection profiles themselves should be able to be certified independently from a certification of the specific ICT product that falls under the respective protection profile. It is therefore essential to apply at least the same level of scrutiny to protection profiles as to security targets in order to ensure a high level of cybersecurity. Protection profiles should be evaluated and certified separately from the related ICT product and solely by applying the Common Criteria’s and Common Evaluation Methodology’s assurance class for protection profiles (APE) and, where applicable, for configurations of protection profiles (ACE). Due to their important and sensitive role as a benchmark in the certification of ICT products, they should be certified only by public bodies or by a certification body that has received prior approval for the specific protection profile by the national cybersecurity certification authority. Due to their fundamental role for certification at assurance level ‘high’, in particular outside of technical domains, protection profiles should be developed as state-of-the-art documents which should be endorsed by the European Cybersecurity Certification Group."
+    },
+    {
+      "recital_number": 9,
+      "text": "Certified protection profiles should be included in the EUCC conformity and compliance monitoring by the national cybersecurity certification authorities. Where methodology, tools and skills applied to approaches for the evaluation of ICT products are available for specific certified protection profiles, technical domains may be based on those specific protection profiles."
+    },
+    {
+      "recital_number": 10,
+      "text": "To achieve a high level of trust and assurance in certified ICT products, self-assessment should not be permitted under this Regulation. Only third-party conformity assessment by ITSEF and certification bodies should be allowed."
+    },
+    {
+      "recital_number": 11,
+      "text": "The SOG-IS community provided joint interpretations and approaches for the application of the Common Criteria and the Common Evaluation Methodology in certification, in particular for the assurance level ‘high’ pursued by the technical domains “Smart cards and similar devices’ and “Hardware devices with security boxes”. The reuse of such supporting documents in the EUCC scheme ensures a smooth transition from the nationally implemented SOG-IS schemes to the harmonised EUCC scheme. Therefore, harmonised evaluation methodologies of general relevance for all certification activities should be included in this Regulation. In addition, the Commission should be able to request the European Cybersecurity Certification Group to adopt an opinion endorsing and recommending the application of evaluation methodologies specified in state-of-the-art documents for the certification of the ICT product or protection profile under the EUCC scheme. This Regulation therefore lists in Annex I the state-of-the-art documents for the evaluation activities carried out by conformity assessment bodies. The European Cybersecurity Certification Group should endorse and maintain state-of-the-art documents. State-of-the-art documents should be used in certification. Only in exceptional and duly justified cases, a conformity assessment body may not use them subject to specific conditions, in particular the approval by the national cybersecurity certification authority."
+    },
+    {
+      "recital_number": 12,
+      "text": "Certification of ICT products at AVA_VAN level 4 or 5 should only be possible under specific conditions and where a specific evaluation methodology is available. The specific evaluation methodology may be enshrined in state-of-the-art documents relevant for the technical domain, or in specific protection profiles adopted as state-of-the-art document that are relevant for the product category concerned. Only in exceptional and duly justified cases, certification at these assurance levels should be possible, subject to specific conditions, in particular approval by the national cybersecurity certification authority, including of the applicable evaluation methodology. Such exceptional and duly justified cases may exist where Union or national legislation require certification of an ICT product at AVA_VAN level 4 or 5. Similarly, in exceptional and duly justified cases, protection profiles may be certified without applying the relevant state-of-the-art documents, subject to specific conditions, in particular the approval by the national cybersecurity certification authority, including of the applicable evaluation methodology."
+    },
+    {
+      "recital_number": 13,
+      "text": "The marks and labels used under EUCC aim at visibly demonstrating the trustworthiness of the certified ICT product to users and enable them to make an informed choice when purchasing ICT products. The use of marks and labels should also be subject to the rules and conditions set out in ISO/IEC 17065 and, where applicable, ISO/IEC 17030 with the applicable guidance."
+    },
+    {
+      "recital_number": 14,
+      "text": "Certification bodies should decide on the duration of the validity of certificates taking into account the life cycle of the ICT product concerned. The duration of the validity should not exceed 5 years. National cybersecurity certification authorities should work on harmonising duration validity in the Union."
+    },
+    {
+      "recital_number": 15,
+      "text": "Where the scope of an existing EUCC certificate is reduced, the certificate shall be withdrawn and a new certificate with the new scope should be issued to ensure that users are clearly informed about the current scope and assurance level of the certificate of a given ICT product."
+    },
+    {
+      "recital_number": 16,
+      "text": "The certification of protection profiles differs from that of ICT products as it concerns an ICT process. As a protection profile covers a category of ICT products, its evaluation and certification cannot be done on the basis of a single ICT product. As a protection profile unifies the general security requirements regarding a category of ICT products and independent of the ICT product’s manifestation by its vendor, the period of validity of an EUCC certificate for a protection profile should, in principle, cover 5 years as a minimum and may be extended to the lifetime of the protection profile."
+    },
+    {
+      "recital_number": 17,
+      "text": "A conformity assessment body is defined as a body that performs conformity assessment activities including calibration, testing, certification and inspection. In order to ensure a high quality of services, this Regulation specifies that testing activities on the one hand, and certification and inspection activities on the other hand, should be carried out by entities operating independently from each other, namely Information Technology Security Evaluation Facilities (‘ITSEF’), and certification bodies, respectively. Both types of conformity assessment bodies should be accredited and, in certain situations, authorised."
+    },
+    {
+      "recital_number": 18,
+      "text": "A certification body should be accredited in accordance with standard ISO/IEC 17065 by the national accreditation body for assurance level ‘substantial’ and ‘high’. In addition to the accreditation in accordance with Regulation (EU) 2019/881 in conjunction with Regulation (EC) No 765/2008, conformity assessment bodies should meet specific requirements in order to guarantee their technical competence for the evaluation of cybersecurity requirements under assurance level ‘high’ of the EUCC, which is confirmed by an ‘authorisation’. To support the authorisation process, relevant state-of-the-art documents should be developed, and be published by ENISA after endorsement by the European Cybersecurity Certification Group."
+    },
+    {
+      "recital_number": 19,
+      "text": "The technical competence of an ITSEF should be assessed through the accreditation of the testing laboratory in accordance with ISO/IEC 17025 and complemented by ISO/IEC 23532-1 for the full set of evaluation activities that are relevant to the assurance level and specified in ISO/IEC 18045 in conjunction with ISO/IEC 15408. Both the certification body and the ITSEF should establish and maintain an appropriate competence management system for personnel that draws from ISO/IEC 19896-1 for the elements and levels of competence and for the appraisal of competence. For the level of knowledge, skills, experience and education, the applicable requirements for the evaluators should be drawn from ISO/IEC 19896-3. Equivalent provisions and measures dealing with deviations from such competence management systems should be demonstrated, in line with the system’s objectives."
+    },
+    {
+      "recital_number": 20,
+      "text": "In order to be authorised, the ITSEF should demonstrate its capability to determine the absence of known vulnerabilities, the correct and consistent implementation of state-of-the art security functionalities for the specific technology concerned and the targeted ICT product’s resistance to skilled attackers. Additionally, for authorisations in the technical domain of ‘Smart cards and similar devices’, the ITSEF should also demonstrate the technical capabilities necessary for the evaluation activities and related tasks as defined in the ‘Minimum ITSEF requirements for security evaluations of smart cards and similar devices’ (3) supporting document under the Common Criteria. For authorisation in the technical domain ‘Hardware devices with security boxes’, the ITSEF should, in addition, demonstrate the minimum technical requirements necessary for carrying out evaluation activities and related tasks on hardware devices with security boxes’ as recommended by the ECCG. In the context of the minimum requirements, the ITSEF should be capable of conducting the different types of attacks set out in ‘Application of Attack Potential to Hardware Devices with Security Boxes’ supporting document under the Common Criteria. Those capabilities encompass the evaluator’s knowledge and skills and the equipment and evaluation methods needed to determine and assess the different types of attacks."
+    },
+    {
+      "recital_number": 21,
+      "text": "The national cybersecurity certification authority should monitor the compliance of certification bodies, ITSEF and the holders of certificates with their obligations stemming from this Regulation and the Regulation (EU) 2019/881. National cybersecurity certification authority should use any appropriate sources of information to this end, including information received from certification process participants and own investigations."
+    },
+    {
+      "recital_number": 22,
+      "text": "Certification bodies should cooperate with relevant market surveillance authorities and take into account any vulnerability information that could be relevant to ICT products for which they have issued certificates. Certification bodies should monitor the protection profiles they have certified to identify whether the security requirements set out for a category of ICT products continue to reflect the latest developments in the threat landscape."
+    },
+    {
+      "recital_number": 23,
+      "text": "In support of the compliance monitoring, the national cybersecurity certification authorities should cooperate with the relevant market surveillance authorities in accordance with Article 58 of Regulation (EU) 2019/881 and Regulation (EU) 2019/1020 of the European Parliament and of the Council (4). Economic operators in the Union are obliged to share information and cooperate with market surveillance authorities, pursuant to Article 4(3) of the Regulation 2019/1020."
+    },
+    {
+      "recital_number": 24,
+      "text": "The certification bodies should monitor the compliance of the holders of a certificate and the conformity of all certificates issued under the EUCC. The monitoring should ensure that all evaluation reports provided by an ITSEF, and the conclusions taken therein as well as the evaluation criteria and methods are consistently and correctly applied across all certification activities."
+    },
+    {
+      "recital_number": 25,
+      "text": "Where potential non-compliance issues are detected which affect a certified ICT product, it is important to ensure a proportional response. Certificates may therefore be suspended. Suspension should entail certain limitations regarding the promotion and use of the ICT product in question, but not affect the validity of the certificate. Suspension should be notified to the purchasers of the affected ICT products by the holder of the EU certificate, whilst the relevant market surveillance authorities should be notified by the relevant national cybersecurity certification authority. To inform the public, ENISA should publish information about a suspension on a dedicated website."
+    },
+    {
+      "recital_number": 26,
+      "text": "The holder of an EUCC certificate should implement necessary vulnerability management procedures and ensure that those procedures are embedded in their organisation. When becoming aware of a potential vulnerability, the holder of the EUCC certificate should perform a vulnerability impact analysis. Where the vulnerability impact analysis confirms that the vulnerability can be exploited, the certificate holder should send a report of the assessment to the certification body which should in turn inform the national cybersecurity certification authority. The report should inform about the impact of the vulnerability, the necessary changes or remedial solutions that are required including possible broader implications of the vulnerability as well as remedial solutions for other products. Where necessary, the standard EN ISO/IEC 29147 should supplement the procedure for the vulnerability disclosure."
+    },
+    {
+      "recital_number": 27,
+      "text": "For the purpose of certification, conformity assessment bodies and national cybersecurity certification authorities obtain confidential and sensitive data and business secrets, also relating to intellectual property or compliance monitoring that require adequate protection. They should therefore have the necessary technical competencies and knowledge and should establish systems in place for the protection of information. The requirements and conditions for the protection of information should be met for both accreditation and authorisation."
+    },
+    {
+      "recital_number": 28,
+      "text": "ENISA should provide the list of certified protection profiles on its cybersecurity certification website and indicate their status, in accordance with Regulation (EU) 2019/881."
+    },
+    {
+      "recital_number": 29,
+      "text": "This Regulation sets out conditions for mutual recognition agreements with third countries. Such mutual recognition agreements may be bi- or multilateral and should replace similar agreements currently in place. In view of facilitating a smooth transition to such mutual recognition agreements, Member States may continue existing cooperation arrangements with third countries for a limited period."
+    },
+    {
+      "recital_number": 30,
+      "text": "Certification bodies issuing EUCC certificates at assurance level ‘high’, as well as the relevant associated ITSEFs, should undergo peer assessments. The objective of peer assessments should be to determine the continued compliance of a peer-assessed certification body’s constitution and procedures with the requirements of the EUCC scheme. Peer assessments are different from peer reviews among national cybersecurity certification authorities, as provided for in Article 59 of Regulation (EU) 2019/881. Peer assessments should ascertain that certification bodies work in a harmonised way and produce the same quality of certificates and they should identify any potential strength or weakness in the performance of certification bodies, also in view of sharing best practices. As there are different types of certification bodies, different types of peer assessment should be allowed. In more complex cases, such as certification bodies issuing certificates on different AVA_VAN levels, different types of peer assessment can be used, provided that all the requirements are met."
+    },
+    {
+      "recital_number": 31,
+      "text": "The European Cybersecurity Certification Group should play an important role in the maintenance of the scheme. It should, inter alia, be carried out through cooperation with the private sector, the creation of specialised subgroups and relevant preparatory work and assistance requested by the Commission. The European Cybersecurity Certification Group plays an important role in the endorsement of state-of-the-art documents. In the endorsement and adoption of state-of-the-art documents, due account should be taken of the elements referred to in Article 54(1) letter c) of Regulation (EU) 2019/881. Technical domains and state-of-the art documents should be published in Annex I of this Regulation. Protection profiles that have been adopted as state-of-the-art documents should be published in Annex II. In order to ensure that these Annexes are dynamic, the Commission may amend them, in accordance with the procedure set out in Article 66(2) of Regulation (EU) 2019/881, and taking into account the opinion of the European Cybersecurity Certification Group. Annex III contains recommended protection profiles, which at the time of entry into force of this Regulation are not state-of-the-art documents. They should be made public on the ENISA website referred to in Article 50(1) of Regulation (EU) 2019/881."
+    },
+    {
+      "recital_number": 32,
+      "text": "This Regulation should start to apply 12 months after its entry into force. The requirements of Chapter IV and Annex V do not require a transition period and should therefore apply as from the entry into force of this Regulation."
+    },
+    {
+      "recital_number": 33,
+      "text": "The measures provided for in this Regulation are consistent with the opinion of the European Cybersecurity Certification Committee established by Article 66 of Regulation (EU) 2019/881,\n\nHAS ADOPTED THIS REGULATION:\n\nCHAPTER I\n\nGENERAL PROVISIONS"
+    },
+    {
+      "recital_number": 33,
+      "text": "The measures provided for in this Regulation are consistent with the opinion of the European Cybersecurity Certification Committee established by Article 66 of Regulation (EU) 2019/881,\n\nHAS ADOPTED THIS REGULATION:\n\nCHAPTER I\n\nGENERAL PROVISIONS"
     }
   ]
 }

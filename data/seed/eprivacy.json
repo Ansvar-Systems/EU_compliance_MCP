@@ -1,9 +1,8 @@
 {
   "id": "EPRIVACY",
-  "full_name": "ePrivacy Directive",
+  "full_name": "Regulation 02002L0058-20091219",
   "celex_id": "02002L0058-20091219",
-  "effective_date": "2002-07-31",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/dir/2002/58/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002L0058-20091219",
   "articles": [
     {
       "number": "1",
@@ -111,5 +110,6 @@
       "text": "This Directive is addressed to the Member States.\n\n(\n\n1\n\n)\n\nOJ C 365 E, 19.12.2000, p. 223.\n\n(\n\n2\n\n)\n\nOJ C 123, 25.4.2001, p. 53.\n\n(\n\n3\n\n) Opinion of the European Parliament of 13 November 2001 (not yet published in the Official Journal), Council Common Position of 28 January 2002 (OJ C 113 E, 14.5.2002, p. 39) and Decision of the European Parliament of 30 May 2002 (not yet published in the Official Journal). Council Decision of 25 June 2002.\n\n(\n\n4\n\n)\n\nOJ L 281, 23.11.1995, p. 31.\n\n(\n\n5\n\n)\n\nOJ L 24, 30.1.1998, p. 1.\n\n(\n\n6\n\n)\n\nOJ L 178, 17.7.2000, p. 1.\n\n(\n\n7\n\n)\n\nOJ L 91, 7.4.1999, p. 10.\n\n(\n\n8\n\n)\n\nOJ L 108, 24.4.2002, p. 33.\n\n(\n\n9\n\n)\n\nOJ L 204, 21.7.1998, p. 37. Directive as amended by Directive 98/48/EC (OJ L 217, 5.8.1998, p. 18).\n\n(\n\n10\n\n)\n\nOJ L 36, 7.2.1987, p. 31. Decision as last amended by the 1994 Act of Accession.\n\n(\n\n11\n\n)\n\nOJ L 105, 13.4.2006, p. 54.\n\n////////////////////////$(document).ready(function(){generateTOC(true,'', 'Top','true');scrollToCurrentUrlAnchor();});//"
     }
   ],
-  "definitions": []
+  "definitions": [],
+  "recitals": []
 }

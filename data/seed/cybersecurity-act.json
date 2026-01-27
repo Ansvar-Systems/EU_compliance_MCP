@@ -3,7 +3,7 @@
   "full_name": "EU Cybersecurity Act",
   "celex_id": "32019R0881",
   "effective_date": "2019-06-27",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881",
   "articles": [
     {
       "number": "1",
@@ -529,6 +529,452 @@
       "term": "conformity self-assessment",
       "definition": "an action carried out by a manufacturer or provider of ICT products, ICT services or ICT processes, which evaluates whether those ICT products, ICT services or ICT processes meet the requirements of a specific European cybersecurity certification scheme. TITLE II ENISA (THE EUROPEAN UNION AGENCY FOR CYBERSECURITY) Mandate and objectives",
       "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Network and information systems and electronic communications networks and services play a vital role in society and have become the backbone of economic growth. Information and communications technology (ICT) underpins the complex systems which support everyday societal activities, keep our economies running in key sectors such as health, energy, finance and transport, and, in particular, support the functioning of the internal market."
+    },
+    {
+      "recital_number": 2,
+      "text": "The use of network and information systems by citizens, organisations and businesses across the Union is now pervasive. Digitisation and connectivity are becoming core features in an ever growing number of products and services and with the advent of the internet of Things (IoT) an extremely high number of connected digital devices are expected to be deployed across the Union during the next decade. While an increasing number of devices is connected to the internet, security and resilience are not sufficiently built in by design, leading to insufficient cybersecurity. In that context, the limited use of certification leads to individual, organisational and business users having insufficient information about the cybersecurity features of ICT products, ICT services and ICT processes, which undermines trust in digital solutions. Network and information systems are capable of supporting all aspects of our lives and drive the Union’s economic growth. They are the cornerstone for achieving the digital single market."
+    },
+    {
+      "recital_number": 3,
+      "text": "Increased digitisation and connectivity increase cybersecurity risks, thus making society as a whole more vulnerable to cyber threats and exacerbating the dangers faced by individuals, including vulnerable persons such as children. In order to mitigate those risks, all necessary actions need to be taken to improve cybersecurity in the Union so that network and information systems, communications networks, digital products, services and devices used by citizens, organisations and businesses – ranging from small and medium-sized enterprises (SMEs), as defined in Commission Recommendation 2003/361/EC (4), to operators of critical infrastructure – are better protected from cyber threats."
+    },
+    {
+      "recital_number": 4,
+      "text": "By making the relevant information available to the public, the European Union Agency for Network and Information Security (ENISA), as established by Regulation (EU) No 526/2013 of the European Parliament and of the Council (5) contributes to the development of the cybersecurity industry in the Union, in particular SMEs and start-ups. ENISA should strive for closer cooperation with universities and research entities in order to contribute to reducing dependence on cybersecurity products and services from outside the Union and to reinforce supply chains inside the Union."
+    },
+    {
+      "recital_number": 5,
+      "text": "Cyberattacks are on the increase and a connected economy and society that is more vulnerable to cyber threats and attacks requires stronger defences. However, while cyberattacks often take place across borders, the competence of, and policy responses by, cybersecurity and law enforcement authorities are predominantly national. Large-scale incidents could disrupt the provision of essential services across the Union. This necessitates effective and coordinated responses and crisis management at Union level, building on dedicated policies and wider instruments for European solidarity and mutual assistance. Moreover, a regular assessment of the state of cybersecurity and resilience in the Union, based on reliable Union data, as well as systematic forecasts of future developments, challenges and threats, at Union and global level, are important for policy makers, industry and users."
+    },
+    {
+      "recital_number": 6,
+      "text": "In light of the increased cybersecurity challenges faced by the Union, there is a need for a comprehensive set of measures that would build on previous Union action and would foster mutually reinforcing objectives. Those objectives include further increasing the capabilities and preparedness of Member States and businesses, as well as improving cooperation, information sharing and coordination across Member States and Union institutions, bodies, offices and agencies. Furthermore, given the borderless nature of cyber threats, there is a need to increase capabilities at Union level that could complement the action of Member States, in particular in cases of large-scale cross-border incidents and crises, while taking into account the importance of maintaining and further enhancing the national capabilities to respond to cyber threats of all scales."
+    },
+    {
+      "recital_number": 7,
+      "text": "Additional efforts are also needed to increase citizens’, organisations’ and businesses’ awareness of cybersecurity issues. Moreover, given that incidents undermine trust in digital service providers and in the digital single market itself, especially among consumers, trust should be further strengthened by offering information in a transparent manner on the level of security of ICT products, ICT services and ICT processes that stresses that even a high level of cybersecurity certification cannot guarantee that an ICT product, ICT service or ICT process is completely secure. An increase in trust can be facilitated by Union-wide certification providing for common cybersecurity requirements and evaluation criteria across national markets and sectors."
+    },
+    {
+      "recital_number": 8,
+      "text": "Cybersecurity is not only an issue related to technology, but one where human behaviour is equally important. Therefore, ‘cyber-hygiene’, namely, simple, routine measures that, where implemented and carried out regularly by citizens, organisations and businesses, minimise their exposure to risks from cyber threats, should be strongly promoted."
+    },
+    {
+      "recital_number": 9,
+      "text": "For the purpose of strengthening Union cybersecurity structures, it is important to maintain and develop the capabilities of Member States to comprehensively respond to cyber threats, including to cross-border incidents."
+    },
+    {
+      "recital_number": 10,
+      "text": "Businesses and individual consumers should have accurate information regarding the assurance level with which the security of their ICT products, ICT services and ICT processes has been certified. At the same time, no ICT product or ICT service is wholly cyber-secure and basic rules of cyber-hygiene have to be promoted and prioritised. Given the growing availability of IoT devices, there is a range of voluntary measures that the private sector can take to reinforce trust in the security of ICT products, ICT services and ICT processes."
+    },
+    {
+      "recital_number": 11,
+      "text": "Modern ICT products and systems often integrate and rely on one or more third-party technologies and components such as software modules, libraries or application programming interfaces. This reliance, which is referred to as a ‘dependency’, could pose additional cybersecurity risks as vulnerabilities found in third-party components could also affect the security of the ICT products, ICT services and ICT processes. In many cases, identifying and documenting such dependencies enables end users of ICT products, ICT services and ICT processes to improve their cybersecurity risk management activities by improving, for example, users’ cybersecurity vulnerability management and remediation procedures."
+    },
+    {
+      "recital_number": 12,
+      "text": "Organisations, manufacturers or providers involved in the design and development of ICT products, ICT services or ICT processes should be encouraged to implement measures at the earliest stages of design and development to protect the security of those products, services and processes to the highest possible degree, in such a way that the occurrence of cyberattacks is presumed and their impact is anticipated and minimised (‘security-by-design’). Security should be ensured throughout the lifetime of the ICT product, ICT service or ICT process by design and development processes that constantly evolve to reduce the risk of harm from malicious exploitation."
+    },
+    {
+      "recital_number": 13,
+      "text": "Undertakings, organisations and the public sector should configure the ICT products, ICT services or ICT processes designed by them in a way that ensures a higher level of security which should enable the first user to receive a default configuration with the most secure settings possible (‘security by default’), thereby reducing the burden on users of having to configure an ICT product, ICT service or ICT process appropriately. Security by default should not require extensive configuration or specific technical understanding or non-intuitive behaviour on the part of the user, and should work easily and reliably when implemented. If, on a case-by-case basis, a risk and usability analysis leads to the conclusion that such a setting by default is not feasible, users should be prompted to opt for the most secure setting."
+    },
+    {
+      "recital_number": 14,
+      "text": "Regulation (EC) No 460/2004 of the European Parliament and of the Council (6) established ENISA with the purposes of contributing to the goals of ensuring a high and effective level of network and information security within the Union, and developing a culture of network and information security for the benefit of citizens, consumers, enterprises and public administrations. Regulation (EC) No 1007/2008 of the European Parliament and of the Council (7) extended ENISA’s mandate until March 2012. Regulation (EU) No 580/2011 of the European Parliament and of the Council (8) further extended ENISA’s mandate until 13 September 2013. Regulation (EU) No 526/2013 extended ENISA’s mandate until 19 June 2020."
+    },
+    {
+      "recital_number": 15,
+      "text": "The Union has already taken important steps to ensure cybersecurity and to increase trust in digital technologies. In 2013, the Cybersecurity Strategy of the European Union was adopted to guide the Union’s policy response to cyber threats and risks. In an effort to better protect citizens online, the Union’s first legal act in the field of cybersecurity was adopted in 2016 in the form of Directive (EU) 2016/1148 of the European Parliament and of the Council (9). Directive (EU) 2016/1148 put in place requirements concerning national capabilities in the field of cybersecurity, established the first mechanisms to enhance strategic and operational cooperation between Member States, and introduced obligations concerning security measures and incident notifications across sectors which are vital for the economy and society, such as energy, transport, drinking water supply and distribution, banking, financial market infrastructures, healthcare, digital infrastructure as well as key digital service providers (search engines, cloud computing services and online marketplaces).\n\nA key role was attributed to ENISA in supporting the implementation of that Directive. In addition, fighting effectively against cybercrime is an important priority in the European Agenda on Security, contributing to the overall aim of achieving a high level of cybersecurity. Other legal acts such as Regulation (EU) 2016/679 of the European Parliament and of the Council (10) and Directives 2002/58/EC (11) and (EU) 2018/1972 (12) of the European Parliament and of the Council also contribute to a high level of cybersecurity in the digital single market."
+    },
+    {
+      "recital_number": 16,
+      "text": "Since the adoption of the Cybersecurity Strategy of the European Union in 2013 and the last revision of ENISA’s mandate, the overall policy context has changed significantly as the global environment has become more uncertain and less secure. Against that background and in the context of the positive development of the role of ENISA as a reference point for advice and expertise, as a facilitator of cooperation and of capacity-building as well as within the framework of the new Union cybersecurity policy, it is necessary to review ENISA’s mandate, to establish its role in the changed cybersecurity ecosystem and to ensure that it contributes effectively to the Union’s response to cybersecurity challenges emanating from the radically transformed cyber threat landscape, for which, as recognised during the evaluation of ENISA, the current mandate is not sufficient."
+    },
+    {
+      "recital_number": 17,
+      "text": "ENISA as established by this Regulation should succeed ENISA as established by Regulation (EU) No 526/2013. ENISA should carry out the tasks conferred on it by this Regulation and other legal acts of the Union in the field of cybersecurity, among other things, by providing advice and expertise and by acting as a Union centre of information and knowledge. It should promote the exchange of best practices between Member States and private stakeholders, offer policy suggestions to the Commission and the Member States, act as a reference point for Union sectoral policy initiatives with regard to cybersecurity matters, and foster operational cooperation, both between Member States and between the Member States and Union institutions, bodies, office and agencies."
+    },
+    {
+      "recital_number": 18,
+      "text": "Within the framework of Decision 2004/97/EC, Euratom taken by common agreement between the Representatives of the Member States, meeting at Head of State or Government level (13), the representatives of the Member States decided that ENISA would have its seat in a town in Greece to be determined by the Greek Government. ENISA’s host Member State should ensure the best possible conditions for the smooth and efficient operation of ENISA. It is imperative for the proper and efficient performance of its tasks, for staff recruitment and retention and for enhancing the efficiency of networking activities that ENISA be based in an appropriate location, among other things providing appropriate transport connections and facilities for spouses and children accompanying members of staff of ENISA. The necessary arrangements should be laid down in an agreement between ENISA and the host Member State concluded after obtaining the approval of the Management Board of ENISA."
+    },
+    {
+      "recital_number": 19,
+      "text": "Given the increasing cybersecurity risks and challenges the Union is facing, the financial and human resources allocated to ENISA should be increased to reflect its enhanced role and tasks, and its critical position in the ecosystem of organisations defending the digital ecosystem of the Union, allowing ENISA to effectively carry out the tasks conferred on it by this Regulation."
+    },
+    {
+      "recital_number": 20,
+      "text": "ENISA should develop and maintain a high level of expertise and operate as a reference point, establishing trust and confidence in the single market by virtue of its independence, the quality of the advice it delivers, the quality of information it disseminates, the transparency of its procedures, the transparency of its methods of operation, and its diligence in carrying out its tasks. ENISA should actively support national efforts and should proactively contribute to Union efforts while carrying out its tasks in full cooperation with the Union institutions, bodies, offices and agencies and with the Member States, avoiding any duplication of work and promoting synergy. In addition, ENISA should build on input from and cooperation with the private sector as well as other relevant stakeholders. A set of tasks should establish how ENISA is to accomplish its objectives while allowing flexibility in its operations."
+    },
+    {
+      "recital_number": 21,
+      "text": "In order to be able to provide adequate support to the operational cooperation between Member States, ENISA should further strengthen its technical and human capabilities and skills. ENISA should increase its know-how and capabilities. ENISA and Member States, on a voluntary basis, could develop programmes for seconding national experts to ENISA, creating pools of experts and staff exchanges."
+    },
+    {
+      "recital_number": 22,
+      "text": "ENISA should assist the Commission by means of advice, opinions and analyses regarding all Union matters related to policy and law development, updates and reviews in the field of cybersecurity and sector-specific aspects thereof in order to enhance the relevance of Union policies and laws with a cybersecurity dimension and to enable consistency in the implementation of those policies and laws at national level. ENISA should act as a reference point for advice and expertise for Union sector-specific policy and law initiatives where matters related to cybersecurity are involved. ENISA should regularly inform the European Parliament about its activities."
+    },
+    {
+      "recital_number": 23,
+      "text": "The public core of the open internet, namely its main protocols and infrastructure, which are a global public good, provides the essential functionality of the internet as a whole and underpins its normal operation. ENISA should support the security of the public core of the open internet and the stability of its functioning, including, but not limited to, key protocols (in particular DNS, BGP, and IPv6), the operation of the domain name system (such as the operation of all top-level domains), and the operation of the root zone."
+    },
+    {
+      "recital_number": 24,
+      "text": "The underlying task of ENISA is to promote the consistent implementation of the relevant legal framework, in particular the effective implementation of Directive (EU) 2016/1148 and other relevant legal instruments containing cybersecurity aspects, which is essential to increasing cyber resilience. In light of the fast evolving cyber threat landscape, it is clear that Member States have to be supported by more comprehensive, cross-policy approach to building cyber resilience."
+    },
+    {
+      "recital_number": 25,
+      "text": "ENISA should assist the Member States and Union institutions, bodies, offices and agencies in their efforts to build and enhance capabilities and preparedness to prevent, detect and respond to cyber threats and incidents and in relation to the security of network and information systems. In particular, ENISA should support the development and enhancement of national and Union computer security incident response teams (‘CSIRTs’) provided for in Directive (EU) 2016/1148, with a view to achieving a high common level of their maturity in the Union. Activities carried out by ENISA relating to the operational capacities of Member States should actively support actions taken by Member States to comply with their obligations under Directive (EU) 2016/1148 and therefore should not supersede them."
+    },
+    {
+      "recital_number": 26,
+      "text": "ENISA should also assist with the development and updating of strategies on the security of network and information systems at Union level and, upon request, at Member State level, in particular on cybersecurity, and should promote the dissemination of such strategies and follow the progress of their implementation. ENISA should also contribute to covering the need for training and training materials, including the needs of public bodies, and where appropriate, to a high extent, ‘train the trainers’, building on the Digital Competence Framework for Citizens with a view to assisting Member States and Union institutions, bodies, offices and agencies in developing their own training capabilities."
+    },
+    {
+      "recital_number": 27,
+      "text": "ENISA should support Member States in the field of cybersecurity awareness-raising and education by facilitating closer coordination and the exchange of best practices between Member States. Such support could consist in the development of a network of national education points of contact and the development of a cybersecurity training platform. The network of national education points of contact could operate within the National Liaison Officers Network and be a starting point for future coordination within the Members States."
+    },
+    {
+      "recital_number": 28,
+      "text": "ENISA should assist the Cooperation Group created by Directive (EU) 2016/1148 in the execution of its tasks, in particular by providing expertise, advice and by facilitating the exchange of best practices, inter alia, with regard to the identification of operators of essential services by Member States, as well as in relation to cross-border dependencies, regarding risks and incidents."
+    },
+    {
+      "recital_number": 29,
+      "text": "With a view to stimulating cooperation between the public and private sector and within the private sector, in particular to support the protection of the critical infrastructures, ENISA should support information sharing within and among sectors, in particular the sectors listed in Annex II to Directive (EU) 2016/1148, by providing best practices and guidance on available tools and on procedure, as well as by providing guidance on how to address regulatory issues related to information sharing, for example through facilitating the establishment of sectoral information sharing and analysis centres."
+    },
+    {
+      "recital_number": 30,
+      "text": "Whereas the potential negative impact of vulnerabilities in ICT products, ICT services and ICT processes is constantly increasing, finding and remedying such vulnerabilities plays an important role in reducing the overall cybersecurity risk. Cooperation between organisations, manufacturers or providers of vulnerable ICT products, ICT services and ICT processes and members of the cybersecurity research community and governments who find vulnerabilities has been proven to significantly increase both the rate of discovery and the remedy of vulnerabilities in ICT products, ICT services and ICT processes. Coordinated vulnerability disclosure specifies a structured process of cooperation in which vulnerabilities are reported to the owner of the information system, allowing the organisation the opportunity to diagnose and remedy the vulnerability before detailed vulnerability information is disclosed to third parties or to the public. The process also provides for coordination between the finder and the organisation as regards the publication of those vulnerabilities. Coordinated vulnerability disclosure policies could play an important role in Member States’ efforts to enhance cybersecurity."
+    },
+    {
+      "recital_number": 31,
+      "text": "ENISA should aggregate and analyse voluntarily shared national reports from CSIRTs and the inter-institutional computer emergency response team for the Union’s institutions, bodies and agencies established by the Arrangement between the European Parliament, the European Council, the Council of the European Union, the European Commission, the Court of Justice of the European Union, the European Central Bank, the European Court of Auditors, the European External Action Service, the European Economic and Social Committee, the European Committee of the Regions and the European Investment Bank on the organisation and operation of a computer emergency response team for the Union’s institutions, bodies and agencies (CERT-EU) (14) in order to contribute to the setting up of common procedures, language and terminology for the exchange of information. In that context ENISA should involve the private sector within the framework of Directive (EU) 2016/1148 which lays down the grounds for the voluntary exchange of technical information at the operational level, in the computer security incident response teams network (‘CSIRTs network’) created by that Directive."
+    },
+    {
+      "recital_number": 32,
+      "text": "ENISA should contribute to responses at Union level in the case of large-scale cross-border incidents and crises related to cybersecurity. That task should be performed in accordance with ENISA’s mandate under this Regulation and an approach to be agreed by Member States in the context of Commission Recommendation (EU) 2017/1584 (15) and the Council conclusions of 26 June 2018 on EU Coordinated Response to Large-Scale Cybersecurity Incidents and Crises. That task could include gathering relevant information and acting as a facilitator between the CSIRTs network and the technical community, as well as between decision makers responsible for crisis management. Furthermore, ENISA should support operational cooperation among Member States, where requested by one or more Member States, in the handling of incidents from a technical perspective, by facilitating relevant exchanges of technical solutions between Member States, and by providing input into public communications. ENISA should support operational cooperation by testing the arrangements for such cooperation through regular cybersecurity exercises."
+    },
+    {
+      "recital_number": 33,
+      "text": "In supporting operational cooperation, ENISA should make use of the available technical and operational expertise of CERT-EU through structured cooperation. Such structured cooperation could build on ENISA’s expertise. Where appropriate, dedicated arrangements between the two entities should be established to define the practical implementation of such cooperation and to avoid the duplication of activities."
+    },
+    {
+      "recital_number": 34,
+      "text": "In performing its task to support operational cooperation within the CSIRTs network, ENISA should be able to provide support to Member States at their request, such as by providing advice on how to improve their capabilities to prevent, detect and respond to incidents, by facilitating the technical handling of incidents having a significant or substantial impact or by ensuring that cyber threats and incidents are analysed. ENISA should facilitate the technical handling of incidents having a significant or substantial impact in particular by supporting the voluntary sharing of technical solutions between Member States or by producing combined technical information, such as technical solutions voluntarily shared by the Member States. Recommendation (EU) 2017/1584 recommends that Member States cooperate in good faith and share among themselves and with ENISA information on large-scale incidents and crises related to cybersecurity without undue delay. Such information would further help ENISA in performing its task of supporting operational cooperation."
+    },
+    {
+      "recital_number": 35,
+      "text": "As part of the regular cooperation at technical level to support Union situational awareness, ENISA, in close cooperation with the Member States, should prepare a regular in-depth EU Cybersecurity Technical Situation Report on incidents and cyber threats, based on publicly available information, its own analysis and reports shared with it by Member States’ CSIRTs or the national single points of contact on the security of network and information systems (‘single points of contact’) provided for in Directive (EU) 2016/1148, both on a voluntary basis, the European Cybercrime Centre (EC3) at Europol, CERT-EU and, where appropriate, the European Union Intelligence and Situation Centre (EU INTCEN) at the European External Action Service. That report should be made available to the Council, the Commission, the High Representative of the Union for Foreign Affairs and Security Policy and the CSIRTs network."
+    },
+    {
+      "recital_number": 36,
+      "text": "The support by ENISA for ex-post technical inquiries of incidents having a significant or substantial impact undertaken at the request of the Member States concerned should focus on the prevention of future incidents. The Member States concerned should provide the necessary information and assistance in order to enable ENISA to support the ex-post technical inquiry effectively."
+    },
+    {
+      "recital_number": 37,
+      "text": "Member States may invite the undertakings concerned by the incident to cooperate by providing necessary information and assistance to ENISA without prejudice to their right to protect commercially sensitive information and information that is relevant to public security."
+    },
+    {
+      "recital_number": 38,
+      "text": "To understand better the challenges in the area of cybersecurity, and with a view to providing strategic long-term advice to Member States and Union institutions, bodies, offices and agencies, ENISA needs to analyse current and emerging cybersecurity risks. For that purpose, ENISA should, in cooperation with Member States and, as appropriate, with statistical bodies and other bodies, collect relevant publicly available or voluntarily shared information and perform analyses of emerging technologies and provide topic-specific assessments on the expected societal, legal, economic and regulatory impact of technological innovations on network and information security, in particular cybersecurity. ENISA should, furthermore, support Member States and Union institutions, bodies, offices and agencies in identifying emerging cybersecurity risks and preventing incidents, by performing analyses of cyber threats, vulnerabilities and incidents."
+    },
+    {
+      "recital_number": 39,
+      "text": "In order to increase the resilience of the Union, ENISA should develop expertise in the field of cybersecurity of infrastructures, in particular to support the sectors listed in Annex II to Directive (EU) 2016/1148 and those used by the providers of the digital services listed in Annex III to that Directive, by providing advice, issuing guidelines and exchanging best practices. With a view to ensuring easier access to better-structured information on cybersecurity risks and possible remedies, ENISA should develop and maintain the ‘information hub’ of the Union, a one-stop-shop portal providing the public with information on cybersecurity originating in Union and national institutions, bodies, offices and agencies. Facilitating access to better-structured information on cybersecurity risks and possible remedies could also help Member States bolster their capacities and align their practices, thus increasing their overall resilience to cyberattacks."
+    },
+    {
+      "recital_number": 40,
+      "text": "ENISA should contribute to raising the public’s awareness of cybersecurity risks, including through an EU-wide awareness-raising campaign by promoting education, and to providing guidance on good practices for individual users aimed at citizens, organisations and businesses. ENISA should also contribute to promoting best practices and solutions, including cyber-hygiene and cyber-literacy at the level of citizens, organisations and businesses by collecting and analysing publicly available information regarding significant incidents, and by compiling and publishing reports and guidance for citizens, organisations and businesses, to improve their overall level of preparedness and resilience. ENISA should also strive to provide consumers with relevant information on applicable certification schemes, for example by providing guidelines and recommendations. ENISA should furthermore organise, in line with the Digital Education Action Plan established in the Commission Communication of 17 January 2018 and in cooperation with the Member States and Union institutions, bodies, offices and agencies regular outreach and public education campaigns directed at end users, to promote safer online behaviour by individuals and digital literacy, to raise awareness of potential cyber threats, including online criminal activities such as phishing attacks, botnets, financial and banking fraud, data fraud incidents, and to promote basic multi-factor authentication, patching, encryption, anonymisation and data protection advice."
+    },
+    {
+      "recital_number": 41,
+      "text": "ENISA should play a central role in accelerating end-user awareness of the security of devices and the secure use of services, and should promote security-by-design and privacy-by-design at Union level. In pursuing that objective, ENISA should make use of available best practices and experience, especially the best practices and experience of academic institutions and IT security researchers."
+    },
+    {
+      "recital_number": 42,
+      "text": "In order to support the businesses operating in the cybersecurity sector, as well as the users of cybersecurity solutions, ENISA should develop and maintain a ‘market observatory’ by performing regular analyses and disseminating information on the main trends in the cybersecurity market, on both the demand and supply sides."
+    },
+    {
+      "recital_number": 43,
+      "text": "ENISA should contribute to the Union’s efforts to cooperate with international organisations as well as within relevant international cooperation frameworks in the field of cybersecurity. In particular, ENISA should contribute, where appropriate, to cooperation with organisations such as the OECD, the OSCE and NATO. Such cooperation could include joint cybersecurity exercises and joint incident response coordination. Those activities are to be carried out in full respect of the principles of inclusiveness, reciprocity and the decision-making autonomy of the Union, without prejudice to the specific character of the security and defence policy of any Member State."
+    },
+    {
+      "recital_number": 44,
+      "text": "In order to ensure that it fully achieves its objectives, ENISA should liaise with the relevant Union supervisory authorities and with other competent authorities in the Union, Union institutions, bodies, offices and agencies, including CERT-EU, EC3, the European Defence Agency (EDA), the European Global Navigation Satellite Systems Agency (European GNSS Agency), the Body of European Regulators for Electronic Communications (BEREC), the European Agency for the Operational Management of Large-Scale IT Systems in the Area of Freedom, Security and Justice (eu-LISA), the European Central Bank (ECB), the European Banking Authority (EBA), the European Data Protection Board, the Agency for the Cooperation of Energy Regulators (ACER), the European Union Aviation Safety Agency (EASA) and any other Union agency involved in cybersecurity. ENISA should also liaise with authorities that deal with data protection in order to exchange know-how and best practices and should provide advice on cybersecurity issues that might have an impact on their work. Representatives of national and Union law enforcement and data protection authorities should be eligible to be represented in the ENISA Advisory Group. In liaising with law enforcement authorities regarding network and information security issues that might have an impact on their work, ENISA should respect existing channels of information and established networks."
+    },
+    {
+      "recital_number": 45,
+      "text": "Partnerships could be established with academic institutions that have research initiatives in relevant fields, and there should be appropriate channels for input from consumer organisations and other organisations, which should be taken into consideration."
+    },
+    {
+      "recital_number": 46,
+      "text": "ENISA, in its role as the secretariat of the CSIRTs network, should support Member States’ CSIRTs and the CERT-EU in the operational cooperation in relation to the relevant tasks of the CSIRTs network, as referred to in Directive (EU) 2016/1148. Furthermore, ENISA should promote and support cooperation between the relevant CSIRTs in the event of incidents, attacks or disruptions of networks or infrastructure managed or protected by the CSIRTs and involving or being capable of involving at least two CSIRTs while taking due account of the Standard Operating Procedures of the CSIRTs network."
+    },
+    {
+      "recital_number": 47,
+      "text": "With a view to increasing Union preparedness in responding to incidents, ENISA should regularly organise cybersecurity exercises at Union level, and, at their request, support Member States and Union institutions, bodies, offices and agencies in organising such exercises. Large-scale comprehensive exercises which include technical, operational or strategic elements should be organised on a biennial basis. In addition, ENISA should be able to regularly organise less comprehensive exercises with the same goal of increasing Union preparedness in responding to incidents."
+    },
+    {
+      "recital_number": 48,
+      "text": "ENISA should further develop and maintain its expertise on cybersecurity certification with a view to supporting the Union policy in that area. ENISA should build on existing best practices and should promote the uptake of cybersecurity certification within the Union, including by contributing to the establishment and maintenance of a cybersecurity certification framework at Union level (European cybersecurity certification framework) with a view to increasing the transparency of the cybersecurity assurance of ICT products, ICT services and ICT processes, thereby strengthening trust in the digital internal market and its competitiveness."
+    },
+    {
+      "recital_number": 49,
+      "text": "Efficient cybersecurity policies should be based on well-developed risk assessment methods, in both the public and private sectors. Risk assessment methods are used at different levels, with no common practice regarding how to apply them efficiently. Promoting and developing best practices for risk assessment and for interoperable risk management solutions in public-sector and private-sector organisations will increase the level of cybersecurity in the Union. To that end, ENISA should support cooperation between stakeholders at Union level and facilitate their efforts relating to the establishment and take-up of European and international standards for risk management and for the measurable security of electronic products, systems, networks and services which, together with software, comprise the network and information systems."
+    },
+    {
+      "recital_number": 50,
+      "text": "ENISA should encourage Member States, manufacturers or providers of ICT products, ICT services or ICT processes to raise their general security standards so that all internet users can take the necessary steps to ensure their own personal cybersecurity and should give incentives to do so. In particular, manufacturers and providers of ICT products, ICT services or ICT processes should provide any necessary updates and should recall, withdraw or recycle ICT products, ICT services or ICT processes that do not meet cybersecurity standards, while importers and distributors should make sure that the ICT products, ICT services and ICT processes they place on the Union market comply with the applicable requirements and do not present a risk to Union consumers."
+    },
+    {
+      "recital_number": 51,
+      "text": "In cooperation with competent authorities, ENISA should be able to disseminate information regarding the level of the cybersecurity of the ICT products, ICT services and ICT processes offered in the internal market, and should issue warnings targeting manufacturers or providers of ICT products, ICT services or ICT processes and requiring them to improve the security of their ICT products, ICT services and ICT processes, including the cybersecurity."
+    },
+    {
+      "recital_number": 52,
+      "text": "ENISA should take full account of the ongoing research, development and technological assessment activities, in particular those activities carried out by the various Union research initiatives to advise Union institutions, bodies, offices and agencies and where relevant, the Member States at their request, on research needs and priorities in the field of cybersecurity. In order to identify the research needs and priorities, ENISA should also consult the relevant user groups. More specifically, cooperation with the European Research Council, the European Institute for Innovation and Technology and the European Union Institute for Security Studies could be established."
+    },
+    {
+      "recital_number": 53,
+      "text": "ENISA should regularly consult standardisation organisations, in particular European standardisation organisations, when preparing the European cybersecurity certification schemes."
+    },
+    {
+      "recital_number": 54,
+      "text": "Cyber threats are a global issue. There is a need for closer international cooperation to improve cybersecurity standards, including the need for definitions of common norms of behaviour, the adoption of codes of conduct, the use of international standards, and information sharing, promoting swifter international collaboration in response to network and information security issues and promoting a common global approach to such issues. To that end, ENISA should support further Union involvement and cooperation with third countries and international organisations by providing the necessary expertise and analysis to the relevant Union institutions, bodies, offices and agencies, where appropriate."
+    },
+    {
+      "recital_number": 55,
+      "text": "ENISA should be able to respond to ad hoc requests for advice and assistance by Member States and Union institutions, bodies, offices and agencies on matters falling within ENISA’s mandate."
+    },
+    {
+      "recital_number": 56,
+      "text": "It is sensible and recommended to implement certain principles regarding the governance of ENISA in order to comply with the Joint Statement and Common Approach agreed upon in July 2012 by the Inter-Institutional Working Group on EU decentralised agencies, the purpose of which is to streamline the activities of decentralised agencies and improve their performance. The recommendations in the Joint Statement and Common Approach should also be reflected, as appropriate, in ENISA’s work programmes, evaluations of ENISA, and ENISA’s reporting and administrative practice."
+    },
+    {
+      "recital_number": 57,
+      "text": "The Management Board, composed of the representatives of the Member States and of the Commission, should establish the general direction of ENISA’s operations and ensure that it carries out its tasks in accordance with this Regulation. The Management Board should be entrusted with the powers necessary to establish the budget, verify the execution of the budget, adopt appropriate financial rules, establish transparent working procedures for decision making by ENISA, adopt ENISA’s single programming document, adopt its own rules of procedure, appoint the Executive Director and decide on the extension and termination of the Executive Director’s term of office."
+    },
+    {
+      "recital_number": 58,
+      "text": "In order for ENISA to function properly and effectively, the Commission and the Member States should ensure that persons to be appointed to the Management Board have appropriate professional expertise and experience. The Commission and the Member States should also make efforts to limit the turnover of their respective representatives on the Management Board in order to ensure continuity in its work."
+    },
+    {
+      "recital_number": 59,
+      "text": "The smooth functioning of ENISA requires that its Executive Director be appointed on grounds of merit and documented administrative and managerial skills, as well as competence and experience relevant to cybersecurity. The duties of the Executive Director should be carried out with complete independence. The Executive Director should prepare a proposal for ENISA’s annual work programme, after prior consultation with the Commission, and should take all steps necessary to ensure the proper implementation of that work programme. The Executive Director should prepare an annual report to be submitted to the Management Board, covering the implementation of ENISA’s annual work programme, draw up a draft statement of estimates of revenue and expenditure for ENISA, and implement the budget. Furthermore, the Executive Director should have the option of setting up ad hoc working groups to address specific matters, in particular matters of a scientific, technical, legal or socioeconomic nature. In particular, in relation to the preparation of a specific candidate European cybersecurity certification scheme (‘candidate scheme’), the setting up of an ad hoc working group is considered to be necessary. The Executive Director should ensure that the members of ad hoc working groups are selected according to the highest standards of expertise, aiming to ensure gender balance and an appropriate balance, according to the specific issues in question, between the public administrations of the Member States, the Union institutions, bodies, offices and agencies and the private sector, including industry, users, and academic experts in network and information security."
+    },
+    {
+      "recital_number": 60,
+      "text": "The Executive Board should contribute to the effective functioning of the Management Board. As part of its preparatory work related to Management Board decisions, the Executive Board should examine relevant information in detail, explore available options and offer advice and solutions to prepare the decisions of the Management Board."
+    },
+    {
+      "recital_number": 61,
+      "text": "ENISA should have an ENISA Advisory Group as an advisory body to ensure regular dialogue with the private sector, consumers’ organisations and other relevant stakeholders. The ENISA Advisory Group, established by the Management Board on a proposal from the Executive Director, should focus on issues relevant to stakeholders and should bring them to the attention of ENISA. The ENISA Advisory Group should be consulted in particular with regard to ENISA’s draft annual work programme. The composition of the ENISA Advisory Group and the tasks assigned to it should ensure sufficient representation of stakeholders in the work of ENISA."
+    },
+    {
+      "recital_number": 62,
+      "text": "The Stakeholder Cybersecurity Certification Group should be established in order to help ENISA and the Commission facilitate the consultation of relevant stakeholders. The Stakeholder Cybersecurity Certification Group should be composed of members representing industry in balanced proportions, both on the demand side and the supply side of ICT products and ICT services, and including, in particular, SMEs, digital service providers, European and international standardisation bodies, national accreditation bodies, data protection supervisory authorities and conformity assessment bodies pursuant to Regulation (EC) No 765/2008 of the European Parliament and of the Council (16), and academia as well as consumer organisations."
+    },
+    {
+      "recital_number": 63,
+      "text": "ENISA should have rules in place regarding the prevention and the management of conflicts of interest. ENISA should also apply the relevant Union provisions concerning public access to documents as set out in Regulation (EC) No 1049/2001 of the European Parliament and of the Council (17). The processing of personal data by ENISA should be subject to Regulation (EU) 2018/1725 of the European Parliament and of the Council (18). ENISA should comply with the provisions applicable to the Union institutions, bodies, offices and agencies, and with national legislation regarding the handling of information, in particular sensitive non-classified information and European Union classified information (EUCI)."
+    },
+    {
+      "recital_number": 64,
+      "text": "In order to guarantee the full autonomy and independence of ENISA and to enable it to perform additional tasks, including unforeseen emergency tasks, ENISA should be granted a sufficient and autonomous budget whose revenue should primarily come from a contribution from the Union and contributions from third countries participating in ENISA’s work. An appropriate budget is paramount for ensuring that ENISA has sufficient capacity to perform all of its growing tasks and to achieve its objectives. The majority of ENISA’s staff should be directly engaged in the operational implementation of ENISA’s mandate. The host Member State, and any other Member State, should be allowed to make voluntary contributions to ENISA’s budget. The Union’s budgetary procedure should remain applicable as far as any subsidies chargeable to the general budget of the Union are concerned. Moreover, the Court of Auditors should audit ENISA’s accounts to ensure transparency and accountability."
+    },
+    {
+      "recital_number": 65,
+      "text": "Cybersecurity certification plays an important role in increasing trust and security in ICT products, ICT services and ICT processes. The digital single market, and in particular the data economy and the IoT, can thrive only if there is general public trust that such products, services and processes provide a certain level of cybersecurity. Connected and automated cars, electronic medical devices, industrial automation control systems and smart grids are only some examples of sectors in which certification is already widely used or is likely to be used in the near future. The sectors regulated by Directive (EU) 2016/1148 are also sectors in which cybersecurity certification is critical."
+    },
+    {
+      "recital_number": 66,
+      "text": "In the 2016 Communication ‘Strengthening Europe’s Cyber Resilience System and Fostering a Competitive and Innovative Cybersecurity Industry’, the Commission outlined the need for high-quality, affordable and interoperable cybersecurity products and solutions. The supply of ICT products, ICT services and ICT processes within the single market remains very fragmented geographically. This is because the cybersecurity industry in Europe has developed largely on the basis of national governmental demand. In addition, the lack of interoperable solutions (technical standards), practices and Union-wide mechanisms of certification are among the other gaps affecting the single market in the field of cybersecurity. This makes it difficult for European businesses to compete at national, Union and global level. It also reduces the choice of viable and usable cybersecurity technologies that individuals and businesses have access to. Similarly, in the 2017 Communication on the Mid-Term Review on the implementation of the Digital Single Market Strategy – A Connected Digital Single Market for All, the Commission highlighted the need for safe connected products and systems, and indicated that the creation of a European ICT security framework setting rules on how to organise ICT security certification in the Union could both preserve trust in the internet and tackle the current fragmentation of the internal market."
+    },
+    {
+      "recital_number": 67,
+      "text": "Currently, the cybersecurity certification of ICT products, ICT services and ICT processes is used only to a limited extent. When it exists, it mostly occurs at Member State level or in the framework of industry driven schemes. In that context, a certificate issued by a national cybersecurity certification authority is not in principle recognised in other Member States. Companies thus may have to certify their ICT products, ICT services and ICT processes in several Member States where they operate, for example, with a view to participating in national procurement procedures, which thereby adds to their costs. Moreover, while new schemes are emerging, there seems to be no coherent and holistic approach to horizontal cybersecurity issues, for instance in the field of the IoT. Existing schemes present significant shortcomings and differences in terms of product coverage, levels of assurance, substantive criteria and actual use, impeding mutual recognition mechanisms within the Union."
+    },
+    {
+      "recital_number": 68,
+      "text": "Some efforts have been made in order to ensure the mutual recognition of certificates within the Union. However, they have been only partly successful. The most important example in this regard is the Senior Officials Group – Information Systems Security (SOG-IS) Mutual Recognition Agreement (MRA). While it represents the most important model for cooperation and mutual recognition in the field of security certification, SOG-IS includes only some of the Member States. That fact has limited the effectiveness of SOG-IS MRA from the point of view of the internal market."
+    },
+    {
+      "recital_number": 69,
+      "text": "Therefore, it is necessary to adopt a common approach and to establish a European cybersecurity certification framework that lays down the main horizontal requirements for European cybersecurity certification schemes to be developed and allows European cybersecurity certificates and EU statements of conformity for ICT products, ICT services or ICT processes to be recognised and used in all Member States. In doing so, it is essential to build on existing national and international schemes, as well as on mutual recognition systems, in particular SOG-IS, and to make possible a smooth transition from the existing schemes under such systems to schemes under the new European cybersecurity certification framework. The European cybersecurity certification framework should have a twofold purpose. First, it should help increase trust in ICT products, ICT services and ICT processes that have been certified under European cybersecurity certification schemes. Second, it should help avoid the multiplication of conflicting or overlapping national cybersecurity certification schemes and thus reduce costs for undertakings operating in the digital single market. The European cybersecurity certification schemes should be non-discriminatory and based on European or international standards, unless those standards are ineffective or inappropriate to fulfil the Union’s legitimate objectives in that regard."
+    },
+    {
+      "recital_number": 70,
+      "text": "The European cybersecurity certification framework should be established in a uniform manner in all Member States in order to prevent ‘certification shopping’ based on different levels of stringency in different Member States."
+    },
+    {
+      "recital_number": 71,
+      "text": "European cybersecurity certification schemes should be built on what already exists at international and national level and, if necessary, on technical specifications from forums and consortia, learning from current strong points and assessing and correcting weaknesses."
+    },
+    {
+      "recital_number": 72,
+      "text": "Flexible cybersecurity solutions are necessary for the industry to stay ahead of cyber threats, and therefore any certification scheme should be designed in a way that avoids the risk of being outdated quickly."
+    },
+    {
+      "recital_number": 73,
+      "text": "The Commission should be empowered to adopt European cybersecurity certification schemes concerning specific groups of ICT products, ICT services and ICT processes. Those schemes should be implemented and supervised by national cybersecurity certification authorities, and certificates issued under those schemes should be valid and recognised throughout the Union. Certification schemes operated by the industry or by other private organisations should fall outside of the scope of this Regulation. However, the bodies operating such schemes should be able to propose that the Commission consider such schemes as a basis for approving them as a European cybersecurity certification scheme."
+    },
+    {
+      "recital_number": 74,
+      "text": "The provisions of this Regulation should be without prejudice to Union law providing specific rules on the certification of ICT products, ICT services and ICT processes. In particular, Regulation (EU) 2016/679 lays down provisions for the establishment of certification mechanisms and of data protection seals and marks, for the purpose of demonstrating the compliance of processing operations by controllers and processors with that Regulation. Such certification mechanisms and data protection seals and marks should allow data subjects to quickly assess the level of data protection of the relevant ICT products, ICT services and ICT processes. This Regulation is without prejudice to the certification of data processing operations under Regulation (EU) 2016/679, including when such operations are embedded in ICT products, ICT services and ICT processes."
+    },
+    {
+      "recital_number": 75,
+      "text": "The purpose of European cybersecurity certification schemes should be to ensure that ICT products, ICT services and ICT processes certified under such schemes comply with specified requirements that aim to protect the availability, authenticity, integrity and confidentiality of stored, transmitted or processed data or of the related functions of or services offered by, or accessible via those products, services and processes throughout their life cycle. It is not possible to set out in detail the cybersecurity requirements relating to all ICT products, ICT services and ICT processes in this Regulation. ICT products, ICT services and ICT processes and the cybersecurity needs related to those products, services and processes are so diverse that it is very difficult to develop general cybersecurity requirements that are valid in all circumstances. It is therefore necessary to adopt a broad and general notion of cybersecurity for the purpose of certification, which should be complemented by a set of specific cybersecurity objectives that are to be taken into account when designing European cybersecurity certification schemes. The arrangements by which such objectives are to be achieved in specific ICT products, ICT services and ICT processes should then be further specified in detail at the level of the individual certification scheme adopted by the Commission, for example by reference to standards or technical specifications if no appropriate standards are available."
+    },
+    {
+      "recital_number": 76,
+      "text": "The technical specifications to be used in European cybersecurity certification schemes should respect the requirements set out in Annex II to Regulation (EU) No 1025/2012 of the European Parliament and of the Council (19). Some deviations from those requirements could, however, be considered to be necessary in duly justified cases where those technical specifications are to be used in a European cybersecurity certification scheme referring to assurance level ‘high’. The reasons for such deviations should be made publicly available."
+    },
+    {
+      "recital_number": 77,
+      "text": "A conformity assessment is a procedure for evaluating whether specified requirements relating to an ICT product, ICT service or ICT process have been fulfilled. That procedure is carried out by an independent third party that is not the manufacturer or provider of the ICT products, ICT services or ICT processes that are being assessed. A European cybersecurity certificate should be issued following the successful evaluation of an ICT product, ICT service or ICT process. A European cybersecurity certificate should be considered to be a confirmation that the evaluation has been properly carried out. Depending on the assurance level, the European cybersecurity certification scheme should indicate whether the European cybersecurity certificate is to be issued by a private or public body. Conformity assessment and certification cannot guarantee per se that certified ICT products, ICT services and ICT processes are cyber secure. They are instead procedures and technical methodologies for attesting that ICT products, ICT services and ICT processes have been tested and that they comply with certain cybersecurity requirements laid down elsewhere, for example in technical standards."
+    },
+    {
+      "recital_number": 78,
+      "text": "The choice of the appropriate certification and associated security requirements by the users of European cybersecurity certificates should be based on an analysis of the risks associated with the use of the ICT products, ICT services or ICT processes. Accordingly, the assurance level should be commensurate with the level of the risk associated with the intended use of an ICT product, ICT service or ICT process."
+    },
+    {
+      "recital_number": 79,
+      "text": "European cybersecurity certification schemes could provide for a conformity assessment to be carried out under the sole responsibility of the manufacturer or provider of ICT products, ICT services or ICT processes (‘conformity self-assessment’). In such cases, it should be sufficient that the manufacturer or provider of ICT products, ICT services or ICT processes itself carry out all of the checks to ensure that the ICT products, ICT services or ICT processes conform with the European cybersecurity certification scheme. Conformity self-assessment should be considered to be appropriate for low complexity ICT products, ICT services or ICT processes that present a low risk to the public, such as simple design and production mechanisms. Moreover, conformity self-assessment should be permitted for ICT products, ICT services or ICT processes only where they correspond to assurance level ‘basic’."
+    },
+    {
+      "recital_number": 80,
+      "text": "European cybersecurity certification schemes could allow for both conformity self-assessments and certifications of ICT products, ICT services or ICT processes. In such a case, the scheme should provide for clear and understandable means for consumers or other users to differentiate between ICT products, ICT services or ICT processes with regard to which the manufacturer or provider of ICT products, ICT services or ICT processes is responsible for the assessment, and ICT products, ICT services or ICT processes that are certified by a third party."
+    },
+    {
+      "recital_number": 81,
+      "text": "The manufacturer or provider of ICT products, ICT services or ICT processes who carry out a conformity self-assessment should be able to issue and sign the EU statement of conformity as part of the conformity assessment procedure. An EU statement of conformity is a document that states that a specific ICT product, ICT service or ICT process complies with the requirements of the European cybersecurity certification scheme. By issuing and signing the EU statement of conformity, the manufacturer or provider of ICT products, ICT services or ICT processes assumes responsibility for the compliance of the ICT product, ICT service or ICT process with the legal requirements of the European cybersecurity certification scheme. A copy of the EU statement of conformity should be submitted to the national cybersecurity certification authority and to ENISA."
+    },
+    {
+      "recital_number": 82,
+      "text": "Manufacturers or providers of ICT products, ICT services or ICT processes should make the EU statement of conformity, technical documentation, and all other relevant information relating to the conformity of the ICT products, ICT services or ICT processes with a European cybersecurity certification scheme available to the competent national cybersecurity certification authority for a period provided for in the relevant European cybersecurity certification scheme. The technical documentation should specify the requirements applicable under the scheme and should cover the design, manufacture and operation of the ICT product, ICT service or ICT process to the extent relevant to the conformity self-assessment. The technical documentation should be so compiled as to enable the assessment of whether an ICT product or ICT service complies with the requirements applicable under that scheme."
+    },
+    {
+      "recital_number": 83,
+      "text": "The governance of the European cybersecurity certification framework takes into account the involvement of Member States as well as the appropriate involvement of stakeholders, and establishes the role of the Commission during the planning and proposing, requesting, preparing, adopting and reviewing of European cybersecurity certification schemes."
+    },
+    {
+      "recital_number": 84,
+      "text": "The Commission should prepare, with the support of the European Cybersecurity Certification Group (the ‘ECCG’) and the Stakeholder Cybersecurity Certification Group and after an open and wide consultation, a Union rolling work programme for European cybersecurity certification schemes and should publish it in the form of a non-binding instrument. The Union rolling work programme should be a strategic document that allows industry, national authorities and standardisation bodies, in particular, to prepare in advance for future European cybersecurity certification schemes. The Union rolling work programme should include a multiannual overview of the requests for candidate schemes which the Commission intends to submit to ENISA for preparation on the basis of specific grounds. The Commission should take into account the Union rolling work programme while preparing its Rolling Plan for ICT Standardisation and standardisation requests to European standardisation organisations. In light of the rapid introduction and uptake of new technologies, the emergence of previously unknown cybersecurity risks, and legislative and market developments, the Commission or the ECCG should be entitled to request ENISA to prepare candidate schemes which have not been included in the Union rolling work programme. In such cases, the Commission and the ECCG should also assess the necessity of such a request, taking into account the overall aims and objectives of this Regulation and the need to ensure continuity as regards ENISA’s planning and use of resources.\n\nFollowing such a request, ENISA should prepare the candidate schemes for specific ICT products, ICT services and ICT processes without undue delay. The Commission should evaluate the positive and negative impact of its request on the specific market in question, especially its impact on SMEs, on innovation, on barriers to entry to that market and on costs to end users. The Commission, on the basis of the candidate scheme prepared by ENISA, should be empowered to adopt the European cybersecurity certification scheme by means of implementing acts. Taking account of the general purpose and security objectives laid down in this Regulation, European cybersecurity certification schemes adopted by the Commission should specify a minimum set of elements concerning the subject matter, scope and functioning of the individual scheme. Those elements should include, among other things, the scope and object of the cybersecurity certification, including the categories of ICT products, ICT services and ICT processes covered, the detailed specification of the cybersecurity requirements, for example by reference to standards or technical specifications, the specific evaluation criteria and evaluation methods, as well as the intended assurance level (‘basic’, ‘substantial’ or ‘high’) and the evaluation levels where applicable. ENISA should be able to refuse a request by the ECCG. Such decisions should be taken by the Management Board and should be duly reasoned."
+    },
+    {
+      "recital_number": 85,
+      "text": "ENISA should maintain a website providing information on and publicising European cybersecurity certification schemes, which should include, among other things, the requests for the preparation of a candidate scheme as well as the feedback received in the consultation process carried out by ENISA in the preparation phase. The website should also provide information about the European cybersecurity certificates and EU statements of conformity issued under this Regulation including information regarding the withdrawal and expiry of such European cybersecurity certificates and EU statements of conformity. The website should also indicate the national cybersecurity certification schemes that have been replaced by a European cybersecurity certification scheme."
+    },
+    {
+      "recital_number": 86,
+      "text": "The assurance level of a European certification scheme is a basis for confidence that an ICT product, ICT service or ICT process meets the security requirements of a specific European cybersecurity certification scheme. In order to ensure the consistency of the European cybersecurity certification framework, a European cybersecurity certification scheme should be able to specify assurance levels for European cybersecurity certificates and EU statements of conformity issued under that scheme. Each European cybersecurity certificate might refer to one of the assurance levels: ‘basic’, ‘substantial’ or ‘high’, while the EU statement of conformity might only refer to the assurance level ‘basic’. The assurance levels would provide the corresponding rigour and depth of the evaluation of the ICT product, ICT service or ICT process and would be characterised by reference to technical specifications, standards and procedures related thereto, including technical controls, the purpose of which is to mitigate or prevent incidents. Each assurance level should be consistent among the different sectorial domains where certification is applied."
+    },
+    {
+      "recital_number": 87,
+      "text": "A European cybersecurity certification scheme might specify several evaluation levels depending on the rigour and depth of the evaluation methodology used. Evaluation levels should correspond to one of the assurance levels and should be associated with an appropriate combination of assurance components. For all assurance levels, the ICT product, ICT service or ICT process should contain a number of secure functions, as specified by the scheme, which may include: a secure out-of-the-box configuration, a signed code, secure update and exploit mitigations and full stack or heap memory protections. Those functions should have been developed, and be maintained, using security-focused development approaches and associated tools to ensure that effective software and hardware mechanisms are reliably incorporated."
+    },
+    {
+      "recital_number": 88,
+      "text": "For assurance level ‘basic’, the evaluation should be guided at least by the following assurance components: the evaluation should at least include a review of the technical documentation of the ICT product, ICT service or ICT process by the conformity assessment body. Where the certification includes ICT processes, the process used to design, develop and maintain an ICT product or ICT service should also be subject to the technical review. Where a European cybersecurity certification scheme provides for a conformity self-assessment, it should be sufficient that the manufacturer or provider of ICT products, ICT services or ICT processes has carried out a self-assessment of the compliance of the ICT product, ICT service or ICT process with the certification scheme."
+    },
+    {
+      "recital_number": 89,
+      "text": "For assurance level ‘substantial’, the evaluation, in addition to the requirements for assurance level ‘basic’, should be guided at least by the verification of the compliance of the security functionalities of the ICT product, ICT service or ICT process with its technical documentation."
+    },
+    {
+      "recital_number": 90,
+      "text": "For assurance level ‘high’, the evaluation, in addition to the requirements for assurance level ‘substantial’, should be guided at least by an efficiency testing which assesses the resistance of the security functionalities of ICT product, ICT service or ICT process against elaborate cyberattacks performed by persons who have significant skills and resources."
+    },
+    {
+      "recital_number": 91,
+      "text": "Recourse to European cybersecurity certification and to EU statements of conformity should remain voluntary, unless otherwise provided for in Union law, or in Member State law adopted in accordance with Union law. In the absence of harmonised Union law, Member States are able to adopt national technical regulations providing for mandatory certification under a European cybersecurity certification scheme in accordance with Directive (EU) 2015/1535 of the European Parliament and of the Council (20). Member States also have recourse to European cybersecurity certification in the context of public procurement and of Directive 2014/24/EU of the European Parliament and of the Council (21)."
+    },
+    {
+      "recital_number": 92,
+      "text": "In some areas, it could be necessary in the future to impose specific cybersecurity requirements and make the certification thereof mandatory for certain ICT products, ICT services or ICT processes, in order to improve the level of cybersecurity in the Union. The Commission should regularly monitor the impact of adopted European cybersecurity certification schemes on the availability of secure ICT products, ICT services and ICT processes in the internal market and should regularly assess the level of use of the certification schemes by the manufacturers or providers of ICT products, ICT services or ICT processes in the Union. The efficiency of the European cybersecurity certification schemes, and whether specific schemes should be made mandatory, should be assessed in light of the cybersecurity-related legislation of the Union, in particular Directive (EU) 2016/1148, taking into consideration the security of the network and information systems used by operators of essential services."
+    },
+    {
+      "recital_number": 93,
+      "text": "European cybersecurity certificates and EU statements of conformity should help end users to make informed choices. Therefore, ICT products, ICT services and ICT processes that have been certified or for which an EU statement of conformity has been issued should be accompanied by structured information that is adapted to the expected technical level of the intended end user. All such information should be available online, and, where appropriate, in physical form. The end user should have access to information regarding the reference number of the certification scheme, the assurance level, the description of the cybersecurity risks associated with the ICT product, ICT service or ICT process, and the issuing authority or body, or should be able to obtain a copy of the European cybersecurity certificate. In addition, the end user should be informed of the cybersecurity support policy, namely for how long the end user can expect to receive cybersecurity updates or patches, of the manufacturer or provider of ICT products, ICT services or ICT processes. Where applicable, guidance on actions or settings that the end user can implement to maintain or increase the cybersecurity of the ICT product or of the ICT service and contact information of a single point of contact to report and receive support in the case of cyberattacks (in addition to automatic reporting) should be provided. That information should be regularly updated and made available on a website providing information on European cybersecurity certification schemes."
+    },
+    {
+      "recital_number": 94,
+      "text": "With a view to achieving the objectives of this Regulation and avoiding the fragmentation of the internal market, national cybersecurity certification schemes or procedures for ICT products, ICT services or ICT processes covered by a European cybersecurity certification scheme should cease to be effective from a date established by the Commission by means of implementing acts. Moreover, Member States should not introduce new national cybersecurity certification schemes for ICT products, ICT services or ICT processes already covered by an existing European cybersecurity certification scheme. However, Member States should not be prevented from adopting or maintaining national cybersecurity certification schemes for national security purposes. Member States should inform the Commission and the ECCG of any intention to draw up new national cybersecurity certification schemes. The Commission and the ECCG should evaluate the impact of the new national cybersecurity certification schemes on the proper functioning of the internal market and in light of any strategic interest in requesting a European cybersecurity certification scheme instead."
+    },
+    {
+      "recital_number": 95,
+      "text": "European cybersecurity certification schemes are intended to help harmonise cybersecurity practices within the Union. They need to contribute to increasing the level of cybersecurity within the Union. The design of the European cybersecurity certification schemes should take into account and allow for the development of innovations in the field of cybersecurity."
+    },
+    {
+      "recital_number": 96,
+      "text": "European cybersecurity certification schemes should take into account current software and hardware development methods and, in particular, the impact of frequent software or firmware updates on individual European cybersecurity certificates. European cybersecurity certification schemes should specify the conditions under which an update may require that an ICT product, ICT service or ICT process be recertified or that the scope of a specific European cybersecurity certificate be reduced, taking into account any possible adverse effects of the update on compliance with the security requirements of that certificate."
+    },
+    {
+      "recital_number": 97,
+      "text": "Once a European cybersecurity certification scheme is adopted, manufacturers or providers of ICT products, ICT services or ICT processes should be able to submit applications for certification of their ICT products or ICT services to the conformity assessment body of their choice anywhere in the Union. Conformity assessment bodies should be accredited by a national accreditation body if they comply with certain specified requirements set out in this Regulation. Accreditation should be issued for a maximum of five years and should be renewable on the same conditions provided that the conformity assessment body still meets the requirements. National accreditation bodies should restrict, suspend or revoke the accreditation of a conformity assessment body where the conditions for the accreditation have not been met or are no longer met, or where the conformity assessment body infringes this Regulation."
+    },
+    {
+      "recital_number": 98,
+      "text": "References in national legislation to national standards which have ceased to be effective due to the entry into force of a European cybersecurity certification scheme can be a source of confusion. Therefore, Member States should reflect the adoption of a European cybersecurity certification scheme in their national legislation."
+    },
+    {
+      "recital_number": 99,
+      "text": "In order to achieve equivalent standards throughout the Union, to facilitate mutual recognition and to promote the overall acceptance of European cybersecurity certificates and EU statements of conformity, it is necessary to put in place a system of peer review between national cybersecurity certification authorities. Peer review should cover procedures for supervising the compliance of ICT products, ICT services and ICT processes with European cybersecurity certificates, for monitoring the obligations of manufacturers or providers of ICT products, ICT services or ICT processes who carry out the conformity self-assessment, for monitoring conformity assessment bodies, as well as the appropriateness of the expertise of the staff of bodies issuing certificates for assurance level ‘high’. The Commission should be able, by means of implementing acts, to establish at least a five-year plan for peer reviews, as well as lay down criteria and methodologies for the operation of the peer review system."
+    },
+    {
+      "recital_number": 100,
+      "text": "Without prejudice to the general peer review system to be put in place across all national cybersecurity certification authorities within the European cybersecurity certification framework, certain European cybersecurity certification schemes may include a peer-assessment mechanism for the bodies that issue European cybersecurity certificates for ICT products, ICT services and ICT processes with an assurance level ‘high’ under such schemes. The ECCG should support the implementation of such peer-assessment mechanisms. The peer assessments should assess in particular whether the bodies concerned carry out their tasks in a harmonised way, and may include appeal mechanisms. The results of the peer assessments should be made publicly available. The bodies concerned may adopt appropriate measures to adapt their practices and expertise accordingly."
+    },
+    {
+      "recital_number": 101,
+      "text": "Member States should designate one or more national cybersecurity certification authorities to supervise compliance with obligations arising from this Regulation. A national cybersecurity certification authority may be an existing or new authority. A Member State should also be able to designate, after agreeing with another Member State, one or more national cybersecurity certification authorities in the territory of that other Member State."
+    },
+    {
+      "recital_number": 102,
+      "text": "National cybersecurity certification authorities should in particular monitor and enforce the obligations of manufacturers or providers of ICT products, ICT services or ICT processes established in its respective territory in relation to the EU statement of conformity, should assist the national accreditation bodies in the monitoring and supervision of the activities of conformity assessment bodies by providing them with expertise and relevant information, should authorise conformity assessment bodies to carry out their tasks where such bodies meet additional requirements set out in a European cybersecurity certification scheme, and should monitor relevant developments in the field of cybersecurity certification. National cybersecurity certification authorities should also handle complaints lodged by natural or legal persons in relation to European cybersecurity certificates issued by those authorities or in relation to European cybersecurity certificates issued by conformity assessment bodies, where such certificates indicate assurance level ‘high’, should investigate, to the extent appropriate, the subject matter of the complaint and should inform the complainant of the progress and the outcome of the investigation within a reasonable period. Moreover, national cybersecurity certification authorities should cooperate with other national cybersecurity certification authorities or other public authorities, including by the sharing of information on the possible non-compliance of ICT products, ICT services and ICT processes with the requirements of this Regulation or with specific European cybersecurity certification schemes. The Commission should facilitate that sharing of information by making available a general electronic information support system, for example the Information and Communication System on Market Surveillance (ICSMS) and the Rapid Alert System for dangerous non-food products (RAPEX), already used by market surveillance authorities pursuant to Regulation (EC) No 765/2008."
+    },
+    {
+      "recital_number": 103,
+      "text": "With a view to ensuring the consistent application of the European cybersecurity certification framework, an ECCG that consists of representatives of national cybersecurity certification authorities or other relevant national authorities should be established. The main tasks of the ECCG should be to advise and assist the Commission in its work towards ensuring the consistent implementation and application of the European cybersecurity certification framework, to assist and closely cooperate with ENISA in the preparation of candidate cybersecurity certification schemes, in duly justified cases to request ENISA to prepare a candidate scheme, to adopt opinions addressed to ENISA on candidate schemes and to adopt opinions addressed to the Commission on the maintenance and review of existing European cybersecurity certifications schemes. The ECCG should facilitate the exchange of good practices and expertise between the various national cybersecurity certification authorities that are responsible for the authorisation of conformity assessment bodies and the issuance of European cybersecurity certificates."
+    },
+    {
+      "recital_number": 104,
+      "text": "In order to raise awareness and to facilitate the acceptance of future European cybersecurity certification schemes, the Commission may issue general or sector-specific cybersecurity guidelines, for example on good cybersecurity practices or responsible cybersecurity behaviour highlighting the positive effect of the use of certified ICT products, ICT services and ICT processes."
+    },
+    {
+      "recital_number": 105,
+      "text": "In order to further facilitate trade, and recognising that ICT supply chains are global, mutual recognition agreements concerning European cybersecurity certificates may be concluded by the Union in accordance with Article 218 of the Treaty on the Functioning of the European Union (TFEU). The Commission, taking into account the advice from ENISA and the European Cybersecurity Certification Group, may recommend the opening of relevant negotiations. Each European cybersecurity certification scheme should provide specific conditions for such mutual recognition agreements with third countries."
+    },
+    {
+      "recital_number": 106,
+      "text": "In order to ensure uniform conditions for the implementation of this Regulation, implementing powers should be conferred on the Commission. Those powers should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council (22)."
+    },
+    {
+      "recital_number": 107,
+      "text": "The examination procedure should be used for the adoption of implementing acts on European cybersecurity certification schemes for ICT products, ICT services or ICT processes, for the adoption of implementing acts on arrangements for carrying out inquiries by ENISA, for the adoption of implementing acts on a plan for the peer review of national cybersecurity certification authorities, as well as for the adoption of implementing acts on the circumstances, formats and procedures of notifications of accredited conformity assessment bodies by the national cybersecurity certification authorities to the Commission."
+    },
+    {
+      "recital_number": 108,
+      "text": "ENISA’s operations should be subject to regular and independent evaluation. That evaluation should have regard to ENISA’s objectives, its working practices and the relevance of its tasks, in particular its tasks relating to the operational cooperation at Union level. That evaluation should also assess the impact, effectiveness and efficiency of the European cybersecurity certification framework. In the event of a review, the Commission should evaluate how ENISA’s role as a reference point for advice and expertise can be reinforced and should also evaluate the possibility of a role for ENISA in supporting the assessment of third country ICT products, ICT services and ICT processes that do not comply with Union rules, where such products, services and processes enter the Union."
+    },
+    {
+      "recital_number": 109,
+      "text": "Since the objectives of this Regulation cannot be sufficiently achieved by the Member States but can rather, by reason of its scale and effects, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union (TEU). In accordance with the principle of proportionality as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve those objectives."
+    },
+    {
+      "recital_number": 110,
+      "text": "Regulation (EU) No 526/2013 should be repealed,"
+    },
+    {
+      "recital_number": 110,
+      "text": "Regulation (EU) No 526/2013 should be repealed,"
     }
   ]
 }

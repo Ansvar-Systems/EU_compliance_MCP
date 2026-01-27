@@ -1,9 +1,8 @@
 {
   "id": "MIFID2",
-  "full_name": "Markets in Financial Instruments Directive II",
+  "full_name": "Regulation 32014L0065",
   "celex_id": "32014L0065",
-  "effective_date": "2018-01-03",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/dir/2014/65/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065",
   "articles": [
     {
       "number": "1",
@@ -901,6 +900,692 @@
       "term": "data reporting services provider",
       "definition": "an APA, a CTP or an ARM. 2. The Commission shall be empowered to adopt delegated acts in accordance with Article 89 to specify some technical elements of the definitions laid down in paragraph 1, to adjust them to market developments, technological developments and experience of behaviour that is prohibited under Regulation (EU) No 596/2014 and to ensure the uniform application of this Directive. TITLE II AUTHORISATION AND OPERATING CONDITIONS FOR INVESTMENT FIRMS Conditions and procedures for authorisation",
       "article": "4"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Directive 2004/39/EC of the European Parliament and of the Council (4) has been substantially amended several times (5). Since further amendments are to be made, it should be recast in the interests of clarity."
+    },
+    {
+      "recital_number": 2,
+      "text": "Council Directive 93/22/EEC (6) sought to establish the conditions under which authorised investment firms and banks could provide specified services or establish branches in other Member States on the basis of home country authorisation and supervision. To that end, that Directive aimed to harmonise the initial authorisation and operating requirements for investment firms including conduct of business rules. It also provided for the harmonisation of some conditions governing the operation of regulated markets."
+    },
+    {
+      "recital_number": 3,
+      "text": "In recent years more investors have become active in the financial markets and are offered an even more complex wide-ranging set of services and instruments. In view of those developments the legal framework of the Union should encompass the full range of investor-oriented activities. To that end, it is necessary to provide for the degree of harmonisation needed to offer investors a high level of protection and to allow investment firms to provide services throughout the Union, being an internal market, on the basis of home country supervision. Directive 93/22/EEC was therefore replaced by Directive 2004/39/EC."
+    },
+    {
+      "recital_number": 4,
+      "text": "The financial crisis has exposed weaknesses in the functioning and in the transparency of financial markets. The evolution of financial markets has exposed the need to strengthen the framework for the regulation of markets in financial instruments, including where trading in such markets takes place over-the-counter (OTC), in order to increase transparency, better protect investors, reinforce confidence, address unregulated areas, and ensure that supervisors are granted adequate powers to fulfil their tasks."
+    },
+    {
+      "recital_number": 5,
+      "text": "There is agreement among regulatory bodies at international level that weaknesses in corporate governance in a number of financial institutions, including the absence of effective checks and balances within them, have been a contributory factor to the financial crisis. Excessive and imprudent risk taking may lead to the failure of individual financial institutions and systemic problems in Member States and globally. Incorrect conduct of firms providing services to clients may lead to investor detriment and loss of investor confidence. In order to address the potentially detrimental effect of those weaknesses in corporate governance arrangements, Directive 2004/39/EC should be supplemented by more detailed principles and minimum standards. Those principles and standards should apply taking into account the nature, scale and complexity of investment firms."
+    },
+    {
+      "recital_number": 6,
+      "text": "The High-Level Group on Financial Supervision in the EU invited the Union to develop a more harmonised set of financial regulation. In the context of the future European supervision architecture, the European Council of 18 and 19 June 2009 also stressed the need to establish a European single rulebook applicable to all financial institutions in the internal market."
+    },
+    {
+      "recital_number": 7,
+      "text": "Directive 2004/39/EC should therefore now partly be recast as this Directive and partly replaced by Regulation (EU) No 600/2014 of the European Parliament and the Council (7). Together, both legal instruments should form the legal framework governing the requirements applicable to investment firms, regulated markets, data reporting services providers and third country firms providing investment services or activities in the Union. This Directive should therefore be read together with that Regulation. This Directive should contain the provisions governing the authorisation of the business, the acquisition of qualifying holding, the exercise of the freedom of establishment and of the freedom to provide services, the operating conditions for investment firms to ensure investor protection, the powers of supervisory authorities of home and host Member States and the regime for imposing sanctions. Since the main objective and subject-matter of this Directive is to harmonise national provisions concerning the areas referred to, it should be based on Article 53(1) of the Treaty on the Functioning of the European Union (TFEU). The form of a Directive is appropriate in order to enable the implementing provisions in the areas covered by this Directive, when necessary, to be adjusted to any existing specificities of the particular market and legal system in each Member State."
+    },
+    {
+      "recital_number": 8,
+      "text": "It is appropriate to include in the list of financial instruments commodity derivatives and others which are constituted and traded in such a manner as to give rise to regulatory issues comparable to traditional financial instruments."
+    },
+    {
+      "recital_number": 9,
+      "text": "The scope of financial instruments will include physically settled energy contracts traded on an organised trading facility (OTF), except for those already regulated under Regulation (EU) No 1227/2011 of the European Parliament and the Council (8). Several measures have been taken to mitigate the impact of such an inclusion on firms trading those products. Those firms are today exempt from own funds requirements under Regulation (EU) No 575/2013 of the European Parliament and of the Council (9) and that exemption will be the subject of a review under Article 493(1) of that Regulation before it expires at the latest at the end of 2017. Those contracts being financial instruments, financial markets law requirements would apply from the onset, thus position limits, transaction reporting and market abuse requirements would apply as from the date of entry into application of this Directive and of Regulation (EU) No 600/2014. However a phasing-in period of 42 months is provided for the application of the clearing obligation and the margining requirements set out in Regulation (EU) No 648/2012 of the European Parliament and of the Council (10)."
+    },
+    {
+      "recital_number": 10,
+      "text": "The limitation of the scope concerning commodity derivatives traded on an OTF and physically settled should be limited to avoid a loophole that may lead to regulatory arbitrage. It is therefore necessary to provide for a delegated act to further specify the meaning of the expression ‘must be physically settled’ taking into account at least the creation of an enforceable and binding obligation to physically deliver, which cannot be unwound and with no right to cash settle or offset transactions except in the case of force majeure, default or other bona fide inability to perform."
+    },
+    {
+      "recital_number": 11,
+      "text": "A range of fraudulent practices have occurred in spot secondary markets in emission allowances (EUA) which could undermine trust in the emissions trading scheme, set up by Directive 2003/87/EC of the European Parliament and of the Council (11), and measures are being taken to strengthen the system of EUA registries and conditions for opening an account to trade EUAs. In order to reinforce the integrity and safeguard the efficient functioning of those markets, including comprehensive supervision of trading activity, it is appropriate to complement measures taken under Directive 2003/87/EC by bringing emission allowances fully into the scope of this Directive and of Regulation (EU) No 600/2014 of the European Parliament and of the Council (12), by classifying them as financial instruments."
+    },
+    {
+      "recital_number": 12,
+      "text": "The purpose of this Directive is to cover undertakings the regular occupation or business of which is to provide investment services and/or perform investment activities on a professional basis. Its scope should therefore not cover any person with a different professional activity."
+    },
+    {
+      "recital_number": 13,
+      "text": "It is necessary to establish a comprehensive regulatory regime governing the execution of transactions in financial instruments irrespective of the trading methods used to conclude those transactions so as to ensure a high quality of execution of investor transactions and to uphold the integrity and overall efficiency of the financial system. A coherent and risk-sensitive framework for regulating the main types of order-execution arrangement currently active in the European financial marketplace should be provided for. It is necessary to recognise the emergence of a new generation of organised trading systems alongside regulated markets which should be subjected to obligations designed to preserve the efficient and orderly functioning of financial markets and to ensure that such organised trading systems do not benefit from regulatory loopholes."
+    },
+    {
+      "recital_number": 14,
+      "text": "All trading venues, namely regulated markets, multilateral trading facilities (MTFs), and OTFs, should lay down transparent and non-discriminatory rules governing access to the facility. However, while regulated markets and MTFs should continue to be subject to similar requirements regarding whom they may admit as members or participants, OTFs should be able to determine and restrict access based, inter alia, on the role and obligations which they have in relation to their clients. In that regard, trading venues should be able to specify parameters governing the system such as minimum latency provided that that is done in an open and transparent manner and does not involve discrimination by the platform operator."
+    },
+    {
+      "recital_number": 15,
+      "text": "A central counterparty (CCP) is defined in Regulation (EU) No 648/2012 as a legal person that interposes itself between the parties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer. CCPs are not covered by the term OTF as defined in this Directive."
+    },
+    {
+      "recital_number": 16,
+      "text": "Persons having access to regulated markets or MTFs are referred to as members or participants. Both terms may be used interchangeably. Those terms do not include users who only access the trading venues via direct electronic access."
+    },
+    {
+      "recital_number": 17,
+      "text": "Systematic internalisers should be defined as investment firms which, on an organised, frequent, systematic and substantial basis, deal on own account when executing client orders outside a regulated market, an MTF or an OTF. In order to ensure the objective and effective application of that definition to investment firms, any bilateral trading carried out with clients should be relevant and criteria should be developed for the identification of investment firms required to register as systematic internalisers. While trading venues are facilities in which multiple third party buying and selling interests interact in the system, a systematic internaliser should not be allowed to bring together third party buying and selling interests in functionally the same way as a trading venue."
+    },
+    {
+      "recital_number": 18,
+      "text": "Persons administering their own assets and undertakings, who do not provide investment services or perform investment activities other than dealing on own account in financial instruments which are not commodity derivatives, emission allowances or derivatives thereof, should not be covered by the scope of this Directive unless they are market makers, members or participants of a regulated market or an MTF or have direct electronic access to a trading venue, apply a high-frequency algorithmic trading technique, or deal on own account when executing client orders."
+    },
+    {
+      "recital_number": 19,
+      "text": "The communiqué of the G20 finance ministers and central bank governors of 15 April 2011 states that participants on commodity derivatives markets should be subject to appropriate regulation and supervision and therefore certain exemptions from Directive 2004/39/EC are to be modified."
+    },
+    {
+      "recital_number": 20,
+      "text": "Persons who deal on own account, including market makers, in commodity derivatives, emission allowances or derivatives thereof, excluding persons who deal on own account when executing client orders, or who provide investment services in commodity derivatives or emission allowances or derivatives thereof to the customers or suppliers of their main business should not be covered by the scope of this Directive, provided that that activity is an ancillary activity to their main business on a group basis, and that main business is neither the provision of investment services within the meaning of this Directive nor of banking activities within the meaning of Directive 2013/36/EU of the European Parliament and of the Council (13), nor market making in commodity derivatives, and those persons do not apply a high-frequency algorithmic trading technique. Technical criteria for when an activity is ancillary to such a main business should be clarified in regulatory technical standards, taking into account the criteria specified in this Directive.\n\nThose criteria should ensure that non-financial firms dealing in financial instruments in a disproportionate manner compared with the level of investment in the main business are covered by the scope of this Directive. In doing so, those criteria should take at least into consideration, the need for ancillary activities to constitute a minority of activities at group level and the size of their trading activity compared to the overall market trading activity in that asset class. It is appropriate that where the obligation to provide liquidity on a venue is required by regulatory authorities in accordance with Union or national laws, regulations and administrative provisions or by trading venues, the transactions entered into to meet such an obligation should be excluded in the assessment of whether the activity is ancillary."
+    },
+    {
+      "recital_number": 21,
+      "text": "For the purposes of this Directive and of Regulation (EU) No 600/2014, which regulate both OTC and exchange-traded derivatives within the meaning of Regulation (EU) No 600/2014, activities that are deemed to be objectively measurable as reducing risks directly relating to the commercial activity or treasury financing activity and intragroup transactions should be considered in a consistent way with Regulation (EU) No 648/2012."
+    },
+    {
+      "recital_number": 22,
+      "text": "Persons that deal in commodity derivatives, emission allowance and derivatives thereof may also deal in other financial instruments as part of their commercial treasury risk management activities to protect themselves against risks, such as exchange rate risks. Therefore, it is important to clarify that exemptions apply cumulatively. For example, the exemption in point (j) of Article 2(1) can be used in conjunction with the exemption in point (d) of Article 2(1)."
+    },
+    {
+      "recital_number": 23,
+      "text": "However, in order to avoid any potential misuse of exemptions, market makers in financial instruments, other than market makers in commodity derivatives, emission allowances or derivatives thereof provided that their market making activity is ancillary to their main business considered on a group basis and provided that they do not apply a high-frequency algorithmic trading technique, should be covered by the scope of this Directive and should not benefit from any exemption. Persons dealing on own account when executing client orders or applying a high-frequency algorithmic trading technique should also be covered by the scope of this Directive and should not benefit from any exemption."
+    },
+    {
+      "recital_number": 24,
+      "text": "Dealing on own account when executing client orders should include firms executing orders from different clients by matching them on a matched principal basis (back-to-back trading), which should be regarded as acting as principal and should be subject to the provisions of this Directive covering both the execution of orders on behalf of clients and dealing on own account."
+    },
+    {
+      "recital_number": 25,
+      "text": "The execution of orders in financial instruments as an ancillary activity between two persons whose main business, on a group basis, is neither the provision of investment services within the meaning of this Directive nor of banking activities within the meaning of Directive 2013/36/EU should not be considered to be dealing on own account when executing client orders."
+    },
+    {
+      "recital_number": 26,
+      "text": "References in the text to persons should be understood as including both natural and legal persons."
+    },
+    {
+      "recital_number": 27,
+      "text": "Insurance or assurance undertakings the activities of which are subject to appropriate monitoring by the competent prudential-supervision authorities and which are subject to Directive 2009/138/EC of the European Parliament and of the Council (14) should be excluded from the scope of this Directive when carrying out the activities referred to in that Directive."
+    },
+    {
+      "recital_number": 28,
+      "text": "Persons who do not provide services for third parties but whose business consists in providing investment services solely for their parent undertakings, for their subsidiaries, or for other subsidiaries of their parent undertakings should not be covered by this Directive."
+    },
+    {
+      "recital_number": 29,
+      "text": "Some local energy utilities and some operators of industrial installations covered by the EU Emissions Trading Scheme bundle and out-source their trading activities for hedging commercial risks to non-consolidated subsidiaries. Those joint venture companies do not provide any other services and perform exactly the same function as the persons referred to in Recital 28. In order to ensure a level playing field, it should also be possible to exclude joint venture companies from the scope of this Directive if they are jointly held by local energy utilities or operators falling within point (f) of Article 3 of Directive 2003/87/EC who do not provide any services other than investment services for local energy utilities or operators falling within point (f) of Article 3 of Directive 2003/87/EC, and provided that those local energy utilities or those operators will be exempt under point (j) of Article 2(1) should they carry out those investment services themselves. However, in order to ensure that the appropriate safeguards are in place and that investors are adequately protected, Member States that choose to exempt such joint ventures should subject them to requirements at least analogous to the ones laid down in this Directive, in particular during the phase of authorisation, in the assessment of their reputation and experience and of the suitability of any shareholders, in the review of the conditions for initial authorisation and on-going supervision as well as on conduct of business obligations."
+    },
+    {
+      "recital_number": 30,
+      "text": "Persons who provide investment services only on an incidental basis in the course of professional activity should also be excluded from the scope of this Directive, provided that that activity is regulated and the relevant rules do not prohibit the provision, on an incidental basis, of investment services."
+    },
+    {
+      "recital_number": 31,
+      "text": "Persons who provide investment services consisting exclusively in the administration of employee-participation schemes and who therefore do not provide investment services for third parties should not be covered by this Directive."
+    },
+    {
+      "recital_number": 32,
+      "text": "It is necessary to exclude from the scope of this Directive central banks and other bodies performing similar functions as well as public bodies charged with or intervening in the management of public debt, which concept covers the investment thereof, with the exception of bodies that are partly or wholly state-owned the role of which is commercial or linked to the acquisition of holdings."
+    },
+    {
+      "recital_number": 33,
+      "text": "In order to clarify the regime of exemptions for the European System of Central Banks (ESCB), other national bodies performing similar functions and bodies intervening in the management of public debt, it is appropriate to limit such exemptions to the bodies and institutions performing their functions in accordance with the law of one Member State or in accordance with the Union law, as well as to international bodies of which two or more Member States are members and which have the purpose of mobilising funding and providing financial assistance to the benefit of their members that are experiencing or threatened by severe financing problems, such as the European Stability Mechanism."
+    },
+    {
+      "recital_number": 34,
+      "text": "It is necessary to exclude from the scope of this Directive collective investment undertakings and pension funds whether or not coordinated at Union level, and the depositaries or managers of such undertakings, since they are subject to specific rules directly adapted to their activities."
+    },
+    {
+      "recital_number": 35,
+      "text": "It is necessary to exclude from the scope of this Directive transmission system operators as defined in Article 2(4) of Directive 2009/72/EC of the European Parliament and of the Council (15) or Article 2(4) of Directive 2009/73/EC of the European Parliament and of the Council (16) when carrying out their tasks under those Directives, under Regulation (EC) No 714/2009 of the European Parliament and of the Council (17), under Regulation (EC) No 715/2009 of the European Parliament and of the Council (18) or under network codes or guidelines adopted pursuant to those legislative acts. In accordance with those legislative acts, transmission system operators have specific obligations and responsibilities, are subject to specific certification and are supervised by sector specific competent authorities. Transmission system operators should also benefit from such an exemption where they use other persons acting as service providers on their behalf to carry out their task under those legislative acts or under network codes or guidelines adopted pursuant to those Regulations. Transmission system operators should not be able to benefit from such an exemption when providing investment services or activities in financial instruments, including when operating a platform for secondary trading in financial transmission rights."
+    },
+    {
+      "recital_number": 36,
+      "text": "In order to benefit from the exemptions from this Directive, the person concerned should comply on a continuous basis with the conditions laid down for such exemptions. In particular, if a person provides investment services or performs investment activities and is exempt from this Directive because such services or activities are ancillary to that person’s main business, when considered on a group basis, that person should no longer be covered by the exemption relating to ancillary services where the provision of those services or activities ceases to be ancillary to that person’s main business."
+    },
+    {
+      "recital_number": 37,
+      "text": "Persons who provide the investment services and/or perform investment activities covered by this Directive should be subject to authorisation by their home Member States in order to protect investors and the stability of the financial system."
+    },
+    {
+      "recital_number": 38,
+      "text": "Credit institutions that are authorised under Directive 2013/36/EU should not need another authorisation under this Directive in order to provide investment services or perform investment activities. When a credit institution decides to provide investment services or perform investment activities the competent authorities, before granting an authorisation under Directive 2013/36/EU, should verify that it complies with the relevant provisions of this Directive."
+    },
+    {
+      "recital_number": 39,
+      "text": "Structured deposits have emerged as a form of investment product but are not covered under any legislative act for the protection of investors at Union level, while other structured investments are covered by such legislative acts. It is therefore appropriate to strengthen the confidence of investors and to make regulatory treatment concerning the distribution of different packaged retail investment products more uniform in order to ensure an adequate level of investor protection across the Union. For that reason, it is appropriate to include in the scope of this Directive structured deposits. In this regard, it is necessary to clarify that since structured deposits are a form of investment product, they do not include deposits linked solely to interest rates, such as Euribor or Libor, regardless of whether or not the interest rates are predetermined, or whether they are fixed or variable. Such deposits should therefore be excluded from the scope of this Directive."
+    },
+    {
+      "recital_number": 40,
+      "text": "The application of this Directive to investment firms and credit institutions when selling or advising clients in relation to structured deposits, should be understood as when acting as intermediaries for those products issued by credit institutions that can take deposits in accordance with Directive 2013/36/EU."
+    },
+    {
+      "recital_number": 41,
+      "text": "Central securities depositaries (CSDs) are systemically important institutions for financial markets that ensure the initial recording of securities, the maintenance of the accounts containing the securities issued and the settlement of virtually all trades of securities. CSDs are to be specifically regulated under Union law and subject, in particular, to authorisation and certain operating conditions. However, CSDs might, in addition to the core services referred to in other Union law, provide investment services and activities which are regulated under this Directive.\n\nIn order to ensure that any entities providing investment services and activities are subject to the same regulatory framework, it is appropriate to ensure that such CSDs are not subject to the requirements of this Directive relating to authorisation and certain operating conditions but that Union law regulating CSDs as such should ensure that they are subject to the provisions of this Directive when they provide investment services or perform investment activities in addition to the services specified in that Union law."
+    },
+    {
+      "recital_number": 42,
+      "text": "In order to strengthen the protection of investors in the Union, it is appropriate to limit the conditions under which Member States may exclude the application of this Directive to persons providing investment services to clients who, as a result, are not protected under this Directive. In particular, it is appropriate to require Member States to apply requirements at least analogous to the ones laid down in this Directive to those persons, in particular during the phase of authorisation, in the assessment of their reputation and experience and of the suitability of any shareholders, in the review of the conditions for initial authorisation and on-going supervision as well as on conduct of business obligations.\n\nIn addition, persons excluded from the application of this Directive should be covered under an investor compensation scheme recognised in accordance with Directive 97/9/EC of the European Parliament and of the Council (19) or professional indemnity insurance ensuring equivalent protection to their clients in the situations covered under that Directive."
+    },
+    {
+      "recital_number": 43,
+      "text": "Where an investment firm provides one or more investment services not covered by its authorisation, or performs one or more investment activities not covered by its authorisation, on a non-regular basis it should not need an additional authorisation under this Directive."
+    },
+    {
+      "recital_number": 44,
+      "text": "For the purposes of this Directive, the business of reception and transmission of orders should also include bringing together two or more investors, thereby bringing about a transaction between those investors."
+    },
+    {
+      "recital_number": 45,
+      "text": "Investment firms and credit institutions distributing financial instruments they issue themselves should be subject to this Directive when they provide investment advice to their clients. In order to eliminate uncertainty and strengthen investor protection, it is appropriate to provide for the application of this Directive when, in the primary market, investment firms and credit institutions distribute financial instruments issued by them without providing any advice. To that end, the definition of the service of execution of orders on behalf of clients should be extended."
+    },
+    {
+      "recital_number": 46,
+      "text": "The principles of mutual recognition and of home Member State supervision require that the Member States’ competent authorities should not grant or should withdraw authorisation where factors such as the content of programmes of operations, the geographical distribution or the activities actually carried on indicate clearly that an investment firm has opted for the legal system of one Member State for the purpose of evading the stricter standards in force in another Member State within the territory of which it intends to carry out or does carry out the greater part of its activities. An investment firm which is a legal person should be authorised in the Member State in which it has its registered office. An investment firm which is not a legal person should be authorised in the Member State in which it has its head office. In addition, Member States should require that an investment firm’s head office is always situated in its home Member State and that it actually operates there."
+    },
+    {
+      "recital_number": 47,
+      "text": "Directive 2007/44/EC of the European Parliament and of the Council (20) has provided for detailed criteria for the prudential assessment of proposed acquisitions in an investment firm and for a procedure for their application. In order to provide legal certainty, clarity and predictability with regard to the assessment process, as well as to the result thereof, it is appropriate to confirm the criteria and the process of prudential assessment laid down in that Directive.\n\nIn particular, competent authorities should appraise the suitability of the proposed acquirer and the financial soundness of the proposed acquisition against all of the following criteria: the reputation of the proposed acquirer; the reputation and experience of any person who will direct the business of the investment firm as a result of the proposed acquisition; the financial soundness of the proposed acquirer; whether the investment firm will be able to comply with the prudential requirements based on this Directive and on other Directives, in particular, on Directives 2002/87/EC of the European Parliament and of the Council (21) and 2013/36/EU; whether there are reasonable grounds to suspect that money laundering or terrorist financing within the meaning of Article 1 of Directive 2005/60/EC of the European Parliament and of the Council (22) is being or has been committed or attempted, or that the proposed acquisition could increase the risk thereof."
+    },
+    {
+      "recital_number": 48,
+      "text": "An investment firm authorised in its home Member State should be entitled to provide investment services or perform investment activities throughout the Union without the need to seek a separate authorisation from the competent authority in the Member State in which it wishes to provide such services or perform such activities."
+    },
+    {
+      "recital_number": 49,
+      "text": "Since certain investment firms are exempt from certain obligations imposed by Directive 2013/36/EU, they should be obliged to hold either a minimum amount of capital or professional indemnity insurance or a combination of both. The adjustments of the amounts of that insurance should take into account adjustments made in the framework of Directive 2002/92/EC of the European Parliament and of the Council (23). That particular treatment for the purposes of capital adequacy should be without prejudice to any decisions regarding the appropriate treatment of those firms under future changes to Union law on capital adequacy."
+    },
+    {
+      "recital_number": 50,
+      "text": "Since the scope of prudential regulation should be limited to those entities which, by virtue of running a trading book on a professional basis, represent a source of a counterparty risk to other market participants, entities which deal on own account in financial instruments other than commodity derivatives, emission allowances or derivatives thereof, should be excluded from the scope of this Directive provided that they are not market makers, do not deal on own account when executing client orders, are not members or participants of a regulated market or MTF, do not have direct electronic access to a trading venue and do not apply a high-frequency algorithmic trading technique."
+    },
+    {
+      "recital_number": 51,
+      "text": "In order to protect an investor’s ownership and other similar rights in respect of securities and the investor’s rights in respect of funds entrusted to a firm, those rights should in particular be kept distinct from those of the firm. This principle should not, however, prevent a firm from doing business in its name but on behalf of the investor, where that is required by the very nature of the transaction and the investor is in agreement, for example stock lending."
+    },
+    {
+      "recital_number": 52,
+      "text": "The requirements concerning the protection of client assets are a crucial tool for the protection of clients in the provision of services and activities. Those requirements can be excluded when full ownership of funds and financial instrument is transferred to an investment firm to cover any present or future, actual or contingent or prospective obligations. That broad possibility may create uncertainty and jeopardise the effectiveness of the requirements concerning the safeguard of client assets. Thus, at least when retail client assets are involved, it is appropriate to limit the possibility of investment firms to conclude title transfer financial collateral arrangements as defined under Directive 2002/47/EC of the European Parliament and of the Council (24), for the purpose of securing or otherwise covering their obligations."
+    },
+    {
+      "recital_number": 53,
+      "text": "It is necessary to strengthen the role of management bodies of investment firms, regulated markets and data reporting services providers in ensuring sound and prudent management of the firms, the promotion of the integrity of the market and the interest of investors. The management body of an investment firm, regulated markets and data reporting services providers should at all times commit sufficient time and possess adequate collective knowledge, skills and experience to be able to understand the firm’s activities including the main risks. To avoid group thinking and facilitate independent opinions and critical challenge, management bodies should therefore be sufficiently diverse as regards age, gender, geographic provenance and educational and professional background to present a variety of views and experiences. Employee representation in management bodies could also, by adding a key perspective and genuine knowledge of the internal workings of firms, be seen as a positive way of enhancing diversity. Therefore, diversity should be one of the criteria for the composition of management bodies. Diversity should also be addressed in firms’ recruitment policy more generally. That policy should, for instance, encourage firms to select candidates from shortlists including both genders. In the interests of a coherent approach to corporate governance it is desirable to align the requirements for investment firms as far as possible to those included in Directive 2013/36/EU."
+    },
+    {
+      "recital_number": 54,
+      "text": "In order to have an effective oversight and control over the activities of investment firms, regulated markets and data reporting services providers, the management body should be responsible and accountable for the overall strategy of the firm, taking into account the firm’s business and risk profile. The management body should assume clear responsibilities across the business cycle of the firm, in the areas of the identification and definition of the strategic objectives, risk strategy and internal governance of the firm, of the approval of its internal organisation, including criteria for selection and training of personnel, of effective oversight of senior management, of the definition of the overall policies governing the provision of services and activities, including the remuneration of sales staff and the approval of new products for distribution to clients. Periodic monitoring and assessment of the strategic objectives of firms, their internal organisation and their policies for the provision of services and activities should ensure their continuous ability to deliver sound and prudent management, in the interest of the integrity of the markets and the protection of investors. Combining too high a number of directorships would preclude a member of the management body from spending adequate time on the performance of that oversight role.\n\nTherefore, it is necessary to limit the number of directorships a member of the management body of an institution may hold at the same time in different entities. However, directorships in organisations which do not pursue predominantly commercial objectives, such as not-for-profit or charitable organisations, should not be taken into account for the purposes of applying such a limit."
+    },
+    {
+      "recital_number": 55,
+      "text": "Different governance structures are used across Member States. In most cases a unitary or a dual board structure is used. The definitions used in this Directive are intended to embrace all existing structures without advocating any particular structure. They are purely functional for the purpose of setting out rules aiming to achieve a particular outcome irrespective of the national company law applicable to an institution in each Member State. The definitions should therefore not interfere with the general allocation of competences in accordance with national company law."
+    },
+    {
+      "recital_number": 56,
+      "text": "The expanding range of activities that many investment firms undertake simultaneously has increased potential for conflicts of interest between those different activities and the interests of their clients. It is therefore necessary to provide for rules to ensure that such conflicts do not adversely affect the interests of their clients. Firms have a duty to take effective steps to identify and prevent or manage conflicts of interest and mitigate the potential impact of those risks as far as possible. Where some residual risk of detriment to the client’s interests nonetheless remains, clear disclosure to the client of the general nature and/or sources of conflicts of interest to the client and the steps taken to mitigate those risks should be made before undertaking business on its behalf."
+    },
+    {
+      "recital_number": 57,
+      "text": "Commission Directive 2006/73/EC (25) allows Member States to require, in the context of organisational requirements for investment firms, the recording of telephone conversations or electronic communications involving client orders. Recording of telephone conversations or electronic communications involving client orders is compatible with the Charter of Fundamental Rights of the European Union (the Charter) and is justified in order to strengthen investor protection, to improve market surveillance and increase legal certainty in the interest of investment firms and their clients. The importance of such records is also referred to in the technical advice to the Commission, released by the Committee of European Securities Regulators on 29 July 2010. Such records should ensure that there is evidence to prove the terms of any orders given by clients and its correspondence with transactions executed by the investment firms, as well as to detect any behaviour that may have relevance in terms of market abuse, including when firms deal on own account.\n\nTo that end records are needed for all conversations involving a firm’s representatives when dealing, or intending to deal, on own account. Where orders are communicated by clients through other channels than by telephone, such communications should be made in a durable medium such as mails, faxes, emails, documentation of client orders made at meetings. For example, the content of relevant face-to-face conversations with a client could be recorded by using written minutes or notes. Such orders should be considered to be equivalent to orders received by telephone. Where minutes are taken of face-to-face conversations with clients, Member States should ensure that appropriate safeguards are in place to ensure that the client does not lose out as a result of the minutes inaccurately recording the communication between the parties. Such safeguards should not imply any assumption of liability by the client.\n\nIn order to provide legal certainty regarding the scope of the obligation, it is appropriate to apply it to all equipment provided by the firm or permitted to be used by the investment firm and to require the investment firms to take reasonable steps to ensure that no privately owned equipment is used in relation to transactions. Those records should be available to competent authorities in the fulfilment of their supervisory tasks and in the performance of enforcement actions under this Directive and under Regulation (EU) No 600/2014, Regulation (EU) No 596/2014 and Directive 2014/57/EU of the European Parliament and of the Council (26) in order to help competent authorities identify behaviours which are not compliant with the legal framework regulating the activity of investment firms. Those records should also be available to investment firms and to clients to demonstrate the development of their relationship with regard to orders transmitted by clients and transaction carried out by firms. For those reasons, it is appropriate to provide in this Directive for the principles of a general regime concerning the recording of telephone conversations or electronic communications involving client orders."
+    },
+    {
+      "recital_number": 58,
+      "text": "In line with Council conclusions on strengthening European financial supervision of June 2009, and in order to contribute to the establishment of a single rulebook for Union financial markets, to help further develop a level playing field for Member States and market participants, to enhance investor protection and to improve supervision and enforcement, the Union is committed to minimising, where appropriate, discretions available to Member States across Union financial services law. In addition to the introduction in this Directive of a common regime for the recording of telephone conversations or electronic communications involving client orders, it is appropriate to reduce the possibility of competent authorities to delegate supervisory tasks in certain cases, to limit discretions in the requirements applicable to tied agents and to the reporting from branches."
+    },
+    {
+      "recital_number": 59,
+      "text": "The use of trading technology has evolved significantly in the past decade and is now extensively used by market participants. Many market participants now make use of algorithmic trading where a computer algorithm automatically determines aspects of an order with minimal or no human intervention. Risks arising from algorithmic trading should be regulated. However, the use of algorithms in post-trade processing of executed transactions does not constitute algorithmic trading. An investment firm that engages in algorithmic trading pursuing a market making strategy should carry out that market making continuously during a specified proportion of the trading venue’s trading hours. Regulatory technical standards should clarify what constitutes specified proportion of the trading venue’s trading hours by ensuring that such specified proportion is significant in comparison to the total trading hours, taking into account the liquidity, scale and nature of the specific market and the characteristics of the financial instrument traded."
+    },
+    {
+      "recital_number": 60,
+      "text": "Investment firms that engage in algorithmic trading pursuing a market making strategy should have in place appropriate systems and controls for that activity. Such an activity should be understood in a way specific to its context and purpose. The definition of such an activity is therefore independent from definitions such as that of ‘market making activities’ in Regulation (EU) No 236/2012 of the European Parliament and of the Council (27)."
+    },
+    {
+      "recital_number": 61,
+      "text": "A specific subset of algorithmic trading is high-frequency algorithmic trading where a trading system analyses data or signals from the market at high speed and then sends or updates large numbers of orders within a very short time period in response to that analysis. In particular, high-frequency algorithmic trading may contain elements such as order initiation, generating, routing and execution which are determined by the system without human intervention for each individual trade or order, short time-frame for establishing and liquidating positions, high daily portfolio turnover, high order-to-trade ratio intraday and ending the trading day at or close to a flat position. High-frequency algorithmic trading is characterised, among others, by high message intra-day rates which constitute orders, quotes or cancellations. In determining what constitutes high message intra-day rates, the identity of the client ultimately behind the activity, the length of the observation period, the comparison with the overall market activity during that period and the relative concentration or fragmentation of activity should be taken into account. High-frequency algorithmic trading is typically done by the traders using their own capital to trade and rather than being a strategy in itself is usually the use of sophisticated technology to implement more traditional trading strategies such as market making or arbitrage."
+    },
+    {
+      "recital_number": 62,
+      "text": "Technical advances have enabled high-frequency trading and an evolution of business models. High-frequency trading is facilitated by the co-location of market participants’ facilities in close physical proximity to a trading venue’s matching engine. In order to ensure orderly and fair trading conditions, it is essential to require trading venues to provide such co-location services on a non-discriminatory, fair and transparent basis. The use of trading technology has increased the speed, capacity and complexity of how investors trade. It has also enabled market participants to facilitate direct electronic access by their clients to markets through the use of their trading facilities, through direct market access or sponsored access. Trading technology has provided benefits to the market and market participants generally such as wider participation in markets, increased liquidity, narrower spreads, reduced short term volatility and the means to obtain better execution of orders for clients. Yet that trading technology also gives rise to a number of potential risks such as an increased risk of the overloading of the systems of trading venues due to large volumes of orders, risks of algorithmic trading generating duplicative or erroneous orders or otherwise malfunctioning in a way that may create a disorderly market.\n\nIn addition, there is the risk of algorithmic trading systems overreacting to other market events which can exacerbate volatility if there is a pre-existing market problem. Finally, algorithmic trading or high-frequency algorithmic trading techniques can, like any other form of trading, lend themselves to certain forms of behaviour which is prohibited under Regulation (EU) No 596/2014. High-frequency trading may also, because of the information advantage provided to high-frequency traders, prompt investors to choose to execute trades in venues where they can avoid interaction with high-frequency traders. It is appropriate to subject high-frequency algorithmic trading techniques which rely on certain specified characteristics to particular regulatory scrutiny. While those are predominantly techniques which rely on trading on own account such scrutiny should also apply where the execution of the technique is structured in such a way as to avoid the execution taking place on own account."
+    },
+    {
+      "recital_number": 63,
+      "text": "Those potential risks from increased use of technology are best mitigated by a combination of measures and specific risk controls directed at firms that engage in algorithmic trading or high-frequency algorithmic trading techniques, those that provide direct electronic access, and other measures directed at operators of trading venues that are accessed by such firms. In order to strengthen the resilience of markets in the light of technological developments, those measures should reflect and build on the technical guidelines issued by the European Supervisory Authority (European Securities and Markets Authority) (‘ESMA’), established by Regulation (EU) No 1095/2010 of the European Parliament and of the Council (28) in February 2012 on systems and controls in an automated trading environment for trading platforms, investment firms and competent authorities (ESMA/2012/122). It is desirable to ensure that all high-frequency algorithmic trading firms be authorised. Such authorisation should ensure those firms are subject to organisational requirements under this Directive and that they are properly supervised. However, entities which are authorised and supervised under Union law regulating the financial sector and are exempt from this Directive, but which engage in algorithmic trading or high-frequency algorithmic trading techniques, should not be required to obtain an authorisation under this Directive and should only be subject to the measures and controls aiming to tackle the specific risk arising from those types of trading. In that respect, ESMA should play an important coordinating role by defining appropriate tick sizes in order to ensure orderly markets at Union level."
+    },
+    {
+      "recital_number": 64,
+      "text": "Both investment firms and trading venues should ensure robust measures are in place to ensure that algorithmic trading or high-frequency algorithmic trading techniques do not create a disorderly market and cannot be used for abusive purposes. Trading venues should also ensure their trading systems are resilient and properly tested to deal with increased order flows or market stresses and that circuit breakers are in place on trading venues to temporarily halt trading or constrain it if there are sudden unexpected price movements."
+    },
+    {
+      "recital_number": 65,
+      "text": "It is also necessary to ensure that the fee structures of trading venues are transparent, non-discriminatory and fair and that they are not structured in such a way as to promote disorderly market conditions. It is therefore appropriate to allow for trading venues to adjust their fees for cancelled orders according to the length of time for which the order was maintained and to calibrate the fees to each financial instrument to which they apply. Member States should also be able to allow trading venues to impose higher fees for placing orders that are subsequently cancelled or on participants placing a high ratio of cancelled orders and on those operating a high-frequency algorithmic trading technique in order to reflect the additional burden on system capacity without necessarily benefitting other market participants."
+    },
+    {
+      "recital_number": 66,
+      "text": "In addition to measures relating to algorithmic and high-frequency algorithmic trading techniques it is appropriate to ban the provision of direct electronic access to markets by investment firms for their clients where such access is not subject to proper systems and controls. Irrespective of the form of the direct electronic access provided, firms providing such access should assess and review the suitability of clients using that service and ensure that risk controls are imposed on the use of the service and that those firms retain responsibility for trading submitted by their clients through the use of their systems or using their trading codes. It is appropriate that detailed organisational requirements regarding those new forms of trading should be prescribed in more detail in regulatory technical standards. This should ensure that requirements can be amended where necessary to deal with further innovation and developments in that area."
+    },
+    {
+      "recital_number": 67,
+      "text": "In order to ensure effective supervision and in order to enable the competent authorities to take appropriate measures against defective or rogue algorithmic strategies in due time it is necessary to flag all orders generated by algorithmic trading. By means of flagging, competent authorities should be enabled to identify and distinguish orders originating from different algorithms and to reconstruct efficiently and evaluate the strategies that algorithmic traders employ. This should mitigate the risk that orders are not unambiguously attributed to an algorithmic strategy and a trader. The flagging permits the competent authorities to react efficiently and effectively against algorithmic trading strategies that behave in an abusive manner or pose risks to the orderly functioning of the market."
+    },
+    {
+      "recital_number": 68,
+      "text": "In order to ensure that market integrity is maintained in the light of technological developments in financial markets, ESMA should regularly seek input from national experts on developments relating to trading technology including high-frequency trading and new practices which could constitute market abuse, so as to identify and promote effective strategies for preventing and addressing such abuse."
+    },
+    {
+      "recital_number": 69,
+      "text": "There is a multitude of trading venues currently operating in the Union, among which a number are trading identical financial instruments. In order to address potential risks to the interests of investors it is necessary to formalise and further coordinate the processes on the consequences for trading on other trading venues if an investment firm or a market operator operating a trading venue decides to suspend or remove a financial instrument from trading. In the interest of legal certainty and to adequately address conflicts of interests when deciding to suspend or to remove financial instruments from trading, it should be ensured that if an investment firm or a market operator operating a trading venue stops trading due to non-compliance with their rules, the others follow that decision if it is decided so by their competent authorities unless continuing trading may be justified due to exceptional circumstances. In addition, it is necessary to formalise and improve the exchange of information and the cooperation between the competent authorities in relation to suspension and removal of financial instruments from trading on a trading venue. Those arrangements should be applied in such a way as to prevent trading venues using information transmitted in the context of a suspension or removal of a financial instrument from trading for commercial purposes."
+    },
+    {
+      "recital_number": 70,
+      "text": "More investors have become active in the financial markets and are offered a more complex wide-ranging set of services and instruments and, in view of those developments, it is necessary to provide for a degree of harmonisation to offer investors a high level of protection across the Union. When Directive 2004/39/EC was adopted, the increasing dependence of investors on personal recommendations required to include the provision of investment advice as an investment service subject to authorisation and to specific conduct of business obligations. The continuous relevance of personal recommendations for clients and the increasing complexity of services and instruments require enhancing the conduct of business obligations in order to strengthen the protection of investors."
+    },
+    {
+      "recital_number": 71,
+      "text": "Member States should ensure that investment firms act in accordance with the best interests of their clients and are able to comply with their obligations under this Directive. Investment firms should accordingly understand the features of the financial instruments offered or recommended and establish and review effective policies and arrangements to identify the category of clients to whom products and services are to be provided. Member States should ensure that the investment firms which manufacture financial instruments ensure that those products are manufactured to meet the needs of an identified target market of end clients within the relevant category of clients, take reasonable steps to ensure that the financial instruments are distributed to the identified target market and periodically review the identification of the target market of and the performance of the products they offer. Investment firms that offer or recommend to clients financial instruments not manufactured by them should also have appropriate arrangements in place to obtain and understand the relevant information concerning the product approval process, including the identified target market and the characteristics of the product they offer or recommend. That obligation should apply without prejudice to any assessment of appropriateness or suitability to be subsequently carried out by the investment firm in the provision of investment services to each client, on the basis of their personal needs, characteristics and objectives.\n\nIn order to ensure that financial instruments will be offered or recommended only when in the interest of the client, investment firms offering or recommending the product manufactured by firms which are not subject to the product governance requirements set out in this Directive or manufactured by third-country firms should also have appropriate arrangements to obtain sufficient information about the financial instruments."
+    },
+    {
+      "recital_number": 72,
+      "text": "In order to give all relevant information to investors, it is appropriate to require investment firms providing investment advice to disclose the cost of the advice, to clarify the basis of the advice they provide, in particular the range of products they consider in providing personal recommendations to clients, whether they provide investment advice on an independent basis and whether they provide the clients with the periodic assessment of the suitability of the financial instruments recommended to them. It is also appropriate to require investment firms to explain to their clients the reasons for the advice provided to them."
+    },
+    {
+      "recital_number": 73,
+      "text": "In order to further establish the regulatory framework for the provision of investment advice, while at the same time leaving choice to investment firms and clients, it is appropriate to establish the conditions for the provisions of that service when firms inform clients that the service is provided on an independent basis. When advice is provided on an independent basis a sufficient range of different product providers’ products should be assessed prior to making a personal recommendation. It is not necessary for the advisor to assess investment products available on the market by all product providers or issuers, but the range of financial instruments should not be limited to financial instruments issued or provided by entities with close links with the investment firm or with other legal or economic relationships, such as a contractual relationship, that are so close as to put at risk the independent basis of the advice provided."
+    },
+    {
+      "recital_number": 74,
+      "text": "In order to strengthen the protection of investors and increase clarity to clients as to the service they receive, it is also appropriate to further restrict the possibility for firms providing the service of investment advice on an independent basis and the service of portfolio management to accept and retain fees, commissions or any monetary and non-monetary benefits from third parties, and particularly from issuers or product providers. This implies that all fees, commissions and any monetary benefits paid or provided by a third party must be returned in full to the client as soon as possible after receipt of those payments by the firm and the firm should not be allowed to offset any third-party payments from the fees due by the client to the firm. The client should be accurately and, where relevant, periodically, informed about all fees, commissions and benefits the firm has received in connection with the investment service provided to the client and transferred to him. Firms providing independent advice or portfolio management should also set up a policy, as part of their organisational requirements, to ensure that third party payments received are allocated and transferred to the clients. Only minor non-monetary benefits should be allowed, provided that they are clearly disclosed to the client, that they are capable of enhancing the quality of the service provided and that they could not be judged to impair the ability of investment firms to act in the best interest of their clients."
+    },
+    {
+      "recital_number": 75,
+      "text": "When providing the service of investment advice on an independent basis and the service of portfolio management, fees, commissions or non-monetary benefits paid or provided by a person on behalf of the client should be allowed only as far as the person is aware that such payments have been made on that person’s behalf and that the amount and frequency of any payment is agreed between the client and the investment firm and not determined by a third party. Cases which would satisfy that requirement include where a client pays a firm’s invoice directly or it is paid by an independent third party who has no connection with the investment firm regarding the investment service provided to the client and is acting only on the instructions of the client and cases where the client negotiates a fee for a service provided by an investment firm and pays that fee. This would generally be the case for accountants or lawyers acting under a clear payment instruction from the client or where a person is acting as a mere conduit for the payment."
+    },
+    {
+      "recital_number": 76,
+      "text": "This Directive provides for conditions and procedures for Member States to comply with when planning to impose additional requirements. Such requirements may include prohibiting or further restricting the offer or acceptance of fees, commissions or any monetary or non-monetary benefits paid or provided by any third party or a person acting on behalf of a third party in relation to the provision of service to clients."
+    },
+    {
+      "recital_number": 77,
+      "text": "To further protect consumers, it is also appropriate to ensure that investment firms do not remunerate or assess the performance of their own staff in a way that conflicts with the firm’s duty to act in the best interests of their clients, for example through remuneration, sales targets or otherwise which provide an incentive for recommending or selling a particular financial instrument when another product may better meet the client’s needs."
+    },
+    {
+      "recital_number": 78,
+      "text": "Where sufficient information in relation to the costs and associated charges or to the risks in respect of the financial instrument itself is provided in accordance with other Union law that information should be regarded as appropriate for the purposes of providing information to clients under this Directive. However, investment firms or credit institutions distributing that financial instrument should additionally inform their clients about all the other costs and associated charges relating to their provision of investment services in relation to that financial instrument."
+    },
+    {
+      "recital_number": 79,
+      "text": "Given the complexity of investment products and the continuous innovation in their design, it is also important to ensure that staff who advise on or sell investment products to retail clients possess an appropriate level of knowledge and competence in relation to the products offered. Investment firms should allow their staff sufficient time and resources to achieve that knowledge and competence and to apply it in providing services to clients."
+    },
+    {
+      "recital_number": 80,
+      "text": "Investment firms are allowed to provide investment services that consist only of execution and/or of the reception and transmission of client orders, without the need to obtain information regarding the knowledge and experience of the client in order to assess the appropriateness of the service or the financial instrument for the client. Since those services entail a relevant reduction of client protection, it is appropriate to improve the conditions for their provision. In particular, it is appropriate to exclude the possibility to provide those services in conjunction with the ancillary service consisting of granting credits or loans to investors to allow them to carry out a transaction in which the investment firm is involved, since this increases the complexity of the transaction and makes more difficult the understanding of the risk involved. It is also appropriate to better define the criteria for the selection of the financial instruments to which those services should relate in order to exclude certain financial instruments, including those which embed a derivative or incorporate a structure which makes it difficult for the client to understand the risk involved, shares in undertakings that are not undertakings for collective investment in transferable securities (UCITS) (non-UCITS collective investment undertakings) and structured UCITS as referred to in the second subparagraph of Article 36(1) of Commission Regulation (EU) No 583/2010 (29). The treatment of certain UCITS as complex products should be without prejudice to future Union law defining the scope of and the rules applicable to such products."
+    },
+    {
+      "recital_number": 81,
+      "text": "Cross-selling practices are a common strategy for retail financial service providers throughout the Union. They can provide benefits to retail clients but can also represent practices where the interest of the client is not adequately considered. For instance, certain forms of cross-selling practices, namely tying practices where two or more financial services are sold together in a package and at least one of those services is not available separately, can distort competition and negatively affect client mobility and their ability to make informed choices. An example of tying practices can be the necessary opening of current accounts when an investment service is provided to a retail client. While practices of bundling, where two or more financial services are sold together in a package, but each of the services can also be purchased separately, may also distort competition and negatively affect customer mobility and the ability of clients to make informed choices, they at least leave choice to the client and may therefore pose less risk to the compliance of investment firms with their obligations under this Directive. The use of such practices should be carefully assessed in order to promote competition and consumer choice."
+    },
+    {
+      "recital_number": 82,
+      "text": "When providing investment advice, the investment firm should specify in a written statement on suitability how the advice given meets the preferences, needs and other characteristics of the retail client. The statement should be provided in a durable medium including in an electronic form. The responsibility to undertake the suitability assessment and to provide an accurate suitability report to the client lies with the investment firm and appropriate safeguards should be in place to ensure that the client does not incur a loss out as a result of the report presenting in an inaccurate or unfair manner the personal recommendation, including how the recommendation provided is suitable for the client and the disadvantages of the recommended course of action."
+    },
+    {
+      "recital_number": 83,
+      "text": "In determining what constitutes the provision of information in good time before a time specified in this Directive, an investment firm should take into account, having regard to the urgency of the situation, the client’s need for sufficient time to read and understand it before taking an investment decision. A client is likely to require more time to review information given on a complex or unfamiliar product or service, or a product or service a client has no experience with than a client considering a simpler or more familiar product or service, or where the client has relevant prior experience."
+    },
+    {
+      "recital_number": 84,
+      "text": "Nothing in this Directive should oblige investment firms to provide all required information about the investment firm, financial instruments, costs and associated charges, or concerning the safeguarding of client financial instruments or client funds immediately and at the same time, provided that they comply with the general obligation to provide the relevant information in good time before the time specified in this Directive. Provided that the information is communicated to the client in good time before the provision of the service, nothing in this Directive obliges firms to provide it either separately or by incorporating the information in a client agreement."
+    },
+    {
+      "recital_number": 85,
+      "text": "A service should be considered to be provided at the initiative of a client unless the client demands it in response to a personalised communication from or on behalf of the firm to that particular client, which contains an invitation or is intended to influence the client in respect of a specific financial instrument or specific transaction. A service can be considered to be provided at the initiative of the client notwithstanding that the client demands it on the basis of any communication containing a promotion or offer of financial instruments made by any means that by its very nature is general and addressed to the public or a larger group or category of clients or potential clients."
+    },
+    {
+      "recital_number": 86,
+      "text": "One of the objectives of this Directive is to protect investors. Measures to protect investors should be adapted to the particularities of each category of investors (retail, professional and counterparties). However, in order to enhance the regulatory framework applicable to the provision of services irrespective of the categories of clients concerned, it is appropriate to make it clear that principles to act honestly, fairly and professionally and the obligation to be fair, clear and not misleading apply to the relationship with any clients."
+    },
+    {
+      "recital_number": 87,
+      "text": "Investments that involve contracts of insurance are often made available to customers as potential alternatives or substitutes to financial instruments subject to this Directive. To deliver consistent protection for retail clients and ensure a level playing field between similar products, it is important that insurance-based investment products are subject to appropriate requirements. Whereas the investor protection requirements in this Directive should therefore be applied equally to those investments packaged under insurance contracts, their different market structures and product characteristics make it more appropriate that detailed requirements are set out in the ongoing review of Directive 2002/92/EC rather than setting them in this Directive. Future Union law regulating the activities of insurance intermediaries and insurance undertakings should thus appropriately ensure a consistent regulatory approach concerning the distribution of different financial products which satisfy similar investor needs and therefore raise comparable investor protection challenges. The European Supervisory Authority (European Investment and Occupational Pensions Authority) (‘EIOPA’), established by Regulation (EU) No 1094/2010 of the European Parliament and of the Council (30) and ESMA should work together to achieve as much consistency as possible in the conduct of business standards for those investment products. Those new requirements for insurance-based investment products should be laid down in Directive 2002/92/EC."
+    },
+    {
+      "recital_number": 88,
+      "text": "In order to align the rules pertaining to conflicts of interests, general principles and information to customers and to allow Member States to place restrictions on the remuneration of insurance intermediaries, Directive 2002/92/EC should be amended accordingly."
+    },
+    {
+      "recital_number": 89,
+      "text": "Insurance-based investment products that do not offer investment opportunities and deposits solely exposed to interest rates should be excluded from the scope of this Directive. Individual and occupational pension products, having the primary purpose of providing the investor an income in retirement, should be excluded from the scope of this Directive, in consideration of their particularities and objectives."
+    },
+    {
+      "recital_number": 90,
+      "text": "By way of derogation from the principle of home Member State authorisation, supervision and enforcement of obligations in respect of the operation of branches, it is appropriate for the competent authority of the host Member State to assume responsibility for enforcing certain obligations specified in this Directive in relation to business conducted through a branch within the territory where the branch is located, since that authority is closest to the branch, and is better placed to detect and intervene in respect of infringements of rules governing the operations of the branch."
+    },
+    {
+      "recital_number": 91,
+      "text": "It is necessary to impose an effective ‘best execution’ obligation to ensure that investment firms execute client orders on terms that are most favourable to the client. That obligation should apply where a firm owes contractual or agency obligations to the client."
+    },
+    {
+      "recital_number": 92,
+      "text": "Given that a wider range of execution venues are now available in the Union, it is appropriate to enhance the best execution framework for retail investors. Advances in technology for monitoring best execution should be considered when applying the best execution framework in accordance with the second and third subparagraph of Article 27(1)."
+    },
+    {
+      "recital_number": 93,
+      "text": "For the purposes of determining best execution when executing retail client orders, the costs relating to execution should include an investment firm’s own commissions or fees charged to the client for limited purposes, where more than one venue listed in the firm’s execution policy is capable of executing a particular order. In such cases, the firm’s own commissions and costs for executing the order on each of the eligible execution venues should be taken into account in order to assess and compare the results for the client that would be achieved by executing the order on each such venue. However, it is not intended to require a firm to compare the results that would be achieved for its client on the basis of its own execution policy and its own commissions and fees, with results that might be achieved for the same client by any other investment firm on the basis of a different execution policy or a different structure of commissions or fees. Nor is it intended to require a firm to compare the differences in its own commissions which are attributable to differences in the nature of the services that the firm provides to clients."
+    },
+    {
+      "recital_number": 94,
+      "text": "The provisions of this Directive that provide that costs of execution should include an investment firm’s own commissions or fees charged to the client for the provision of an investment service should not apply for the purpose of determining what execution venues should be included in the firm’s execution policy for the purposes of Article 27(5) of this Directive."
+    },
+    {
+      "recital_number": 95,
+      "text": "An investment firm should be considered to be structuring or charging its commissions in a way which discriminates unfairly between execution venues if it charges a different commission or spread to clients for execution on different execution venues and that difference does not reflect actual differences in the cost to the firm of executing on those venues."
+    },
+    {
+      "recital_number": 96,
+      "text": "In order to enhance the conditions under which investment firms comply with their obligation to execute orders on terms most favourable to their clients in accordance with this Directive, it is appropriate to require that for financial instruments subject to the trading obligation in Articles 23 and 28 of Regulation (EU) No 600/2014 that each trading venue and systematic internaliser and for other financial instruments that each execution venue to make available to the public data relating to the quality of execution of transactions on each venue."
+    },
+    {
+      "recital_number": 97,
+      "text": "Information provided by investment firms to clients in relation to their execution policy often are generic and standard and do not allow clients to understand how an order will be executed and to verify firms’ compliance with their obligation to execute orders on term most favourable to their clients. In order to enhance investor protection it is appropriate to specify the principles concerning the information given by investment firms to their clients on the execution policy and to require firms to make public, on an annual basis, for each class of financial instruments, the top five execution venues where they executed client orders in the preceding year and to take account of that information and information published by execution venues on execution quality in their policies on best execution."
+    },
+    {
+      "recital_number": 98,
+      "text": "When establishing the business relationship with the client the investment firm might ask the client or potential client to consent at the same time to the execution policy as well as to the possibility that that person’s orders may be executed outside a trading venue."
+    },
+    {
+      "recital_number": 99,
+      "text": "Persons who provide investment services on behalf of more than one investment firm should not be considered to be tied agents but as investment firms when they fall under the definition provided in this Directive, with the exception of certain persons who may be exempt."
+    },
+    {
+      "recital_number": 100,
+      "text": "This Directive should be without prejudice to the right of tied agents to undertake activities covered by other Directives and related activities in respect of financial services or products not covered by this Directive, including on behalf of parts of the same financial group."
+    },
+    {
+      "recital_number": 101,
+      "text": "The conditions for conducting activities outside the premises of the investment firm (door-to-door selling) should not be covered by this Directive."
+    },
+    {
+      "recital_number": 102,
+      "text": "Member States’ competent authorities should not register or should withdraw the registration where the activities actually carried on indicate clearly that a tied agent has opted for the legal system of one Member State for the purpose of evading the stricter standards in force in another Member State within the territory of which it intends to carry out or does carry out the greater part of its activities."
+    },
+    {
+      "recital_number": 103,
+      "text": "For the purposes of this Directive eligible counterparties should be considered to be acting as clients."
+    },
+    {
+      "recital_number": 104,
+      "text": "The financial crisis has shown limits in the ability of non-retail clients to appreciate the risk of their investments. While it should be confirmed that conduct of business rules should be enforced in respect of those investors most in need of protection, it is appropriate to better calibrate the requirements applicable to different categories of clients. To that extent, it is appropriate to extend some information and reporting requirements to the relationship with eligible counterparties. In particular, the relevant requirements should relate to the safeguarding of client financial instruments and funds as well as information and reporting requirements concerning more complex financial instruments and transactions. In order to better define the classification of municipalities and local public authorities, it is appropriate to clearly exclude them from the list of eligible counterparties and of clients who are considered to be professionals while still allowing those clients to ask for treatment as professional clients on request."
+    },
+    {
+      "recital_number": 105,
+      "text": "In respect of transactions executed between eligible counterparties, the obligation to disclose client limit orders should only apply where the counterparty is explicitly sending a limit order to an investment firm for its execution."
+    },
+    {
+      "recital_number": 106,
+      "text": "Member States should ensure the respect of the right to the protection of personal data in accordance with Directive 95/46/EC of the European Parliament and of the Council (31) and Directive 2002/58/EC of the European Parliament and of the Council (32) which govern the processing of personal data carried out in application of this Directive. Processing of personal data by ESMA in the application of this Directive is subject to Regulation (EU) No 45/2001 of the European Parliament and of the Council (33)."
+    },
+    {
+      "recital_number": 107,
+      "text": "Investment firms should all have the same opportunities of joining or having access to regulated markets throughout the Union. Regardless of the manner in which transactions are at present organised in the Member States, it is important to abolish the technical and legal restrictions on access to regulated markets."
+    },
+    {
+      "recital_number": 108,
+      "text": "In order to facilitate the finalisation of cross-border transactions, it is appropriate to provide for access to clearing and settlement systems throughout the Union by investment firms, irrespective of whether transactions have been concluded through regulated markets in the Member State concerned. Investment firms which wish to participate directly in other Member States’ settlement systems should comply with the relevant operational and commercial requirements for membership and the prudential measures to uphold the smooth and orderly functioning of the financial markets."
+    },
+    {
+      "recital_number": 109,
+      "text": "The provision of services by third country firms in the Union is subject to national regimes and requirements. Firms authorised in accordance with them do not enjoy the freedom to provide services and the right of establishment in Member States other than the one where they are established. Where a Member State considers that the appropriate level of protection for its retail clients or retail clients who have requested to be treated as professional clients can be achieved by the establishment of a branch by the third-country firm it is appropriate to introduce a minimum common regulatory framework at Union level with respect to the requirements applicable to those branches and in light of the principle that third-country firms should not be treated in a more favourable way than Union firms."
+    },
+    {
+      "recital_number": 110,
+      "text": "When implementing the provisions of this Directive, Member States should take due account of the recommendations by the Financial Action Task Force (FATF) on jurisdictions that have strategic anti-money laundering and countering the financing of terrorism deficiencies and to which counter-measures apply or jurisdictions with strategic anti-money laundering and countering the financing of terrorism deficiencies that have not made sufficient progress in addressing the deficiencies or have not committed to an action plan developed with the FATF to address the deficiencies."
+    },
+    {
+      "recital_number": 111,
+      "text": "The provision of this Directive regulating the provision of investment services or activities by third-country firms in the Union should not affect the possibility for persons established in the Union to receive investment services by a third country firm at their own exclusive initiative. Where a third-country firm provides services at the own exclusive initiative of a person established in the Union, the services should not be deemed as provided in the territory of the Union. Where a third-country firm solicits clients or potential clients in the Union or promotes or advertises investment services or activities together with ancillary services in the Union, it should not be deemed as a service provided at the own exclusive initiative of the client."
+    },
+    {
+      "recital_number": 112,
+      "text": "The authorisation to operate a regulated market should extend to all activities which are directly relating to the display, processing, execution, confirmation and reporting of orders from the point at which such orders are received by the regulated market to the point at which they are transmitted for subsequent finalisation, and to activities relating to the admission of financial instruments to trading. This should also include transactions concluded through the medium of designated market makers appointed by the regulated market which are undertaken under its systems and in accordance with the rules that govern those systems. Not all transactions concluded by members or participants of the regulated market, MTF or OTF are to be considered to be concluded within the systems of a regulated market, MTF or OTF. Transactions which members or participants conclude on a bilateral basis and which do not comply with all the obligations established for a regulated market, an MTF or an OTF under this Directive should be considered to be transactions concluded outside a regulated market, an MTF or an OTF for the purposes of the definition of systematic internaliser. In such a case the obligation for investment firms to make public firm quotes should apply if the conditions established by this Directive and by Regulation (EU) No 600/2014 are met."
+    },
+    {
+      "recital_number": 113,
+      "text": "Given the importance of liquidity provision to the orderly and efficient functioning of markets, investment firms that engage in algorithmic trading to pursue a market making strategy should have written agreements in place with trading venues clarifying their obligations to provide liquidity to the market."
+    },
+    {
+      "recital_number": 114,
+      "text": "Nothing in this Directive should require competent authorities to approve or examine the content of the written agreement between the regulated market and the investment firm that is required from the participation in a market making scheme. However, neither does it prevent them from doing so, insofar as any such approval or examination is based only on the regulated markets’ compliance with their obligations under Article 48."
+    },
+    {
+      "recital_number": 115,
+      "text": "The provision of core market data services which are pivotal for users to be able to obtain a desired overview of trading activity across Union financial markets and for competent authorities to receive accurate and comprehensive information on relevant transactions should be subject to authorisation and regulation to ensure the necessary level of quality."
+    },
+    {
+      "recital_number": 116,
+      "text": "The introduction of approved publication arrangements (APAs) should improve the quality of trade transparency information published in the OTC space and contribute significantly to ensuring that such data is published in a way facilitating its consolidation with data published by trading venues."
+    },
+    {
+      "recital_number": 117,
+      "text": "Now that a market structure is in place which allows for competition between multiple trading venues it is essential that an effective and comprehensive consolidated tape is in operation as soon as possible. The introduction of a commercial solution for a consolidated tape for equities and equity-like financial instruments should contribute to creating a more integrated European market and make it easier for market participants to gain access to a consolidated view of trade transparency information that is available. The envisaged solution is based on an authorisation of providers working along pre-defined and supervised parameters which are in competition with each other in order to achieve technically highly sophisticated and innovative solutions, serving the market to the greatest extent possible and ensuring that consistent and accurate market data is made available. By requiring all consolidated tape providers (CTPs) to consolidate data from all APAs and trading venues it will be assured that competition will take place on the basis of quality of service to clients rather than breadth of data covered. Nevertheless it is appropriate to make provision now for a consolidated tape to be put in place through a public procurement process if the mechanism envisaged does not lead to the timely delivery of an effective and comprehensive consolidated tape for equities and equity-like financial instruments."
+    },
+    {
+      "recital_number": 118,
+      "text": "The establishment of a consolidated tape for non-equity financial instruments is deemed to be more difficult to implement than the consolidated tape for equity financial instruments and potential providers should be able to gain experience with the latter before constructing it. In order to facilitate the proper establishment of the consolidated tape for non-equity financial instruments, it is therefore appropriate to provide for an extended date of application of the national measures transposing the relevant provision. Nevertheless it is appropriate to make provision now for a consolidated tape to be put in place through a public procurement process if the mechanism envisaged does not lead to the timely delivery of an effective and comprehensive consolidated tape for non-equity financial instruments."
+    },
+    {
+      "recital_number": 119,
+      "text": "When determining, as regards non-equity financial instruments, the trading venues and APAs which need to be included in the post-trade information to be disseminated by CTPs, ESMA should ensure that the objective of the establishment of an integrated Union market for those financial instruments will be achieved and should ensure non-discriminatory treatment of APAs and trading venues."
+    },
+    {
+      "recital_number": 120,
+      "text": "Union law on own funds requirements should fix the minimum capital requirements with which regulated markets should comply in order to be authorised, and in so doing should take into account the specific nature of the risks associated with such markets."
+    },
+    {
+      "recital_number": 121,
+      "text": "Operators of a regulated market should also be able to operate an MTF or an OTF in accordance with the relevant provisions of this Directive."
+    },
+    {
+      "recital_number": 122,
+      "text": "The provisions of this Directive concerning the admission of financial instruments to trading under the rules enforced by the regulated market should be without prejudice to the application of Directive 2001/34/EC of the European Parliament and of the Council (34) and of Directive 2003/71/EC of the European Parliament and of the Council (35). A regulated market should not be prevented from applying more stringent requirements in respect of the issuers of financial instruments which it is considering for admission to trading than are imposed pursuant to this Directive."
+    },
+    {
+      "recital_number": 123,
+      "text": "Member States should be able to designate different competent authorities to enforce the wide-ranging obligations laid down in this Directive. Such authorities should be of a public nature guaranteeing their independence from economic actors and avoiding conflicts of interest. In accordance with national law, Member States should ensure appropriate financing of the competent authority. The designation of public authorities should not exclude delegation under the responsibility of the competent authority."
+    },
+    {
+      "recital_number": 124,
+      "text": "In order to ensure that the communication between competent authorities of suspensions, removals, disruptions, disorderly trading conditions and circumstances that may indicate market abuse is achieved in an efficient and timely way, an effective communication and coordination process between national competent authorities is necessary, which will be achieved via arrangements developed by ESMA."
+    },
+    {
+      "recital_number": 125,
+      "text": "The G20 summit in Pittsburgh on 25 September 2009 agreed to improve the regulation, functioning and transparency of financial and commodity markets to address excessive commodity price volatility. The Commission Communications of 28 October 2009 on ‘A Better Functioning Food Supply Chain in Europe’, and of 2 February 2011 on ‘Tackling the Challenges in Commodity Markets and Raw Materials’ outlined measures that fall to be taken in the context of the review of Directive 2004/39/EC. In September 2011, the International Organization of Securities Commissions published Principles for the Regulation and Supervision of Commodity Derivatives Markets. Those principles were endorsed by the G20 summit in Cannes on 4 November 2011 which called for market regulators to have formal position management powers, including the power to set ex ante position limits as appropriate."
+    },
+    {
+      "recital_number": 126,
+      "text": "The powers made available to competent authorities should be complemented with explicit powers to obtain information from any person regarding the size and purpose of a position in derivative contracts relating to commodities and to request the person to take steps to reduce the size of the position in the derivative contracts."
+    },
+    {
+      "recital_number": 127,
+      "text": "A harmonised position limits regime is needed to ensure greater coordination and consistency in the application of the G20 agreement, especially for contracts that are traded across the Union. Therefore, explicit powers should be granted to competent authorities to establish limits, on the basis of a methodology determined by ESMA, on the positions any person can hold, at an aggregate group level, in a derivative contract in relation to a commodity at all times in order to prevent market abuse, including cornering the market, and to support orderly pricing and settlement conditions including the prevention of market distorting positions. Such limits should promote integrity of the market for the derivative and the underlying commodity without prejudice to price discovery on the market for the underlying commodity and should not apply to positions which objectively reduce risks directly relating to commercial activities in relation to the commodity. The distinction between spot contracts for commodities and commodity derivative contracts should also be clarified. In order to achieve the harmonised regime, it is also appropriate for ESMA to monitor the implementation of the position limits and for competent authorities to put in place cooperation arrangements, including exchange of relevant data with each other and to enable the monitoring and enforcement of the limits."
+    },
+    {
+      "recital_number": 128,
+      "text": "All venues which offer trading in commodity derivatives should have in place appropriate position management controls, providing the necessary powers at least to monitor and access information about commodity derivative positions, to require the reduction or termination of such positions and to require that liquidity is provided back on the market to mitigate the effects of a large or dominant position. ESMA should maintain and publish a list containing summaries of all position limits and position management controls in force. Those limits and arrangements should be applied in a consistent manner and take account of the specific characteristics of the market in question. They should be clearly spelled out as regards to how they apply and to the relevant quantitative thresholds which constitute the limits or which may trigger other obligations."
+    },
+    {
+      "recital_number": 129,
+      "text": "Trading venues should publish an aggregated weekly breakdown of the positions held by different categories of persons for the different commodity derivative contracts, emission allowances and derivatives thereof traded on their platforms. A comprehensive and detailed breakdown of the positions held by all persons should be made available to the competent authority at least daily. Arrangement for reporting under this Directive should take into account, where applicable, reporting requirements already imposed under Article 8 of Regulation (EU) No 1227/2011."
+    },
+    {
+      "recital_number": 130,
+      "text": "While the methodology used for calculation of position limits should not create barriers to the development of new commodity derivatives, ESMA should ensure when determining the methodology for calculation that the development of new commodity derivatives cannot be used to circumvent the position limits regime."
+    },
+    {
+      "recital_number": 131,
+      "text": "Position limits should be set for each individual commodity derivative contract. In order to avoid circumvention of the position limits regime through the ongoing development of new commodity derivative contracts, ESMA should ensure that the methodology for calculation prevents any circumvention by taking into account the overall open interest in other commodity derivatives with the same underlying commodity."
+    },
+    {
+      "recital_number": 132,
+      "text": "It is desirable to facilitate access to capital for smaller and medium-sized enterprises (SMEs) and to facilitate the further development of specialist markets that aim to cater for the needs of smaller and medium-sized issuers. Those markets which are usually operated under this Directive as MTFs are commonly known as SME growth markets, growth markets or junior markets. The creation within the MTF category of a new sub category of SME growth market and the registration of those markets should raise their visibility and profile and aid the development of common regulatory standards in the Union for those markets. Attention should be focused on how future regulation should further foster and promote the use of that market so as to make it attractive for investors, and provide a lessening of administrative burdens and further incentives for SMEs to access capital markets through SME growth markets."
+    },
+    {
+      "recital_number": 133,
+      "text": "The requirements applying to that new category of markets need to provide sufficient flexibility to be able to take into account the current range of successful market models that exist across Europe. They also need to strike the correct balance between maintaining high levels of investor protection, which are essential to fostering investor confidence in issuers on those markets, while reducing unnecessary administrative burdens for issuers on those markets. It is proposed that more details about SME growth market requirements such as those relating to criteria for admission to trading on such a market would be further prescribed in delegated acts or technical standards."
+    },
+    {
+      "recital_number": 134,
+      "text": "Given the importance of not adversely affecting existing successful markets the option should remain for operators of markets aimed at smaller and medium-sized issuers to choose to continue to operate such a market in accordance with the requirements under this Directive without seeking registration as an SME growth market. An issuer that is an SME should not be obliged to apply to have its financial instruments admitted to trading on an SME growth market."
+    },
+    {
+      "recital_number": 135,
+      "text": "In order for that new category of markets to benefit SMEs, at least 50 % of the issuers whose financial instruments are traded on a SME growth market should be SMEs. That assessment should be made on an annual basis. That 50 % criterion should be implemented in a flexible way. A temporary failure to meet that criterion should not mean that the trading venue will have to be immediately deregistered or refused to be registered as an SME growth market if it has a reasonable prospect of meeting the 50 % criterion from the subsequent year. With respect to the assessment to determine whether an issuer is an SME enterprise, it should be made based on the market capitalisation of the previous three calendar years. This should ensure a smoother transition for those issuers from those specialist markets to the main markets."
+    },
+    {
+      "recital_number": 136,
+      "text": "Any confidential information received by the contact point of one Member State through the contact point of another Member State should not be regarded as purely domestic."
+    },
+    {
+      "recital_number": 137,
+      "text": "It is necessary to enhance convergence of powers at the disposal of competent authorities so as to pave the way towards an equivalent intensity of enforcement across the integrated financial market. A common minimum set of powers coupled with adequate resources should guarantee supervisory effectiveness. This Directive should therefore provide for a minimum set of supervisory and investigative powers competent authorities of Member States should be entrusted with in accordance with national law. Those powers should be exercised, where the national law so requires, by application to the competent judicial authorities. When exercising their powers under this Directive, competent authorities should act objectively and impartially and remain autonomous in their decision making."
+    },
+    {
+      "recital_number": 138,
+      "text": "While this Directive specifies a minimum set of powers competent authorities should have, those powers are to be exercised within a complete system of national law which guarantees the respect for fundamental rights, including the right to privacy. For the exercise of those powers, which may amount to serious interferences with the right to respect private and family life, home and communications, Member States should have in place adequate and effective safeguards against any abuse, for instance, where appropriate prior authorisation from the judicial authorities of a Member State concerned. Member States should allow the possibility for competent authorities to exercise such intrusive powers to the extent necessary for the proper investigation of serious cases where there are no equivalent means for effectively achieving the same result."
+    },
+    {
+      "recital_number": 139,
+      "text": "No action taken by any competent authority or ESMA in the performance of their duties should directly or indirectly discriminate against any Member State or group of Member States as a venue for the provision of investment services and activities in any currency."
+    },
+    {
+      "recital_number": 140,
+      "text": "In view of the significant impact and market share acquired by various MTFs, it is appropriate to ensure that adequate cooperation arrangements are established between the competent authority of the MTF and that of the jurisdiction in which the MTF is providing services. In order to anticipate any similar developments, this should be extended to OTFs."
+    },
+    {
+      "recital_number": 141,
+      "text": "In order to ensure compliance by investment firms, market operators authorised to operate an MTF or OTF, regulated markets, APAs, CTPs or approved reporting mechanisms (ARMs), those who effectively control their business and the members of the investment firms and regulated markets’ management body with the obligations deriving from this Directive and from Regulation (EU) No 600/2014 and to ensure that they are subject to similar treatment across the Union, Member States should be required to provide for sanctions and measures which are effective, proportionate and dissuasive. Administrative sanctions and measures set out by Member States should satisfy certain essential requirements in relation to addressees, criteria to be taken into account when applying a sanction or measure, publication, key powers to impose sanctions and levels of administrative fines."
+    },
+    {
+      "recital_number": 142,
+      "text": "In particular, competent authorities should be empowered to impose fines which are sufficiently high to offset the benefits that can be expected and to be dissuasive even for larger institutions and their managers."
+    },
+    {
+      "recital_number": 143,
+      "text": "It is also necessary for competent authorities to have, in accordance with national law and with the Charter, the ability to access the premises of natural and legal persons. Access to such premises is necessary when there is reasonable suspicion that documents and other data relating to the subject matter of an investigation exist and may be relevant to prove an infringement of this Directive or of Regulation (EU) No 600/2014. Additionally, access to such premises is necessary where the person to whom a demand for information has already been made, fails to comply with such demand wholly or in part; or where there are reasonable grounds for believing that if a demand were to be made, it would not be complied with, or that the documents or information to which the information requirement relates, would be removed, tampered with or destroyed. If prior authorisation is needed from the judicial authority of the Member State concerned, in accordance with national law, such power for access into premises should be used after having obtained that prior judicial authorisation."
+    },
+    {
+      "recital_number": 144,
+      "text": "Existing recordings of telephone conversations and data traffic records from investment firms executing and documenting the executions of transactions, as well as existing telephone and data traffic records from telecommunications operators constitute crucial, and sometimes the only, evidence to detect and prove the existence of market abuse as well as verify compliance by firms with investor protection and other requirements set out in this Directive or in Regulation (EU) No 600/2014. Therefore, competent authorities should be able to require existing recordings of telephone conversations, electronic communications and data traffic records held by an investment firm or credit. Access to data and telephone records is necessary for the detection and penalising of market abuse or of infringements of requirements set out in this Directive or in Regulation (EU) No 600/2014.\n\nIn order to introduce a level playing field in the Union in relation to the access to telephone and existing data traffic records held by a telecommunication operator or the existing recordings of telephone conversations and data traffic held by an investment firm, competent authorities should, in accordance with national law, be able to require existing telephone and existing data traffic records held by a telecommunication operator insofar as permitted under national law and existing recordings of telephone conversations as well as data traffic held by an investment firm, in those cases where a reasonable suspicion exists that such records relating to the subject-matter of the inspection or investigation may be relevant to prove behaviour that is prohibited under Regulation (EU) No 596/2014 or infringements of the requirements of this Directive or of Regulation (EU) No 600/2014. Access to telephone and data traffic records held by a telecommunications operator should not encompass the content of voice communications by telephone."
+    },
+    {
+      "recital_number": 145,
+      "text": "In order to ensure a consistent application of sanctions across the Union, Member States should be required to ensure that when determining the type of administrative sanctions or measures and the level of administrative fines, the competent authorities take into account all relevant circumstances."
+    },
+    {
+      "recital_number": 146,
+      "text": "In order to ensure that decisions made by competent authorities have a dissuasive effect on the public at large, they should normally be published. The publication of decisions is also an important tool for competent authorities to inform market participants of what behaviour is considered to infringe this Directive and to promote wider good behaviour amongst market participants. If such publication causes disproportionate damage to the persons involved, jeopardises the stability of financial markets or an ongoing investigation the competent authority should publish the sanctions and measures on an anonymous basis in a manner which complies with national law or delay the publication.\n\nCompetent authorities should have the option not to publish sanctions where anonymous or delayed publication is considered to be insufficient to ensure that the stability of financial markets will not be jeopardised. Competent authorities should not be required to publish measures which are deemed to be of a minor nature where publication would be disproportionate. It is appropriate to provide a mechanism for reporting unpublished sanctions to ESMA so that competent authorities can take them into account in their ongoing supervision. This Directive does not require but should not prevent the publication of criminal sanctions imposed for infringements of this Directive or of Regulation (EU) No 600/2014."
+    },
+    {
+      "recital_number": 147,
+      "text": "In order to detect potential infringements, competent authorities should have the necessary investigatory powers, and should establish effective and reliable mechanisms to encourage reporting of potential or actual infringements, including protection of employees reporting infringements within their own institution. Those mechanisms should be without prejudice to adequate safeguards for accused persons. Appropriate procedures should be established to ensure appropriate protection of an accused person, particularly with regard to the right to the protection of personal data of that person and procedures to ensure the right of the accused person of defence and to be heard before the adoption of a decision concerning him as well as the right to seek effective remedy before a court against a decision concerning him."
+    },
+    {
+      "recital_number": 148,
+      "text": "This Directive should refer to sanctions and measures in order to cover all actions applied after an infringement, and which are intended to prevent further infringements, irrespective of their qualification as a sanction or a measure under national law."
+    },
+    {
+      "recital_number": 149,
+      "text": "This Directive should be without prejudice to any provisions in the law of Member States relating to criminal sanctions."
+    },
+    {
+      "recital_number": 150,
+      "text": "Even though nothing prevents Member States from laying down rules for administrative and criminal sanctions for the same infringements, Member States should not be required to lay down rules for administrative sanctions for the infringements of this Directive or of Regulation (EU) No 600/2014 which are subject to national criminal law. In accordance with national law, Member States are not obliged to impose both administrative and criminal sanctions for the same offence, but they should be able to do so if their national law so permits. However, the maintenance of criminal sanctions instead of administrative sanctions for infringements of this Directive or of Regulation (EU) No 600/2014 should not reduce or otherwise affect the ability of competent authorities to cooperate, access and exchange information in a timely way with competent authorities in other Member States for the purposes of this Directive and of Regulation (EU) No 600/2014, including after any referral of the relevant infringements to the competent judicial authorities for criminal prosecution."
+    },
+    {
+      "recital_number": 151,
+      "text": "With a view to protecting clients and without prejudice to the right of customers to bring their action before the courts, it is appropriate that Member States ensure that public or private bodies are established with a view to settling disputes out-of-court, to cooperate in resolving cross-border disputes, taking into account Commission Recommendation 98/257/EC (36) and Commission Recommendation 2001/310/EC (37). When implementing provisions on complaints and redress procedures for out-of-court settlements, Member States should be encouraged to use existing cross-border cooperation mechanisms, in particular the Financial Services Complaints Network (FIN-Net)."
+    },
+    {
+      "recital_number": 152,
+      "text": "Any exchange or transmission of information between competent authorities, other authorities, bodies or persons should be in accordance with the rules on transfer of personal data to third countries as laid down in Directive 95/46/EC. Any exchange or transmission of personal data by ESMA with third countries should be in accordance with the rules on the transfer of personal data as laid down in Regulation (EC) No 45/2001."
+    },
+    {
+      "recital_number": 153,
+      "text": "It is necessary to reinforce provisions on exchange of information between national competent authorities and to strengthen the duties of assistance and cooperation which they owe to each other. Due to increasing cross-border activity, competent authorities should provide each other with the relevant information for the exercise of their functions, so as to ensure the effective enforcement of this Directive, including in situations where infringements or suspected infringements may be of concern to authorities in two or more Member States. In the exchange of information, strict professional secrecy is needed to ensure the smooth transmission of that information and the protection of particular rights."
+    },
+    {
+      "recital_number": 154,
+      "text": "Where the operation of a trading venue that has established arrangements in a host Member State has become of substantial importance for the functioning of the securities markets and the protection of the investors in that host Member State, the proportionate cooperation arrangements to be put in place should take the appropriate form amongst possible cooperation modalities between the competent authorities of the home and host Member States, proportionate to the needs for cross-border supervisory cooperation in particular resulting from the nature and scale of the impact on the securities markets and the investor protection in the host Member State, such as ad hoc or periodic information sharing, consultation and assistance."
+    },
+    {
+      "recital_number": 155,
+      "text": "In order to attain the objectives set out in this Directive, the power to adopt acts in accordance with Article 290 TFEU should be delegated to the Commission in respect of details concerning exemptions, the clarification of definitions, the criteria for the assessment of proposed acquisitions of an investment firm, the organisational requirements for investment firms, APAs and CTPs, the management of conflicts of interest, conduct of business obligations in the provision of investment services, the execution of orders on terms most favourable to the client, the handling of client orders, the transactions with eligible counterparties, the circumstances that trigger an information requirement for investment firms or market operators operating an MTF or an OTF and operators of a regulated market, the circumstances constituting significant damage to the investors’ interests and the orderly functioning of the market for the purposes of the suspension and removal of financial instruments from trading on an MTF, an OTF or a regulated market, the SME growth markets, the thresholds above which the position reporting obligations apply and the criteria under which the operations of a trading venue in a host Member State could be considered as of substantial importance for the functioning of the securities markets and the protection of the investors. It is of particular importance that the Commission carry out appropriate consultations during its preparatory work, including at expert level. The Commission, when preparing and drawing up delegated acts, should ensure a simultaneous, timely and appropriate transmission of relevant documents to the European Parliament and to the Council."
+    },
+    {
+      "recital_number": 156,
+      "text": "Technical standards in financial services should ensure consistent harmonisation and adequate protection of investors, including those investing in structured deposits, and consumers across the Union. As a body with highly specialised expertise, it would be efficient and appropriate to entrust ESMA, with the elaboration of draft regulatory and implementing technical standards which do not involve policy choices, for submission to the Commission. To ensure consistent investor and consumer protection across financial services sectors, ESMA should carry out its tasks, to the extent possible, in close cooperation with the European Supervisory Authority (European Banking Authority) (‘EBA’), established by Regulation (EC) No 1093/2010 of the European Parliament and of the Council (38) and with EIOPA."
+    },
+    {
+      "recital_number": 157,
+      "text": "The Commission should adopt the draft regulatory technical standards developed by ESMA regarding exemptions that relate to activities considered to be ancillary to the main business, regarding the information to be provided and certain requirements in the context of procedures for granting and refusing requests for authorisation of investment firms, regarding acquisition of the qualifying holding, regarding algorithmic trading, regarding obligation to execute orders on terms most favourable to clients, regarding the suspension and removal of financial instruments from trading on a regulated market, on an MTF or an OTF, regarding freedom to provide investment services and activities, regarding establishment of a branch, regarding systems resilience, circuit breakers and electronic trading, regarding tick sizes, regarding synchronisation of business clocks, regarding admission of financial instruments to trading, regarding the position limits and position management controls in commodity derivatives, regarding procedures for granting and refusing requests for authorisation of data reporting services providers, regarding organisational requirements for APAs, CTPs and ARMs and regarding cooperation among competent authorities. The Commission should adopt those draft regulatory technical standards by means of delegated acts pursuant to Article 290 TFEU and in accordance with Articles 10 to 14 of Regulation (EU) No 1093/2010."
+    },
+    {
+      "recital_number": 158,
+      "text": "The Commission should also be empowered to adopt implementing technical standards by means of implementing acts pursuant to Article 291 TFEU and in accordance with Article 15 of Regulation (EU) No 1095/2010. ESMA should be entrusted with drafting implementing technical standards for submission to the Commission regarding procedures for granting and refusing requests for authorisation of investment firms, regarding the acquisition of a qualifying holding, regarding trading process on finalisation of transactions in MTFs and OTFs, regarding suspension and removal of financial instruments from trading, regarding freedom to provide investment services and activities, regarding establishment of a branch, regarding position reporting by categories of position holders, regarding procedures for granting and refusing requests for authorisation, regarding the procedures and forms for submitting information in relation to the publication of decisions, regarding obligation to cooperate, regarding cooperation among competent authorities, regarding exchange of information and regarding consultation prior to authorisation of an investment firm."
+    },
+    {
+      "recital_number": 159,
+      "text": "The Commission should submit a report to the European Parliament and the Council assessing the functioning of OTFs, the functioning of the regime for SME growth markets, the impact of requirements regarding automated and high-frequency trading, the experience with the mechanism for banning certain products or practices and the impact of the measures regarding commodity derivatives markets."
+    },
+    {
+      "recital_number": 160,
+      "text": "By 1 January 2018, the Commission should prepare a report assessing the potential impact on energy prices and the functioning of the energy market of the expiry of the transitional period provided for the application of the clearing obligation and the margining requirements set out in Regulation (EU) No 648/2012. If appropriate, the Commission should submit a legislative proposal to establish or amend the relevant law, including specific sectoral legislation such as Regulation (EU) No 1227/2011."
+    },
+    {
+      "recital_number": 161,
+      "text": "Directive 2011/61/EU of the European Parliament and of the Council (39) allows Member States to authorise alternative investment fund managers (AIFMs) to provide certain investment services in addition to the collective management of alternative investment funds (AIFs), including services of management of portfolios of investments, investment advice, safe-keeping and administration in relation to shares or units of collective investment undertakings, as well as reception and transmission of orders in relation to financial instruments. Since the requirements governing the provision of those services are harmonised within the Union, AIFMs authorised by their home competent authorities to provide those services should not be subject to any additional authorisation in host Member States nor to any other measure having the same effect."
+    },
+    {
+      "recital_number": 162,
+      "text": "Under the current legal framework, AIFMs authorised to provide those investment services and intending to provide them in Member States other than their home Member State are to comply with additional national requirements, including the establishment of a separate legal entity. In order to eliminate obstacles in the cross-border provision of harmonised investment services and to ensure a level playing field between entities providing the same investment services under the same legal requirements, an AIFM authorised to provide those services should be able to provide them on a cross-border basis, subject to appropriate notification requirements, under the authorisation granted by the competent authorities of their home Member State."
+    },
+    {
+      "recital_number": 163,
+      "text": "Directive 2011/61/EU should therefore be amended accordingly."
+    },
+    {
+      "recital_number": 164,
+      "text": "Since the objective of this Directive, namely creating an integrated financial market in which investors are effectively protected and the efficiency and integrity of the overall market are safeguarded, requires the establishment of common regulatory requirements relating to investment firms wherever they are authorised in the Union and governing the functioning of regulated markets and other trading systems so as to prevent opacity or disruption on one market from undermining the efficient operation of the Union financial system as a whole which cannot be sufficiently achieved by the Member States but can rather, by reason of the scale and effects of this Directive, be better achieved at Union level, the Union may adopt measures in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Directive does not go beyond what is necessary in order to achieve that objective."
+    },
+    {
+      "recital_number": 165,
+      "text": "Given the increase of tasks conferred on ESMA by this Directive and by Regulation (EU) No 600/2014, the European Parliament, the Council and the Commission should ensure that adequate human and financial resources are made available."
+    },
+    {
+      "recital_number": 166,
+      "text": "This Directive respects the fundamental rights and observes the principles recognised in the Charter, in particular the right to the protection of personal data, the freedom to conduct a business, the right to consumer protection, the right to an effective remedy and to a fair trial, the right not to be tried or punished twice for the same offence and has to be implemented in accordance with those rights and principles."
+    },
+    {
+      "recital_number": 167,
+      "text": "The European Data Protection Supervisor has been consulted in accordance with Article 28(2) of Regulation (EC) No 45/2001 and delivered an opinion on 10 February 2012 (40)."
+    },
+    {
+      "recital_number": 168,
+      "text": "In accordance with the Joint Political Declaration of Member States and the Commission on explanatory documents of 28 September 2011 (41), Member States have undertaken to accompany, in justified cases, the notification of their transposition measures with one or more documents explaining the relationship between the components of a directive and the corresponding parts of national transposition instruments. With regard to this Directive, the legislator considers the transmission of such documents to be justified."
+    },
+    {
+      "recital_number": 169,
+      "text": "The obligation to transpose this Directive into national law should be confined to those provisions which represent a substantive amendment as compared to the earlier Directives. The obligation to transpose the provisions which are unchanged arises under the earlier Directives."
+    },
+    {
+      "recital_number": 170,
+      "text": "This Directive should be without prejudice to the obligations of the Member States relating to the time-limits for the transposition into national law and the dates of application of the Directives set out in Annex III, Part B,"
+    },
+    {
+      "recital_number": 170,
+      "text": "This Directive should be without prejudice to the obligations of the Member States relating to the time-limits for the transposition into national law and the dates of application of the Directives set out in Annex III, Part B,"
     }
   ]
 }

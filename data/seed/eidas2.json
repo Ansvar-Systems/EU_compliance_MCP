@@ -1,8 +1,8 @@
 {
   "id": "EIDAS2",
-  "full_name": "Regulation on electronic identification and trust services (eIDAS 2.0 consolidated)",
+  "full_name": "Regulation 02014R0910-20241018",
   "celex_id": "02014R0910-20241018",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18/eng",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02014R0910-20241018",
   "articles": [
     {
       "number": "1",
@@ -586,5 +586,5 @@
       "article": "3"
     }
   ],
-  "effective_date": "2024-05-20"
+  "recitals": []
 }

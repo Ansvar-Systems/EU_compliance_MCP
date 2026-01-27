@@ -1,9 +1,8 @@
 {
   "id": "GPSR",
-  "full_name": "General Product Safety Regulation",
+  "full_name": "Regulation 32023R0988",
   "celex_id": "32023R0988",
-  "effective_date": "2024-12-13",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg/2023/988/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0988",
   "articles": [
     {
       "number": "1",
@@ -457,6 +456,444 @@
       "term": "antiques",
       "definition": "products, such as collectors' items or works of art, in relation to which consumers cannot reasonably expect that they fulfil state-of-the-art safety standards.",
       "article": "3"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Directive 2001/95/EC of the European Parliament and of the Council (3) lays down the requirement that consumer products must be safe and that Member States’ market surveillance authorities must take action against dangerous products as well as exchange information to that effect through the Union Rapid Information System (RAPEX)."
+    },
+    {
+      "recital_number": 2,
+      "text": "Directive 2001/95/EC needs to be revised and updated in light of the developments related to new technologies and online selling, to ensure consistency with developments in Union harmonisation legislation and in standardisation legislation, to ensure a better functioning of product safety recalls as well as to ensure a clearer framework for food-imitating products hitherto regulated by Council Directive 87/357/EEC (4). In the interest of clarity, Directives 2001/95/EC and 87/357/EEC should be repealed and replaced by this Regulation."
+    },
+    {
+      "recital_number": 3,
+      "text": "A regulation is the appropriate legal instrument as it imposes clear and detailed rules which leave no scope for divergent transposition by Member States. The choice of a regulation instead of a directive also allows for better delivery of the objective of ensuring coherence with the market surveillance legislative framework for products falling within the scope of Union harmonisation legislation, where the applicable legal instrument is also a regulation, namely Regulation (EU) 2019/1020 of the European Parliament and of the Council (5). Finally, such a choice will further reduce the regulatory burden through a consistent application of product safety rules across the Union."
+    },
+    {
+      "recital_number": 4,
+      "text": "The aim of this Regulation is to contribute to the attainment of the objectives referred to in Article 169 of the Treaty on the Functioning of the European Union (TFEU). In particular, it should aim to ensure the health and safety of consumers and the functioning of the internal market as regards products intended for consumers."
+    },
+    {
+      "recital_number": 5,
+      "text": "This Regulation should aim at protecting consumers and their safety as one of the fundamental principles of the Union legal framework and as enshrined in the Charter of Fundamental Rights of the European Union (the ‘Charter’). Dangerous products can have very negative consequences for consumers and citizens. All consumers, including the most vulnerable, such as children, older persons or persons with disabilities, have the right to safe products. Consumers should have at their disposal sufficient means to enforce that right and Member States should have adequate instruments and measures at their disposal to enforce this Regulation."
+    },
+    {
+      "recital_number": 6,
+      "text": "Despite the development of sector-specific Union harmonisation legislation that addresses the safety aspects of specific products or categories of products, it is practically impossible to adopt Union law for all consumer products that exist or may be developed. There is therefore a need for a broad-based legislative framework of a horizontal nature to fill gaps and to complement provisions in existing or forthcoming sector-specific Union harmonisation legislation and ensure consumer protection not otherwise ensured by that legislation, in particular with a view to achieving a high level of protection of the health and safety of consumers, as required by Articles 114 and 169 TFEU."
+    },
+    {
+      "recital_number": 7,
+      "text": "At the same time, in respect of products that are subject to sector-specific Union harmonisation legislation, the scope of the different parts of this Regulation should be clearly set out to avoid overlapping provisions and to ensure a clear legal framework."
+    },
+    {
+      "recital_number": 8,
+      "text": "Whilst some of the provisions of this Regulation, such as most of the obligations of economic operators, should not apply to products covered by Union harmonisation legislation, certain other provisions of this Regulation are complementary to Union harmonisation legislation and should therefore apply to such products. In particular, the general product safety requirement and related provisions should apply to consumer products covered by Union harmonisation legislation when certain types of risks are not covered by that Union harmonisation legislation. The provisions of this Regulation concerning the obligations of providers of online marketplaces, the obligations of economic operators in the event of accidents, the right to information and to a remedy for consumers as well as the product safety recalls should apply to products covered by Union harmonisation legislation to the extent that there are no specific provisions with the same objective in such Union harmonisation legislation. Likewise, RAPEX is already used for the purposes of Union harmonisation legislation, as referred to in Article 20 of Regulation (EU) 2019/1020: therefore the provisions of this Regulation regulating the Safety Gate and its functioning should apply to products covered by Union harmonisation legislation."
+    },
+    {
+      "recital_number": 9,
+      "text": "Products which are designed exclusively for professional use, but which have subsequently migrated to the consumer market, should be subject to this Regulation because they could pose risks to the health and safety of consumers when used under reasonably foreseeable conditions."
+    },
+    {
+      "recital_number": 10,
+      "text": "Medicinal products are subject to a pre-market assessment that includes a specific risk-benefit analysis. Those products should therefore be excluded from the scope of this Regulation."
+    },
+    {
+      "recital_number": 11,
+      "text": "Union law on food, feed and related areas sets up a specific system ensuring the safety of the products covered by it. Indeed, food and feed products have a specific legal framework established, in particular, by Regulation (EC) No 178/2002 of the European Parliament and of the Council (6). Furthermore, food and feed products are also regulated by Regulation (EU) 2017/625 of the European Parliament and of the Council (7), which ensures a harmonised approach with regard to official controls for verifying compliance with feed and food law, animal health and animal welfare rules. Therefore, food and feed products should be excluded from the scope of this Regulation, with the exception of materials and articles intended to come into contact with food insofar as risks are concerned that are not covered by Regulation (EC) No 1935/2004 of the European Parliament and of the Council (8) or by other food-specific legislation which only covers chemical and biological food-related risks."
+    },
+    {
+      "recital_number": 12,
+      "text": "Living plants are subject to a specific legal framework, provided for, in particular, by Regulation (EU) 2016/2031 of the European Parliament and of the Council (9) which takes into consideration the specificities of those products to ensure consumer safety."
+    },
+    {
+      "recital_number": 13,
+      "text": "Animal by-products are materials of animal origin that people do not consume. Those products, such as feed, are subject to a specific legal framework, provided for, in particular, by Regulation (EC) No 1069/2009 of the European Parliament and of the Council (10)."
+    },
+    {
+      "recital_number": 14,
+      "text": "Plant protection products, also referred to as pesticides, are subject to specific provisions for their authorisation at national level, based on Regulation (EC) No 1107/2009 of the European Parliament and of the Council (11), and should therefore also be excluded from the scope of this Regulation."
+    },
+    {
+      "recital_number": 15,
+      "text": "Aircraft referred to in Article 2(3), point (d) of Regulation (EU) 2018/1139 of the European Parliament and of the Council (12) are subject to the regulatory control of the Member States, in light of their limited risk to civil aviation safety. Those aircraft should therefore be excluded from the scope of this Regulation."
+    },
+    {
+      "recital_number": 16,
+      "text": "The requirements laid down in this Regulation should apply to second-hand products or products that are repaired, reconditioned or recycled, that re-enter the supply chain in the course of a commercial activity, except for those products for which the consumer cannot reasonably expect that they fulfil state-of-the art safety standards, such as products which are explicitly presented as to be repaired or to be reconditioned, or which are made available on the market as collectible items of historical significance."
+    },
+    {
+      "recital_number": 17,
+      "text": "Services should not be covered by this Regulation. However, in order to protect the health and safety of consumers, products that are supplied or made available to consumers in the context of the provision of services, including products to which consumers are directly exposed during the provision of a service, should fall within the scope of this Regulation. However, equipment on which consumers ride or travel, where such equipment is directly operated by a service provider within the context of a transport service, should be excluded from the scope of this Regulation since it has to be dealt with in conjunction with the safety of the service provided."
+    },
+    {
+      "recital_number": 18,
+      "text": "Antiques, such as works of art or collectors’ items are specific categories of products which cannot be expected to meet the safety requirements laid down by this Regulation, and should therefore be excluded from its scope. However, in order to prevent other products from being mistakenly considered as belonging to those categories, it is necessary to take into account that works of art are products created solely for artistic purposes, that collectors’ items are of sufficient rarity and historical or scientific interest to justify their collection and preservation, and that antiques, if they are not already works of art or collectors’ items or both, are of an extraordinary age. When assessing whether a product is an antique, such as a work of art or a collector’s item, Annex IX to Council Directive 2006/112/EC (13) could be taken into account."
+    },
+    {
+      "recital_number": 19,
+      "text": "The World Health Organisation defines ‘health’ as a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity."
+    },
+    {
+      "recital_number": 20,
+      "text": "Distance selling, including online selling, should also fall within the scope of this Regulation. Online selling has grown consistently and steadily, creating new business models, new challenges regarding product safety and new actors in the market, such as providers of online marketplaces."
+    },
+    {
+      "recital_number": 21,
+      "text": "In the case of a product offered for sale online or through other means of distance sales, the product should be considered to have been made available on the market if the offer for sale is targeted at consumers in the Union. In line with the applicable Union rules on private international law, a case-by-case analysis should be carried out in order to establish whether an offer is targeted at consumers in the Union. An offer for sale should be considered to be targeted at consumers in the Union if the relevant economic operator directs, by any means, its activities to a Member State. For the case-by-case analyses, relevant factors, such as the geographical areas to which dispatch is possible, the languages available, used for the offer or for ordering, means of payment, the use of currency of the Member State or a domain name registered in one of the Member States should be taken into consideration. In the case of online sales, the mere fact that the economic operators’ or the providers of online marketplaces’ interface is accessible in the Member State in which the consumer is established or domiciled is insufficient."
+    },
+    {
+      "recital_number": 22,
+      "text": "Under the general safety requirement laid down in this Regulation, economic operators should be obliged to place only safe products on the market. Such a high level of safety should be primarily achieved through the design and the features of the product, taking into account the intended and foreseeable use and conditions of use of the product. The remaining risks, if any, should be alleviated by means of certain safeguards, such as warnings and instructions."
+    },
+    {
+      "recital_number": 23,
+      "text": "The safety of a product should be assessed taking into account all relevant aspects of the product, in particular its characteristics, such as the physical, mechanical and chemical characteristics, and its presentation, as well as the specific needs and risks which the product represents for certain categories of consumers who are likely to use the products, in particular children, older persons and persons with disabilities. Those risks can also include environmental risk insofar as it poses a risk to the health and safety of consumers. That assessment should take into account the health risk posed by digitally connected products, including the risk to mental health, especially of vulnerable consumers, in particular children. Therefore, when assessing the safety of digitally connected products likely to have an impact on children, manufacturers should ensure that the products they make available on the market meet the highest standards of safety, security and privacy by design, in the best interests of children. Furthermore, if specific information is necessary to make products safe for a certain category of persons, the assessment of the safety of the products should take into consideration also the presence of that information and its accessibility. The safety of all products should be assessed taking into consideration the need for the product to be safe over its entire lifespan."
+    },
+    {
+      "recital_number": 24,
+      "text": "Items which connect to other items or non-embedded items which influence the way another item works can present a risk for the safety of the product. That aspect should be given due consideration as a potential risk. The connections and interrelation that an item might have with external items should not jeopardise its safety."
+    },
+    {
+      "recital_number": 25,
+      "text": "New technologies might pose new risks to consumers’ health and safety or change the way the existing risks could materialise, such as an external intervention hacking the product or changing its characteristics. New technologies might substantially modify the original product, for instance through software updates, which should then be subject to a new risk assessment if that substantial modification were to have an impact on the safety of the product."
+    },
+    {
+      "recital_number": 26,
+      "text": "Specific cybersecurity risks affecting the safety of consumers, as well as protocols and certifications, can be dealt with by sectoral legislation. However, it should be ensured that, in cases where such sectoral legislation does not apply, the relevant economic operators and national authorities take into consideration risks linked to new technologies, when designing the products and assessing them respectively, in order to ensure that changes introduced in the product do not jeopardise its safety."
+    },
+    {
+      "recital_number": 27,
+      "text": "In order to facilitate the effective and consistent application of the general safety requirement laid down in this Regulation, it is important to make use of European standards covering certain products and risks. European standards, the references of which have been published in accordance with Directive 2001/95/EC, should continue providing a presumption of conformity with the general safety requirement laid down in this Regulation. Standardisation requests issued by the Commission in accordance with Directive 2001/95/EC should be deemed to be standardisation requests issued in accordance with this Regulation. In the event that different risks or risk categories are covered by the same standard, the conformity of a product with the part of the standard covering the relevant risk or risk category would also give to the product itself a presumption of safety as far as the relevant risk or risk category is concerned."
+    },
+    {
+      "recital_number": 28,
+      "text": "Where the Commission identifies a need for a European standard ensuring compliance of certain products with the general safety requirement laid down in this Regulation, it should apply the relevant provisions of Regulation (EU) No 1025/2012 of the European Parliament and of the Council (14) to request one or more European standardisation organisations to either draft or identify a standard which is suitable to ensure that products which conform to it are presumed to be safe."
+    },
+    {
+      "recital_number": 29,
+      "text": "Products could present different risks for different genders and standardisation activities should take that into account to avoid discrepancies in terms of safety and therefore a gender safety gap. The Declaration on Gender Responsive Standards of the United Nations Economic Commission for Europe outlines several actions that national standards bodies and standards developing organisations should include in their gender action plan for gender responsive standards and standards development, in order to achieve gender-balanced, representative and inclusive standards."
+    },
+    {
+      "recital_number": 30,
+      "text": "Together with the adaptation of Regulation (EU) No 1025/2012, a specific procedure for the adoption of the specific safety requirements with the assistance of the specialised Committee provided for by this Regulation should be introduced."
+    },
+    {
+      "recital_number": 31,
+      "text": "In the absence of European standards, the national law of the Member State where the product is made available on the market laying down health and safety requirements should comply with Union law, in particular Articles 34 and 36 TFEU."
+    },
+    {
+      "recital_number": 32,
+      "text": "Economic operators should have proportionate obligations concerning the safety of products, in relation to their respective roles in the supply chain, so as to ensure a high level of protection of the health and safety of consumers, while also ensuring the efficient functioning of the internal market. All economic operators intervening in the supply and distribution chain should take appropriate measures to ensure that they only make available on the market products which are safe and in conformity with this Regulation. It is necessary to provide for a clear and proportionate distribution of obligations corresponding to the role of each operator in the supply and distribution process. For example, as regards the verification of whether the manufacturer and, where relevant, the importer have complied with their obligations, the distributor should only be required to perform factual verifications and not an assessment of the information provided by them. The information about the identification of the product and of the economic operators, as well as instructions and safety information, could in addition be provided by the economic operators in a digital form by means of electronic solutions, such as a QR or data matrix code."
+    },
+    {
+      "recital_number": 33,
+      "text": "Manufacturers should draw up technical documentation regarding the products they place on the market, which should contain the necessary information to prove that those products are safe. The technical documentation should be based on an internal risk analysis carried out by the manufacturer. The amount of information to be provided in the technical documentation should be proportionate to the complexity of the product and the possible risks identified by the manufacturer. In particular, manufacturers should provide a general description of the product and the elements necessary to assess its safety. In the case of complex products or products presenting possible risks, the information to be provided might need a more extensive description of the product. In such cases, an analysis of those risks and the technical means adopted to mitigate or eliminate the risks should also be included. Where the product complies with European standards or other elements applied to meet the general safety requirement laid down in this Regulation, the list of the relevant European standards or the other elements should also be indicated."
+    },
+    {
+      "recital_number": 34,
+      "text": "Any natural or legal person that either places a product on the market under their own name or trademark or substantially modifies a product in such a way that conformity with the requirements of this Regulation might be affected, should be considered to be the manufacturer and should assume the obligations of the manufacturer."
+    },
+    {
+      "recital_number": 35,
+      "text": "Modification of a product, by physical or digital means, might have consequences on the nature and characteristics of the product in a way which was not foreseen in the initial risk assessment of the product and which might jeopardise the safety of the product. Such modification should therefore be considered as a substantial modification and, when not done by the consumer or on his behalf, should lead to the product being considered as a new product from a different manufacturer. In order to ensure compliance with the general safety requirement laid down in this Regulation, the person that carries out that substantial modification should be considered as the manufacturer and subject to the same obligations. That requirement should only apply with respect to the modified part of the product, provided that the modification does not affect the product as a whole. In order to avoid an unnecessary and disproportionate burden, the person carrying out the substantial modification should not be required to repeat tests and produce new documentation in relation to aspects of the product that are not impacted by the modification. It should be up to the person that carries out the substantial modification to demonstrate that the modification does not have an impact on the product as a whole."
+    },
+    {
+      "recital_number": 36,
+      "text": "Internal conformity procedures, through which economic operators ensure, internally, the effective and swift performance of their obligations as well as the conditions to react timely in the case of a dangerous product, should be put in place by the economic operators themselves."
+    },
+    {
+      "recital_number": 37,
+      "text": "In order to prevent the placing on the market of dangerous products, it should be compulsory for economic operators to include in their production or marketing activities internal processes ensuring compliance with the relevant requirements of this Regulation. Such internal processes should be determined by economic operators themselves in relation to their role in the supply chain and the type of products concerned and can be based, for example, upon organisational procedures, guidelines, standards or upon the appointment of an ad hoc manager. The establishment and format of such internal processes should remain the sole responsibility of relevant economic operators."
+    },
+    {
+      "recital_number": 38,
+      "text": "Cooperation from all economic operators and providers of online marketplaces with market surveillance authorities in order to eliminate or mitigate risks for the relevant products made available on the market is essential. However, the requests made to them by market surveillance authorities should be tailored to the role they play in the supply chain and with regard to their respective legal obligations."
+    },
+    {
+      "recital_number": 39,
+      "text": "Direct selling by economic operators established outside the Union through online channels hinders the work of market surveillance authorities when tackling dangerous products in the Union, as in many instances economic operators may neither be established nor have a legal representative in the Union. It is therefore necessary to ensure that market surveillance authorities have adequate powers and means to tackle in an effective manner the sale of dangerous products online. In order to ensure the effective enforcement of this Regulation, the obligation set out in Article 4(1), (2) and (3) of Regulation (EU) 2019/1020 should be extended to products falling outside the scope of Union harmonisation legislation to ensure that there is a responsible economic operator established in the Union, which is entrusted with tasks regarding such products, providing market surveillance authorities with an interlocutor and, where appropriate with regard to the possible risks related to a product, performing specific tasks in a timely manner to ensure that the products are safe. Those specific tasks should include regular checks with regard to compliance with the technical documentation, product and manufacturer information, instruction and safety information."
+    },
+    {
+      "recital_number": 40,
+      "text": "The contact information of the economic operator established in the Union and responsible for products falling within the scope of this Regulation should be indicated with the product in order to facilitate checks throughout the supply chain."
+    },
+    {
+      "recital_number": 41,
+      "text": "In order for economic operators that are small and medium-sized enterprises (SMEs), including micro-enterprises, to be able to cope with the new obligations imposed by this Regulation, the Commission should provide practical guidelines and tailored guidance, for example a direct channel to connect to experts in the event of questions, taking into account the need to simplify and limit their administrative burdens."
+    },
+    {
+      "recital_number": 42,
+      "text": "Ensuring product identification and the provision of information on the manufacturer and other relevant economic operators throughout the entire supply chain helps to identify economic operators and, where applicable, to take effective and proportionate corrective measures against dangerous products, such as targeted recalls. Product identification and the provision of information on the manufacturer and other relevant economic operators thus ensures that consumers, including persons with disabilities, and market surveillance authorities obtain accurate information regarding dangerous products, which enhances confidence in the market and avoids unnecessary disruption of trade. Products should therefore bear information allowing their identification and the identification of the manufacturer and, where applicable, of the importer and other relevant economic operators. Such requirements could be made stricter for certain kinds of products that are likely to present a serious risk to the health and safety of consumers, by a system of collection and storage of data enabling, besides the identification of the product, the identification of its components or of the economic operators involved in its supply chain. This should be without prejudice to the information requirements laid down by Directive 2011/83/EU of the European Parliament and of the Council (15), related to the main characteristics of the goods, to the extent appropriate to the medium and to the nature of the goods. A picture should be considered as a photograph, illustration or other pictographic element, which easily allows the identification of a product or potential product."
+    },
+    {
+      "recital_number": 43,
+      "text": "Ensuring that manufacturers notify accidents that are caused by a product they made available on the market will improve the information available to market surveillance authorities and allow for a better identification of potentially dangerous categories of products. Rules on product liability of economic operators for defective products are laid down in specific Union law and such notification and collection of data should not therefore be considered as an admission of liability for a defective product or as confirmation of liability under relevant Union or national law."
+    },
+    {
+      "recital_number": 44,
+      "text": "In order to be able to detect early emerging new risks and other product safety related market trends, all interested parties, including consumer or business organisations, should be encouraged to signal to market surveillance authorities and to the Commission information available to them to detect and investigate infringements of this Regulation."
+    },
+    {
+      "recital_number": 45,
+      "text": "Providers of online marketplaces play a crucial role in the supply chain, allowing economic operators to reach a greater number of consumers, and therefore also in the product safety system."
+    },
+    {
+      "recital_number": 46,
+      "text": "Under the new complex business models linked to online sales, the same entity can provide a variety of services. Depending on the nature of the services provided for a given product, the same entity can fall within different categories of business models under this Regulation. When an entity provides only online intermediation services for a given product, then it would qualify only as a provider of an online marketplace for that product. In the event that the same entity provides both online marketplace services for the sale of a particular product and also acts as an economic operator under this Regulation, it would qualify also as the relevant economic operator. In such a case, the entity in question would therefore have to comply with the obligations applicable to the relevant economic operator. For instance, if the provider of the online marketplace also distributes a product, then, with respect to the sale of the distributed product, it would be considered to be a distributor. Similarly, if the entity in question sells its own branded products, it would act as a manufacturer and would thus need to comply with the applicable requirements for manufacturers. Also, some entities can qualify as fulfilment service providers if they offer fulfilment services. Such cases would thus need to be assessed on a case-by-case basis."
+    },
+    {
+      "recital_number": 47,
+      "text": "Given the important role played by providers of online marketplaces when intermediating the sale of products between traders and consumers, such actors should have more responsibilities in tackling the sale of dangerous products online. Directive 2000/31/EC of the European Parliament and of the Council (16) provides the general framework for e-commerce and lays down certain obligations for online platforms. Regulation (EU) 2022/2065 of the European Parliament and of the Council (17) regulates the responsibility and accountability of providers of intermediary services online with regard to illegal contents, including dangerous products. That Regulation applies without prejudice to the rules laid down by Union law on consumer protection and product safety. Accordingly, building on the horizontal legal framework provided by that Regulation, specific requirements essential to tackle in an effective manner the sale of dangerous products online should be introduced, in line with Article 2(4), point (f) of that Regulation. To the extent that this Regulation specifies the requirements, in relation to product safety, with which providers of online marketplaces are to comply in order to ensure compliance with certain provisions of Regulation (EU) 2022/2065, those requirements should not affect the application of Regulation (EU) 2022/2065, which continues to apply to those providers of online marketplaces."
+    },
+    {
+      "recital_number": 48,
+      "text": "The Product Safety Pledge, first signed in 2018 and joined by a number of providers of online marketplaces since then, provides for a number of voluntary commitments on product safety. The Product Safety Pledge has proved its rationale in enhancing the protection of consumers against dangerous products sold online. In order to strengthen the protection of consumers by avoiding damage to their life, health and safety and to ensure fair competition in the internal market, providers of online marketplaces are encouraged to undertake those voluntary commitments to prevent the re-appearance of listings of dangerous products already withdrawn. The use of technologies and digital processes and the improvements in alert systems, in particular the Safety Gate Portal, can allow the automatic identification and communication of notified dangerous products and to carry out automated random checks against the Safety Gate Portal."
+    },
+    {
+      "recital_number": 49,
+      "text": "Providers of online marketplaces should act with due care in relation to the content hosted on their online interfaces that concerns product safety, in accordance with the specific obligations laid down in this Regulation. Accordingly, this Regulation should lay down due diligence obligations for all providers of online marketplaces in relation to the content hosted on their online interfaces that concerns product safety."
+    },
+    {
+      "recital_number": 50,
+      "text": "Moreover, for the purposes of effective market surveillance, providers of online marketplaces should register in the Safety Gate Portal and indicate, in the Safety Gate Portal, the information concerning their single point of contact for the facilitation of communication of information on product safety issues. The Commission should ensure that the registration is easy and user-friendly. The single point of contact under this Regulation might be the same as the point of contact under Article 11 of Regulation (EU) 2022/2065, without endangering the objective of treating issues linked to product safety in a swift and specific manner."
+    },
+    {
+      "recital_number": 51,
+      "text": "Providers of online marketplaces should designate a single point of contact for consumers. That single point of contact should serve as a single window for consumer communications on product safety issues, which can then be redirected to the proper service unit of an online marketplace. This should not prevent additional points of contact for specific services being made available to consumers. The single point of contact under this Regulation might be the same as the point of contact under Article 12 of Regulation (EU) 2022/2065."
+    },
+    {
+      "recital_number": 52,
+      "text": "In order to be able to comply with their obligations under this Regulation, in particular in respect of the timely and effective compliance with the orders of public authorities, the processing of notices of other third parties and cooperation with market surveillance authorities in the context of corrective measures upon request, providers of online marketplaces should have in place an internal mechanism for handling product safety-related issues."
+    },
+    {
+      "recital_number": 53,
+      "text": "Article 14(4) of Regulation (EU) 2019/1020 provides market surveillance authorities with the power, where no other effective means are available to eliminate a serious risk, to require the removal of content referring to the related products from an online interface or to require the explicit display of a warning to end users when they access an online interface. The powers entrusted to market surveillance authorities by Article 14(4) of Regulation (EU) 2019/1020 should also apply to this Regulation. For effective market surveillance under this Regulation and to avoid dangerous products being present on the Union market, those powers should apply in all necessary and proportionate cases and also for products presenting a less than serious risk. It is essential that providers of online marketplaces comply with such orders as a matter of urgency. Therefore, this Regulation should introduce binding time-limits in that respect. Those powers should be exercised in accordance with Article 9 of Regulation (EU) 2022/2065."
+    },
+    {
+      "recital_number": 54,
+      "text": "Orders which also require the provider of an online marketplace to remove from its online interface all identical content referring to the offer of a dangerous product specified in the order, should identify the elements that will determine and allow the provider of an online marketplace to remove identical offers, based on the information displayed by the traders, to the extent that the provider of an online marketplace is not required to carry out an independent assessment of that content."
+    },
+    {
+      "recital_number": 55,
+      "text": "Where the information from the Safety Gate Rapid Alert System does not contain an exact uniform resource locator (URL) and, where necessary, additional information enabling the identification of the content referring to an offer of a dangerous product, providers of online marketplaces should nevertheless take into account the transmitted information, such as product identifiers, when available, and other traceability information, in the context of any measures adopted by providers of online marketplaces on their own initiative aiming at detecting, identifying, removing or disabling access to such offers of dangerous products on their online interface, where applicable. Nonetheless, the Safety Gate Portal should be modernised and updated in order to make it easier for providers of online marketplaces to detect unsafe products and, with that aim, it should be possible to implement the provisions of this Regulation on the removal of content referring to an offer of a dangerous product from online interfaces by means of a notification system designed and developed within the Safety Gate Portal."
+    },
+    {
+      "recital_number": 56,
+      "text": "The obligations imposed by this Regulation on providers of online marketplaces should not amount to a general obligation to monitor the information which they transmit or store, nor should they require providers of online marketplaces to actively seek facts or circumstances indicating illegal activity, such as the sale of dangerous products online. Nonetheless, in order to benefit from the exemption from liability for hosting services under Directive 2000/31/EC and Regulation (EU) 2022/2065, providers of online marketplaces should remove content referring to an offer of a dangerous product from their online interfaces expeditiously, upon obtaining actual knowledge or, in the case of claims for damages, upon becoming aware of the content referring to an offer of a dangerous product, in particular in cases in which the provider of online marketplace has been made aware of facts or circumstances on the basis of which a diligent economic operator should have identified the illegality in question. Providers of online marketplaces should process notices concerning content referring to an offer of a dangerous product, received in accordance with Article 16 of Regulation (EU) 2022/2065, within the additional timeframes established by this Regulation. In addition, providers of online marketplaces are encouraged to check products with Safety Gate Portal before placing them on their interface."
+    },
+    {
+      "recital_number": 57,
+      "text": "For the purposes of Article 22 of Regulation (EU) 2022/2065, and concerning the safety of products sold online, the Digital Services Coordinator should consider in particular consumer organisations and associations representing consumers’ interests and other relevant stakeholders, upon their request, as trusted flaggers, provided that the conditions set out in that Article have been met."
+    },
+    {
+      "recital_number": 58,
+      "text": "Product traceability is fundamental for effective market surveillance of dangerous products and corrective measures. Consumers should also be protected against dangerous products in the same way in the offline and online sales channels, including when purchasing products on online marketplaces. Building on the provisions of Regulation (EU) 2022/2065 concerning the traceability of traders, providers of online marketplaces should not allow a specific product offer to be listed on their platforms unless the trader has provided all information related to product safety and traceability as specified in this Regulation. Such information should be displayed together with the product listing so that consumers can benefit from the same information made available online and offline. However, providers of online marketplaces should not be responsible for verifying the completeness, correctness and the accuracy of the information itself, as the obligation to ensure the traceability of products lies with the relevant trader."
+    },
+    {
+      "recital_number": 59,
+      "text": "It is also important that providers of online marketplaces cooperate closely with the market surveillance authorities, with traders and with relevant economic operators on the safety of products. Article 7(2) of Regulation (EU) 2019/1020 imposes an obligation on information society service providers to cooperate with market surveillance authorities in relation to products covered by that Regulation. That obligation should therefore be extended to all consumer products. For instance, market surveillance authorities are constantly improving the technological tools they use for online market surveillance to identify dangerous products sold online. For those tools to be operational, providers of online marketplaces should grant access to their interfaces. Moreover, for the purpose of product safety, market surveillance authorities should also have the possibility to scrape data from an online interface upon reasoned request in the case of technical obstacles put in place by providers of online marketplaces or online sellers. Providers of online marketplaces should also cooperate on product recalls and on accident reporting."
+    },
+    {
+      "recital_number": 60,
+      "text": "The legal framework for market surveillance of products covered by Union harmonisation legislation and set out in Regulation (EU) 2019/1020 and the legal framework for market surveillance of products covered by this Regulation should be as coherent as possible. It is therefore necessary, as far as market surveillance activities, obligations, powers, measures, and cooperation among market surveillance authorities are concerned, to align the two sets of provisions. For that purpose Article 10, Article 11(1) to (7), Articles 12 to 15, Article 16(1) to (5), Articles 18 and 19 and Articles 21 to 24 of Regulation (EU) 2019/1020 should apply also to products covered by this Regulation."
+    },
+    {
+      "recital_number": 61,
+      "text": "Pursuant to Regulation (EU) No 952/2013 of the European Parliament and of the Council (18) (the Union Customs Code), products from third countries intended to be made available on the Union market or intended for private use or consumption within the customs territory of the Union are placed under the customs procedure ‘release for free circulation’. That procedure aims to complete the formalities laid down in respect of the import of the goods, including the enforcement of the applicable provisions of Union law, so that those goods can be made available on the Union market like any product made in the Union. As far as consumer safety is concerned, those products are required to comply with this Regulation and, in particular, with the general safety requirement laid down in this Regulation."
+    },
+    {
+      "recital_number": 62,
+      "text": "Chapter VII of Regulation (EU) 2019/1020, laying down rules for controls on products entering the Union market, is already directly applicable to products covered by this Regulation. The authorities in charge of those controls should perform them on the basis of risk analysis as referred to in Articles 46 and 47 of Regulation (EU) No 952/2013, the implementing legislation and corresponding guidance. Therefore, this Regulation does not modify in any way Chapter VII of Regulation (EU) 2019/1020 and the way the authorities in charge of controls on products entering the Union market organise themselves and perform their activities."
+    },
+    {
+      "recital_number": 63,
+      "text": "Member States should ensure that any measures taken by their competent authorities under this Regulation are subject to effective judicial remedies in accordance with Article 47 of the Charter."
+    },
+    {
+      "recital_number": 64,
+      "text": "National authorities should be enabled to complement the traditional market surveillance activities focused on safety of products with market surveillance activities focusing on the internal conformity procedures set up by economic operators to ensure product safety. Market surveillance authorities should be able to require the manufacturer to indicate which other products – produced with the same procedure, or containing the same components considered to present a risk or that are part of the same production batch – are affected by the same risk."
+    },
+    {
+      "recital_number": 65,
+      "text": "Member States should also ensure that the market surveillance authorities have sufficient expertise and resources for all their enforcement activities."
+    },
+    {
+      "recital_number": 66,
+      "text": "An exchange of information between Member States and the Commission concerning the application of this Regulation should be established on the basis of output indicators which would allow measurement of the effectiveness of Union product safety legislation."
+    },
+    {
+      "recital_number": 67,
+      "text": "There should be effective, speedy and accurate exchange of information concerning dangerous products to ensure that appropriate measures are taken in relation to those products and thereby to protect the health and safety of consumers."
+    },
+    {
+      "recital_number": 68,
+      "text": "RAPEX should be modernised to enable more efficient corrective measures to be taken across the Union in relation to products that present a risk beyond the territory of a single Member State. It is opportune to change the abbreviated name from RAPEX to Safety Gate for greater clarity and better outreach to consumers. Safety Gate comprises three elements: first, a rapid alert system on dangerous non-food products whereby national authorities and the Commission can exchange information on such products (Safety Gate Rapid Alert System); second, a web portal to inform the public and enable them to submit complaints (Safety Gate Portal); and third, a web portal to enable businesses to comply with their obligation to inform authorities and consumers of dangerous products and accidents (Safety Business Gateway). Interfaces should exist between the different Safety Gate elements. The Safety Gate Rapid Alert System is the internal system through which authorities and the Commission exchange information on measures concerning dangerous products, and which can contain confidential information. An extract of alerts should be published on the Safety Gate Portal in order to inform the public about dangerous products. The Safety Business Gateway is the web portal through which businesses inform market surveillance authorities of the Member States about dangerous products and about accidents. The Commission should develop a technical solution to ensure that the information entered by businesses in the Safety Business Gateway that is meant to alert consumers can be made available to consumers on the Safety Gate Portal without undue delay. In addition, the Commission should develop an interoperable interface to enable providers of online marketplaces to link their interfaces with the Safety Gate Portal in an easy, quick and reliable way."
+    },
+    {
+      "recital_number": 69,
+      "text": "Member States should notify in the Safety Gate Rapid Alert System both compulsory and voluntary corrective measures that prevent, restrict or impose specific conditions on the possible marketing of a product because of a serious risk to the health and safety of consumers or, in the case of products covered by Regulation (EU) 2019/1020, also to other relevant public interests of end-users."
+    },
+    {
+      "recital_number": 70,
+      "text": "Under Article 34 of Regulation (EU) 2019/1020, Member States’ authorities are to notify measures taken against products covered by that Regulation, presenting a less than serious risk, through the information and communication system referred to in that Article, while corrective measures taken against products covered by this Regulation presenting a less than serious risk could also be notified in the Safety Gate Rapid Alert System. Member States and the Commission should make available to the public information relating to risks to the health and safety of consumers posed by products. It is opportune for consumers and businesses that all information on corrective measures taken against products presenting a serious risk is contained in the Safety Gate Rapid Alert System, allowing relevant information on dangerous products to be made available to the public through the Safety Gate Portal. It is important to ensure that all of that information is available in the official language(s) of the consumer’s Member State of residence and that it is written in a clear and understandable manner. Member States are therefore encouraged to notify in the Safety Gate Rapid Alert System all corrective measures on products presenting a risk to the health and safety of consumers."
+    },
+    {
+      "recital_number": 71,
+      "text": "In the event that the information has to be notified in the information and communication system in accordance with Regulation (EU) 2019/1020, there is the possibility for such notifications to be submitted directly in the Safety Gate Rapid Alert System or to be generated from within the information and communication system for market surveillance provided for in Article 34 of Regulation (EU) 2019/1020. For that purpose, the Commission should maintain and further develop the interface that has been set up for the transfer of information between that information and communication system and the Safety Gate Rapid Alert System, in order to avoid double data entry and to facilitate such transfer."
+    },
+    {
+      "recital_number": 72,
+      "text": "The Commission should maintain and further develop the Safety Business Gateway web portal, enabling economic operators to comply with their obligations to inform market surveillance authorities and consumers of dangerous products they have made available on the market. It should enable quick and efficient information exchange between economic operators and national authorities, and facilitate information to consumers from economic operators."
+    },
+    {
+      "recital_number": 73,
+      "text": "There might be cases where it is necessary to deal with a serious risk at Union level where the risk cannot be contained satisfactorily by means of measures taken by the Member State concerned or by any other procedure under Union law. This could in particular be the case as regards new emerging risks or those impacting vulnerable consumers. For that reason the Commission should be able to adopt measures either on its own initiative or upon request of the Member States. Such measures should be adapted to the gravity and urgency of the situation. It is furthermore necessary to provide for an adequate mechanism whereby the Commission could adopt immediately applicable interim measures."
+    },
+    {
+      "recital_number": 74,
+      "text": "The determination of the risk concerning a product and its level is based on a risk assessment performed by the relevant actors. Member States, in performing such a risk assessment, might reach different results as far as the presence of a risk or its level is concerned. This could jeopardise the correct functioning of the internal market and the level playing field for both consumers and economic operators. A mechanism should therefore be established to allow the Commission to provide an opinion on the issue in dispute."
+    },
+    {
+      "recital_number": 75,
+      "text": "The Commission should draw up a periodic report on the application of the mechanism under Article 29, which should be presented to the European network of the Member States’ authorities competent for product safety under this Regulation (‘Consumer Safety Network’). That report should identify the main criteria applied by the Member States for risk assessment and their impact on the internal market and on an equal level of consumer protection, with the aim of enabling Member States and the Commission to harmonise the approaches and criteria for risk assessment."
+    },
+    {
+      "recital_number": 76,
+      "text": "The Consumer Safety Network enhances the cooperation on product safety enforcement between Member States. In particular, it facilitates the activities of exchange of information, the organisation of joint market surveillance activities and the exchange of expertise and best practices. It should also contribute to the harmonisation of the methodologies to collect data on product safety, as well as to an increase in the interoperability between regional, sectoral, national and European information systems for product safety. The Consumer Safety Network should be duly represented and participate in the coordination and cooperation activities of the Union Product Compliance Network provided for in Regulation (EU) 2019/1020 whenever coordination of activities falling within the scope of both Regulations is necessary to ensure their effectiveness."
+    },
+    {
+      "recital_number": 77,
+      "text": "To preserve the coherence of the market surveillance legal framework and, at the same time, ensure an effective cooperation between the Consumer Safety Network and the Union Product Compliance Network, aimed at structured coordination and cooperation between Member States’ enforcement authorities and the Commission provided for by Regulation (EU) 2019/1020, it is necessary to associate the Consumer Safety Network to the Union Product Compliance Network in the activities referred to in Articles 11, 12, 13 and 21 of Regulation (EU) 2019/1020."
+    },
+    {
+      "recital_number": 78,
+      "text": "Market surveillance authorities should carry out joint activities with other authorities or organisations representing economic operators or consumers, with a view to promoting the safety of products and identifying dangerous products, including those that are offered for sale online. In doing so, the market surveillance authorities and the Commission, as appropriate, should ensure that the choice of products and producers as well as the activities performed does not create situations which might distort competition or affect the objectivity, independence and impartiality of the parties. The market surveillance authorities should make available to the public the agreements on joint activities as soon as possible, providing such publication does not jeopardise the effectiveness of the activities to be undertaken."
+    },
+    {
+      "recital_number": 79,
+      "text": "The Commission should organise, on regular basis, a joint activity whereby market surveillance authorities should conduct inspections on products acquired under a cover identity online or offline, in particular on those products that are most frequently notified within the Safety Gate."
+    },
+    {
+      "recital_number": 80,
+      "text": "Simultaneous coordinated control actions (‘sweeps’) are specific enforcement actions that could further enhance product safety and should therefore be conducted to detect online and offline infringements to this Regulation. In particular, sweeps should be conducted where market trends, consumer complaints or other indications suggest that certain products or product categories are often found to present a serious risk."
+    },
+    {
+      "recital_number": 81,
+      "text": "Public access to the information available to the authorities on product safety should, as a general rule, be ensured. However, in making available information on product safety to the public, professional secrecy, as referred to in Article 339 TFEU, should be protected in a way which is compatible with the need to ensure the effectiveness of market surveillance activities and of protection measures."
+    },
+    {
+      "recital_number": 82,
+      "text": "Complaints are important in terms of raising awareness of national authorities about the safety and effectiveness of surveillance and control activities relating to dangerous products. Member States should therefore give to consumers and other interested parties such as consumer associations and economic operators the possibility to submit such complaints."
+    },
+    {
+      "recital_number": 83,
+      "text": "The public interface of the Safety Gate Rapid Alert System, the Safety Gate Portal, allows the general public, including consumers, economic operators and providers of online marketplaces, to be informed about corrective measures taken against dangerous products present on the Union market. A separate section of the Safety Gate Portal enables consumers to inform the Commission of products found on the market presenting a risk to the health and safety of consumers. Where relevant, the Commission should provide adequate follow-up, in particular by transmitting such information to the national authorities concerned. The database and website of the Safety Gate should be easily accessible for persons with disabilities."
+    },
+    {
+      "recital_number": 84,
+      "text": "After verification of the accuracy of the information received from consumers and other interested parties, the Commission should ensure an appropriate follow-up. In particular, the Commission should forward the information to the relevant Member States so that the competent market surveillance authority can proceed as appropriate and needed. It is important that consumers and other interested parties are properly informed of the Commission action."
+    },
+    {
+      "recital_number": 85,
+      "text": "When a product already sold to consumers turns out to be dangerous, it may need to be recalled to protect consumers in the Union. Consumers might not be aware that they own a recalled product. In order to increase recall effectiveness, it is therefore important to better reach the consumers concerned. Direct contact is the most effective method to increase consumers’ awareness of recalls and encourage action. It is also the preferred communication channel across all groups of consumers. In order to ensure the safety of the consumers, it is important that they are informed in a quick and reliable way. Economic operators and, where applicable, providers of online marketplaces should therefore use the customer data at their disposal to inform consumers of recalls and safety warnings linked to products they have purchased. Therefore, a legal obligation is needed to require economic operators and providers of online marketplaces to use any customer data already at their disposal to inform consumers of recalls and safety warnings. In that respect, economic operators and providers of online marketplaces should ensure that they include the possibility to directly contact customers in the case of a recall or safety warning affecting them in existing customer loyalty programmes and product registration systems, through which customers are asked, after having purchased a product, to communicate to the manufacturer on a voluntary basis some information such as their name, contact information, the product model or serial number. The mere fact that recalls are targeted at consumers should not prevent economic operators and providers of online marketplaces from making all customers aware of a product recall notice nor from offering remedies to other end-users. Economic operators and providers of online marketplaces should be encouraged to take such actions, especially in the case of micro- and small enterprises acting like consumers."
+    },
+    {
+      "recital_number": 86,
+      "text": "Consumers should be encouraged to register products in order to receive information about recalls and safety warnings. The Commission should be empowered to adopt implementing acts in order to specify that for some specific products or categories of products, consumers should always have the possibility to register a product they have purchased in order to be directly notified about a recall or a safety warning related to that product. In determining the specific products or categories of products subject to that requirement, due consideration should be given to the lifecycle of the products or categories of products at stake, as well as to the risks the products pose, the frequency of recalls and the category of users of the products, in particular vulnerable consumers."
+    },
+    {
+      "recital_number": 87,
+      "text": "One-third of consumers continue to use dangerous products despite seeing a recall notice, particularly because recall notices are drafted in a complex way or minimise the risk at stake. The recall notice should therefore be clear, transparent and clearly describe the risk at stake, avoiding any terms, expressions or other elements that may decrease consumers’ perception of the risk. Consumers should also be able to get more information, if needed, through a toll-free telephone number or other interactive instrument."
+    },
+    {
+      "recital_number": 88,
+      "text": "To encourage consumer response to recalls it is also important that the action required from consumers be as simple as possible and that the remedies offered be effective, cost-free and timely. Directive (EU) 2019/771 of the European Parliament and of the Council (19) provides consumers with the contractual remedies for a lack of conformity of physical goods that existed at the time of delivery and became apparent within the liability period laid down by the Member States in accordance with Article 10(3) of that Directive. Article 14 of Directive (EU) 2019/770 of the European Parliament and of the Council (20) also applies in terms of the tangible medium, such as DVDs, CDs, USB sticks and memory cards, used to carry a digital content. However, situations where dangerous products are recalled from the market justify having a specific set of rules that should be applied without prejudice to contractual remedies because their objectives are different. Whereas contractual remedies serve the purpose of remedying the lack of conformity of the goods with the contract, the remedies in the event of a recall serve both to ensure elimination of dangerous products from the market and an adequate remedy for the consumer. As a consequence, there are major differences between the two sets of potential remedies: firstly, in the event of a product recall under this Regulation, there should be no time limitation to activate the remedies; secondly, the consumer should be entitled to request remedies from the relevant economic operator, not necessarily from the trader. Moreover, in the event of a recall, the consumer should not have to prove that the product is dangerous."
+    },
+    {
+      "recital_number": 89,
+      "text": "Given the different objectives of remedies provided in the event of a recall of a dangerous product and remedies for non-conformity of goods with the contract, consumers should use the system corresponding to the relevant situation. For example, if the consumer receives a recall notice with a description of the remedies available to the consumer, the consumer should act according to the instructions in the recall notice. Nevertheless, he or she should not be deprived of the possibility to ask for remedies from the seller based on non-conformity of the dangerous goods with the contract."
+    },
+    {
+      "recital_number": 90,
+      "text": "Once the consumer has been provided with a remedy as a follow-up to a recall, the consumer could not be entitled to a remedy for non-conformity of the good with the contract for reasons connected with the fact that the product was dangerous because the non-conformity does not exist anymore. Similarly, in the event that the consumer invokes the consumer’s rights to a remedy under Directive (EU) 2019/770 or Directive (EU) 2019/771, the consumer is not entitled to a remedy under this Regulation for the same safety issue. However, if other requirements for conformity regarding the same good are not fulfilled, the seller would remain liable for such non-conformity of the good with the contract even if there has been a remedy provided to the consumer following a recall of a dangerous product."
+    },
+    {
+      "recital_number": 91,
+      "text": "Economic operators initiating a product recall should offer consumers at least two options between repair, replacement, or adequate refund of the value of the recalled product, except where impossible or disproportionate. Offering consumers a choice between remedies can improve the effectiveness of a recall. In addition, incentives to motivate consumers to participate in a recall, such as discounts or vouchers, should be encouraged in order to increase the effectiveness of recalls. The repair of the product should only be considered a possible remedy if the safety of the repaired product can be ensured. The amount of the refund should be at least equal to the price paid by the consumer, without prejudice to a further compensation as provided for in national laws. Where no proof of the price paid is available, an adequate refund of the value of the recalled product should still be provided. In the event of recalls of the tangible medium for digital content within the meaning of Article 2, point (1) of Directive (EU) 2019/770, the refund should cover all sums paid by the consumer under the contract, as provided for in Article 16(1) of that Directive. Any remedy should be without prejudice to the consumers’ right to damages under national law."
+    },
+    {
+      "recital_number": 92,
+      "text": "Remedies offered in the event of a product safety recall should not place an excessive burden on consumers nor place them at risk. If the remedy also entails the disposal of the recalled product, such disposal should be carried out with due consideration of the environmental and sustainable objectives set at Union and national levels. In addition, repair by consumers should only be considered as a possible remedy if it can be carried out easily and safely by the consumer, for instance through the replacement of a battery or by cutting excessively long drawstrings on a children’s garment when provided for in the recall notice. Moreover, the repair by the consumer should be without prejudice to consumers’ rights under Directives (EU) 2019/770 and (EU) 2019/771. Therefore, in such situations, economic operators should not oblige consumers to repair a dangerous product."
+    },
+    {
+      "recital_number": 93,
+      "text": "This Regulation should also encourage economic operators and providers of online marketplaces to enter into voluntary memoranda of understanding with competent authorities, the Commission or organisations representing consumers or economic operators to undertake product safety related voluntary commitments that go beyond the legal obligations laid down in Union law."
+    },
+    {
+      "recital_number": 94,
+      "text": "Consumers should be entitled to enforce their rights in relation to the obligations imposed on economic operators or providers of online marketplaces under this Regulation through representative actions in accordance with Directive (EU) 2020/1828 of the European Parliament and of the Council (21). For that purpose, this Regulation should provide that Directive (EU) 2020/1828 is applicable to the representative actions concerning infringements of this Regulation that harm or can harm the collective interests of consumers. Annex I to that Directive should therefore be amended accordingly. It is for the Member States to ensure that that amendment is reflected in their transposition measures adopted in accordance with that Directive, although the adoption of national transposition measures in that regard is not a condition for the applicability of that Directive to those representative actions. The applicability of that Directive to the representative actions brought against infringements by economic operators or providers of online marketplaces of provisions of this Regulation that harm or can harm the collective interests of consumers should start from the date of application of this Regulation. Until that date, consumers should be able to rely on the applicability of Directive (EU) 2020/1828 in line with point 8 of Annex I to that Directive."
+    },
+    {
+      "recital_number": 95,
+      "text": "The Union should be able to cooperate and to exchange information related to product safety with regulatory authorities of third countries or international organisations within the framework of agreements concluded between the Union and third countries or international organisations or of arrangements concluded between the Commission and authorities of third countries or international organisations, also with a view to preventing the circulation of dangerous products on the market. Such cooperation and exchange of information should respect confidentiality and personal data protection rules of the Union. Personal data should only be transferred to the extent that such exchange is necessary for the sole purpose of the protection of the health or safety of consumers."
+    },
+    {
+      "recital_number": 96,
+      "text": "Systematic exchange of information between the Commission and third countries or international organisations on the safety of consumer products and on preventive, restrictive and corrective measures should be based on reciprocity, which entails an equivalent but not necessarily identical exchange of information for mutual benefit. An exchange of information with a third country producing goods destined for the Union market might consist in the Commission sending selected information from the Safety Gate Rapid Alert System related to products originating from that third country. In exchange, that third country might send information on the follow-up measures taken on the basis of the notifications received. Such cooperation might contribute to the objective of stopping dangerous products at the source and preventing them from reaching the Union market."
+    },
+    {
+      "recital_number": 97,
+      "text": "In order to have a significant deterrent effect for economic operators and, where applicable, providers of online marketplaces to prevent the placing of dangerous products on the market, penalties should be adequate to the type of infringement, to the possible advantage for the economic operator or provider of an online marketplace and to the type and gravity of the injury suffered by the consumer. Penalties should be effective, proportionate and dissuasive."
+    },
+    {
+      "recital_number": 98,
+      "text": "When imposing penalties, due consideration should be given to the nature, gravity and duration of the infringement in question. The imposition of penalties should be proportionate and should comply with Union and national law, including with applicable procedural safeguards and with the principles of the Charter."
+    },
+    {
+      "recital_number": 99,
+      "text": "In order to maintain a high level of health and safety of consumers, the power to adopt acts in accordance with Article 290 TFEU should be delegated to the Commission in respect of the identification and traceability of products bearing a potential serious risk to the health and safety of consumers and of the functioning of the Safety Gate Rapid Alert System, in particular to adopt the modalities and procedures for the exchange of information regarding measures communicated through the Safety Gate Rapid Alert System and criteria to assess the level of risk. It is of particular importance that the Commission carry out appropriate consultations during its preparatory work, including at expert level, and that those consultations be conducted in accordance with the principles laid down in the Interinstitutional Agreement of 13 April 2016 on Better Law-Making (22). In particular, to ensure equal participation in the preparation of delegated acts, the European Parliament and the Council receive all documents at the same time as Member States’ experts, and their experts systematically have access to meetings of Commission expert groups dealing with the preparation of delegated acts."
+    },
+    {
+      "recital_number": 100,
+      "text": "In order to ensure uniform conditions for the implementation of this Regulation, implementing powers should be conferred on the Commission to adopt the specific safety requirements, to determine the output indicators on the basis of which Member States have to communicate data concerning the implementation of this Regulation; to specify tasks and roles of single national contact points; to take measures as regards Union action against products presenting a serious risk; to adopt the modalities for the sending of information by consumers in the Safety Gate Portal; to specify the implementation of the interoperable interface on the Safety Gate Portal; to set out the requirements for registration of products for product safety recall purposes; and to adopt the template for a recall notice. Those powers should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council (23)."
+    },
+    {
+      "recital_number": 101,
+      "text": "The Commission should adopt immediately applicable implementing acts where, in duly justified cases relating to the health and safety of consumers, imperative grounds of urgency so require."
+    },
+    {
+      "recital_number": 102,
+      "text": "The Commission should carry out an evaluation of the implementation of the penalties laid down under this Regulation as regards their effectiveness and deterrent effects, and, where appropriate, adopt a legislative proposal in relation to their enforcement."
+    },
+    {
+      "recital_number": 103,
+      "text": "Certain provisions of Regulation (EU) No 1025/2012 should be amended to take the specificities of this Regulation into account, and in particular the need to determine the specific safety requirements under this Regulation before launching the request to the European standardisation organisation."
+    },
+    {
+      "recital_number": 104,
+      "text": "Directive 87/357/EEC, which covers consumer products which, although not foodstuff, resemble foodstuff and are likely to be confused with foodstuff in such a way that consumers, especially children, may place them in their mouths, suck or ingest them and which might cause, for example, suffocation, poisoning, the perforation or obstruction of the digestive tract, has given rise to controversial interpretation. Furthermore, that Directive was adopted at a time where the legal framework for consumer product safety was very limited in scope. For those reasons, Directive 87/357/EEC should be repealed and replaced by this Regulation, in particular, the provisions of this Regulation which ensure that, following risk assessment, products which can be harmful when placed in mouth, sucked or ingested and which are likely to be confused with foodstuff due to their form, odour, colour, appearance, packaging, labelling, volume, size or other characteristics, should be considered dangerous. In performing their evaluation, market surveillance authorities should take into consideration, inter alia, that, as held by the Court of Justice of the European Union, it is not necessary to demonstrate by objective and substantiated data that placing in the mouth, sucking or ingesting food-imitating products may entail risks such as suffocation, poisoning, or the perforation or obstruction of the digestive tract. Nevertheless, the competent national authorities should assess on a case-by-case basis whether such products are dangerous and justify that assessment."
+    },
+    {
+      "recital_number": 105,
+      "text": "In order to allow economic operators and providers of online marketplaces sufficient time to adapt to the requirements of this Regulation, including information requirements, it is necessary to provide for a sufficient transitional period after the date of entry into force of this Regulation during which products covered by Directive 2001/95/EC which are in conformity with that Directive may still be placed on the market. Member States should therefore not impede the making available on the market of such products, including offers for sale."
+    },
+    {
+      "recital_number": 106,
+      "text": "Since the objective of this Regulation, namely to improve the functioning of the internal market while providing for a high level of consumer protection, cannot be sufficiently achieved by the Member States given the need for a high degree of collaboration and coherent action between Member States’ competent authorities and for a mechanism to quickly and efficiently exchange information on dangerous products in the Union but can rather, by reason of the Union-wide character of the problem, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve that objective."
+    },
+    {
+      "recital_number": 107,
+      "text": "Where, for the purposes of this Regulation, it is necessary to process personal data, such processing should be carried out in accordance with Union law on the protection of personal data. Any processing of personal data under this Regulation is subject to Regulations (EU) 2016/679 (24) and (EU) 2018/1725 (25) and Directive 2002/58/EC (26) of the European Parliament and of the Council, as applicable. When consumers report a product in the Safety Gate Portal, only those personal data should be stored that are necessary to report the dangerous product and for a period not exceeding five years after such data have been entered. Manufacturers and importers should hold the register of consumer complaints only as long as it is necessary for the purpose of this Regulation. Manufacturers and importers, when they are natural persons should disclose their names to ensure that the consumer is able to identify the product for purpose of traceability."
+    },
+    {
+      "recital_number": 108,
+      "text": "The European Data Protection Supervisor was consulted in accordance with Article 42 of Regulation (EU) 2018/1725,"
+    },
+    {
+      "recital_number": 108,
+      "text": "The European Data Protection Supervisor was consulted in accordance with Article 42 of Regulation (EU) 2018/1725,"
     }
   ]
 }

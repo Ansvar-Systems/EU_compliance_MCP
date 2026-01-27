@@ -1,9 +1,8 @@
 {
   "id": "CBAM",
-  "full_name": "Carbon Border Adjustment Mechanism",
+  "full_name": "Regulation 32023R0956",
   "celex_id": "32023R0956",
-  "effective_date": "2023-10-01",
-  "eur_lex_url": "https://eur-lex.europa.eu/eli/reg/2023/956/oj",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956",
   "articles": [
     {
       "number": "1",
@@ -392,6 +391,340 @@
       "term": "indirect emissions",
       "definition": "emissions from the production of electricity which is consumed during the production processes of goods, irrespective of the location of the production of the consumed electricity. OBLIGATIONS AND RIGHTS OF AUTHORISED CBAM DECLARANTS",
       "article": "3"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "In its communication of 11 December 2019 entitled ‘The European Green Deal’ (the ‘European Green Deal’), the Commission set out a new growth strategy. That strategy aims to transform the Union into a fair and prosperous society, with a modern, resource-efficient and competitive economy, where there are no net emissions (emissions after deduction of removals) of greenhouse gases (‘greenhouse gas emissions’) at the latest by 2050 and where economic growth is decoupled from the use of resources. The European Green Deal aims to protect, conserve and enhance the Union’s natural capital, and to protect the health and well-being of citizens from environment-related risks and impacts. At the same time, that transformation must be just and inclusive, leaving no one behind. The Commission also announced in its communication of 12 May 2021 entitled ‘Pathway to a Healthy Planet for All, EU Action Plan: Towards Zero Pollution for Air, Water and Soil’ the promotion of relevant instruments and incentives to better implement the ‘polluter pays’ principle set out in Article 191(2) of the Treaty on the Functioning of the European Union (TFEU) and thus complete the phasing out of ‘pollution for free’ with a view to maximising synergies between decarbonisation and the zero-pollution ambition."
+    },
+    {
+      "recital_number": 2,
+      "text": "The Paris Agreement (4), adopted on 12 December 2015 under the United Nations Framework Convention on Climate Change (UNFCCC) (the ‘Paris Agreement’), entered into force on 4 November 2016. The Parties to the Paris Agreement have agreed to hold the increase in the global average temperature well below 2 °C above pre-industrial levels and to pursue efforts to limit the temperature increase to 1,5 °C above pre-industrial levels. Under the Glasgow Climate Pact, adopted on 13 November 2021, the Conference of the Parties to the UNFCCC, serving as the meeting of the Parties to the Paris Agreement, also recognised that limiting the increase in the global average temperature to 1,5 °C above pre-industrial levels would significantly reduce the risks and impacts of climate change, and committed to strengthening the 2030 targets by the end of 2022 to close the ambition gap."
+    },
+    {
+      "recital_number": 3,
+      "text": "Tackling climate and other environment-related challenges and reaching the objectives of the Paris Agreement are at the core of the European Green Deal. The value of the European Green Deal has only grown in light of the very severe effects of the COVID-19 pandemic on the health and economic well-being of the Union’s citizens."
+    },
+    {
+      "recital_number": 4,
+      "text": "The Union committed to reducing the Union’s economy-wide net greenhouse gas emissions by at least 55 % compared to 1990 levels by 2030, as set out in the submission to the UNFCCC on behalf of the European Union and its Member States on the update of the nationally determined contribution of the European Union and its Member States."
+    },
+    {
+      "recital_number": 5,
+      "text": "Regulation (EU) 2021/1119 of the European Parliament and of the Council (5) has enshrined in legislation the objective of economy-wide climate neutrality at the latest by 2050. That Regulation also establishes a binding Union domestic reduction target for net greenhouse gas emissions (emissions after deduction of removals) of at least 55 % compared to 1990 levels by 2030."
+    },
+    {
+      "recital_number": 6,
+      "text": "The Special Report of the Intergovernmental Panel on Climate Change (IPCC) of 2018 on the impacts of global temperature increases of 1,5 °C above pre-industrial levels and related global greenhouse gas emission pathways provides a strong scientific basis for tackling climate change and illustrates the need to step up climate action. That report confirms that, in order to reduce the likelihood of extreme weather events, greenhouse gas emissions need to be urgently reduced, and that climate change needs to be limited to a global temperature increase of 1,5 °C. Moreover, if mitigation pathways, consistent with limiting global warming to 1,5 °C above pre-industrial levels, are not rapidly activated, much more expensive and complex adaptation measures will have to be taken to avoid the impacts of higher levels of global warming. The contribution of Working Group I to the Sixth Assessment Report of the IPCC entitled ‘Climate Change 2021: The Physical Science Basis’ recalls that climate change is already affecting every region on Earth and projects that in the coming decades climate change will increase in all regions. That report stresses that, unless there are immediate, rapid and large-scale reductions in greenhouse gas emissions, limiting warming to close to 1,5 °C or even 2 °C will be beyond reach."
+    },
+    {
+      "recital_number": 7,
+      "text": "The Union has been pursuing an ambitious policy on climate action and has put in place a regulatory framework to achieve its 2030 target for greenhouse gas emissions reduction. The legislation implementing that target consists, inter alia, of Directive 2003/87/EC of the European Parliament and of the Council (6), which establishes a system for greenhouse gas emission allowance trading within the Union (‘EU ETS’) and delivers harmonised pricing of greenhouse gas emissions at Union level for energy-intensive sectors and subsectors, of Regulation (EU) 2018/842 of the European Parliament and of the Council (7), which introduces national targets for the reduction of greenhouse gas emissions by 2030, and of Regulation (EU) 2018/841 of the European Parliament and of the Council (8), which requires Member States to compensate greenhouse gas emissions from land use with the removal of greenhouse gases from the atmosphere."
+    },
+    {
+      "recital_number": 8,
+      "text": "While the Union has substantially reduced its domestic greenhouse gas emissions, the greenhouse gas emissions embedded in imports to the Union have been increasing, thereby undermining the Union’s efforts to reduce its global greenhouse gas emissions footprint. The Union has a responsibility to continue playing a leading role in global climate action."
+    },
+    {
+      "recital_number": 9,
+      "text": "As long as a significant number of the Union’s international partners have policy approaches that do not achieve the same level of climate ambition, there is a risk of carbon leakage. Carbon leakage occurs if, for reasons of costs related to climate policies, businesses in certain industry sectors or subsectors transfer production to other countries or imports from those countries replace equivalent products that are less intensive in terms of greenhouse gas emissions. Such situations could lead to an increase in the total global emissions, thus jeopardising the reduction of greenhouse gas emissions that is urgently needed if the world is to keep the increase in global average temperature to well below 2 °C above pre-industrial levels and to pursue efforts to limit the temperature increase to 1,5 °C above pre-industrial levels. As the Union increases its climate ambition, that risk of carbon leakage could undermine the effectiveness of Union emission reduction policies."
+    },
+    {
+      "recital_number": 10,
+      "text": "The initiative for a carbon border adjustment mechanism (the ‘CBAM’) is part of the ‘Fit for 55’ legislative package. The CBAM is to serve as an essential element of the Union’s toolbox for meeting the objective of a climate-neutral Union at the latest by 2050 in line with the Paris Agreement by addressing the risk of carbon leakage that results from the Union’s increased climate ambition. The CBAM is expected to also contribute to promoting decarbonisation in third countries."
+    },
+    {
+      "recital_number": 11,
+      "text": "Existing mechanisms for addressing the risk of carbon leakage in sectors or subsectors where such risk exists consist of the transitional free allocation of EU ETS allowances and financial measures to compensate for indirect emission costs incurred from greenhouse gas emission costs passed on in electricity prices. Those mechanisms are set out in Article 10a(6) and Article 10b of Directive 2003/87/EC, respectively. The free allocation of EU ETS allowances at the level of best performers has been a policy instrument for certain industrial sectors to address the risk of carbon leakage. However, compared to full auctioning, such free allocation weakens the price signal that the system provides and thus affects the incentives for investment into further reducing greenhouse gas emissions."
+    },
+    {
+      "recital_number": 12,
+      "text": "The CBAM seeks to replace those existing mechanisms by addressing the risk of carbon leakage in a different way, namely by ensuring equivalent carbon pricing for imports and domestic products. To ensure a gradual transition from the current system of free allowances to the CBAM, the CBAM should be progressively phased in while free allowances in sectors covered by the CBAM are phased out. The combined and transitional application of EU ETS allowances allocated free of charge and of the CBAM should in no case result in more favourable treatment for Union goods compared to goods imported into the customs territory of the Union."
+    },
+    {
+      "recital_number": 13,
+      "text": "The carbon price is rising, and companies need long-term visibility, predictability and legal certainty to make their decisions on investment in the decarbonisation of industrial processes. Therefore, in order to strengthen the legal framework for fighting carbon leakage, a clear pathway for gradual further extension of the scope of the CBAM to products, sectors and subsectors at risk of carbon leakage should be established."
+    },
+    {
+      "recital_number": 14,
+      "text": "While the objective of the CBAM is to prevent the risk of carbon leakage, this Regulation would also encourage producers from third countries to use technologies that are more efficient in reducing greenhouse gases so that fewer emissions are generated. For that reason, the CBAM is expected to effectively support the reduction of greenhouse gas emissions in third countries."
+    },
+    {
+      "recital_number": 15,
+      "text": "As an instrument to prevent carbon leakage and reduce greenhouse gas emissions, the CBAM should ensure that imported products are subject to a regulatory system that applies carbon costs equivalent to those borne under the EU ETS, resulting in a carbon price that is equivalent for imports and domestic products. The CBAM is a climate measure which should support the reduction of global greenhouse gas emissions and prevent the risk of carbon leakage, while ensuring compatibility with World Trade Organization law."
+    },
+    {
+      "recital_number": 16,
+      "text": "This Regulation should apply to goods imported into the customs territory of the Union from third countries, except where their production has already been subject to the EU ETS through its application to third countries or territories or to a carbon pricing system that is fully linked with the EU ETS."
+    },
+    {
+      "recital_number": 17,
+      "text": "With a view to ensuring that the transition to a carbon-neutral economy is continuously accompanied by economic and social cohesion, account should be taken, upon future revision of this Regulation, of the special characteristics and constraints of the outermost regions referred to in Article 349 TFEU as well as of island States which are part of the customs territory of the Union, without undermining the integrity and coherence of the Union legal order, including the internal market and common policies."
+    },
+    {
+      "recital_number": 18,
+      "text": "With a view to preventing the risk of carbon leakage in offshore installations, this Regulation should apply to goods, or processed products from those goods resulting from an inward processing procedure, that are brought to an artificial island, a fixed or floating structure, or any other structure on the continental shelf or in the exclusive economic zone of a Member State where that continental shelf or exclusive economic zone is adjacent to the customs territory of the Union. Implementing powers should be conferred on the Commission to lay down detailed conditions for the application of the CBAM to such goods."
+    },
+    {
+      "recital_number": 19,
+      "text": "The greenhouse gas emissions that should be subject to the CBAM should correspond to those greenhouse gas emissions covered by Annex I to Directive 2003/87/EC, namely carbon dioxide (‘CO2’) as well as, where relevant, nitrous oxide and perfluorocarbons. The CBAM should initially apply to direct emissions of those greenhouse gases from the time of production of goods until the import of those goods into the customs territory of the Union, mirroring the scope of the EU ETS to ensure coherence. The CBAM should also apply to indirect emissions. Those indirect emissions are the emissions arising from the generation of electricity used to produce the goods to which this Regulation applies. The inclusion of indirect emissions would further enhance the environmental effectiveness of the CBAM and its ambition to contribute to fighting climate change. Indirect emissions should, however, not be taken into account initially for the goods in respect of which financial measures apply in the Union that compensate for indirect emissions costs incurred from greenhouse gas emission costs passed on in electricity prices. Those goods are identified in Annex II to this Regulation. Future revisions of the EU ETS in Directive 2003/87/EC and, in particular, revisions of the compensation measures of the indirect costs should be appropriately reflected as regards the scope of application of the CBAM. During the transitional period, data should be collected for the purpose of further specifying the methodology for the calculation of indirect emissions. That methodology should take into account the quantity of electricity used for the production of the goods listed in Annex I to this Regulation, as well as the country of origin, generation source, and the emission factors related to that electricity. The specific methodology should be further specified in order to achieve the most appropriate way to prevent carbon leakage and ensure the environmental integrity of the CBAM."
+    },
+    {
+      "recital_number": 20,
+      "text": "The EU ETS and the CBAM share a common objective of pricing greenhouse gas emissions embedded in the same sectors and goods through the use of specific allowances or certificates. Both systems have a regulatory nature and are justified by the need to curb greenhouse gas emissions, in line with the binding environmental target under Union law, set out in Regulation (EU) 2021/1119, to reduce the Union’s net greenhouse gas emissions by at least 55 % compared to 1990 levels by 2030 and the objective to reach economy-wide climate neutrality at the latest by 2050."
+    },
+    {
+      "recital_number": 21,
+      "text": "While the EU ETS sets the total number of allowances issued (the ‘cap’) on the greenhouse gas emissions from activities within its scope and allows trading of allowances (the ‘cap and trade system’), the CBAM should not establish quantitative limits on imports, so that trade flows are not restricted. Moreover, while the EU ETS applies to installations in the Union, the CBAM should apply to certain goods imported into the customs territory of the Union."
+    },
+    {
+      "recital_number": 22,
+      "text": "The CBAM system has some specific features when compared to the EU ETS, including with respect to the calculation of the price of CBAM certificates, the possibilities to trade CBAM certificates and their period of validity. Those features are due to the need to preserve the effectiveness of the CBAM as a measure to prevent carbon leakage over time. They also ensure that the management of the CBAM system is not excessively burdensome, both in terms of obligations imposed on operators and administrative resources, while at the same time preserving a level of flexibility available to operators equivalent to that under the EU ETS. Ensuring such a balance is of particular importance to small and medium-sized enterprises (SMEs) concerned."
+    },
+    {
+      "recital_number": 23,
+      "text": "In order to preserve its effectiveness as a measure to prevent carbon leakage, the CBAM needs to reflect closely the EU ETS price. While on the EU ETS market the price of allowances released onto the market is determined through auctions, the price of CBAM certificates should reasonably reflect the price of such auctions through averages calculated on a weekly basis. Such weekly average prices reflect closely the price fluctuations of the EU ETS and allow a reasonable margin for importers to take advantage of the price changes of the EU ETS while also ensuring that the system remains manageable for administrative authorities."
+    },
+    {
+      "recital_number": 24,
+      "text": "Under the EU ETS, the cap determines the supply of emission allowances and provides certainty about maximum emissions of greenhouse gases. The carbon price is determined by the balance of that supply against the market demand. Scarcity is necessary for there to be a price incentive. This Regulation is not intended to impose a cap on the number of CBAM certificates available to importers; if importers were able to carry forward and trade CBAM certificates, that ability could have resulted in situations where the price for CBAM certificates would no longer reflect the evolution of the price in the EU ETS. Such a situation would weaken the incentive for decarbonisation, favouring carbon leakage and impairing the overarching climate objective of the CBAM. It could also result in different prices for operators from different countries. The limits on the possibilities to trade CBAM certificates and to carry them forward are therefore justified by the need to avoid undermining the effectiveness and climate objective of the CBAM and to ensure even-handed treatment of operators from different countries. However, in order to preserve the possibility for importers to optimise their costs, this Regulation should provide for a system where authorities can repurchase a certain amount of excess certificates from importers. Such amount should be set at a level which allows a reasonable margin for importers to leverage their costs over the period of validity of the certificates while preserving the overall price transmission effect, ensuring that the environmental objective of the CBAM is preserved."
+    },
+    {
+      "recital_number": 25,
+      "text": "Given that the CBAM would apply to imports of goods into the customs territory of the Union rather than to installations, certain adaptations and simplifications would also need to apply in the CBAM. One such simplification should be the introduction of a simple and accessible declarative system whereby importers report the total verified greenhouse gas emissions embedded in goods imported in a given calendar year. A different timing compared to the compliance cycle of the EU ETS should also be applied to avoid any potential bottleneck that might result from obligations for accredited verifiers under this Regulation and Directive 2003/87/EC."
+    },
+    {
+      "recital_number": 26,
+      "text": "Member States should impose penalties for infringements of this Regulation and ensure that such penalties are enforced. More specifically, the penalty amount for the failure of an authorised CBAM declarant to surrender CBAM certificates should be identical to the amount pursuant to Article 16(3) and (4) of Directive 2003/87/EC. However, where the goods have been introduced into the Union by a person other than an authorised CBAM declarant without complying with the obligations under this Regulation, the amount of those penalties should be higher in order to be effective, proportionate and dissuasive, also taking into account the fact that such person is not obliged to surrender CBAM certificates. The imposition of penalties under this Regulation is without prejudice to penalties that may be imposed under Union or national law for the infringement of other relevant obligations, in particular those related to customs rules."
+    },
+    {
+      "recital_number": 27,
+      "text": "While the EU ETS applies to certain production processes and activities, the CBAM should target the corresponding imports of goods. That requires clearly identifying imported goods by means of their classification in the Combined Nomenclature (‘CN’) set out in Council Regulation (EEC) No 2658/87 (9) and linking them to embedded emissions."
+    },
+    {
+      "recital_number": 28,
+      "text": "The goods or processed products covered by the CBAM should reflect the activities covered by the EU ETS as that system is based on quantitative and qualitative criteria linked to the environmental objective of Directive 2003/87/EC and is the most comprehensive greenhouse gas emissions regulatory system in the Union."
+    },
+    {
+      "recital_number": 29,
+      "text": "Defining the scope of the CBAM in a way that reflects the activities covered by the EU ETS would also contribute to ensuring that imported products are granted a treatment that is not less favourable than that accorded to like products of domestic origin."
+    },
+    {
+      "recital_number": 30,
+      "text": "Whilst the ultimate objective of the CBAM is one of broad product coverage, it would be prudent to start with a selected number of sectors with relatively homogeneous goods where there is a risk of carbon leakage. Union sectors deemed to be at risk of carbon leakage are listed in Commission Delegated Decision (EU) 2019/708 (10)."
+    },
+    {
+      "recital_number": 31,
+      "text": "The goods, to which this Regulation should apply, should be selected after careful analysis of their relevance in terms of cumulated greenhouse gas emissions and risk of carbon leakage in the corresponding EU ETS sectors, while limiting complexity and administrative burden on the operators concerned. In particular, the selection should take into account basic materials and basic products covered by the EU ETS with the objective of ensuring that emissions embedded in emission-intensive products imported into the Union are subject to a carbon price that is equivalent to that applied to Union products, and of mitigating the risk of carbon leakage. The relevant criteria to narrow the selection should be: first, relevance of sectors in terms of emissions, namely whether the sector is one of the largest aggregate emitters of greenhouse gas emissions; second, the sector’s exposure to significant risk of carbon leakage, as defined pursuant to Directive 2003/87/EC; and third, the need to balance broad product coverage in terms of greenhouse gas emissions, while limiting complexity and administrative burden."
+    },
+    {
+      "recital_number": 32,
+      "text": "The use of the first criterion would allow the listing of the following industrial sectors in terms of cumulated emissions: iron and steel, refineries, cement, aluminium, organic basic chemicals, hydrogen and fertilisers."
+    },
+    {
+      "recital_number": 33,
+      "text": "Certain sectors listed in Delegated Decision (EU) 2019/708 should not, however, be addressed in this Regulation at this stage, due to their particular characteristics."
+    },
+    {
+      "recital_number": 34,
+      "text": "In particular, organic chemicals should not be included in the scope of this Regulation due to technical limitations that at the time of the adoption of this Regulation do not allow to define clearly the embedded emissions of such imported goods. For those goods the applicable benchmark under the EU ETS is a basic parameter, which does not allow for an unambiguous allocation of emissions embedded in individual imported goods. A more targeted allocation to organic chemicals requires more data and analysis."
+    },
+    {
+      "recital_number": 35,
+      "text": "Similar technical constraints apply to refinery products, for which it is not possible to unambiguously assign greenhouse gas emissions to individual output products. At the same time, the relevant benchmark in the EU ETS does not directly relate to specific products, such as petrol, diesel or kerosene, but to all refinery output."
+    },
+    {
+      "recital_number": 36,
+      "text": "Aluminium products should be included in the CBAM as they are highly exposed to carbon leakage. Moreover, in several industrial applications they are in direct competition with steel products because of characteristics which closely resemble those of steel products."
+    },
+    {
+      "recital_number": 37,
+      "text": "At the time of the adoption of this Regulation, imports of hydrogen into the Union are relatively low. However, that situation is expected to change significantly in the coming years as the Union’s ‘Fit for 55’ package promotes the use of renewable hydrogen. For the decarbonisation of industry as a whole, the demand for renewable hydrogen will increase, and consequently lead to non-integrated production processes in downstream products where hydrogen is a precursor. The inclusion of hydrogen in the scope of the CBAM is the appropriate means to further foster the decarbonisation of hydrogen."
+    },
+    {
+      "recital_number": 38,
+      "text": "Similarly, certain products should be included in the scope of the CBAM despite their low level of embedded emissions occurring during their production process, as their exclusion would increase the likelihood of circumventing the inclusion of steel products in the CBAM by modifying the pattern of trade towards downstream products."
+    },
+    {
+      "recital_number": 39,
+      "text": "Conversely, this Regulation should not initially apply to certain products the production of which does not entail meaningful emissions such as ferrous scrap, some ferro-alloys and certain fertilisers."
+    },
+    {
+      "recital_number": 40,
+      "text": "The importation of electricity should be included in the scope of this Regulation, as that sector is responsible for 30 % of the total greenhouse gas emissions in the Union. The Union’s increased climate ambition would widen the gap in carbon costs between electricity production within the Union and third countries. That gap, combined with the progress in connecting the Union electricity grid to that of its neighbours, would increase the risk of carbon leakage due to the increase in imports of electricity, a significant part of which is produced by coal-fired power plants."
+    },
+    {
+      "recital_number": 41,
+      "text": "In order to avoid excessive administrative burden as regards competent national administrations and importers, it is appropriate to specify the limited cases in which the obligations under this Regulation should not apply. That de minimis provision, however, is without prejudice to a continued application of the provisions under Union or national law that are necessary to ensure compliance with the obligations under this Regulation as well as, in particular, with customs legislation, including the prevention of fraud."
+    },
+    {
+      "recital_number": 42,
+      "text": "As importers of goods covered by this Regulation should not have to fulfil their obligations under this Regulation at the time of importation, specific administrative measures should be applied to ensure that such obligations are fulfilled at a later stage. Therefore, importers should only be entitled to import goods that are subject to this Regulation after they have been granted an authorisation by competent authorities."
+    },
+    {
+      "recital_number": 43,
+      "text": "The customs authorities should not allow the importation of goods by any person other than an authorised CBAM declarant. In accordance with Articles 46 and 48 of Regulation (EU) No 952/2013 of the European Parliament and of the Council (11), the customs authorities are entitled to carry out checks on the goods, including with respect to the identification of the authorised CBAM declarant, the eight-digit CN code, the quantity and the country of origin of the imported goods, the date of declaration and the customs procedure. The Commission should include the risks relating to the CBAM in the establishment of the common risk criteria and standards pursuant to Article 50 of Regulation (EU) No 952/2013."
+    },
+    {
+      "recital_number": 44,
+      "text": "During a transitional period, the customs authorities should inform customs declarants of the obligation to report information, so as to contribute to the gathering of information as well as to awareness on the need to request the status of authorised CBAM declarants where applicable. Such information should be communicated by the customs authorities in an appropriate manner to ensure that customs declarants are made aware of such obligation."
+    },
+    {
+      "recital_number": 45,
+      "text": "The CBAM should be based on a declarative system in which an authorised CBAM declarant, who could represent more than one importer, would submit annually a declaration of the embedded emissions in the goods imported into the customs territory of the Union and would surrender the number of CBAM certificates which correspond to those declared emissions. The first CBAM declaration, in respect of the calendar year 2026, should be submitted by 31 May 2027."
+    },
+    {
+      "recital_number": 46,
+      "text": "An authorised CBAM declarant should be allowed to claim a reduction in the number of CBAM certificates to be surrendered corresponding to the carbon price already effectively paid in the country of origin for the declared embedded emissions."
+    },
+    {
+      "recital_number": 47,
+      "text": "The declared embedded emissions should be verified by a person accredited by a national accreditation body appointed in accordance with Regulation (EC) No 765/2008 of the European Parliament and of the Council (12) or pursuant to Commission Implementing Regulation (EU) 2018/2067 (13)."
+    },
+    {
+      "recital_number": 48,
+      "text": "The CBAM should allow operators of production installations in third countries to register in the CBAM registry and to make their verified embedded emissions from production of goods available to authorised CBAM declarants. An operator should be able to choose that its name, address and contact information in the CBAM registry are not made accessible to the public."
+    },
+    {
+      "recital_number": 49,
+      "text": "CBAM certificates would differ from EU ETS allowances for which daily auctioning is an essential feature. The need to set a clear price for CBAM certificates would make daily publication excessively burdensome and confusing for operators, as daily prices risk becoming obsolete upon publication. Thus, the publication of CBAM prices on a weekly basis would more accurately reflect the pricing trend of EU ETS allowances released onto the market and pursue the same climate objective. The calculation of the price of CBAM certificates should therefore be set on the basis of a longer timeframe, namely on a weekly basis, than on the timeframe established by the EU ETS, namely on a daily basis. The Commission should be tasked with calculating and publishing that average price."
+    },
+    {
+      "recital_number": 50,
+      "text": "In order to give authorised CBAM declarants flexibility in complying with their obligations under this Regulation and allow them to benefit from fluctuations in the price of EU ETS allowances, CBAM certificates should be valid for a limited period of time from the date of their purchase. The authorised CBAM declarant should be allowed to re-sell a portion of the certificates bought in excess. With a view to surrendering CBAM certificates, the authorised CBAM declarant should accumulate the number of certificates required during the year which corresponds with the thresholds set at the end of each quarter."
+    },
+    {
+      "recital_number": 51,
+      "text": "The physical characteristics of electricity as a product justify a slightly different design within the CBAM as compared to other goods. Default values should be used under clearly specified conditions, and it should be possible for authorised CBAM declarants to claim the calculation of their obligations under this Regulation based on actual emissions. Electricity trade is different from trade in other goods, in particular because it is traded through interconnected electricity grids, using power exchanges and specific forms of trading. Market coupling is a densely regulated form of electricity trade which enables the aggregation of bids and offers across the Union."
+    },
+    {
+      "recital_number": 52,
+      "text": "To avoid the risk of circumvention and improve the traceability of actual CO2 emissions from import of electricity and its use in goods, the calculation of actual emissions should only be permitted under certain strict conditions. In particular, it should be necessary to demonstrate a firm nomination of the allocated interconnection capacity and that there is a direct contractual relation between the purchaser and the producer of the renewable electricity, or between the purchaser and the producer of electricity having lower than default value emissions."
+    },
+    {
+      "recital_number": 53,
+      "text": "To reduce the risk of carbon leakage, the Commission should take action to address practices of circumvention. The Commission should evaluate the risk of such circumvention in all sectors to which this Regulation applies."
+    },
+    {
+      "recital_number": 54,
+      "text": "Contracting Parties to the Treaty establishing the Energy Community concluded by Council Decision 2006/500/EC (14) and, Parties to Association Agreements, including Deep and Comprehensive Free Trade Areas, are committed to decarbonisation processes that should eventually result in the adoption of carbon pricing mechanisms similar or equivalent to the EU ETS or in their participation in the EU ETS."
+    },
+    {
+      "recital_number": 55,
+      "text": "The integration of third countries into the Union electricity market is an important factor for those countries to accelerate their transition to energy systems with high shares of renewable energies. Market coupling for electricity, as set out in Commission Regulation (EU) 2015/1222 (15), enables third countries to better integrate electricity from renewable energies into the electricity market, to exchange such electricity in an efficient manner within a wider area, balancing supply and demand with the larger Union market, and to reduce the CO2 emission intensity of their electricity generation. Integration of third countries into the Union electricity market also contributes to the security of electricity supplies in those countries and in the neighbouring Member States."
+    },
+    {
+      "recital_number": 56,
+      "text": "Once the electricity markets of third countries are closely integrated into that of the Union through market coupling, technical solutions should be found to ensure the application of the CBAM to electricity exported from those countries into the customs territory of the Union. If technical solutions cannot be found, third countries whose markets are coupled with that of the Union should benefit from a time-limited exemption from the CBAM until 2030 with regard solely to the export of electricity, provided that certain conditions are met. Those third countries should, however, develop a roadmap and commit to implementing a carbon pricing mechanism providing for a price that is equivalent to the EU ETS, and should commit to achieving carbon neutrality at the latest by 2050 as well as to align with Union legislation in the areas of environment, climate, competition and energy. Such exemption should be withdrawn at any time if there are reasons to believe that the country in question does not fulfil its commitments or if it has not adopted by 2030 an emissions trading system equivalent to the EU ETS."
+    },
+    {
+      "recital_number": 57,
+      "text": "Transitional provisions should apply for a limited period of time. For that purpose, the CBAM should apply without financial adjustment, with the objective of facilitating its smooth roll-out, thereby reducing the risk of disruptive impacts on trade. Importers should have to report on a quarterly basis the embedded emissions in goods imported during the previous quarter of the calendar year, setting out direct and indirect emissions as well as any carbon price effectively paid abroad. The last CBAM report, which is the report to be submitted for the last quarter of 2025, should be submitted by 31 January 2026."
+    },
+    {
+      "recital_number": 58,
+      "text": "To facilitate and ensure a proper functioning of the CBAM, the Commission should provide support to the competent authorities in carrying out their functions and duties under this Regulation. The Commission should coordinate, issue guidelines and support the exchange of best practices."
+    },
+    {
+      "recital_number": 59,
+      "text": "In order to apply this Regulation in a cost-efficient way, the Commission should manage the CBAM registry containing data on the authorised CBAM declarants, operators and installations in third countries."
+    },
+    {
+      "recital_number": 60,
+      "text": "A common central platform should be established for the sale and repurchase of CBAM certificates. With a view to overseeing the transactions on the common central platform, the Commission should facilitate the exchange of information and the cooperation between competent authorities, as well as between those authorities and the Commission. Furthermore, a rapid flow of information between the common central platform and the CBAM registry should be established."
+    },
+    {
+      "recital_number": 61,
+      "text": "To contribute to the effective application of this Regulation, the Commission should carry out risk-based controls and should review the content of CBAM declarations accordingly."
+    },
+    {
+      "recital_number": 62,
+      "text": "In order to further enable a uniform application of this Regulation, the Commission should, as a preliminary input, make available to the competent authorities its own calculations regarding the CBAM certificates to be surrendered, on the basis of its review of the CBAM declarations. Such preliminary input should be provided for indicative purposes only and without prejudice to the definitive calculation to be made by the competent authority. In particular, no right of appeal or other remedial measure should be possible against such preliminary input made by the Commission."
+    },
+    {
+      "recital_number": 63,
+      "text": "Member States should also be able to carry out reviews of individual CBAM declarations for enforcement purposes. The conclusions of the reviews of individual CBAM declarations should be shared with the Commission. Those conclusions should also be made available to other competent authorities via the CBAM registry."
+    },
+    {
+      "recital_number": 64,
+      "text": "Member States should be responsible for correctly establishing and collecting revenues arising from the application of this Regulation."
+    },
+    {
+      "recital_number": 65,
+      "text": "The Commission should regularly evaluate the application of this Regulation and report to the European Parliament and to the Council. Those reports should in particular focus on possibilities to enhance climate actions towards reaching the objective of a climate-neutral Union at the latest by 2050. The Commission should, as part of that reporting, collect the information necessary with a view to the further extension of the scope of this Regulation to embedded indirect emissions in the goods listed in Annex II as soon as possible, as well as to other goods and services that could be at risk of carbon leakage, such as downstream products, and to developing methods of calculating embedded emissions based on the environmental footprint methods, as set out in Commission Recommendation 2013/179/EU (16). Those reports should also contain an assessment of the impact of the CBAM on carbon leakage, including in relation to exports, and its economic, social and territorial impact throughout the Union, taking into account also the special characteristics and constraints of outermost regions referred to in Article 349 TFEU and of island States which are part of the customs territory of the Union."
+    },
+    {
+      "recital_number": 66,
+      "text": "Practices of circumvention of this Regulation should be monitored and addressed by the Commission, including where operators could slightly modify their goods without altering their essential characteristics, or artificially split shipments, in order to avoid the obligations under this Regulation. Situations where goods would be sent to a third country or region prior to their importation to the Union market, with the aim of avoiding the obligations under this Regulation, or where operators in third countries would export their less greenhouse gas emissions intensive products to the Union and keep their more greenhouse gas emissions intensive products for other markets, or reorganisation by exporters or producers of their patterns and channels of sale and production, or any other kinds of dual production and dual sale practices, with the aim of avoiding the obligations under this Regulation, should also be monitored."
+    },
+    {
+      "recital_number": 67,
+      "text": "In full respect of the principles set out in this Regulation, work on extending the scope of this Regulation should have the aim of including, by 2030, all the sectors covered by Directive 2003/87/EC. Therefore, when reviewing and evaluating the application of this Regulation, the Commission should maintain a reference to this timeline, and give priority to including within the scope of this Regulation greenhouse gas emissions embedded in goods that are most exposed to carbon leakage and that are most carbon intensive, as well as in downstream products that contain a significant share of at least one of the goods within the scope of this Regulation. Should the Commission not submit a legislative proposal for such an extension, by 2030, of the scope of this Regulation, it should inform the European Parliament and the Council of the reasons and take the necessary steps towards achieving the objective of including, as soon as possible, all the sectors covered by Directive 2003/87/EC."
+    },
+    {
+      "recital_number": 68,
+      "text": "The Commission should also present a report to the European Parliament and to the Council on the application of this Regulation two years from the end of the transitional period, and every two years thereafter. The timing for the submission of the reports should follow the timetables on the functioning of the carbon market pursuant to Article 10(5) of Directive 2003/87/EC. The reports should contain an assessment of the impacts of the CBAM."
+    },
+    {
+      "recital_number": 69,
+      "text": "In order to allow for a rapid and effective response to unforeseeable, exceptional and unprovoked circumstances that have destructive consequences on the economic and industrial infrastructure of one or more third countries subject to the CBAM, the Commission should submit to the European Parliament and to the Council a legislative proposal, as appropriate, amending this Regulation. Such a legislative proposal should set out the measures that are most appropriate in light of the circumstances that the third country or countries are facing, while preserving the objectives of this Regulation. Those measures should be limited in time."
+    },
+    {
+      "recital_number": 70,
+      "text": "A dialogue with third countries should continue and there should be space for cooperation and solutions that could inform the specific choices to be made on the details of the CBAM during its implementation, in particular during the transitional period."
+    },
+    {
+      "recital_number": 71,
+      "text": "The Commission should strive to engage in an even-handed manner and in line with the international obligations of the Union with the third countries whose trade to the Union is affected by this Regulation, in order to explore the possibility for dialogue and cooperation regarding the implementation of specific elements of the CBAM. The Commission should also explore the possibility of concluding agreements that take into account the carbon pricing mechanism of third countries. The Union should provide technical assistance for those purposes to developing countries and to least developed countries as identified by the United Nations (LDCs)."
+    },
+    {
+      "recital_number": 72,
+      "text": "The establishment of the CBAM calls for the development of bilateral, multilateral and international cooperation with third countries. For that purpose, a forum of countries with carbon pricing instruments or other comparable instruments (‘Climate Club’) should be set up, in order to promote the implementation of ambitious climate policies in all countries and pave the way for a global carbon pricing framework. The Climate Club should be open, voluntary, non-exclusive and directed in particular at aiming for high climate ambition in line with the Paris Agreement. The Climate Club could function under the auspices of a multilateral international organisation and should facilitate the comparison and, where appropriate, coordination of relevant measures with an impact on emission reduction. The Climate Club should also support the comparability of relevant climate measures by ensuring the quality of climate monitoring, reporting and verification among its members and providing means for engagement and transparency between the Union and its trade partners."
+    },
+    {
+      "recital_number": 73,
+      "text": "In order to further support the achievement of the goals of the Paris Agreement in third countries, it is desirable that the Union continue to provide financial support through the Union budget towards climate mitigation and adaptation in LDCs, including in their efforts towards the decarbonisation and transformation of their manufacturing industries. That Union support should also contribute to facilitating the adaptation of the industries concerned to the new regulatory requirements stemming from this Regulation."
+    },
+    {
+      "recital_number": 74,
+      "text": "As the CBAM aims to encourage cleaner production, the Union is committed to working with and supporting low and middle-income third countries towards the decarbonisation of their manufacturing industries as part of the external dimension of the European Green Deal and in line with the Paris Agreement. The Union should continue to support those countries through the Union budget, especially LDCs, in order to contribute to ensuring their adaptation to the obligations under this Regulation. The Union should also continue to support climate mitigation and adaptation in those countries, including in their efforts towards the decarbonisation and transformation of their manufacturing industries, within the ceiling of the multi-annual financial framework and the financial support provided by the Union to international climate finance. The Union is working towards introducing a new own resource based on the revenues generated by the sale of CBAM certificates."
+    },
+    {
+      "recital_number": 75,
+      "text": "This Regulation is without prejudice to Regulations (EU) 2016/679 (17) and (EU) 2018/1725 (18) of the European Parliament and of the Council."
+    },
+    {
+      "recital_number": 76,
+      "text": "In the interest of efficiency, Council Regulation (EC) No 515/97 (19) should apply mutatis mutandis to this Regulation."
+    },
+    {
+      "recital_number": 77,
+      "text": "In order to supplement or amend certain non-essential elements of this Regulation, the power to adopt acts in accordance with Article 290 TFEU should be delegated to the Commission in respect of:\n\n—\n\nsupplementing this Regulation by laying down requirements and procedures for third countries or territories that have been removed from the list in point 2 of Annex III, to ensure the application of this Regulation to those countries or territories with regard to electricity;\n\n—\n\namending the list of third countries and territories listed in point 1 or 2 of Annex III, either by adding those countries or territories to that list, in order to exclude from the CBAM those third countries or territories that are fully integrated into, or linked to, the EU ETS in the event of future agreements, or by removing third countries or territories from that list, thereby subjecting them to the CBAM, where they do not effectively charge the EU ETS price on goods exported to the Union;\n\n—\n\nsupplementing this Regulation by specifying the conditions for granting accreditation to verifiers, control and oversight of accredited verifiers, withdrawal of accreditation, and mutual recognition and peer evaluation of the accreditation bodies;\n\n—\n\nsupplementing this Regulation by further defining the timing, administration and other aspects of the sale and repurchase of CBAM certificates; and\n\n—\n\namending the list of goods in Annex I by adding, in certain circumstances, goods that have been slightly modified, in order to strengthen measures that address practices of circumvention.\n\nIt is of particular importance that the Commission carry out appropriate consultations during its preparatory work, including at expert level, and that those consultations be conducted in accordance with the principles laid down in the Interinstitutional Agreement of 13 April 2016 on Better Law-Making (20). In particular, to ensure equal participation in the preparation of delegated acts, the European Parliament and the Council receive all documents at the same time as Member States' experts, and their experts systematically have access to meetings of Commission expert groups dealing with the preparation of delegated acts."
+    },
+    {
+      "recital_number": 78,
+      "text": "Such consultations should be conducted in a transparent manner and may include prior consultations of stakeholders, such as competent bodies, industry (including SMEs), social partners such as trade unions, civil society organisations and environmental organisations."
+    },
+    {
+      "recital_number": 79,
+      "text": "In order to ensure uniform conditions for the implementation of this Regulation, implementing powers should be conferred on the Commission. Those powers should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council (21)."
+    },
+    {
+      "recital_number": 80,
+      "text": "The financial interests of the Union should be protected through proportionate measures throughout the expenditure cycle, including the prevention, detection and investigation of irregularities, the recovery of funds lost, wrongly paid or incorrectly used and, where appropriate, administrative and financial penalties. The CBAM should therefore rely on appropriate and effective mechanisms for avoiding losses of revenues."
+    },
+    {
+      "recital_number": 81,
+      "text": "Since the objectives of this Regulation, namely to prevent the risk of carbon leakage and thereby reduce global carbon emissions, cannot be sufficiently achieved by the Member States, but can rather, by reason of their scale and effects, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve those objectives."
+    },
+    {
+      "recital_number": 82,
+      "text": "In order to allow for the timely adoption of delegated and implementing acts under this Regulation, this Regulation should enter into force on the day following that of its publication in the Official Journal of the European Union,"
+    },
+    {
+      "recital_number": 82,
+      "text": "In order to allow for the timely adoption of delegated and implementing acts under this Regulation, this Regulation should enter into force on the day following that of its publication in the Official Journal of the European Union,"
     }
   ]
 }
