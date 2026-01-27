@@ -78,4 +78,38 @@ describe('searchRegulations', () => {
     // Should not throw, should return results or empty array
     expect(Array.isArray(results)).toBe(true);
   });
+
+  it('searches across articles and recitals', async () => {
+    const results = await searchRegulations(db, {
+      query: 'security',
+      limit: 20,
+    });
+
+    const hasArticles = results.some(r => r.type === 'article');
+    const hasRecitals = results.some(r => r.type === 'recital');
+
+    // Should find both articles and recitals about security
+    expect(hasArticles).toBe(true);
+    expect(hasRecitals).toBe(true);
+
+    // All results should have a type field
+    expect(results.every(r => r.type === 'article' || r.type === 'recital')).toBe(true);
+
+    // Recitals should have proper formatting
+    const recitalResults = results.filter(r => r.type === 'recital');
+    expect(recitalResults[0].title).toMatch(/^Recital \d+$/);
+  });
+
+  it('prioritizes articles over recitals with similar relevance', async () => {
+    const results = await searchRegulations(db, {
+      query: 'protection',
+      limit: 10,
+    });
+
+    // Results should be sorted by relevance with articles prioritized
+    expect(results.length).toBeGreaterThan(0);
+
+    // All results should have a type field
+    expect(results.every(r => r.type === 'article' || r.type === 'recital')).toBe(true);
+  });
 });

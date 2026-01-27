@@ -12,6 +12,7 @@ export interface SearchResult {
   title: string;
   snippet: string;
   relevance: number;
+  type?: 'article' | 'recital';
 }
 
 /**
@@ -45,46 +46,93 @@ export async function searchRegulations(
     return [];
   }
 
-  // Build the SQL query with optional regulation filter
-  let sql = `
+  const params: (string | number)[] = [escapedQuery];
+
+  // Build optional regulation filter
+  let regulationFilter = '';
+  if (regulations && regulations.length > 0) {
+    const placeholders = regulations.map(() => '?').join(', ');
+    regulationFilter = ` AND regulation IN (${placeholders})`;
+    params.push(...regulations);
+  }
+
+  // Search in articles
+  const articlesQuery = `
     SELECT
       articles_fts.regulation,
       articles_fts.article_number as article,
       articles_fts.title,
       snippet(articles_fts, 3, '>>>', '<<<', '...', 32) as snippet,
-      bm25(articles_fts) as relevance
+      bm25(articles_fts) as relevance,
+      'article' as type
     FROM articles_fts
     WHERE articles_fts MATCH ?
+    ${regulationFilter}
+    ORDER BY bm25(articles_fts)
+    LIMIT ?
   `;
 
-  const params: (string | number)[] = [escapedQuery];
-
-  if (regulations && regulations.length > 0) {
-    const placeholders = regulations.map(() => '?').join(', ');
-    sql += ` AND articles_fts.regulation IN (${placeholders})`;
-    params.push(...regulations);
-  }
-
-  // Order by relevance (bm25 returns negative scores, more negative = more relevant)
-  sql += ` ORDER BY bm25(articles_fts)`;
-  sql += ` LIMIT ?`;
-  params.push(limit);
+  // Search in recitals
+  const recitalsQuery = `
+    SELECT
+      recitals_fts.regulation,
+      CAST(recitals_fts.recital_number AS TEXT) as article,
+      'Recital ' || recitals_fts.recital_number as title,
+      snippet(recitals_fts, 2, '>>>', '<<<', '...', 32) as snippet,
+      bm25(recitals_fts) as relevance,
+      'recital' as type
+    FROM recitals_fts
+    WHERE recitals_fts MATCH ?
+    ${regulationFilter}
+    ORDER BY bm25(recitals_fts)
+    LIMIT ?
+  `;
 
   try {
-    const stmt = db.prepare(sql);
-    const rows = stmt.all(...params) as Array<{
+    // Execute both queries
+    const articlesParams = [...params, limit];
+    const recitalsParams = [...params, limit];
+
+    const articleStmt = db.prepare(articlesQuery);
+    const recitalStmt = db.prepare(recitalsQuery);
+
+    const articleRows = articleStmt.all(...articlesParams) as Array<{
       regulation: string;
       article: string;
       title: string;
       snippet: string;
       relevance: number;
+      type: 'article' | 'recital';
     }>;
 
-    // Convert bm25 scores to positive values (higher = more relevant)
-    return rows.map(row => ({
-      ...row,
-      relevance: Math.abs(row.relevance),
-    }));
+    const recitalRows = recitalStmt.all(...recitalsParams) as Array<{
+      regulation: string;
+      article: string;
+      title: string;
+      snippet: string;
+      relevance: number;
+      type: 'article' | 'recital';
+    }>;
+
+    // Combine and sort by relevance, prioritizing articles
+    const combined = [...articleRows, ...recitalRows]
+      .map(row => ({
+        ...row,
+        relevance: Math.abs(row.relevance),
+      }))
+      .sort((a, b) => {
+        // First sort by relevance
+        if (Math.abs(a.relevance - b.relevance) > 0.01) {
+          return b.relevance - a.relevance;
+        }
+        // If relevance is similar, prioritize articles over recitals
+        if (a.type === 'article' && b.type === 'recital') return -1;
+        if (a.type === 'recital' && b.type === 'article') return 1;
+        return 0;
+      })
+      .slice(0, limit);
+
+    return combined;
   } catch (error) {
     // If FTS5 query fails (e.g., syntax error), return empty results
     if (error instanceof Error && error.message.includes('fts5')) {
