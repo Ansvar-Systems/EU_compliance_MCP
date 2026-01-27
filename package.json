@@ -22,6 +22,7 @@
     "ingest:with-browser": "tsx scripts/ingest-eurlex-browser.ts",
     "reingest:all": "tsx scripts/bulk-reingest-all.ts",
     "lint": "eslint src --ext .ts",
+    "prepare": "test -f dist/index.js || npm run build",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
