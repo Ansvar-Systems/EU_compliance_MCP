@@ -86,16 +86,30 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 
 ## Adding New Regulations
 
-### EU Regulations (EUR-Lex)
+### For End Users
 
-Adding a regulation is **one command** — no code changes needed:
+**End users cannot add regulations** — the package ships with a pre-built database containing all 37 regulations. The database is bundled in the npm package (15MB) and includes all articles, recitals, definitions, and control mappings.
+
+### For Maintainers Only
+
+Adding a regulation requires Puppeteer for EUR-Lex WAF bypass and re-publishing the package.
+
+#### EU Regulations (EUR-Lex)
 
 ```bash
-# 1. Ingest from EUR-Lex (auto-registers in source_registry)
+# 1. Ingest from EUR-Lex (requires Puppeteer - auto-registers in source_registry)
 npx tsx scripts/ingest-eurlex.ts <CELEX_ID> data/seed/<name>.json
 
-# 2. Rebuild database
+# 2. Ingest recitals (uses same Puppeteer session)
+npx tsx scripts/ingest-recitals.ts <CELEX_ID> data/seed/<name>.json
+
+# 3. Rebuild database
 npm run build:db
+
+# 4. Test and publish
+npm test
+npm version patch
+npm publish
 
 # Done! The regulation is automatically:
 # - Monitored by daily EUR-Lex checker
@@ -104,6 +118,8 @@ npm run build:db
 ```
 
 Optionally add applicability rules in `data/seed/applicability/<name>.json`
+
+**Why Puppeteer?** EUR-Lex has WAF protection that blocks simple HTTP requests. Puppeteer renders the page in a real browser, bypassing detection.
 
 ### source_registry Table (Single Source of Truth)
 
@@ -165,12 +181,58 @@ npx tsx scripts/ingest-unece.ts <CELEX_ID> data/seed/<name>.json
 }
 ```
 
+## Pre-Built Database Architecture
+
+### Why Pre-Built?
+
+The package ships with a **pre-built database** (`data/regulations.db`, ~15MB) committed to git and included in the npm package. This ensures:
+
+1. **Zero setup friction** - Users never need to run build steps or ingestion scripts
+2. **Consistent state** - Everyone gets the same validated database version
+3. **EUR-Lex WAF bypass** - Ingestion requires Puppeteer (browser automation), which isn't viable for end users
+4. **Fast installs** - No need to process 2,278 articles + 3,508 recitals on user machines
+
+### Database Contents
+
+| Component | Count | Size |
+|-----------|-------|------|
+| Articles | 2,278 | ~8MB |
+| Recitals | 3,508 (33/37 regulations) | ~5MB |
+| Definitions | 1,145 | ~1MB |
+| Control Mappings | 686 | ~500KB |
+| Applicability Rules | 305 | ~200KB |
+| FTS5 Index | - | ~800KB |
+| **Total** | **~8,000 entries** | **~15MB** |
+
+### When Maintainers Rebuild
+
+Maintainers rebuild the database when:
+- Adding new regulations
+- EUR-Lex publishes updates (detected by daily workflow)
+- Fixing parsing errors in existing regulations
+
+**Build Process:**
+```bash
+npm run build:db  # Reads JSON files from data/seed/
+```
+
+This regenerates `data/regulations.db` from source JSON files. The database is then:
+1. Committed to git
+2. Included in the npm package via `package.json` files array
+3. Published to npm (triggers when version is tagged)
+
+### Source of Truth
+
+- **JSON files** (`data/seed/*.json`) are the canonical source (committed to git)
+- **Database** (`data/regulations.db`) is built from JSON (also committed to git for distribution)
+- Users get both in the npm package, but only interact with the database
+
 ## Coding Guidelines
 
 - Use TypeScript strict mode
 - Run `npm test` before committing
 - Keep regulation JSON files as source of truth (committed to git)
-- Database (`regulations.db`) is built from seed files (gitignored)
+- **Database is also committed to git** (for npm distribution) and rebuilt via `npm run build:db`
 - All regulation content must come from official public sources (EUR-Lex, UNECE)
 
 ## Common Tasks
@@ -233,10 +295,12 @@ The `GITHUB_TOKEN` is automatic and used for:
 |----------|-------|
 | Regulations | 37 |
 | Articles | 2,278 |
+| Recitals | 3,508 (33/37 regulations) |
 | Definitions | 1,145 |
 | ISO 27001 Mappings | 313 |
 | NIST CSF 2.0 Mappings | 373 |
 | Applicability Rules | 305 |
+| **Database Size** | **~15MB** |
 
 ## Completed Features
 

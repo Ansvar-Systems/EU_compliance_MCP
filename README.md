@@ -141,6 +141,39 @@ This isn't just for security teams. If you're building **anything** that touches
 
 ---
 
+## Installation
+
+### For Users (Recommended)
+
+Install the package - it comes with a pre-built database:
+
+```bash
+npm install @ansvar/eu-regulations-mcp
+```
+
+The database includes:
+- ✅ 37 EU regulations (2,278 articles)
+- ✅ 3,508 recitals with legislative intent (33/37 regulations)
+- ✅ 1,145 definitions
+- ✅ ISO 27001:2022 & NIST CSF 2.0 mappings
+
+**No build step needed** - the package ships with a complete database.
+
+### For Maintainers/Contributors
+
+If you need to re-ingest regulations (e.g., after EUR-Lex updates):
+
+```bash
+git clone https://github.com/Ansvar-Systems/EU_compliance_MCP.git
+cd EU_compliance_MCP
+npm install
+npm run reingest:all  # Uses Puppeteer to bypass EUR-Lex WAF
+npm run build:db      # Rebuild database from updated JSON
+npm test              # Verify everything works
+```
+
+---
+
 ## Quick Start
 
 ### Claude Desktop
@@ -181,16 +214,6 @@ Restart Claude Desktop. Done.
 ```bash
 docker run -d --name eu-regs-mcp \
   ansvar/eu-regulations-mcp:latest
-```
-
-### From Source
-
-```bash
-git clone https://github.com/Ansvar-Systems/EU_compliance_MCP
-cd eu-regulations-mcp
-npm install
-npm run build
-npm start
 ```
 
 ---
@@ -427,7 +450,7 @@ npm run build:db
 npm install -g @ansvar/eu-regulations-mcp --force
 ```
 
-The database contains all 37 regulations (12MB). It's gitignored in the source repo but built during:
+The database contains all 37 regulations (~15MB). It's gitignored in the source repo but built during:
 - `npm install` (postinstall hook)
 - `npm publish` (prepublishOnly hook)
 
