@@ -19,9 +19,10 @@
     "ingest": "tsx scripts/ingest-eurlex.ts",
     "check-updates": "tsx scripts/check-updates.ts",
     "sync-versions": "tsx scripts/check-updates.ts --sync",
+    "ingest:with-browser": "tsx scripts/ingest-eurlex-browser.ts",
+    "reingest:all": "tsx scripts/bulk-reingest-all.ts",
     "lint": "eslint src --ext .ts",
-    "prepublishOnly": "npm run build && npm run build:db",
-    "postinstall": "(test -f dist/index.js || npm run build) && (test -f data/regulations.db || npm run build:db)"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
