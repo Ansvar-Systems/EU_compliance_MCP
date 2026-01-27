@@ -114,6 +114,43 @@ CREATE TABLE IF NOT EXISTS source_registry (
   quality_status TEXT CHECK(quality_status IN ('complete', 'review', 'incomplete')),
   notes TEXT
 );
+
+-- Recitals table
+CREATE TABLE IF NOT EXISTS recitals (
+  id INTEGER PRIMARY KEY,
+  regulation TEXT NOT NULL REFERENCES regulations(id),
+  recital_number INTEGER NOT NULL,
+  text TEXT NOT NULL,
+  related_articles TEXT,
+  UNIQUE(regulation, recital_number)
+);
+
+-- FTS5 virtual table for recital search
+CREATE VIRTUAL TABLE IF NOT EXISTS recitals_fts USING fts5(
+  regulation,
+  recital_number,
+  text,
+  content='recitals',
+  content_rowid='id'
+);
+
+-- FTS5 triggers for recitals
+CREATE TRIGGER IF NOT EXISTS recitals_ai AFTER INSERT ON recitals BEGIN
+  INSERT INTO recitals_fts(rowid, regulation, recital_number, text)
+  VALUES (new.id, new.regulation, new.recital_number, new.text);
+END;
+
+CREATE TRIGGER IF NOT EXISTS recitals_ad AFTER DELETE ON recitals BEGIN
+  INSERT INTO recitals_fts(recitals_fts, rowid, regulation, recital_number, text)
+  VALUES('delete', old.id, old.regulation, old.recital_number, old.text);
+END;
+
+CREATE TRIGGER IF NOT EXISTS recitals_au AFTER UPDATE ON recitals BEGIN
+  INSERT INTO recitals_fts(recitals_fts, rowid, regulation, recital_number, text)
+  VALUES('delete', old.id, old.regulation, old.recital_number, old.text);
+  INSERT INTO recitals_fts(rowid, regulation, recital_number, text)
+  VALUES (new.id, new.regulation, new.recital_number, new.text);
+END;
 `;
 
 interface RegulationSeed {
