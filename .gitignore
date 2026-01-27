@@ -30,3 +30,8 @@ coverage/
 
 # Internal documentation and work-in-progress
 internal/
+
+# MCP Registry tokens and local configs
+.mcpregistry_*
+.playwright-mcp/
+server.json
