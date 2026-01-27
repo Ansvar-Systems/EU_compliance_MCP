@@ -173,9 +173,9 @@ interface RegulationSeed {
     article: string;
   }>;
   recitals?: Array<{
-    number: number;
+    recital_number: number;
     text: string;
-    related_articles?: string[];
+    related_articles?: string;
   }>;
 }
 
@@ -264,7 +264,7 @@ function buildDatabase() {
         for (const recital of regulation.recitals) {
           insertRecital.run(
             regulation.id,
-            recital.number,
+            recital.recital_number,
             recital.text,
             recital.related_articles ? JSON.stringify(recital.related_articles) : null
           );
