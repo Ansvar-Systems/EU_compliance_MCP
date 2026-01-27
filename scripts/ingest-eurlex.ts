@@ -23,6 +23,12 @@ interface Definition {
   article: string;
 }
 
+interface Recital {
+  recital_number: number;
+  text: string;
+  related_articles?: string;
+}
+
 interface RegulationData {
   id: string;
   full_name: string;
@@ -31,6 +37,7 @@ interface RegulationData {
   eur_lex_url: string;
   articles: Article[];
   definitions: Definition[];
+  recitals?: Recital[];
 }
 
 const REGULATION_METADATA: Record<string, { id: string; full_name: string; effective_date?: string }> = {
