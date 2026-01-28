@@ -96,4 +96,4 @@ We need to understand:
 
 Have ideas for the roadmap? Open a [GitHub Discussion](https://github.com/Ansvar-Systems/EU_compliance_MCP/discussions) or [Issue](https://github.com/Ansvar-Systems/EU_compliance_MCP/issues).
 
-Built by [Ansvar Systems](https://ansvar.ai) - Stockholm, Sweden
+Built by [Ansvar Systems](https://ansvar.eu) - Stockholm, Sweden

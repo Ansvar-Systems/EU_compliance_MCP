@@ -90,4 +90,4 @@ Shows real-time security score to users.
 
 ---
 
-**Questions?** hello@ansvar.ai
+**Questions?** hello@ansvar.eu

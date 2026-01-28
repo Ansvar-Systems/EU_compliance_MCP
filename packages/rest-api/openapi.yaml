@@ -16,16 +16,16 @@ info:
 
   contact:
     name: Ansvar Systems
-    email: hello@ansvar.ai
-    url: https://ansvar.ai
+    email: hello@ansvar.eu
+    url: https://ansvar.eu
   license:
     name: MIT
     url: https://github.com/Ansvar-Systems/EU_compliance_MCP/blob/main/LICENSE
 
 servers:
-  - url: https://eu-regulations-api.ansvar.ai
+  - url: https://eu-regulations-api.ansvar.eu
     description: Production server
-  - url: https://staging-eu-regulations-api.ansvar.ai
+  - url: https://staging-eu-regulations-api.ansvar.eu
     description: Staging server
   - url: http://localhost:3000
     description: Local development

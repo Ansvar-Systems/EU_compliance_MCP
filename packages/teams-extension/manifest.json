@@ -6,9 +6,9 @@
   "packageName": "com.ansvar.eu-regulations",
   "developer": {
     "name": "Ansvar Systems",
-    "websiteUrl": "https://ansvar.ai",
-    "privacyUrl": "https://ansvar.ai/privacy",
-    "termsOfUseUrl": "https://ansvar.ai/terms"
+    "websiteUrl": "https://ansvar.eu",
+    "privacyUrl": "https://ansvar.eu/privacy",
+    "termsOfUseUrl": "https://ansvar.eu/terms"
   },
   "icons": {
     "color": "icons/color.png",
@@ -80,7 +80,7 @@
           "type": "link",
           "value": {
             "domains": [
-              "ansvar.ai",
+              "ansvar.eu",
               "eur-lex.europa.eu"
             ]
           }
@@ -93,7 +93,7 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "ansvar.ai",
+    "ansvar.eu",
     "YOUR-API-DOMAIN.com"
   ],
   "webApplicationInfo": {

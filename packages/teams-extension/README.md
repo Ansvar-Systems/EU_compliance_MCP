@@ -138,7 +138,7 @@ curl https://api.example.com/health
    - Description (from manifest)
    - Screenshots (4-5 images showing app in use)
    - Categories (Productivity, Compliance)
-   - Support info (hello@ansvar.ai)
+   - Support info (hello@ansvar.eu)
 5. Submit for review (7-10 business days)
 
 ### 10. Monitor Usage
@@ -181,10 +181,10 @@ useAzureMonitor({
 
 ### Rate limit errors
 - Check if your organization exceeded 100 req/min
-- Contact hello@ansvar.ai for enterprise tier
+- Contact hello@ansvar.eu for enterprise tier
 
 ## Support
 
 - Documentation: [github.com/Ansvar-Systems/EU_compliance_MCP](https://github.com/Ansvar-Systems/EU_compliance_MCP)
-- Email: hello@ansvar.ai
+- Email: hello@ansvar.eu
 - Issues: [github.com/Ansvar-Systems/EU_compliance_MCP/issues](https://github.com/Ansvar-Systems/EU_compliance_MCP/issues)

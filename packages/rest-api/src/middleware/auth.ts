@@ -122,7 +122,7 @@ export function checkTenantAccess(req: AuthenticatedRequest, res: Response, next
     if (!allowedTenants.includes(req.user.tid)) {
       return res.status(403).json({
         error: 'Forbidden',
-        message: 'Your organization is not authorized to use this service. Contact hello@ansvar.ai for access.'
+        message: 'Your organization is not authorized to use this service. Contact hello@ansvar.eu for access.'
       });
     }
   }

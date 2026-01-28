@@ -144,4 +144,4 @@ When making breaking changes:
 
 For questions about versioning strategy:
 - **GitHub:** Open an issue with `versioning` label
-- **Email:** hello@ansvar.ai
+- **Email:** hello@ansvar.eu

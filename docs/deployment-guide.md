@@ -6,7 +6,7 @@ This guide covers deploying the REST API to production for Microsoft Teams integ
 
 1. **PostgreSQL database** - Follow `docs/postgres-setup.md`
 2. **Azure AD app** - Follow `packages/teams-extension/README.md` steps 1-3
-3. **Domain name** - For API endpoint (e.g., `api.ansvar.ai`)
+3. **Domain name** - For API endpoint (e.g., `api.ansvar.eu`)
 4. **SSL certificate** - Most platforms provide this automatically
 
 ## Quick Start (Docker)
@@ -225,7 +225,7 @@ CORS_ORIGIN=*
 az containerapp hostname add \
   --name eu-regs-api \
   --resource-group eu-regs-rg \
-  --hostname api.ansvar.ai
+  --hostname api.ansvar.eu
 
 # SSL certificate auto-provisioned
 ```
@@ -357,4 +357,4 @@ After deployment:
 ## Support
 
 - Docs: [github.com/Ansvar-Systems/EU_compliance_MCP](https://github.com/Ansvar-Systems/EU_compliance_MCP)
-- Email: hello@ansvar.ai
+- Email: hello@ansvar.eu

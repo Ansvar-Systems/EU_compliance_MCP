@@ -95,7 +95,7 @@ async function startServer() {
         listArticles: 'GET /api/articles/:regulation'
       },
       documentation: 'https://github.com/Ansvar-Systems/EU_compliance_MCP',
-      contact: 'hello@ansvar.ai'
+      contact: 'hello@ansvar.eu'
     });
   });
 

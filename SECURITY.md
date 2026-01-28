@@ -35,7 +35,7 @@ This project uses multiple layers of automated security scanning:
 If you discover a security vulnerability:
 
 1. **Do NOT open a public GitHub issue**
-2. Email: hello@ansvar.ai
+2. Email: hello@ansvar.eu
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce

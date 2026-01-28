@@ -49,7 +49,7 @@
     "claude",
     "llm"
   ],
-  "author": "Ansvar Systems <hello@ansvar.ai> (https://ansvar.ai)",
+  "author": "Ansvar Systems <hello@ansvar.eu> (https://ansvar.eu)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -58,7 +58,7 @@
   "bugs": {
     "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP/issues"
   },
-  "homepage": "https://ansvar.ai",
+  "homepage": "https://ansvar.eu",
   "engines": {
     "node": ">=18"
   },

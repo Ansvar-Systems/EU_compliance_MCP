@@ -13,7 +13,7 @@ Query **37 EU regulations** — from GDPR and AI Act to DORA, MiFID II, eIDAS, M
 
 If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
 
-Built by [Ansvar Systems](https://ansvar.ai) — Stockholm, Sweden
+Built by [Ansvar Systems](https://ansvar.eu) — Stockholm, Sweden
 
 ---
 
@@ -170,7 +170,7 @@ We build AI-accelerated threat modeling and compliance tools for automotive, fin
 
 So we're open-sourcing it. Navigating 37 regulations shouldn't require a legal team.
 
-**[ansvar.ai](https://ansvar.ai)** — Stockholm, Sweden
+**[ansvar.eu](https://ansvar.eu)** — Stockholm, Sweden
 
 ---
 

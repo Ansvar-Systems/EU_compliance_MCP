@@ -99,7 +99,7 @@ Do **not** include copyrighted ISO/IEC standards.
 
 ## Questions?
 
-Open an issue or reach out at hello@ansvar.ai.
+Open an issue or reach out at hello@ansvar.eu.
 
 ---
 
