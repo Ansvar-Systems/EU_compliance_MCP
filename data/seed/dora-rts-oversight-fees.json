@@ -1,0 +1,86 @@
+{
+  "id": "DORA_RTS_OVERSIGHT_FEES",
+  "full_name": "Commission Delegated Regulation (EU) 2024/1505 - Oversight Fees for Critical ICT Third-Party Service Providers",
+  "celex_id": "32024R1505",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1505",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Estimation of the expenditures of the Lead Overseers when performing their oversight duties",
+      "text": "1.   In each year, the Lead Overseer and the other European Supervisory Authorities shall estimate the overall annual costs that are expected to be incurred for the performance of their oversight duties. The amount of the overall annual costs estimated shall be the basis for determining the overall amount of oversight fees charged.\n\n2.   When estimating the annual overall costs, the Lead Overseer shall take into account the following direct and indirect costs:\n\n(a)\n\ncosts related to the designation of ICT third-party service providers as critical;\n\n(b)\n\ncosts related to the appointment of the Lead Overseer;\n\n(c)\n\ncosts related to the actual oversight of critical ICT third-party service providers, including the following:\n\n(i)\n\ncosts related to the work carried out by the joint examination team;\n\n(ii)\n\ncosts of advice provided by independent experts;\n\n(d)\n\ncosts related to the follow-up of the recommendations issued by the Lead Overseers in accordance with Article 35(1), point (d), of Regulation (EU) 2022/2554;\n\n(e)\n\ncosts related to the governance of the oversight framework."
+    },
+    {
+      "number": "2",
+      "text": "Applicable turnover of critical ICT third-party service providers for the calculation of the oversight fees\n\n1.   For the purposes of Article 3, the turnover of a critical ICT third-party service provider shall be its revenues generated in the Union from the provision of the ICT services listed in the implementing technical standards adopted pursuant to Article 28(9) of Regulation (EU) 2022/2554 and provided to the financial entities listed in Article 2(1) of Regulation (EU) 2022/2554.\n\n2.   Critical ICT third-party service providers shall provide the Lead Overseer on an annual basis in year n-1 with audited figures specifying the turnover referred to in paragraph 1 for year n-2. Critical ICT third-party service providers shall provide those figures to the Lead Overseer by 31 December each year.\n\n3.   Where the critical ICT third-party service provider does not provide the Lead Overseer with audited figures by the date referred to in paragraph 2 that are limited to or entirely include revenues generated from the provision of services to financial entities listed in Article 2(1) of Regulation (EU) 2022/2554, the Lead Overseer shall consider the turnover generated in the Union from the provision of the ICT services listed in the implementing technical standards adopted pursuant to Article 28(9) of Regulation (EU) 2022/2554 irrespective of the type of clients of the critical ICT third-party service provider.\n\nWhere the critical ICT third-party service provider does not provide the Lead Overseer with audited figures by the date referred to in paragraph 2 that are limited to or entirely include revenues generated in the Union from the provision of ICT services referred to in the implementing technical standards adopted pursuant to Article 28(9) of Regulation (EU) 2022/2554, the Lead Overseer shall consider the worldwide turnover generated from the provision of those ICT services.\n\nWhere the critical ICT third-party service provider does not provide the Lead Overseer with audited figures by the date referred to in paragraph 2 that are limited to or entirely include revenues generated from the provision of ICT services to financial entities listed in Article 2(1) of Regulation (EU) 2022/2554, and it does not provide the Lead Overseer with audited figures by the date referred to in paragraph 2 that are limited to revenues generated in the Union, the Lead Overseer shall consider the worldwide turnover irrespective of the type of clients of the critical ICT third-party service provider.\n\n4.   Where critical ICT third-party service providers report the revenues in a currency other than the euro, the Lead Overseer shall convert those revenues into euro using the average euro foreign exchange rate applicable to the period during which the revenues were recorded, as published by the European Central Bank."
+    },
+    {
+      "number": "3",
+      "title": "Calculation of the oversight fees",
+      "text": "1.   For each critical ICT third-party service, the annual oversight fee for a given year (n) shall be the overall annual costs estimated referred to in Article 1 adjusted by the turnover coefficient referred to in paragraph 2 based on its applicable turnover for the year n-2.\n\n2.   For each critical ICT third-party service provider, the turnover coefficient shall be based on the applicable turnover referred to in Article 2 and shall be calculated as follows:\n\n3.   In no case shall the critical ICT third-party service provider pay an annual oversight fee that is less than EUR 50 000."
+    },
+    {
+      "number": "4",
+      "title": "Oversight fees in year of designation and ‘opt-in’ requests",
+      "text": "1.   By way of derogation from Article 3, for the first published list of designated critical ICT third-party service providers as per Article 31(9) of Regulation (EU) 2022/2554, the oversight fees shall be equally split among the designated critical ICT third-party service providers. The fee to be charged to each critical ICT third-party service provider shall be calculated by dividing the overall estimated expenditure of the Lead Overseers with the number of designated critical ICT third-party service providers.\n\n2.   By way of derogation from Article 3 and paragraph 1 above, for the first year in which an ICT third-party service provider is designated as critical, it shall pay a fixed oversight fee which is equal to the amount paid by each ICT third party service provider under paragraph 1. Where the period of the oversight activities of such critical ICT third-party service provider does not correspond to a full year, that oversight fee shall be equal to the amount paid by each ICT third-party service provider under paragraph 1, multiplied by the number of calendar days from the designation of the ICT third-party service provider as critical until the end of that year and divided by the total number of days in that year.\n\n3.   Where an ICT third-party service provider requests to be designated as critical in accordance with Article 31(11) of Regulation (EU) 2022/2554, it shall pay a fixed opt-in fee of EUR 50 000. The recipient ESA shall not reimburse that fixed opt-in fee where the request to be designated as critical is rejected or withdrawn by the ICT third-party service provider."
+    },
+    {
+      "number": "5",
+      "title": "Payment of the oversight fees",
+      "text": "1.   Critical ICT third-party service providers shall pay the oversight fees referred to in Article 43 of Regulation (EU) 2022/2554 to the Lead Overseer on an annual basis.\n\n2.   All oversight fees shall be invoiced and paid in euro. Debit notes for oversight fees shall set payment terms of at least 30 days.\n\n3.   All oversight fees shall be paid based on a single instalment basis. Critical ICT third-party service providers which will be subject to oversight activities on 1 January of a given year shall pay the debit note by 30 April of that year. Critical ICT third-party service providers designated throughout the year shall pay the fees referred to in Article 4 in a single instalment by 31 December of that year.\n\n4.   Any late payment shall incur the default interest laid down in Article 99 of Regulation (EU, Euratom) 2018/1046."
+    },
+    {
+      "number": "6",
+      "title": "Communication between the Lead Overseer and critical ICT third-party service providers",
+      "text": "For the purposes of this Regulation, all communication between the European Supervisory Authorities and critical ICT third-party service providers shall take place by electronic means."
+    },
+    {
+      "number": "7",
+      "title": "Entry into force and date of application",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States.\n\nDone at Brussels, 22 February 2024.\n\nFor the Commission\n\nThe President\n\nUrsula VON DER LEYEN\n\n(1)\n\nOJ L 333, 27.12.2022, p. 1, ELI: http://data.europa.eu/eli/reg/2022/2554/oj\n\nELI: http://data.europa.eu/eli/reg_del/2024/1505/oj\n\nISSN 1977-0677 (electronic edition)\n\n////////////////////////$(document).ready(function(){generateTOC(true,'', 'Top','false');scrollToCurrentUrlAnchor();});"
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "An annual oversight fee should be established to fully cover the Lead Overseer’s and the other European Supervisory Authorities’ necessary expenditure when performing oversight tasks in the context of Regulation (EU) 2022/2554. The annual oversight fee should also cover the estimated costs by competent authorities to whom tasks are delegated by the European Supervisory Authorities."
+    },
+    {
+      "recital_number": 2,
+      "text": "In line with the principle of annuality and the principle of full cost recovery, the annual oversight fees should be calculated on the basis of the direct and indirect costs estimated by the ESAs to perform their oversight tasks. The annual oversight fees should be adjusted every year to match the estimated costs."
+    },
+    {
+      "recital_number": 3,
+      "text": "To ensure the fair allocation of oversight fees which, at the same time, reflects the actual administrative effort devoted to each overseen provider, the annual oversight fee should be proportionate to the turnover generated by the ICT third-party service provider in the Union from the provision of the ICT services to financial services clients."
+    },
+    {
+      "recital_number": 4,
+      "text": "To ensure the accuracy of the financial information needed to calculate the applicable turnover, all figures provided by the ICT third-party service providers should be audited. Considering that information on the applicable turnover is necessary for the Lead Overseer to establish the amount of the oversight fee charged to each critical ICT third-party service provider yearly to cover the costs of the oversight, the Lead Overseer should consider the worldwide revenues of ICT third-party service provider generated irrespective of the types of clients in the case where the critical ICT third-party service provider does not provide for tailored information on the revenues generated in the Union from the provision of the ICT services to financial entities."
+    },
+    {
+      "recital_number": 5,
+      "text": "A minimum annual oversight fee should be imposed on each critical ICT third-party service provider, given that certain fixed administrative costs apply for the oversight of all critical ICT third-party service providers, irrespective of the amount of turnover accrued."
+    },
+    {
+      "recital_number": 6,
+      "text": "To cater for the specific costs incurred during the first year of designation and oversight of critical ICT third-party service providers, related among others to the designation process and the appointment of the Lead Overseer, a fixed fee should be established. To reflect the costs incurred for the oversight following the designation of the critical ICT third-party service provider, this fee should be adjusted to the period of time in that first year during which the critical ICT third-party service provider has been designated. It should replace the annual oversight fee for that year."
+    },
+    {
+      "recital_number": 7,
+      "text": "To cover the additional costs related to the designation of critical ICT third-party service providers that voluntary request to be designated as critical in accordance with Article 31(11) of Regulation (EU) 2022/2554, an additional fixed fee should be established. In order to discourage unfounded requests, such additional fixed fee should not be reimbursed if an ICT third-party service provider withdraws its request during the registration process, nor if the request is rejected."
+    },
+    {
+      "recital_number": 8,
+      "text": "To ensure the timely payment of oversight fees, those fees should be paid within 30 days from the date of issuance of the Lead Overseer’s debit note. To simplify the fee payment flows, and to ensure ESAs have the necessary funds to carry out their planned supervisory activities, annual oversight fees should be paid in a single instalment during the first four months of the calendar year for which such fees are due by critical ICT third-party service providers subject to oversight activities on 1 January of that year or, in the case of critical ICT third-party service providers designated throughout that year, at the latest by the end of that year."
+    },
+    {
+      "recital_number": 9,
+      "text": "All the fees charged should be set at a level such as to avoid a deficit or a significant accumulation of surplus. Where a significant positive or negative budget result becomes recurrent, the level of the fees should be revised,\n\nHAS ADOPTED THIS REGULATION:"
+    },
+    {
+      "recital_number": 9,
+      "text": "All the fees charged should be set at a level such as to avoid a deficit or a significant accumulation of surplus. Where a significant positive or negative budget result becomes recurrent, the level of the fees should be revised,\n\nHAS ADOPTED THIS REGULATION:"
+    }
+  ],
+  "effective_date": "2025-01-17"
+}

@@ -13,7 +13,7 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 - `scripts/` - Ingestion and build scripts
 - `tests/` - Vitest test suite
 
-## Regulations Included (37 Total)
+## Regulations Included (47 Total)
 
 ### Core Data Protection & Cybersecurity
 | ID | Regulation | CELEX | Source |
@@ -28,6 +28,20 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 | EPRIVACY | ePrivacy Directive | 02002L0058-20091219 | EUR-Lex |
 | LED | Law Enforcement Directive | 32016L0680 | EUR-Lex |
 | EUCC | EU Common Criteria Certification | 32024R0482 | EUR-Lex |
+
+### DORA Technical Standards (RTS/ITS)
+| ID | Regulation | CELEX | Type |
+|----|------------|-------|------|
+| DORA_RTS_ICT_RISK | ICT Risk Management Tools & Simplified Framework | 32024R1774 | RTS |
+| DORA_RTS_INCIDENT_CLASS | Classification of ICT-Related Incidents | 32024R1772 | RTS |
+| DORA_RTS_ICT_SERVICES | Policy on ICT Services for Critical Functions | 32024R1773 | RTS |
+| DORA_RTS_CRITICAL_PROVIDER | Criteria for Critical ICT Provider Designation | 32024R1502 | RTS |
+| DORA_RTS_OVERSIGHT_FEES | Oversight Fees for Critical ICT Providers | 32024R1505 | RTS |
+| DORA_RTS_OVERSIGHT | Harmonization of Oversight Activities | 32025R0295 | RTS |
+| DORA_RTS_INCIDENT_REPORTING | Content & Time Limits for Incident Reporting | 32025R0301 | RTS |
+| DORA_RTS_TLPT | Threat-Led Penetration Testing (TLPT) | 32025R1190 | RTS |
+| DORA_ITS_REGISTER | Standard Templates for Register of Information | 32024R2956 | ITS |
+| DORA_ITS_INCIDENT_FORMS | Standard Forms for Incident Reporting | 32025R0302 | ITS |
 
 ### Digital Services & Identity
 | ID | Regulation | CELEX | Source |
@@ -196,13 +210,13 @@ The package ships with a **pre-built database** (`data/regulations.db`, ~15MB) c
 
 | Component | Count | Size |
 |-----------|-------|------|
-| Articles | 2,311 | ~8MB |
-| Recitals | 3,508 (33/37 regulations) | ~5MB |
-| Definitions | 1,145 | ~1MB |
-| Control Mappings | 686 | ~500KB |
+| Articles | 2,438 | ~9MB |
+| Recitals | 3,712 (43/47 regulations) | ~5.5MB |
+| Definitions | 1,138 | ~1MB |
+| Control Mappings | 685 | ~500KB |
 | Applicability Rules | 305 | ~200KB |
-| FTS5 Index | - | ~800KB |
-| **Total** | **~8,000 entries** | **~15MB** |
+| FTS5 Index | - | ~900KB |
+| **Total** | **~8,300 entries** | **~18MB** |
 
 ### When Maintainers Rebuild
 
@@ -299,21 +313,21 @@ The `GITHUB_TOKEN` is automatic and used for:
 
 | Category | Count |
 |----------|-------|
-| Regulations | 37 |
-| Articles | 2,311 |
-| Recitals | 3,508 (33/37 regulations) |
-| Definitions | 1,145 |
-| ISO 27001 Mappings | 313 |
+| Regulations | 47 |
+| Articles | 2,438 |
+| Recitals | 3,712 (43/47 regulations) |
+| Definitions | 1,138 |
+| ISO 27001 Mappings | 312 |
 | NIST CSF 2.0 Mappings | 373 |
 | Applicability Rules | 305 |
-| **Database Size** | **~15MB** |
+| **Database Size** | **~18MB** |
 
 ## Completed Features
 
-- [x] 37 EU regulations from EUR-Lex with full text
+- [x] 47 EU regulations from EUR-Lex with full text (37 core + 10 DORA RTS/ITS)
 - [x] Daily freshness monitoring via GitHub Actions
 - [x] Auto-update mode for re-ingestion from EUR-Lex
-- [x] ISO 27001:2022 control mappings (313 mappings across all regulations)
+- [x] ISO 27001:2022 control mappings (312 mappings across all regulations)
 - [x] NIST CSF 2.0 control mappings (373 mappings across all regulations)
 - [x] Sector applicability rules (305 rules across all regulations)
 - [x] Full-text search via SQLite FTS5
