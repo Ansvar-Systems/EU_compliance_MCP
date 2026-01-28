@@ -1,7 +1,7 @@
 # Simplified Dockerfile for Smithery Deployment
 # Single-stage build optimized for MCP-over-HTTP
-# Platform defaults to amd64 for Smithery cloud deployment
-FROM --platform=${BUILDPLATFORM:-linux/amd64} node:24-alpine
+# IMPORTANT: Smithery requires linux/amd64 platform
+FROM --platform=linux/amd64 node:24-alpine
 
 # Install build tools for native modules (better-sqlite3)
 RUN apk add --no-cache python3 make g++
@@ -25,13 +25,16 @@ RUN pnpm install --frozen-lockfile --ignore-scripts
 # Copy source code and configuration
 COPY src/ ./src/
 COPY tsconfig.json ./
+
+# Create data directory and copy database
+RUN mkdir -p data
 COPY data/regulations.db ./data/regulations.db
 
 # Build TypeScript
 RUN pnpm run build
 
-# Rebuild native modules for Alpine Linux
-RUN pnpm rebuild better-sqlite3
+# Rebuild better-sqlite3 for the target platform (Node v24 + Linux AMD64)
+RUN cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run install
 
 # Clean up build tools to reduce image size
 RUN apk del python3 make g++ && \
