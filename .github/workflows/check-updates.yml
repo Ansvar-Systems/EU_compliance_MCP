@@ -32,11 +32,15 @@ jobs:
         with:
           node-version: '20'
 
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
       - name: Install dependencies
-        run: npm ci --ignore-scripts
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Build TypeScript
-        run: npm run build
+        run: pnpm run build
 
       - name: Get Monitored CELEX IDs from Database
         id: celex
@@ -90,7 +94,7 @@ jobs:
           echo "Running comprehensive update check..."
 
           # Run the check-updates script and capture output
-          npm run check-updates 2>&1 | tee check_output.txt
+          pnpm run check-updates 2>&1 | tee check_output.txt
 
           # Check if updates were found
           if grep -q "need attention" check_output.txt; then
@@ -225,13 +229,17 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install dependencies
-        run: npm ci --ignore-scripts
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Re-ingest All Regulations
         run: |
@@ -245,10 +253,10 @@ jobs:
           done
 
       - name: Rebuild Database
-        run: npm run build:db
+        run: pnpm run build:db
 
       - name: Build TypeScript
-        run: npm run build
+        run: pnpm run build
 
       - name: Bump Patch Version
         id: version
@@ -258,7 +266,7 @@ jobs:
           echo "Current version: $CURRENT"
 
           # Bump patch version
-          npm version patch --no-git-tag-version
+          pnpm version patch --no-git-tag-version
 
           NEW=$(node -p "require('./package.json').version")
           echo "New version: $NEW"
