@@ -29,15 +29,13 @@ RUN pnpm install --frozen-lockfile --ignore-scripts
 # Rebuild better-sqlite3 for build tools to work
 RUN cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run install
 
-# Copy source code
+# Copy all source code and configs
 COPY packages/ ./packages/
 COPY src/ ./src/
 COPY tsconfig.json ./
 
-# Build packages in dependency order using pnpm filter (maintains workspace context)
-RUN pnpm --filter @ansvar/eu-regulations-core run build
-RUN pnpm --filter @ansvar/eu-regulations-api run build
-RUN pnpm --filter @ansvar/eu-regulations-mcp-server run build
+# Build all workspace packages (pnpm handles dependency order automatically)
+RUN pnpm -r --workspace-concurrency=1 build
 
 # Build MCP server
 RUN npm run build
