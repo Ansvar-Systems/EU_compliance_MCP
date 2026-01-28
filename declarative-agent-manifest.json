@@ -8,7 +8,7 @@
     "capabilities": [
       {
         "name": "search_regulations",
-        "description": "Search across 2,278 articles from 37 EU regulations using natural language queries"
+        "description": "Search across 2,311 articles from 37 EU regulations using natural language queries"
       },
       {
         "name": "get_article",
