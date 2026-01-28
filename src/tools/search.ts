@@ -21,14 +21,19 @@ export interface SearchResult {
  * - Short queries (1-3 words): AND logic with exact matching for precision
  * - Long queries (4+ words): OR logic with prefix matching for recall
  * This prevents empty results on complex queries while maintaining precision on simple ones.
+ *
+ * Handles hyphenated terms by converting them to spaces (e.g., "third-party" → "third party")
+ * to avoid FTS5 syntax errors where hyphens are interpreted as operators.
  */
 function escapeFts5Query(query: string): string {
   // Common stopwords that add noise to searches
   const stopwords = new Set(['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']);
 
-  // Remove special FTS5 characters and split into words
+  // Normalize query: remove quotes, convert hyphens to spaces
+  // This allows "third-party" to become "third party" which FTS5 handles naturally
   const words = query
     .replace(/['"]/g, '') // Remove quotes
+    .replace(/-/g, ' ') // Convert hyphens to spaces (fixes "third-party" → "third party")
     .split(/\s+/)
     .filter(word => word.length > 2 && !stopwords.has(word.toLowerCase())); // Filter short words and stopwords
 
