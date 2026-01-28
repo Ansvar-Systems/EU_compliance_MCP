@@ -24,6 +24,9 @@ COPY packages/rest-api/package.json ./packages/rest-api/
 # Install dependencies (skip prepare script - we'll build explicitly later)
 RUN pnpm install --frozen-lockfile --ignore-scripts
 
+# Rebuild better-sqlite3 for build tools to work
+RUN cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run install
+
 # Copy source code
 COPY packages/ ./packages/
 COPY src/ ./src/
@@ -58,7 +61,7 @@ COPY --from=builder /app/dist ./dist
 RUN pnpm install --frozen-lockfile --prod --ignore-scripts
 
 # Rebuild better-sqlite3 for this platform (Node v24 + Linux)
-RUN pnpm rebuild better-sqlite3
+RUN cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run install
 
 # Clean up build tools
 RUN apk del python3 make g++ && \

@@ -29,7 +29,11 @@ jobs:
         continue-on-error: true # Don't block on moderate vulnerabilities
 
       - name: Rebuild native dependencies
-        run: pnpm rebuild better-sqlite3
+        run: |
+          # Force better-sqlite3 to rebuild by directly invoking npm rebuild
+          # pnpm rebuild doesn't work reliably after --ignore-scripts
+          cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3
+          npm run install
 
       - name: Build TypeScript
         run: pnpm run build
