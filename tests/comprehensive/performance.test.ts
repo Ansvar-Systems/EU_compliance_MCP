@@ -47,7 +47,7 @@ describe('Performance & Scalability', () => {
         'data protection impact assessment',
         'information security management system',
         'third party service provider contract',
-        'high-risk AI system conformity assessment',
+        'artificial intelligence system conformity assessment',
       ];
 
       for (const query of complexQueries) {
