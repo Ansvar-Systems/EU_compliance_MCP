@@ -29,6 +29,15 @@ interface TeamsManifest {
   [key: string]: any;
 }
 
+interface ServerJson {
+  version: string;
+  packages?: Array<{
+    version: string;
+    [key: string]: any;
+  }>;
+  [key: string]: any;
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
@@ -78,7 +87,42 @@ async function main() {
     }
   }
 
-  // 3. Update Teams manifest
+  // 3. Update server.json (MCP registry metadata)
+  const serverJsonPath = join(ROOT_DIR, 'server.json');
+  const serverJson = readJson<ServerJson>(serverJsonPath);
+
+  console.log('\n🌐 Updating MCP server.json:');
+
+  let serverJsonUpdated = false;
+  if (serverJson.version !== targetVersion) {
+    const oldVersion = serverJson.version;
+    serverJson.version = targetVersion;
+    console.log(`   ✅ server.json version: ${oldVersion} → ${targetVersion}`);
+    serverJsonUpdated = true;
+  } else {
+    console.log(`   ⏭️  server.json version: ${targetVersion} (already current)`);
+  }
+
+  // Update package versions in server.json
+  if (serverJson.packages) {
+    for (const pkg of serverJson.packages) {
+      if (pkg.version !== targetVersion) {
+        const oldVersion = pkg.version;
+        pkg.version = targetVersion;
+        console.log(`   ✅ package "${pkg.identifier || 'unknown'}": ${oldVersion} → ${targetVersion}`);
+        serverJsonUpdated = true;
+      }
+    }
+  }
+
+  if (serverJsonUpdated) {
+    writeJson(serverJsonPath, serverJson);
+    updatedCount++;
+  } else {
+    alreadyCurrentCount++;
+  }
+
+  // 4. Update Teams manifest
   const teamsManifestPath = join(ROOT_DIR, 'packages/teams-extension/manifest.json');
   const teamsManifest = readJson<TeamsManifest>(teamsManifestPath);
 
@@ -95,7 +139,7 @@ async function main() {
     alreadyCurrentCount++;
   }
 
-  // 4. Validation
+  // 5. Validation
   console.log('\n🔍 Validating consistency...');
 
   const allPackages = await glob('{package.json,packages/*/package.json}', { cwd: ROOT_DIR });
@@ -111,12 +155,27 @@ async function main() {
     }
   }
 
+  // Re-read server.json for validation
+  const serverJsonValidation = readJson<ServerJson>(serverJsonPath);
+  if (serverJsonValidation.version !== targetVersion) {
+    console.log(`   ❌ server.json: ${serverJsonValidation.version} (expected ${targetVersion})`);
+    inconsistencies++;
+  }
+  if (serverJsonValidation.packages) {
+    for (const pkg of serverJsonValidation.packages) {
+      if (pkg.version !== targetVersion) {
+        console.log(`   ❌ server.json package "${pkg.identifier || 'unknown'}": ${pkg.version} (expected ${targetVersion})`);
+        inconsistencies++;
+      }
+    }
+  }
+
   if (teamsManifest.version !== targetVersion) {
     console.log(`   ❌ Teams manifest: ${teamsManifest.version} (expected ${targetVersion})`);
     inconsistencies++;
   }
 
-  // 5. Summary
+  // 6. Summary
   console.log('\n' + '='.repeat(50));
   console.log('📊 Summary:');
   console.log(`   Target version: ${targetVersion}`);
