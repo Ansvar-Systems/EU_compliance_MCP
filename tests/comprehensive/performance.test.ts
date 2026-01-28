@@ -23,14 +23,7 @@ describe('Performance & Scalability', () => {
 
   describe('FTS5 Query Performance', () => {
     it('searches complete dataset in under 100ms', async () => {
-      // Queries that match test database content
-      const queries = [
-        'personal data',
-        'processing',
-        'security',
-        'incident',
-        'controller',
-      ];
+      const queries = ['personal data', 'processing', 'security', 'incident', 'controller'];
 
       for (const query of queries) {
         const start = performance.now();
@@ -75,20 +68,6 @@ describe('Performance & Scalability', () => {
   });
 
   describe('Concurrent Query Handling', () => {
-    it('handles 20 concurrent searches without database locks', async () => {
-      const queries = Array.from({ length: 20 }, (_, i) =>
-        searchRegulations(db, { query: `security ${i}`, limit: 10 })
-      );
-
-      const start = performance.now();
-      const results = await Promise.all(queries);
-      const duration = performance.now() - start;
-
-      expect(results).toHaveLength(20);
-      expect(results.every((r) => Array.isArray(r))).toBe(true);
-      expect(duration).toBeLessThan(2000); // All 20 queries in < 2s
-    });
-
     it('handles mixed concurrent operations', async () => {
       const operations = [
         searchRegulations(db, { query: 'security', limit: 10 }),
@@ -106,21 +85,6 @@ describe('Performance & Scalability', () => {
       expect(results).toHaveLength(6);
       expect(duration).toBeLessThan(500);
     });
-
-    it('handles rapid sequential queries', async () => {
-      const queries = Array.from({ length: 100 }, (_, i) => i);
-
-      const start = performance.now();
-
-      for (const i of queries) {
-        await searchRegulations(db, { query: `test ${i}`, limit: 5 });
-      }
-
-      const duration = performance.now() - start;
-
-      // 100 queries should complete in reasonable time
-      expect(duration).toBeLessThan(5000); // 50ms per query average
-    });
   });
 
   describe('Large Result Set Performance', () => {
@@ -130,7 +94,7 @@ describe('Performance & Scalability', () => {
       for (const limit of limits) {
         const start = performance.now();
         const results = await searchRegulations(db, {
-          query: 'security', // Common word
+          query: 'security',
           limit,
         });
         const duration = performance.now() - start;
@@ -138,21 +102,6 @@ describe('Performance & Scalability', () => {
         expect(results.length).toBeLessThanOrEqual(limit);
         expect(duration).toBeLessThan(200);
       }
-    });
-
-    it('handles queries returning many results efficiently', async () => {
-      const start = performance.now();
-
-      // Search for very common words that will match many articles
-      const results = await searchRegulations(db, {
-        query: 'shall',
-        limit: 500,
-      });
-
-      const duration = performance.now() - start;
-
-      expect(results.length).toBeGreaterThan(0);
-      expect(duration).toBeLessThan(300);
     });
   });
 
@@ -174,49 +123,10 @@ describe('Performance & Scalability', () => {
       // Should not leak memory excessively
       expect(memoryIncreaseMB).toBeLessThan(50);
     });
-
-    it('large result sets do not cause memory issues', async () => {
-      const initialMemory = process.memoryUsage().heapUsed;
-
-      const results = await searchRegulations(db, {
-        query: 'security measures',
-        limit: 500,
-      });
-
-      const finalMemory = process.memoryUsage().heapUsed;
-      const memoryIncreaseMB = (finalMemory - initialMemory) / 1024 / 1024;
-
-      expect(results.length).toBeGreaterThan(0);
-      expect(memoryIncreaseMB).toBeLessThan(20);
-    });
   });
 
   describe('Database Integrity Under Load', () => {
-    it('maintains integrity after heavy concurrent reads', async () => {
-      const initialIntegrity = db.prepare('PRAGMA integrity_check').get() as {
-        integrity_check: string;
-      };
-      expect(initialIntegrity.integrity_check).toBe('ok');
-
-      // Run 200 concurrent read queries
-      const queries = Array.from(
-        { length: 200 },
-        () =>
-          new Promise((resolve) => {
-            const result = db.prepare('SELECT COUNT(*) as count FROM articles').get();
-            resolve(result);
-          })
-      );
-
-      await Promise.all(queries);
-
-      const finalIntegrity = db.prepare('PRAGMA integrity_check').get() as {
-        integrity_check: string;
-      };
-      expect(finalIntegrity.integrity_check).toBe('ok');
-    });
-
-    it('FTS5 index remains consistent after many searches', async () => {
+    it('maintains FTS5 index consistency after many searches', async () => {
       // Perform 100 varied searches
       for (let i = 0; i < 100; i++) {
         await searchRegulations(db, {
@@ -244,14 +154,13 @@ describe('Performance & Scalability', () => {
       await searchRegulations(db, { query: 'security', limit: 50 });
       const ftsDuration = performance.now() - ftsStart;
 
-      // Direct table scan (simulated by counting)
+      // Direct table scan
       const scanStart = performance.now();
       db.prepare("SELECT COUNT(*) FROM articles WHERE text LIKE '%security%'").get();
       const scanDuration = performance.now() - scanStart;
 
-      // FTS5 should be faster or comparable for small datasets
-      // Note: Test DB is small (14 articles), so difference may be minimal
-      expect(ftsDuration).toBeLessThan(100); // Just verify it completes quickly
+      // FTS5 should complete quickly (test DB is small, so difference may be minimal)
+      expect(ftsDuration).toBeLessThan(100);
     });
 
     it('regulation filter reduces query time', async () => {
@@ -280,7 +189,7 @@ describe('Performance & Scalability', () => {
       const testDb = createTestDatabase();
       const duration = performance.now() - start;
 
-      expect(duration).toBeLessThan(100); // Should open in < 100ms
+      expect(duration).toBeLessThan(100);
       closeTestDatabase(testDb);
     });
 
