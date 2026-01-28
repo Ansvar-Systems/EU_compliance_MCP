@@ -34,3 +34,6 @@ internal/
 # MCP Registry tokens and local configs
 .mcpregistry_*
 .playwright-mcp/
+
+# Git worktrees (isolated feature branches)
+.worktrees/
