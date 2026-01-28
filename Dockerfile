@@ -19,7 +19,9 @@ RUN npm install -g pnpm@10
 # Copy workspace config
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY packages/core/package.json ./packages/core/
+COPY packages/mcp-server/package.json ./packages/mcp-server/
 COPY packages/rest-api/package.json ./packages/rest-api/
+COPY packages/teams-extension/package.json ./packages/teams-extension/
 
 # Install dependencies (skip prepare script - we'll build explicitly later)
 RUN pnpm install --frozen-lockfile --ignore-scripts
@@ -32,8 +34,10 @@ COPY packages/ ./packages/
 COPY src/ ./src/
 COPY tsconfig.json ./
 
-# Build packages
-RUN pnpm -r build
+# Build packages in dependency order (core first, then dependents)
+RUN cd packages/core && pnpm run build
+RUN cd packages/rest-api && pnpm run build
+RUN cd packages/mcp-server && pnpm run build
 
 # Build MCP server
 RUN npm run build
