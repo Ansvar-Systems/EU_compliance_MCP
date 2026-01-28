@@ -50,10 +50,12 @@ USER nodejs
 
 # Environment
 ENV NODE_ENV=production
-ENV PORT=3000
+# PORT will be set by Smithery (defaults to 8081), but allow override
+# If PORT is not set, default to 3000 for local testing
+ENV PORT=${PORT:-3000}
 
-# Expose MCP HTTP port
-EXPOSE 3000
+# Expose MCP HTTP port (Smithery uses 8081, local uses 3000)
+EXPOSE 3000 8081
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
