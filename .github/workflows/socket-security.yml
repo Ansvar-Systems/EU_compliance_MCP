@@ -1,5 +1,9 @@
 name: Socket Security
 
+# SETUP REQUIRED: This workflow needs a free Socket.dev account
+# See docs/SOCKET_SETUP.md for 5-minute setup instructions
+# Free for open source: https://socket.dev
+
 on:
   pull_request:
     branches: [main]
