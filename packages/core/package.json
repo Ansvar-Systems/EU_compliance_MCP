@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/eu-regulations-core",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Core business logic for EU regulations compliance",
   "type": "module",
   "main": "dist/index.js",
