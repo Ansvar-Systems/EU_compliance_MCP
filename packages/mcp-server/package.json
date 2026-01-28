@@ -8,7 +8,7 @@
     "eu-regulations-mcp": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build",
     "dev": "tsx src/index.ts",
     "dev:http": "tsx src/http-server.ts",
     "start": "node dist/index.js",
