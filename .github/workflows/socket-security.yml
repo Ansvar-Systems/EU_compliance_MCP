@@ -27,7 +27,7 @@ jobs:
           node-version: '20'
 
       - name: Run Socket Security
-        uses: SocketDev/socket-security-action@v1
+        uses: SocketDev/action@v1
         with:
           # Socket.dev is free for open source projects
           # It will detect supply chain attacks, malware, typosquatting, etc.
