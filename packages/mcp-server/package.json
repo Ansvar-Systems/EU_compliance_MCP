@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/eu-regulations-mcp-server",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "MCP server for EU regulations (stdio/HTTP)",
   "type": "module",
   "main": "dist/index.js",
