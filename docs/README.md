@@ -25,7 +25,7 @@ This folder contains documentation for the EU Regulations MCP Server.
          ▼                         ▼
 ┌─────────────────┐      ┌─────────────────┐
 │  stdio transport │      │  HTTP transport  │
-│   (local CLI)    │      │ (Smithery hosted)│
+│   (local CLI)    │      │   (HTTP mode)    │
 └────────┬────────┘      └────────┬────────┘
          │                         │
          └────────────┬────────────┘
@@ -69,10 +69,6 @@ For Claude Desktop, Cursor, or any MCP client that supports local servers:
   }
 }
 ```
-
-### Smithery Hosted
-
-Install via [Smithery.ai](https://smithery.ai) for hosted deployment - no local installation required.
 
 ### Docker
 

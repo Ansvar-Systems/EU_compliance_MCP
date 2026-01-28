@@ -28,8 +28,7 @@ git push && git push --tags
 | `packages/mcp-server/package.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
 | `packages/rest-api/package.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
 | `packages/teams-extension/manifest.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
-| `smithery.yaml` | - | N/A | ✅ Auto from npm |
-| `glama.json` | - | N/A | ✅ Auto from npm |
+| `server.json` | `version`, `packages[].version` | 0.6.5 | ✅ Via `sync-versions` |
 
 **✅ DONE:** `scripts/sync-versions.ts` automates workspace version updates - run `pnpm run sync-versions` after bumping root version.
 
@@ -49,7 +48,7 @@ These are used for package management and should remain consistent:
 These can vary by context for better UX:
 
 - **npm title:** "EU Regulations MCP"
-- **Smithery:** "EU Regulations MCP Server"
+- **MCP Server:** "EU Regulations MCP Server"
 - **Copilot Agent:** "EU Compliance Advisor" (more conversational)
 - **Teams:** "EU Regulations" (short for UI)
 - **Teams Full:** "EU Regulations Compliance Reference"
@@ -59,8 +58,7 @@ These can vary by context for better UX:
 | Platform | Identifier | Controlled By | Notes |
 |----------|-----------|---------------|-------|
 | **npm** | `@ansvar/eu-regulations-mcp` | package.json | ✅ Org account |
-| **Smithery** | `ansvar/eu_compliance_mcp` | smithery.yaml `repository` | ✅ GitHub org |
-| **glama.ai** | `@Mortalus/eu-regulations` | User claim | ⚠️ Personal account |
+| **MCP Registry** | `eu.ansvar/eu-regulations-mcp` | server.json | ✅ Official registry |
 | **Copilot** | TBD | Azure App Registration | Future |
 | **Teams** | TBD | Teams App ID | Future |
 
@@ -74,23 +72,13 @@ These can vary by context for better UX:
 - **Version:** Semantic versioning (X.Y.Z)
 - **Publishing:** Automated via `.github/workflows/publish.yml`
 
-### Smithery (MCP Registry)
+### Official MCP Registry
 
-- **Name:** `eu-regulations-mcp` (no org prefix needed)
+- **Name:** `eu.ansvar/eu-regulations-mcp`
 - **Repository:** `https://github.com/Ansvar-Systems/EU_compliance_MCP`
-- **Version:** Auto-syncs from npm package
-- **Config:** `smithery.yaml`
-- **URL:** `https://smithery.ai/server/ansvar/eu_compliance_mcp`
-
-### glama.ai (MCP Marketplace)
-
-- **Current:** `@Mortalus/eu-regulations` (personal claim)
-- **Future:** Should migrate to org account if possible
-- **Config:** `glama.json` (minimal - just maintainers)
-- **Sync:** Auto from npm
-- **Badge:** `https://glama.ai/mcp/servers/@Mortalus/eu-regulations/badge`
-
-**TODO:** Investigate if glama.ai supports org accounts for proper branding.
+- **Version:** Auto-syncs from npm package via server.json
+- **Config:** `server.json`
+- **Registry:** Model Context Protocol official registry
 
 ### Microsoft Copilot & Teams
 
@@ -106,10 +94,9 @@ These can vary by context for better UX:
 Before releasing a new version:
 
 - [ ] Update `package.json` version (source of truth)
-- [ ] Update all workspace package.json versions
-- [ ] Update Teams manifest version
-- [ ] Update article/recital counts in declarative agent manifest
-- [ ] Verify Smithery config is current
+- [ ] Run `pnpm run sync-versions` to update all workspace packages
+- [ ] Update Teams manifest version (if applicable)
+- [ ] Update article/recital counts in declarative agent manifest (if changed)
 - [ ] Run tests (`npm test`)
 - [ ] Create git tag (`git tag vX.Y.Z`)
 - [ ] Push tag (triggers publish workflow)
@@ -130,9 +117,10 @@ When making breaking changes:
 
 | Version | Date | Platforms Updated | Notes |
 |---------|------|-------------------|-------|
-| 0.5.0 | 2026-01-27 | npm, Smithery, glama.ai | Evidence mapping, DORA RTS |
-| 0.4.1 | 2025-XX-XX | npm, Smithery | Webhook notifications |
-| 0.4.0 | 2025-XX-XX | npm, Smithery | Pre-built database |
+| 0.6.5 | 2026-01-28 | npm, MCP Registry | Removed third-party registries |
+| 0.5.0 | 2026-01-27 | npm | Evidence mapping, DORA RTS |
+| 0.4.1 | 2025-XX-XX | npm | Webhook notifications |
+| 0.4.0 | 2025-XX-XX | npm | Pre-built database |
 
 ## Future Improvements
 
@@ -147,15 +135,10 @@ When making breaking changes:
    - Block publish if inconsistent
    - Add to `publish.yml` workflow
 
-3. **Org-level branding**
-   - Migrate glama.ai from personal to org account (if possible)
-   - Ensure all platforms use `@ansvar` or `Ansvar Systems` branding
-   - Consistent logos and descriptions
-
-4. **Marketplace presence**
+3. **Marketplace presence**
    - Publish to Microsoft Commercial Marketplace (Copilot)
-   - Consider AWS Marketplace (future)
-   - Monitor new MCP registries
+   - Monitor new MCP registries as they emerge
+   - Ensure consistent branding across all platforms
 
 ## Contact
 

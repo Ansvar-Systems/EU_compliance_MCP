@@ -26,9 +26,7 @@ docker run -p 3000:3000 \
 curl http://localhost:3000/health
 ```
 
-## Option 1: Azure Container Apps (Recommended for Teams)
-
-**Why Azure?** Microsoft prefers seeing Azure stack in Teams app submissions.
+## Option 1: Azure Container Apps
 
 ### Deploy
 

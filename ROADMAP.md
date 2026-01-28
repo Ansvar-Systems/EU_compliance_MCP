@@ -13,9 +13,7 @@
 - ✅ Sector applicability rules (305 rules)
 
 **Infrastructure (v0.4.1-0.4.2):**
-- ✅ Azure hosted service with scale-to-zero
 - ✅ Daily EUR-Lex freshness monitoring
-- ✅ CI/CD deployment via GitHub Actions
 - ✅ REST API with PostgreSQL support
 
 ---
