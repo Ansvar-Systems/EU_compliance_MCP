@@ -1,0 +1,60 @@
+# Simplified Dockerfile for Smithery Deployment
+# Single-stage build optimized for MCP-over-HTTP
+# Platform defaults to amd64 for Smithery cloud deployment
+FROM --platform=${BUILDPLATFORM:-linux/amd64} node:24-alpine
+
+# Install build tools for native modules (better-sqlite3)
+RUN apk add --no-cache python3 make g++
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+COPY pnpm-lock.yaml ./
+COPY pnpm-workspace.yaml ./
+
+# Install pnpm
+RUN npm install -g pnpm@10
+
+# Copy workspace package.json files
+COPY packages/ ./packages/
+
+# Install all dependencies (skip prepare script - we'll build explicitly later)
+RUN pnpm install --frozen-lockfile --ignore-scripts
+
+# Copy source code and configuration
+COPY src/ ./src/
+COPY tsconfig.json ./
+COPY data/regulations.db ./data/regulations.db
+
+# Build TypeScript
+RUN pnpm run build
+
+# Rebuild native modules for Alpine Linux
+RUN pnpm rebuild better-sqlite3
+
+# Clean up build tools to reduce image size
+RUN apk del python3 make g++ && \
+    pnpm store prune && \
+    npm cache clean --force
+
+# Security: create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 && \
+    chown -R nodejs:nodejs /app
+
+USER nodejs
+
+# Environment
+ENV NODE_ENV=production
+ENV PORT=3000
+
+# Expose MCP HTTP port
+EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+
+# Start MCP HTTP server
+CMD ["node", "dist/http-server.js"]
