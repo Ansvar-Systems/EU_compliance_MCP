@@ -67,18 +67,20 @@ tags:
   - fintech
   - healthcare
 
-# Container runtime for hosted deployment
-runtime: container
+# External MCP server (points to Azure-hosted deployment)
+# This avoids Smithery container build delays and uses existing infrastructure
+runtime: remote
+url: https://eu-regulations-mcp.jollysea-916ea475.westeurope.azurecontainerapps.io/mcp
 
-# Build configuration for Smithery hosted deployment
-build:
-  dockerfile: Dockerfile.smithery
-  dockerBuildPath: "."
-  # Ensure database is included in build context
-  buildArgs: {}
+# Alternative: Container build (requires 6-24h for Smithery to build)
+# Uncomment below and comment out 'runtime: remote' and 'url' to use container mode
+# runtime: container
+# build:
+#   dockerfile: Dockerfile.smithery
+#   dockerBuildPath: "."
+#   buildArgs: {}
 
-# Hosted deployment configuration (HTTP transport)
-# Smithery will provide PORT env var and route MCP traffic to /mcp endpoint
+# HTTP transport configuration (no auth required)
 startCommand:
   type: http
   configSchema:
