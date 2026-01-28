@@ -102,7 +102,7 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 
 ### For End Users
 
-**End users cannot add regulations** — the package ships with a pre-built database containing all 37 regulations. The database is bundled in the npm package (15MB) and includes all articles, recitals, definitions, and control mappings.
+**End users cannot add regulations** — the package ships with a pre-built database containing all 47 regulations. The database is bundled in the npm package (15MB) and includes all articles, recitals, definitions, and control mappings.
 
 ### For Maintainers Only
 
@@ -204,7 +204,7 @@ The package ships with a **pre-built database** (`data/regulations.db`, ~15MB) c
 1. **Zero setup friction** - Users never need to run build steps or ingestion scripts
 2. **Consistent state** - Everyone gets the same validated database version
 3. **EUR-Lex WAF bypass** - Ingestion requires Puppeteer (browser automation), which isn't viable for end users
-4. **Fast installs** - No need to process 2,311 articles + 3,508 recitals on user machines
+4. **Fast installs** - No need to process 2,438 articles + 3,712 recitals on user machines
 
 ### Database Contents
 
