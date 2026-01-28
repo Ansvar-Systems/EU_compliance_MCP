@@ -34,10 +34,10 @@ COPY packages/ ./packages/
 COPY src/ ./src/
 COPY tsconfig.json ./
 
-# Build packages in dependency order (core first, then dependents)
-RUN cd packages/core && pnpm run build
-RUN cd packages/rest-api && pnpm run build
-RUN cd packages/mcp-server && pnpm run build
+# Build packages in dependency order using pnpm filter (maintains workspace context)
+RUN pnpm --filter @ansvar/eu-regulations-core run build
+RUN pnpm --filter @ansvar/eu-regulations-api run build
+RUN pnpm --filter @ansvar/eu-regulations-mcp-server run build
 
 # Build MCP server
 RUN npm run build
