@@ -6,7 +6,7 @@
 
 **Core Database (v0.4.0-0.4.2):**
 - ✅ 37 EU regulations with full text
-- ✅ 2,278 articles + 3,508 recitals + 1,145 definitions
+- ✅ 2,311 articles + 3,508 recitals + 1,145 definitions
 - ✅ Full-text search with SQLite FTS5
 - ✅ ISO 27001:2022 control mappings (313 mappings)
 - ✅ NIST CSF 2.0 control mappings (373 mappings)

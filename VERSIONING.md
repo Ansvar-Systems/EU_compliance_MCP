@@ -24,14 +24,14 @@ git push && git push --tags
 | File | Field | Current | Auto-sync? |
 |------|-------|---------|------------|
 | `package.json` | `version` | 0.5.0 | ✅ Source of truth |
-| `packages/core/package.json` | `version` | 0.4.1 | ❌ Manual |
-| `packages/mcp-server/package.json` | `version` | 0.4.1 | ❌ Manual |
-| `packages/rest-api/package.json` | `version` | 0.4.1 | ❌ Manual |
-| `packages/teams-extension/manifest.json` | `version` | 0.5.0 | ❌ Manual |
+| `packages/core/package.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
+| `packages/mcp-server/package.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
+| `packages/rest-api/package.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
+| `packages/teams-extension/manifest.json` | `version` | 0.5.0 | ✅ Via `sync-versions` |
 | `smithery.yaml` | - | N/A | ✅ Auto from npm |
 | `glama.json` | - | N/A | ✅ Auto from npm |
 
-**TODO:** Create `scripts/sync-versions.ts` to automate workspace version updates.
+**✅ DONE:** `scripts/sync-versions.ts` automates workspace version updates - run `pnpm run sync-versions` after bumping root version.
 
 ## Naming Conventions
 

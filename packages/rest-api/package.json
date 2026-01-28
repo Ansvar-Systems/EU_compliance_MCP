@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/eu-regulations-api",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "REST API for EU regulations (Teams/Copilot integration)",
   "type": "module",
   "main": "dist/server.js",
