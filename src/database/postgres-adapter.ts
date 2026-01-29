@@ -19,6 +19,8 @@ export async function createPostgresAdapter(
   }
 
   return {
+    type: 'postgres' as const,
+
     async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
       try {
         const result = await pool.query(sql, params);

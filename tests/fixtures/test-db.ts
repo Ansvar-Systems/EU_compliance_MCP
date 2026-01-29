@@ -1,5 +1,7 @@
 import Database from 'better-sqlite3';
 import type { Database as DatabaseType } from 'better-sqlite3';
+import { createSqliteAdapter } from '../../src/database/sqlite-adapter.js';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 const SCHEMA = `
 -- Core regulation metadata
@@ -173,20 +175,21 @@ INSERT INTO applicability_rules (regulation, sector, subsector, applies, confide
   ('DORA', 'financial', 'investment', 1, 'definite', '2', 'Investment firms in scope');
 `;
 
-export function createTestDatabase(): DatabaseType {
+export function createTestDatabase(): DatabaseAdapter {
   // Create in-memory database for tests
-  const db = new Database(':memory:');
+  const sqliteDb = new Database(':memory:');
 
   // Enable foreign keys
-  db.pragma('foreign_keys = ON');
+  sqliteDb.pragma('foreign_keys = ON');
 
   // Create schema and insert sample data
-  db.exec(SCHEMA);
-  db.exec(SAMPLE_DATA);
+  sqliteDb.exec(SCHEMA);
+  sqliteDb.exec(SAMPLE_DATA);
 
-  return db;
+  // Wrap in adapter
+  return createSqliteAdapter(sqliteDb);
 }
 
-export function closeTestDatabase(db: DatabaseType): void {
-  db.close();
+export async function closeTestDatabase(db: DatabaseAdapter): Promise<void> {
+  await db.close();
 }

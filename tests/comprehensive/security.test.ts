@@ -8,17 +8,17 @@ import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import { searchRegulations } from '../../src/tools/search.js';
 import { getArticle } from '../../src/tools/article.js';
 import { getRecital } from '../../src/tools/recital.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('Security & Input Validation', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   describe('SQL Injection Prevention', () => {

@@ -57,9 +57,9 @@ export async function checkApplicability(
   const { sector, subsector, detail_level = 'full' } = input;
 
   // Query for matching rules - check both sector match and subsector match
-  // PostgreSQL requires ORDER BY columns to be in SELECT when using DISTINCT
+  // Note: We handle deduplication in JavaScript, so no need for DISTINCT ON
   let sql = `
-    SELECT DISTINCT ON (regulation)
+    SELECT
       regulation,
       confidence,
       basis_article as basis,

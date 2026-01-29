@@ -11,6 +11,8 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 import { registerTools } from './tools/registry.js';
+import { createSqliteAdapter } from './database/sqlite-adapter.js';
+import type { DatabaseAdapter } from './database/types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,15 +20,19 @@ const __dirname = dirname(__filename);
 // Database path - look for regulations.db in data folder
 const DB_PATH = process.env.EU_COMPLIANCE_DB_PATH || join(__dirname, '..', 'data', 'regulations.db');
 
-function getDatabase(): Database.Database {
-  try {
-    return new Database(DB_PATH, { readonly: true });
-  } catch (error) {
-    throw new Error(`Failed to open database at ${DB_PATH}: ${error}`);
-  }
-}
+let db: DatabaseAdapter;
 
-const db = getDatabase();
+function getDatabase(): DatabaseAdapter {
+  if (!db) {
+    try {
+      const sqliteDb = new Database(DB_PATH, { readonly: true });
+      db = createSqliteAdapter(sqliteDb);
+    } catch (error) {
+      throw new Error(`Failed to open database at ${DB_PATH}: ${error}`);
+    }
+  }
+  return db;
+}
 const server = new Server(
   {
     name: 'eu-regulations-mcp',
@@ -40,7 +46,7 @@ const server = new Server(
 );
 
 // Register all tools using shared registry
-registerTools(server, db);
+registerTools(server, getDatabase());
 
 // Start the server
 async function main() {
