@@ -3,13 +3,14 @@
 **The EUR-Lex alternative for the AI age.**
 
 [![npm version](https://badge.fury.io/js/@ansvar%2Feu-regulations-mcp.svg)](https://www.npmjs.com/package/@ansvar/eu-regulations-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/io.github.Ansvar-Systems/eu-regulations-mcp)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/EU_compliance_MCP?style=social)](https://github.com/Ansvar-Systems/EU_compliance_MCP)
 [![Daily EUR-Lex Check](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml)
 [![Database](https://img.shields.io/badge/database-pre--built-green)](docs/COVERAGE_GAPS.md)
 [![Recitals](https://img.shields.io/badge/recitals-3500%2B-blue)](docs/COVERAGE_GAPS.md)
 
-Query **37 EU regulations** — from GDPR and AI Act to DORA, MiFID II, eIDAS, Medical Device Regulation, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query **47 EU regulations** — from GDPR and AI Act to DORA, MiFID II, eIDAS, Medical Device Regulation, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
 
@@ -35,11 +36,7 @@ This MCP server makes EU regulations **searchable, cross-referenceable, and AI-r
 
 ### Installation
 
-```bash
-npm install @ansvar/eu-regulations-mcp
-```
-
-### Claude Desktop
+**Option 1: Claude Desktop (Recommended)**
 
 Add to your `claude_desktop_config.json`:
 
@@ -57,9 +54,16 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-Restart Claude Desktop. Done.
+Restart Claude Desktop. Done!
 
-### Cursor / VS Code
+**Option 2: MCP Registry**
+
+Browse and install from the [official MCP registry](https://registry.modelcontextprotocol.io/):
+- Search for "EU Regulations" or view directly: [`io.github.Ansvar-Systems/eu-regulations-mcp`](https://registry.modelcontextprotocol.io/io.github.Ansvar-Systems/eu-regulations-mcp)
+- One-click install (when registry integration is live in Claude Desktop)
+- Automatic updates when new versions are released
+
+**Option 3: Cursor / VS Code**
 
 ```json
 {
@@ -71,6 +75,14 @@ Restart Claude Desktop. Done.
   }
 }
 ```
+
+**Option 4: Global npm Install**
+
+```bash
+npm install -g @ansvar/eu-regulations-mcp
+```
+
+Then use `"command": "eu-regulations-mcp"` in your config (without npx).
 
 ---
 
@@ -94,7 +106,7 @@ Once connected, just ask naturally:
 
 ## What's Included
 
-- **37 Regulations** — GDPR, DORA, NIS2, AI Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 30 more
+- **47 Regulations** — GDPR, DORA, NIS2, AI Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 30 more
 - **2,438 Articles** + 3,712 Recitals + 1,138 Official Definitions
 - **Full-Text Search** — Find relevant articles across all regulations instantly
 - **Control Mappings** — 686 mappings to ISO 27001:2022 & NIST CSF 2.0
@@ -138,7 +150,7 @@ EUR-Lex HTML → Parse → SQLite → FTS5 snippet() → MCP response
 | Manual cross-referencing | `compare_requirements` tool does it instantly |
 | "Which regulations apply to me?" → research for days | `check_applicability` tool → answer in seconds |
 | Copy-paste article text | Article + definitions + related requirements |
-| Check 37 sites for updates | Daily automated freshness checks |
+| Check 47 sites for updates | Daily automated freshness checks |
 | No API, no integration | MCP protocol → AI-native |
 
 **EUR-Lex example:** Download DORA PDF → Ctrl+F "incident" → Read Article 17 → Google "What's a major incident?" → Cross-reference NIS2 → Repeat for 5 regulations
