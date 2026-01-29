@@ -189,6 +189,52 @@ EUR-Lex HTML → Parse → SQLite → FTS5 snippet() → MCP response
 
 ---
 
+## Related Projects: Complete Compliance Suite
+
+This server is part of **Ansvar's Compliance Suite** - three MCP servers that work together for end-to-end compliance coverage:
+
+### 🇪🇺 EU Regulations MCP (This Project)
+**Query 47 EU regulations directly from Claude**
+- GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 39 more
+- Full regulatory text with article-level search
+- Cross-regulation reference and comparison
+- **Install:** `npx @ansvar/eu-regulations-mcp`
+
+### 🇺🇸 [US Regulations MCP](https://github.com/Ansvar-Systems/US_Compliance_MCP)
+**Query US federal and state compliance laws directly from Claude**
+- HIPAA, CCPA, SOX, GLBA, FERPA, COPPA, FDA 21 CFR Part 11, and 8 more
+- Federal and state privacy law comparison
+- Breach notification timeline mapping
+- **Install:** `npm install @ansvar/us-regulations-mcp`
+
+### 🔐 [Security Controls MCP](https://github.com/Ansvar-Systems/security-controls-mcp)
+**Query 1,451 security controls across 28 frameworks**
+- ISO 27001, NIST CSF, DORA, PCI DSS, SOC 2, CMMC, FedRAMP, and 21 more
+- Bidirectional framework mapping and gap analysis
+- Import your purchased standards for official text
+- **Install:** `pipx install security-controls-mcp`
+
+### How They Work Together
+
+**Regulations → Controls Implementation Workflow:**
+
+```
+1. "What are DORA's ICT risk management requirements?"
+   → EU Regulations MCP returns Article 6 full text
+
+2. "What security controls satisfy DORA Article 6?"
+   → Security Controls MCP maps to ISO 27001, NIST CSF, and SCF controls
+
+3. "Show me ISO 27001 A.8.1 implementation details"
+   → Security Controls MCP returns control requirements and framework mappings
+```
+
+**Complete compliance in one chat:**
+- **EU/US Regulations MCPs** tell you WHAT compliance requirements you must meet
+- **Security Controls MCP** tells you HOW to implement controls that satisfy those requirements
+
+---
+
 ## About Ansvar Systems
 
 We build AI-accelerated threat modeling and compliance tools for automotive, financial services, and healthcare. This MCP server started as our internal reference tool — turns out everyone building for EU markets has the same EUR-Lex frustrations.
