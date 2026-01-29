@@ -4,6 +4,15 @@ This folder contains documentation for the EU Regulations MCP Server.
 
 ## Contents
 
+### Cloudflare Workers (HTTP API)
+
+- **[HTTP API Reference](./http-api.md)** - REST-style API for ChatGPT/Copilot
+- [Deployment Guide](./deployment-guide.md) - Cloudflare Workers + Neon PostgreSQL setup
+- [PostgreSQL Setup](./postgres-setup.md) - Database migration and configuration
+- [Troubleshooting](./troubleshooting.md) - Common issues and solutions
+
+### Original Architecture
+
 - [Design Document](./plans/2025-01-26-eu-compliance-mcp-design.md) - Original architecture and design decisions
 
 ## Quick Links

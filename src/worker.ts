@@ -1,11 +1,29 @@
 /**
- * Cloudflare Worker entry point for EU Regulations MCP Server.
+ * Cloudflare Worker - EU Regulations HTTP API
  *
- * Provides simple HTTP API with:
- * - PostgreSQL database adapter
- * - IP-based rate limiting
- * - CORS support for ChatGPT/Copilot
- * - Health check endpoint
+ * This is a simplified HTTP API wrapper for direct client access (ChatGPT, GitHub Copilot).
+ * It does NOT implement the full MCP protocol - it provides a REST-style endpoint for tool execution.
+ *
+ * Architecture:
+ * - POST /api/tool - Execute a tool by name with parameters (see API contract below)
+ * - GET /tools - List available tools with their schemas (for discovery)
+ * - GET /health - Health check endpoint
+ * - GET / - API documentation and usage examples
+ *
+ * This design choice was made for simplicity over protocol compliance, targeting AI assistants
+ * that need direct HTTP access rather than MCP protocol support.
+ *
+ * API Contract:
+ * POST /api/tool
+ * Request: { "tool": "tool_name", "params": { ...tool-specific params } }
+ * Response: { "result": { ...tool result }, "timestamp": "ISO8601" }
+ * Error: { "error": "error_type", "message": "details" }
+ *
+ * Features:
+ * - PostgreSQL database adapter (Neon serverless)
+ * - IP-based rate limiting (100 req/hour default)
+ * - CORS support for ChatGPT/Copilot origins
+ * - Rate limit headers (X-RateLimit-*)
  *
  * Environment variables:
  * - DATABASE_URL: PostgreSQL connection string (required)
@@ -16,6 +34,9 @@
 import { createPostgresAdapter } from './database/postgres-adapter.js';
 import { RateLimiter } from './middleware/rate-limit.js';
 import type { DatabaseAdapter } from './database/types.js';
+
+// Import tool registry (single source of truth for tools)
+import { TOOLS } from './tools/registry.js';
 
 // Import tool handlers
 import { searchRegulations } from './tools/search.js';
@@ -64,7 +85,8 @@ function getRateLimiter(env: Env): RateLimiter {
 }
 
 /**
- * Extract client IP from Cloudflare headers
+ * Extract client IP from Cloudflare headers.
+ * Used for rate limiting by IP address.
  */
 function getClientIP(request: Request): string {
   return (
@@ -75,7 +97,11 @@ function getClientIP(request: Request): string {
 }
 
 /**
- * Add CORS headers for ChatGPT/Copilot access
+ * Generate CORS headers for ChatGPT/Copilot access.
+ * Only allows requests from approved AI assistant origins.
+ *
+ * @param origin - The Origin header from the request
+ * @returns CORS headers for the response
  */
 function corsHeaders(origin?: string): HeadersInit {
   const allowedOrigins = [
@@ -97,7 +123,39 @@ function corsHeaders(origin?: string): HeadersInit {
 }
 
 /**
- * Health check endpoint
+ * List available tools endpoint.
+ * Returns all tools with their schemas for discovery.
+ *
+ * GET /tools
+ * Response: { "tools": [{ "name": "...", "description": "...", "inputSchema": {...} }] }
+ */
+function handleListTools(): Response {
+  return new Response(
+    JSON.stringify({
+      tools: TOOLS.map(tool => ({
+        name: tool.name,
+        description: tool.description,
+        inputSchema: tool.inputSchema,
+      })),
+      count: TOOLS.length,
+      timestamp: new Date().toISOString(),
+    }),
+    {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders(),
+      },
+    }
+  );
+}
+
+/**
+ * Health check endpoint.
+ * Tests database connectivity and returns server status.
+ *
+ * GET /health
+ * Response: { "status": "healthy|unhealthy", "database": "connected|error", ... }
  */
 async function handleHealthCheck(env: Env): Promise<Response> {
   try {
@@ -141,7 +199,11 @@ async function handleHealthCheck(env: Env): Promise<Response> {
 }
 
 /**
- * Rate limit error response
+ * Generate rate limit exceeded response.
+ * Returns 429 status with retry information.
+ *
+ * @param resetAt - Timestamp when rate limit resets
+ * @returns 429 response with retry headers
  */
 function rateLimitResponse(resetAt: number): Response {
   const resetDate = new Date(resetAt);
@@ -168,7 +230,16 @@ function rateLimitResponse(resetAt: number): Response {
 }
 
 /**
- * Handle API tool calls
+ * Handle API tool execution endpoint.
+ *
+ * POST /api/tool
+ * Request body: { "tool": "tool_name", "params": { ...tool-specific parameters } }
+ * Success response: { "result": { ...tool output }, "timestamp": "ISO8601" }
+ * Error response: { "error": "error_type", "message": "details" }
+ *
+ * @param request - The incoming HTTP request
+ * @param env - Cloudflare Worker environment
+ * @returns Response with tool result or error
  */
 async function handleToolCall(
   request: Request,
@@ -291,6 +362,22 @@ export default {
       case '/health':
         return handleHealthCheck(env);
 
+      case '/tools':
+        if (request.method !== 'GET') {
+          return new Response(
+            JSON.stringify({ error: 'Method not allowed' }),
+            {
+              status: 405,
+              headers: {
+                'Content-Type': 'application/json',
+                Allow: 'GET',
+                ...corsHeaders(),
+              },
+            }
+          );
+        }
+        return handleListTools();
+
       case '/api/tool':
         if (request.method !== 'POST') {
           return new Response(
@@ -312,14 +399,27 @@ export default {
           JSON.stringify({
             server: 'eu-regulations-mcp',
             version: '0.6.5',
+            description: 'HTTP API for EU cybersecurity regulations (ChatGPT/Copilot compatible)',
             endpoints: {
-              health: '/health',
-              tool: '/api/tool (POST only)',
+              '/': 'API documentation (this page)',
+              '/health': 'Health check (GET)',
+              '/tools': 'List available tools with schemas (GET)',
+              '/api/tool': 'Execute a tool (POST)',
             },
             documentation:
               'https://github.com/Ansvar-Systems/EU_compliance_MCP',
             usage: {
-              example: {
+              discovery: {
+                description: 'Get list of available tools',
+                method: 'GET',
+                url: '/tools',
+                response: {
+                  tools: '[array of tools with name, description, inputSchema]',
+                  count: 9,
+                },
+              },
+              execution: {
+                description: 'Execute a tool',
                 method: 'POST',
                 url: '/api/tool',
                 body: {
@@ -329,7 +429,15 @@ export default {
                     limit: 10,
                   },
                 },
+                response: {
+                  result: '[tool-specific output]',
+                  timestamp: 'ISO8601',
+                },
               },
+            },
+            rateLimits: {
+              requests: '100 per hour per IP',
+              headers: 'X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset',
             },
           }),
           {
