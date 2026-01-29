@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 export interface DefinitionsInput {
   term: string;
@@ -14,7 +14,7 @@ export interface Definition {
 }
 
 export async function getDefinitions(
-  db: Database,
+  db: DatabaseAdapter,
   input: DefinitionsInput
 ): Promise<Definition[]> {
   const { term, regulation } = input;
@@ -26,26 +26,21 @@ export async function getDefinitions(
       article,
       definition
     FROM definitions
-    WHERE term LIKE ?
+    WHERE term ILIKE $1
   `;
 
   const params: string[] = [`%${term}%`];
 
   if (regulation) {
-    sql += ` AND regulation = ?`;
+    sql += ` AND regulation = $2`;
     params.push(regulation);
   }
 
   sql += ` ORDER BY regulation, term`;
 
-  const rows = db.prepare(sql).all(...params) as Array<{
-    term: string;
-    regulation: string;
-    article: string;
-    definition: string;
-  }>;
+  const result = await db.query(sql, params);
 
-  return rows.map(row => ({
+  return result.rows.map((row: any) => ({
     term: row.term,
     regulation: row.regulation,
     article: row.article,

@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 export interface MapControlsInput {
   framework: 'ISO27001' | 'NIST_CSF';
@@ -20,7 +20,7 @@ export interface ControlMapping {
 }
 
 export async function mapControls(
-  db: Database,
+  db: DatabaseAdapter,
   input: MapControlsInput
 ): Promise<ControlMapping[]> {
   const { framework, control, regulation } = input;
@@ -34,24 +34,26 @@ export async function mapControls(
       coverage,
       notes
     FROM control_mappings
-    WHERE framework = ?
+    WHERE framework = $1
   `;
 
   const params: string[] = [framework];
 
   if (control) {
-    sql += ` AND control_id = ?`;
+    sql += ` AND control_id = $${params.length + 1}`;
     params.push(control);
   }
 
   if (regulation) {
-    sql += ` AND regulation = ?`;
+    sql += ` AND regulation = $${params.length + 1}`;
     params.push(regulation);
   }
 
   sql += ` ORDER BY control_id, regulation`;
 
-  const rows = db.prepare(sql).all(...params) as Array<{
+  const result = await db.query(sql, params);
+
+  const rows = result.rows as Array<{
     control_id: string;
     control_name: string;
     regulation: string;

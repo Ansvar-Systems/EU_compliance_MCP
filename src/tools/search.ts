@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 export interface SearchInput {
   query: string;
@@ -16,21 +16,17 @@ export interface SearchResult {
 }
 
 /**
- * Escape special FTS5 query characters and build optimal search query.
+ * Build PostgreSQL full-text search query from user input.
  * Uses adaptive logic:
  * - Short queries (1-3 words): AND logic with exact matching for precision
  * - Long queries (4+ words): OR logic with prefix matching for recall
  * This prevents empty results on complex queries while maintaining precision on simple ones.
- *
- * Handles hyphenated terms by converting them to spaces (e.g., "third-party" → "third party")
- * to avoid FTS5 syntax errors where hyphens are interpreted as operators.
  */
-function escapeFts5Query(query: string): string {
+function buildPostgresQuery(query: string): string {
   // Common stopwords that add noise to searches
   const stopwords = new Set(['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']);
 
   // Normalize query: remove quotes, convert hyphens to spaces
-  // This allows "third-party" to become "third party" which FTS5 handles naturally
   const words = query
     .replace(/['"]/g, '') // Remove quotes
     .replace(/-/g, ' ') // Convert hyphens to spaces (fixes "third-party" → "third party")
@@ -43,18 +39,15 @@ function escapeFts5Query(query: string): string {
 
   if (words.length <= 3) {
     // Short queries: Use AND logic with exact matching for precision
-    // Example: "incident reporting" → "incident" "reporting"
-    return words.map(word => `"${word}"`).join(' ');
+    return words.join(' & ');
   } else {
     // Long queries: Use OR logic with prefix matching for better recall
-    // Example: "incident reporting notification timeline" → incident* OR reporting* OR notification* OR timeline*
-    // BM25 will still rank documents with more matches higher
-    return words.map(word => `${word}*`).join(' OR ');
+    return words.map(word => `${word}:*`).join(' | ');
   }
 }
 
 export async function searchRegulations(
-  db: Database,
+  db: DatabaseAdapter,
   input: SearchInput
 ): Promise<SearchResult[]> {
   let { query, regulations, limit = 10 } = input;
@@ -70,52 +63,55 @@ export async function searchRegulations(
     return [];
   }
 
-  const escapedQuery = escapeFts5Query(query);
+  const postgresQuery = buildPostgresQuery(query);
 
-  if (!escapedQuery) {
+  if (!postgresQuery) {
     return [];
   }
 
-  const params: (string | number)[] = [escapedQuery];
+  const params: (string | number)[] = [postgresQuery];
 
   // Build optional regulation filter
   let regulationFilter = '';
   if (regulations && regulations.length > 0) {
-    const placeholders = regulations.map(() => '?').join(', ');
-    regulationFilter = ` AND regulation IN (${placeholders})`;
+    const placeholders = regulations.map((_, i) => `$${i + 2}`).join(', ');
+    regulationFilter = ` AND a.regulation IN (${placeholders})`;
     params.push(...regulations);
   }
 
-  // Search in articles
+  // Search in articles using PostgreSQL full-text search
   const articlesQuery = `
     SELECT
-      articles_fts.regulation,
-      articles_fts.article_number as article,
-      articles_fts.title,
-      snippet(articles_fts, 3, '>>>', '<<<', '...', 32) as snippet,
-      bm25(articles_fts) as relevance,
+      a.regulation,
+      a.article_number as article,
+      a.title,
+      ts_headline('english', a.text, plainto_tsquery('english', $1),
+        'StartSel=>>>, StopSel=<<<, MaxWords=32, MinWords=16') as snippet,
+      ts_rank(to_tsvector('english', COALESCE(a.title, '') || ' ' || a.text),
+              plainto_tsquery('english', $1)) as relevance,
       'article' as type
-    FROM articles_fts
-    WHERE articles_fts MATCH ?
+    FROM articles a
+    WHERE to_tsvector('english', COALESCE(a.title, '') || ' ' || a.text) @@ plainto_tsquery('english', $1)
     ${regulationFilter}
-    ORDER BY bm25(articles_fts)
-    LIMIT ?
+    ORDER BY relevance DESC
+    LIMIT $${params.length + 1}
   `;
 
-  // Search in recitals
+  // Search in recitals using PostgreSQL full-text search
   const recitalsQuery = `
     SELECT
-      recitals_fts.regulation,
-      CAST(recitals_fts.recital_number AS TEXT) as article,
-      'Recital ' || recitals_fts.recital_number as title,
-      snippet(recitals_fts, 2, '>>>', '<<<', '...', 32) as snippet,
-      bm25(recitals_fts) as relevance,
+      r.regulation,
+      r.recital_number::TEXT as article,
+      'Recital ' || r.recital_number as title,
+      ts_headline('english', r.text, plainto_tsquery('english', $1),
+        'StartSel=>>>, StopSel=<<<, MaxWords=32, MinWords=16') as snippet,
+      ts_rank(to_tsvector('english', r.text), plainto_tsquery('english', $1)) as relevance,
       'recital' as type
-    FROM recitals_fts
-    WHERE recitals_fts MATCH ?
-    ${regulationFilter}
-    ORDER BY bm25(recitals_fts)
-    LIMIT ?
+    FROM recitals r
+    WHERE to_tsvector('english', r.text) @@ plainto_tsquery('english', $1)
+    ${regulationFilter.replace(/a\.regulation/g, 'r.regulation')}
+    ORDER BY relevance DESC
+    LIMIT $${params.length + 1}
   `;
 
   try {
@@ -123,10 +119,10 @@ export async function searchRegulations(
     const articlesParams = [...params, limit];
     const recitalsParams = [...params, limit];
 
-    const articleStmt = db.prepare(articlesQuery);
-    const recitalStmt = db.prepare(recitalsQuery);
+    const articleResult = await db.query(articlesQuery, articlesParams);
+    const recitalResult = await db.query(recitalsQuery, recitalsParams);
 
-    const articleRows = articleStmt.all(...articlesParams) as Array<{
+    const articleRows = articleResult.rows as Array<{
       regulation: string;
       article: string;
       title: string;
@@ -135,7 +131,7 @@ export async function searchRegulations(
       type: 'article' | 'recital';
     }>;
 
-    const recitalRows = recitalStmt.all(...recitalsParams) as Array<{
+    const recitalRows = recitalResult.rows as Array<{
       regulation: string;
       article: string;
       title: string;
@@ -164,8 +160,8 @@ export async function searchRegulations(
 
     return combined;
   } catch (error) {
-    // If FTS5 query fails (e.g., syntax error), return empty results
-    if (error instanceof Error && error.message.includes('fts5')) {
+    // If query fails (e.g., syntax error), return empty results
+    if (error instanceof Error && error.message.includes('tsquery')) {
       return [];
     }
     throw error;
