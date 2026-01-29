@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 export interface GetArticleInput {
   regulation: string;
@@ -20,7 +20,7 @@ export interface Article {
 }
 
 export async function getArticle(
-  db: Database,
+  db: DatabaseAdapter,
   input: GetArticleInput
 ): Promise<Article | null> {
   const { regulation, article } = input;
@@ -35,10 +35,16 @@ export async function getArticle(
       recitals,
       cross_references
     FROM articles
-    WHERE regulation = ? AND article_number = ?
+    WHERE regulation = $1 AND article_number = $2
   `;
 
-  const row = db.prepare(sql).get(regulation, article) as {
+  const result = await db.query(sql, [regulation, article]);
+
+  if (result.rows.length === 0) {
+    return null;
+  }
+
+  const row = result.rows[0] as {
     regulation: string;
     article_number: string;
     title: string | null;
@@ -46,11 +52,7 @@ export async function getArticle(
     chapter: string | null;
     recitals: string | null;
     cross_references: string | null;
-  } | undefined;
-
-  if (!row) {
-    return null;
-  }
+  };
 
   // Token management: Truncate very large articles to prevent context overflow
   const MAX_CHARS = 50000; // ~12,500 tokens (safe for 200k context window)

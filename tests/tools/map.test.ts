@@ -1,17 +1,17 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import { mapControls } from '../../src/tools/map.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('mapControls', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   it('maps a specific ISO 27001 control to regulations', async () => {

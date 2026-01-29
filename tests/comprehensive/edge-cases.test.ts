@@ -9,17 +9,17 @@ import { searchRegulations } from '../../src/tools/search.js';
 import { getArticle } from '../../src/tools/article.js';
 import { getRecital } from '../../src/tools/recital.js';
 import { getDefinitions } from '../../src/tools/definitions.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('Edge Cases & Error Handling', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   describe('Search Query Edge Cases', () => {

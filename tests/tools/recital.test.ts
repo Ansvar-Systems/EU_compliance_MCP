@@ -1,17 +1,17 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import { getRecital } from '../../src/tools/recital.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('getRecital', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   it('should retrieve a specific recital by regulation and number', async () => {

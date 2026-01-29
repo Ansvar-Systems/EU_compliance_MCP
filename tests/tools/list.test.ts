@@ -1,17 +1,17 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import { listRegulations } from '../../src/tools/list.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('listRegulations', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   it('lists all available regulations', async () => {

@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 import { searchRegulations } from './search.js';
 
 export interface CompareInput {
@@ -42,7 +42,7 @@ function extractTimelines(text: string): string | undefined {
 }
 
 export async function compareRequirements(
-  db: Database,
+  db: DatabaseAdapter,
   input: CompareInput
 ): Promise<CompareResult> {
   const { topic, regulations } = input;
@@ -67,13 +67,13 @@ export async function compareRequirements(
       requirements.push(result.snippet.replace(/>>>/g, '').replace(/<<</g, ''));
 
       // Get full text for timeline extraction
-      const fullArticle = db.prepare(`
-        SELECT text FROM articles
-        WHERE regulation = ? AND article_number = ?
-      `).get(regulation, result.article) as { text: string } | undefined;
+      const fullArticleResult = await db.query(
+        `SELECT text FROM articles WHERE regulation = $1 AND article_number = $2`,
+        [regulation, result.article]
+      );
 
-      if (fullArticle) {
-        combinedText += ' ' + fullArticle.text;
+      if (fullArticleResult.rows.length > 0) {
+        combinedText += ' ' + (fullArticleResult.rows[0] as { text: string }).text;
       }
     }
 

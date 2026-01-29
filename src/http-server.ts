@@ -20,6 +20,8 @@ import { dirname, join } from 'path';
 import { randomUUID } from 'crypto';
 
 import { registerTools } from './tools/registry.js';
+import { createSqliteAdapter } from './database/sqlite-adapter.js';
+import type { DatabaseAdapter } from './database/types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -30,12 +32,13 @@ const DB_PATH = process.env.EU_COMPLIANCE_DB_PATH || join(__dirname, '..', 'data
 // HTTP server port
 const PORT = parseInt(process.env.PORT || '3000', 10);
 
-let db: Database.Database;
+let db: DatabaseAdapter;
 
-function getDatabase(): Database.Database {
+function getDatabase(): DatabaseAdapter {
   if (!db) {
     try {
-      db = new Database(DB_PATH, { readonly: true });
+      const sqliteDb = new Database(DB_PATH, { readonly: true });
+      db = createSqliteAdapter(sqliteDb);
     } catch (error) {
       throw new Error(`Failed to open database at ${DB_PATH}: ${error}`);
     }

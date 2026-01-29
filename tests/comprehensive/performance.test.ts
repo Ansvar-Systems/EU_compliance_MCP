@@ -8,17 +8,17 @@ import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import { searchRegulations } from '../../src/tools/search.js';
 import { getArticle } from '../../src/tools/article.js';
 import { mapControls } from '../../src/tools/map.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('Performance & Scalability', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   describe('FTS5 Query Performance', () => {
