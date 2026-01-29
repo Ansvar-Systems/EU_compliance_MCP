@@ -38,3 +38,4 @@ internal/
 
 # Git worktrees (isolated feature branches)
 .worktrees/
+.dev.vars

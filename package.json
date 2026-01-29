@@ -30,7 +30,10 @@
     "migrate:postgres": "tsx scripts/migrate-to-postgres.ts",
     "lint": "eslint src --ext .ts",
     "prepare": "test -f dist/index.js || npm run build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "worker:dev": "wrangler dev src/worker.ts",
+    "worker:deploy": "wrangler deploy",
+    "worker:tail": "wrangler tail"
   },
   "keywords": [
     "mcp",
@@ -79,7 +82,8 @@
     "puppeteer": "^24.36.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "wrangler": "^4.61.0"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.3",
