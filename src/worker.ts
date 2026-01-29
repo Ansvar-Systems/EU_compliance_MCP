@@ -53,6 +53,7 @@ interface Env {
   DATABASE_URL: string;
   RATE_LIMIT_MAX_REQUESTS?: string;
   RATE_LIMIT_WINDOW_MS?: string;
+  NODE_ENV?: string;
 }
 
 // Global instances (initialized on first request)
@@ -101,9 +102,9 @@ function getClientIP(request: Request): string {
  * Only allows requests from approved AI assistant origins.
  *
  * @param origin - The Origin header from the request
- * @returns CORS headers for the response
+ * @returns CORS headers for the response, or null if origin is not allowed
  */
-function corsHeaders(origin?: string): HeadersInit {
+function corsHeaders(origin?: string): HeadersInit | null {
   const allowedOrigins = [
     'https://chat.openai.com',
     'https://chatgpt.com',
@@ -111,15 +112,49 @@ function corsHeaders(origin?: string): HeadersInit {
     'https://github.com',
   ];
 
-  const allowOrigin =
-    origin && allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  // If no origin or origin not in allowed list, return null
+  if (!origin || !allowedOrigins.includes(origin)) {
+    return null;
+  }
 
   return {
-    'Access-Control-Allow-Origin': allowOrigin,
+    'Access-Control-Allow-Origin': origin,
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Access-Control-Max-Age': '86400',
   };
+}
+
+/**
+ * Safely merge CORS headers, rejecting the request if origin is not allowed.
+ * Used in responses that don't have access to request origin.
+ *
+ * @param baseHeaders - Base headers to merge with CORS headers
+ * @param origin - The Origin header from the request
+ * @returns Merged headers, or generates a 403 response if origin not allowed
+ */
+function mergeCorsHeaders(
+  baseHeaders: HeadersInit,
+  origin?: string
+): HeadersInit | Response {
+  const cors = corsHeaders(origin);
+
+  if (!cors) {
+    return new Response(
+      JSON.stringify({
+        error: 'Forbidden',
+        message: 'Origin not allowed',
+      }),
+      {
+        status: 403,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+  }
+
+  return { ...baseHeaders, ...cors };
 }
 
 /**
@@ -129,7 +164,16 @@ function corsHeaders(origin?: string): HeadersInit {
  * GET /tools
  * Response: { "tools": [{ "name": "...", "description": "...", "inputSchema": {...} }] }
  */
-function handleListTools(): Response {
+function handleListTools(origin?: string): Response {
+  const headers = mergeCorsHeaders(
+    { 'Content-Type': 'application/json' },
+    origin
+  );
+
+  if (headers instanceof Response) {
+    return headers;
+  }
+
   return new Response(
     JSON.stringify({
       tools: TOOLS.map(tool => ({
@@ -142,10 +186,7 @@ function handleListTools(): Response {
     }),
     {
       status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        ...corsHeaders(),
-      },
+      headers,
     }
   );
 }
@@ -157,7 +198,14 @@ function handleListTools(): Response {
  * GET /health
  * Response: { "status": "healthy|unhealthy", "database": "connected|error", ... }
  */
-async function handleHealthCheck(env: Env): Promise<Response> {
+async function handleHealthCheck(env: Env, origin?: string): Promise<Response> {
+  const baseHeaders = { 'Content-Type': 'application/json' };
+  const headers = mergeCorsHeaders(baseHeaders, origin);
+
+  if (headers instanceof Response) {
+    return headers;
+  }
+
   try {
     const database = await getDatabase(env);
 
@@ -174,10 +222,7 @@ async function handleHealthCheck(env: Env): Promise<Response> {
       }),
       {
         status: 200,
-        headers: {
-          'Content-Type': 'application/json',
-          ...corsHeaders(),
-        },
+        headers,
       }
     );
   } catch (error) {
@@ -189,10 +234,7 @@ async function handleHealthCheck(env: Env): Promise<Response> {
       }),
       {
         status: 503,
-        headers: {
-          'Content-Type': 'application/json',
-          ...corsHeaders(),
-        },
+        headers,
       }
     );
   }
@@ -203,10 +245,29 @@ async function handleHealthCheck(env: Env): Promise<Response> {
  * Returns 429 status with retry information.
  *
  * @param resetAt - Timestamp when rate limit resets
+ * @param limit - The actual rate limit
+ * @param origin - The Origin header from the request
  * @returns 429 response with retry headers
  */
-function rateLimitResponse(resetAt: number): Response {
+function rateLimitResponse(
+  resetAt: number,
+  limit: number,
+  origin?: string
+): Response {
   const resetDate = new Date(resetAt);
+  const baseHeaders = {
+    'Content-Type': 'application/json',
+    'Retry-After': Math.ceil((resetAt - Date.now()) / 1000).toString(),
+    'X-RateLimit-Limit': limit.toString(),
+    'X-RateLimit-Remaining': '0',
+    'X-RateLimit-Reset': resetDate.toISOString(),
+  };
+
+  const headers = mergeCorsHeaders(baseHeaders, origin);
+
+  if (headers instanceof Response) {
+    return headers;
+  }
 
   return new Response(
     JSON.stringify({
@@ -217,14 +278,7 @@ function rateLimitResponse(resetAt: number): Response {
     }),
     {
       status: 429,
-      headers: {
-        'Content-Type': 'application/json',
-        'Retry-After': Math.ceil((resetAt - Date.now()) / 1000).toString(),
-        'X-RateLimit-Limit': '100',
-        'X-RateLimit-Remaining': '0',
-        'X-RateLimit-Reset': resetDate.toISOString(),
-        ...corsHeaders(),
-      },
+      headers,
     }
   );
 }
@@ -247,16 +301,125 @@ async function handleToolCall(
 ): Promise<Response> {
   const limiter = getRateLimiter(env);
   const clientIP = getClientIP(request);
+  const origin = request.headers.get('Origin') || undefined;
 
   // Check rate limit
   const rateLimitInfo = limiter.getRateLimitInfo(clientIP);
   if (!rateLimitInfo.allowed) {
-    return rateLimitResponse(rateLimitInfo.resetAt);
+    return rateLimitResponse(
+      rateLimitInfo.resetAt,
+      limiter['maxRequests'],
+      origin
+    );
+  }
+
+  // Check request size (max 100KB)
+  const contentLength = request.headers.get('Content-Length');
+  const maxSize = 100 * 1024; // 100KB
+  if (contentLength && parseInt(contentLength) > maxSize) {
+    const baseHeaders = {
+      'Content-Type': 'application/json',
+      'X-RateLimit-Limit': limiter['maxRequests'].toString(),
+      'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
+      'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
+    };
+    const headers = mergeCorsHeaders(baseHeaders, origin);
+
+    if (headers instanceof Response) {
+      return headers;
+    }
+
+    return new Response(
+      JSON.stringify({
+        error: 'Payload too large',
+        message: 'Request body must not exceed 100KB',
+      }),
+      {
+        status: 413,
+        headers,
+      }
+    );
   }
 
   try {
     const database = await getDatabase(env);
     const body = (await request.json()) as any;
+
+    // Input validation
+    if (!body || typeof body !== 'object') {
+      const baseHeaders = {
+        'Content-Type': 'application/json',
+        'X-RateLimit-Limit': limiter['maxRequests'].toString(),
+        'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
+        'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
+      };
+      const headers = mergeCorsHeaders(baseHeaders, origin);
+
+      if (headers instanceof Response) {
+        return headers;
+      }
+
+      return new Response(
+        JSON.stringify({
+          error: 'Invalid request',
+          message: 'Request body must be a JSON object',
+        }),
+        {
+          status: 400,
+          headers,
+        }
+      );
+    }
+
+    if (!body.tool || typeof body.tool !== 'string') {
+      const baseHeaders = {
+        'Content-Type': 'application/json',
+        'X-RateLimit-Limit': limiter['maxRequests'].toString(),
+        'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
+        'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
+      };
+      const headers = mergeCorsHeaders(baseHeaders, origin);
+
+      if (headers instanceof Response) {
+        return headers;
+      }
+
+      return new Response(
+        JSON.stringify({
+          error: 'Invalid request',
+          message: 'Missing or invalid "tool" field (must be a string)',
+        }),
+        {
+          status: 400,
+          headers,
+        }
+      );
+    }
+
+    if (body.params !== undefined && typeof body.params !== 'object') {
+      const baseHeaders = {
+        'Content-Type': 'application/json',
+        'X-RateLimit-Limit': limiter['maxRequests'].toString(),
+        'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
+        'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
+      };
+      const headers = mergeCorsHeaders(baseHeaders, origin);
+
+      if (headers instanceof Response) {
+        return headers;
+      }
+
+      return new Response(
+        JSON.stringify({
+          error: 'Invalid request',
+          message: 'Invalid "params" field (must be an object if provided)',
+        }),
+        {
+          status: 400,
+          headers,
+        }
+      );
+    }
 
     let result: any;
 
@@ -290,6 +453,18 @@ async function handleToolCall(
         result = await getEvidenceRequirements(database, body.params);
         break;
       default:
+        const baseHeaders = {
+          'Content-Type': 'application/json',
+          'X-RateLimit-Limit': limiter['maxRequests'].toString(),
+          'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
+          'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
+        };
+        const headers = mergeCorsHeaders(baseHeaders, origin);
+
+        if (headers instanceof Response) {
+          return headers;
+        }
+
         return new Response(
           JSON.stringify({
             error: 'Unknown tool',
@@ -297,18 +472,24 @@ async function handleToolCall(
           }),
           {
             status: 400,
-            headers: {
-              'Content-Type': 'application/json',
-              'X-RateLimit-Limit': limiter['maxRequests'].toString(),
-              'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
-              'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
-              ...corsHeaders(request.headers.get('Origin') || undefined),
-            },
+            headers,
           }
         );
     }
 
     // Return successful response
+    const successHeaders = {
+      'Content-Type': 'application/json',
+      'X-RateLimit-Limit': limiter['maxRequests'].toString(),
+      'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
+      'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
+    };
+    const headers = mergeCorsHeaders(successHeaders, origin);
+
+    if (headers instanceof Response) {
+      return headers;
+    }
+
     return new Response(
       JSON.stringify({
         result,
@@ -316,27 +497,42 @@ async function handleToolCall(
       }),
       {
         status: 200,
-        headers: {
-          'Content-Type': 'application/json',
-          'X-RateLimit-Limit': limiter['maxRequests'].toString(),
-          'X-RateLimit-Remaining': rateLimitInfo.remaining.toString(),
-          'X-RateLimit-Reset': new Date(rateLimitInfo.resetAt).toISOString(),
-          ...corsHeaders(request.headers.get('Origin') || undefined),
-        },
+        headers,
       }
     );
   } catch (error) {
+    // Log full error details for debugging
+    console.error('Tool execution error:', {
+      error: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      timestamp: new Date().toISOString(),
+    });
+
+    // Sanitize error message for client
+    const isDevelopment = env.NODE_ENV === 'development';
+    const errorMessage = isDevelopment
+      ? error instanceof Error
+        ? error.message
+        : 'Unknown error'
+      : 'An error occurred while processing your request';
+
+    const errorHeaders = {
+      'Content-Type': 'application/json',
+    };
+    const headers = mergeCorsHeaders(errorHeaders, origin);
+
+    if (headers instanceof Response) {
+      return headers;
+    }
+
     return new Response(
       JSON.stringify({
         error: 'Internal server error',
-        message: error instanceof Error ? error.message : 'Unknown error',
+        message: errorMessage,
       }),
       {
         status: 500,
-        headers: {
-          'Content-Type': 'application/json',
-          ...corsHeaders(request.headers.get('Origin') || undefined),
-        },
+        headers,
       }
     );
   }
@@ -348,58 +544,95 @@ async function handleToolCall(
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    const origin = request.headers.get('Origin') || undefined;
 
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
+      const headers = corsHeaders(origin);
+      if (!headers) {
+        return new Response(
+          JSON.stringify({
+            error: 'Forbidden',
+            message: 'Origin not allowed',
+          }),
+          {
+            status: 403,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+      }
+
       return new Response(null, {
         status: 204,
-        headers: corsHeaders(request.headers.get('Origin') || undefined),
+        headers,
       });
     }
 
     // Route handling
     switch (url.pathname) {
       case '/health':
-        return handleHealthCheck(env);
+        return handleHealthCheck(env, origin);
 
       case '/tools':
         if (request.method !== 'GET') {
+          const baseHeaders = {
+            'Content-Type': 'application/json',
+            Allow: 'GET',
+          };
+          const headers = mergeCorsHeaders(baseHeaders, origin);
+
+          if (headers instanceof Response) {
+            return headers;
+          }
+
           return new Response(
             JSON.stringify({ error: 'Method not allowed' }),
             {
               status: 405,
-              headers: {
-                'Content-Type': 'application/json',
-                Allow: 'GET',
-                ...corsHeaders(),
-              },
+              headers,
             }
           );
         }
-        return handleListTools();
+        return handleListTools(origin);
 
       case '/api/tool':
         if (request.method !== 'POST') {
+          const baseHeaders = {
+            'Content-Type': 'application/json',
+            Allow: 'POST',
+          };
+          const headers = mergeCorsHeaders(baseHeaders, origin);
+
+          if (headers instanceof Response) {
+            return headers;
+          }
+
           return new Response(
             JSON.stringify({ error: 'Method not allowed' }),
             {
               status: 405,
-              headers: {
-                'Content-Type': 'application/json',
-                Allow: 'POST',
-                ...corsHeaders(),
-              },
+              headers,
             }
           );
         }
         return handleToolCall(request, env);
 
-      case '/':
+      case '/': {
+        const baseHeaders = { 'Content-Type': 'application/json' };
+        const headers = mergeCorsHeaders(baseHeaders, origin);
+
+        if (headers instanceof Response) {
+          return headers;
+        }
+
         return new Response(
           JSON.stringify({
             server: 'eu-regulations-mcp',
             version: '0.6.5',
-            description: 'HTTP API for EU cybersecurity regulations (ChatGPT/Copilot compatible)',
+            description:
+              'HTTP API for EU cybersecurity regulations (ChatGPT/Copilot compatible)',
             endpoints: {
               '/': 'API documentation (this page)',
               '/health': 'Health check (GET)',
@@ -437,26 +670,30 @@ export default {
             },
             rateLimits: {
               requests: '100 per hour per IP',
-              headers: 'X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset',
+              headers:
+                'X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset',
             },
           }),
           {
             status: 200,
-            headers: {
-              'Content-Type': 'application/json',
-              ...corsHeaders(),
-            },
+            headers,
           }
         );
+      }
 
-      default:
+      default: {
+        const baseHeaders = { 'Content-Type': 'application/json' };
+        const headers = mergeCorsHeaders(baseHeaders, origin);
+
+        if (headers instanceof Response) {
+          return headers;
+        }
+
         return new Response(JSON.stringify({ error: 'Not found' }), {
           status: 404,
-          headers: {
-            'Content-Type': 'application/json',
-            ...corsHeaders(),
-          },
+          headers,
         });
+      }
     }
   },
 
