@@ -111,10 +111,23 @@ Once connected, just ask naturally:
 
 ### Why This Works
 
+**Verbatim Source Text (Zero Hallucination Risk):**
+- All article text comes directly from EUR-Lex/UNECE official sources
+- Snippets are returned **unchanged** from SQLite FTS5 database rows
+- No LLM summarization, no paraphrasing — what you read is what's in the regulation
+- This is **more reliable** than manual EUR-Lex copy-paste (no human transcription errors)
+
 **Smart Context Management:**
-- Search returns **relevant snippets**, not entire regulations
-- Article retrieval includes **token usage warnings** for large content
-- Cross-references help navigate without loading everything
+- Search returns **32-token snippets** with highlighted matches (safe for context)
+- Article retrieval warns about token usage (some articles = 70k tokens)
+- Cross-references help navigate without loading everything at once
+
+**Technical Architecture:**
+```
+User query → SQLite FTS5 → Database rows (verbatim) → MCP response
+            ↑
+            No LLM processing here — deterministic database lookup
+```
 
 ### Example: EUR-Lex vs. This MCP
 
