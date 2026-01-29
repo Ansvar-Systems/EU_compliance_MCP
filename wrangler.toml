@@ -12,9 +12,9 @@ RATE_LIMIT_WINDOW_MS = "3600000"  # 1 hour
 # Secrets (set with: wrangler secret put <NAME>)
 # - DATABASE_URL: PostgreSQL connection string
 
-# Resource limits
-[limits]
-cpu_ms = 30000  # 30 seconds max CPU time
+# Resource limits (requires paid plan)
+# [limits]
+# cpu_ms = 30000  # 30 seconds max CPU time
 
 # Development settings
 [env.dev]
@@ -26,9 +26,12 @@ NODE_ENV = "development"
 # Production settings
 [env.production]
 name = "eu-regulations-mcp"
-routes = [
-  { pattern = "mcp.ansvar.eu", custom_domain = true }
-]
+# Custom domain - uncomment after setting up DNS in Cloudflare
+# routes = [
+#   { pattern = "mcp.ansvar.eu", custom_domain = true }
+# ]
 
 [env.production.vars]
 NODE_ENV = "production"
+RATE_LIMIT_MAX_REQUESTS = "100"
+RATE_LIMIT_WINDOW_MS = "3600000"  # 1 hour
