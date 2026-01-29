@@ -9,6 +9,24 @@ export interface RateLimitInfo {
   resetAt: number;
 }
 
+/**
+ * Fixed-window rate limiter for IP-based request throttling.
+ *
+ * Uses fixed time windows that reset at specific intervals. This is simpler
+ * than true sliding windows but allows burst traffic at window boundaries
+ * (e.g., 100 requests at 09:59:59 + 100 at 10:00:01 = 200 in 2 seconds).
+ *
+ * Trade-off accepted: Simplicity and performance over burst protection.
+ * Suitable for basic rate limiting where occasional bursts are acceptable.
+ *
+ * @example
+ * const limiter = new RateLimiter(100, 3600000); // 100 requests per hour
+ * if (limiter.checkLimit(clientIP)) {
+ *   // Allow request
+ * } else {
+ *   // Return 429 Too Many Requests
+ * }
+ */
 export class RateLimiter {
   private records = new Map<string, RateLimitRecord>();
   private readonly maxRequests: number;
@@ -39,6 +57,7 @@ export class RateLimiter {
 
     // Clean up if window expired
     if (record && now > record.resetAt) {
+      this.records.delete(ip);
       record = undefined;
     }
 
