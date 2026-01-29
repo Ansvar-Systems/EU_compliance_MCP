@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createPostgresAdapter } from '../../src/database/postgres-adapter.js';
 import type { DatabaseAdapter } from '../../src/database/types.js';
 
-describe('PostgresAdapter', () => {
+describe.skipIf(!process.env.TEST_DATABASE_URL && !process.env.DATABASE_URL)('PostgresAdapter', () => {
   let adapter: DatabaseAdapter;
 
   beforeAll(async () => {

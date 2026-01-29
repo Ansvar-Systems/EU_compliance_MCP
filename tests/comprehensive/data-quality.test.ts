@@ -18,41 +18,38 @@ describe('Data Quality & Integrity', () => {
     await closeTestDatabase(db);
   });
 
-  it('articles table count matches FTS5 index', () => {
-    const articlesCount = db
-      .prepare('SELECT COUNT(*) as count FROM articles')
-      .get() as { count: number };
-    const ftsCount = db
-      .prepare('SELECT COUNT(*) as count FROM articles_fts')
-      .get() as { count: number };
+  it('articles table count matches FTS5 index', async () => {
+    const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
+    const ftsResult = await db.query('SELECT COUNT(*) as count FROM articles_fts');
+
+    const articlesCount = articlesResult.rows[0] as { count: number };
+    const ftsCount = ftsResult.rows[0] as { count: number };
 
     expect(articlesCount.count).toBe(ftsCount.count);
     expect(articlesCount.count).toBeGreaterThan(0); // Test DB has 14 articles
   });
 
-  it('verifies recitals exist for regulations that have them', () => {
-    const regulationsWithRecitals = db
-      .prepare('SELECT DISTINCT regulation FROM recitals')
-      .all();
+  it('verifies recitals exist for regulations that have them', async () => {
+    const result = await db.query('SELECT DISTINCT regulation FROM recitals');
+    const regulationsWithRecitals = result.rows;
 
     // Test DB has 3 regulations with recitals (GDPR, NIS2, DORA)
     expect(regulationsWithRecitals.length).toBeGreaterThan(0);
 
     // Verify recitals have valid regulation references
-    const orphanedRecitals = db
-      .prepare(`
+    const orphanedResult = await db.query(`
         SELECT r.regulation
         FROM recitals r
         LEFT JOIN regulations reg ON r.regulation = reg.id
         WHERE reg.id IS NULL
-      `)
-      .all();
+      `);
 
-    expect(orphanedRecitals).toHaveLength(0);
+    expect(orphanedResult.rows).toHaveLength(0);
   });
 
-  it('definitions reference valid regulations', () => {
-    const definitions = db.prepare('SELECT * FROM definitions').all() as Array<{
+  it('definitions reference valid regulations', async () => {
+    const result = await db.query('SELECT * FROM definitions');
+    const definitions = result.rows as Array<{
       regulation: string;
       term: string;
       article: string;
@@ -62,15 +59,14 @@ describe('Data Quality & Integrity', () => {
 
     // Verify regulations exist (even if articles might not in test fixture)
     for (const def of definitions) {
-      const regExists = db.prepare('SELECT id FROM regulations WHERE id = ?').get(def.regulation);
-      expect(regExists).toBeDefined();
+      const regResult = await db.query('SELECT id FROM regulations WHERE id = $1', [def.regulation]);
+      expect(regResult.rows[0]).toBeDefined();
     }
   });
 
-  it('control mappings have valid structure', () => {
-    const mappings = db
-      .prepare('SELECT * FROM control_mappings LIMIT 10')
-      .all() as Array<{
+  it('control mappings have valid structure', async () => {
+    const result = await db.query('SELECT * FROM control_mappings LIMIT 10');
+    const mappings = result.rows as Array<{
         regulation: string;
         articles: string;
         framework: string;
@@ -82,8 +78,8 @@ describe('Data Quality & Integrity', () => {
 
     for (const mapping of mappings) {
       // Verify regulation exists
-      const regExists = db.prepare('SELECT id FROM regulations WHERE id = ?').get(mapping.regulation);
-      expect(regExists).toBeDefined();
+      const regResult = await db.query('SELECT id FROM regulations WHERE id = $1', [mapping.regulation]);
+      expect(regResult.rows[0]).toBeDefined();
 
       // Verify articles field is valid JSON array
       const articles = JSON.parse(mapping.articles) as string[];
@@ -95,8 +91,9 @@ describe('Data Quality & Integrity', () => {
     }
   });
 
-  it('all regulations table entries are valid', () => {
-    const regulations = db.prepare('SELECT * FROM regulations').all() as Array<{
+  it('all regulations table entries are valid', async () => {
+    const result = await db.query('SELECT * FROM regulations');
+    const regulations = result.rows as Array<{
       id: string;
       full_name: string;
       celex_id: string;
@@ -113,50 +110,45 @@ describe('Data Quality & Integrity', () => {
     }
   });
 
-  it('no duplicate articles for same regulation', () => {
-    const duplicates = db
-      .prepare(
+  it('no duplicate articles for same regulation', async () => {
+    const result = await db.query(
         `
         SELECT regulation, article_number, COUNT(*) as count
         FROM articles
         GROUP BY regulation, article_number
         HAVING count > 1
       `
-      )
-      .all();
+      );
 
-    expect(duplicates).toHaveLength(0);
+    expect(result.rows).toHaveLength(0);
   });
 
-  it('all regulations have at least one article', () => {
-    const regulationsWithoutArticles = db
-      .prepare(
+  it('all regulations have at least one article', async () => {
+    const result = await db.query(
         `
         SELECT r.id
         FROM regulations r
         LEFT JOIN articles a ON r.id = a.regulation
         WHERE a.rowid IS NULL
       `
-      )
-      .all();
+      );
 
-    expect(regulationsWithoutArticles).toHaveLength(0);
+    expect(result.rows).toHaveLength(0);
   });
 
-  it('FTS5 index contains same text as articles table', () => {
-    const randomArticle = db
-      .prepare('SELECT rowid, text FROM articles ORDER BY RANDOM() LIMIT 1')
-      .get() as { rowid: number; text: string };
+  it('FTS5 index contains same text as articles table', async () => {
+    const articleResult = await db.query('SELECT rowid, text FROM articles ORDER BY RANDOM() LIMIT 1');
+    const randomArticle = articleResult.rows[0] as { rowid: number; text: string };
 
-    const ftsEntry = db
-      .prepare('SELECT text FROM articles_fts WHERE rowid = ?')
-      .get(randomArticle.rowid) as { text: string };
+    const ftsResult = await db.query('SELECT text FROM articles_fts WHERE rowid = $1', [randomArticle.rowid]);
+    const ftsEntry = ftsResult.rows[0] as { text: string };
 
     expect(ftsEntry.text).toBe(randomArticle.text);
   });
 
-  it('applicability rules reference valid regulations', () => {
-    const rules = db.prepare('SELECT DISTINCT regulation FROM applicability_rules').all() as Array<{
+  it('applicability rules reference valid regulations', async () => {
+    const result = await db.query('SELECT DISTINCT regulation FROM applicability_rules');
+    const rules = result.rows as Array<{
       regulation: string;
     }>;
 
@@ -164,15 +156,14 @@ describe('Data Quality & Integrity', () => {
     expect(rules.length).toBeGreaterThan(0);
 
     for (const rule of rules) {
-      const regExists = db.prepare('SELECT id FROM regulations WHERE id = ?').get(rule.regulation);
-      expect(regExists).toBeDefined();
+      const regResult = await db.query('SELECT id FROM regulations WHERE id = $1', [rule.regulation]);
+      expect(regResult.rows[0]).toBeDefined();
     }
   });
 
-  it('control mappings have valid framework types', () => {
-    const frameworks = db
-      .prepare('SELECT DISTINCT framework FROM control_mappings')
-      .all() as Array<{ framework: string }>;
+  it('control mappings have valid framework types', async () => {
+    const result = await db.query('SELECT DISTINCT framework FROM control_mappings');
+    const frameworks = result.rows as Array<{ framework: string }>;
 
     const validFrameworks = ['ISO27001', 'NIST_CSF'];
 

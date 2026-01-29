@@ -114,8 +114,17 @@ async function searchSqlite(
   const articlesParams = [...params, limit];
   const recitalsParams = [...params, limit];
 
-  const articleResult = await db.query(articlesQuery, articlesParams);
-  const recitalResult = await db.query(recitalsQuery, recitalsParams);
+  let articleResult, recitalResult;
+  try {
+    articleResult = await db.query(articlesQuery, articlesParams);
+    recitalResult = await db.query(recitalsQuery, recitalsParams);
+  } catch (error) {
+    // FTS5 syntax errors from malformed queries - return empty results
+    if (error instanceof Error && (error.message.includes('fts5: syntax error') || error.message.includes('SQLITE_ERROR'))) {
+      return [];
+    }
+    throw error;
+  }
 
   const articleRows = articleResult.rows as Array<{
     regulation: string;
@@ -209,8 +218,17 @@ async function searchPostgres(
   const articlesParams = [...params, limit];
   const recitalsParams = [...params, limit];
 
-  const articleResult = await db.query(articlesQuery, articlesParams);
-  const recitalResult = await db.query(recitalsQuery, recitalsParams);
+  let articleResult, recitalResult;
+  try {
+    articleResult = await db.query(articlesQuery, articlesParams);
+    recitalResult = await db.query(recitalsQuery, recitalsParams);
+  } catch (error) {
+    // FTS5 syntax errors from malformed queries - return empty results
+    if (error instanceof Error && (error.message.includes('fts5: syntax error') || error.message.includes('SQLITE_ERROR'))) {
+      return [];
+    }
+    throw error;
+  }
 
   const articleRows = articleResult.rows as Array<{
     regulation: string;

@@ -9,7 +9,7 @@ import { getDefinitions } from '../../src/tools/definitions.js';
 import { checkApplicability } from '../../src/tools/applicability.js';
 import { mapControls } from '../../src/tools/map.js';
 
-describe('MCP Tools with PostgreSQL', () => {
+describe.skipIf(!process.env.DATABASE_URL)('MCP Tools with PostgreSQL', () => {
   let db: DatabaseAdapter;
 
   beforeAll(async () => {
