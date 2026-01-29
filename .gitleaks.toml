@@ -1,0 +1,33 @@
+# Gitleaks configuration for EU Regulations MCP
+# https://github.com/gitleaks/gitleaks
+
+title = "EU Regulations MCP - Secret Detection"
+
+[extend]
+# Use default gitleaks rules
+useDefault = true
+
+[allowlist]
+description = "Known false positives and example credentials"
+
+# Example/development tokens in documentation
+regexes = [
+  '''dev-token''',
+  '''example-token''',
+  '''your-token-here''',
+  '''<password>''',
+  '''user:pass''',
+  '''postgres:postgres''',  # Default docker compose credentials
+  ''':\*\*\*@''',            # Masked password format: :***@
+]
+
+# Files to skip
+paths = [
+  '''internal/.*''',
+  '''.*HANDOVER.*\.md$''',
+  '''\.dev\.vars$''',
+  '''\.env\.local$''',
+  '''tests/fixtures/.*''',
+  '''examples/.*''',
+  '''\.mcpregistry_.*''',  # MCP registry tokens (gitignored)
+]
