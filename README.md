@@ -111,11 +111,11 @@ Once connected, just ask naturally:
 
 ### Why This Works
 
-**Verbatim Source Text (Zero Hallucination Risk):**
-- All article text comes directly from EUR-Lex/UNECE official sources
+**Verbatim Source Text (No LLM Processing):**
+- All article text is ingested from EUR-Lex/UNECE official sources
 - Snippets are returned **unchanged** from SQLite FTS5 database rows
-- No LLM summarization, no paraphrasing — what you read is what's in the regulation
-- This is **more reliable** than manual EUR-Lex copy-paste (no human transcription errors)
+- Zero LLM summarization or paraphrasing — the database contains regulation text, not AI interpretations
+- **Note:** HTML-to-text conversion normalizes whitespace/formatting, but preserves content
 
 **Smart Context Management:**
 - Search returns **32-token snippets** with highlighted matches (safe for context)
@@ -124,9 +124,9 @@ Once connected, just ask naturally:
 
 **Technical Architecture:**
 ```
-User query → SQLite FTS5 → Database rows (verbatim) → MCP response
-            ↑
-            No LLM processing here — deterministic database lookup
+EUR-Lex HTML → Parse → SQLite → FTS5 snippet() → MCP response
+                  ↑                    ↑
+           Formatting only      Verbatim database query
 ```
 
 ### Example: EUR-Lex vs. This MCP
