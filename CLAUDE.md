@@ -1,5 +1,7 @@
 # EU Regulations MCP Server - Development Guide
 
+**Part of the Ansvar MCP Suite** → See [central architecture docs](https://github.com/Ansvar-Systems/security-controls-mcp/blob/main/docs/ANSVAR_MCP_ARCHITECTURE.md) for complete suite documentation
+
 ## Project Overview
 
 MCP server providing searchable access to EU cybersecurity regulations. Local-first architecture using TypeScript, SQLite + FTS5.
