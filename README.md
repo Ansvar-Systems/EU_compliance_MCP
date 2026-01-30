@@ -233,6 +233,16 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 - **EU/US Regulations MCPs** tell you WHAT compliance requirements you must meet
 - **Security Controls MCP** tells you HOW to implement controls that satisfy those requirements
 
+### Specialized: OT/ICS Security
+
+### 🏭 [OT Security MCP](https://github.com/Ansvar-Systems/ot-security-mcp)
+**Query IEC 62443, NIST 800-82/53, and MITRE ATT&CK for ICS**
+- Specialized for OT/ICS environments (manufacturing, energy, critical infrastructure)
+- Security levels, Purdue Model, zone/conduit architecture
+- MITRE ATT&CK for ICS threat intelligence
+- **Install:** `npm install @ansvar/ot-security-mcp`
+- **Use case:** NIS2-compliant OT operators, industrial manufacturers, critical infrastructure
+
 ---
 
 ## About Ansvar Systems
