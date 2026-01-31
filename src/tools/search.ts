@@ -32,9 +32,9 @@ function escapeFts5Query(query: string): string {
   }
 
   if (words.length <= 3) {
-    return words.map(word => `"${word}"`).join(' ');
+    return words.join(' ');  // Space is AND in FTS5
   } else {
-    return words.map(word => `${word}*`).join(' OR ');
+    return words.map(word => `${word}*`).join(' OR ');  // Suffix * for prefix matching
   }
 }
 
