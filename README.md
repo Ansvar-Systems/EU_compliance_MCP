@@ -240,8 +240,28 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 - Specialized for OT/ICS environments (manufacturing, energy, critical infrastructure)
 - Security levels, Purdue Model, zone/conduit architecture
 - MITRE ATT&CK for ICS threat intelligence
-- **Install:** `npm install @ansvar/ot-security-mcp`
+- **Install:** `npx @ansvar/ot-security-mcp`
 - **Use case:** NIS2-compliant OT operators, industrial manufacturers, critical infrastructure
+
+### Specialized: Automotive Cybersecurity
+
+### 🚗 [Automotive Cybersecurity MCP](https://github.com/Ansvar-Systems/Automotive-MCP)
+**Query UNECE R155/R156 and ISO 21434**
+- Complete R155/R156 Revision 2 with all articles and annexes
+- ISO 21434 clause guidance and work products
+- R155 ↔ ISO 21434 cross-references
+- **Install:** `npx @ansvar/automotive-cybersecurity-mcp`
+- **Use case:** OEMs, Tier 1/2 suppliers, type approval preparation
+
+### Specialized: Sanctions Screening
+
+### 🚨 [Sanctions MCP](https://github.com/Ansvar-Systems/Sanctions-MCP)
+**Offline-capable sanctions screening for third-party risk**
+- OFAC, EU, UN sanctions lists via OpenSanctions (30+ lists)
+- Fuzzy name matching with confidence scoring
+- PEP (Politically Exposed Person) checks
+- **Install:** `pip install ansvar-sanctions-mcp`
+- **Use case:** DORA Article 28 ICT third-party risk, AML/KYC compliance
 
 ---
 
