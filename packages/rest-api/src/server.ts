@@ -4,11 +4,13 @@
  * REST API Server for EU Regulations (Teams/Copilot integration)
  *
  * Usage:
- *   DATABASE_URL=postgresql://... npm start
+ *   npm start                          # Uses SQLite (bundled database)
+ *   DATABASE_URL=postgresql://... npm start  # Uses PostgreSQL
  *
  * Environment variables:
- *   DATABASE_URL - PostgreSQL connection string (required)
- *   AZURE_CLIENT_ID - Entra ID app client ID (required for auth)
+ *   DATABASE_URL - PostgreSQL connection string (optional, uses SQLite if not set)
+ *   SQLITE_DB_PATH - Path to SQLite database (default: data/regulations.db)
+ *   AZURE_CLIENT_ID - Entra ID app client ID (required for auth in production)
  *   AZURE_TENANT_ID - Entra ID tenant ID (default: common)
  *   ALLOWED_TENANTS - Comma-separated list of allowed tenant IDs (optional)
  *   PORT - Server port (default: 3000)
@@ -20,7 +22,7 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import { createConnection, DatabaseQueries } from '@ansvar/eu-regulations-core';
+import { createDatabaseAdapter, type DatabaseAdapter } from '@ansvar/eu-regulations-core';
 
 import {
   validateEntraIdToken,
@@ -41,18 +43,29 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 async function startServer() {
   console.log('🚀 Starting EU Regulations API Server\n');
 
-  // Initialize database connection
+  // Initialize database adapter (SQLite or PostgreSQL based on config)
   console.log('📊 Connecting to database...');
-  const db = createConnection();
+  let db: DatabaseAdapter;
+
+  try {
+    db = createDatabaseAdapter();
+  } catch (error) {
+    console.error('❌ Failed to create database adapter:', error);
+    process.exit(1);
+  }
+
   const dbHealthy = await db.testConnection();
 
   if (!dbHealthy) {
-    console.error('❌ Database connection failed. Check DATABASE_URL environment variable.');
+    console.error('❌ Database connection failed.');
+    if (process.env.DATABASE_URL) {
+      console.error('   Check DATABASE_URL environment variable.');
+    } else {
+      console.error('   Check SQLITE_DB_PATH or ensure data/regulations.db exists.');
+    }
     process.exit(1);
   }
   console.log('✅ Database connected\n');
-
-  const queries = new DatabaseQueries(db);
 
   // Initialize Express app
   const app = express();
@@ -79,8 +92,10 @@ async function startServer() {
   app.use('/api', validateEntraIdToken);
   app.use('/api', checkTenantAccess);
 
-  app.use('/api/search', createSearchRouter(queries));
-  app.use('/api/articles', createArticlesRouter(queries));
+  // Pass the database adapter to routes
+  // Routes expect DatabaseQueries but DatabaseAdapter has the same interface
+  app.use('/api/search', createSearchRouter(db as any));
+  app.use('/api/articles', createArticlesRouter(db as any));
 
   // Root endpoint
   app.get('/', (req, res) => {
@@ -88,6 +103,7 @@ async function startServer() {
       service: 'eu-regulations-api',
       version: '0.4.1',
       environment: NODE_ENV,
+      database: process.env.DATABASE_URL ? 'postgresql' : 'sqlite',
       endpoints: {
         health: '/health',
         search: 'POST /api/search',
@@ -118,6 +134,7 @@ async function startServer() {
     console.log('='.repeat(60));
     console.log(`Environment: ${NODE_ENV}`);
     console.log(`Port: ${PORT}`);
+    console.log(`Database: ${process.env.DATABASE_URL ? 'PostgreSQL' : 'SQLite'}`);
     console.log(`Health: http://localhost:${PORT}/health`);
     console.log(`API: http://localhost:${PORT}/api`);
     console.log('='.repeat(60));
