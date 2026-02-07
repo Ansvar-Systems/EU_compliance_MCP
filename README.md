@@ -3,7 +3,7 @@
 **The EUR-Lex alternative for the AI age.**
 
 [![npm version](https://badge.fury.io/js/@ansvar%2Feu-regulations-mcp.svg)](https://www.npmjs.com/package/@ansvar/eu-regulations-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/io.github.Ansvar-Systems/eu-regulations-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/EU_compliance_MCP?style=social)](https://github.com/Ansvar-Systems/EU_compliance_MCP)
 [![Daily EUR-Lex Check](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml)
@@ -59,7 +59,7 @@ Restart Claude Desktop. Done!
 **Option 2: MCP Registry**
 
 Browse and install from the [official MCP registry](https://registry.modelcontextprotocol.io/):
-- Search for "EU Regulations" or view directly: [`io.github.Ansvar-Systems/eu-regulations-mcp`](https://registry.modelcontextprotocol.io/io.github.Ansvar-Systems/eu-regulations-mcp)
+- Search for "EU Regulations" or view directly: [`eu.ansvar/eu-regulations-mcp`](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
 - One-click install (when registry integration is live in Claude Desktop)
 - Automatic updates when new versions are released
 
