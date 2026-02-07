@@ -160,6 +160,15 @@ EUR-Lex HTML → Parse → SQLite → FTS5 snippet() → MCP response
 
 ---
 
+## 📚 Documentation
+
+- **[Database SSL/TLS Configuration](docs/DATABASE_SSL.md)** - Secure PostgreSQL connections for Cloudflare Workers deployments
+- **[Security Policy](SECURITY.md)** - Vulnerability reporting and security best practices
+- **[Coverage Gaps](docs/COVERAGE_GAPS.md)** - Known missing content from EUR-Lex
+- **[GitHub Actions Setup](docs/GITHUB_ACTIONS_SETUP.md)** - CI/CD workflow configuration
+
+---
+
 ## ⚠️ Important Disclaimers
 
 ### Legal Advice

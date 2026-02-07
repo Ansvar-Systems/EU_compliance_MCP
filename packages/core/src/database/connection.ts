@@ -3,22 +3,98 @@
  */
 
 import pg from 'pg';
+import fs from 'fs';
+
+/**
+ * Determines SSL configuration based on environment variables.
+ *
+ * SSL Modes (via DATABASE_SSL_MODE):
+ * - "require" (default in production): Use SSL with certificate validation
+ * - "verify-ca": Verify server certificate against custom CA (requires DATABASE_SSL_CA_CERT)
+ * - "allow": Try SSL first, fallback to non-SSL (not recommended for production)
+ * - "disable": No SSL (only for local development)
+ *
+ * Environment Variables:
+ * - DATABASE_SSL_MODE: SSL mode (default: "require" if NODE_ENV=production, else "disable")
+ * - DATABASE_SSL_CA_CERT: Path to custom CA certificate file (for self-signed certs)
+ * - DATABASE_SSL_REJECT_UNAUTHORIZED: Legacy override (use DATABASE_SSL_MODE instead)
+ */
+function getSSLConfig(): pg.ConnectionConfig['ssl'] {
+  const sslMode = process.env.DATABASE_SSL_MODE?.toLowerCase();
+  const isProduction = process.env.NODE_ENV === 'production';
+
+  // Legacy support for rejectUnauthorized env var (with deprecation warning)
+  if (process.env.DATABASE_SSL_REJECT_UNAUTHORIZED === 'false') {
+    console.warn(
+      '⚠️  SECURITY WARNING: DATABASE_SSL_REJECT_UNAUTHORIZED=false is deprecated and insecure.\n' +
+      '   Use DATABASE_SSL_MODE=disable for local dev, or DATABASE_SSL_MODE=verify-ca with DATABASE_SSL_CA_CERT for custom CAs.\n' +
+      '   See: https://github.com/Ansvar-Systems/EU_compliance_MCP/blob/main/docs/DATABASE_SSL.md'
+    );
+    return { rejectUnauthorized: false };
+  }
+
+  // Handle explicit SSL modes
+  switch (sslMode) {
+    case 'disable':
+      if (isProduction) {
+        console.warn(
+          '⚠️  SECURITY WARNING: DATABASE_SSL_MODE=disable in production exposes data to interception.\n' +
+          '   Only use this for local development or private networks.\n' +
+          '   Managed Postgres providers (Neon, Supabase, AWS RDS) use valid certificates - use "require" instead.'
+        );
+      }
+      return undefined;
+
+    case 'allow':
+      console.warn(
+        '⚠️  SECURITY NOTICE: DATABASE_SSL_MODE=allow may fallback to unencrypted connections.\n' +
+        '   Use "require" for production environments.'
+      );
+      return { rejectUnauthorized: true };
+
+    case 'verify-ca': {
+      const caPath = process.env.DATABASE_SSL_CA_CERT;
+      if (!caPath) {
+        throw new Error(
+          'DATABASE_SSL_MODE=verify-ca requires DATABASE_SSL_CA_CERT environment variable.\n' +
+          'Set it to the path of your custom CA certificate file.'
+        );
+      }
+      if (!fs.existsSync(caPath)) {
+        throw new Error(`DATABASE_SSL_CA_CERT file not found: ${caPath}`);
+      }
+      return {
+        rejectUnauthorized: true,
+        ca: fs.readFileSync(caPath, 'utf-8')
+      };
+    }
+
+    case 'require':
+      // Secure default: validates against system CA certificates
+      return { rejectUnauthorized: true };
+
+    default:
+      // Auto-detect: secure in production, disabled in development
+      if (isProduction) {
+        return { rejectUnauthorized: true };
+      }
+      return undefined;
+  }
+}
 
 export class DatabaseConnection {
   private pool: pg.Pool;
   private isConnected: boolean = false;
 
   constructor(connectionString: string) {
+    const sslConfig = getSSLConfig();
+
     this.pool = new pg.Pool({
       connectionString,
       max: 20,                    // Maximum connections in pool
       idleTimeoutMillis: 30000,   // Close idle connections after 30s
       connectionTimeoutMillis: 2000, // Timeout if can't get connection in 2s
-      // SSL configuration for production databases (Neon, AWS RDS, etc.)
-      // Uses system CA certificates by default, or opt-out via env var for local dev
-      ssl: process.env.NODE_ENV === 'production' && process.env.DATABASE_DISABLE_SSL !== 'true'
-        ? { rejectUnauthorized: true }  // Secure by default - validates certificates
-        : undefined
+      ssl: sslConfig
     });
 
     // Handle pool errors
