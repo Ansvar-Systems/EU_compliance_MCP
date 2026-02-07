@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@ansvar/eu-regulations-core": "workspace:*",
-    "@modelcontextprotocol/sdk": "^1.25.3",
+    "@modelcontextprotocol/sdk": "^1.26.0",
     "better-sqlite3": "^12.6.2"
   },
   "devDependencies": {
