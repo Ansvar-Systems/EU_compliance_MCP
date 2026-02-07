@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/eu-regulations-mcp",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "mcpName": "io.github.Ansvar-Systems/eu-regulations-mcp",
   "description": "The first open-source MCP server for European cybersecurity regulations. Query DORA, NIS2, GDPR, EU AI Act, and more directly from Claude.",
   "main": "dist/index.js",
