@@ -213,12 +213,13 @@ The package ships with a **pre-built database** (`data/regulations.db`, ~15MB) c
 | Component | Count | Size |
 |-----------|-------|------|
 | Articles | 2,438 | ~9MB |
-| Recitals | 3,712 (43/47 regulations) | ~5.5MB |
+| Recitals | 3,789 (44/47 regulations) | ~5.5MB |
 | Definitions | 1,138 | ~1MB |
 | Control Mappings | 685 | ~500KB |
 | Applicability Rules | 305 | ~200KB |
+| Evidence Requirements | 407 | ~300KB |
 | FTS5 Index | - | ~900KB |
-| **Total** | **~8,300 entries** | **~18MB** |
+| **Total** | **~8,700 entries** | **~19MB** |
 
 ### When Maintainers Rebuild
 
@@ -317,12 +318,13 @@ The `GITHUB_TOKEN` is automatic and used for:
 |----------|-------|
 | Regulations | 47 |
 | Articles | 2,438 |
-| Recitals | 3,712 (43/47 regulations) |
+| Recitals | 3,789 (44/47 regulations) |
 | Definitions | 1,138 |
 | ISO 27001 Mappings | 312 |
 | NIST CSF 2.0 Mappings | 373 |
 | Applicability Rules | 305 |
-| **Database Size** | **~18MB** |
+| Evidence Requirements | 407 (47/47 regulations) |
+| **Database Size** | **~19MB** |
 
 ## Completed Features
 
@@ -333,4 +335,5 @@ The `GITHUB_TOKEN` is automatic and used for:
 - [x] NIST CSF 2.0 control mappings (373 mappings across all regulations)
 - [x] Sector applicability rules (305 rules across all regulations)
 - [x] Full-text search via SQLite FTS5
-- [x] Cross-regulation comparison tools
+- [x] Cross-regulation comparison with synonym expansion (15 concept families)
+- [x] Evidence requirements for all 47 regulations (407 audit artifacts)

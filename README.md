@@ -107,9 +107,10 @@ Once connected, just ask naturally:
 ## What's Included
 
 - **47 Regulations** — GDPR, DORA, NIS2, AI Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 30 more
-- **2,438 Articles** + 3,712 Recitals + 1,138 Official Definitions
+- **2,438 Articles** + 3,789 Recitals + 1,138 Official Definitions
 - **Full-Text Search** — Find relevant articles across all regulations instantly
-- **Control Mappings** — 686 mappings to ISO 27001:2022 & NIST CSF 2.0
+- **Control Mappings** — 685 mappings to ISO 27001:2022 & NIST CSF 2.0
+- **Evidence Requirements** — 407 audit artifacts across all 47 regulations
 - **Sector Rules** — Check which regulations apply to your industry
 - **Daily Updates** — Automatic freshness checks against EUR-Lex
 
