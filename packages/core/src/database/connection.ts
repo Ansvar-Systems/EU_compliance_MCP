@@ -14,7 +14,11 @@ export class DatabaseConnection {
       max: 20,                    // Maximum connections in pool
       idleTimeoutMillis: 30000,   // Close idle connections after 30s
       connectionTimeoutMillis: 2000, // Timeout if can't get connection in 2s
-      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : undefined
+      // SSL configuration for production databases (Neon, AWS RDS, etc.)
+      // Uses system CA certificates by default, or opt-out via env var for local dev
+      ssl: process.env.NODE_ENV === 'production' && process.env.DATABASE_DISABLE_SSL !== 'true'
+        ? { rejectUnauthorized: true }  // Secure by default - validates certificates
+        : undefined
     });
 
     // Handle pool errors

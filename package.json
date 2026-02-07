@@ -87,7 +87,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@isaacs/brace-expansion": ">=5.0.1"
+      "@isaacs/brace-expansion": ">=5.0.1",
+      "hono": ">=4.11.7"
     }
   },
   "dependencies": {
