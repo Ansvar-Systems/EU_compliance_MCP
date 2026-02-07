@@ -1,6 +1,53 @@
 [
   {
     "regulation": "DORA",
+    "article": "6",
+    "requirement_summary": "ICT risk management framework",
+    "evidence_type": "document",
+    "artifact_name": "ICT Risk Management Framework",
+    "artifact_example": "ICT_Risk_Management_Framework.pdf",
+    "description": "Documented, comprehensive framework for managing ICT risks, approved by management body",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your documented ICT risk management framework with management board approval",
+      "How do you define and measure ICT risk tolerance?",
+      "What is your ICT reference architecture and how does it support business objectives?",
+      "Show me evidence of annual framework reviews"
+    ],
+    "maturity_levels": {
+      "basic": "Documented ICT risk policy exists",
+      "intermediate": "Framework integrated with overall risk management, regular reviews performed",
+      "advanced": "Continuous improvement based on testing/monitoring, executive KPIs tracked"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "GDPR:32"
+    ]
+  },
+  {
+    "regulation": "DORA",
+    "article": "6",
+    "requirement_summary": "Digital operational resilience strategy",
+    "evidence_type": "document",
+    "artifact_name": "Digital Operational Resilience Strategy",
+    "artifact_example": "Digital_Resilience_Strategy_2025.pdf",
+    "description": "Strategic document linking ICT risk management to business objectives with KPIs and metrics",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your digital operational resilience strategy",
+      "What are your key performance indicators for ICT security?",
+      "How does your strategy address detection, prevention, and protection from ICT incidents?",
+      "What is your current digital operational resilience status based on incident metrics?"
+    ],
+    "maturity_levels": {
+      "basic": "Strategy document exists with basic KPIs",
+      "intermediate": "KPIs actively tracked, strategy reviewed annually and updated based on incidents",
+      "advanced": "Real-time KPI dashboards, predictive risk analytics, board-level reporting"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "DORA",
     "article": "8",
     "requirement_summary": "Identification and classification of ICT assets",
     "evidence_type": "document",
@@ -41,7 +88,10 @@
       "intermediate": "Network segmentation, encryption, documented change management",
       "advanced": "Zero-trust architecture, automated threat prevention, continuous security validation"
     },
-    "cross_references": ["GDPR:32", "NIS2:21"]
+    "cross_references": [
+      "GDPR:32",
+      "NIS2:21"
+    ]
   },
   {
     "regulation": "DORA",
@@ -67,6 +117,30 @@
   },
   {
     "regulation": "DORA",
+    "article": "11",
+    "requirement_summary": "ICT business continuity policy and testing",
+    "evidence_type": "test_result",
+    "artifact_name": "BCP Test Report",
+    "artifact_example": "BCP_Test_Report_2025-01-15.pdf",
+    "description": "Annual testing results for ICT business continuity plans including identified gaps and remediation",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "When was your last BCP test? Show me the results",
+      "What scenarios did you test (cyber-attack, infrastructure failure, switchover)?",
+      "What gaps or weaknesses were identified?",
+      "Show me evidence that identified gaps were remediated"
+    ],
+    "maturity_levels": {
+      "basic": "Annual BCP tests conducted, basic documentation",
+      "intermediate": "Tests include cyber-attack scenarios, switchover tests, detailed gap analysis",
+      "advanced": "Continuous testing, automated switchover validation, lessons learned fed back to framework"
+    },
+    "cross_references": [
+      "NIS2:21c"
+    ]
+  },
+  {
+    "regulation": "DORA",
     "article": "12",
     "requirement_summary": "Backup policies and restoration procedures",
     "evidence_type": "test_result",
@@ -85,7 +159,9 @@
       "intermediate": "Automated backups, quarterly restoration tests, RTO/RPO defined",
       "advanced": "Continuous data protection, automated failover, sub-hour RTO/RPO"
     },
-    "cross_references": ["DORA:11"]
+    "cross_references": [
+      "DORA:11"
+    ]
   },
   {
     "regulation": "DORA",
@@ -107,7 +183,9 @@
       "intermediate": "Structured lessons learned process, corrective actions tracked",
       "advanced": "Continuous learning culture, predictive analytics from incident patterns"
     },
-    "cross_references": ["DORA:17"]
+    "cross_references": [
+      "DORA:17"
+    ]
   },
   {
     "regulation": "DORA",
@@ -129,7 +207,35 @@
       "intermediate": "Templates ready, escalation paths defined, stakeholder lists current",
       "advanced": "Automated notifications, multi-channel communication, real-time updates"
     },
-    "cross_references": ["DORA:11", "DORA:19"]
+    "cross_references": [
+      "DORA:11",
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA",
+    "article": "17",
+    "requirement_summary": "ICT incident management process",
+    "evidence_type": "log",
+    "artifact_name": "ICT Incident Log",
+    "artifact_example": "ICT_Incident_Log_2025.csv",
+    "description": "Complete log of all ICT-related incidents with classification, root cause analysis, and resolution",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me your ICT incident log for the past 12 months",
+      "How do you classify incidents by severity and priority?",
+      "For this major incident, show me the root cause analysis",
+      "How do you ensure incidents don't recur? Show me corrective measures implemented"
+    ],
+    "maturity_levels": {
+      "basic": "Incidents logged with basic classification",
+      "intermediate": "Root cause analysis performed, corrective measures tracked, senior management informed of major incidents",
+      "advanced": "Predictive analytics to identify incident patterns, automated early warning indicators, continuous process improvement"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "GDPR:33"
+    ]
   },
   {
     "regulation": "DORA",
@@ -151,7 +257,56 @@
       "intermediate": "Automated classification scoring, clear thresholds",
       "advanced": "AI-assisted classification, real-time impact assessment"
     },
-    "cross_references": ["DORA:17", "DORA:19"]
+    "cross_references": [
+      "DORA:17",
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA",
+    "article": "19",
+    "requirement_summary": "Major ICT incident reporting to authorities",
+    "evidence_type": "document",
+    "artifact_name": "Authority Incident Notification",
+    "artifact_example": "Authority_Notification_INC-2025-001.pdf",
+    "description": "Initial notification, intermediate reports, and final report submitted to competent authority within required timelines",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me all major incident reports submitted to authorities in the past year",
+      "For this incident, when did you become aware vs when did you submit the initial notification?",
+      "Did you meet the required reporting timelines?",
+      "Show me evidence that clients were informed of incidents affecting their financial interests"
+    ],
+    "maturity_levels": {
+      "basic": "Major incidents reported to authorities within required timelines",
+      "intermediate": "Standardized reporting process, automated timeline tracking, client communication protocols",
+      "advanced": "Proactive near-miss reporting, cross-border impact assessment, automated authority notification integration"
+    },
+    "cross_references": [
+      "NIS2:23"
+    ]
+  },
+  {
+    "regulation": "DORA",
+    "article": "24",
+    "requirement_summary": "Digital operational resilience testing programme",
+    "evidence_type": "test_result",
+    "artifact_name": "Digital Resilience Test Results",
+    "artifact_example": "Resilience_Test_Q1_2025.pdf",
+    "description": "Annual testing results for all ICT systems supporting critical/important functions with remediation tracking",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your digital operational resilience testing programme",
+      "What methodology do you use for testing (vulnerability assessments, penetration tests, scenario tests)?",
+      "How do you prioritize and remediate findings?",
+      "Show me evidence that all critical systems were tested in the past year"
+    ],
+    "maturity_levels": {
+      "basic": "Annual testing performed on critical systems",
+      "intermediate": "Risk-based testing programme, independent testers, remediation validation",
+      "advanced": "Continuous testing, threat-led penetration testing (TLPT), automated remediation tracking"
+    },
+    "cross_references": []
   },
   {
     "regulation": "DORA",
@@ -166,15 +321,60 @@
       "Show me your most recent TLPT report",
       "Who conducted the TLPT (internal/external testers)?",
       "What attack scenarios were tested?",
-      "Show me the remediation plan for identified vulnerabilities",
-      "How do you manage risk during TLPT execution?"
+      "Show me the remediation plan for identified vulnerabilities"
     ],
     "maturity_levels": {
       "basic": "TLPT conducted as required (typically 3-year cycle)",
       "intermediate": "Regular TLPT, testers from approved pool, comprehensive scenarios",
       "advanced": "Continuous red team exercises, automated threat intelligence integration"
     },
-    "cross_references": ["DORA:24"]
+    "cross_references": [
+      "DORA:24"
+    ]
+  },
+  {
+    "regulation": "DORA",
+    "article": "28",
+    "requirement_summary": "ICT third-party service provider register",
+    "evidence_type": "document",
+    "artifact_name": "Third-Party ICT Services Register",
+    "artifact_example": "Third_Party_Register_2025.xlsx",
+    "description": "Complete register of all ICT third-party arrangements distinguishing critical/important functions",
+    "retention_period": "Duration of contract + 7 years",
+    "auditor_questions": [
+      "Show me your complete ICT third-party register",
+      "Which services support critical or important functions?",
+      "For this critical provider, show me the due diligence performed before contracting",
+      "Show me your exit strategy for this critical provider"
+    ],
+    "maturity_levels": {
+      "basic": "Register exists with critical/important function designation",
+      "intermediate": "Due diligence documented, audit schedules defined, exit strategies in place",
+      "advanced": "Continuous monitoring of provider risk, concentration risk analysis, automated contract compliance tracking"
+    },
+    "cross_references": []
+  },
+  {
+    "regulation": "DORA",
+    "article": "28",
+    "requirement_summary": "ICT third-party exit strategies",
+    "evidence_type": "document",
+    "artifact_name": "Provider Exit Strategy",
+    "artifact_example": "Exit_Strategy_AWS_CloudServices.pdf",
+    "description": "Documented exit plan for critical/important ICT services including transition procedures and testing results",
+    "retention_period": "Duration of contract + 5 years",
+    "auditor_questions": [
+      "Show me the exit strategy for this critical provider",
+      "Have you tested the exit strategy? Show me test results",
+      "How would you transition data and services to an alternative provider?",
+      "What is your contingency plan if the provider fails unexpectedly?"
+    ],
+    "maturity_levels": {
+      "basic": "Exit strategy documented for critical providers",
+      "intermediate": "Exit strategies tested periodically, alternative providers identified",
+      "advanced": "Automated data portability, multi-cloud architecture enabling rapid switchover"
+    },
+    "cross_references": []
   },
   {
     "regulation": "DORA",
@@ -196,7 +396,9 @@
       "intermediate": "Regular assessment, mitigation strategies, diversification plan",
       "advanced": "Continuous monitoring, automated risk scoring, multi-cloud architecture"
     },
-    "cross_references": ["DORA:28"]
+    "cross_references": [
+      "DORA:28"
+    ]
   },
   {
     "regulation": "DORA",
@@ -218,6 +420,8 @@
       "intermediate": "Standardized template, legal review process, compliance checklist",
       "advanced": "Automated contract compliance monitoring, clause library management"
     },
-    "cross_references": ["DORA:28"]
+    "cross_references": [
+      "DORA:28"
+    ]
   }
 ]

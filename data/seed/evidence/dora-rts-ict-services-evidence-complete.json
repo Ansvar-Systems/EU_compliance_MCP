@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_RTS_ICT_SERVICES",
+    "article": "3",
+    "requirement_summary": "Governance arrangements for ICT third-party services supporting critical or important functions",
+    "evidence_type": "policy",
+    "artifact_name": "ICT Third-Party Services Governance Policy",
+    "artifact_example": "ICT_Third_Party_Governance_Policy.pdf",
+    "description": "Policy establishing governance arrangements for ICT third-party services including annual review cycle, methodology for determining which ICT services support critical or important functions, clear assignment of internal responsibilities for contractual arrangement management, and designation of the senior management role responsible for monitoring. Must ensure contractual consistency with the ICT risk management framework, information security policy, business continuity policy, and incident reporting requirements.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your policy on ICT third-party services with evidence of at least annual review and management body approval.",
+      "What methodology do you use to determine which ICT services support critical or important functions, and when is this assessment conducted?",
+      "Who is the designated senior management member responsible for monitoring contractual arrangements and what are their reporting lines to the management body?",
+      "Demonstrate how your contractual arrangements are consistent with your ICT risk management framework, information security policy, and business continuity policy."
+    ],
+    "maturity_levels": {
+      "basic": "Governance policy exists with defined roles and annual review cycle, basic methodology for criticality determination",
+      "intermediate": "Structured governance with designated senior management oversight, regular reporting to management body, contractual consistency checks performed systematically",
+      "advanced": "Integrated governance framework with automated contractual compliance monitoring, real-time risk dashboards for third-party services, continuous alignment verification with all required policies"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_SERVICES",
+    "article": "5",
+    "requirement_summary": "Ex-ante risk assessment before concluding ICT third-party contractual arrangements",
+    "evidence_type": "document",
+    "artifact_name": "ICT Third-Party Pre-Contractual Risk Assessment",
+    "artifact_example": "ICT_Third_Party_Risk_Assessment_Template.pdf",
+    "description": "Documented risk assessment performed at entity level and where applicable at consolidated and sub-consolidated level before concluding contractual arrangements. Must cover operational risks, legal risks, ICT risks, reputational risks, risks linked to protection of confidential or personal data, risks linked to data availability and location of data processing/storage, risks linked to the ICT third-party service provider location, and ICT concentration risks at entity level.",
+    "retention_period": "Duration of contractual arrangement + 5 years",
+    "auditor_questions": [
+      "Show me a completed pre-contractual risk assessment for a recent ICT third-party arrangement covering all nine risk categories specified in the RTS.",
+      "How do you assess ICT concentration risks at entity level when evaluating new third-party service providers?",
+      "What is your process for evaluating risks linked to the location where data is processed and stored by the ICT third-party provider?",
+      "Demonstrate how the risk assessment outcomes influence the decision to proceed with or reject a proposed contractual arrangement."
+    ],
+    "maturity_levels": {
+      "basic": "Risk assessment template covers all required categories with manual completion before new arrangements",
+      "intermediate": "Standardised risk scoring methodology across all categories, consolidated view of third-party risk exposure, documented risk acceptance decisions",
+      "advanced": "Automated risk scoring with external threat intelligence feeds, dynamic concentration risk monitoring, predictive risk modelling for third-party dependencies"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_SERVICES",
+    "article": "7",
+    "requirement_summary": "Monitoring and management of contractual arrangements for ICT services supporting critical functions",
+    "evidence_type": "procedure",
+    "artifact_name": "ICT Third-Party Monitoring and Control Procedure",
+    "artifact_example": "ICT_Third_Party_Monitoring_Procedure.pdf",
+    "description": "Procedures for ongoing monitoring and control of ICT services supporting critical or important functions provided by third parties. Must cover service level monitoring, performance tracking, security monitoring, incident management coordination, regular review of provider compliance with contractual and regulatory obligations, and mechanisms for escalation when service levels are not met.",
+    "retention_period": "Duration of contractual arrangement + 5 years",
+    "auditor_questions": [
+      "Show me your procedures for ongoing monitoring of ICT third-party service providers supporting critical or important functions.",
+      "How do you track and verify third-party compliance with agreed service levels and contractual obligations?",
+      "What escalation mechanisms are in place when service performance falls below agreed thresholds?",
+      "Demonstrate how you coordinate incident management activities with your critical ICT third-party service providers."
+    ],
+    "maturity_levels": {
+      "basic": "Basic monitoring procedures with periodic service level reviews and manual compliance checks",
+      "intermediate": "Structured monitoring programme with automated SLA tracking, regular performance reviews, documented escalation procedures",
+      "advanced": "Real-time service monitoring dashboards, automated compliance verification, predictive performance analytics, integrated incident management across provider ecosystem"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_SERVICES",
+    "article": "9",
+    "requirement_summary": "Exit strategy and termination planning for ICT services supporting critical or important functions",
+    "evidence_type": "document",
+    "artifact_name": "ICT Third-Party Exit Strategy and Transition Plan",
+    "artifact_example": "ICT_Third_Party_Exit_Strategy.pdf",
+    "description": "Documented exit strategy for ICT services supporting critical or important functions ensuring the financial entity can withdraw from contractual arrangements without disruption to business activities or regulatory compliance. Must include transition planning, data migration procedures, alternative service provider identification, and testing of exit procedures.",
+    "retention_period": "Duration of contractual arrangement + 5 years",
+    "auditor_questions": [
+      "Show me your exit strategy for each ICT third-party provider supporting critical or important functions.",
+      "How do you ensure business continuity during a transition away from a critical ICT third-party provider?",
+      "What data migration and portability provisions are included in your contractual arrangements?",
+      "Have you tested your exit procedures and how frequently are exit strategies reviewed and updated?"
+    ],
+    "maturity_levels": {
+      "basic": "Exit strategies documented for critical providers with basic transition plans and data migration considerations",
+      "intermediate": "Detailed transition plans with identified alternative providers, tested data migration procedures, regular exit strategy reviews",
+      "advanced": "Validated exit strategies with periodic dry-run exercises, multi-cloud portability, automated data migration capabilities, pre-qualified alternative providers on standby"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  }
+]

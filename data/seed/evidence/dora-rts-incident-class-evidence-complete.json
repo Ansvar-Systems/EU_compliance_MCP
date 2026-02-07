@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_RTS_INCIDENT_CLASS",
+    "article": "3",
+    "requirement_summary": "Measurement methodology for incident duration and service downtime",
+    "evidence_type": "procedure",
+    "artifact_name": "Incident Duration and Downtime Measurement Procedure",
+    "artifact_example": "Incident_Duration_Downtime_Measurement.pdf",
+    "description": "Documented procedure for measuring incident duration from occurrence to resolution and service downtime from service unavailability to full restoration. Must cover measurement from detection when occurrence time is unknown, use of estimates when resolution time is not yet determined, network and system log verification, and treatment of delayed service provision after operational restoration.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for measuring incident duration including how you determine the moment an incident occurs versus when it is detected.",
+      "How do you measure service downtime and account for delayed service provision after regular activities have been restored?",
+      "What estimation methods do you use when the exact occurrence or resolution times of an incident are unknown?",
+      "Demonstrate how network and system logs are used to verify and correct incident timeline measurements."
+    ],
+    "maturity_levels": {
+      "basic": "Basic manual measurement of incident duration and downtime with documented start and end times",
+      "intermediate": "Automated timestamp capture from monitoring systems, standardised measurement methodology applied consistently across incidents",
+      "advanced": "Real-time automated incident timeline reconstruction from correlated log sources, continuous service availability monitoring with precise downtime calculation"
+    },
+    "cross_references": [
+      "DORA:18"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_CLASS",
+    "article": "6",
+    "requirement_summary": "Assessment of criticality of services affected by ICT incidents",
+    "evidence_type": "document",
+    "artifact_name": "Incident Criticality Assessment Framework",
+    "artifact_example": "Incident_Criticality_Assessment_Framework.pdf",
+    "description": "Documented framework for determining the criticality of services affected by ICT incidents. Must include criteria for assessing whether incidents affect ICT services or network and information systems supporting critical or important functions, impact on financial services requiring authorisation or supervision, and identification of successful malicious and unauthorised access to network and information systems.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "How do you assess whether an incident affects ICT services supporting critical or important functions of your entity?",
+      "Show me your process for determining whether an incident impacts financial services that require authorisation, registration, or supervision.",
+      "What criteria and tools do you use to identify successful, malicious, and unauthorised access to your network and information systems?",
+      "Demonstrate how criticality assessment outcomes feed into your incident classification decision as major or non-major."
+    ],
+    "maturity_levels": {
+      "basic": "Basic criticality criteria documented with manual assessment for each incident",
+      "intermediate": "Structured criticality assessment integrated into incident management workflow with clear decision trees and documented outcomes",
+      "advanced": "Automated criticality scoring based on real-time service dependency mapping, dynamic function classification, and continuous authorisation scope monitoring"
+    },
+    "cross_references": [
+      "DORA:18"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_CLASS",
+    "article": "8",
+    "requirement_summary": "Major incident classification criteria and recurring incident aggregation",
+    "evidence_type": "procedure",
+    "artifact_name": "Major Incident Classification Procedure",
+    "artifact_example": "Major_Incident_Classification_Procedure.pdf",
+    "description": "Procedure for classifying ICT incidents as major based on whether the incident affects critical services and meets the data loss materiality threshold or at least two other materiality thresholds. Must also include monthly assessment of recurring incidents that individually are non-major but collectively meet major incident criteria when occurring at least twice within 6 months with the same root cause.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for determining whether an incident meets the criteria for major incident classification including the two-threshold rule.",
+      "How do you conduct the monthly assessment for recurring incidents that may collectively constitute a major incident?",
+      "Demonstrate a recent example where you applied the classification criteria and explain the decision-making process.",
+      "What is your process for identifying the same apparent root cause across recurring incidents occurring within a 6-month period?"
+    ],
+    "maturity_levels": {
+      "basic": "Documented classification procedure with manual threshold checks and periodic recurring incident review",
+      "intermediate": "Semi-automated classification workflow with structured threshold assessment, systematic monthly recurring incident analysis",
+      "advanced": "Fully automated classification engine with real-time threshold monitoring, automated recurring incident pattern detection and root cause correlation"
+    },
+    "cross_references": [
+      "DORA:18"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_CLASS",
+    "article": "9",
+    "requirement_summary": "Materiality thresholds for major incident determination across all criteria",
+    "evidence_type": "document",
+    "artifact_name": "Incident Materiality Threshold Reference Document",
+    "artifact_example": "Incident_Materiality_Thresholds.pdf",
+    "description": "Reference document operationalising the materiality thresholds for each classification criterion: clients/counterparts/transactions (10% affected clients or >100,000 clients, 30% counterparts, 10% transaction volume/value), reputational impact, duration/downtime (>24 hours duration or >2 hours downtime for critical functions), geographical spread (2+ Member States), data losses (impact on business objectives or regulatory compliance), and economic impact (>EUR 100,000 costs/losses).",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your operationalised materiality thresholds for each incident classification criterion including the specific numeric values and calculation methods.",
+      "How do you determine the daily average number and value of transactions for the clients/counterparts/transactions threshold calculation?",
+      "What estimation methods do you use when actual numbers of affected clients or transactions cannot be immediately determined?",
+      "How do you assess economic impact including both direct and indirect costs to determine whether the EUR 100,000 threshold is met?"
+    ],
+    "maturity_levels": {
+      "basic": "Materiality thresholds documented with manual calculation for each criterion when an incident occurs",
+      "intermediate": "Pre-calculated baseline metrics maintained for all thresholds, automated dashboards showing real-time proximity to thresholds during incidents",
+      "advanced": "Fully automated threshold monitoring with real-time data feeds for client counts, transaction volumes, and cost estimation, integrated into incident management platform"
+    },
+    "cross_references": [
+      "DORA:18"
+    ]
+  }
+]

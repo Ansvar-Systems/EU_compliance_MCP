@@ -1,0 +1,202 @@
+[
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "46",
+    "requirement_summary": "European cybersecurity certification framework compliance",
+    "evidence_type": "document",
+    "artifact_name": "Certification Framework Compliance Documentation",
+    "artifact_example": "EU_Certification_Framework_Compliance.pdf",
+    "description": "Documentation demonstrating that ICT products, services, or processes have been evaluated in accordance with a European cybersecurity certification scheme, attesting compliance with security requirements for protecting availability, authenticity, integrity, and confidentiality throughout their lifecycle",
+    "retention_period": "Duration of certificate validity + 5 years",
+    "auditor_questions": [
+      "Show me evidence that your ICT product/service was evaluated under a European cybersecurity certification scheme",
+      "How does the certification cover the full lifecycle of the product, service, or process?",
+      "What security requirements were assessed during the certification process?",
+      "How do you ensure continued compliance after initial certification?"
+    ],
+    "maturity_levels": {
+      "basic": "Certification obtained for core ICT products under applicable scheme",
+      "intermediate": "Certification covers full product portfolio, recertification schedule maintained, lifecycle compliance tracked",
+      "advanced": "Continuous certification monitoring, automated compliance validation, proactive scheme participation"
+    },
+    "cross_references": [
+      "CRA:32",
+      "EUCC:4"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "51",
+    "requirement_summary": "Security objectives for certification schemes",
+    "evidence_type": "document",
+    "artifact_name": "Security Objectives Mapping",
+    "artifact_example": "Security_Objectives_Mapping_CSA.pdf",
+    "description": "Documentation mapping how the ICT product, service, or process meets the security objectives set out in Article 51, including data protection, access control, vulnerability identification, audit logging, incident recovery, secure-by-design, and up-to-date software/hardware",
+    "retention_period": "Duration of certificate validity + 5 years",
+    "auditor_questions": [
+      "Show me how your product addresses each of the security objectives in Article 51",
+      "How do you ensure that only authorised persons can access data, services, or functions?",
+      "How do you identify and document known dependencies and vulnerabilities?",
+      "How do you ensure products are secure by default and by design?"
+    ],
+    "maturity_levels": {
+      "basic": "Security objectives addressed in product security documentation",
+      "intermediate": "Detailed traceability matrix linking each objective to implemented controls and test evidence",
+      "advanced": "Continuous automated testing against all security objectives, real-time vulnerability scanning, secure-by-default verified through automated pipelines"
+    },
+    "cross_references": [
+      "CRA:13",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "52",
+    "requirement_summary": "Assurance level determination and evaluation",
+    "evidence_type": "certification",
+    "artifact_name": "Assurance Level Evaluation Report",
+    "artifact_example": "Assurance_Level_Evaluation_Report.pdf",
+    "description": "Report from conformity assessment body documenting the assurance level (basic, substantial, or high) assigned to the ICT product, service, or process, including the evaluation activities performed commensurate with the risk level of intended use",
+    "retention_period": "Duration of certificate validity + 5 years",
+    "auditor_questions": [
+      "What assurance level was assigned and how was the risk assessment determining this level conducted?",
+      "For substantial level, show evidence of vulnerability review and functional security testing",
+      "For high level, show evidence of penetration testing and resistance assessment against skilled attackers",
+      "How do you ensure the assurance level remains commensurate with evolving risk profiles?"
+    ],
+    "maturity_levels": {
+      "basic": "Assurance level basic with technical documentation review completed",
+      "intermediate": "Assurance level substantial with vulnerability analysis and functional testing by accredited body",
+      "advanced": "Assurance level high with penetration testing, state-of-the-art attack resistance assessment, continuous re-evaluation"
+    },
+    "cross_references": [
+      "EUCC:4",
+      "CRA:32"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "54",
+    "requirement_summary": "Elements of European cybersecurity certification schemes",
+    "evidence_type": "document",
+    "artifact_name": "Certification Scheme Elements Documentation",
+    "artifact_example": "EUCC_Scheme_Elements_Documentation.pdf",
+    "description": "Documentation demonstrating compliance with the elements of the applicable certification scheme, including scope, purpose, references to standards, evaluation criteria, specific requirements for conformity assessment bodies, and applicable policies",
+    "retention_period": "Duration of certificate validity + 5 years",
+    "auditor_questions": [
+      "Show me the applicable certification scheme and how your evaluation aligns with its defined scope and criteria",
+      "How were the conformity assessment bodies selected and what are their accreditation credentials?",
+      "What standards and technical specifications were used as reference in the evaluation?",
+      "How do you handle certificate suspension, withdrawal, or scope changes?"
+    ],
+    "maturity_levels": {
+      "basic": "Applicable scheme identified, conformity assessment body accredited, basic documentation maintained",
+      "intermediate": "Full traceability to scheme requirements, regular conformity body audits, documented certificate lifecycle management",
+      "advanced": "Multi-scheme compliance management, automated certification tracking, proactive engagement with scheme evolution"
+    },
+    "cross_references": [
+      "EUCC:7",
+      "CRA:32"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "56",
+    "requirement_summary": "Certification by conformity assessment bodies",
+    "evidence_type": "certification",
+    "artifact_name": "European Cybersecurity Certificate",
+    "artifact_example": "EU_Cybersecurity_Certificate_ProductX.pdf",
+    "description": "European cybersecurity certificate issued by an accredited conformity assessment body, containing the assurance level, applicable scheme, validity period, and references to evaluated security functionalities and technical standards",
+    "retention_period": "Duration of certificate validity + 10 years",
+    "auditor_questions": [
+      "Show me the current European cybersecurity certificate and confirm it is within its validity period",
+      "Which accredited conformity assessment body issued the certificate?",
+      "What specific security functionalities were evaluated and certified?",
+      "How do you monitor for conditions that may require certificate renewal or withdrawal?"
+    ],
+    "maturity_levels": {
+      "basic": "Valid certificate obtained from accredited conformity assessment body",
+      "intermediate": "Certificate renewal planned ahead of expiry, change impact assessment triggers re-evaluation, CAB relationship managed",
+      "advanced": "Automated certificate validity monitoring, continuous compliance testing, proactive re-certification before significant product changes"
+    },
+    "cross_references": [
+      "EUCC:8",
+      "CRA:28"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "52",
+    "requirement_summary": "EU statement of conformity (self-assessment at basic level)",
+    "evidence_type": "document",
+    "artifact_name": "EU Statement of Conformity",
+    "artifact_example": "EU_Statement_of_Conformity_ServiceX.pdf",
+    "description": "Self-assessment EU statement of conformity for assurance level basic, declaring that the ICT product, service, or process meets the corresponding security requirements, referencing applicable technical specifications, standards, and procedures",
+    "retention_period": "Duration of product/service availability + 5 years",
+    "auditor_questions": [
+      "Show me the EU statement of conformity and the technical documentation supporting the self-assessment",
+      "What technical specifications and standards were used as the basis for the self-assessment?",
+      "How did you verify the absence of known vulnerabilities at the basic assurance level?",
+      "How do you maintain the validity of the self-assessment as the product/service evolves?"
+    ],
+    "maturity_levels": {
+      "basic": "Self-assessment completed with reference to applicable standards",
+      "intermediate": "Self-assessment supported by internal testing evidence, reviewed annually, technical documentation maintained",
+      "advanced": "Self-assessment integrated into development process, automated basic security testing, continuous documentation updates"
+    },
+    "cross_references": [
+      "CRA:28",
+      "EUCC:5"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "58",
+    "requirement_summary": "National cybersecurity certification authority oversight",
+    "evidence_type": "log",
+    "artifact_name": "NCCA Compliance Records",
+    "artifact_example": "NCCA_Compliance_Audit_Records_2025.pdf",
+    "description": "Records of interactions with the national cybersecurity certification authority, including supervisory audits, complaints handling, compliance verifications, and any corrective actions imposed",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me records of supervisory interactions with your national cybersecurity certification authority",
+      "Have any complaints been filed regarding your certified products or services, and how were they resolved?",
+      "What corrective actions, if any, were imposed by the NCCA and how were they addressed?",
+      "How do you cooperate with the NCCA for monitoring and enforcement activities?"
+    ],
+    "maturity_levels": {
+      "basic": "NCCA interactions documented, complaints addressed reactively",
+      "intermediate": "Proactive NCCA engagement, complaint tracking system, corrective action management with root cause analysis",
+      "advanced": "Continuous regulatory relationship management, automated compliance reporting to NCCA, zero non-conformity target"
+    },
+    "cross_references": [
+      "EUCC:8",
+      "CRA:32"
+    ]
+  },
+  {
+    "regulation": "CYBERSECURITY_ACT",
+    "article": "47",
+    "requirement_summary": "Objectives of European cybersecurity certification schemes",
+    "evidence_type": "policy",
+    "artifact_name": "Cybersecurity Certification Strategy",
+    "artifact_example": "Cybersecurity_Certification_Strategy_2025.pdf",
+    "description": "Organizational policy and strategy for cybersecurity certification aligned with the objectives of European schemes, including increasing trust, avoiding fragmentation of certification requirements, and enabling verification of security features across the Union",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me your organizational strategy for cybersecurity certification of ICT products, services, and processes",
+      "How does your certification approach avoid fragmented requirements across Member States?",
+      "How do you determine which products, services, or processes require certification?",
+      "How do you communicate certification status to users and stakeholders?"
+    ],
+    "maturity_levels": {
+      "basic": "Certification strategy exists identifying products requiring certification",
+      "intermediate": "Strategy aligned with EU-wide scheme objectives, certification roadmap maintained, stakeholder communication plan",
+      "advanced": "Strategic certification programme integrated into product lifecycle, early scheme adoption, industry leadership in certification practices"
+    },
+    "cross_references": [
+      "CRA:32",
+      "NIS2:21"
+    ]
+  }
+]

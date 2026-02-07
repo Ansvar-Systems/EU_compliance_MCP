@@ -1,0 +1,252 @@
+[
+  {
+    "regulation": "CRA",
+    "article": "13",
+    "requirement_summary": "Obligations of manufacturers - security by design",
+    "evidence_type": "document",
+    "artifact_name": "Cybersecurity Risk Assessment",
+    "artifact_example": "CRA_Cybersecurity_Risk_Assessment_ProductX.pdf",
+    "description": "Documented cybersecurity risk assessment covering the planning, design, development, production, delivery and maintenance phases of the product with digital elements, including analysis based on intended purpose, foreseeable use, and operational environment",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "Show me the documented cybersecurity risk assessment for this product with digital elements",
+      "How did you determine which essential cybersecurity requirements from Annex I apply to your product?",
+      "How do you ensure due diligence when integrating third-party components, including open-source software?",
+      "What is the defined support period for this product and how was it determined?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk assessment document exists covering intended purpose and foreseeable use",
+      "intermediate": "Risk assessment updated throughout product lifecycle, third-party component risks tracked, support period justified with market analysis",
+      "advanced": "Continuous risk assessment integrated into CI/CD pipeline, automated dependency scanning, predictive vulnerability modelling"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:51",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "13",
+    "requirement_summary": "Vulnerability handling and coordinated disclosure",
+    "evidence_type": "procedure",
+    "artifact_name": "Vulnerability Handling Policy",
+    "artifact_example": "CRA_Vulnerability_Handling_Policy.pdf",
+    "description": "Documented policies and procedures for handling vulnerabilities throughout the support period, including coordinated vulnerability disclosure policy as required by Annex I Part II, point (5), and processes for security updates",
+    "retention_period": "Duration of support period + 5 years",
+    "auditor_questions": [
+      "Show me your coordinated vulnerability disclosure policy and the single point of contact for users",
+      "How do you handle vulnerabilities reported from internal and external sources?",
+      "How do you ensure security updates remain available for at least 10 years after issuance?",
+      "When you identify a vulnerability in an integrated open-source component, how do you report it upstream?"
+    ],
+    "maturity_levels": {
+      "basic": "Vulnerability handling policy exists with designated contact point",
+      "intermediate": "Structured disclosure process, automated patch distribution, upstream reporting for open-source components",
+      "advanced": "Bug bounty programme, automated vulnerability triage, machine-readable SBOM-linked vulnerability tracking"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "CYBERSECURITY_ACT:51"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "14",
+    "requirement_summary": "Reporting actively exploited vulnerabilities and severe incidents",
+    "evidence_type": "log",
+    "artifact_name": "Vulnerability and Incident Notification Log",
+    "artifact_example": "CRA_CSIRT_Notification_Log_2025.csv",
+    "description": "Log of all notifications submitted to CSIRT and ENISA via the single reporting platform, including early warnings within 24 hours, vulnerability notifications within 72 hours, and final reports within 14 days of corrective measures",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me all actively exploited vulnerability notifications submitted to your CSIRT coordinator in the past year",
+      "For this vulnerability, demonstrate that the early warning was submitted within 24 hours of becoming aware",
+      "How do you inform impacted users of actively exploited vulnerabilities and severe incidents?",
+      "Show me the final report for this incident including severity description, malicious actor information, and corrective measures"
+    ],
+    "maturity_levels": {
+      "basic": "Notifications submitted within required timelines via single reporting platform",
+      "intermediate": "Automated timeline tracking, structured user notification process, templates for early warning and final reports",
+      "advanced": "Integrated CSIRT reporting pipeline, automated severity classification, real-time user notification system with machine-readable format"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "GDPR:33"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "13",
+    "requirement_summary": "Software Bill of Materials (SBOM)",
+    "evidence_type": "document",
+    "artifact_name": "Software Bill of Materials",
+    "artifact_example": "SBOM_ProductX_v2.1.json",
+    "description": "Machine-readable software bill of materials documenting all components, including open-source dependencies, as required by Annex I Part II point (1), identifying at minimum the top-level dependencies of the product",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "Provide the SBOM for this product in a machine-readable format",
+      "How do you track and update the SBOM when components change?",
+      "How do you monitor known vulnerabilities in listed components?",
+      "Can you demonstrate how the SBOM was used to assess dependency risk during the last vulnerability incident?"
+    ],
+    "maturity_levels": {
+      "basic": "SBOM exists listing top-level dependencies",
+      "intermediate": "SBOM includes transitive dependencies, generated automatically during build, linked to vulnerability databases",
+      "advanced": "Real-time SBOM updates in CI/CD pipeline, automated CVE correlation, dependency risk scoring"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:51",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "31",
+    "requirement_summary": "Technical documentation",
+    "evidence_type": "document",
+    "artifact_name": "Technical Documentation (Annex VII)",
+    "artifact_example": "CRA_Technical_Documentation_ProductX.pdf",
+    "description": "Complete technical documentation as specified in Annex VII, containing all relevant data on the means used to ensure the product and manufacturer processes comply with essential cybersecurity requirements, drawn up before market placement and continuously updated",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "Show me the complete technical documentation as required by Annex VII for this product",
+      "How is the technical documentation kept up to date during the support period?",
+      "Where essential cybersecurity requirements are not applicable, show me the justification in the documentation",
+      "Is the technical documentation available in an official language of the Member State where the notified body is established?"
+    ],
+    "maturity_levels": {
+      "basic": "Technical documentation exists covering all Annex VII elements",
+      "intermediate": "Documentation version-controlled, regularly updated, includes clear non-applicability justifications",
+      "advanced": "Automated documentation generation from development tools, linked to SBOM and risk assessment, continuous compliance validation"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:54",
+      "AI_ACT:11"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "32",
+    "requirement_summary": "Conformity assessment procedures",
+    "evidence_type": "certification",
+    "artifact_name": "Conformity Assessment Report",
+    "artifact_example": "CRA_Conformity_Assessment_Report_ProductX.pdf",
+    "description": "Evidence of conformity assessment performed using one of the procedures in Annex VIII: internal control (Module A), EU-type examination (Module B) with internal production control (Module C), full quality assurance (Module H), or European cybersecurity certification scheme",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "Which conformity assessment procedure did you apply and why?",
+      "For important products class I or II, show evidence that the appropriate third-party assessment was performed",
+      "If harmonised standards were not applied, show how you met the assessment requirements for important products",
+      "Show me the notified body certificate or European cybersecurity certification where applicable"
+    ],
+    "maturity_levels": {
+      "basic": "Conformity assessment completed using appropriate Module for product class",
+      "intermediate": "Assessment integrated into product development lifecycle, notified body engaged early for important products",
+      "advanced": "Continuous conformity validation, European cybersecurity certification scheme used where available, automated compliance checks"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:52",
+      "EUCC:4"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "28",
+    "requirement_summary": "EU declaration of conformity",
+    "evidence_type": "document",
+    "artifact_name": "EU Declaration of Conformity",
+    "artifact_example": "EU_Declaration_of_Conformity_ProductX.pdf",
+    "description": "EU declaration of conformity drawn up in accordance with Annex V model structure, stating that fulfilment of applicable essential cybersecurity requirements has been demonstrated, available in required languages of the Member State where the product is placed on the market",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "Show me the EU declaration of conformity for this product",
+      "Does the declaration follow the Annex V model structure and contain all required elements?",
+      "Is the declaration available in the languages required by the target Member States?",
+      "Where the product is subject to multiple EU legal acts, show me the single combined declaration"
+    ],
+    "maturity_levels": {
+      "basic": "Declaration exists following Annex V structure, available in required languages",
+      "intermediate": "Declaration management system in place, multi-regulation declarations consolidated, regular reviews for accuracy",
+      "advanced": "Automated declaration generation linked to conformity assessment results, real-time compliance monitoring"
+    },
+    "cross_references": [
+      "MACHINERY:48",
+      "RED:18"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "30",
+    "requirement_summary": "CE marking",
+    "evidence_type": "document",
+    "artifact_name": "CE Marking Documentation",
+    "artifact_example": "CE_Marking_Evidence_ProductX.pdf",
+    "description": "Evidence that CE marking is affixed visibly, legibly and indelibly to the product, its packaging, or the EU declaration of conformity, with identification number of notified body where applicable. For software products, CE marking on declaration or website",
+    "retention_period": "Duration of product availability + 5 years",
+    "auditor_questions": [
+      "Show me where the CE marking is affixed on this product or its accompanying documentation",
+      "For software products, where is the CE marking displayed?",
+      "Where a notified body was involved (Module H), is its identification number affixed alongside the CE marking?",
+      "How do you ensure correct application of the CE marking regime across all product variants?"
+    ],
+    "maturity_levels": {
+      "basic": "CE marking correctly affixed on product, packaging, or declaration",
+      "intermediate": "CE marking process documented, notified body identification included where required, product labelling audited",
+      "advanced": "Automated CE marking verification in production, digital CE marking for software products linked to live declaration"
+    },
+    "cross_references": [
+      "MACHINERY:52",
+      "GPSR:9"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "15",
+    "requirement_summary": "Obligations of importers",
+    "evidence_type": "document",
+    "artifact_name": "Importer Due Diligence Records",
+    "artifact_example": "Importer_Due_Diligence_ProductX.pdf",
+    "description": "Records demonstrating that importers verified the manufacturer performed conformity assessment, drew up technical documentation, product bears CE marking, and is accompanied by information and instructions to users as required by Annex II",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "How do you verify that the manufacturer has performed the required conformity assessment before placing the product on the market?",
+      "Show me evidence that you confirmed the product bears the CE marking and is accompanied by required documentation",
+      "How do you handle a product you believe is not in conformity with essential cybersecurity requirements?",
+      "Show me your storage and transport conditions and how they preserve product compliance"
+    ],
+    "maturity_levels": {
+      "basic": "Basic checks performed before placing product on EU market",
+      "intermediate": "Structured due diligence checklist, supplier qualification process, non-conformity escalation procedures",
+      "advanced": "Automated compliance verification system, real-time manufacturer conformity monitoring, integrated supply chain risk management"
+    },
+    "cross_references": [
+      "GPSR:11",
+      "CRA:13"
+    ]
+  },
+  {
+    "regulation": "CRA",
+    "article": "13",
+    "requirement_summary": "User information and instructions (Annex II)",
+    "evidence_type": "document",
+    "artifact_name": "User Information and Instructions",
+    "artifact_example": "CRA_User_Instructions_ProductX.pdf",
+    "description": "Information and instructions provided to users as set out in Annex II, in clear and understandable language, including secure installation and use instructions, support period end date, and single point of contact for vulnerability reporting",
+    "retention_period": "10 years after placing on the market or duration of support period, whichever is longer",
+    "auditor_questions": [
+      "Show me the user information and instructions as required by Annex II",
+      "Is the support period end date clearly visible at the time of purchase and, where feasible, on the product itself?",
+      "How do you notify users when the product reaches end of support period?",
+      "Is the single point of contact for vulnerability reporting easily identifiable to users?"
+    ],
+    "maturity_levels": {
+      "basic": "User instructions exist in understandable language with support period and contact information",
+      "intermediate": "Instructions available in all relevant languages, accessible online for 10+ years, end-of-support notifications implemented",
+      "advanced": "Dynamic digital instructions linked to product version, automated end-of-support alerts, user-friendly vulnerability reporting portal"
+    },
+    "cross_references": [
+      "GPSR:9",
+      "MACHINERY:10"
+    ]
+  }
+]

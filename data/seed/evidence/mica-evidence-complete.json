@@ -1,0 +1,252 @@
+[
+  {
+    "regulation": "MICA",
+    "article": "4",
+    "requirement_summary": "Obligation to publish a crypto-asset white paper",
+    "evidence_type": "document",
+    "artifact_name": "Crypto-Asset White Paper",
+    "artifact_example": "MICA_White_Paper_TokenX_2025.pdf",
+    "description": "Published white paper for each crypto-asset offered to the public or admitted to trading, notified to the competent authority at least 20 working days before publication, containing all mandatory disclosures per Article 6",
+    "retention_period": "Duration of public offering + 5 years",
+    "auditor_questions": [
+      "Show me the published white paper and proof of notification to the competent authority",
+      "How do you ensure the white paper is kept up to date with material changes?",
+      "What is your process for ensuring fair, clear and not misleading information in the white paper?",
+      "Show me evidence that the white paper was published on your website before the offering date"
+    ],
+    "maturity_levels": {
+      "basic": "White paper published with mandatory content, notification sent to competent authority",
+      "intermediate": "Version-controlled white paper with change log, legal review process for updates",
+      "advanced": "Automated compliance checks against Article 6 requirements, real-time update tracking with regulatory notification workflow"
+    },
+    "cross_references": [
+      "MICA:5",
+      "MICA:6"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "5",
+    "requirement_summary": "Content of the crypto-asset white paper",
+    "evidence_type": "document",
+    "artifact_name": "White Paper Content Compliance Checklist",
+    "artifact_example": "White_Paper_Compliance_Checklist_2025.pdf",
+    "description": "Documentation demonstrating the white paper contains all required information: description of the offeror, description of the crypto-asset project, rights and obligations, underlying technology, risks, and adverse environmental impacts",
+    "retention_period": "Duration of public offering + 5 years",
+    "auditor_questions": [
+      "Show me how each mandatory content element from Article 6 is addressed in your white paper",
+      "How do you disclose risks associated with the crypto-asset to potential purchasers?",
+      "What information do you provide about the underlying distributed ledger technology?",
+      "How do you disclose the adverse environmental and climate-related impacts of the consensus mechanism?"
+    ],
+    "maturity_levels": {
+      "basic": "All mandatory content sections present in white paper",
+      "intermediate": "Detailed risk disclosures, third-party legal review, plain language summaries",
+      "advanced": "Dynamic risk disclosures updated with market conditions, environmental impact quantification, multi-language versions"
+    },
+    "cross_references": [
+      "MICA:4",
+      "MICA:6"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "16",
+    "requirement_summary": "Obligations of offerors and persons seeking admission to trading of asset-referenced tokens",
+    "evidence_type": "policy",
+    "artifact_name": "Asset-Referenced Token Governance Policy",
+    "artifact_example": "ART_Governance_Policy_2025.pdf",
+    "description": "Policy documenting the obligations of issuers of asset-referenced tokens including acting honestly, fairly and professionally, communicating in a fair, clear and not misleading manner, and acting in the best interests of holders",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your governance framework for issuing asset-referenced tokens",
+      "How do you ensure communications to token holders are fair, clear and not misleading?",
+      "What conflict of interest procedures do you have in place for token issuance?",
+      "How do you act in the best interests of asset-referenced token holders?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic governance policy with documented obligations and conflict of interest procedures",
+      "intermediate": "Regular compliance monitoring, independent oversight function, documented decision-making",
+      "advanced": "Automated compliance controls, real-time conflict monitoring, independent governance audits"
+    },
+    "cross_references": [
+      "MICA:30",
+      "MIFID2:24"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "30",
+    "requirement_summary": "Reserve of assets for asset-referenced tokens",
+    "evidence_type": "document",
+    "artifact_name": "Reserve of Assets Documentation",
+    "artifact_example": "Reserve_Assets_Report_Q4_2025.pdf",
+    "description": "Documentation of the reserve of assets backing asset-referenced tokens including composition, custody arrangements, segregation from own assets, and independent audit reports confirming reserve adequacy",
+    "retention_period": "Duration of token issuance + 7 years",
+    "auditor_questions": [
+      "Show me the composition and valuation of the reserve of assets",
+      "How are reserve assets segregated from the issuer's own assets?",
+      "Who is the custodian of the reserve assets and what are the custody arrangements?",
+      "Show me the independent audit report confirming the reserve covers the value of tokens in circulation"
+    ],
+    "maturity_levels": {
+      "basic": "Reserve maintained with basic composition documentation, custodian appointed",
+      "intermediate": "Regular independent audits, real-time reserve monitoring, diversified custody arrangements",
+      "advanced": "Continuous reserve attestation, automated rebalancing, multiple independent custodians with redundancy"
+    },
+    "cross_references": [
+      "MICA:35",
+      "MICA:16"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "35",
+    "requirement_summary": "Rights of holders of asset-referenced tokens",
+    "evidence_type": "procedure",
+    "artifact_name": "Token Holder Rights and Redemption Procedure",
+    "artifact_example": "ART_Redemption_Procedure_2025.pdf",
+    "description": "Documented procedure for holders to exercise their right of redemption at any time, including the redemption process, timelines, and claim on the reserve of assets",
+    "retention_period": "Duration of token issuance + 5 years",
+    "auditor_questions": [
+      "Show me the documented redemption procedure available to token holders",
+      "How do you ensure holders can redeem tokens at market value at any time?",
+      "What is the timeline for processing redemption requests?",
+      "How do holders exercise their claim on the reserve of assets?"
+    ],
+    "maturity_levels": {
+      "basic": "Redemption procedure documented and communicated to holders",
+      "intermediate": "Automated redemption processing, clear SLAs, complaint resolution for redemption disputes",
+      "advanced": "Real-time redemption capability, smart contract-based automated redemption, transparent reserve visibility"
+    },
+    "cross_references": [
+      "MICA:30",
+      "PSD2:73"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "45",
+    "requirement_summary": "Authorization for issuers of e-money tokens",
+    "evidence_type": "certification",
+    "artifact_name": "E-Money Token Authorization Documentation",
+    "artifact_example": "EMT_Authorization_Certificate_2025.pdf",
+    "description": "Evidence of authorization as a credit institution or electronic money institution for issuing e-money tokens, including the authorization decision and ongoing compliance with authorization conditions",
+    "retention_period": "Duration of authorization + 5 years",
+    "auditor_questions": [
+      "Show me your authorization as a credit institution or electronic money institution",
+      "How do you ensure ongoing compliance with the conditions of authorization?",
+      "What notifications have you made to the competent authority regarding e-money token issuance?",
+      "Show me the white paper for each e-money token issued"
+    ],
+    "maturity_levels": {
+      "basic": "Authorization obtained, white paper published for each e-money token",
+      "intermediate": "Regular compliance reviews against authorization conditions, proactive regulatory engagement",
+      "advanced": "Automated compliance monitoring against authorization conditions, real-time regulatory reporting"
+    },
+    "cross_references": [
+      "PSD2:5",
+      "MICA:4"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "59",
+    "requirement_summary": "Authorization of crypto-asset service providers",
+    "evidence_type": "certification",
+    "artifact_name": "CASP Authorization Application and Decision",
+    "artifact_example": "CASP_Authorization_Decision_2025.pdf",
+    "description": "Complete authorization application and decision from competent authority for crypto-asset service providers, including programme of operations, internal control mechanisms, business continuity arrangements, and governance structure",
+    "retention_period": "Duration of authorization + 10 years",
+    "auditor_questions": [
+      "Show me your CASP authorization decision from the competent authority",
+      "What crypto-asset services are you authorized to provide?",
+      "Show me your programme of operations submitted with the authorization application",
+      "How do you maintain compliance with all ongoing authorization conditions?"
+    ],
+    "maturity_levels": {
+      "basic": "Authorization obtained with required documentation, basic compliance monitoring",
+      "intermediate": "Regular internal audits of authorization compliance, documented change management for service scope",
+      "advanced": "Continuous compliance monitoring, automated regulatory change impact assessment, proactive regulatory dialogue"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "PSD2:5"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "60",
+    "requirement_summary": "Prudential requirements for crypto-asset service providers",
+    "evidence_type": "document",
+    "artifact_name": "Prudential Requirements Compliance Report",
+    "artifact_example": "CASP_Prudential_Report_2025.pdf",
+    "description": "Documentation demonstrating compliance with prudential safeguards including minimum capital requirements (permanent minimum capital of the higher of EUR 50,000-150,000 depending on services or one quarter of fixed overheads), and professional indemnity insurance or comparable guarantee",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me evidence that you meet the minimum own funds requirements for your authorized services",
+      "How do you calculate your fixed overheads requirement?",
+      "Do you hold professional indemnity insurance and what does it cover?",
+      "Show me quarterly capital adequacy calculations"
+    ],
+    "maturity_levels": {
+      "basic": "Capital requirements met, basic quarterly calculations performed",
+      "intermediate": "Monthly capital monitoring, stress testing of capital adequacy, insurance coverage reviewed annually",
+      "advanced": "Real-time capital monitoring dashboards, automated capital adequacy alerts, forward-looking capital planning"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "PSD2:10"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "65",
+    "requirement_summary": "Safeguarding of clients' crypto-assets and funds",
+    "evidence_type": "procedure",
+    "artifact_name": "Client Asset Safeguarding Procedures",
+    "artifact_example": "Client_Asset_Safeguarding_Procedures_2025.pdf",
+    "description": "Documented procedures for safeguarding clients' crypto-assets and funds, including segregation arrangements, custody controls, prohibition on using client assets for own account, and adequate organizational arrangements to minimize risk of loss",
+    "retention_period": "Duration of operations + 7 years",
+    "auditor_questions": [
+      "Show me how clients' crypto-assets are segregated from the firm's own assets",
+      "What custody arrangements are in place and who are the custodians?",
+      "How do you ensure clients' funds are not used for the firm's own account?",
+      "What organizational arrangements minimize the risk of loss or diminution of client assets?"
+    ],
+    "maturity_levels": {
+      "basic": "Segregation of client assets documented, basic custody controls in place",
+      "intermediate": "Independent custody verification, regular reconciliation, insurance coverage for client assets",
+      "advanced": "Real-time asset reconciliation, multi-signature custody with hardware security modules, independent third-party attestation"
+    },
+    "cross_references": [
+      "PSD2:18",
+      "MIFID2:16"
+    ]
+  },
+  {
+    "regulation": "MICA",
+    "article": "68",
+    "requirement_summary": "Complaints handling procedures for crypto-asset service providers",
+    "evidence_type": "procedure",
+    "artifact_name": "CASP Complaints Handling Procedure",
+    "artifact_example": "CASP_Complaints_Procedure_2025.pdf",
+    "description": "Documented complaints handling procedure that is free of charge for clients, including templates for filing complaints, clear timelines for investigation and resolution, and record-keeping of all complaints and outcomes",
+    "retention_period": "5 years from complaint resolution",
+    "auditor_questions": [
+      "Show me your published complaints handling procedure",
+      "What is the timeline for acknowledging and resolving complaints?",
+      "Show me the complaints register with outcomes and resolution times",
+      "How do you inform clients of their right to complain and the procedure to follow?"
+    ],
+    "maturity_levels": {
+      "basic": "Complaints procedure published, basic complaints register maintained",
+      "intermediate": "Tracked complaints with SLAs, root cause analysis, regular management reporting on complaints trends",
+      "advanced": "Automated complaints management system, predictive analytics on complaint patterns, integration with product improvement processes"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "PSD2:96"
+    ]
+  }
+]

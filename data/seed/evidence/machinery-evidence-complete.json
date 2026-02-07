@@ -1,0 +1,222 @@
+[
+  {
+    "regulation": "MACHINERY",
+    "article": "10",
+    "requirement_summary": "Obligations of manufacturers — design, conformity assessment, and technical documentation",
+    "evidence_type": "document",
+    "artifact_name": "Technical Documentation File",
+    "artifact_example": "Technical_Documentation_Annex_IV_PartA.pdf",
+    "description": "Complete technical documentation as required by Annex IV Part A, including general description, overall drawings, detailed drawings, risk assessment documentation, list of harmonised standards applied, test reports, and instructions for use. Must be kept for at least 10 years after placing on market.",
+    "retention_period": "10 years after placing on market or putting into service",
+    "auditor_questions": [
+      "Can you provide the complete technical documentation file for this machinery product?",
+      "How do you ensure the technical documentation is kept up to date with design changes?",
+      "Where is the source code or programming logic stored and how can it be made available upon request?",
+      "How do you ensure documentation covers all essential health and safety requirements in Annex III?"
+    ],
+    "maturity_levels": {
+      "basic": "Technical documentation exists for each product placed on market, kept in paper or basic digital format",
+      "intermediate": "Structured document management system with version control, linked to product lifecycle tracking",
+      "advanced": "Fully integrated PLM system with automated documentation generation, traceability to requirements, and digital twin support"
+    },
+    "cross_references": ["CRA:31", "RED:10", "GPSR:9"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "10",
+    "requirement_summary": "Conformity assessment and EU declaration of conformity",
+    "evidence_type": "certification",
+    "artifact_name": "EU Declaration of Conformity",
+    "artifact_example": "EU_DoC_Machine_Model_X200.pdf",
+    "description": "EU declaration of conformity drawn up in accordance with Article 21 and Annex V Part A, demonstrating that the machinery complies with essential health and safety requirements after completion of the relevant conformity assessment procedure under Article 25.",
+    "retention_period": "10 years after placing on market or putting into service",
+    "auditor_questions": [
+      "Show me the EU declaration of conformity for this machinery product.",
+      "Which conformity assessment procedure was applied and why?",
+      "How is the declaration made accessible to users — paper or digital?",
+      "Is the declaration kept current when modifications are made to the product?"
+    ],
+    "maturity_levels": {
+      "basic": "Declaration of conformity issued for each product, available upon request",
+      "intermediate": "Declarations linked to product database, accessible via internet address or machine-readable code on the product",
+      "advanced": "Automated generation of declarations integrated with conformity assessment workflow and regulatory change tracking"
+    },
+    "cross_references": ["RED:17", "GPSR:9", "AI_ACT:47"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "6",
+    "requirement_summary": "Categories of machinery subject to specific conformity assessment procedures",
+    "evidence_type": "document",
+    "artifact_name": "Product Classification and Risk Assessment",
+    "artifact_example": "Product_Classification_Annex_I_Assessment.pdf",
+    "description": "Documentation demonstrating the classification of the machinery or related product against Annex I categories (Part A or Part B) and the corresponding conformity assessment path selected under Article 25. Includes the inherent risk analysis justifying the categorization.",
+    "retention_period": "10 years after placing on market or putting into service",
+    "auditor_questions": [
+      "How did you determine which Annex I category this machinery falls under?",
+      "What risk assessment was performed to justify the chosen conformity assessment route?",
+      "If the machinery falls under Annex I Part A, which notified body was involved?",
+      "How do you track changes to Annex I categories from delegated acts?"
+    ],
+    "maturity_levels": {
+      "basic": "Product categorization documented with basic risk rationale",
+      "intermediate": "Systematic classification process with documented criteria and regular reviews against Annex I updates",
+      "advanced": "Integrated classification system with automated regulatory monitoring and impact analysis when Annex I is amended"
+    },
+    "cross_references": ["AI_ACT:6", "RED:19"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "10",
+    "requirement_summary": "Series production conformity procedures",
+    "evidence_type": "procedure",
+    "artifact_name": "Series Production Quality Procedures",
+    "artifact_example": "Series_Production_Conformity_Procedure.pdf",
+    "description": "Documented procedures ensuring machinery in series production remains in conformity with the Regulation. Includes sample testing protocols, complaint registers, non-conforming product tracking, recall procedures, and processes to account for changes in harmonised standards or common specifications.",
+    "retention_period": "Duration of production + 10 years",
+    "auditor_questions": [
+      "What procedures are in place to ensure ongoing conformity of series-produced machinery?",
+      "Show me your sample testing regime and recent test results.",
+      "How do you maintain and review the register of complaints and non-conforming products?",
+      "How are changes in harmonised standards reflected in your production processes?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic quality control checks and complaint tracking in place",
+      "intermediate": "Statistical sampling plan, structured complaint management system, regular internal audits",
+      "advanced": "Automated production monitoring with real-time conformity checks, predictive analytics for quality issues, integrated corrective action system"
+    },
+    "cross_references": ["CRA:32", "RED:10", "GPSR:10"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "10",
+    "requirement_summary": "Instructions for use and safety information",
+    "evidence_type": "document",
+    "artifact_name": "Instructions for Use and Safety Information Package",
+    "artifact_example": "Instructions_For_Use_Model_X200.pdf",
+    "description": "Complete instructions for use and safety information as required by Annex III, provided in paper or digital format. For non-professional users, essential safety information must be provided in paper format. Instructions must be available in the language determined by the Member State and accessible online for at least 10 years.",
+    "retention_period": "Expected lifetime of product + 10 years",
+    "auditor_questions": [
+      "How are instructions for use provided to the end user — digital, paper, or both?",
+      "For non-professional users, is essential safety information provided in paper format?",
+      "Are digital instructions available for download, printing, and offline access?",
+      "How do you ensure instructions are translated into the required languages?"
+    ],
+    "maturity_levels": {
+      "basic": "Instructions provided with each product, available in relevant languages",
+      "intermediate": "Digital instruction platform with download capability, version management, and multi-language support",
+      "advanced": "Interactive digital instructions with multimedia, integration with product IoT capabilities, and automatic language detection"
+    },
+    "cross_references": ["GPSR:9", "RED:10", "PLD:6"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "15",
+    "requirement_summary": "CE marking requirements",
+    "evidence_type": "document",
+    "artifact_name": "CE Marking Records and Photographs",
+    "artifact_example": "CE_Marking_Placement_Records.pdf",
+    "description": "Records demonstrating correct application of CE marking in accordance with Article 24, including photographs of marking placement, dimensions, visibility documentation, and records of any notified body identification numbers where applicable.",
+    "retention_period": "10 years after placing on market or putting into service",
+    "auditor_questions": [
+      "Where is the CE marking affixed on this machinery product?",
+      "Does the marking comply with the dimensions and format requirements of Article 24?",
+      "If a notified body was involved, is their identification number shown alongside the CE marking?",
+      "How do you verify CE marking placement during quality control checks?"
+    ],
+    "maturity_levels": {
+      "basic": "CE marking correctly applied to products with basic photographic records",
+      "intermediate": "Standardized marking process with quality inspection checklists and documented verification",
+      "advanced": "Automated marking verification integrated into production line with digital image analysis"
+    },
+    "cross_references": ["RED:18", "CRA:30", "AI_ACT:48"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "25",
+    "requirement_summary": "Conformity assessment procedures",
+    "evidence_type": "certification",
+    "artifact_name": "Notified Body Certificates and Assessment Reports",
+    "artifact_example": "EU_Type_Examination_Certificate_NB1234.pdf",
+    "description": "Certificates and reports from notified bodies where applicable, including EU type-examination certificates (Module B), production quality assurance certificates (Module D), product verification certificates (Module F), or full quality assurance certificates (Module H). For internal production control (Module A), manufacturer self-assessment records.",
+    "retention_period": "10 years after placing on market or putting into service",
+    "auditor_questions": [
+      "Which conformity assessment module was applied and what justified this choice?",
+      "Can you provide the notified body certificate and supporting assessment report?",
+      "How do you manage the relationship with your notified body including ongoing surveillance?",
+      "If you used internal production control (Module A), can you demonstrate the self-assessment records?"
+    ],
+    "maturity_levels": {
+      "basic": "Appropriate conformity assessment completed with certificates on file",
+      "intermediate": "Systematic tracking of certificate validity, planned renewals, and notified body audit schedules",
+      "advanced": "Integrated conformity management system with automated expiry alerts, digital certificate management, and proactive regulatory monitoring"
+    },
+    "cross_references": ["RED:19", "AI_ACT:43", "CRA:32"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "10",
+    "requirement_summary": "Risk assessment covering essential health and safety requirements",
+    "evidence_type": "document",
+    "artifact_name": "Risk Assessment Report (Annex III Compliance)",
+    "artifact_example": "Risk_Assessment_EHSR_Compliance.pdf",
+    "description": "Comprehensive risk assessment demonstrating that the machinery has been designed and constructed in accordance with the essential health and safety requirements (EHSR) set out in Annex III. Must cover hazard identification, risk estimation, risk evaluation, and risk reduction measures across the full lifecycle including transport, assembly, use, maintenance, and disposal.",
+    "retention_period": "10 years after placing on market or putting into service",
+    "auditor_questions": [
+      "How did you identify all relevant hazards associated with this machinery?",
+      "Can you demonstrate the risk reduction measures applied in accordance with the Annex III hierarchy?",
+      "How are residual risks documented and communicated to users?",
+      "Does the risk assessment cover the full lifecycle including foreseeable misuse?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk assessment performed using standard methodology (e.g., ISO 12100), documented for each product",
+      "intermediate": "Structured risk assessment process with FMEA integration, linked to design changes and safety components",
+      "advanced": "Dynamic risk assessment integrated with digital twin, simulation-based validation, and continuous monitoring data feedback"
+    },
+    "cross_references": ["AI_ACT:9", "CRA:13", "GPSR:5"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "12",
+    "requirement_summary": "Obligations of distributors",
+    "evidence_type": "procedure",
+    "artifact_name": "Distributor Compliance Verification Procedure",
+    "artifact_example": "Distributor_Compliance_Check_Procedure.pdf",
+    "description": "Documented procedures for distributors to verify that machinery bears CE marking, is accompanied by the EU declaration of conformity and instructions for use, and that the manufacturer and importer have complied with their identification and labelling obligations before making machinery available on the market.",
+    "retention_period": "10 years after making available on market",
+    "auditor_questions": [
+      "What checks do you perform before making machinery available on the market?",
+      "How do you verify that CE marking and EU declaration of conformity are present and valid?",
+      "What is your procedure when you identify non-conforming machinery in your distribution chain?",
+      "How do you ensure storage and transport conditions do not compromise product conformity?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic incoming inspection checklist covering CE marking, documentation, and labelling",
+      "intermediate": "Documented verification procedure with trained staff, records of checks, and supplier qualification process",
+      "advanced": "Digital verification system with automated document checks, blockchain-based supply chain traceability, and real-time alert system for recalled products"
+    },
+    "cross_references": ["GPSR:7", "RED:12", "CRA:15"]
+  },
+  {
+    "regulation": "MACHINERY",
+    "article": "20",
+    "requirement_summary": "Market surveillance cooperation and corrective actions",
+    "evidence_type": "log",
+    "artifact_name": "Market Surveillance Interaction Log and Corrective Action Records",
+    "artifact_example": "Market_Surveillance_Corrective_Actions_2025.xlsx",
+    "description": "Log of all interactions with market surveillance authorities including information requests, corrective actions taken for non-conforming or dangerous products, withdrawal and recall records, and documentation of cooperation with competent national authorities. Covers obligations under Article 10(9) to immediately inform authorities when products present health or safety risks.",
+    "retention_period": "10 years after the corrective action is completed",
+    "auditor_questions": [
+      "Show me your records of interactions with market surveillance authorities in the past 3 years.",
+      "What corrective actions have been taken for non-conforming products, and what was the outcome?",
+      "How quickly do you notify authorities when a product is found to present a risk?",
+      "What is your procedure for product withdrawal and recall, and how do you inform distributors?"
+    ],
+    "maturity_levels": {
+      "basic": "Records of authority interactions and corrective actions maintained in basic format",
+      "intermediate": "Structured corrective action management system with root cause analysis and effectiveness tracking",
+      "advanced": "Integrated post-market surveillance system with automated risk detection, authority notification workflows, and predictive quality analytics"
+    },
+    "cross_references": ["GPSR:10", "RED:43", "CRA:14"]
+  }
+]

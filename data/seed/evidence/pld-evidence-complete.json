@@ -1,0 +1,178 @@
+[
+  {
+    "regulation": "PLD",
+    "article": "5",
+    "requirement_summary": "Defectiveness of a product — safety expectations test",
+    "evidence_type": "document",
+    "artifact_name": "Product Safety Expectations Analysis",
+    "artifact_example": "Product_Safety_Expectations_Analysis.pdf",
+    "description": "Documentation of the safety analysis performed to establish that the product provides the safety which the public at large is entitled to expect. Includes assessment of the product's presentation, marketing, labelling, instructions for use, reasonably foreseeable use and misuse, effect of the product on other products, safety requirements including product-specific EU rules, and the specific needs of vulnerable consumers.",
+    "retention_period": "Product lifetime + 10 years from placing on market",
+    "auditor_questions": [
+      "How do you assess the safety expectations for this product from the perspective of the general public?",
+      "What foreseeable misuse scenarios have been considered in the safety analysis?",
+      "How do you account for the specific needs of vulnerable groups of consumers?",
+      "How do you evaluate the effect of this product when used with other products?"
+    ],
+    "maturity_levels": {
+      "basic": "Safety expectations documented based on product type and intended use",
+      "intermediate": "Systematic safety expectations analysis incorporating consumer research, usage patterns, and incident data",
+      "advanced": "Dynamic safety expectations framework with continuous monitoring of consumer behaviour, post-market data integration, and predictive risk modelling"
+    },
+    "cross_references": ["GPSR:5", "MACHINERY:10", "CRA:13"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "6",
+    "requirement_summary": "Defectiveness — continued product safety obligations",
+    "evidence_type": "log",
+    "artifact_name": "Post-Market Safety Monitoring Log",
+    "artifact_example": "Post_Market_Monitoring_Log_2025.xlsx",
+    "description": "Records of ongoing post-market monitoring activities demonstrating that the product continues to meet safety expectations after placing on market. A product can be found defective even when a better product was subsequently placed on market, or when the defect arose from software updates, failure to update, or the effect of machine learning after placing on market within the manufacturer's control.",
+    "retention_period": "Product lifetime + 10 years from placing on market",
+    "auditor_questions": [
+      "How do you monitor product safety after placing the product on the market?",
+      "What records do you maintain of software updates and their impact on product safety?",
+      "How do you assess whether AI/ML behaviour changes create new defects post-market?",
+      "Show me your process for evaluating the continued safety of products already in circulation."
+    ],
+    "maturity_levels": {
+      "basic": "Basic complaint and incident tracking for products on market",
+      "intermediate": "Structured post-market surveillance plan with regular safety reviews and update impact assessments",
+      "advanced": "Automated post-market monitoring with AI-driven anomaly detection, real-time field data analysis, and proactive safety update deployment"
+    },
+    "cross_references": ["GPSR:10", "CRA:14", "AI_ACT:72"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "7",
+    "requirement_summary": "Proving defectiveness — burden of proof and presumptions",
+    "evidence_type": "document",
+    "artifact_name": "Product Conformity and Testing Records",
+    "artifact_example": "Product_Conformity_Testing_Records.pdf",
+    "description": "Comprehensive testing and conformity records that can rebut the presumption of defectiveness. Under Article 7, a court may presume a product is defective if the claimant demonstrates a malfunction or failure to meet mandatory safety requirements. Manufacturers should maintain records showing the product was not defective at time of placing on market, including quality testing results, conformity assessment records, and compliance with applicable safety standards.",
+    "retention_period": "Product lifetime + 15 years (limitation period under Article 14)",
+    "auditor_questions": [
+      "Can you demonstrate through testing records that the product met all safety requirements at time of placing on market?",
+      "What quality assurance processes exist to prevent product malfunctions?",
+      "How do you document that a product conformed to mandatory safety requirements?",
+      "What evidence can you provide to rebut a presumption of defectiveness?"
+    ],
+    "maturity_levels": {
+      "basic": "Product testing records and conformity documentation maintained per product batch",
+      "intermediate": "Traceable testing records linked to individual products with full audit trail",
+      "advanced": "Digital product passport with complete testing history, real-time quality data, and blockchain-verified conformity records"
+    },
+    "cross_references": ["MACHINERY:10", "RED:10", "GPSR:9"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "8",
+    "requirement_summary": "Economic operators liable for defective products",
+    "evidence_type": "document",
+    "artifact_name": "Supply Chain Liability Mapping",
+    "artifact_example": "Supply_Chain_Liability_Map.pdf",
+    "description": "Documentation mapping the liability chain for products including identification of the manufacturer, component manufacturers, importers, authorised representatives, and fulfilment service providers. Must identify which EU-established economic operator bears liability under Article 8, including for products from third countries. Distributors must be able to identify their supplier within one month of request.",
+    "retention_period": "Product lifetime + 15 years",
+    "auditor_questions": [
+      "Can you identify all economic operators in the supply chain who may bear liability under the PLD?",
+      "For products manufactured outside the EU, who is the EU-based liable party (importer, authorised representative, or fulfilment service provider)?",
+      "How quickly can you identify and provide contact details for your supplier upon request?",
+      "How do you track component manufacturers and their liability for integrated or inter-connected components?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic supplier register with contact details and roles documented",
+      "intermediate": "Structured supply chain mapping with liability assignments, contractual liability allocation, and insurance records",
+      "advanced": "Dynamic supply chain visibility platform with real-time liability tracking, automated insolvency monitoring, and integrated contractual management"
+    },
+    "cross_references": ["MACHINERY:12", "GPSR:7", "CRA:15"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "9",
+    "requirement_summary": "Disclosure of evidence by defendant",
+    "evidence_type": "document",
+    "artifact_name": "Evidence Disclosure Preparedness Documentation",
+    "artifact_example": "Evidence_Disclosure_Readiness_Assessment.pdf",
+    "description": "Documentation establishing readiness to comply with court-ordered evidence disclosure obligations under Article 9. Economic operators must be able to disclose relevant evidence at their disposal upon court order. Failure to comply may result in the court presuming the product is defective. Includes procedures for preserving, locating, and producing technical evidence while protecting trade secrets and confidential information.",
+    "retention_period": "Product lifetime + 15 years",
+    "auditor_questions": [
+      "What is your procedure for responding to court-ordered evidence disclosure requests?",
+      "How do you ensure that relevant technical evidence is preserved and retrievable?",
+      "What measures are in place to protect trade secrets while complying with disclosure obligations?",
+      "How quickly can you produce technical documentation and testing records upon request?"
+    ],
+    "maturity_levels": {
+      "basic": "Relevant records retained and locatable upon request",
+      "intermediate": "Evidence management procedure with designated response team, trade secret classification, and document preservation protocols",
+      "advanced": "Automated evidence management system with legal hold capabilities, confidentiality classification, and rapid retrieval workflows"
+    },
+    "cross_references": ["GDPR:17", "MACHINERY:10"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "10",
+    "requirement_summary": "Exemptions from liability — state of the art defence",
+    "evidence_type": "document",
+    "artifact_name": "State of the Art Assessment",
+    "artifact_example": "State_of_Art_Assessment_Product_Line.pdf",
+    "description": "Documentation demonstrating the state of scientific and technical knowledge at the time the product was placed on market, put into service, or when the relevant modification was made. This supports the Article 10 exemption where the defect could not have been discovered given the state of the art. Includes references to applicable standards, published research, and industry best practices at the relevant date.",
+    "retention_period": "Product lifetime + 15 years",
+    "auditor_questions": [
+      "What was the state of scientific and technical knowledge at the time this product was placed on market?",
+      "Can you demonstrate that the alleged defect was undiscoverable given the state of the art at the relevant time?",
+      "How do you document the scientific and technical baseline for each product generation?",
+      "What ongoing monitoring do you perform to identify emerging risks that could invalidate the state-of-the-art defence?"
+    ],
+    "maturity_levels": {
+      "basic": "Records of applicable standards and scientific knowledge at time of product launch",
+      "intermediate": "Systematic state-of-the-art assessments with literature reviews and standard tracking per product line",
+      "advanced": "Continuous technical intelligence programme with automated standard monitoring, academic publication tracking, and archived state-of-the-art baselines"
+    },
+    "cross_references": ["MACHINERY:10", "AI_ACT:9", "CRA:13"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "11",
+    "requirement_summary": "Obligation to mitigate damages and contributory negligence",
+    "evidence_type": "procedure",
+    "artifact_name": "Safety Communication and Recall Procedures",
+    "artifact_example": "Product_Safety_Recall_Procedure.pdf",
+    "description": "Procedures for issuing safety warnings, product recalls, and software updates to mitigate potential damages from defective products. Under Article 11, compensation may be reduced or disallowed if the injured person failed to take reasonable steps to mitigate damage, including by not applying a freely available update or correction. Manufacturers must demonstrate they made such updates accessible.",
+    "retention_period": "Product lifetime + 10 years",
+    "auditor_questions": [
+      "What is your procedure for issuing product safety warnings and recalls?",
+      "How do you make software updates and corrections freely available to users?",
+      "Can you demonstrate that safety-relevant updates were communicated effectively to affected users?",
+      "How do you track whether users have applied critical safety updates?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic recall and safety warning procedures in place",
+      "intermediate": "Structured recall management with customer notification system, update delivery tracking, and communication records",
+      "advanced": "Automated OTA update deployment with real-time adoption tracking, multi-channel safety communication, and risk-based prioritisation of corrective actions"
+    },
+    "cross_references": ["GPSR:10", "CRA:14", "MACHINERY:10"]
+  },
+  {
+    "regulation": "PLD",
+    "article": "14",
+    "requirement_summary": "Limitation and long-stop periods for liability claims",
+    "evidence_type": "policy",
+    "artifact_name": "Product Records Retention Policy",
+    "artifact_example": "Product_Records_Retention_Policy.pdf",
+    "description": "Policy establishing retention periods for product-related records aligned with PLD limitation periods. The standard limitation period is 3 years from when the claimant became aware of damage, defect, and identity of economic operator. The long-stop period is 15 years from placing on market (or 25 years for latent personal injury). Records must be retained to enable defence against claims throughout these periods.",
+    "retention_period": "Product lifetime + 25 years (for latent personal injury claims)",
+    "auditor_questions": [
+      "Does your records retention policy account for the PLD limitation and long-stop periods?",
+      "How do you ensure product records are preserved for up to 25 years for latent injury claims?",
+      "What is your procedure for archiving product design, testing, and safety records?",
+      "How do you track the placing-on-market date for each product to calculate applicable limitation periods?"
+    ],
+    "maturity_levels": {
+      "basic": "Records retention policy exists covering statutory periods, basic archive system",
+      "intermediate": "Automated retention management with alerts before destruction, categorised archive with product lifecycle tracking",
+      "advanced": "Enterprise records management system with automated legal hold, retention scheduling aligned to multiple regulatory requirements, and disaster recovery for long-term archives"
+    },
+    "cross_references": ["GDPR:5", "MACHINERY:10"]
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "regulation": "CBAM",
+    "article": "4",
+    "requirement_summary": "Import obligations — only authorised CBAM declarants may import",
+    "evidence_type": "certification",
+    "artifact_name": "Authorised CBAM Declarant Status",
+    "artifact_example": "CBAM_Declarant_Authorisation_Certificate.pdf",
+    "description": "Documentation confirming the status of authorised CBAM declarant granted by the competent authority. From 1 January 2026, goods listed in Annex I may only be imported into the customs territory of the Union by an authorised CBAM declarant. The authorisation requires registration in the CBAM registry and demonstration of financial and operational capacity.",
+    "retention_period": "Duration of authorisation + 4 years",
+    "auditor_questions": [
+      "Can you provide proof of your authorised CBAM declarant status?",
+      "Is the authorisation registered in the CBAM registry?",
+      "How do you ensure that all imports of CBAM goods are made under an authorised declarant?",
+      "How do you maintain and update the information submitted for your authorisation?"
+    ],
+    "maturity_levels": {
+      "basic": "Authorised CBAM declarant status obtained and registered in CBAM registry",
+      "intermediate": "Systematic management of CBAM authorisation with change notification processes and compliance calendar",
+      "advanced": "Integrated CBAM compliance platform with automated authorisation renewal tracking, multi-entity management, and customs system integration"
+    },
+    "cross_references": ["CBAM:5"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "5",
+    "requirement_summary": "Application for authorisation as CBAM declarant",
+    "evidence_type": "document",
+    "artifact_name": "CBAM Declarant Application and Supporting Documents",
+    "artifact_example": "CBAM_Declarant_Application_2026.pdf",
+    "description": "Complete application for authorised CBAM declarant status submitted via the CBAM registry, including: name, address, EORI number, main economic activity in the EU, tax authority certification that no outstanding recovery orders exist, declaration of honour regarding infringements, financial and operational capacity evidence (profit/loss and balance sheet for up to 3 years), and estimated import volumes.",
+    "retention_period": "Duration of authorisation + 4 years",
+    "auditor_questions": [
+      "Is the CBAM declarant application complete with all required supporting documentation?",
+      "Has the tax authority certification been obtained confirming no outstanding recovery orders?",
+      "What financial evidence was submitted to demonstrate operational capacity?",
+      "Are estimated import volumes documented and regularly updated?"
+    ],
+    "maturity_levels": {
+      "basic": "Complete application submitted with all required documents and declarations",
+      "intermediate": "Application management process with document checklist, supporting evidence archive, and change notification procedure",
+      "advanced": "Automated application and renewal management integrated with ERP system, real-time financial data feeds, and proactive compliance monitoring"
+    },
+    "cross_references": ["CBAM:4"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "6",
+    "requirement_summary": "CBAM declaration — annual submission obligation",
+    "evidence_type": "document",
+    "artifact_name": "Annual CBAM Declaration",
+    "artifact_example": "CBAM_Declaration_2026.pdf",
+    "description": "Annual CBAM declaration submitted by 31 May each year for the preceding calendar year. Must contain: total quantity of each type of goods imported, total embedded emissions (direct and indirect), total number of CBAM certificates to be surrendered after deduction for carbon price paid in country of origin, and verification reports. The declaration must be submitted via the CBAM registry.",
+    "retention_period": "4 years after the year of submission",
+    "auditor_questions": [
+      "Has the annual CBAM declaration been submitted by 31 May for the preceding calendar year?",
+      "Does the declaration contain all required information including quantities, embedded emissions, and certificates?",
+      "How were the embedded emissions calculated for each type of imported goods?",
+      "What carbon price deductions were claimed and what is the supporting documentation?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual CBAM declaration submitted on time with all required fields completed",
+      "intermediate": "Systematic declaration preparation process with data validation, internal review, and reconciliation with customs records",
+      "advanced": "Automated CBAM declaration system integrated with customs, ERP, and emissions tracking with built-in validation and scenario analysis for certificate requirements"
+    },
+    "cross_references": ["CBAM:7", "CBAM:10"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "7",
+    "requirement_summary": "Calculation of embedded emissions",
+    "evidence_type": "document",
+    "artifact_name": "Embedded Emissions Calculation Records",
+    "artifact_example": "Embedded_Emissions_Calculations_2026.xlsx",
+    "description": "Detailed records of embedded emissions calculations for imported goods pursuant to Annex IV methods. Must include direct emissions data (and indirect where applicable), distinction between actual emissions and default values, production process data from installations in third countries, and records sufficiently detailed to enable verification. For complex goods, must include precursor emissions from upstream production.",
+    "retention_period": "4 years after CBAM declaration submission",
+    "auditor_questions": [
+      "Can you demonstrate the calculation methodology used for embedded emissions in each imported product?",
+      "Were actual emissions or default values used, and if defaults, why could actual emissions not be determined?",
+      "How were indirect emissions calculated where applicable?",
+      "Are the calculation records sufficiently detailed for independent verification?"
+    ],
+    "maturity_levels": {
+      "basic": "Emissions calculations documented per product type using applicable methods from Annex IV",
+      "intermediate": "Structured emissions calculation process with actual data collection from third-country producers, quality controls, and methodology documentation",
+      "advanced": "Automated emissions tracking system with direct data feeds from production installations, real-time monitoring, and AI-assisted emissions estimation for complex supply chains"
+    },
+    "cross_references": ["EU_TAXONOMY:8", "CSRD:1"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "10",
+    "requirement_summary": "CBAM certificates — purchase, surrender, and management",
+    "evidence_type": "log",
+    "artifact_name": "CBAM Certificate Transaction Log",
+    "artifact_example": "CBAM_Certificate_Log_2026.xlsx",
+    "description": "Log of all CBAM certificate transactions including purchases, surrenders, and any re-purchases by the Commission. Authorised CBAM declarants must ensure sufficient certificates in their account by the end of each quarter (at least 80% of embedded emissions) and surrender the correct number by 31 May. Certificate prices follow EU ETS auction prices. Records of carbon price paid in the country of origin for deduction purposes.",
+    "retention_period": "4 years after surrender or cancellation",
+    "auditor_questions": [
+      "Can you demonstrate that sufficient CBAM certificates were held at each quarterly checkpoint?",
+      "How do you track the number of certificates required versus those held in your account?",
+      "What documentation supports claims for carbon price deductions from countries of origin?",
+      "How do you manage CBAM certificate procurement in relation to price fluctuations?"
+    ],
+    "maturity_levels": {
+      "basic": "Certificate transactions recorded with quarterly balance verification",
+      "intermediate": "Certificate management system with procurement planning, quarterly compliance checks, and carbon price deduction tracking",
+      "advanced": "Integrated carbon management platform with predictive certificate demand forecasting, automated procurement, and real-time compliance dashboard"
+    },
+    "cross_references": ["CBAM:6"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "16",
+    "requirement_summary": "Default values for embedded emissions",
+    "evidence_type": "document",
+    "artifact_name": "Default Values Application Records",
+    "artifact_example": "Default_Values_Justification_2026.pdf",
+    "description": "Documentation justifying the use of default values where actual embedded emissions cannot be adequately determined. The Commission publishes default values based on best available data. Records must demonstrate why actual emissions were not available or adequate and which default values were applied. For indirect emissions, default values may be used unless the declarant can demonstrate actual emissions meet the criteria in Annex IV point 6.",
+    "retention_period": "4 years after CBAM declaration submission",
+    "auditor_questions": [
+      "Why were default values used instead of actual emission data?",
+      "Which Commission-published default values were applied and for which goods?",
+      "What efforts were made to obtain actual emission data from producers?",
+      "How do you monitor updates to default values published by the Commission?"
+    ],
+    "maturity_levels": {
+      "basic": "Default value application documented with justification for each product where actual data is unavailable",
+      "intermediate": "Systematic approach to transitioning from default to actual values with supplier engagement programme and data gap analysis",
+      "advanced": "Comprehensive emissions data programme with direct installation-level monitoring, gradual reduction in default value reliance, and automated regulatory update tracking"
+    },
+    "cross_references": ["CBAM:7"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "20",
+    "requirement_summary": "CBAM registry — account management and data integrity",
+    "evidence_type": "log",
+    "artifact_name": "CBAM Registry Account Records",
+    "artifact_example": "CBAM_Registry_Account_Records_2026.xlsx",
+    "description": "Records of all activities in the CBAM registry including account management, certificate balances, declarations submitted, and communications with competent authorities. The CBAM registry is the central database for managing authorisations, certificates, and declarations. Declarants must maintain accurate and up-to-date information in their registry accounts.",
+    "retention_period": "4 years after account activity",
+    "auditor_questions": [
+      "Is the CBAM registry account information accurate and up to date?",
+      "Can you reconcile registry records with internal customs and procurement records?",
+      "How do you manage user access and authorisations for the CBAM registry account?",
+      "What internal controls ensure the accuracy of data submitted to the registry?"
+    ],
+    "maturity_levels": {
+      "basic": "CBAM registry account maintained with regular reconciliation against internal records",
+      "intermediate": "Systematic registry management with internal controls, role-based access, and periodic data quality reviews",
+      "advanced": "Automated registry integration with ERP and customs systems, continuous data validation, and real-time reconciliation with audit trail"
+    },
+    "cross_references": ["CBAM:5", "CBAM:6"]
+  },
+  {
+    "regulation": "CBAM",
+    "article": "35",
+    "requirement_summary": "Verification of embedded emissions by accredited verifier",
+    "evidence_type": "certification",
+    "artifact_name": "Verification Report on Embedded Emissions",
+    "artifact_example": "CBAM_Verification_Report_2026.pdf",
+    "description": "Verification report from an accredited verifier confirming the embedded emissions declared in the CBAM declaration. Verification must be performed in accordance with Article 18 and Annex VI. The verifier must be accredited by a national accreditation body and independent from the CBAM declarant and the installation operator. The verification report must accompany the annual CBAM declaration.",
+    "retention_period": "4 years after CBAM declaration submission",
+    "auditor_questions": [
+      "Has the embedded emissions data been verified by an accredited verifier?",
+      "Is the verifier accredited by a recognised national accreditation body under Regulation (EC) No 765/2008?",
+      "Does the verification report confirm the accuracy of actual emissions data used in calculations?",
+      "What was the scope and methodology of the verification engagement?"
+    ],
+    "maturity_levels": {
+      "basic": "Verification report obtained from accredited verifier accompanying annual CBAM declaration",
+      "intermediate": "Proactive engagement with verifier including pre-verification reviews, data quality improvements, and corrective action follow-up",
+      "advanced": "Continuous verification readiness with real-time emissions monitoring, integrated verification management, and multi-year verification planning"
+    },
+    "cross_references": ["CSRD:1", "EU_TAXONOMY:8"]
+  }
+]

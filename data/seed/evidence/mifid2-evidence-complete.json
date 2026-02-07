@@ -1,0 +1,252 @@
+[
+  {
+    "regulation": "MIFID2",
+    "article": "9",
+    "requirement_summary": "Management body governance requirements",
+    "evidence_type": "document",
+    "artifact_name": "Management Body Governance Framework",
+    "artifact_example": "Management_Body_Governance_Framework_2025.pdf",
+    "description": "Documentation demonstrating that the management body collectively possesses adequate knowledge, skills, and experience, with members committing sufficient time to their functions, and that the firm has adequate human and financial resources for induction and training of members",
+    "retention_period": "Duration of member tenure + 5 years",
+    "auditor_questions": [
+      "Show me the skills matrix and competency assessment for management body members",
+      "How do you ensure collective suitability of the management body?",
+      "What induction and ongoing training is provided to management body members?",
+      "Show me evidence of time commitment assessments for each member including number of directorships held"
+    ],
+    "maturity_levels": {
+      "basic": "Skills matrix documented, basic suitability assessments performed",
+      "intermediate": "Regular suitability reviews, structured training programme, diversity policy implemented",
+      "advanced": "Continuous competency tracking, succession planning, independent governance effectiveness reviews"
+    },
+    "cross_references": [
+      "DORA:6",
+      "AIFMD:12"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "16",
+    "requirement_summary": "Organisational requirements for investment firms",
+    "evidence_type": "policy",
+    "artifact_name": "Organisational Requirements Compliance Policy",
+    "artifact_example": "Organisational_Requirements_Policy_2025.pdf",
+    "description": "Comprehensive policy covering sound administrative and accounting procedures, internal control mechanisms, effective risk assessment procedures, adequate internal control mechanisms for information processing systems, and business continuity arrangements",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your internal control framework and how it covers all organizational requirements",
+      "What are your business continuity and disaster recovery arrangements?",
+      "How do you ensure adequate security mechanisms for information processing systems?",
+      "Show me the organizational chart with clear reporting lines and segregation of duties"
+    ],
+    "maturity_levels": {
+      "basic": "Organizational policies documented, basic internal controls in place",
+      "intermediate": "Regular control testing, documented risk assessment procedures, tested business continuity plans",
+      "advanced": "Continuous control monitoring, automated compliance testing, integrated GRC platform with real-time dashboards"
+    },
+    "cross_references": [
+      "DORA:6",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "17",
+    "requirement_summary": "Algorithmic trading safeguards",
+    "evidence_type": "test_result",
+    "artifact_name": "Algorithmic Trading Systems Testing Report",
+    "artifact_example": "Algo_Trading_Test_Report_2025.pdf",
+    "description": "Test results from effective systems and risk controls for algorithmic trading, including pre-trade controls (price collars, maximum order values), real-time monitoring, and post-trade surveillance, plus annual self-assessment and validation",
+    "retention_period": "5 years from test execution",
+    "auditor_questions": [
+      "Show me the testing and validation results for your algorithmic trading systems",
+      "What pre-trade risk controls are in place (price collars, order value limits)?",
+      "How do you perform real-time monitoring of algorithmic trading activity?",
+      "Show me your annual self-assessment of algorithmic trading systems and controls"
+    ],
+    "maturity_levels": {
+      "basic": "Pre-trade controls implemented, basic testing performed, kill switch available",
+      "intermediate": "Comprehensive testing programme, real-time monitoring with alerts, documented change management for algorithms",
+      "advanced": "Continuous validation environment, AI-driven anomaly detection, automated kill switch with market condition triggers"
+    },
+    "cross_references": [
+      "MIFIR:26",
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "21",
+    "requirement_summary": "Regular monitoring of compliance",
+    "evidence_type": "log",
+    "artifact_name": "Compliance Monitoring Log",
+    "artifact_example": "Compliance_Monitoring_Log_2025.xlsx",
+    "description": "Log of compliance monitoring activities performed by the compliance function, including monitoring programme, findings, remediation actions, and reporting to senior management on compliance risks and issues identified",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the annual compliance monitoring programme and plan",
+      "What compliance reviews have been performed and what were the findings?",
+      "How are compliance findings escalated and remediated?",
+      "Show me evidence of compliance reporting to senior management"
+    ],
+    "maturity_levels": {
+      "basic": "Compliance monitoring programme exists, basic monitoring activities performed",
+      "intermediate": "Risk-based monitoring programme, structured findings tracking, regular management reporting",
+      "advanced": "Automated compliance monitoring with RegTech tools, predictive risk analytics, real-time compliance dashboards"
+    },
+    "cross_references": [
+      "DORA:6",
+      "AIFMD:12"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "24",
+    "requirement_summary": "General principles for conduct of business with clients",
+    "evidence_type": "policy",
+    "artifact_name": "Conduct of Business Policy",
+    "artifact_example": "Conduct_of_Business_Policy_2025.pdf",
+    "description": "Policy documenting obligations to act honestly, fairly, and professionally in the best interest of clients, provide fair, clear and not misleading information, and ensure all costs and charges are disclosed",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your conduct of business policy and how staff are trained on it",
+      "How do you ensure information provided to clients is fair, clear and not misleading?",
+      "Show me how all costs and charges are disclosed to clients (ex-ante and ex-post)?",
+      "What inducements do you receive or pay and how do they enhance service quality?"
+    ],
+    "maturity_levels": {
+      "basic": "Conduct of business policy documented, basic cost disclosures provided",
+      "intermediate": "Regular staff training, standardized disclosure templates, inducement quality enhancement assessments",
+      "advanced": "Automated cost disclosure generation, client outcome monitoring, independent conduct risk assessments"
+    },
+    "cross_references": [
+      "MIFID2:25",
+      "MICA:16"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "25",
+    "requirement_summary": "Assessment of suitability and appropriateness",
+    "evidence_type": "document",
+    "artifact_name": "Suitability and Appropriateness Assessment Records",
+    "artifact_example": "Suitability_Assessment_Records_2025.pdf",
+    "description": "Records of suitability assessments for investment advice and portfolio management (knowledge, experience, financial situation, investment objectives, risk tolerance) and appropriateness tests for non-advised services",
+    "retention_period": "Duration of client relationship + 5 years",
+    "auditor_questions": [
+      "Show me the suitability questionnaire and assessment methodology",
+      "How do you document the suitability of each recommendation to the client?",
+      "What appropriateness test do you apply for non-advised services?",
+      "How do you handle situations where a service is assessed as not suitable or appropriate?"
+    ],
+    "maturity_levels": {
+      "basic": "Suitability questionnaires completed, basic assessments documented",
+      "intermediate": "Systematic suitability reviews, automated appropriateness checks, periodic reassessment",
+      "advanced": "Dynamic suitability profiling, automated portfolio-level suitability monitoring, AI-assisted recommendation matching"
+    },
+    "cross_references": [
+      "MIFID2:24",
+      "SFDR:6"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "27",
+    "requirement_summary": "Best execution obligations",
+    "evidence_type": "document",
+    "artifact_name": "Best Execution Policy and Monitoring Report",
+    "artifact_example": "Best_Execution_Report_2025.pdf",
+    "description": "Best execution policy documenting how the firm obtains the best possible result for clients considering price, costs, speed, likelihood of execution, settlement, size, nature, and other relevant factors, plus annual monitoring and review evidence",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your best execution policy and how execution venues are selected",
+      "How do you monitor best execution quality on an ongoing basis?",
+      "Show me the annual best execution report published for clients",
+      "What factors do you consider when determining relative importance of execution factors?"
+    ],
+    "maturity_levels": {
+      "basic": "Best execution policy documented, limited venue analysis",
+      "intermediate": "Regular execution quality monitoring, venue comparison analysis, annual policy review",
+      "advanced": "Real-time execution quality analytics, automated venue selection optimization, transaction cost analysis (TCA) programme"
+    },
+    "cross_references": [
+      "MIFIR:26",
+      "MIFID2:24"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "31",
+    "requirement_summary": "General obligations for third-country firms operating via a branch",
+    "evidence_type": "certification",
+    "artifact_name": "Third-Country Branch Authorization",
+    "artifact_example": "Third_Country_Branch_Authorization_2025.pdf",
+    "description": "Authorization documentation for third-country firms providing investment services through an established branch in a Member State, including evidence of compliance with national authorization requirements and cooperation arrangements with the home country supervisor",
+    "retention_period": "Duration of branch operations + 10 years",
+    "auditor_questions": [
+      "Show me the branch authorization from the Member State competent authority",
+      "What supervisory cooperation arrangements exist with the home country regulator?",
+      "How do you ensure the branch meets all applicable local requirements?",
+      "Show me evidence that clients are informed they are dealing with a third-country firm branch"
+    ],
+    "maturity_levels": {
+      "basic": "Branch authorization obtained, basic compliance framework in place",
+      "intermediate": "Regular compliance reviews, documented reporting to both home and host supervisors",
+      "advanced": "Integrated compliance framework across jurisdictions, automated regulatory reporting, continuous monitoring of equivalence requirements"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "MIFIR:28"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "58",
+    "requirement_summary": "Position limits and position management controls",
+    "evidence_type": "log",
+    "artifact_name": "Position Limits Monitoring Log",
+    "artifact_example": "Position_Limits_Log_2025.csv",
+    "description": "Log of position limit monitoring in commodity derivatives, including real-time position tracking, breach alerts, position management actions taken, and reporting to competent authorities of positions exceeding thresholds",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me how you monitor positions against the limits set by competent authorities",
+      "What automated controls alert you when positions approach or breach limits?",
+      "Show me the position reporting you provide to the competent authority",
+      "How do you handle position limit breaches and what corrective actions are taken?"
+    ],
+    "maturity_levels": {
+      "basic": "Position limits monitored, basic breach alerting in place",
+      "intermediate": "Automated real-time monitoring, pre-trade position limit checks, documented escalation procedures",
+      "advanced": "Predictive position analytics, automated position reduction mechanisms, integrated cross-venue position aggregation"
+    },
+    "cross_references": [
+      "MIFIR:26",
+      "MIFID2:17"
+    ]
+  },
+  {
+    "regulation": "MIFID2",
+    "article": "72",
+    "requirement_summary": "Supervision by competent authorities",
+    "evidence_type": "document",
+    "artifact_name": "Regulatory Supervision Compliance Documentation",
+    "artifact_example": "Regulatory_Supervision_Documentation_2025.pdf",
+    "description": "Documentation supporting supervisory activities of competent authorities, including regulatory returns, notifications, ad-hoc information requests, and records of supervisory visits and examinations",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me all regulatory returns and notifications submitted to the competent authority",
+      "How do you track and respond to supervisory information requests?",
+      "Show me records of recent supervisory visits or examinations and any remediation actions",
+      "What governance arrangements ensure timely and accurate regulatory reporting?"
+    ],
+    "maturity_levels": {
+      "basic": "Regulatory returns submitted on time, basic record-keeping of supervisory interactions",
+      "intermediate": "Structured regulatory reporting calendar, dedicated regulatory affairs function, documented remediation tracking",
+      "advanced": "Automated regulatory reporting, integrated supervisory interaction management system, proactive self-assessment programmes"
+    },
+    "cross_references": [
+      "DORA:19",
+      "MIFIR:26"
+    ]
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "regulation": "SFDR",
+    "article": "3",
+    "requirement_summary": "Transparency of sustainability risk policies",
+    "evidence_type": "policy",
+    "artifact_name": "Sustainability Risk Integration Policy",
+    "artifact_example": "Sustainability_Risk_Policy_2025.pdf",
+    "description": "Published policy on the integration of sustainability risks in investment decision-making processes, describing how sustainability risks are identified, assessed, and integrated into investment decisions, made available on the financial market participant's website",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your published sustainability risk integration policy",
+      "How do you identify and assess sustainability risks for each investment decision?",
+      "Where is this policy published and how do you ensure it is kept up to date?",
+      "How is the sustainability risk policy integrated into your actual investment decision-making process?"
+    ],
+    "maturity_levels": {
+      "basic": "Sustainability risk policy published on website with basic risk identification",
+      "intermediate": "Systematic sustainability risk assessment integrated into investment process, regular policy updates",
+      "advanced": "Quantitative sustainability risk modelling, ESG data integration in portfolio management systems, dynamic risk monitoring"
+    },
+    "cross_references": [
+      "SFDR:6",
+      "EU_TAXONOMY:3"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "4",
+    "requirement_summary": "Transparency of adverse sustainability impacts at entity level",
+    "evidence_type": "document",
+    "artifact_name": "Principal Adverse Impacts Statement",
+    "artifact_example": "PAI_Statement_2025.pdf",
+    "description": "Statement on principal adverse impacts (PAI) of investment decisions on sustainability factors published on the website, or clear explanation of why adverse impacts are not considered, including quantitative indicators for mandatory PAI indicators (GHG emissions, biodiversity, water, waste, social/employee matters)",
+    "retention_period": "5 years from publication date",
+    "auditor_questions": [
+      "Show me your principal adverse impacts statement or your explanation for not considering PAIs",
+      "How do you collect data for the mandatory PAI indicators?",
+      "What actions have you taken to reduce principal adverse impacts?",
+      "How do you engage with investee companies on sustainability matters?"
+    ],
+    "maturity_levels": {
+      "basic": "PAI statement published with mandatory indicators or comply-or-explain statement provided",
+      "intermediate": "Comprehensive PAI reporting with voluntary indicators, documented engagement policies, action plans for reduction",
+      "advanced": "Real-time PAI monitoring, verified data from investee companies, measurable impact reduction targets with tracking"
+    },
+    "cross_references": [
+      "SFDR:7",
+      "CSRD:19a"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "5",
+    "requirement_summary": "Transparency of remuneration policies in relation to sustainability risks",
+    "evidence_type": "policy",
+    "artifact_name": "Sustainability-Linked Remuneration Policy",
+    "artifact_example": "Sustainability_Remuneration_Policy_2025.pdf",
+    "description": "Information on how the remuneration policy is consistent with the integration of sustainability risks, published on the website, describing how remuneration structures do not encourage excessive risk-taking with respect to sustainability risks",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me how your remuneration policy integrates sustainability risk considerations",
+      "How do you ensure remuneration does not incentivize excessive sustainability risk-taking?",
+      "Are ESG performance metrics included in variable remuneration for relevant staff?",
+      "Where is this information published and when was it last updated?"
+    ],
+    "maturity_levels": {
+      "basic": "Remuneration policy references sustainability risks, published on website",
+      "intermediate": "Specific ESG KPIs linked to variable remuneration, documented assessment of sustainability risk incentives",
+      "advanced": "Quantitative ESG performance targets in remuneration, independent assessment of sustainability-remuneration alignment"
+    },
+    "cross_references": [
+      "AIFMD:13",
+      "MIFID2:9"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "6",
+    "requirement_summary": "Transparency of the integration of sustainability risks in pre-contractual disclosures",
+    "evidence_type": "document",
+    "artifact_name": "Pre-Contractual Sustainability Risk Disclosure",
+    "artifact_example": "PreContractual_Sustainability_Disclosure_2025.pdf",
+    "description": "Pre-contractual disclosure describing the manner in which sustainability risks are integrated into investment decisions and the assessment of the likely impacts of sustainability risks on the returns of the financial product, or explanation of why sustainability risks are not relevant",
+    "retention_period": "Duration of product offering + 5 years",
+    "auditor_questions": [
+      "Show me the pre-contractual sustainability risk disclosures for each financial product",
+      "How do you assess the likely impact of sustainability risks on product returns?",
+      "Where sustainability risks are deemed not relevant, what is the documented rationale?",
+      "How do you ensure consistency between pre-contractual disclosures and actual investment practices?"
+    ],
+    "maturity_levels": {
+      "basic": "Sustainability risk disclosures included in pre-contractual documents for all products",
+      "intermediate": "Quantitative impact assessments, product-specific sustainability risk analysis, regular disclosure reviews",
+      "advanced": "Dynamic risk assessment models, scenario analysis of sustainability impacts, automated disclosure generation from risk systems"
+    },
+    "cross_references": [
+      "SFDR:3",
+      "MIFID2:25"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "7",
+    "requirement_summary": "Transparency of adverse sustainability impacts at financial product level",
+    "evidence_type": "document",
+    "artifact_name": "Product-Level PAI Disclosure",
+    "artifact_example": "Product_PAI_Disclosure_FundX_2025.pdf",
+    "description": "Pre-contractual disclosure for each financial product explaining how principal adverse impacts on sustainability factors are considered at the product level, or a clear statement that the product does not consider adverse impacts with reasons",
+    "retention_period": "Duration of product offering + 5 years",
+    "auditor_questions": [
+      "Show me the product-level PAI disclosure for each financial product",
+      "How are adverse sustainability impacts considered in the investment process for this product?",
+      "If PAIs are not considered, what is the documented rationale?",
+      "How do you ensure consistency with the entity-level PAI statement?"
+    ],
+    "maturity_levels": {
+      "basic": "Product-level PAI disclosures provided for all products",
+      "intermediate": "Detailed PAI consideration methodology for each product, alignment with entity-level statement",
+      "advanced": "Product-specific PAI monitoring dashboards, quantified PAI reduction targets per product, investor reporting on PAI outcomes"
+    },
+    "cross_references": [
+      "SFDR:4",
+      "EU_TAXONOMY:5"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "8",
+    "requirement_summary": "Transparency for products promoting environmental or social characteristics (Article 8 products)",
+    "evidence_type": "document",
+    "artifact_name": "Article 8 Product Pre-Contractual Disclosure",
+    "artifact_example": "Art8_Product_Disclosure_FundY_2025.pdf",
+    "description": "Pre-contractual disclosure for financial products that promote environmental or social characteristics, describing how those characteristics are met, the index designated as a reference benchmark (if applicable), and where the methodology of the index can be found",
+    "retention_period": "Duration of product offering + 5 years",
+    "auditor_questions": [
+      "Show me the pre-contractual disclosure for this Article 8 product",
+      "What environmental or social characteristics does this product promote and how are they met?",
+      "If a reference benchmark is designated, how does it align with the promoted characteristics?",
+      "What proportion of investments are aligned with the promoted characteristics?"
+    ],
+    "maturity_levels": {
+      "basic": "Article 8 disclosure template completed with promoted characteristics described",
+      "intermediate": "Detailed methodology for assessing E/S characteristics, binding elements clearly defined, regular monitoring",
+      "advanced": "Real-time monitoring of characteristic alignment, third-party verification, impact measurement and reporting"
+    },
+    "cross_references": [
+      "SFDR:11",
+      "EU_TAXONOMY:5"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "9",
+    "requirement_summary": "Transparency for products with sustainable investment as their objective (Article 9 products)",
+    "evidence_type": "document",
+    "artifact_name": "Article 9 Product Pre-Contractual Disclosure",
+    "artifact_example": "Art9_Product_Disclosure_FundZ_2025.pdf",
+    "description": "Pre-contractual disclosure for financial products that have sustainable investment as their objective, including an explanation of how the sustainable investment objective is to be attained, the designated index as a reference benchmark, and no significant harm assessment methodology",
+    "retention_period": "Duration of product offering + 5 years",
+    "auditor_questions": [
+      "Show me the pre-contractual disclosure for this Article 9 product",
+      "How is the sustainable investment objective attained and what is the investment strategy?",
+      "How do you ensure that sustainable investments do no significant harm to other environmental or social objectives?",
+      "What reference benchmark is used and how is it aligned with the sustainable investment objective?"
+    ],
+    "maturity_levels": {
+      "basic": "Article 9 disclosure completed, sustainable investment objective clearly stated",
+      "intermediate": "Robust DNSH methodology, comprehensive indicator monitoring, clear investment strategy documentation",
+      "advanced": "Verified impact measurement, real-time portfolio alignment tracking, third-party sustainability certification"
+    },
+    "cross_references": [
+      "SFDR:11",
+      "EU_TAXONOMY:3"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "10",
+    "requirement_summary": "Transparency on websites for Article 8 and Article 9 products",
+    "evidence_type": "document",
+    "artifact_name": "Website Sustainability Disclosures",
+    "artifact_example": "Website_Sustainability_Disclosures_2025.pdf",
+    "description": "Website disclosures for each Article 8 or Article 9 financial product, including description of environmental or social characteristics or sustainable investment objective, information on methodologies used, and data sources and screening criteria",
+    "retention_period": "Duration of product offering + 5 years",
+    "auditor_questions": [
+      "Show me the website disclosures for each Article 8 and Article 9 product",
+      "How do you describe the methodologies used to assess, measure, and monitor the E/S characteristics or sustainable objective?",
+      "What data sources are used and how is data quality ensured?",
+      "How frequently are website disclosures updated and what triggers an update?"
+    ],
+    "maturity_levels": {
+      "basic": "Website disclosures published for all Art 8/9 products with required content",
+      "intermediate": "Structured disclosure format, regular content reviews, clear methodology descriptions",
+      "advanced": "Interactive web disclosures, real-time data updates, integrated with regulatory reporting systems"
+    },
+    "cross_references": [
+      "SFDR:8",
+      "SFDR:9"
+    ]
+  },
+  {
+    "regulation": "SFDR",
+    "article": "11",
+    "requirement_summary": "Transparency in periodic reports for Article 8 and Article 9 products",
+    "evidence_type": "document",
+    "artifact_name": "Periodic Sustainability Report",
+    "artifact_example": "Periodic_Sustainability_Report_FundX_2024.pdf",
+    "description": "Periodic report disclosures for Article 8 and Article 9 products, describing the extent to which environmental or social characteristics are met or the overall sustainability-related impact of the financial product using relevant sustainability indicators",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me the periodic sustainability report for this Article 8/9 product",
+      "How do you measure the extent to which promoted characteristics were met during the reporting period?",
+      "What sustainability indicators do you use and how are they calculated?",
+      "How does the periodic report compare to the pre-contractual disclosures — are there any discrepancies?"
+    ],
+    "maturity_levels": {
+      "basic": "Periodic sustainability disclosures included in annual reports for Art 8/9 products",
+      "intermediate": "Comprehensive indicator reporting, year-on-year comparison, methodology consistency with pre-contractual disclosures",
+      "advanced": "Independent assurance of sustainability data, integrated reporting with financial performance, investor-friendly digital reporting"
+    },
+    "cross_references": [
+      "SFDR:8",
+      "AIFMD:22"
+    ]
+  }
+]

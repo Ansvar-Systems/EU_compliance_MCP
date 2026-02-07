@@ -1,0 +1,244 @@
+[
+  {
+    "regulation": "CSDDD",
+    "article": "5",
+    "requirement_summary": "Risk-based human rights and environmental due diligence",
+    "evidence_type": "policy",
+    "artifact_name": "Due Diligence Policy",
+    "artifact_example": "CSDDD_Due_Diligence_Policy_2025.pdf",
+    "description": "Comprehensive due diligence policy integrated into the company's policies and risk management systems as required by Article 7. Must describe the company's approach to due diligence including risk-based methodology, all actions listed in Article 5(1)(a)-(h), and be developed in consultation with employees and their representatives. Documentation must be retained for at least 5 years.",
+    "retention_period": "5 years from creation",
+    "auditor_questions": [
+      "Can you provide the company's due diligence policy covering human rights and environmental impacts?",
+      "How is the due diligence policy integrated into the company's risk management systems?",
+      "Was the policy developed in consultation with employees and their representatives?",
+      "How does the policy describe the risk-based approach to prioritising due diligence activities?"
+    ],
+    "maturity_levels": {
+      "basic": "Due diligence policy adopted covering human rights and environmental matters, approved by management",
+      "intermediate": "Policy integrated with enterprise risk management, updated annually, and cascaded to subsidiaries and key business partners",
+      "advanced": "Dynamic due diligence policy with real-time risk integration, stakeholder co-creation, and automated policy effectiveness monitoring"
+    },
+    "cross_references": ["CSRD:1", "EUDR:8", "GDPR:35"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "6",
+    "requirement_summary": "Identifying actual and potential adverse impacts",
+    "evidence_type": "document",
+    "artifact_name": "Adverse Impact Identification Assessment",
+    "artifact_example": "Adverse_Impact_Assessment_2025.pdf",
+    "description": "Documentation of the process and results of identifying actual and potential adverse human rights and environmental impacts arising from the company's own operations and those of its subsidiaries, as well as from business partners in the chain of activities. Must cover direct and indirect business relationships and include mapping of the company's operations, subsidiaries, and value chain.",
+    "retention_period": "5 years from creation",
+    "auditor_questions": [
+      "How do you map your chain of activities to identify where adverse impacts may occur?",
+      "What methodology is used to identify actual and potential adverse impacts on human rights and environment?",
+      "How are indirect business relationships assessed for adverse impact risks?",
+      "How frequently is the impact identification process updated?"
+    ],
+    "maturity_levels": {
+      "basic": "Initial mapping of own operations and direct business partners with adverse impact identification documented",
+      "intermediate": "Systematic impact identification covering full chain of activities with sector-specific risk indicators and regular updates",
+      "advanced": "AI-powered supply chain mapping with real-time adverse impact detection, satellite monitoring for environmental impacts, and comprehensive human rights risk scoring"
+    },
+    "cross_references": ["EUDR:10", "CSRD:1"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "7",
+    "requirement_summary": "Prioritising identified adverse impacts",
+    "evidence_type": "document",
+    "artifact_name": "Impact Prioritisation Matrix",
+    "artifact_example": "Impact_Prioritisation_Matrix_2025.pdf",
+    "description": "Documentation of the prioritisation of identified actual and potential adverse impacts based on severity and likelihood, where it is not feasible to address all impacts simultaneously. Prioritisation must consider the severity of the impact (scale, scope, irremediability), the likelihood of occurrence, and the nature and context of the adverse impact including whether it is potentially systemic.",
+    "retention_period": "5 years from creation",
+    "auditor_questions": [
+      "What criteria are used to prioritise adverse impacts when not all can be addressed simultaneously?",
+      "How are severity and likelihood assessed for each identified impact?",
+      "How is the prioritisation updated as circumstances change?",
+      "Can you demonstrate that the most severe impacts are addressed first?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic prioritisation performed based on severity and likelihood with documented rationale",
+      "intermediate": "Structured prioritisation framework with quantified scoring, periodic reassessment, and stakeholder input",
+      "advanced": "Dynamic prioritisation system with real-time risk recalculation, scenario modelling, and integration with operational decision-making"
+    },
+    "cross_references": ["CSRD:1", "EUDR:10"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "8",
+    "requirement_summary": "Preventing potential adverse impacts",
+    "evidence_type": "procedure",
+    "artifact_name": "Prevention Action Plan",
+    "artifact_example": "Adverse_Impact_Prevention_Plan_2025.pdf",
+    "description": "Documented prevention action plan describing measures to prevent potential adverse human rights and environmental impacts. Must include contractual assurances from business partners, investment in management or production processes, support to SME business partners, collaboration with other entities, and where necessary, temporary suspension or termination of business relationships as a last resort.",
+    "retention_period": "5 years from creation",
+    "auditor_questions": [
+      "What prevention measures have been implemented for each identified potential adverse impact?",
+      "How are contractual assurances with business partners structured and monitored?",
+      "What support is provided to SME business partners to help them comply with due diligence requirements?",
+      "Under what circumstances would you temporarily suspend or terminate a business relationship?"
+    ],
+    "maturity_levels": {
+      "basic": "Prevention action plan documenting measures for key potential impacts with timelines",
+      "intermediate": "Cascading prevention measures through business partner contracts, supplier development programmes, and industry collaboration initiatives",
+      "advanced": "Proactive prevention system with predictive risk modelling, automated contract compliance monitoring, and graduated response framework with continuous effectiveness evaluation"
+    },
+    "cross_references": ["EUDR:11", "CSRD:1"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "9",
+    "requirement_summary": "Bringing actual adverse impacts to an end",
+    "evidence_type": "procedure",
+    "artifact_name": "Corrective Action Plan for Actual Impacts",
+    "artifact_example": "Corrective_Action_Plan_Actual_Impacts_2025.pdf",
+    "description": "Documented corrective action plan for bringing actual adverse impacts to an end and minimising their extent. Must include neutralisation or minimisation measures, corrective action plans with timelines, contractual assurances from business partners, and where impacts cannot be ended, measures to minimise their extent. Temporary suspension or termination of business relationships may be required as a last resort.",
+    "retention_period": "5 years from creation",
+    "auditor_questions": [
+      "What corrective actions have been taken for identified actual adverse impacts?",
+      "Are corrective action plans time-bound with clear milestones and responsible persons?",
+      "How do you verify that corrective actions have been effective in ending or minimising impacts?",
+      "Have any business relationships been suspended or terminated as a result of actual impacts?"
+    ],
+    "maturity_levels": {
+      "basic": "Corrective action plans documented for identified actual impacts with basic follow-up",
+      "intermediate": "Structured corrective action management with root cause analysis, effectiveness verification, and escalation procedures",
+      "advanced": "Integrated corrective action platform with real-time impact tracking, stakeholder-verified effectiveness assessment, and machine learning-based root cause analysis"
+    },
+    "cross_references": ["EUDR:11", "CSRD:1"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "10",
+    "requirement_summary": "Remediation of actual adverse impacts",
+    "evidence_type": "procedure",
+    "artifact_name": "Remediation Framework",
+    "artifact_example": "Remediation_Framework_2025.pdf",
+    "description": "Framework for providing remediation where the company has caused or jointly caused an actual adverse impact. Must include financial compensation where appropriate, reinstatement, public apology, restitution, contribution to investigation, or other forms of reparation proportionate to the significance and scale of the impact. Companies must also enable remediation through engagement with affected stakeholders.",
+    "retention_period": "5 years from provision of remediation",
+    "auditor_questions": [
+      "What remediation mechanisms are in place for actual adverse impacts caused or jointly caused by the company?",
+      "How is the form and scale of remediation determined proportionate to the impact?",
+      "How are affected stakeholders engaged in determining appropriate remediation?",
+      "Can you provide examples of remediation provided in the past reporting period?"
+    ],
+    "maturity_levels": {
+      "basic": "Remediation framework established with basic procedures for compensation and reparation",
+      "intermediate": "Structured remediation process with stakeholder engagement, proportionality assessment, and independent grievance mechanism",
+      "advanced": "Comprehensive remediation system with victim-centred approach, access to independent adjudication, financial provisioning, and long-term impact monitoring"
+    },
+    "cross_references": ["CSRD:1"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "11",
+    "requirement_summary": "Meaningful stakeholder engagement",
+    "evidence_type": "log",
+    "artifact_name": "Stakeholder Engagement Records",
+    "artifact_example": "Stakeholder_Engagement_Log_2025.xlsx",
+    "description": "Records of meaningful engagement with affected stakeholders including employees, workers' representatives, communities, indigenous peoples, and civil society organisations. Engagement must be carried out at all relevant stages of due diligence — identification, prevention, mitigation, remediation, and monitoring. Must respect the rights and culture of indigenous peoples and ensure engagement is timely, accessible, and in good faith.",
+    "retention_period": "5 years from engagement activity",
+    "auditor_questions": [
+      "What stakeholder engagement activities have been conducted as part of the due diligence process?",
+      "How do you ensure engagement is meaningful, timely, and accessible to affected stakeholders?",
+      "How are the views of indigenous peoples and vulnerable groups incorporated?",
+      "How does stakeholder feedback influence due diligence decisions and action plans?"
+    ],
+    "maturity_levels": {
+      "basic": "Stakeholder engagement activities conducted and documented for key due diligence stages",
+      "intermediate": "Systematic stakeholder engagement programme with mapping of affected groups, structured dialogue mechanisms, and feedback integration",
+      "advanced": "Continuous stakeholder engagement platform with digital and in-person channels, participatory decision-making processes, and impact-verified engagement effectiveness"
+    },
+    "cross_references": ["CSRD:1", "EUDR:10"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "12",
+    "requirement_summary": "Notification mechanism and complaints procedure",
+    "evidence_type": "procedure",
+    "artifact_name": "Complaints and Notification Mechanism",
+    "artifact_example": "CSDDD_Complaints_Procedure_2025.pdf",
+    "description": "Documented notification mechanism and complaints procedure enabling persons and organisations to submit complaints to the company regarding actual or potential adverse impacts. Must be accessible, fair, transparent, and predictable. Must allow submission of substantiated concerns and provide timely follow-up. The company must inform complainants of the outcome and provide reasons. Workers and their representatives must be able to submit complaints without fear of retaliation.",
+    "retention_period": "5 years from resolution of complaint",
+    "auditor_questions": [
+      "Is the complaints mechanism accessible, fair, transparent, and predictable?",
+      "How are complaints about adverse impacts received, assessed, and resolved?",
+      "What protections exist against retaliation for persons who submit complaints?",
+      "How are complainants informed of the outcome and what is the average resolution timeframe?"
+    ],
+    "maturity_levels": {
+      "basic": "Complaints procedure established with basic accessibility and documented response process",
+      "intermediate": "Multi-channel complaints mechanism with case management system, anti-retaliation protections, and regular reporting on complaints received and resolved",
+      "advanced": "Independent grievance mechanism with third-party adjudication option, whistleblower protection integration, real-time case tracking, and systemic issue analysis"
+    },
+    "cross_references": ["GDPR:77", "NIS2:30"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "14",
+    "requirement_summary": "Monitoring the effectiveness of due diligence",
+    "evidence_type": "document",
+    "artifact_name": "Due Diligence Effectiveness Monitoring Report",
+    "artifact_example": "DD_Effectiveness_Monitoring_Report_2025.pdf",
+    "description": "Documentation of periodic assessments to monitor the effectiveness of the due diligence policy and measures. Must evaluate whether adverse impacts are properly identified, prevented, mitigated, brought to an end, and remediated. Assessments must be carried out at least every 12 months and whenever there are reasonable grounds to believe significant new risks have arisen. Results must be used to update the due diligence policy and measures.",
+    "retention_period": "5 years from assessment date",
+    "auditor_questions": [
+      "How frequently are due diligence effectiveness assessments conducted?",
+      "What indicators and metrics are used to evaluate the effectiveness of prevention and mitigation measures?",
+      "How are assessment results used to update the due diligence policy and action plans?",
+      "Are assessments triggered by significant events or new risk information between regular cycles?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual effectiveness assessment conducted with documented findings and recommendations",
+      "intermediate": "Structured monitoring framework with KPIs, benchmarking, stakeholder feedback integration, and management review",
+      "advanced": "Continuous monitoring system with real-time effectiveness indicators, independent external assessments, and automated policy adjustment recommendations"
+    },
+    "cross_references": ["CSRD:1", "EUDR:10"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "15",
+    "requirement_summary": "Public communication and reporting on due diligence",
+    "evidence_type": "document",
+    "artifact_name": "Annual Due Diligence Public Communication",
+    "artifact_example": "Annual_DD_Communication_2025.pdf",
+    "description": "Annual public communication on due diligence matters published on the company's website. Must include description of the due diligence approach, identified actual and potential impacts, actions taken to prevent, mitigate, or end impacts, and the effectiveness of measures. For companies subject to CSRD, this obligation is fulfilled through sustainability reporting under Article 19a of the Accounting Directive.",
+    "retention_period": "5 years from publication",
+    "auditor_questions": [
+      "Is the annual due diligence communication published on the company's website?",
+      "Does the communication cover all elements required: approach, impacts identified, actions taken, and effectiveness?",
+      "If subject to CSRD, how does the sustainability report satisfy the CSDDD communication requirements?",
+      "How is the communication made accessible to affected stakeholders and the public?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual due diligence communication published on website covering required content elements",
+      "intermediate": "Comprehensive public reporting aligned with CSRD sustainability reporting, with multi-language accessibility and stakeholder-friendly format",
+      "advanced": "Integrated CSRD/CSDDD reporting with interactive online platform, downloadable data, third-party verification, and response mechanism for public feedback"
+    },
+    "cross_references": ["CSRD:1", "SFDR:4"]
+  },
+  {
+    "regulation": "CSDDD",
+    "article": "22",
+    "requirement_summary": "Climate transition plan",
+    "evidence_type": "document",
+    "artifact_name": "Climate Transition Plan (CSDDD)",
+    "artifact_example": "Climate_Transition_Plan_CSDDD_2025.pdf",
+    "description": "Transition plan for climate change mitigation ensuring that the company's business model and strategy are compatible with limiting global warming to 1.5C under the Paris Agreement and the objective of climate neutrality by 2050. Must include time-bound GHG reduction targets, description of decarbonisation levers, planned investment, and the role of the administrative body in overseeing the plan. Updated every 12 months with progress reporting.",
+    "retention_period": "Until superseded + 5 years",
+    "auditor_questions": [
+      "Does the transition plan include time-bound targets aligned with the 1.5C pathway?",
+      "What decarbonisation levers and planned investments are described in the plan?",
+      "How is the plan updated and how is progress against targets reported?",
+      "What role does the administrative body play in the adoption and oversight of the transition plan?"
+    ],
+    "maturity_levels": {
+      "basic": "Climate transition plan adopted with directional targets and qualitative action descriptions",
+      "intermediate": "Science-based transition plan with quantified targets, investment roadmap, and annual progress reviews",
+      "advanced": "Paris-aligned transition plan validated by SBTi, with scenario analysis, financial impact modelling, and independent progress verification"
+    },
+    "cross_references": ["CSRD:1", "EU_TAXONOMY:8", "CBAM:7"]
+  }
+]

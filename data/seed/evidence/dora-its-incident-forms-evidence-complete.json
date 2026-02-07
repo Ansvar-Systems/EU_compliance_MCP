@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_ITS_INCIDENT_FORMS",
+    "article": "2",
+    "requirement_summary": "Joint submission capability for combining initial notification, intermediate, and final reports",
+    "evidence_type": "procedure",
+    "artifact_name": "Joint Incident Report Submission Procedure",
+    "artifact_example": "Joint_Incident_Report_Submission_Procedure.pdf",
+    "description": "Procedure governing the combined submission of initial notification, intermediate report, and final report when conditions permit. Financial entities may combine two or all reports when regular activities have recovered or root cause analysis has been completed, provided all applicable time limits from DORA RTS Incident Reporting Article 5 are met. The procedure must specify the conditions triggering joint submission eligibility and the process for ensuring all required fields from each report type are included.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for determining when joint submission of incident reports is permissible.",
+      "How do you ensure all time limits are met when combining multiple report submissions?",
+      "What controls verify that a joint submission includes all required data fields from each individual report type?",
+      "Demonstrate a case where joint submission was used and how completeness was ensured."
+    ],
+    "maturity_levels": {
+      "basic": "Documented procedure specifying conditions for joint submission with manual completeness checks",
+      "intermediate": "Structured workflow with automated eligibility assessment for joint submission, template that merges all required fields, timeline compliance verification",
+      "advanced": "Intelligent reporting system that automatically identifies joint submission opportunities, pre-populates merged reports, validates completeness and timeline compliance before submission"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_ITS_INCIDENT_FORMS",
+    "article": "3",
+    "requirement_summary": "Aggregated reporting for recurring ICT-related incidents constituting a major incident",
+    "evidence_type": "document",
+    "artifact_name": "Recurring Incident Aggregated Reporting Records",
+    "artifact_example": "Recurring_Incident_Aggregated_Reports.pdf",
+    "description": "Aggregated reports for non-major recurring ICT-related incidents that cumulatively meet the conditions for one major ICT-related incident under DORA RTS Incident Classification Article 8(2). Reports must present the recurring incidents in aggregated form, demonstrating they occurred at least twice within 6 months, share the same apparent root cause, and collectively fulfil major incident classification criteria.",
+    "retention_period": "5 years from aggregated incident closure",
+    "auditor_questions": [
+      "Show me aggregated reports for recurring incidents that collectively met the major incident classification criteria.",
+      "How do you identify and track recurring incidents with the same apparent root cause across a 6-month period?",
+      "What is your monthly assessment process for evaluating whether recurring non-major incidents collectively constitute a major incident?",
+      "How do you present the aggregated information in the standard reporting forms?"
+    ],
+    "maturity_levels": {
+      "basic": "Manual monthly review of recurring incidents with aggregated reporting when thresholds are met",
+      "intermediate": "Systematic incident correlation with root cause tagging, automated monthly aggregation assessment, structured aggregated report templates",
+      "advanced": "Real-time recurring incident detection with automated root cause correlation, continuous threshold monitoring, automated aggregated report generation and submission"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_ITS_INCIDENT_FORMS",
+    "article": "4",
+    "requirement_summary": "Use of secure electronic channels for incident report submission",
+    "evidence_type": "procedure",
+    "artifact_name": "Secure Incident Reporting Channel Procedure",
+    "artifact_example": "Secure_Incident_Reporting_Channel_Procedure.pdf",
+    "description": "Procedure for submitting initial notifications and intermediate and final reports through secure electronic channels as made available by the competent authority. Must include fallback procedures for when secure channels are unavailable, specifying alternative secure means agreed with the competent authority and the requirement to resubmit through the primary secure channel once available.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me the secure electronic channels configured for incident report submission to your competent authority.",
+      "What fallback procedures are in place for submitting incident reports when the primary secure channel is unavailable?",
+      "How do you ensure resubmission through the primary secure channel once it becomes available after a fallback submission?",
+      "What controls protect the confidentiality and integrity of incident reports during submission?"
+    ],
+    "maturity_levels": {
+      "basic": "Secure electronic channels configured with documented fallback procedures and resubmission tracking",
+      "intermediate": "Automated submission through secure channels with monitoring for channel availability, systematic fallback activation, and resubmission workflow",
+      "advanced": "Integrated multi-channel submission platform with automated channel health monitoring, seamless failover, cryptographic submission verification, and complete submission audit trail"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_ITS_INCIDENT_FORMS",
+    "article": "5",
+    "requirement_summary": "Reclassification procedure for major ICT-related incidents downgraded to non-major",
+    "evidence_type": "procedure",
+    "artifact_name": "Incident Reclassification Procedure and Records",
+    "artifact_example": "Incident_Reclassification_Procedure.pdf",
+    "description": "Procedure for reclassifying a previously reported major ICT-related incident to non-major when further assessment determines the incident at no time fulfilled the classification criteria and thresholds from DORA RTS Incident Classification Article 8. Must specify the assessment methodology, the notification process to the competent authority using the template in Annex II with the 'type of report' and 'other information' fields, and record-keeping requirements.",
+    "retention_period": "5 years from reclassification",
+    "auditor_questions": [
+      "Show me your procedure for reclassifying a major incident to non-major including the assessment methodology.",
+      "How do you determine that an incident at no time fulfilled the major incident classification criteria and thresholds?",
+      "Where are records of reclassification notifications sent to the competent authority using the Annex II template?",
+      "What internal approvals are required before a reclassification notification is submitted?"
+    ],
+    "maturity_levels": {
+      "basic": "Documented reclassification procedure with manual assessment and competent authority notification using standard template",
+      "intermediate": "Structured reclassification workflow with documented evidence gathering, systematic threshold reassessment, approval chain, and notification tracking",
+      "advanced": "Integrated reclassification process within incident management platform with automated threshold re-evaluation, evidence-based assessment documentation, and automated regulatory notification"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  }
+]

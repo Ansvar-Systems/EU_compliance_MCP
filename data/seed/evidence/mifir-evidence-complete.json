@@ -1,0 +1,202 @@
+[
+  {
+    "regulation": "MIFIR",
+    "article": "3",
+    "requirement_summary": "Pre-trade transparency for equity instruments",
+    "evidence_type": "log",
+    "artifact_name": "Pre-Trade Transparency Equity Publication Log",
+    "artifact_example": "PreTrade_Equity_Transparency_Log_2025.csv",
+    "description": "Log of pre-trade transparency publications for equity instruments including current bid and offer prices and depth of trading interest, published on a continuous basis during normal trading hours via the trading venue's systems",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me how pre-trade information for equity instruments is made public in real time",
+      "What systems do you use to publish bid/offer prices and order depth?",
+      "How do you handle any waivers from pre-trade transparency requirements?",
+      "Show me evidence of compliance with the calibration of large-in-scale and order management facility waivers"
+    ],
+    "maturity_levels": {
+      "basic": "Pre-trade data published via venue systems, basic waiver documentation",
+      "intermediate": "Real-time publication monitoring, structured waiver management, data quality checks",
+      "advanced": "Ultra-low latency publication systems, automated waiver threshold monitoring, comprehensive data quality framework"
+    },
+    "cross_references": [
+      "MIFID2:27",
+      "MIFIR:6"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "6",
+    "requirement_summary": "Pre-trade transparency for non-equity instruments",
+    "evidence_type": "log",
+    "artifact_name": "Pre-Trade Transparency Non-Equity Publication Log",
+    "artifact_example": "PreTrade_NonEquity_Transparency_Log_2025.csv",
+    "description": "Log of pre-trade transparency publications for non-equity instruments (bonds, structured finance products, emission allowances, derivatives) including current bid and offer prices, made public on a continuous basis during normal trading hours",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me how pre-trade information for non-equity instruments is made public",
+      "What waivers do you apply and what is the supporting evidence for each?",
+      "How do you determine which non-equity instruments are subject to pre-trade transparency?",
+      "Show me your liquidity assessment methodology for non-equity instruments"
+    ],
+    "maturity_levels": {
+      "basic": "Pre-trade data published for required non-equity instruments, waivers documented",
+      "intermediate": "Systematic liquidity assessment, automated waiver management, regular publication quality reviews",
+      "advanced": "Real-time liquidity classification, dynamic waiver calibration, comprehensive instrument coverage monitoring"
+    },
+    "cross_references": [
+      "MIFIR:3",
+      "MIFID2:27"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "10",
+    "requirement_summary": "Post-trade transparency for non-equity instruments",
+    "evidence_type": "log",
+    "artifact_name": "Post-Trade Transparency Non-Equity Publication Log",
+    "artifact_example": "PostTrade_NonEquity_Publication_Log_2025.csv",
+    "description": "Log of post-trade transparency publications for non-equity instruments, including price, volume, and time of transactions made public as close to real-time as technically possible, with documentation of any deferrals applied",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me how post-trade data for non-equity instruments is published",
+      "What is the average latency between trade execution and publication?",
+      "What deferred publication arrangements do you apply and under what conditions?",
+      "Show me evidence that deferred publications are eventually made public within the required timeframe"
+    ],
+    "maturity_levels": {
+      "basic": "Post-trade data published within required timeframe, deferral regime documented",
+      "intermediate": "Near real-time publication, structured deferral management, publication latency monitoring",
+      "advanced": "Sub-second publication capability, automated deferral classification and publication scheduling, comprehensive audit trail"
+    },
+    "cross_references": [
+      "MIFIR:6",
+      "MIFID2:27"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "14",
+    "requirement_summary": "Obligation for systematic internalisers to make public firm quotes in equity instruments",
+    "evidence_type": "document",
+    "artifact_name": "Systematic Internaliser Quote Publication Documentation",
+    "artifact_example": "SI_Quote_Publication_Documentation_2025.pdf",
+    "description": "Documentation of systematic internaliser status determination and compliance with obligations to make public firm quotes in equity instruments when dealing in sizes up to standard market size, including quote update policies and conditions for execution",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "How do you determine your systematic internaliser status for each instrument?",
+      "Show me how firm quotes are made public and accessible to other market participants",
+      "What are your policies on updating and withdrawing quotes?",
+      "How do you ensure quotes are available on a regular and continuous basis during normal trading hours?"
+    ],
+    "maturity_levels": {
+      "basic": "SI status assessed, quotes published for relevant instruments",
+      "intermediate": "Automated SI status monitoring, systematic quote publication, regular compliance reviews",
+      "advanced": "Real-time SI threshold monitoring, dynamic quote management systems, integrated venue connectivity"
+    },
+    "cross_references": [
+      "MIFIR:3",
+      "MIFID2:27"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "20",
+    "requirement_summary": "Data reporting services authorization",
+    "evidence_type": "certification",
+    "artifact_name": "Data Reporting Service Provider Authorization",
+    "artifact_example": "DRSP_Authorization_2025.pdf",
+    "description": "Authorization documentation for operating as an Approved Publication Arrangement (APA), Consolidated Tape Provider (CTP), or Approved Reporting Mechanism (ARM), including organizational requirements, systems capacity, and data quality controls",
+    "retention_period": "Duration of authorization + 10 years",
+    "auditor_questions": [
+      "Show me your authorization as a data reporting service provider",
+      "What organizational arrangements ensure data accuracy and completeness?",
+      "How do you ensure adequate systems capacity and resilience?",
+      "Show me your data quality management framework and error correction procedures"
+    ],
+    "maturity_levels": {
+      "basic": "Authorization obtained, basic data quality controls in place",
+      "intermediate": "Systematic data quality monitoring, capacity planning, incident management for data issues",
+      "advanced": "Real-time data quality dashboards, automated error detection and correction, resilient multi-site infrastructure"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "26",
+    "requirement_summary": "Obligation to report transactions to competent authorities",
+    "evidence_type": "log",
+    "artifact_name": "Transaction Reporting Log",
+    "artifact_example": "Transaction_Reports_2025.csv",
+    "description": "Complete log of transaction reports submitted to competent authorities as quickly as possible and no later than the close of the following working day, containing all required data fields including instrument identification, quantity, price, client identity, and decision maker",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your transaction reporting process and the completeness of reports submitted",
+      "How do you ensure reports are submitted by the close of the following working day?",
+      "What data quality checks do you perform before submitting transaction reports?",
+      "Show me evidence of how you identify and correct reporting errors and omissions"
+    ],
+    "maturity_levels": {
+      "basic": "Transaction reports submitted within deadline, basic data quality checks",
+      "intermediate": "Automated reporting pipeline, comprehensive data validation, error monitoring and correction",
+      "advanced": "Straight-through processing with real-time validation, automated reconciliation with ARM confirmations, predictive error detection"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "MIFID2:72"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "28",
+    "requirement_summary": "Obligation to trade derivatives on regulated venues",
+    "evidence_type": "document",
+    "artifact_name": "Derivatives Trading Obligation Compliance Documentation",
+    "artifact_example": "Derivatives_Trading_Obligation_2025.pdf",
+    "description": "Documentation demonstrating that derivatives subject to the trading obligation are concluded on regulated markets, MTFs, OTFs, or equivalent third-country venues, including classification of derivatives subject to the obligation and any exemptions applied",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "How do you identify which derivatives are subject to the trading obligation?",
+      "Show me evidence that obligated derivatives are traded on eligible venues",
+      "What exemptions from the trading obligation do you apply, if any?",
+      "How do you monitor changes to the list of derivatives subject to the trading obligation?"
+    ],
+    "maturity_levels": {
+      "basic": "Trading obligation obligations identified, derivatives traded on eligible venues",
+      "intermediate": "Automated instrument classification, venue eligibility monitoring, documented exemption assessments",
+      "advanced": "Real-time instrument classification against ESMA register, automated routing to eligible venues, comprehensive audit trail"
+    },
+    "cross_references": [
+      "MIFID2:27",
+      "MIFID2:16"
+    ]
+  },
+  {
+    "regulation": "MIFIR",
+    "article": "35",
+    "requirement_summary": "Non-discriminatory access to clearing for trading venues",
+    "evidence_type": "document",
+    "artifact_name": "Non-Discriminatory Clearing Access Documentation",
+    "artifact_example": "Clearing_Access_Arrangements_2025.pdf",
+    "description": "Documentation of non-discriminatory clearing access arrangements, including requests made or received for clearing access, commercial terms offered, risk assessments performed, and any refusals with documented justification",
+    "retention_period": "5 years from arrangement or refusal",
+    "auditor_questions": [
+      "Show me your arrangements for providing non-discriminatory access to clearing",
+      "What access requests have you received or made and what were the outcomes?",
+      "How do you ensure commercial terms are non-discriminatory?",
+      "Show me any access refusals and the documented risk-based justification for each"
+    ],
+    "maturity_levels": {
+      "basic": "Access arrangements documented, non-discrimination principle applied",
+      "intermediate": "Structured access request management, documented risk assessments, regular review of commercial terms",
+      "advanced": "Automated access request processing, transparent fee schedules, continuous risk monitoring of clearing arrangements"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "MIFID2:17"
+    ]
+  }
+]

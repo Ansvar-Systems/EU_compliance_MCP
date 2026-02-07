@@ -1,0 +1,146 @@
+[
+  {
+    "regulation": "DORA_RTS_ICT_RISK",
+    "article": "3",
+    "requirement_summary": "ICT risk management policies and procedures including risk assessment methodology and residual risk acceptance",
+    "evidence_type": "policy",
+    "artifact_name": "ICT Risk Management Policy and Procedures",
+    "artifact_example": "ICT_Risk_Management_Policy_Procedures.pdf",
+    "description": "Documented ICT risk management policies covering risk tolerance levels, risk assessment methodology with quantitative or qualitative indicators, risk treatment measures, residual risk acceptance inventory with justifications, and annual review provisions. Must include procedures for monitoring changes to the ICT risk and cyber threat landscape.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your documented ICT risk assessment methodology including the quantitative or qualitative indicators used to measure impact and likelihood of vulnerabilities and threats.",
+      "Where is your inventory of accepted residual ICT risks and what justifications are provided for each acceptance?",
+      "How do you ensure residual ICT risks are reviewed at least annually including reassessment of available mitigation measures?",
+      "Demonstrate how changes to the business strategy and digital operational resilience strategy are reflected in your ICT risk management procedures."
+    ],
+    "maturity_levels": {
+      "basic": "ICT risk management policy exists with basic risk assessment methodology and documented risk tolerance levels",
+      "intermediate": "Structured risk assessment with quantitative indicators, regularly updated residual risk inventory, annual review cycle with documented outcomes",
+      "advanced": "Continuous risk monitoring with automated threat landscape analysis, dynamic risk tolerance adjustment, integrated with enterprise risk management framework"
+    },
+    "cross_references": [
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_RISK",
+    "article": "6",
+    "requirement_summary": "Encryption and cryptographic controls policy covering data at rest, in transit, and in use",
+    "evidence_type": "policy",
+    "artifact_name": "Encryption and Cryptographic Controls Policy",
+    "artifact_example": "Encryption_Cryptographic_Controls_Policy.pdf",
+    "description": "Policy governing encryption of data at rest, in transit, and in use, including cryptographic key management lifecycle rules. Must specify criteria for selecting cryptographic techniques based on leading practices and standards, provisions for updating cryptographic technology based on developments in cryptanalysis, and documented mitigation measures where leading practices cannot be followed.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your encryption policy specifying rules for data at rest, in transit, and in use, including the classification-based approach used to determine encryption requirements.",
+      "How do you manage the full lifecycle of cryptographic keys including generation, renewal, storage, backup, archival, and destruction?",
+      "Where is your certificate register for ICT assets supporting critical or important functions, and how do you ensure timely certificate renewal?",
+      "What is your process for updating cryptographic technology based on developments in cryptanalysis, and where are mitigation measures documented when leading practices cannot be adopted?"
+    ],
+    "maturity_levels": {
+      "basic": "Encryption policy exists covering data at rest and in transit with basic key management procedures",
+      "intermediate": "Classification-based encryption with comprehensive key lifecycle management, certificate register maintained, regular cryptographic technique reviews",
+      "advanced": "Automated certificate management, crypto-agility program for algorithm transitions, continuous monitoring of cryptanalysis developments, hardware security module integration"
+    },
+    "cross_references": [
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_RISK",
+    "article": "8",
+    "requirement_summary": "ICT operations management policies covering asset management, monitoring, and system controls",
+    "evidence_type": "procedure",
+    "artifact_name": "ICT Operations Management Procedures",
+    "artifact_example": "ICT_Operations_Management_Procedures.pdf",
+    "description": "Documented procedures for managing ICT operations including secure installation, maintenance, configuration and deinstallation of systems. Must cover backup and restore requirements, audit-trail and system log protocols, separation of production from non-production environments, error handling procedures with escalation contacts, and system restart, rollback, and recovery procedures.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your documented procedures for secure installation, maintenance, configuration, and deinstallation of ICT systems.",
+      "How do you enforce separation between production, development, and testing environments including accounts, data, and connections?",
+      "What are your error handling procedures and escalation contacts for unexpected operational or technical issues?",
+      "Demonstrate your ICT system restart, rollback, and recovery procedures used in the event of system disruption."
+    ],
+    "maturity_levels": {
+      "basic": "Basic operations procedures exist with documented backup requirements and environment separation",
+      "intermediate": "Comprehensive operations manual with automated monitoring, tested recovery procedures, and documented escalation paths",
+      "advanced": "Fully automated operations management with infrastructure-as-code, continuous compliance verification, self-healing systems, and chaos engineering practices"
+    },
+    "cross_references": [
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_RISK",
+    "article": "12",
+    "requirement_summary": "Logging procedures and protocols for event recording, log protection, and clock synchronisation",
+    "evidence_type": "log",
+    "artifact_name": "ICT Logging Standards and Log Samples",
+    "artifact_example": "ICT_Logging_Standards_Sample_Logs.pdf",
+    "description": "Documented logging procedures identifying events to be logged, retention periods, and log data handling measures. Must include log samples demonstrating coverage of access control events, capacity management, change management, ICT operations, and network traffic. Must show measures protecting logs against tampering and deletion, failure detection for logging systems, and evidence of clock synchronisation across all ICT systems.",
+    "retention_period": "As defined per event type based on risk assessment, minimum 1 year",
+    "auditor_questions": [
+      "Show me your logging procedures identifying which events are logged, their retention periods, and how log data security is ensured.",
+      "Demonstrate that your logs cover logical and physical access control, capacity management, change management, ICT operations, and network traffic activities.",
+      "What measures protect your logging systems and log information against tampering, deletion, and unauthorised access at rest and in transit?",
+      "How are clocks across all ICT systems synchronised to a documented reliable reference time source?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic logging enabled for key systems with defined retention periods and clock synchronisation in place",
+      "intermediate": "Centralised log management covering all required event categories, tamper-proof log storage, automated failure detection for logging systems",
+      "advanced": "SIEM integration with real-time correlation, immutable log storage with cryptographic integrity verification, automated anomaly detection across all log categories"
+    },
+    "cross_references": [
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_RISK",
+    "article": "16",
+    "requirement_summary": "ICT systems acquisition, development, and maintenance policy with source code review and security testing",
+    "evidence_type": "procedure",
+    "artifact_name": "ICT Systems Development and Maintenance Procedure",
+    "artifact_example": "ICT_SDLC_Security_Procedure.pdf",
+    "description": "Policy and procedures governing ICT systems acquisition, development, and maintenance including security practices and methodologies. Must cover source code reviews with static and dynamic testing, security testing for internet-exposed applications, testing and approval procedures prior to production deployment, controls protecting source code integrity, and requirements for anonymising production data in non-production environments.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your policy on ICT systems acquisition, development, and maintenance with the identified security practices and methodologies.",
+      "Demonstrate your source code review process covering both static and dynamic testing including vulnerability identification and remediation action plans.",
+      "How do you ensure non-production environments only store anonymised, pseudonymised, or randomised production data?",
+      "What controls protect the integrity of source code for both in-house developed and third-party provided ICT systems?"
+    ],
+    "maturity_levels": {
+      "basic": "SDLC policy exists with basic security testing before production deployment and environment data controls",
+      "intermediate": "Integrated SAST/DAST in CI/CD pipeline, formal source code review process with tracked remediation, automated data masking for non-production environments",
+      "advanced": "DevSecOps with automated security gates, software composition analysis for third-party components, runtime application self-protection, comprehensive software bill of materials"
+    },
+    "cross_references": [
+      "DORA:6"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_ICT_RISK",
+    "article": "17",
+    "requirement_summary": "ICT change management procedures with security verification and rollback capabilities",
+    "evidence_type": "procedure",
+    "artifact_name": "ICT Change Management Procedure",
+    "artifact_example": "ICT_Change_Management_Procedure.pdf",
+    "description": "Documented ICT change management procedures for all changes to software, hardware, firmware, systems, and security parameters. Must include ICT security requirement verification, independence between approval and implementation functions, fall-back and rollback procedures, emergency change management with adequate safeguards, post-implementation assessment of emergency changes, and impact analysis on existing ICT security measures.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your change management procedures demonstrating how ICT security requirements are verified for each change.",
+      "How do you ensure independence between the functions that approve changes and those responsible for requesting and implementing them?",
+      "Demonstrate your fall-back and rollback procedures including responsibilities for aborting changes not successfully implemented.",
+      "What is your process for managing emergency changes and how are they documented, reassessed, and approved after implementation?"
+    ],
+    "maturity_levels": {
+      "basic": "Documented change management process with basic approval workflow and rollback procedures",
+      "intermediate": "Segregation of duties enforced, automated change tracking, tested rollback procedures, emergency change process with post-implementation review",
+      "advanced": "Fully automated change pipeline with security gates, immutable change audit trail, automated impact analysis on security controls, continuous deployment with canary releases"
+    },
+    "cross_references": [
+      "DORA:6"
+    ]
+  }
+]

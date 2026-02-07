@@ -22,6 +22,7 @@ function escapeFts5Query(query: string): string {
   const stopwords = new Set(['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']);
 
   const words = query
+    .replace(/[*+^():.§/|;=~!@#$%&\\{}[\],<>]/g, '')
     .replace(/['"]/g, '')
     .replace(/-/g, ' ')
     .split(/\s+/)

@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_RTS_OVERSIGHT_FEES",
+    "article": "2",
+    "requirement_summary": "Determination of applicable turnover for oversight fee calculation",
+    "evidence_type": "document",
+    "artifact_name": "Applicable Turnover Calculation for Oversight Fees",
+    "artifact_example": "Oversight_Fee_Turnover_Calculation.pdf",
+    "description": "Audited figures documenting the turnover of the critical ICT third-party service provider limited to revenues generated in the Union from provision of ICT services to financial entities listed in Article 2(1) of DORA. Must be submitted annually by 31 December for the preceding year. If revenues cannot be isolated to financial entities, fallback calculations using Union-wide or worldwide turnover apply. Currency conversion must use the average euro foreign exchange rate published by the ECB.",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me your audited turnover figures specifically for ICT services provided to EU financial entities as defined in DORA Article 2(1).",
+      "How do you isolate revenues generated from services to financial entities from your overall revenue streams?",
+      "What currency conversion methodology did you apply and which ECB reference rates were used?",
+      "Were the audited figures submitted to the Lead Overseer by the 31 December deadline?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual turnover figures prepared with basic segmentation of financial entity revenues, manual submission to Lead Overseer",
+      "intermediate": "Audited revenue segmentation with clear methodology for isolating financial entity revenues, automated currency conversion, timely submission",
+      "advanced": "Granular revenue tracking by entity type and service category, integrated financial reporting with automated Lead Overseer submission, real-time revenue monitoring"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_OVERSIGHT_FEES",
+    "article": "3",
+    "requirement_summary": "Oversight fee calculation methodology and payment",
+    "evidence_type": "document",
+    "artifact_name": "Oversight Fee Calculation and Payment Records",
+    "artifact_example": "Oversight_Fee_Calculation_Records.pdf",
+    "description": "Documentation of the oversight fee calculation based on the applicable turnover and the fee formula established by the ESAs. Must include the fee calculation workings, payment confirmations, correspondence with the Lead Overseer, and records of any adjustments or corrections applied to the fee amount.",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me the detailed calculation of your oversight fee including the inputs used and the formula applied.",
+      "Where are payment confirmations demonstrating timely settlement of oversight fees?",
+      "Were any adjustments or corrections applied to the fee calculation, and if so, what was the basis?",
+      "How do you reconcile the fee amount with the Lead Overseer's assessment?"
+    ],
+    "maturity_levels": {
+      "basic": "Fee calculation documented with payment records maintained and correspondence with Lead Overseer filed",
+      "intermediate": "Structured fee calculation process with internal verification, automated payment scheduling, systematic correspondence management",
+      "advanced": "Integrated fee management system with automated calculation, payment processing, Lead Overseer reporting, and multi-year trend analysis"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_OVERSIGHT_FEES",
+    "article": "4",
+    "requirement_summary": "First-year designation fees and opt-in request fees",
+    "evidence_type": "document",
+    "artifact_name": "Designation Year Fee and Opt-In Fee Records",
+    "artifact_example": "Designation_Fee_OptIn_Records.pdf",
+    "description": "Records of fee payments in the year of initial designation as a critical ICT third-party service provider. For the first published list of designated providers, fees are equally split. For subsequent designations, the fixed fee is prorated based on calendar days from designation to year-end. For voluntary opt-in requests under Article 31(11) of DORA, the fixed EUR 50,000 opt-in fee payment record must be maintained, noting it is non-refundable if the request is rejected or withdrawn.",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me the fee calculation for your first year of designation including the pro-rata methodology applied.",
+      "If you requested voluntary designation, where is the payment record for the EUR 50,000 opt-in fee?",
+      "How was the number of calendar days from designation to year-end determined for the pro-rata calculation?",
+      "What documentation do you maintain regarding the ESA notification of your designation as critical?"
+    ],
+    "maturity_levels": {
+      "basic": "Payment records maintained for designation year fees with basic pro-rata calculation documentation",
+      "intermediate": "Comprehensive designation fee documentation with verified pro-rata calculations, tracked correspondence with ESAs, clear audit trail",
+      "advanced": "Integrated designation management system tracking all fee obligations from initial designation through ongoing oversight, automated pro-rata calculations"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_OVERSIGHT_FEES",
+    "article": "5",
+    "requirement_summary": "Annual reporting requirements for fee assessment purposes",
+    "evidence_type": "document",
+    "artifact_name": "Annual Fee Reporting Package",
+    "artifact_example": "Annual_Fee_Reporting_Package.pdf",
+    "description": "Complete annual reporting package submitted to the Lead Overseer for fee assessment purposes, including audited financial statements, revenue segmentation reports, client base documentation showing financial entities served, and any supplementary information requested by the Lead Overseer. Must demonstrate the completeness and accuracy of data used for fee calculation.",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me your complete annual reporting package submitted to the Lead Overseer for fee assessment.",
+      "How do you ensure the accuracy and completeness of the revenue data reported for fee calculation purposes?",
+      "What internal controls are in place to verify the financial entity client classification used in revenue segmentation?",
+      "Were there any supplementary information requests from the Lead Overseer, and how were they addressed?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual reporting package compiled with basic audited figures and client documentation",
+      "intermediate": "Structured reporting process with internal review controls, verified client classification, timely submission with complete documentation",
+      "advanced": "Automated reporting pipeline with real-time data validation, integrated client classification verification, proactive Lead Overseer engagement"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  }
+]

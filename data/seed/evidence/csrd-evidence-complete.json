@@ -1,0 +1,200 @@
+[
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Sustainability reporting in the management report (Art 19a as amended)",
+    "evidence_type": "document",
+    "artifact_name": "Sustainability Report — Management Report Section",
+    "artifact_example": "Annual_Sustainability_Report_2025.pdf",
+    "description": "Dedicated section of the management report containing sustainability information as required by the amended Article 19a. Must include: business model and strategy resilience, sustainability-related opportunities, transition plans compatible with Paris Agreement 1.5C target, time-bound targets with progress, due diligence process, principal adverse impacts, and relevant KPIs across short-, medium-, and long-term horizons.",
+    "retention_period": "10 years from publication",
+    "auditor_questions": [
+      "Is the sustainability information presented in a clearly identifiable dedicated section of the management report?",
+      "Does the report cover all disclosure areas required by Article 19a(2)(a) through (h)?",
+      "How were the reported sustainability matters identified through the double materiality assessment?",
+      "Does the report include information on short-, medium-, and long-term time horizons?"
+    ],
+    "maturity_levels": {
+      "basic": "Sustainability report included in management report covering required disclosure areas in narrative form",
+      "intermediate": "Structured sustainability reporting aligned with ESRS standards, including quantitative KPIs and targets with progress tracking",
+      "advanced": "Fully integrated sustainability reporting with automated data collection, real-time KPI dashboards, and independent limited assurance"
+    },
+    "cross_references": ["CSDDD:15", "EU_TAXONOMY:8", "SFDR:4"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Sustainability reporting standards compliance (Art 29b as amended)",
+    "evidence_type": "document",
+    "artifact_name": "ESRS Compliance Documentation",
+    "artifact_example": "ESRS_Compliance_Mapping_2025.pdf",
+    "description": "Documentation demonstrating compliance with the European Sustainability Reporting Standards (ESRS) adopted by the Commission as delegated acts under Article 29b. Must cover environmental factors (climate change, pollution, biodiversity, water, circular economy), social factors (working conditions, human rights, equal treatment), and governance factors (business ethics, internal controls, anti-corruption). Includes the materiality assessment methodology used.",
+    "retention_period": "10 years from publication",
+    "auditor_questions": [
+      "Which ESRS standards have been applied and how was the materiality assessment conducted?",
+      "How do you ensure reported information is understandable, relevant, verifiable, comparable, and faithfully represented?",
+      "What processes are in place to collect value chain sustainability data from suppliers and business partners?",
+      "How do you monitor and incorporate updates to ESRS standards into your reporting processes?"
+    ],
+    "maturity_levels": {
+      "basic": "Sustainability reporting prepared against applicable ESRS standards with documented materiality assessment",
+      "intermediate": "Comprehensive ESRS compliance with data quality controls, gap analysis processes, and value chain data collection programmes",
+      "advanced": "Automated ESRS reporting platform with AI-assisted materiality assessment, integrated value chain data exchange, and real-time standard compliance monitoring"
+    },
+    "cross_references": ["CSDDD:15", "SFDR:4", "EU_TAXONOMY:8"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Electronic reporting format — iXBRL tagging (Art 29d as amended)",
+    "evidence_type": "document",
+    "artifact_name": "iXBRL-Tagged Sustainability Report",
+    "artifact_example": "Sustainability_Report_iXBRL_2025.xhtml",
+    "description": "Management report prepared in the electronic reporting format specified by Delegated Regulation (EU) 2019/815, with sustainability disclosures and EU Taxonomy Article 8 disclosures marked up in iXBRL (inline eXtensible Business Reporting Language). The digital tagging must enable machine-readable access to sustainability data for the European Single Access Point (ESAP).",
+    "retention_period": "10 years from publication",
+    "auditor_questions": [
+      "Has the management report been prepared in the required single electronic reporting format (ESEF)?",
+      "Are sustainability disclosures correctly tagged in iXBRL format?",
+      "How do you verify the accuracy and completeness of iXBRL tagging?",
+      "Is the tagged report filed with the relevant registry and accessible via ESAP?"
+    ],
+    "maturity_levels": {
+      "basic": "Report produced in iXBRL format with mandatory sustainability data points tagged",
+      "intermediate": "Comprehensive iXBRL tagging with validation tools, quality checks, and filing process for relevant registries",
+      "advanced": "Automated iXBRL tagging integrated with reporting system, real-time taxonomy validation, and direct API submission to ESAP"
+    },
+    "cross_references": ["EU_TAXONOMY:8", "SFDR:4"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Corporate governance statement — diversity policy (Art 20 as amended)",
+    "evidence_type": "policy",
+    "artifact_name": "Board Diversity Policy",
+    "artifact_example": "Board_Diversity_Policy_2025.pdf",
+    "description": "Description of the diversity policy applied to the undertaking's administrative, management and supervisory bodies covering gender, age, disabilities, educational and professional background. Must include the policy objectives, implementation description, and results in the reporting period. If no policy exists, an explanation must be provided (comply or explain).",
+    "retention_period": "Duration of policy applicability + 5 years",
+    "auditor_questions": [
+      "Does the corporate governance statement include a description of the board diversity policy?",
+      "What are the diversity targets and how is progress measured?",
+      "If no diversity policy exists, what explanation is provided in the governance statement?",
+      "How is this information cross-referenced with the sustainability reporting under Article 19a?"
+    ],
+    "maturity_levels": {
+      "basic": "Diversity policy documented and included in corporate governance statement, or explanation for absence provided",
+      "intermediate": "Measurable diversity targets with annual progress reporting and action plans for underrepresented groups",
+      "advanced": "Comprehensive diversity and inclusion programme with benchmarking, independent monitoring, and integration into executive performance evaluation"
+    },
+    "cross_references": ["CSDDD:5", "SFDR:4"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Assurance of sustainability reporting (Art 34 as amended)",
+    "evidence_type": "certification",
+    "artifact_name": "Limited Assurance Opinion on Sustainability Report",
+    "artifact_example": "Sustainability_Assurance_Opinion_2025.pdf",
+    "description": "Opinion from a statutory auditor or independent assurance services provider on the sustainability reporting, providing limited assurance on compliance with sustainability reporting standards, the tagging requirements, and compliance with the process to identify information reported. The assurance engagement must be performed in accordance with assurance standards adopted by the Member State.",
+    "retention_period": "10 years from publication",
+    "auditor_questions": [
+      "Has the sustainability reporting been subject to limited assurance by a qualified auditor or assurance provider?",
+      "Does the assurance opinion cover compliance with ESRS, iXBRL tagging, and the materiality assessment process?",
+      "What assurance standards were applied and how was the scope of work determined?",
+      "Were any qualifications, modifications, or emphasis of matter paragraphs included in the opinion?"
+    ],
+    "maturity_levels": {
+      "basic": "Limited assurance opinion obtained from statutory auditor covering mandatory scope",
+      "intermediate": "Extended assurance scope with management letter recommendations actioned, and preparation for reasonable assurance",
+      "advanced": "Reasonable assurance readiness with continuous audit approach, internal control framework for sustainability data, and integrated financial and sustainability audit"
+    },
+    "cross_references": ["CSDDD:15", "EU_TAXONOMY:8"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Consolidated sustainability reporting (Art 29a as amended)",
+    "evidence_type": "document",
+    "artifact_name": "Consolidated Sustainability Report",
+    "artifact_example": "Consolidated_Sustainability_Report_Group_2025.pdf",
+    "description": "Consolidated management report including sustainability information for the group as required by the amended Article 29a. Parent undertakings of large groups must report group-level sustainability information covering all disclosure areas of Article 29a(2). Must identify significant differences between group-level and subsidiary-level risks/impacts and indicate which subsidiaries are exempted under Article 19a(9).",
+    "retention_period": "10 years from publication",
+    "auditor_questions": [
+      "Does the consolidated sustainability report cover all subsidiaries included in the consolidation?",
+      "How are significant differences between group and subsidiary sustainability risks identified and disclosed?",
+      "Which subsidiaries are exempted from individual sustainability reporting and under what conditions?",
+      "How is value chain data collected and consolidated across the group?"
+    ],
+    "maturity_levels": {
+      "basic": "Consolidated sustainability report covering all in-scope subsidiaries with basic group-level disclosures",
+      "intermediate": "Systematic consolidation process with subsidiary data collection framework, intercompany reconciliation, and materiality assessment at group level",
+      "advanced": "Integrated group sustainability reporting platform with automated data aggregation, sub-group materiality analysis, and real-time consolidation capabilities"
+    },
+    "cross_references": ["CSDDD:15", "SFDR:4"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Sustainability governance and board responsibility (Art 19a(2)(c)/(e))",
+    "evidence_type": "document",
+    "artifact_name": "Sustainability Governance Framework",
+    "artifact_example": "Sustainability_Governance_Framework_2025.pdf",
+    "description": "Documentation of the role of administrative, management and supervisory bodies with regard to sustainability matters, their expertise and skills, and any sustainability-linked incentive schemes offered to board members. Includes description of how the board oversees sustainability strategy, risk management, target-setting, and reporting processes.",
+    "retention_period": "Duration of governance framework + 5 years",
+    "auditor_questions": [
+      "What is the role of the board in overseeing sustainability matters?",
+      "What sustainability expertise and skills do board members possess?",
+      "Are there incentive schemes linked to sustainability performance for board members?",
+      "How does the governance framework ensure effective oversight of sustainability risks and opportunities?"
+    ],
+    "maturity_levels": {
+      "basic": "Board sustainability responsibilities documented, basic skills inventory available",
+      "intermediate": "Dedicated sustainability committee with terms of reference, board competency matrix, and sustainability-linked remuneration elements",
+      "advanced": "Comprehensive sustainability governance with board sustainability certification, external advisory board, and integrated ESG risk oversight in all board decisions"
+    },
+    "cross_references": ["CSDDD:5", "SFDR:4"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Climate transition plan (Art 19a(2)(a)(iii))",
+    "evidence_type": "document",
+    "artifact_name": "Climate Transition Plan",
+    "artifact_example": "Climate_Transition_Plan_2025_2050.pdf",
+    "description": "Plans ensuring the business model and strategy are compatible with the transition to a sustainable economy and limiting global warming to 1.5C in line with the Paris Agreement and climate neutrality by 2050. Must include implementing actions, financial and investment plans, and where relevant, exposure to coal, oil, and gas activities. Should align with absolute GHG emission reduction targets for 2030 and 2050.",
+    "retention_period": "Until superseded + 5 years",
+    "auditor_questions": [
+      "Does the transition plan include concrete implementing actions and timelines?",
+      "What financial and investment plans support the transition to climate neutrality by 2050?",
+      "Are GHG emission reduction targets based on conclusive scientific evidence?",
+      "How is the exposure to fossil fuel activities disclosed and how will it be reduced over time?"
+    ],
+    "maturity_levels": {
+      "basic": "High-level transition plan with directional targets and qualitative action descriptions",
+      "intermediate": "Detailed transition plan with science-based targets, quantified investment needs, and sector-specific decarbonisation pathways",
+      "advanced": "Comprehensive transition plan validated by Science Based Targets initiative, with scenario analysis, capex allocation, and annual progress reviews with independent verification"
+    },
+    "cross_references": ["CSDDD:22", "EU_TAXONOMY:8", "CBAM:7"]
+  },
+  {
+    "regulation": "CSRD",
+    "article": "1",
+    "requirement_summary": "Third-country undertaking sustainability reporting (Art 40a as amended)",
+    "evidence_type": "document",
+    "artifact_name": "Third-Country Subsidiary Sustainability Report",
+    "artifact_example": "Third_Country_Sustainability_Report_2028.pdf",
+    "description": "Sustainability reporting for subsidiary undertakings and branches of third-country undertakings that meet the thresholds (net turnover above EUR 150 million in the EU). Must be published by the subsidiary or branch and include the sustainability report of the third-country parent, or where the parent does not report, individual sustainability reporting by the EU subsidiary. Applicable from financial years starting on or after 1 January 2028.",
+    "retention_period": "10 years from publication",
+    "auditor_questions": [
+      "Does the third-country parent undertaking generate net turnover above EUR 150 million in the EU?",
+      "Is the sustainability report of the third-country parent published in an EU Member State?",
+      "Is the reporting conducted in accordance with ESRS or equivalent standards as determined by the Commission?",
+      "How is assurance provided for the third-country sustainability reporting?"
+    ],
+    "maturity_levels": {
+      "basic": "Third-country reporting obligations identified, basic sustainability information published by EU subsidiary",
+      "intermediate": "Coordinated reporting process between third-country parent and EU subsidiary with equivalence assessment documented",
+      "advanced": "Integrated global sustainability reporting framework with local ESRS compliance, automated data exchange with third-country parent, and independent EU assurance"
+    },
+    "cross_references": ["CSDDD:15", "SFDR:4"]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "regulation": "UN_R156",
+    "article": "7.1",
+    "requirement_summary": "Software Update Management System (SUMS) requirements",
+    "evidence_type": "certification",
+    "artifact_name": "SUMS Certificate of Compliance",
+    "artifact_example": "SUMS_Certificate_of_Compliance.pdf",
+    "description": "Certificate of Compliance issued by the Approval Authority confirming that the vehicle manufacturer has a Software Update Management System in place that meets UN R156 requirements. The SUMS must demonstrate documented processes for software update management, version tracking, compatibility assessment, type approval impact analysis, security of updates, and information provision to authorities and users.",
+    "retention_period": "Duration of SUMS validity + 10 years",
+    "auditor_questions": [
+      "Can you provide a valid SUMS Certificate of Compliance?",
+      "Does the SUMS cover all required processes from paragraphs 7.1.1.1 through 7.1.1.12?",
+      "How is the SUMS integrated with your Cybersecurity Management System under UN R155?",
+      "When was the last SUMS assessment and when is the next renewal due?"
+    ],
+    "maturity_levels": {
+      "basic": "SUMS certificate obtained from Approval Authority with all required processes documented",
+      "intermediate": "SUMS integrated with CSMS and product lifecycle management, with regular internal audits and continuous improvement",
+      "advanced": "Fully automated SUMS with CI/CD integration, automated type approval impact assessment, and real-time compliance dashboard"
+    },
+    "cross_references": ["UN_R155:7.2", "CRA:13"]
+  },
+  {
+    "regulation": "UN_R156",
+    "article": "7.1",
+    "requirement_summary": "Software version identification and RXSWIN management",
+    "evidence_type": "log",
+    "artifact_name": "Software Version and RXSWIN Register",
+    "artifact_example": "RXSWIN_Version_Register_2025.xlsx",
+    "description": "Auditable register tracking all software versions relevant to each RXSWIN (Regulation X Software Identification Number) for each vehicle type, before and after updates. Must include integrity validation data for all relevant software, unique identification for type approved systems' hardware and software, and configuration records showing the state before and after each update. RXSWINs must be readable via the OBD port.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "Can you provide the complete RXSWIN register showing software versions before and after each update?",
+      "How do you verify that software versions on a vehicle component are consistent with the RXSWIN?",
+      "Does the register include integrity validation data for all relevant software?",
+      "Are RXSWINs readable via the standard OBD interface?"
+    ],
+    "maturity_levels": {
+      "basic": "RXSWIN register maintained with software version tracking for each vehicle type",
+      "intermediate": "Automated RXSWIN management system with integrity validation, configuration baselining, and version consistency checks",
+      "advanced": "Real-time software bill of materials (SBOM) tracking with automated RXSWIN updates, integrity monitoring, and fleet-wide version visibility"
+    },
+    "cross_references": ["UN_R155:7.3", "CRA:13"]
+  },
+  {
+    "regulation": "UN_R156",
+    "article": "7.1",
+    "requirement_summary": "Type approval impact assessment for software updates",
+    "evidence_type": "document",
+    "artifact_name": "Software Update Type Approval Impact Assessment",
+    "artifact_example": "Update_Type_Approval_Impact_Assessment.pdf",
+    "description": "Documentation for each software update assessing whether it affects type approved systems per paragraphs 7.1.1.8 to 7.1.1.10. Must record: purpose of the update, systems and functions affected, whether type approved systems are impacted, whether the update alters type approval parameters, whether new functions are added or existing ones changed, and whether approval from an approval body was required. Covers safety impact analysis.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "For each software update, can you produce the type approval impact assessment?",
+      "How do you determine whether a software update affects type-approved system parameters?",
+      "What is the process when an update is found to affect type approval?",
+      "How do you assess the safety impact of updates on vehicle operation?"
+    ],
+    "maturity_levels": {
+      "basic": "Type approval impact assessment performed for each software update with documented conclusions",
+      "intermediate": "Systematic impact assessment process integrated with update release pipeline, regulatory parameter database, and approval body engagement procedure",
+      "advanced": "Automated type approval impact analysis with regulatory parameter mapping, automated change detection, and proactive approval body notification"
+    },
+    "cross_references": ["UN_R155:7.3", "MACHINERY:10"]
+  },
+  {
+    "regulation": "UN_R156",
+    "article": "7.1",
+    "requirement_summary": "Security of software update delivery",
+    "evidence_type": "test_result",
+    "artifact_name": "Software Update Security Validation Report",
+    "artifact_example": "Update_Security_Validation_Report_2025.pdf",
+    "description": "Test results demonstrating that software updates are protected against manipulation (paragraph 7.1.3.1), that update processes are protected against compromise (paragraph 7.1.3.2), and that software verification and validation processes are appropriate (paragraph 7.1.3.3). Must cover the entire update chain from development through delivery to vehicle installation, including authenticity and integrity protection.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "How is the authenticity and integrity of software updates protected throughout the delivery chain?",
+      "What security measures protect the update process itself from being compromised?",
+      "How are software verification and validation processes demonstrated to be appropriate?",
+      "What penetration testing has been performed on the update delivery infrastructure?"
+    ],
+    "maturity_levels": {
+      "basic": "Software update security measures documented and tested with results available",
+      "intermediate": "Comprehensive security testing of update delivery chain including code signing, secure channels, and infrastructure security assessment",
+      "advanced": "Continuous security validation with automated security testing in CI/CD pipeline, hardware security module integration, and supply chain integrity verification"
+    },
+    "cross_references": ["UN_R155:7.3", "CRA:13"]
+  },
+  {
+    "regulation": "UN_R156",
+    "article": "7.2",
+    "requirement_summary": "Vehicle type OTA update safety requirements",
+    "evidence_type": "test_result",
+    "artifact_name": "OTA Update Safety Validation Report",
+    "artifact_example": "OTA_Safety_Validation_Report_2025.pdf",
+    "description": "Test results demonstrating compliance with over-the-air (OTA) update safety requirements including: ability to restore systems to previous version or place vehicle in safe state after failed update (7.2.2.1.1), sufficient power verification before update execution (7.2.2.1.2), safe update execution when safety-relevant (7.2.2.1.3), user notification before and after updates (7.2.2.2), prevention of driving during safety-critical updates (7.2.2.3), and precondition verification (7.2.2.5).",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "How does the vehicle handle a failed or interrupted OTA update — rollback or safe state?",
+      "What mechanism prevents unsafe driving during safety-critical update execution?",
+      "How is the user informed about the update before, during, and after execution?",
+      "What preconditions must be met before an OTA update can be executed?"
+    ],
+    "maturity_levels": {
+      "basic": "OTA safety tests performed covering rollback, power management, and user notification with results documented",
+      "intermediate": "Comprehensive OTA safety validation including edge case testing, user experience testing, and safe state verification across vehicle configurations",
+      "advanced": "Full OTA safety certification with simulation-based testing, real-world scenario validation, A/B testing of update mechanisms, and continuous fleet monitoring of update success rates"
+    },
+    "cross_references": ["UN_R155:7.3", "MACHINERY:10"]
+  },
+  {
+    "regulation": "UN_R156",
+    "article": "7.1",
+    "requirement_summary": "Update documentation and compatibility records",
+    "evidence_type": "document",
+    "artifact_name": "Software Update Documentation Package",
+    "artifact_example": "Software_Update_Documentation_Package_2025.pdf",
+    "description": "Complete documentation for all software updates as required by paragraphs 7.1.2.1 through 7.1.2.5, including: process documentation with applicable standards, system configuration before and after update, RXSWIN register, target vehicle compatibility confirmation, and update description covering purpose, affected systems, type approval impact, execution method, and verification/validation confirmation.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "Can you provide the complete documentation package for the most recent software update?",
+      "How do you confirm the compatibility of an update with the target vehicle's configuration?",
+      "Does the documentation record which systems were affected and whether any were type-approved?",
+      "How do you verify and validate the software update before deployment?"
+    ],
+    "maturity_levels": {
+      "basic": "Update documentation maintained for all software updates applied to each vehicle type",
+      "intermediate": "Structured update documentation system with templates, compatibility matrices, and automated documentation generation from the release process",
+      "advanced": "Fully automated documentation system integrated with development tools, OTA platform, and regulatory compliance database with complete traceability"
+    },
+    "cross_references": ["UN_R155:7.4", "CRA:13"]
+  }
+]

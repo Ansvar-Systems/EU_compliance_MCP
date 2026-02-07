@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_RTS_CRITICAL_PROVIDER",
+    "article": "2",
+    "requirement_summary": "Systemic impact assessment of ICT third-party service providers on financial services stability",
+    "evidence_type": "document",
+    "artifact_name": "Systemic Impact Assessment for Critical ICT Provider Designation",
+    "artifact_example": "Systemic_Impact_Assessment_CTPP.pdf",
+    "description": "Assessment documentation demonstrating the systemic impact of an ICT third-party service provider on the stability, continuity, or quality of financial services. Must include calculation of the share of financial entities served (sub-criterion 1.1 requiring 10% threshold per entity category) and the share of total assets of financial entities served (sub-criterion 1.2), plus step 2 assessment of discontinuation impact intensity and subcontractor dependency analysis.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the calculation of the share of financial entities served by category demonstrating how the 10% threshold for sub-criterion 1.1 was assessed.",
+      "How was the share of total assets of financial entities served calculated for sub-criterion 1.2?",
+      "What methodology was used to assess the intensity of impact if the ICT services were discontinued (sub-criterion 1.3)?",
+      "How was the dependency on subcontractors providing ICT services supporting critical or important functions evaluated (sub-criterion 1.4)?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic data collection on number and asset values of financial entities served with manual threshold calculations",
+      "intermediate": "Structured assessment methodology with verified financial entity data, documented discontinuation impact analysis, subcontractor mapping",
+      "advanced": "Comprehensive systemic risk modelling with dynamic market share tracking, scenario-based discontinuation simulations, full supply chain dependency analysis"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_CRITICAL_PROVIDER",
+    "article": "3",
+    "requirement_summary": "Assessment of systemic character and importance of ICT services provided to financial entities",
+    "evidence_type": "document",
+    "artifact_name": "Systemic Importance Assessment for ICT Services",
+    "artifact_example": "Systemic_Importance_ICT_Services.pdf",
+    "description": "Assessment of the systemic character and importance of ICT services by evaluating services provided to G-SIIs (at least 1) and O-SIIs (at least 3, or 1 with score above 3000). Must cover services to other financial entities identified as systemic by competent authorities, and step 2 sub-criterion assessing interdependencies among G-SIIs, O-SIIs, and other financial entities relying on the same provider including those providing financial infrastructure services.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the assessment of ICT services provided to G-SIIs and O-SIIs including the specific institutions served and their O-SII scores.",
+      "How many financial entities identified as systemic by competent authorities use your ICT services for critical or important functions?",
+      "What methodology was used to assess interdependencies among G-SIIs, O-SIIs, and other financial entities using your services (sub-criterion 2.3)?",
+      "How do you track changes in the systemic status of your financial entity clients to ensure ongoing accuracy of the assessment?"
+    ],
+    "maturity_levels": {
+      "basic": "Manual identification of G-SII and O-SII clients with basic documentation of services provided",
+      "intermediate": "Systematic tracking of systemic institution client base with regular updates, documented interdependency analysis",
+      "advanced": "Dynamic monitoring of systemic institution designations, automated interdependency mapping, network analysis of financial infrastructure service chains"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_CRITICAL_PROVIDER",
+    "article": "4",
+    "requirement_summary": "Assessment of substitutability of ICT third-party service provider",
+    "evidence_type": "document",
+    "artifact_name": "Substitutability Assessment Report",
+    "artifact_example": "Substitutability_Assessment_CTPP.pdf",
+    "description": "Assessment of the degree of substitutability of the ICT third-party service provider, considering the lack of real alternatives, technical complexity of migration, and the difficulty for financial entities to partially or fully transfer the relevant ICT services to another provider. Must evaluate migration costs, transition timelines, and the availability of comparable service providers in the market.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "What methodology was used to assess the substitutability of the ICT third-party service provider including identification of alternative providers?",
+      "How were migration complexity and associated costs evaluated for financial entities currently using the provider?",
+      "What factors were considered regarding the difficulty of partially or fully transferring ICT services to another provider?",
+      "How frequently is the substitutability assessment updated to reflect market changes and new provider availability?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic market scan for alternative providers with qualitative substitutability assessment",
+      "intermediate": "Structured substitutability framework with quantified migration costs, technical complexity scoring, and documented market alternatives",
+      "advanced": "Comprehensive market intelligence with continuous alternative provider monitoring, detailed migration scenario modelling, benchmarked transition cost estimates"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_CRITICAL_PROVIDER",
+    "article": "5",
+    "requirement_summary": "Assessment of number and importance of financial entities relying on the ICT provider",
+    "evidence_type": "document",
+    "artifact_name": "Financial Entity Dependency Analysis",
+    "artifact_example": "Financial_Entity_Dependency_Analysis.pdf",
+    "description": "Analysis of the number and importance of financial entities relying on the ICT third-party service provider, including the total number of financial entities using the provider for critical or important functions, their categorisation by type and size, the scope and nature of ICT services provided, and the criticality of the functions supported. Must demonstrate the breadth and depth of dependency across the financial sector.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the complete inventory of financial entities relying on the ICT provider for critical or important functions, categorised by entity type.",
+      "How do you determine the importance of each financial entity in the context of the overall financial sector stability?",
+      "What is the scope and nature of ICT services provided to each category of financial entity?",
+      "How do you ensure this dependency analysis remains current and reflects changes in the client base?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic client inventory with categorisation by financial entity type and services provided",
+      "intermediate": "Comprehensive dependency mapping with importance scoring, regular client base reviews, documented function criticality assessments",
+      "advanced": "Dynamic dependency monitoring with automated client portfolio analysis, real-time updates on entity designations, integrated with regulatory reporting systems"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  }
+]

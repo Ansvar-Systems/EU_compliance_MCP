@@ -1,0 +1,227 @@
+[
+  {
+    "regulation": "GPSR",
+    "article": "5",
+    "requirement_summary": "General safety requirement for products placed on the market",
+    "evidence_type": "document",
+    "artifact_name": "Product Safety Assessment Report",
+    "artifact_example": "Product_Safety_Assessment_Report_2025.pdf",
+    "description": "Documentation demonstrating that only safe products are placed on the market, including risk assessment considering product characteristics, packaging, presentation, labelling, categories of consumers at risk (particularly children), and the product's reasonably foreseeable use",
+    "retention_period": "Product lifetime + 10 years",
+    "auditor_questions": [
+      "Show me the safety assessment for this product considering all relevant risk factors",
+      "How do you determine if a product is safe for its reasonably foreseeable use?",
+      "What standards have you applied to demonstrate product safety?",
+      "How do you assess risks to vulnerable consumers, particularly children?"
+    ],
+    "maturity_levels": {
+      "basic": "Product safety assessment performed, basic risk evaluation documented",
+      "intermediate": "Systematic risk assessment methodology, reference to applicable harmonized standards, consumer testing",
+      "advanced": "Comprehensive safety management system, predictive risk modelling, continuous post-market safety monitoring"
+    },
+    "cross_references": [
+      "GPSR:9",
+      "MACHINERY:5"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "9",
+    "requirement_summary": "Obligations of manufacturers",
+    "evidence_type": "document",
+    "artifact_name": "Manufacturer Compliance Documentation",
+    "artifact_example": "Manufacturer_Compliance_Documentation_2025.pdf",
+    "description": "Complete manufacturer compliance documentation including internal risk analysis, technical documentation, compliance with applicable safety requirements, product identification, manufacturer contact details on the product or packaging, and instructions and safety information in a language easily understood by consumers",
+    "retention_period": "Product lifetime + 10 years",
+    "auditor_questions": [
+      "Show me the internal risk analysis and technical documentation for this product",
+      "How do you ensure products bear your name, registered trade name or trademark, and contact address?",
+      "Show me the instructions and safety information provided with the product",
+      "What sample testing and investigation programme do you operate for marketed products?"
+    ],
+    "maturity_levels": {
+      "basic": "Technical documentation maintained, products labelled with required information",
+      "intermediate": "Systematic sample testing programme, documented complaint handling, proactive safety monitoring",
+      "advanced": "Integrated product safety management system, automated compliance checks in design phase, digital product passport"
+    },
+    "cross_references": [
+      "GPSR:5",
+      "GPSR:18"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "10",
+    "requirement_summary": "Obligations of authorized representatives",
+    "evidence_type": "document",
+    "artifact_name": "Authorized Representative Mandate and Compliance Records",
+    "artifact_example": "Authorized_Rep_Mandate_2025.pdf",
+    "description": "Written mandate from the manufacturer appointing the authorized representative with defined tasks, including maintaining technical documentation and making it available to market surveillance authorities, cooperating with authorities, and informing the manufacturer of non-compliance",
+    "retention_period": "Duration of mandate + 10 years",
+    "auditor_questions": [
+      "Show me the written mandate from the manufacturer defining the authorized representative's tasks",
+      "How do you ensure technical documentation is available to market surveillance authorities on request?",
+      "What procedures do you have for cooperating with market surveillance authorities?",
+      "How do you communicate non-compliance issues back to the manufacturer?"
+    ],
+    "maturity_levels": {
+      "basic": "Written mandate in place, basic cooperation procedures with authorities",
+      "intermediate": "Structured document management system, regular communication with manufacturer, proactive authority engagement",
+      "advanced": "Digital documentation management with instant retrieval, automated compliance monitoring, integrated manufacturer-representative reporting"
+    },
+    "cross_references": [
+      "GPSR:9",
+      "GPSR:12"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "12",
+    "requirement_summary": "Obligations of distributors",
+    "evidence_type": "procedure",
+    "artifact_name": "Distributor Due Diligence Procedure",
+    "artifact_example": "Distributor_Due_Diligence_Procedure_2025.pdf",
+    "description": "Documented procedure for distributor due diligence before making a product available on the market, verifying that the manufacturer and importer have complied with their obligations including product identification, labelling, instructions, and CE marking where applicable",
+    "retention_period": "Product lifetime + 10 years",
+    "auditor_questions": [
+      "Show me your due diligence procedure for verifying product compliance before distribution",
+      "How do you verify that the manufacturer has met labelling and documentation requirements?",
+      "What do you do when you have reason to believe a product is not safe?",
+      "Show me records of due diligence checks performed for recent product lines"
+    ],
+    "maturity_levels": {
+      "basic": "Due diligence procedure documented, basic checks performed before distribution",
+      "intermediate": "Systematic verification checklists, supplier qualification process, non-compliance escalation procedures",
+      "advanced": "Automated compliance verification in supply chain systems, real-time product safety intelligence, integrated supplier management"
+    },
+    "cross_references": [
+      "GPSR:9",
+      "GPSR:18"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "14",
+    "requirement_summary": "Obligations of online marketplace providers",
+    "evidence_type": "procedure",
+    "artifact_name": "Online Marketplace Product Safety Compliance Procedure",
+    "artifact_example": "Marketplace_Safety_Compliance_2025.pdf",
+    "description": "Documented procedures for online marketplace providers to ensure product safety, including a single point of contact for market surveillance authorities, registration on the Safety Gate portal, processes to act on notifications from authorities and the Safety Gate system, and random checks on product listings",
+    "retention_period": "Duration of marketplace operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedures for handling product safety notifications from authorities",
+      "Who is your designated single point of contact for market surveillance authorities?",
+      "How do you perform random checks on product listings for safety compliance?",
+      "Show me evidence of your registration and interaction with the Safety Gate system"
+    ],
+    "maturity_levels": {
+      "basic": "Single point of contact designated, Safety Gate registration completed, basic listing checks",
+      "intermediate": "Automated Safety Gate integration, systematic random checks, proactive listing monitoring for safety signals",
+      "advanced": "AI-powered listing screening, real-time Safety Gate alerts, automated removal of unsafe products, seller verification programme"
+    },
+    "cross_references": [
+      "DSA:6",
+      "GPSR:22"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "18",
+    "requirement_summary": "Traceability requirements for products",
+    "evidence_type": "log",
+    "artifact_name": "Product Traceability Records",
+    "artifact_example": "Product_Traceability_Records_2025.csv",
+    "description": "Records enabling traceability of products throughout the supply chain, including product identification (type, batch, serial number), manufacturer and importer identification, and records of economic operators to whom products have been supplied and from whom products have been received",
+    "retention_period": "Product lifetime + 10 years",
+    "auditor_questions": [
+      "Show me how you can trace a product from manufacturer to end consumer",
+      "What product identification system do you use (batch, serial, barcode)?",
+      "Show me records of economic operators in the supply chain for a specific product",
+      "How quickly can you identify and locate products in the event of a recall?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic traceability records maintained with product identification and supply chain partners",
+      "intermediate": "Barcode or QR-code-based traceability, digital supply chain records, traceable to batch level",
+      "advanced": "Unit-level serialized traceability, blockchain or digital twin tracking, real-time supply chain visibility"
+    },
+    "cross_references": [
+      "GPSR:9",
+      "GPSR:19"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "19",
+    "requirement_summary": "Product recalls and corrective actions by economic operators",
+    "evidence_type": "procedure",
+    "artifact_name": "Product Recall and Corrective Action Procedure",
+    "artifact_example": "Product_Recall_Procedure_2025.pdf",
+    "description": "Documented procedure for initiating and managing product recalls and corrective actions when a product is found to be unsafe, including notification to competent authorities and consumers, direct consumer notification where possible, and provision of effective remedies (repair, replacement, refund)",
+    "retention_period": "10 years from recall completion",
+    "auditor_questions": [
+      "Show me your product recall procedure and past recall records",
+      "How do you notify consumers of a product recall, including direct notification?",
+      "What remedies do you offer to consumers (repair, replacement, refund)?",
+      "Show me evidence of notifications submitted to competent authorities for recalls"
+    ],
+    "maturity_levels": {
+      "basic": "Recall procedure documented, basic authority notification process",
+      "intermediate": "Tested recall simulation exercises, multi-channel consumer notification, tracked remedy fulfilment",
+      "advanced": "Automated recall management system, direct digital consumer notification, real-time recall effectiveness monitoring"
+    },
+    "cross_references": [
+      "GPSR:22",
+      "PLD:4"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "22",
+    "requirement_summary": "Rapid alert system (Safety Gate) notifications",
+    "evidence_type": "log",
+    "artifact_name": "Safety Gate Notification Records",
+    "artifact_example": "Safety_Gate_Notifications_2025.csv",
+    "description": "Records of notifications submitted to or received from the EU rapid alert system (Safety Gate) for dangerous products, including product identification, risk description, measures taken, and follow-up actions by national authorities",
+    "retention_period": "10 years from notification",
+    "auditor_questions": [
+      "Show me all Safety Gate notifications related to your products",
+      "How do you monitor the Safety Gate system for notifications affecting your product categories?",
+      "What is your process for responding to Safety Gate alerts from authorities?",
+      "Show me evidence of corrective actions taken in response to Safety Gate notifications"
+    ],
+    "maturity_levels": {
+      "basic": "Safety Gate notifications submitted when required, basic monitoring of alerts",
+      "intermediate": "Proactive Safety Gate monitoring, structured response procedures, documented corrective action tracking",
+      "advanced": "Automated Safety Gate integration with product safety systems, predictive safety analytics, cross-border incident coordination"
+    },
+    "cross_references": [
+      "GPSR:19",
+      "GPSR:14"
+    ]
+  },
+  {
+    "regulation": "GPSR",
+    "article": "34",
+    "requirement_summary": "Market surveillance measures and enforcement",
+    "evidence_type": "document",
+    "artifact_name": "Market Surveillance Cooperation Documentation",
+    "artifact_example": "Market_Surveillance_Cooperation_Records_2025.pdf",
+    "description": "Documentation of cooperation with market surveillance authorities, including responses to information requests, provision of technical documentation, outcomes of authority inspections, and compliance with corrective measures imposed by authorities",
+    "retention_period": "10 years from measure completion",
+    "auditor_questions": [
+      "Show me records of your interactions with market surveillance authorities",
+      "How do you respond to information requests from market surveillance authorities?",
+      "Show me evidence of compliance with any corrective measures imposed by authorities",
+      "What internal procedures do you have for cooperating with market surveillance inspections?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic cooperation with authorities, reactive response to information requests",
+      "intermediate": "Designated regulatory affairs contact, structured response procedures, documented corrective measure tracking",
+      "advanced": "Proactive regulatory engagement, integrated compliance management system, continuous improvement based on authority feedback"
+    },
+    "cross_references": [
+      "GPSR:9",
+      "GPSR:22"
+    ]
+  }
+]

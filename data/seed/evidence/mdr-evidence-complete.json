@@ -1,0 +1,283 @@
+[
+  {
+    "regulation": "MDR",
+    "article": "5",
+    "requirement_summary": "Placing on the market and putting into service",
+    "evidence_type": "document",
+    "artifact_name": "Market Placement Compliance Documentation",
+    "artifact_example": "Market_Placement_Compliance_2025.pdf",
+    "description": "Documentation demonstrating that medical devices placed on the market or put into service comply with the MDR requirements, including evidence of conformity assessment completion and CE marking",
+    "retention_period": "Lifetime of device + 10 years (15 years for implantable devices)",
+    "auditor_questions": [
+      "Show me evidence that this device complies with all applicable MDR requirements",
+      "How do you verify conformity assessment is completed before placing a device on the market?",
+      "What process ensures devices are not placed on the market without proper CE marking?",
+      "How do you manage devices that are found to be non-compliant after market placement?"
+    ],
+    "maturity_levels": {
+      "basic": "Compliance checklist for market placement, CE marking process documented",
+      "intermediate": "Automated compliance verification workflow, pre-market release checks, regulatory tracking",
+      "advanced": "Integrated product lifecycle management with compliance gates, real-time regulatory intelligence"
+    },
+    "cross_references": [
+      "IVDR:5",
+      "GPSR:4"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "10",
+    "requirement_summary": "General obligations of manufacturers",
+    "evidence_type": "document",
+    "artifact_name": "Quality Management System Documentation",
+    "artifact_example": "QMS_Documentation_2025.pdf",
+    "description": "Comprehensive quality management system documentation covering design and manufacturing controls, risk management, post-market surveillance, clinical evaluation, and regulatory compliance for medical devices",
+    "retention_period": "Lifetime of device + 10 years (15 years for implantable devices)",
+    "auditor_questions": [
+      "Show me your quality management system documentation",
+      "How do you ensure compliance across the entire device lifecycle?",
+      "What risk management processes are integrated into your QMS?",
+      "How do you handle non-conformities and corrective actions?"
+    ],
+    "maturity_levels": {
+      "basic": "QMS documentation exists covering core requirements, ISO 13485 aligned",
+      "intermediate": "Integrated QMS with automated CAPA tracking, regular management reviews",
+      "advanced": "Digital QMS with real-time compliance monitoring, predictive quality analytics, continuous improvement"
+    },
+    "cross_references": [
+      "IVDR:10",
+      "MDR:83",
+      "MDR:87"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "14",
+    "requirement_summary": "General obligations of distributors",
+    "evidence_type": "procedure",
+    "artifact_name": "Distributor Compliance Verification Procedure",
+    "artifact_example": "Distributor_Compliance_Procedure_2025.pdf",
+    "description": "Procedure for distributors to verify that devices bear CE marking, EU declaration of conformity has been drawn up, the device is accompanied by required information, and storage and transport conditions are maintained",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "How do you verify that devices comply with MDR requirements before distribution?",
+      "What checks do you perform on CE marking and declaration of conformity?",
+      "How do you ensure proper storage and transport conditions are maintained?",
+      "What is your process when you identify a potentially non-compliant device?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic verification checklist for incoming devices",
+      "intermediate": "Structured incoming inspection process, temperature monitoring, traceability records",
+      "advanced": "Automated compliance verification, IoT-based condition monitoring, real-time supply chain visibility"
+    },
+    "cross_references": [
+      "IVDR:14",
+      "GPSR:9"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "20",
+    "requirement_summary": "EU declaration of conformity",
+    "evidence_type": "certification",
+    "artifact_name": "EU Declaration of Conformity",
+    "artifact_example": "EU_Declaration_Conformity_DeviceX_2025.pdf",
+    "description": "EU declaration of conformity containing device identification, manufacturer details, conformity assessment procedure followed, applicable standards, notified body details, and signed declaration that the device conforms to MDR requirements",
+    "retention_period": "Lifetime of device + 10 years (15 years for implantable devices)",
+    "auditor_questions": [
+      "Show me the EU declaration of conformity for this device",
+      "Does the declaration include all information required under Annex IV?",
+      "How do you keep the declaration up to date when standards or regulations change?",
+      "How do you manage declarations across your entire device portfolio?"
+    ],
+    "maturity_levels": {
+      "basic": "Declaration exists with all mandatory information for each device",
+      "intermediate": "Centralised declaration management, version control, regular review cycle",
+      "advanced": "Automated declaration generation, real-time compliance tracking, integrated with regulatory database"
+    },
+    "cross_references": [
+      "IVDR:17",
+      "MDR:52"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "23",
+    "requirement_summary": "European database on medical devices (EUDAMED)",
+    "evidence_type": "log",
+    "artifact_name": "EUDAMED Registration Records",
+    "artifact_example": "EUDAMED_Registration_Records_2025.csv",
+    "description": "Records of all information submitted to EUDAMED including device registrations, UDI data, certificates, clinical investigations, vigilance reports, and market surveillance actions",
+    "retention_period": "Duration of device market availability + 10 years",
+    "auditor_questions": [
+      "Show me your EUDAMED registration records for all marketed devices",
+      "How do you ensure data submitted to EUDAMED is accurate and up to date?",
+      "What process do you follow to update EUDAMED when device information changes?",
+      "How do you verify that all required information modules are completed?"
+    ],
+    "maturity_levels": {
+      "basic": "Required data submitted to EUDAMED for all devices",
+      "intermediate": "Automated EUDAMED data synchronisation, regular data quality checks",
+      "advanced": "Real-time EUDAMED integration, automated data validation, proactive compliance monitoring"
+    },
+    "cross_references": [
+      "MDR:27",
+      "MDR:30",
+      "IVDR:24"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "27",
+    "requirement_summary": "Unique Device Identification system",
+    "evidence_type": "document",
+    "artifact_name": "UDI System Implementation Documentation",
+    "artifact_example": "UDI_System_Implementation_2025.pdf",
+    "description": "Documentation of the Unique Device Identification system implementation including UDI-DI and UDI-PI assignment, carrier placement on device labels, and data submission to the UDI database",
+    "retention_period": "Duration of device market availability + 10 years",
+    "auditor_questions": [
+      "Show me your UDI assignment and management process",
+      "How do you ensure UDI carriers are properly placed on device labels and packaging?",
+      "How do you submit and maintain UDI data in the UDI database?",
+      "How do you handle UDI changes when devices are modified?"
+    ],
+    "maturity_levels": {
+      "basic": "UDI assigned to all devices, basic data submitted to UDI database",
+      "intermediate": "Automated UDI management system, barcode verification, supply chain UDI tracking",
+      "advanced": "Full UDI traceability from manufacturing to patient, integrated with EUDAMED, real-time tracking"
+    },
+    "cross_references": [
+      "MDR:23",
+      "IVDR:24"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "30",
+    "requirement_summary": "Registration of manufacturers and devices",
+    "evidence_type": "document",
+    "artifact_name": "Manufacturer and Device Registration Records",
+    "artifact_example": "Manufacturer_Device_Registration_2025.pdf",
+    "description": "Records of manufacturer registration and device registration in EUDAMED including single registration number (SRN), device identification, and verification of registration status across all marketed devices",
+    "retention_period": "Duration of operations + 10 years",
+    "auditor_questions": [
+      "Show me your manufacturer registration and single registration number",
+      "Are all marketed devices properly registered in EUDAMED?",
+      "How do you maintain registration when your device portfolio changes?",
+      "What process ensures authorised representatives are also registered?"
+    ],
+    "maturity_levels": {
+      "basic": "Manufacturer registered, core devices registered in system",
+      "intermediate": "Complete device portfolio registration, regular verification, change management process",
+      "advanced": "Automated registration management, real-time status monitoring, cross-reference validation"
+    },
+    "cross_references": [
+      "MDR:23",
+      "MDR:27",
+      "IVDR:26"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "52",
+    "requirement_summary": "Conformity assessment procedures",
+    "evidence_type": "certification",
+    "artifact_name": "Conformity Assessment Certificate",
+    "artifact_example": "Conformity_Assessment_Certificate_2025.pdf",
+    "description": "Certificate and documentation from the conformity assessment process including the assessment route selected based on device risk class, notified body assessment results, and technical documentation review",
+    "retention_period": "Lifetime of device + 10 years (15 years for implantable devices)",
+    "auditor_questions": [
+      "Show me the conformity assessment certificate for this device",
+      "What conformity assessment route was selected and why?",
+      "How did the notified body assess your technical documentation?",
+      "What conditions or limitations are attached to the certificate?"
+    ],
+    "maturity_levels": {
+      "basic": "Appropriate conformity assessment route selected, certificate obtained",
+      "intermediate": "Proactive engagement with notified body, comprehensive technical file management",
+      "advanced": "Streamlined assessment process, pre-submission reviews, continuous compliance validation"
+    },
+    "cross_references": [
+      "MDR:20",
+      "IVDR:48"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "83",
+    "requirement_summary": "Post-market surveillance system",
+    "evidence_type": "document",
+    "artifact_name": "Post-Market Surveillance Plan and Report",
+    "artifact_example": "PMS_Plan_Report_2025.pdf",
+    "description": "Post-market surveillance plan and periodic safety update report (PSUR) documenting systematic data collection on device performance, complaint analysis, trend identification, and risk-benefit assessment in the post-market phase",
+    "retention_period": "Lifetime of device + 10 years (15 years for implantable devices)",
+    "auditor_questions": [
+      "Show me your post-market surveillance plan and most recent PSUR",
+      "How do you systematically collect and analyse post-market performance data?",
+      "What data sources do you use for post-market surveillance?",
+      "How do PMS findings feed back into risk management and product improvements?"
+    ],
+    "maturity_levels": {
+      "basic": "PMS plan exists, basic complaint tracking, periodic reporting",
+      "intermediate": "Structured data collection from multiple sources, trend analysis, proactive risk assessment",
+      "advanced": "AI-powered signal detection, real-world evidence analytics, automated safety reporting, predictive risk models"
+    },
+    "cross_references": [
+      "MDR:87",
+      "MDR:92",
+      "IVDR:78"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "87",
+    "requirement_summary": "Vigilance reporting of serious incidents",
+    "evidence_type": "log",
+    "artifact_name": "Vigilance Incident Report Log",
+    "artifact_example": "Vigilance_Incident_Log_2025.csv",
+    "description": "Log of all serious incidents and field safety corrective actions (FSCAs) reported through the vigilance system, including initial reports, follow-up reports, trend reports, and final reports with root cause analysis",
+    "retention_period": "Lifetime of device + 10 years (15 years for implantable devices)",
+    "auditor_questions": [
+      "Show me the vigilance log of serious incidents reported in the past year",
+      "How do you ensure timely reporting of serious incidents within the required timeframes?",
+      "What field safety corrective actions have been implemented?",
+      "Show me the root cause analysis for the most recent serious incident"
+    ],
+    "maturity_levels": {
+      "basic": "Vigilance reporting process exists, incidents reported within deadlines",
+      "intermediate": "Structured vigilance system, automated timeline tracking, comprehensive root cause analysis",
+      "advanced": "Integrated vigilance platform, automated reporting to authorities, predictive incident analytics"
+    },
+    "cross_references": [
+      "MDR:83",
+      "MDR:92",
+      "IVDR:82"
+    ]
+  },
+  {
+    "regulation": "MDR",
+    "article": "92",
+    "requirement_summary": "Trend reporting for medical devices",
+    "evidence_type": "log",
+    "artifact_name": "Device Trend Analysis Report",
+    "artifact_example": "Device_Trend_Analysis_Report_2025.pdf",
+    "description": "Trend reports identifying statistically significant increases in serious incidents or expected side-effects that could impact the risk-benefit analysis of devices, submitted to competent authorities",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me your trend analysis methodology and most recent trend reports",
+      "How do you identify statistically significant increases in incidents?",
+      "What thresholds trigger a trend report submission?",
+      "How do trend findings influence your risk management decisions?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic trend monitoring with manual analysis",
+      "intermediate": "Statistical analysis tools, defined thresholds, regular trend reviews",
+      "advanced": "Automated trend detection, machine learning signal analysis, real-time dashboard, predictive modelling"
+    },
+    "cross_references": [
+      "MDR:83",
+      "MDR:87",
+      "IVDR:82"
+    ]
+  }
+]

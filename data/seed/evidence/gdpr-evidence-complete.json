@@ -19,7 +19,10 @@
       "intermediate": "Automated retention enforcement, regular reviews",
       "advanced": "Privacy by design embedded in all systems, automated compliance monitoring"
     },
-    "cross_references": ["GDPR:6", "GDPR:25"]
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:25"
+    ]
   },
   {
     "regulation": "GDPR",
@@ -41,7 +44,9 @@
       "intermediate": "Documented for all activities, regular reviews",
       "advanced": "Automated legal basis tracking, integrated with data inventory"
     },
-    "cross_references": ["GDPR:30"]
+    "cross_references": [
+      "GDPR:30"
+    ]
   },
   {
     "regulation": "GDPR",
@@ -85,7 +90,31 @@
       "intermediate": "Layered notices, multiple languages, regular updates",
       "advanced": "Just-in-time notices, personalized information, interactive explanations"
     },
-    "cross_references": ["GDPR:14"]
+    "cross_references": [
+      "GDPR:14"
+    ]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "15",
+    "requirement_summary": "Data subject access requests - technical implementation",
+    "evidence_type": "log",
+    "artifact_name": "DSAR Processing Log",
+    "artifact_example": "DSAR_Log_2025.csv",
+    "description": "Log of all data subject access requests with processing timelines and outcomes",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me your log of data subject access requests for the past year",
+      "What is your average response time? How many requests exceeded the 1-month deadline?",
+      "For this request, show me the data extraction process used",
+      "How do you verify the identity of requestors?"
+    ],
+    "maturity_levels": {
+      "basic": "Manual DSAR processing, basic logging",
+      "intermediate": "Semi-automated data extraction, identity verification process, timeline tracking",
+      "advanced": "Fully automated DSAR portal, real-time data extraction, integration with all data systems"
+    },
+    "cross_references": []
   },
   {
     "regulation": "GDPR",
@@ -217,7 +246,32 @@
       "intermediate": "Meaningful information provided, human review process",
       "advanced": "Explainable AI, automated transparency reports, decision audit trails"
     },
-    "cross_references": ["AI_ACT:13", "AI_ACT:14"]
+    "cross_references": [
+      "AI_ACT:13",
+      "AI_ACT:14"
+    ]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "25",
+    "requirement_summary": "Data protection by design and by default",
+    "evidence_type": "document",
+    "artifact_name": "Privacy by Design Assessment",
+    "artifact_example": "Privacy_Impact_Assessment_CustomerPortal.pdf",
+    "description": "Evidence of privacy-by-design principles applied to systems and processes, including default privacy settings",
+    "retention_period": "Duration of system operation",
+    "auditor_questions": [
+      "Show me how you implemented data protection by design in this new system",
+      "What privacy-enhancing technologies did you consider (pseudonymization, encryption)?",
+      "How do you ensure data minimization in your processing?",
+      "Show me evidence that privacy settings are set to most protective by default"
+    ],
+    "maturity_levels": {
+      "basic": "Privacy considerations documented in system design",
+      "intermediate": "Privacy impact assessments mandatory for new systems, default privacy settings enforced",
+      "advanced": "Privacy engineering embedded in SDLC, automated privacy controls, privacy certifications"
+    },
+    "cross_references": []
   },
   {
     "regulation": "GDPR",
@@ -265,6 +319,81 @@
   },
   {
     "regulation": "GDPR",
+    "article": "32",
+    "requirement_summary": "Security of processing - technical and organizational measures",
+    "evidence_type": "document",
+    "artifact_name": "Security Measures Documentation",
+    "artifact_example": "GDPR_Security_Measures_2025.pdf",
+    "description": "Documentation of all technical and organizational measures to ensure security appropriate to the risk",
+    "retention_period": "Duration of processing + 3 years",
+    "auditor_questions": [
+      "Show me your documented security measures for processing personal data",
+      "How did you assess the appropriate level of security for this processing activity?",
+      "Show me evidence of pseudonymization and encryption where used",
+      "How do you regularly test and evaluate the effectiveness of these measures?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic security measures documented (encryption, access controls)",
+      "intermediate": "Risk-based security measures, regular effectiveness testing",
+      "advanced": "Continuous security monitoring, automated threat detection, security certifications (ISO 27001)"
+    },
+    "cross_references": [
+      "DORA:6",
+      "DORA:9",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "32",
+    "requirement_summary": "Security testing and evaluation",
+    "evidence_type": "test_result",
+    "artifact_name": "Security Testing Results",
+    "artifact_example": "Penetration_Test_Report_2025-01.pdf",
+    "description": "Regular testing results evaluating effectiveness of technical and organizational security measures",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me your most recent security testing results",
+      "What testing methodologies do you use (penetration testing, vulnerability scanning)?",
+      "How frequently do you test security measures?",
+      "Show me evidence that identified vulnerabilities were remediated"
+    ],
+    "maturity_levels": {
+      "basic": "Annual security testing performed",
+      "intermediate": "Quarterly testing, automated vulnerability scanning, remediation tracking",
+      "advanced": "Continuous security testing, bug bounty programs, red team exercises"
+    },
+    "cross_references": [
+      "DORA:24"
+    ]
+  },
+  {
+    "regulation": "GDPR",
+    "article": "33",
+    "requirement_summary": "Personal data breach notification to supervisory authority",
+    "evidence_type": "document",
+    "artifact_name": "Breach Notification to Authority",
+    "artifact_example": "DPA_Breach_Notification_2025-001.pdf",
+    "description": "Breach notification submitted to supervisory authority within 72 hours with all required information",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me all personal data breach notifications in the past year",
+      "For this breach, when did you become aware vs when did you notify the DPA?",
+      "Did you meet the 72-hour deadline? If not, what were the reasons for delay?",
+      "Show me your documented breach assessment for why notification was/wasn't required"
+    ],
+    "maturity_levels": {
+      "basic": "Breach notification process in place, timeline tracking",
+      "intermediate": "Automated breach detection, risk assessment templates, authority notification templates",
+      "advanced": "Real-time breach detection, automated risk scoring, integrated notification workflows"
+    },
+    "cross_references": [
+      "DORA:19",
+      "NIS2:23"
+    ]
+  },
+  {
+    "regulation": "GDPR",
     "article": "34",
     "requirement_summary": "Communication of personal data breach to data subject",
     "evidence_type": "document",
@@ -283,7 +412,9 @@
       "intermediate": "Risk assessment framework, notification templates, timeline tracking",
       "advanced": "Automated risk scoring, multi-channel notifications, personalized impact assessment"
     },
-    "cross_references": ["GDPR:33"]
+    "cross_references": [
+      "GDPR:33"
+    ]
   },
   {
     "regulation": "GDPR",

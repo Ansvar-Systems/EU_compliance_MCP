@@ -1,0 +1,202 @@
+[
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "3",
+    "requirement_summary": "European Cybersecurity Alert System participation",
+    "evidence_type": "document",
+    "artifact_name": "ECAS Participation Documentation",
+    "artifact_example": "ECAS_Participation_Agreement_2025.pdf",
+    "description": "Documentation of participation in the European Cybersecurity Alert System, including contributions to detection, analysis, and data processing capabilities for cyber threats and incident prevention in the Union",
+    "retention_period": "Duration of participation + 5 years",
+    "auditor_questions": [
+      "Show me evidence of your participation in the European Cybersecurity Alert System",
+      "How do you contribute to pooling relevant data and information on cyber threats and incidents?",
+      "What advanced tools and technologies (e.g., AI, data analytics) do you deploy to support threat detection?",
+      "How do you share actionable cyber threat intelligence with Cross-Border Cyber Hubs?"
+    ],
+    "maturity_levels": {
+      "basic": "Participation agreement signed, basic data sharing established",
+      "intermediate": "Active contribution of threat intelligence, regular data pooling, advanced analytics tools deployed",
+      "advanced": "AI-driven threat detection, real-time intelligence sharing, proactive alerting and concrete recommendations to entities"
+    },
+    "cross_references": [
+      "NIS2:13",
+      "CYBERSECURITY_ACT:8"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "4",
+    "requirement_summary": "National Cyber Hub designation and capabilities",
+    "evidence_type": "document",
+    "artifact_name": "National Cyber Hub Designation Records",
+    "artifact_example": "National_Cyber_Hub_Designation_2025.pdf",
+    "description": "Documentation of National Cyber Hub designation, demonstrating capacity to act as reference point for collecting and analysing cyber threat information, and capability to detect, aggregate, and analyse data using state-of-the-art technologies",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the designation or establishment documentation for the National Cyber Hub",
+      "How does the Hub serve as a gateway for collecting and analysing information from public and private organisations?",
+      "What state-of-the-art technologies are deployed for threat detection and data analysis?",
+      "How do you cooperate with private sector entities for exchanging relevant data on cyber threats?"
+    ],
+    "maturity_levels": {
+      "basic": "Hub designated, basic data collection and analysis capability established",
+      "intermediate": "Public-private cooperation frameworks in place, sensor and telemetry data integrated, regular threat analysis produced",
+      "advanced": "Real-time threat detection and aggregation, AI-powered analysis, comprehensive public-private threat intelligence ecosystem"
+    },
+    "cross_references": [
+      "NIS2:8",
+      "CYBERSECURITY_ACT:8"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "5",
+    "requirement_summary": "Cross-Border Cyber Hub operations",
+    "evidence_type": "document",
+    "artifact_name": "Cross-Border Cyber Hub Operating Agreement",
+    "artifact_example": "Cross_Border_Hub_Consortium_Agreement.pdf",
+    "description": "Hosting consortium agreement and operating procedures for Cross-Border Cyber Hubs, including multi-national cooperation arrangements, shared tools and infrastructure procurement, and information exchange protocols with the CSIRTs network",
+    "retention_period": "Duration of consortium + 5 years",
+    "auditor_questions": [
+      "Show me the hosting consortium agreement for the Cross-Border Cyber Hub",
+      "How do participating National Cyber Hubs share threat intelligence across borders?",
+      "What jointly procured tools and infrastructure are deployed for cross-border threat detection?",
+      "How is information shared with the CSIRTs network and EU-CyCLONe?"
+    ],
+    "maturity_levels": {
+      "basic": "Consortium agreement signed, basic cross-border information sharing established",
+      "intermediate": "Jointly procured tools operational, structured intelligence sharing protocols, regular cross-border exercises",
+      "advanced": "Real-time cross-border situational awareness, automated threat correlation across Member States, integrated EU-wide early warning"
+    },
+    "cross_references": [
+      "NIS2:15",
+      "CYBERSECURITY_ACT:8"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "9",
+    "requirement_summary": "EU Cybersecurity Reserve funding and procurement",
+    "evidence_type": "document",
+    "artifact_name": "ECCC Funding and Procurement Records",
+    "artifact_example": "ECCC_Grant_Agreement_CyberHub_2025.pdf",
+    "description": "Documentation of funding arrangements with the European Cybersecurity Competence Centre, including grant agreements, joint procurement of tools and infrastructure, hosting and usage agreements, and compliance with co-funding requirements (50% acquisition, 50% operations)",
+    "retention_period": "Duration of grant + 7 years",
+    "auditor_questions": [
+      "Show me the grant agreement and hosting and usage agreement with ECCC",
+      "How do you comply with the co-funding requirements for acquisition and operational costs?",
+      "What tools, infrastructure, or services were jointly procured through the ECCC?",
+      "Was the National Cyber Hub integrated into a Cross-Border Cyber Hub within 2 years as required?"
+    ],
+    "maturity_levels": {
+      "basic": "Grant agreement executed, co-funding requirements met, basic tools procured",
+      "intermediate": "Joint procurement completed, hosting and usage agreement actively managed, regular financial reporting to ECCC",
+      "advanced": "Full utilisation of procured capabilities, cross-border integration achieved, proactive participation in ECCC mapping exercises"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:8",
+      "NIS2:13"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "10",
+    "requirement_summary": "Trusted providers for EU Cybersecurity Reserve",
+    "evidence_type": "certification",
+    "artifact_name": "Trusted Provider Certification",
+    "artifact_example": "Trusted_Provider_Certification_2025.pdf",
+    "description": "Evidence of selection and certification as a trusted provider for the EU Cybersecurity Reserve, including demonstration of expertise, independence, and compliance with applicable EU and national law requirements for providing managed security services",
+    "retention_period": "Duration of trusted provider status + 5 years",
+    "auditor_questions": [
+      "Show me evidence of selection as a trusted provider for the EU Cybersecurity Reserve",
+      "How do you demonstrate the required level of expertise for incident response services?",
+      "How do you ensure independence and avoid conflicts of interest in providing emergency response?",
+      "What safeguards are in place for handling sensitive information encountered during incident response?"
+    ],
+    "maturity_levels": {
+      "basic": "Trusted provider status obtained, basic incident response capability demonstrated",
+      "intermediate": "Established track record of incident response, independence safeguards documented, confidentiality procedures in place",
+      "advanced": "Leading incident response capability, multi-sector expertise, automated confidentiality and conflict-of-interest management"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "CYBERSECURITY_ACT:56"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "12",
+    "requirement_summary": "Mutual assistance arrangements",
+    "evidence_type": "procedure",
+    "artifact_name": "Mutual Assistance Protocol",
+    "artifact_example": "Mutual_Assistance_Protocol_CyberIncident.pdf",
+    "description": "Documented procedures for requesting and providing mutual assistance between Member States in the event of significant or large-scale cybersecurity incidents, including operational cooperation arrangements and resource sharing protocols",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me the mutual assistance procedures for cross-border cybersecurity incidents",
+      "How do you coordinate with other Member States' CSIRTs during a significant incident?",
+      "What resources can you deploy to assist another Member State under mutual assistance?",
+      "Show me evidence of mutual assistance exercises or actual activations"
+    ],
+    "maturity_levels": {
+      "basic": "Mutual assistance procedures documented, contact points established",
+      "intermediate": "Regular cross-border exercises conducted, resource sharing agreements in place, operational cooperation tested",
+      "advanced": "Rapid-response mutual assistance capability, pre-positioned resources, automated coordination platform"
+    },
+    "cross_references": [
+      "NIS2:13",
+      "CER:13"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "14",
+    "requirement_summary": "Significant incident review mechanism",
+    "evidence_type": "document",
+    "artifact_name": "Significant Incident Review Report",
+    "artifact_example": "Significant_Incident_Review_2025.pdf",
+    "description": "Post-incident review documentation for significant or large-scale cybersecurity incidents, including assessment of threat actors, root causes, vulnerabilities exploited, lessons learned, and recommendations for improving Union cyber posture",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me the post-incident review report for the most recent significant cybersecurity incident",
+      "How did you assess the threat actors and root causes of the incident?",
+      "What lessons learned were identified and how were they communicated?",
+      "How were recommendations from the review incorporated into operational improvements?"
+    ],
+    "maturity_levels": {
+      "basic": "Post-incident reviews conducted for significant incidents with basic findings documented",
+      "intermediate": "Structured review methodology, root cause analysis, lessons learned systematically captured and shared with relevant authorities",
+      "advanced": "Comprehensive multi-stakeholder reviews, threat intelligence correlation, recommendations fed into EU-wide policy improvements"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "DORA:13"
+    ]
+  },
+  {
+    "regulation": "CYBER_SOLIDARITY",
+    "article": "3",
+    "requirement_summary": "Situational awareness and alert capabilities",
+    "evidence_type": "log",
+    "artifact_name": "Cyber Threat Alert Log",
+    "artifact_example": "Cyber_Threat_Alert_Log_2025-Q1.csv",
+    "description": "Log of cyber threat alerts generated and disseminated through the European Cybersecurity Alert System, including detection timestamps, threat categorisation, recommended actions, and dissemination to CSIRTs network and EU-CyCLONe",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the alert log including detection and dissemination timestamps for the past quarter",
+      "How do you categorise and prioritise cyber threat alerts?",
+      "How are alerts disseminated to the CSIRTs network and EU-CyCLONe?",
+      "What concrete recommendations were provided to affected entities based on alerts?"
+    ],
+    "maturity_levels": {
+      "basic": "Alerts generated and logged with basic categorisation",
+      "intermediate": "Structured alert taxonomy, automated dissemination, recommendations included with each alert",
+      "advanced": "Real-time alert correlation, predictive alerting, automated entity-specific recommendations, full EU situational awareness"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "CYBERSECURITY_ACT:8"
+    ]
+  }
+]

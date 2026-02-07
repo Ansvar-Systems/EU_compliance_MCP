@@ -1,0 +1,203 @@
+[
+  {
+    "regulation": "DMA",
+    "article": "3",
+    "requirement_summary": "Designation as gatekeeper and notification obligations",
+    "evidence_type": "document",
+    "artifact_name": "Gatekeeper Designation Assessment",
+    "artifact_example": "Gatekeeper_Designation_Assessment_2025.pdf",
+    "description": "Documentation assessing whether the undertaking meets the quantitative thresholds for gatekeeper designation including annual turnover, market capitalisation, active user counts, and core platform service identification",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me your assessment of whether your services meet the gatekeeper thresholds",
+      "How do you calculate and verify active end user and business user numbers?",
+      "What core platform services have you identified for notification?",
+      "How do you monitor changes that could affect your gatekeeper status?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic threshold assessment performed, notification submitted",
+      "intermediate": "Systematic monitoring of threshold metrics, regular reassessment cycle",
+      "advanced": "Automated threshold tracking, proactive compliance monitoring, predictive analytics for user growth"
+    },
+    "cross_references": [
+      "DMA:5",
+      "DMA:6"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "5",
+    "requirement_summary": "Obligations for gatekeepers",
+    "evidence_type": "procedure",
+    "artifact_name": "Gatekeeper Obligations Compliance Procedures",
+    "artifact_example": "Gatekeeper_Art5_Compliance_Procedures.pdf",
+    "description": "Documented procedures for complying with Article 5 obligations including refraining from combining personal data across services without consent, allowing business users to offer different terms on other channels, and enabling side-loading of applications",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "How do you ensure personal data from different core platform services is not combined without user consent?",
+      "Show me evidence that business users can promote offers outside your platform",
+      "How do you enable users to install third-party applications?",
+      "What technical measures prevent circumvention of these obligations?"
+    ],
+    "maturity_levels": {
+      "basic": "Core obligations identified and basic compliance measures implemented",
+      "intermediate": "Systematic compliance framework, monitoring tools, regular testing",
+      "advanced": "Automated compliance enforcement, proactive design for interoperability, continuous monitoring dashboards"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:7",
+      "DSA:14"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "6",
+    "requirement_summary": "Obligations susceptible to further specification",
+    "evidence_type": "document",
+    "artifact_name": "Article 6 Compliance Documentation",
+    "artifact_example": "Art6_Compliance_Implementation_2025.pdf",
+    "description": "Documentation of measures taken to comply with obligations susceptible to further specification, including data portability, interoperability, access to ranking and performance data, and prohibition of self-preferencing",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "How do you ensure real-time data portability for end users and business users?",
+      "What interoperability measures have you implemented for ancillary services?",
+      "Show me how you provide business users with access to ranking and performance data",
+      "How do you prevent self-preferencing in search results and rankings?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic compliance measures for each obligation identified",
+      "intermediate": "Technical implementation documented, effectiveness metrics tracked",
+      "advanced": "Full interoperability framework, real-time portability tools, independent fairness audits of rankings"
+    },
+    "cross_references": [
+      "DATA_ACT:23",
+      "GDPR:20"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "7",
+    "requirement_summary": "Messaging interoperability obligations",
+    "evidence_type": "document",
+    "artifact_name": "Messaging Interoperability Implementation Plan",
+    "artifact_example": "Messaging_Interoperability_Plan_2025.pdf",
+    "description": "Technical documentation of messaging interoperability implementation including protocol specifications, API documentation, end-to-end encryption maintenance, and timeline for enabling group messaging features",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me your technical implementation plan for messaging interoperability",
+      "How do you maintain end-to-end encryption while enabling interoperability?",
+      "What APIs and protocols have you published for third-party messaging providers?",
+      "What is your timeline for enabling group messaging interoperability?"
+    ],
+    "maturity_levels": {
+      "basic": "Interoperability plan published, basic text messaging interoperability",
+      "intermediate": "Rich media support, documented APIs, end-to-end encryption preserved",
+      "advanced": "Full feature parity for interoperable messaging, real-time protocol updates, developer ecosystem support"
+    },
+    "cross_references": [
+      "EECC:102",
+      "EIDAS2:6"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "8",
+    "requirement_summary": "Compliance measures and regulatory dialogue",
+    "evidence_type": "document",
+    "artifact_name": "DMA Compliance Report",
+    "artifact_example": "DMA_Compliance_Report_2025.pdf",
+    "description": "Comprehensive compliance report submitted to the European Commission detailing measures taken to comply with Articles 5, 6, and 7, including technical specifications, effectiveness assessments, and non-confidential summaries",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the compliance report submitted to the European Commission",
+      "How do you demonstrate that compliance measures are effective?",
+      "What is your process for engaging in regulatory dialogue with the Commission?",
+      "How do you handle Commission requests for additional information or modifications?"
+    ],
+    "maturity_levels": {
+      "basic": "Compliance report submitted within deadlines",
+      "intermediate": "Detailed effectiveness analysis, proactive stakeholder engagement",
+      "advanced": "Continuous compliance monitoring with real-time reporting, pre-emptive compliance adjustments"
+    },
+    "cross_references": [
+      "DMA:11",
+      "DMA:15"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "11",
+    "requirement_summary": "Reporting obligations for gatekeepers",
+    "evidence_type": "log",
+    "artifact_name": "Gatekeeper Reporting Log",
+    "artifact_example": "Gatekeeper_Reporting_Log_2025.csv",
+    "description": "Log of all reports and notifications submitted to the European Commission including consumer profiling techniques, user statistics, acquisitions, and any changes that affect compliance obligations",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the log of reports submitted to the Commission over the past year",
+      "How do you track and report acquisitions to the Commission?",
+      "What consumer profiling techniques do you report and how are they documented?",
+      "How do you ensure timely and complete reporting of material changes?"
+    ],
+    "maturity_levels": {
+      "basic": "Reports submitted as required, basic record keeping",
+      "intermediate": "Automated reporting calendar, structured data collection, compliance tracking",
+      "advanced": "Real-time reporting capability, automated data aggregation, predictive compliance monitoring"
+    },
+    "cross_references": [
+      "DSA:42",
+      "GDPR:30"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "15",
+    "requirement_summary": "Audit obligations for gatekeepers",
+    "evidence_type": "certification",
+    "artifact_name": "DMA Compliance Audit Report",
+    "artifact_example": "DMA_Compliance_Audit_2025.pdf",
+    "description": "Independent audit report covering compliance with DMA obligations, including audit of consumer profiling practices, description of profiling techniques used, and submission of audit results to the Commission and national authorities",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the most recent independent audit report on DMA compliance",
+      "How was the auditing organisation selected and is it independent?",
+      "What findings were identified regarding consumer profiling practices?",
+      "How have you addressed audit recommendations and findings?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual audit completed and submitted to the Commission",
+      "intermediate": "Detailed audit scope covering all obligations, remediation plan with tracking",
+      "advanced": "Continuous assurance programme, real-time compliance dashboards, proactive gap analysis"
+    },
+    "cross_references": [
+      "DSA:37",
+      "DORA:26"
+    ]
+  },
+  {
+    "regulation": "DMA",
+    "article": "28",
+    "requirement_summary": "Non-compliance penalties and enforcement",
+    "evidence_type": "document",
+    "artifact_name": "DMA Compliance Risk Assessment",
+    "artifact_example": "DMA_Compliance_Risk_Assessment_2025.pdf",
+    "description": "Risk assessment documenting potential areas of non-compliance with DMA obligations, associated financial penalties, and mitigation measures to ensure ongoing compliance",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me your compliance risk assessment for DMA obligations",
+      "How do you identify and prioritise areas of potential non-compliance?",
+      "What mitigation measures are in place for the highest-risk areas?",
+      "How do you prepare for potential Commission investigations?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic awareness of penalty framework, key compliance risks identified",
+      "intermediate": "Structured risk register, mitigation plans, regular compliance reviews",
+      "advanced": "Proactive compliance management, automated risk monitoring, scenario planning for enforcement actions"
+    },
+    "cross_references": [
+      "DSA:42",
+      "DMA:8"
+    ]
+  }
+]
