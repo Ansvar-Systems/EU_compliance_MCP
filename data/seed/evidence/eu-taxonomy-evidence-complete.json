@@ -1,0 +1,227 @@
+[
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "3",
+    "requirement_summary": "Criteria for environmentally sustainable economic activities",
+    "evidence_type": "document",
+    "artifact_name": "Taxonomy Alignment Assessment",
+    "artifact_example": "Taxonomy_Alignment_Assessment_2025.pdf",
+    "description": "Documentation assessing whether economic activities qualify as environmentally sustainable by meeting all four criteria: substantial contribution to at least one environmental objective, do no significant harm to other objectives, compliance with minimum safeguards, and compliance with technical screening criteria",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me your methodology for assessing taxonomy alignment of economic activities",
+      "How do you determine substantial contribution to an environmental objective?",
+      "What DNSH assessment do you perform for each environmental objective?",
+      "How do you verify compliance with the technical screening criteria from the delegated acts?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic alignment assessment performed against four criteria",
+      "intermediate": "Systematic assessment methodology, documented evidence for each criterion, regular reviews",
+      "advanced": "Automated taxonomy alignment engine, real-time activity classification, third-party verification of alignment claims"
+    },
+    "cross_references": [
+      "EU_TAXONOMY:17",
+      "EU_TAXONOMY:18"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "5",
+    "requirement_summary": "Transparency of environmentally sustainable investments in pre-contractual disclosures",
+    "evidence_type": "document",
+    "artifact_name": "Fund Taxonomy Disclosure (Pre-Contractual)",
+    "artifact_example": "Fund_Taxonomy_PreContractual_Disclosure_2025.pdf",
+    "description": "Pre-contractual disclosures for financial products promoting environmental characteristics or having sustainable investment objectives, stating the proportion of investments in taxonomy-aligned activities and information on which environmental objectives the investments contribute to",
+    "retention_period": "Duration of product offering + 5 years",
+    "auditor_questions": [
+      "Show me the pre-contractual taxonomy disclosure for each financial product",
+      "What proportion of investments are in taxonomy-aligned activities?",
+      "Which environmental objectives do the taxonomy-aligned investments contribute to?",
+      "How do you ensure the accuracy of the taxonomy alignment proportion disclosed?"
+    ],
+    "maturity_levels": {
+      "basic": "Taxonomy proportions disclosed in pre-contractual documents",
+      "intermediate": "Detailed breakdown by environmental objective, look-through analysis for indirect investments",
+      "advanced": "Real-time taxonomy alignment tracking, automated disclosure generation, third-party data verification"
+    },
+    "cross_references": [
+      "SFDR:8",
+      "SFDR:9"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "6",
+    "requirement_summary": "Substantial contribution to climate change mitigation",
+    "evidence_type": "document",
+    "artifact_name": "Climate Change Mitigation Substantial Contribution Assessment",
+    "artifact_example": "Climate_Mitigation_Assessment_2025.pdf",
+    "description": "Assessment documenting how economic activities substantially contribute to climate change mitigation through means such as generating renewable energy, improving energy efficiency, increasing clean mobility, switching to renewable materials, carbon capture, or establishing energy infrastructure compatible with climate neutrality",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me how you assess substantial contribution to climate change mitigation",
+      "What technical screening criteria from the delegated acts do your activities meet?",
+      "What quantitative thresholds or benchmarks do you use to determine substantial contribution?",
+      "How do you verify that the activity's greenhouse gas performance meets the required standards?"
+    ],
+    "maturity_levels": {
+      "basic": "Activities assessed against climate mitigation technical screening criteria",
+      "intermediate": "Quantitative GHG performance tracking, lifecycle analysis for key activities, third-party data for emissions",
+      "advanced": "Science-based target alignment, continuous emissions monitoring, certified carbon accounting methodology"
+    },
+    "cross_references": [
+      "EU_TAXONOMY:3",
+      "EU_TAXONOMY:17"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "7",
+    "requirement_summary": "Substantial contribution to climate change adaptation",
+    "evidence_type": "document",
+    "artifact_name": "Climate Change Adaptation Assessment",
+    "artifact_example": "Climate_Adaptation_Assessment_2025.pdf",
+    "description": "Assessment documenting how economic activities substantially contribute to climate change adaptation by including adaptation solutions that reduce physical climate risk, based on climate risk and vulnerability assessments and implementation of adaptation measures",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me your climate risk and vulnerability assessment for this economic activity",
+      "What physical climate risks have been identified and what adaptation solutions are in place?",
+      "How do you assess whether the adaptation solutions substantially reduce the identified risks?",
+      "What time horizons do your climate adaptation assessments cover?"
+    ],
+    "maturity_levels": {
+      "basic": "Climate risk assessment performed, basic adaptation measures identified",
+      "intermediate": "Comprehensive vulnerability assessment, adaptation plan with monitoring, scenario analysis across time horizons",
+      "advanced": "Dynamic climate risk modelling, quantified adaptation effectiveness, independent verification of adaptation outcomes"
+    },
+    "cross_references": [
+      "EU_TAXONOMY:3",
+      "EU_TAXONOMY:17"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "8",
+    "requirement_summary": "Transparency of undertakings in non-financial statements",
+    "evidence_type": "document",
+    "artifact_name": "Taxonomy-Aligned KPI Disclosures (Article 8 Report)",
+    "artifact_example": "Taxonomy_Article8_KPI_Report_2025.pdf",
+    "description": "Non-financial statement disclosures for undertakings subject to NFRD/CSRD reporting, including taxonomy-aligned proportions of turnover, capital expenditure (CapEx), and operating expenditure (OpEx), broken down by environmental objective with supporting documentation",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me your taxonomy-aligned turnover, CapEx, and OpEx KPIs",
+      "What methodology do you use to calculate the taxonomy-aligned proportions?",
+      "How do you ensure the denominator for each KPI is complete and accurate?",
+      "Show me the breakdown by environmental objective and supporting evidence for taxonomy alignment"
+    ],
+    "maturity_levels": {
+      "basic": "Taxonomy KPIs calculated and disclosed with basic methodology documentation",
+      "intermediate": "Detailed calculation methodology, internal controls over taxonomy reporting, granular activity-level breakdown",
+      "advanced": "Integrated taxonomy reporting in ERP systems, external assurance of taxonomy KPIs, automated data collection from business units"
+    },
+    "cross_references": [
+      "CSRD:19a",
+      "SFDR:11"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "10",
+    "requirement_summary": "Substantial contribution to sustainable use and protection of water and marine resources",
+    "evidence_type": "document",
+    "artifact_name": "Water and Marine Resources Substantial Contribution Assessment",
+    "artifact_example": "Water_Marine_Assessment_2025.pdf",
+    "description": "Assessment documenting how economic activities substantially contribute to the sustainable use and protection of water and marine resources, including achieving good status of water bodies, protecting the marine environment, and complying with the Water Framework Directive objectives",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me how you assess substantial contribution to water and marine resource protection",
+      "What technical screening criteria from the delegated acts do your activities meet?",
+      "How do you monitor water consumption, discharge quality, and impact on marine ecosystems?",
+      "What evidence do you have of compliance with Water Framework Directive requirements?"
+    ],
+    "maturity_levels": {
+      "basic": "Water impact assessment performed, basic compliance with discharge standards",
+      "intermediate": "Comprehensive water stewardship programme, monitoring of water quality impacts, stakeholder engagement",
+      "advanced": "Real-time water quality monitoring, certified water stewardship, quantified positive impact on water bodies"
+    },
+    "cross_references": [
+      "EU_TAXONOMY:3",
+      "EU_TAXONOMY:17"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "12",
+    "requirement_summary": "Substantial contribution to transition to a circular economy",
+    "evidence_type": "document",
+    "artifact_name": "Circular Economy Substantial Contribution Assessment",
+    "artifact_example": "Circular_Economy_Assessment_2025.pdf",
+    "description": "Assessment documenting how economic activities substantially contribute to the transition to a circular economy, including through resource efficiency, increased durability, reparability, recyclability of products, reduction of waste generation, and increased reuse and recycling",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me how your activities contribute to the circular economy transition",
+      "What metrics do you use to measure circularity performance?",
+      "How do you track resource efficiency and waste reduction outcomes?",
+      "What product design measures improve durability, reparability, and recyclability?"
+    ],
+    "maturity_levels": {
+      "basic": "Circular economy assessment performed, basic resource efficiency measures documented",
+      "intermediate": "Quantified circularity metrics, lifecycle assessment, waste reduction targets with tracking",
+      "advanced": "Comprehensive circular economy strategy, closed-loop systems, certified circularity metrics, digital product passports"
+    },
+    "cross_references": [
+      "EU_TAXONOMY:3",
+      "EU_TAXONOMY:17"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "17",
+    "requirement_summary": "Significant harm to environmental objectives (DNSH)",
+    "evidence_type": "document",
+    "artifact_name": "Do No Significant Harm (DNSH) Assessment",
+    "artifact_example": "DNSH_Assessment_2025.pdf",
+    "description": "Assessment demonstrating that the economic activity does not significantly harm any of the six environmental objectives (climate mitigation, climate adaptation, water, circular economy, pollution, biodiversity), using the criteria defined in Article 17 for each objective",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me your DNSH assessment covering all six environmental objectives",
+      "How do you assess whether an activity leads to significant GHG emissions or locks in carbon-intensive assets?",
+      "What evidence do you have that the activity does not harm biodiversity and ecosystems?",
+      "How do you monitor ongoing compliance with DNSH criteria after the initial assessment?"
+    ],
+    "maturity_levels": {
+      "basic": "DNSH assessment completed for all six objectives",
+      "intermediate": "Quantitative DNSH thresholds applied, regular reassessment, documented evidence for each objective",
+      "advanced": "Continuous DNSH monitoring, automated environmental impact tracking, independent third-party DNSH verification"
+    },
+    "cross_references": [
+      "EU_TAXONOMY:3",
+      "EU_TAXONOMY:6"
+    ]
+  },
+  {
+    "regulation": "EU_TAXONOMY",
+    "article": "18",
+    "requirement_summary": "Minimum safeguards compliance",
+    "evidence_type": "document",
+    "artifact_name": "Minimum Safeguards Compliance Assessment",
+    "artifact_example": "Minimum_Safeguards_Assessment_2025.pdf",
+    "description": "Documentation demonstrating compliance with minimum safeguards as set out in the OECD Guidelines for Multinational Enterprises, UN Guiding Principles on Business and Human Rights, ILO core labour conventions, and the International Bill of Human Rights, covering human rights, anti-corruption, taxation, and fair competition",
+    "retention_period": "Duration of activity + 5 years",
+    "auditor_questions": [
+      "Show me your minimum safeguards compliance assessment",
+      "How do you perform human rights due diligence in line with the UN Guiding Principles?",
+      "What anti-corruption and anti-bribery measures are in place?",
+      "How do you ensure fair competition and compliance with tax obligations across jurisdictions?"
+    ],
+    "maturity_levels": {
+      "basic": "Minimum safeguards assessment performed, basic policies on human rights and anti-corruption",
+      "intermediate": "Comprehensive human rights due diligence process, anti-corruption training programme, supply chain assessments",
+      "advanced": "Continuous human rights monitoring, independent UNGP compliance assessment, integrated minimum safeguards in all investment decisions"
+    },
+    "cross_references": [
+      "CSDDD:6",
+      "EU_TAXONOMY:3"
+    ]
+  }
+]

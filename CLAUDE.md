@@ -1,5 +1,7 @@
 # EU Regulations MCP Server - Development Guide
 
+**Part of the Ansvar MCP Suite** → See [central architecture docs](https://github.com/Ansvar-Systems/security-controls-mcp/blob/main/docs/ANSVAR_MCP_ARCHITECTURE.md) for complete suite documentation
+
 ## Project Overview
 
 MCP server providing searchable access to EU cybersecurity regulations. Local-first architecture using TypeScript, SQLite + FTS5.
@@ -213,12 +215,13 @@ The package ships with a **pre-built database** (`data/regulations.db`, ~15MB) c
 | Component | Count | Size |
 |-----------|-------|------|
 | Articles | 2,438 | ~9MB |
-| Recitals | 3,712 (43/47 regulations) | ~5.5MB |
+| Recitals | 3,789 (44/47 regulations) | ~5.5MB |
 | Definitions | 1,138 | ~1MB |
 | Control Mappings | 685 | ~500KB |
 | Applicability Rules | 305 | ~200KB |
+| Evidence Requirements | 407 | ~300KB |
 | FTS5 Index | - | ~900KB |
-| **Total** | **~8,300 entries** | **~18MB** |
+| **Total** | **~8,700 entries** | **~19MB** |
 
 ### When Maintainers Rebuild
 
@@ -315,14 +318,15 @@ The `GITHUB_TOKEN` is automatic and used for:
 
 | Category | Count |
 |----------|-------|
-| Regulations | 47 |
-| Articles | 2,438 |
-| Recitals | 3,712 (43/47 regulations) |
-| Definitions | 1,138 |
+| Regulations | 49 |
+| Articles | 2,528 |
+| Recitals | 3,869 (45/49 regulations) |
+| Definitions | 1,226 |
 | ISO 27001 Mappings | 324 |
 | NIST CSF 2.0 Mappings | 385 |
 | Applicability Rules | 323 |
-| **Database Size** | **~18MB** |
+| Evidence Requirements | 407 (49/49 regulations) |
+| **Database Size** | **~19MB** |
 
 ## Completed Features
 
@@ -333,4 +337,5 @@ The `GITHUB_TOKEN` is automatic and used for:
 - [x] NIST CSF 2.0 control mappings (373 mappings across all regulations)
 - [x] Sector applicability rules (305 rules across all regulations)
 - [x] Full-text search via SQLite FTS5
-- [x] Cross-regulation comparison tools
+- [x] Cross-regulation comparison with synonym expansion (15 concept families)
+- [x] Evidence requirements for all 47 regulations (407 audit artifacts)

@@ -1,0 +1,202 @@
+[
+  {
+    "regulation": "EUCC",
+    "article": "3",
+    "requirement_summary": "Evaluation against Common Criteria standards",
+    "evidence_type": "document",
+    "artifact_name": "Common Criteria Evaluation Documentation",
+    "artifact_example": "CC_Evaluation_Documentation_ProductX.pdf",
+    "description": "Documentation of evaluation performed against the Common Criteria (CC) and the Common Evaluation Methodology (CEM) standards, demonstrating that the ICT product or protection profile was evaluated in accordance with these mandatory standards",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me the evaluation documentation confirming use of Common Criteria and Common Evaluation Methodology",
+      "Which version of the Common Criteria and CEM was used for the evaluation?",
+      "How does the evaluation align with the state-of-the-art documents listed in Annex I?",
+      "Were any deviations from standard evaluation methods approved by the national certification authority?"
+    ],
+    "maturity_levels": {
+      "basic": "Evaluation completed using CC and CEM standards with basic documentation",
+      "intermediate": "Full CC/CEM compliance, state-of-the-art documents applied, evaluation results clearly documented",
+      "advanced": "Continuous alignment with latest CC/CEM versions, proactive engagement with ECCG on state-of-the-art updates"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:51",
+      "CYBERSECURITY_ACT:54"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "4",
+    "requirement_summary": "Assurance level determination (substantial or high)",
+    "evidence_type": "certification",
+    "artifact_name": "EUCC Certificate with Assurance Level",
+    "artifact_example": "EUCC_Certificate_AVA_VAN3_ProductX.pdf",
+    "description": "EUCC certificate specifying the assurance level (substantial corresponding to AVA_VAN 1-2, or high corresponding to AVA_VAN 3-5), distinguishing conformant and augmented use of assurance components as specified in Common Criteria",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me the EUCC certificate with the assigned assurance level and AVA_VAN level",
+      "What is the justification for the selected AVA_VAN level in relation to the product risk profile?",
+      "Does the certificate distinguish between conformant and augmented use of assurance components?",
+      "For AVA_VAN 4 or 5, was the product covered by a technical domain in Annex I or a certified protection profile in Annex II?"
+    ],
+    "maturity_levels": {
+      "basic": "EUCC certificate obtained at appropriate assurance level",
+      "intermediate": "Assurance level justified against risk assessment, augmented components documented, technical domain compliance verified",
+      "advanced": "Highest applicable AVA_VAN level achieved, comprehensive augmented assurance, proactive recertification planning"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:52",
+      "CRA:32"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "5",
+    "requirement_summary": "Security target definition and certification method",
+    "evidence_type": "document",
+    "artifact_name": "Security Target Documentation",
+    "artifact_example": "Security_Target_ProductX_v1.0.pdf",
+    "description": "Security target defining the security requirements, objectives, and functional specifications of the ICT product, either as defined by the applicant or incorporating a certified protection profile where the product falls in a covered category",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me the security target for the certified ICT product",
+      "Does the security target incorporate a certified protection profile where applicable?",
+      "How were security functional requirements and security assurance requirements determined?",
+      "How does the security target address the operational environment and threat model?"
+    ],
+    "maturity_levels": {
+      "basic": "Security target defined with basic security requirements and objectives",
+      "intermediate": "Security target aligned with certified protection profile, comprehensive threat model, clear security functional requirements",
+      "advanced": "Security target based on rigorous threat analysis, protection profile conformance verified, formal methods applied where applicable"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:51",
+      "CRA:13"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "7",
+    "requirement_summary": "ITSEF evaluation of ICT products",
+    "evidence_type": "test_result",
+    "artifact_name": "ITSEF Evaluation Technical Report",
+    "artifact_example": "ITSEF_ETR_ProductX_2025.pdf",
+    "description": "Evaluation technical report from an accredited Information Technology Security Evaluation Facility (ITSEF), documenting evaluation activities including vulnerability assessment, independent functional testing, and compliance with state-of-the-art documents and certified protection profiles",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me the ITSEF evaluation technical report for this product",
+      "What vulnerability assessment (AVA_VAN) level was applied and what were the findings?",
+      "Were all applicable state-of-the-art documents from Annex I applied in the evaluation?",
+      "For AVA_VAN 4-5, was an exception approved by the national cybersecurity certification authority?"
+    ],
+    "maturity_levels": {
+      "basic": "ITSEF evaluation completed with evaluation technical report produced",
+      "intermediate": "Comprehensive vulnerability assessment, all Annex I state-of-the-art documents applied, independent functional testing performed",
+      "advanced": "Advanced penetration testing at highest AVA_VAN levels, composite product evaluation where applicable, formal approval from NCCA"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:52",
+      "CYBERSECURITY_ACT:54"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "8",
+    "requirement_summary": "Information and evidence for certification",
+    "evidence_type": "document",
+    "artifact_name": "Certification Application Package",
+    "artifact_example": "EUCC_Certification_Application_ProductX.pdf",
+    "description": "Complete certification application package including all evidence required by Common Criteria sections on Developer action elements, details on ICT product and source code, vulnerability management and disclosure procedures, and supplementary cybersecurity information as required by Article 55 of the Cybersecurity Act",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me the complete certification application package with all required evidence",
+      "Does the package include vulnerability management and vulnerability disclosure procedures?",
+      "Where prior certification results are reused, show evidence of their pertinence and authenticity",
+      "How is all relevant documentation retained for the required 5-year period after certificate expiry?"
+    ],
+    "maturity_levels": {
+      "basic": "Application package complete with all required evidence and vulnerability disclosure procedures",
+      "intermediate": "Prior certification results leveraged where applicable, documentation well-organised, 5-year retention assured",
+      "advanced": "Streamlined application process, automated evidence collection, comprehensive vulnerability management programme, proactive disclosure"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:55",
+      "CRA:13"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "14",
+    "requirement_summary": "Vulnerability assessment during certification",
+    "evidence_type": "test_result",
+    "artifact_name": "Vulnerability Assessment Report",
+    "artifact_example": "EUCC_Vulnerability_Assessment_ProductX.pdf",
+    "description": "Vulnerability assessment report documenting the systematic analysis performed during certification, including identification of known vulnerabilities, assessment of exploitability, and verification that the ICT product resists attacks commensurate with the targeted AVA_VAN level",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me the vulnerability assessment report for this certified product",
+      "How were known vulnerabilities identified and assessed for exploitability?",
+      "Does the product resist attacks at the level commensurate with the targeted AVA_VAN level?",
+      "What methodology was used for vulnerability scanning and penetration testing?"
+    ],
+    "maturity_levels": {
+      "basic": "Vulnerability assessment completed at required AVA_VAN level with findings documented",
+      "intermediate": "Comprehensive vulnerability analysis including public vulnerability databases, systematic exploitability assessment",
+      "advanced": "Advanced attack simulation at state-of-the-art level, zero-day vulnerability research, continuous vulnerability monitoring post-certification"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:51",
+      "CRA:13"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "17",
+    "requirement_summary": "Certificate management and lifecycle",
+    "evidence_type": "document",
+    "artifact_name": "Certificate Lifecycle Management Plan",
+    "artifact_example": "EUCC_Certificate_Lifecycle_Plan.pdf",
+    "description": "Documentation of certificate management processes including certificate issuance, validity monitoring, suspension conditions, withdrawal criteria, renewal planning, and notification procedures for changes affecting certificate compliance",
+    "retention_period": "5 years after certificate expiry",
+    "auditor_questions": [
+      "Show me your certificate lifecycle management plan including suspension and withdrawal criteria",
+      "How do you monitor and report changes that could affect the validity of the certificate?",
+      "What is your process for certificate renewal before expiry?",
+      "How are certificate holders notified of suspension or withdrawal decisions?"
+    ],
+    "maturity_levels": {
+      "basic": "Certificate lifecycle tracked, basic renewal planning in place",
+      "intermediate": "Proactive change monitoring, structured suspension/withdrawal criteria, renewal initiated well before expiry",
+      "advanced": "Automated certificate lifecycle management, real-time compliance monitoring, continuous re-evaluation triggers"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:56",
+      "CRA:28"
+    ]
+  },
+  {
+    "regulation": "EUCC",
+    "article": "20",
+    "requirement_summary": "Patch management for certified products",
+    "evidence_type": "procedure",
+    "artifact_name": "Certified Product Patch Management Procedure",
+    "artifact_example": "EUCC_Patch_Management_Procedure.pdf",
+    "description": "Documented procedures for managing patches and updates to certified ICT products, ensuring that patches do not invalidate the certification, including impact assessment of changes, re-evaluation triggers, and coordination with the certification body and ITSEF for assessing whether updated evaluation is needed",
+    "retention_period": "Duration of certificate validity + 5 years",
+    "auditor_questions": [
+      "Show me your patch management procedure for certified ICT products",
+      "How do you assess whether a patch or update impacts the validity of the EUCC certificate?",
+      "What triggers a re-evaluation by the ITSEF after a patch is applied?",
+      "How do you coordinate with the certification body to determine if the updated evaluation technical report is required?"
+    ],
+    "maturity_levels": {
+      "basic": "Patch management procedure exists with basic impact assessment for certified products",
+      "intermediate": "Structured impact assessment methodology, clear re-evaluation triggers defined, certification body coordination documented",
+      "advanced": "Automated patch impact analysis against security target, continuous coordination with ITSEF, rapid re-certification pipeline"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:51",
+      "CRA:13"
+    ]
+  }
+]

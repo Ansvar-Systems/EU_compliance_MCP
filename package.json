@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/eu-regulations-mcp",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "mcpName": "eu.ansvar/eu-regulations-mcp",
   "description": "The first open-source MCP server for European cybersecurity regulations. Query DORA, NIS2, GDPR, EU AI Act, and more directly from Claude.",
   "main": "dist/index.js",
@@ -30,7 +30,10 @@
     "migrate:postgres": "tsx scripts/migrate-to-postgres.ts",
     "lint": "eslint src --ext .ts",
     "prepare": "test -f dist/index.js || npm run build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "worker:dev": "wrangler dev src/worker.ts",
+    "worker:deploy": "wrangler deploy",
+    "worker:tail": "wrangler tail"
   },
   "keywords": [
     "mcp",
@@ -79,10 +82,17 @@
     "puppeteer": "^24.36.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "wrangler": "^4.61.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@isaacs/brace-expansion": ">=5.0.1",
+      "hono": ">=4.11.7"
+    }
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.25.3",
+    "@modelcontextprotocol/sdk": "^1.26.0",
     "better-sqlite3": "^12.6.2",
     "jsdom": "^27.4.0",
     "pg": "^8.13.2"

@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 export interface ListInput {
   regulation?: string;
@@ -24,35 +24,41 @@ export interface ListResult {
 }
 
 export async function listRegulations(
-  db: Database,
+  db: DatabaseAdapter,
   input: ListInput
 ): Promise<ListResult> {
   const { regulation } = input;
 
   if (regulation) {
     // Get specific regulation with chapters
-    const regRow = db.prepare(`
-      SELECT id, full_name, celex_id, effective_date
-      FROM regulations
-      WHERE id = ?
-    `).get(regulation) as {
+    const regResult = await db.query(
+      `SELECT id, full_name, celex_id, effective_date
+       FROM regulations
+       WHERE id = $1`,
+      [regulation]
+    );
+
+    if (regResult.rows.length === 0) {
+      return { regulations: [] };
+    }
+
+    const regRow = regResult.rows[0] as {
       id: string;
       full_name: string;
       celex_id: string;
       effective_date: string | null;
-    } | undefined;
-
-    if (!regRow) {
-      return { regulations: [] };
-    }
+    };
 
     // Get articles grouped by chapter
-    const articles = db.prepare(`
-      SELECT article_number, title, chapter
-      FROM articles
-      WHERE regulation = ?
-      ORDER BY CAST(article_number AS INTEGER)
-    `).all(regulation) as Array<{
+    const articlesResult = await db.query(
+      `SELECT article_number, title, chapter
+       FROM articles
+       WHERE regulation = $1
+       ORDER BY article_number::INTEGER`,
+      [regulation]
+    );
+
+    const articles = articlesResult.rows as Array<{
       article_number: string;
       title: string | null;
       chapter: string | null;
@@ -85,18 +91,20 @@ export async function listRegulations(
   }
 
   // List all regulations with article counts
-  const rows = db.prepare(`
-    SELECT
+  const result = await db.query(
+    `SELECT
       r.id,
       r.full_name,
       r.celex_id,
       r.effective_date,
-      COUNT(a.rowid) as article_count
+      COUNT(a.regulation) as article_count
     FROM regulations r
     LEFT JOIN articles a ON a.regulation = r.id
-    GROUP BY r.id
-    ORDER BY r.id
-  `).all() as Array<{
+    GROUP BY r.id, r.full_name, r.celex_id, r.effective_date
+    ORDER BY r.id`
+  );
+
+  const rows = result.rows as Array<{
     id: string;
     full_name: string;
     celex_id: string;
@@ -110,7 +118,7 @@ export async function listRegulations(
       full_name: row.full_name,
       celex_id: row.celex_id,
       effective_date: row.effective_date,
-      article_count: row.article_count,
+      article_count: Number(row.article_count),
     })),
   };
 }

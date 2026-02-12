@@ -3,6 +3,7 @@
 **The EUR-Lex alternative for the AI age.**
 
 [![npm version](https://badge.fury.io/js/@ansvar%2Feu-regulations-mcp.svg)](https://www.npmjs.com/package/@ansvar/eu-regulations-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/EU_compliance_MCP?style=social)](https://github.com/Ansvar-Systems/EU_compliance_MCP)
 [![Daily EUR-Lex Check](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml)
@@ -35,11 +36,7 @@ This MCP server makes EU regulations **searchable, cross-referenceable, and AI-r
 
 ### Installation
 
-```bash
-npm install @ansvar/eu-regulations-mcp
-```
-
-### Claude Desktop
+**Option 1: Claude Desktop (Recommended)**
 
 Add to your `claude_desktop_config.json`:
 
@@ -57,9 +54,16 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-Restart Claude Desktop. Done.
+Restart Claude Desktop. Done!
 
-### Cursor / VS Code
+**Option 2: MCP Registry**
+
+Browse and install from the [official MCP registry](https://registry.modelcontextprotocol.io/):
+- Search for "EU Regulations" or view directly: [`eu.ansvar/eu-regulations-mcp`](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
+- One-click install (when registry integration is live in Claude Desktop)
+- Automatic updates when new versions are released
+
+**Option 3: Cursor / VS Code**
 
 ```json
 {
@@ -71,6 +75,14 @@ Restart Claude Desktop. Done.
   }
 }
 ```
+
+**Option 4: Global npm Install**
+
+```bash
+npm install -g @ansvar/eu-regulations-mcp
+```
+
+Then use `"command": "eu-regulations-mcp"` in your config (without npx).
 
 ---
 
@@ -98,6 +110,7 @@ Once connected, just ask naturally:
 - **2,528 Articles** + 3,869 Recitals + 1,226 Official Definitions
 - **Full-Text Search** — Find relevant articles across all regulations instantly
 - **Control Mappings** — 709 mappings to ISO 27001:2022 & NIST CSF 2.0
+- **Evidence Requirements** — 407 audit artifacts across all 49 regulations
 - **Sector Rules** — 323 applicability rules across all sectors and industries
 - **Daily Updates** — Automatic freshness checks against EUR-Lex
 
@@ -138,12 +151,21 @@ EUR-Lex HTML → Parse → SQLite → FTS5 snippet() → MCP response
 | Manual cross-referencing | `compare_requirements` tool does it instantly |
 | "Which regulations apply to me?" → research for days | `check_applicability` tool → answer in seconds |
 | Copy-paste article text | Article + definitions + related requirements |
-| Check 37 sites for updates | Daily automated freshness checks |
+| Check 47 sites for updates | Daily automated freshness checks |
 | No API, no integration | MCP protocol → AI-native |
 
 **EUR-Lex example:** Download DORA PDF → Ctrl+F "incident" → Read Article 17 → Google "What's a major incident?" → Cross-reference NIS2 → Repeat for 5 regulations
 
 **This MCP:** *"Compare incident reporting requirements across DORA, NIS2, and CRA"* → Done.
+
+---
+
+## 📚 Documentation
+
+- **[Database SSL/TLS Configuration](docs/DATABASE_SSL.md)** - Secure PostgreSQL connections for Cloudflare Workers deployments
+- **[Security Policy](SECURITY.md)** - Vulnerability reporting and security best practices
+- **[Coverage Gaps](docs/COVERAGE_GAPS.md)** - Known missing content from EUR-Lex
+- **[GitHub Actions Setup](docs/GITHUB_ACTIONS_SETUP.md)** - CI/CD workflow configuration
 
 ---
 
@@ -174,6 +196,82 @@ EUR-Lex HTML → Parse → SQLite → FTS5 snippet() → MCP response
 ### ISO Standards Copyright
 
 **No copyrighted ISO standards are included.** Control mappings reference ISO 27001:2022 control IDs only (e.g., "A.5.1", "A.8.2"). The actual text of ISO standards requires a paid license from ISO. This tool helps map regulations to controls but doesn't replace the standard itself.
+
+---
+
+## Related Projects: Complete Compliance Suite
+
+This server is part of **Ansvar's Compliance Suite** - three MCP servers that work together for end-to-end compliance coverage:
+
+### 🇪🇺 EU Regulations MCP (This Project)
+**Query 47 EU regulations directly from Claude**
+- GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 39 more
+- Full regulatory text with article-level search
+- Cross-regulation reference and comparison
+- **Install:** `npx @ansvar/eu-regulations-mcp`
+
+### 🇺🇸 [US Regulations MCP](https://github.com/Ansvar-Systems/US_Compliance_MCP)
+**Query US federal and state compliance laws directly from Claude**
+- HIPAA, CCPA, SOX, GLBA, FERPA, COPPA, FDA 21 CFR Part 11, and 8 more
+- Federal and state privacy law comparison
+- Breach notification timeline mapping
+- **Install:** `npm install @ansvar/us-regulations-mcp`
+
+### 🔐 [Security Controls MCP](https://github.com/Ansvar-Systems/security-controls-mcp)
+**Query 1,451 security controls across 28 frameworks**
+- ISO 27001, NIST CSF, DORA, PCI DSS, SOC 2, CMMC, FedRAMP, and 21 more
+- Bidirectional framework mapping and gap analysis
+- Import your purchased standards for official text
+- **Install:** `pipx install security-controls-mcp`
+
+### How They Work Together
+
+**Regulations → Controls Implementation Workflow:**
+
+```
+1. "What are DORA's ICT risk management requirements?"
+   → EU Regulations MCP returns Article 6 full text
+
+2. "What security controls satisfy DORA Article 6?"
+   → Security Controls MCP maps to ISO 27001, NIST CSF, and SCF controls
+
+3. "Show me ISO 27001 A.8.1 implementation details"
+   → Security Controls MCP returns control requirements and framework mappings
+```
+
+**Complete compliance in one chat:**
+- **EU/US Regulations MCPs** tell you WHAT compliance requirements you must meet
+- **Security Controls MCP** tells you HOW to implement controls that satisfy those requirements
+
+### Specialized: OT/ICS Security
+
+### 🏭 [OT Security MCP](https://github.com/Ansvar-Systems/ot-security-mcp)
+**Query IEC 62443, NIST 800-82/53, and MITRE ATT&CK for ICS**
+- Specialized for OT/ICS environments (manufacturing, energy, critical infrastructure)
+- Security levels, Purdue Model, zone/conduit architecture
+- MITRE ATT&CK for ICS threat intelligence
+- **Install:** `npx @ansvar/ot-security-mcp`
+- **Use case:** NIS2-compliant OT operators, industrial manufacturers, critical infrastructure
+
+### Specialized: Automotive Cybersecurity
+
+### 🚗 [Automotive Cybersecurity MCP](https://github.com/Ansvar-Systems/Automotive-MCP)
+**Query UNECE R155/R156 and ISO 21434**
+- Complete R155/R156 Revision 2 with all articles and annexes
+- ISO 21434 clause guidance and work products
+- R155 ↔ ISO 21434 cross-references
+- **Install:** `npx @ansvar/automotive-cybersecurity-mcp`
+- **Use case:** OEMs, Tier 1/2 suppliers, type approval preparation
+
+### Specialized: Sanctions Screening
+
+### 🚨 [Sanctions MCP](https://github.com/Ansvar-Systems/Sanctions-MCP)
+**Offline-capable sanctions screening for third-party risk**
+- OFAC, EU, UN sanctions lists via OpenSanctions (30+ lists)
+- Fuzzy name matching with confidence scoring
+- PEP (Politically Exposed Person) checks
+- **Install:** `pip install ansvar-sanctions-mcp`
+- **Use case:** DORA Article 28 ICT third-party risk, AML/KYC compliance
 
 ---
 

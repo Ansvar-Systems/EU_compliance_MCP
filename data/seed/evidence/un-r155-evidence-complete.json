@@ -1,0 +1,156 @@
+[
+  {
+    "regulation": "UN_R155",
+    "article": "7.2",
+    "requirement_summary": "Cyber Security Management System (CSMS) requirements",
+    "evidence_type": "certification",
+    "artifact_name": "CSMS Certificate of Compliance",
+    "artifact_example": "CSMS_Certificate_of_Compliance.pdf",
+    "description": "Certificate of Compliance issued by the Approval Authority confirming that the vehicle manufacturer has a Cybersecurity Management System in place that complies with UN R155. The CSMS must cover development, production, and post-production phases. The certificate is valid for a maximum of 3 years and must be renewed through re-assessment. Required before vehicle type approval can be granted.",
+    "retention_period": "Duration of CSMS validity + 10 years",
+    "auditor_questions": [
+      "Can you provide a valid CSMS Certificate of Compliance?",
+      "Does the CSMS cover all three lifecycle phases: development, production, and post-production?",
+      "When was the last CSMS assessment performed and when is the next renewal due?",
+      "How do you demonstrate ongoing compliance between assessment cycles?"
+    ],
+    "maturity_levels": {
+      "basic": "CSMS certificate obtained from Approval Authority covering all required phases",
+      "intermediate": "CSMS integrated with ISO/SAE 21434 processes, regular internal audits, and continuous improvement programme",
+      "advanced": "CSMS aligned with ISO/SAE 21434 and ISO 27001, with automated compliance monitoring, maturity benchmarking, and proactive threat intelligence integration"
+    },
+    "cross_references": ["CRA:13", "NIS2:21", "CYBERSECURITY_ACT:51"]
+  },
+  {
+    "regulation": "UN_R155",
+    "article": "7.2.2",
+    "requirement_summary": "Risk assessment and treatment processes",
+    "evidence_type": "document",
+    "artifact_name": "Vehicle Cybersecurity Risk Assessment",
+    "artifact_example": "Vehicle_Cyber_Risk_Assessment_2025.pdf",
+    "description": "Documentation of the risk identification, assessment, categorisation, and treatment processes within the CSMS. Must demonstrate consideration of all threats listed in Annex 5 Part A and other relevant threats. Covers processes for managing cybersecurity within the organisation, identifying risks to vehicle types, assessing and categorising risks, verifying that risks are managed, testing cybersecurity, keeping risk assessments current, and monitoring for new threats and vulnerabilities.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "How are cybersecurity risks identified and assessed for each vehicle type?",
+      "Can you demonstrate that all threats from Annex 5 Part A were considered?",
+      "What processes ensure risk assessments are kept current as new threats emerge?",
+      "How are risk treatment decisions documented and verified for effectiveness?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk assessment performed covering Annex 5 threats with documented treatment decisions",
+      "intermediate": "Structured TARA (Threat Analysis and Risk Assessment) process aligned with ISO/SAE 21434, with periodic reviews and supply chain risk integration",
+      "advanced": "Continuous risk assessment with automated threat intelligence feeds, attack simulation, and dynamic risk scoring across all vehicle types and ECUs"
+    },
+    "cross_references": ["CRA:13", "DORA_RTS_ICT_RISK:3", "NIS2:21"]
+  },
+  {
+    "regulation": "UN_R155",
+    "article": "7.3",
+    "requirement_summary": "Vehicle type cybersecurity requirements",
+    "evidence_type": "test_result",
+    "artifact_name": "Vehicle Type Cybersecurity Test Results",
+    "artifact_example": "Vehicle_Type_Cyber_Test_Results_2025.pdf",
+    "description": "Test results demonstrating that cybersecurity measures implemented for the vehicle type are effective. Must cover: risk assessment for the specific vehicle type, proportionate mitigations matching Annex 5 Part B and C, security of aftermarket software environments, security testing prior to type approval, detection and prevention measures for cyberattacks, monitoring capability, data forensic capability, and use of consensus-standard cryptographic modules.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "What testing was performed to verify the effectiveness of cybersecurity measures prior to type approval?",
+      "How do implemented mitigations map to the threats and mitigations in Annex 5 Parts B and C?",
+      "Where an Annex 5 mitigation was not technically feasible, what alternative was implemented?",
+      "Are cryptographic modules compliant with consensus standards and, if not, what justification exists?"
+    ],
+    "maturity_levels": {
+      "basic": "Cybersecurity testing performed prior to type approval with results documented against Annex 5 requirements",
+      "intermediate": "Comprehensive penetration testing programme, automated vulnerability scanning, and systematic mitigation verification for each vehicle type",
+      "advanced": "Continuous security testing with red team exercises, fuzz testing of all interfaces, hardware security module validation, and automated regression testing for security patches"
+    },
+    "cross_references": ["CRA:13", "DORA_RTS_TLPT:3", "RED:3"]
+  },
+  {
+    "regulation": "UN_R155",
+    "article": "7.2.2",
+    "requirement_summary": "Continuous monitoring, detection, and response to cyberattacks",
+    "evidence_type": "log",
+    "artifact_name": "Vehicle Security Operations Centre (VSOC) Monitoring Logs",
+    "artifact_example": "VSOC_Monitoring_Log_2025.xlsx",
+    "description": "Logs from the continuous monitoring capability required by paragraph 7.2.2.2(g) and 7.2.2.4. Must include monitoring of vehicles after first registration, analysis and detection of cyber threats, vulnerabilities and cyberattacks from vehicle data and vehicle logs, and response actions taken. Monitoring must respect privacy rights of car owners and drivers. Data must support forensic analysis of attempted or successful cyberattacks.",
+    "retention_period": "Vehicle type lifetime + 5 years",
+    "auditor_questions": [
+      "How do you continuously monitor vehicles for cybersecurity threats after first registration?",
+      "What data sources are used for detecting cyber threats, vulnerabilities, and attacks on vehicles?",
+      "How do you ensure monitoring respects the privacy rights of vehicle owners and drivers?",
+      "Can you demonstrate the forensic analysis capability for attempted or successful cyberattacks?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic vehicle monitoring capability in place with incident logs maintained",
+      "intermediate": "Vehicle Security Operations Centre (VSOC) with real-time monitoring, structured incident response, and privacy-by-design data collection",
+      "advanced": "AI-powered VSOC with machine learning anomaly detection, fleet-wide threat correlation, automated incident response, and privacy-preserving analytics"
+    },
+    "cross_references": ["NIS2:21", "DORA:17", "DORA_RTS_INCIDENT_CLASS:3"]
+  },
+  {
+    "regulation": "UN_R155",
+    "article": "7.2.2",
+    "requirement_summary": "Supply chain cybersecurity management",
+    "evidence_type": "document",
+    "artifact_name": "Supply Chain Cybersecurity Management Documentation",
+    "artifact_example": "Supply_Chain_Cyber_Management_2025.pdf",
+    "description": "Documentation demonstrating how the vehicle manufacturer manages cybersecurity dependencies with contracted suppliers, service providers, and sub-organisations as required by paragraph 7.2.2.5. Must show how CSMS requirements flow down to tier 1 and critical tier 2 suppliers, how supplier cybersecurity capabilities are assessed, and how supply chain risks are identified and managed.",
+    "retention_period": "Duration of supplier relationship + 5 years",
+    "auditor_questions": [
+      "How do you manage cybersecurity dependencies with contracted suppliers and service providers?",
+      "What cybersecurity requirements are imposed on tier 1 and critical tier 2 suppliers?",
+      "How are supplier cybersecurity capabilities assessed and monitored?",
+      "Can you demonstrate the flow-down of CSMS requirements through the supply chain?"
+    ],
+    "maturity_levels": {
+      "basic": "Supplier cybersecurity requirements documented with basic contractual obligations",
+      "intermediate": "Supplier cybersecurity assessment programme with audit rights, risk scoring, and incident notification requirements",
+      "advanced": "Integrated supply chain cybersecurity management with real-time supplier risk monitoring, collaborative threat intelligence sharing, and automated compliance verification"
+    },
+    "cross_references": ["NIS2:21", "CRA:13", "DORA_RTS_ICT_SERVICES:3"]
+  },
+  {
+    "regulation": "UN_R155",
+    "article": "7.4",
+    "requirement_summary": "Annual reporting to Approval Authority",
+    "evidence_type": "document",
+    "artifact_name": "Annual Cybersecurity Monitoring Report to Approval Authority",
+    "artifact_example": "Annual_Cyber_Report_Approval_Authority_2025.pdf",
+    "description": "Annual report (or more frequent if relevant) to the Approval Authority or Technical Service on the outcome of monitoring activities per paragraph 7.2.2.2(g). Must include relevant information on new cyberattacks detected, confirmation that cybersecurity mitigations remain effective for approved vehicle types, and details of any additional actions taken. Insufficient reporting may lead to withdrawal of CSMS certificate.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "Can you provide the most recent annual report submitted to the Approval Authority?",
+      "What new cyberattacks were detected and reported in the past year?",
+      "How do you confirm that cybersecurity mitigations for approved vehicle types remain effective?",
+      "What additional actions were reported and what triggered them?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual report submitted to Approval Authority covering monitoring outcomes and mitigation effectiveness",
+      "intermediate": "Structured reporting framework with quantified metrics, trend analysis, and proactive identification of emerging risks",
+      "advanced": "Comprehensive reporting with real-time Approval Authority portal access, automated report generation, and continuous compliance demonstration"
+    },
+    "cross_references": ["DORA_RTS_INCIDENT_REPORTING:3", "NIS2:23"]
+  },
+  {
+    "regulation": "UN_R155",
+    "article": "Annex 5",
+    "requirement_summary": "Threat catalogue and mitigations — Annex 5 compliance mapping",
+    "evidence_type": "document",
+    "artifact_name": "Annex 5 Threat and Mitigation Compliance Matrix",
+    "artifact_example": "Annex5_Threat_Mitigation_Matrix_2025.xlsx",
+    "description": "Compliance matrix mapping all threats from Annex 5 Part A (including threats to back-end servers, communication channels, update procedures, human actions, external connectivity, vehicle data/code, and vulnerabilities) to implemented mitigations from Annex 5 Parts B and C. Where a listed mitigation is not relevant or insufficient, alternative mitigations must be documented with justification.",
+    "retention_period": "Vehicle type lifetime + 10 years",
+    "auditor_questions": [
+      "Can you provide the complete mapping of Annex 5 threats to implemented mitigations?",
+      "For each mitigation in Annex 5 Parts B and C, has it been implemented or is an alternative documented?",
+      "Where a listed mitigation was technically infeasible, what was the alternative and what is the justification?",
+      "How is the threat and mitigation matrix kept current as new threats emerge?"
+    ],
+    "maturity_levels": {
+      "basic": "Complete Annex 5 compliance matrix documented for each vehicle type",
+      "intermediate": "Dynamic threat-mitigation mapping with regular updates, gap analysis, and linkage to risk assessment outcomes",
+      "advanced": "Automated threat intelligence-driven compliance matrix with continuous gap analysis, prioritised remediation planning, and integration with CSMS lifecycle"
+    },
+    "cross_references": ["CRA:13", "NIS2:21"]
+  }
+]

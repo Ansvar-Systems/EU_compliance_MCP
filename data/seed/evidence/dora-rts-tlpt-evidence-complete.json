@@ -1,0 +1,122 @@
+[
+  {
+    "regulation": "DORA_RTS_TLPT",
+    "article": "9",
+    "requirement_summary": "TLPT preparation phase including project charter, control team setup, and scope specification",
+    "evidence_type": "document",
+    "artifact_name": "TLPT Preparation Phase Documentation",
+    "artifact_example": "TLPT_Preparation_Phase_Package.pdf",
+    "description": "Complete preparation phase documentation including TLPT initiation information submitted within 3 months of TLPT authority notification: project charter with high-level project plan, control team lead contact details, internal/external tester usage, communication channels, and code name. Must also include control team composition approval, scope specification document approved by the management body within 6 months, and evidence of compliance assessment for threat intelligence providers and external testers per Article 27 of DORA.",
+    "retention_period": "Duration of TLPT cycle + 5 years",
+    "auditor_questions": [
+      "Show me the TLPT initiation information submitted to the TLPT authority including the project charter and high-level project plan.",
+      "Where is the management body approval for the scope specification document and what criteria were used to include critical or important functions in scope?",
+      "How did you assess compliance of threat intelligence providers and external testers with the requirements of DORA Article 27?",
+      "Demonstrate that the TLPT authority validated the initiation information and approved the scope specification document."
+    ],
+    "maturity_levels": {
+      "basic": "Preparation documentation completed meeting minimum requirements with timely submission to TLPT authority",
+      "intermediate": "Structured preparation process with comprehensive scope analysis, documented provider compliance assessments, management body engagement throughout",
+      "advanced": "Mature TLPT programme with established provider relationships, pre-qualified testers, risk-based scope methodology, integrated with enterprise security testing strategy"
+    },
+    "cross_references": [
+      "DORA:26"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_TLPT",
+    "article": "10",
+    "requirement_summary": "Threat intelligence phase with targeted threat intelligence report and scenario selection",
+    "evidence_type": "document",
+    "artifact_name": "Targeted Threat Intelligence Report and Scenario Documentation",
+    "artifact_example": "TLPT_Threat_Intelligence_Report.pdf",
+    "description": "Targeted threat intelligence report produced by the threat intelligence provider analysing generic and sector-specific threat intelligence relevant to the financial entity. Must include identified cyber threats and vulnerabilities, at least three selected test scenarios based on different threat actors with associated tactics, techniques, and procedures targeting each in-scope critical or important function. At most one scenario may be non-threat-led and forward-looking. Report must be approved by the TLPT authority.",
+    "retention_period": "Duration of TLPT cycle + 5 years",
+    "auditor_questions": [
+      "Show me the targeted threat intelligence report including the threat actors, tactics, techniques, and procedures identified.",
+      "How were the at least three test scenarios selected and what criteria determined the scenario prioritisation?",
+      "If a non-threat-led scenario was included, what was the justification for its forward-looking or anticipative value?",
+      "Where is the TLPT authority approval of the targeted threat intelligence report?"
+    ],
+    "maturity_levels": {
+      "basic": "Threat intelligence report produced with minimum three scenarios and TLPT authority approval obtained",
+      "intermediate": "Comprehensive threat landscape analysis with sector-specific intelligence, well-justified scenario selection, detailed TTPs per threat actor",
+      "advanced": "Advanced threat modelling with proprietary intelligence sources, scenario innovation incorporating emerging threats, continuous threat landscape monitoring informing scenario development"
+    },
+    "cross_references": [
+      "DORA:26"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_TLPT",
+    "article": "11",
+    "requirement_summary": "Red team test execution with minimum 12-week active testing phase",
+    "evidence_type": "test_result",
+    "artifact_name": "Red Team Test Plan and Execution Report",
+    "artifact_example": "TLPT_Red_Team_Test_Report.pdf",
+    "description": "Red team test plan approved by the control team and TLPT authority, followed by execution report documenting the active red team testing phase of at least 12 weeks. Must include attack scenarios based on the scope specification and threat intelligence report, weekly progress reports to the control team and test managers, leg-up documentation, any detection events and continuation measures taken, and documentation of any testing suspension or purple teaming fallback under exceptional circumstances.",
+    "retention_period": "Duration of TLPT cycle + 5 years",
+    "auditor_questions": [
+      "Show me the red team test plan with TLPT authority approval and the execution report covering the minimum 12-week active testing phase.",
+      "Where are the weekly progress reports submitted to the control team and test managers during the active testing phase?",
+      "Were any leg-ups provided during testing, and how were they documented and authorised?",
+      "Were there any detection events or exceptional circumstances requiring testing suspension or purple teaming, and how were they handled?"
+    ],
+    "maturity_levels": {
+      "basic": "Red team test completed meeting minimum 12-week duration with required approvals and progress reporting",
+      "intermediate": "Comprehensive red team execution with detailed attack documentation, structured leg-up process, well-managed detection events, thorough progress reporting",
+      "advanced": "Sophisticated multi-vector red team operations with advanced persistent threat simulation, minimal leg-up dependency, demonstrated ability to maintain operational secrecy, real-time risk management"
+    },
+    "cross_references": [
+      "DORA:26"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_TLPT",
+    "article": "13",
+    "requirement_summary": "TLPT remediation plan addressing identified findings within 8 weeks",
+    "evidence_type": "document",
+    "artifact_name": "TLPT Remediation Plan",
+    "artifact_example": "TLPT_Remediation_Plan.pdf",
+    "description": "Remediation plan submitted to the TLPT authority and competent authority within 8 weeks of the blue team notification. For each finding, must include: description of identified shortcomings, proposed remediation measures with prioritisation and expected completion dates, root cause analysis, responsible staff or functions, and risks associated with not implementing remediation measures or risks arising from their implementation.",
+    "retention_period": "Duration of TLPT cycle + 5 years",
+    "auditor_questions": [
+      "Show me the remediation plan submitted within 8 weeks of the blue team notification with all required elements for each finding.",
+      "How were remediation measures prioritised and what expected completion dates were set?",
+      "Where is the root cause analysis for each identified shortcoming?",
+      "What risks were identified for findings where remediation was not implemented and how were those risks accepted?"
+    ],
+    "maturity_levels": {
+      "basic": "Remediation plan completed within 8 weeks covering all findings with basic root cause analysis and remediation timelines",
+      "intermediate": "Structured remediation programme with risk-based prioritisation, detailed root cause analysis, assigned responsibilities, and progress tracking",
+      "advanced": "Integrated remediation management with automated tracking, risk quantification for each finding, remediation effectiveness validation, and continuous improvement feeding into security strategy"
+    },
+    "cross_references": [
+      "DORA:26"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_TLPT",
+    "article": "5",
+    "requirement_summary": "TLPT risk management including risk assessment of testing live production systems",
+    "evidence_type": "document",
+    "artifact_name": "TLPT Risk Assessment and Risk Management Plan",
+    "artifact_example": "TLPT_Risk_Assessment.pdf",
+    "description": "Risk assessment conducted during the preparation phase evaluating risks of testing live production systems of critical or important functions. Must cover potential impacts on the financial sector and financial stability at Union and national level, risks from granting access to sensitive information, compliance risks, crisis and incident escalation risks, active red team phase risks including disruption to critical activities and data corruption, blue team activity risks, and risks of incomplete system restoration after TLPT.",
+    "retention_period": "Duration of TLPT cycle + 5 years",
+    "auditor_questions": [
+      "Show me the TLPT risk assessment covering all risk categories specified in Article 5 including impacts on financial stability.",
+      "How were risks of granting access to sensitive information to external testers and threat intelligence providers assessed and mitigated?",
+      "What risk management measures were implemented for the active red team phase to prevent disruption to critical activities and data corruption?",
+      "How did you assess and mitigate risks of incomplete system restoration following the TLPT?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk assessment completed covering all required categories with basic mitigation measures and TLPT authority consultation",
+      "intermediate": "Comprehensive risk assessment with quantified risk levels, detailed mitigation strategies, continuous risk monitoring throughout testing, documented TLPT authority consultation outcomes",
+      "advanced": "Dynamic risk management framework updated in real-time during testing, automated risk monitoring dashboards, pre-defined escalation triggers, proven system restoration procedures with tested rollback capabilities"
+    },
+    "cross_references": [
+      "DORA:26"
+    ]
+  }
+]

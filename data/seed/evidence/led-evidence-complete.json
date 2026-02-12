@@ -1,0 +1,254 @@
+[
+  {
+    "regulation": "LED",
+    "article": "4",
+    "requirement_summary": "Principles relating to processing of personal data",
+    "evidence_type": "policy",
+    "artifact_name": "Law Enforcement Data Processing Policy",
+    "artifact_example": "LE_Data_Processing_Policy.pdf",
+    "description": "Policy documenting adherence to data processing principles for law enforcement purposes: lawfulness, fairness, purpose limitation, data minimisation, accuracy, storage limitation, integrity and confidentiality, and accountability, including clear distinction between categories of data subjects (suspects, convicted, victims, witnesses)",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your data processing policy covering all principles in Article 4 for law enforcement data",
+      "How do you distinguish between different categories of data subjects as required by Article 6?",
+      "How do you ensure data is kept accurate and up to date, and correct inaccurate data without delay?",
+      "How do you enforce purpose limitation when personal data is processed for prevention, investigation, or detection of criminal offences?"
+    ],
+    "maturity_levels": {
+      "basic": "Data processing policy exists covering all Article 4 principles",
+      "intermediate": "Data subject categories clearly documented, accuracy verification procedures, purpose limitation controls enforced",
+      "advanced": "Automated data quality management, real-time purpose limitation enforcement, continuous compliance monitoring against all principles"
+    },
+    "cross_references": [
+      "GDPR:5",
+      "GDPR:6"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "8",
+    "requirement_summary": "Lawfulness of processing",
+    "evidence_type": "document",
+    "artifact_name": "Legal Basis Documentation for Processing",
+    "artifact_example": "LE_Legal_Basis_Register.pdf",
+    "description": "Documentation of the legal basis for each processing activity, demonstrating that processing is necessary for the performance of a task carried out by a competent authority for law enforcement purposes, and is based on Union or Member State law",
+    "retention_period": "Duration of processing activity + 7 years",
+    "auditor_questions": [
+      "Show me the legal basis for each law enforcement data processing activity",
+      "How do you determine that processing is necessary for the performance of a task by a competent authority?",
+      "What Member State or Union law provides the basis for this processing activity?",
+      "How do you document and review the lawfulness of processing operations over time?"
+    ],
+    "maturity_levels": {
+      "basic": "Legal basis documented for each processing activity",
+      "intermediate": "Legal basis register maintained, necessity assessments documented, regular legal reviews conducted",
+      "advanced": "Automated legal basis validation, dynamic necessity assessments, integrated with processing activity register"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:30"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "24",
+    "requirement_summary": "Record keeping of processing activities",
+    "evidence_type": "document",
+    "artifact_name": "Record of Processing Activities",
+    "artifact_example": "LED_Record_of_Processing_Activities.xlsx",
+    "description": "Records of categories of processing activities maintained by the controller, including contact details, processing purposes, categories of recipients, transfers to third countries, time limits for erasure, and general description of technical and organisational security measures",
+    "retention_period": "Duration of processing + 5 years",
+    "auditor_questions": [
+      "Show me the record of processing activities maintained under Article 24",
+      "Does the record include all required elements: purposes, categories of recipients, transfers, erasure timelines?",
+      "How frequently is the record reviewed and updated?",
+      "Show me the general description of technical and organisational security measures included in the record"
+    ],
+    "maturity_levels": {
+      "basic": "Record of processing activities exists with all required elements",
+      "intermediate": "Regular reviews and updates, linked to data protection impact assessments, processor records aligned",
+      "advanced": "Automated record management system, real-time updates from processing systems, integrated compliance dashboard"
+    },
+    "cross_references": [
+      "GDPR:30",
+      "GDPR:32"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "25",
+    "requirement_summary": "Logging of processing operations",
+    "evidence_type": "log",
+    "artifact_name": "Data Processing Operation Logs",
+    "artifact_example": "LED_Processing_Logs_2025-Q1.csv",
+    "description": "Logs of automated processing operations including collection, alteration, consultation, disclosure (including transfers), combination and erasure, with justification, date and time, identification of persons who consulted or disclosed data, and identity of recipients",
+    "retention_period": "Minimum as specified by Member State law, typically 3-5 years",
+    "auditor_questions": [
+      "Show me the processing logs for collection, alteration, consultation, disclosure, combination, and erasure operations",
+      "For this consultation, can you demonstrate the justification, date, time, and identity of the person who accessed the data?",
+      "How do you ensure logs are used solely for lawfulness verification, self-monitoring, integrity, security, and criminal proceedings?",
+      "Show me how logs are made available to the supervisory authority on request"
+    ],
+    "maturity_levels": {
+      "basic": "Logs maintained for all required processing operations with basic identification",
+      "intermediate": "Comprehensive logging with full justification, automated log integrity protection, regular self-monitoring reviews",
+      "advanced": "Real-time automated log analysis, tamper-proof audit trail, anomaly detection for unauthorised access patterns"
+    },
+    "cross_references": [
+      "GDPR:30",
+      "GDPR:32"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "28",
+    "requirement_summary": "Data protection by design and by default",
+    "evidence_type": "document",
+    "artifact_name": "Data Protection by Design Assessment",
+    "artifact_example": "LED_DPbD_Assessment_SystemX.pdf",
+    "description": "Documentation demonstrating that appropriate technical and organisational measures are implemented at the time of determination of means of processing and at the time of processing itself, ensuring data protection principles are effectively implemented and processing is limited to what is necessary",
+    "retention_period": "Duration of system lifecycle + 5 years",
+    "auditor_questions": [
+      "Show me how data protection by design was considered when determining the means of processing",
+      "What technical measures ensure that by default only necessary personal data is processed?",
+      "How do you limit the amount of personal data collected, extent of processing, storage period, and accessibility?",
+      "Show me evidence that data protection by design principles are embedded in system procurement and development"
+    ],
+    "maturity_levels": {
+      "basic": "Data protection by design considerations documented for each processing system",
+      "intermediate": "DPbD assessment integrated into system development lifecycle, default settings minimise data processing, regular reviews",
+      "advanced": "Automated privacy engineering tools, continuous DPbD validation, privacy-enhancing technologies deployed by default"
+    },
+    "cross_references": [
+      "GDPR:25",
+      "GDPR:32"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "29",
+    "requirement_summary": "Security of processing",
+    "evidence_type": "document",
+    "artifact_name": "Security Controls Implementation Report",
+    "artifact_example": "LED_Security_Controls_Report.pdf",
+    "description": "Documentation of technical and organisational measures ensuring appropriate security for law enforcement data processing, covering the ten control areas in Article 29(2): equipment access control, data media control, storage control, user control, data access control, communication control, input control, transport control, recovery, and reliability/integrity",
+    "retention_period": "Duration of processing + 5 years",
+    "auditor_questions": [
+      "Show me how you implement each of the ten security controls listed in Article 29(2)",
+      "How do you prevent unauthorised persons from accessing processing equipment and data media?",
+      "How do you ensure that it is possible to verify which personal data have been input, when, and by whom?",
+      "Show me your recovery capabilities and how you ensure system reliability and data integrity"
+    ],
+    "maturity_levels": {
+      "basic": "All ten control areas documented with basic implementation measures",
+      "intermediate": "Comprehensive controls with regular testing, automated access management, encrypted transport, documented recovery procedures",
+      "advanced": "Continuous security monitoring across all control areas, automated compliance testing, zero-trust architecture, real-time integrity verification"
+    },
+    "cross_references": [
+      "GDPR:32",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "33",
+    "requirement_summary": "Data protection impact assessment",
+    "evidence_type": "document",
+    "artifact_name": "Data Protection Impact Assessment",
+    "artifact_example": "LED_DPIA_ProcessingActivity_2025.pdf",
+    "description": "Data protection impact assessment for processing operations likely to result in high risk to the rights and freedoms of natural persons, containing a systematic description of envisaged processing, assessment of necessity and proportionality, risk assessment, and measures to address risks",
+    "retention_period": "Duration of processing + 7 years",
+    "auditor_questions": [
+      "Show me the DPIA for processing operations likely to result in high risk to rights and freedoms",
+      "How did you assess the necessity and proportionality of the processing in relation to its purpose?",
+      "What risks to the rights and freedoms of data subjects were identified?",
+      "What measures are envisaged to address those risks and demonstrate compliance?"
+    ],
+    "maturity_levels": {
+      "basic": "DPIA conducted for high-risk processing with basic risk assessment",
+      "intermediate": "Systematic DPIA methodology, stakeholder consultation, risk mitigation measures tracked and validated",
+      "advanced": "Continuous DPIA reviews, automated risk scoring, integrated with processing activity register and security controls"
+    },
+    "cross_references": [
+      "GDPR:35",
+      "GDPR:36"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "35",
+    "requirement_summary": "Data protection officer designation",
+    "evidence_type": "document",
+    "artifact_name": "DPO Designation and Activity Records",
+    "artifact_example": "LED_DPO_Designation_2025.pdf",
+    "description": "Documentation of Data Protection Officer designation by the controller, including evidence of DPO qualifications, independence, resource allocation, and records of DPO activities such as monitoring compliance, providing advice on DPIAs, and cooperating with the supervisory authority",
+    "retention_period": "Duration of DPO tenure + 3 years",
+    "auditor_questions": [
+      "Show me the formal designation of the Data Protection Officer and evidence of their qualifications",
+      "How do you ensure the DPO operates independently and is not subject to instructions regarding the exercise of their tasks?",
+      "What resources are allocated to the DPO to fulfil their monitoring and advisory duties?",
+      "Show me evidence of DPO involvement in data protection impact assessments and compliance monitoring"
+    ],
+    "maturity_levels": {
+      "basic": "DPO formally designated with documented qualifications and contact details published",
+      "intermediate": "DPO independence assured, adequate resources allocated, regular compliance reporting, DPIA advisory role documented",
+      "advanced": "DPO embedded in governance structure, proactive compliance programme, direct reporting to highest management level, continuous training"
+    },
+    "cross_references": [
+      "GDPR:37",
+      "GDPR:38",
+      "GDPR:39"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "19",
+    "requirement_summary": "Right to erasure or restriction of processing",
+    "evidence_type": "procedure",
+    "artifact_name": "Data Erasure and Restriction Procedures",
+    "artifact_example": "LED_Erasure_Restriction_Procedures.pdf",
+    "description": "Documented procedures for handling data subject requests for erasure or restriction of processing of personal data in law enforcement contexts, including criteria for determining when erasure or restriction is appropriate and mechanisms for informing recipients of such actions",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedures for handling erasure and restriction of processing requests",
+      "How do you determine whether personal data should be erased or restricted?",
+      "How do you inform recipients of personal data about erasure or restriction actions?",
+      "What safeguards are in place to ensure restriction effectively limits further processing?"
+    ],
+    "maturity_levels": {
+      "basic": "Erasure and restriction procedures documented with basic criteria for determination",
+      "intermediate": "Structured request handling workflow, recipient notification process, restriction mechanisms enforced technically",
+      "advanced": "Automated erasure and restriction workflows, real-time recipient notification, audit trail for all actions taken"
+    },
+    "cross_references": [
+      "GDPR:17",
+      "GDPR:18"
+    ]
+  },
+  {
+    "regulation": "LED",
+    "article": "12",
+    "requirement_summary": "Communication and modalities for exercising data subject rights",
+    "evidence_type": "procedure",
+    "artifact_name": "Data Subject Rights Communication Procedures",
+    "artifact_example": "LED_Data_Subject_Rights_Procedures.pdf",
+    "description": "Documented modalities and procedures enabling data subjects to exercise their rights, including information provided to data subjects about their rights, means of communication, identity verification processes, and response timelines",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me how data subjects are informed of their rights and how to exercise them",
+      "What procedures exist for verifying the identity of data subjects making requests?",
+      "What is your response timeline for data subject requests and how do you track compliance?",
+      "Under what circumstances can you restrict or delay the provision of information to data subjects?"
+    ],
+    "maturity_levels": {
+      "basic": "Rights information published, basic request handling procedures in place",
+      "intermediate": "Structured request management system, identity verification protocol, response timeline tracking, documented restriction criteria",
+      "advanced": "Digital self-service portal for data subject requests, automated identity verification, real-time compliance tracking, transparent restriction justification"
+    },
+    "cross_references": [
+      "GDPR:12",
+      "GDPR:13",
+      "GDPR:14"
+    ]
+  }
+]

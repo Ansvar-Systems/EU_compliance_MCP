@@ -1,0 +1,200 @@
+[
+  {
+    "regulation": "RED",
+    "article": "3",
+    "requirement_summary": "Essential requirements — safety, EMC, and efficient use of radio spectrum",
+    "evidence_type": "test_result",
+    "artifact_name": "Essential Requirements Test Reports",
+    "artifact_example": "RED_Essential_Requirements_Test_Report.pdf",
+    "description": "Test reports demonstrating compliance with the essential requirements of Article 3: safety and health protection (Art 3.1a), electromagnetic compatibility (Art 3.1b), and efficient use of radio spectrum (Art 3.2). Tests must be performed against applicable harmonised standards or, where none exist, through other appropriate means demonstrating conformity.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "Can you provide test reports demonstrating compliance with all applicable Article 3 essential requirements?",
+      "Which harmonised standards were applied for safety, EMC, and spectrum efficiency testing?",
+      "If harmonised standards were not applied, how was conformity with essential requirements demonstrated?",
+      "Were tests conducted by accredited laboratories or in-house, and how is test competence assured?"
+    ],
+    "maturity_levels": {
+      "basic": "Test reports available for all placed-on-market products, linked to applicable harmonised standards",
+      "intermediate": "Test management system with traceability to product variants, pre-compliance testing programme, and gap analysis for new standards",
+      "advanced": "Automated test management integrated with product development, simulation-based pre-compliance, and continuous monitoring of harmonised standard updates"
+    },
+    "cross_references": ["MACHINERY:10", "CRA:13", "GPSR:5"]
+  },
+  {
+    "regulation": "RED",
+    "article": "3",
+    "requirement_summary": "Cybersecurity requirements for internet-connected radio equipment (Art 3.3d/e/f)",
+    "evidence_type": "test_result",
+    "artifact_name": "Cybersecurity Conformity Test Report",
+    "artifact_example": "RED_Cybersecurity_Art3_3_Test_Report.pdf",
+    "description": "Test reports specifically addressing the delegated act requirements under Article 3(3)(d) personal data and privacy protection, Article 3(3)(e) protection from fraud, and Article 3(3)(f) access to emergency services for internet-connected radio equipment. Applicable from August 2025 for categories specified by delegated act.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "How does this internet-connected radio equipment comply with the cybersecurity requirements under Article 3(3)(d), (e), and (f)?",
+      "What testing was performed to verify personal data and privacy safeguards?",
+      "How were fraud protection features evaluated and validated?",
+      "What standards or test specifications were used for cybersecurity conformity assessment?"
+    ],
+    "maturity_levels": {
+      "basic": "Cybersecurity testing performed against applicable delegated act requirements with results documented",
+      "intermediate": "Comprehensive cybersecurity test programme including penetration testing, vulnerability scanning, and privacy impact assessment",
+      "advanced": "Continuous cybersecurity validation programme with threat intelligence integration, automated vulnerability assessment, and secure-by-design development process"
+    },
+    "cross_references": ["CRA:13", "GDPR:32", "CYBERSECURITY_ACT:51"]
+  },
+  {
+    "regulation": "RED",
+    "article": "10",
+    "requirement_summary": "Obligations of manufacturers — technical documentation and conformity",
+    "evidence_type": "document",
+    "artifact_name": "Technical Documentation (RED)",
+    "artifact_example": "RED_Technical_Documentation_Product_Z100.pdf",
+    "description": "Complete technical documentation as required by Annex V, including general description of the radio equipment, design and manufacturing drawings, descriptions of the procedures to ensure conformity of production, a copy of the EU declaration of conformity, and test reports. Must include RF performance characteristics, voltage limits, and frequency band information.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "Can you produce the complete technical documentation for this radio equipment?",
+      "Does the documentation include all RF performance data and frequency band information?",
+      "How is the technical documentation updated when product design changes occur?",
+      "Is the source code for software controlling radio equipment functionality available upon request?"
+    ],
+    "maturity_levels": {
+      "basic": "Technical documentation compiled for each product placed on market, stored accessibly",
+      "intermediate": "Structured document management with version control, linked to product configurations and RF test data",
+      "advanced": "Integrated product lifecycle management with automated documentation generation, RF simulation data, and full regulatory traceability"
+    },
+    "cross_references": ["MACHINERY:10", "CRA:31", "AI_ACT:11"]
+  },
+  {
+    "regulation": "RED",
+    "article": "12",
+    "requirement_summary": "Obligations of distributors",
+    "evidence_type": "procedure",
+    "artifact_name": "Distributor Verification Procedure for Radio Equipment",
+    "artifact_example": "RED_Distributor_Verification_Procedure.pdf",
+    "description": "Documented procedures for distributors to verify before making radio equipment available on the market that it bears the CE marking, is accompanied by required documents and instructions in the language of the Member State, and that the manufacturer and importer have complied with labelling and identification requirements.",
+    "retention_period": "10 years after making available on market",
+    "auditor_questions": [
+      "What verification steps do you perform before making radio equipment available on the market?",
+      "How do you verify CE marking, DoC, and user instructions are present and complete?",
+      "What is your procedure when you suspect radio equipment is non-conforming?",
+      "How do you ensure storage and transport do not compromise equipment conformity?"
+    ],
+    "maturity_levels": {
+      "basic": "Incoming goods checklist covering CE marking, documentation, and labelling requirements",
+      "intermediate": "Documented verification process with trained staff, non-conformity escalation procedure, and supplier rating system",
+      "advanced": "Automated verification system with digital document authentication, supply chain visibility, and real-time regulatory alert integration"
+    },
+    "cross_references": ["MACHINERY:12", "GPSR:7", "CRA:15"]
+  },
+  {
+    "regulation": "RED",
+    "article": "17",
+    "requirement_summary": "EU declaration of conformity",
+    "evidence_type": "certification",
+    "artifact_name": "EU Declaration of Conformity (RED)",
+    "artifact_example": "RED_EU_DoC_Product_Z100.pdf",
+    "description": "EU declaration of conformity stating that fulfilment of the essential requirements set out in Article 3 has been demonstrated. Must follow the structure in Annex VI, identify the radio equipment, the manufacturer, references to harmonised standards or other technical specifications, and be signed by a person authorised by the manufacturer. Must be continuously updated and translated into required languages.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "Can you provide the EU declaration of conformity for this radio equipment?",
+      "Does the declaration reference all applicable Article 3 essential requirements?",
+      "Has the declaration been updated to reflect any changes to harmonised standards?",
+      "Is the declaration available in the language(s) required by the Member State(s) where the equipment is made available?"
+    ],
+    "maturity_levels": {
+      "basic": "EU declaration of conformity issued for each product model, covering all applicable essential requirements",
+      "intermediate": "Declaration management system with version tracking, multi-language support, and regulatory change alerts",
+      "advanced": "Automated declaration generation integrated with conformity assessment workflow, digital signing, and real-time standard reference verification"
+    },
+    "cross_references": ["MACHINERY:10", "AI_ACT:47", "CRA:28"]
+  },
+  {
+    "regulation": "RED",
+    "article": "18",
+    "requirement_summary": "CE marking affixed to radio equipment",
+    "evidence_type": "document",
+    "artifact_name": "CE Marking Compliance Records",
+    "artifact_example": "RED_CE_Marking_Records.pdf",
+    "description": "Records demonstrating that CE marking has been correctly affixed to the radio equipment or its data plate in a visible, legible, and indelible manner before the product is placed on the market. Where a notified body is involved in the production phase, its identification number must appear alongside the CE marking.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "Where is the CE marking affixed on this radio equipment?",
+      "Is the marking visible, legible, and indelible as required?",
+      "Where a notified body was involved, is their identification number displayed?",
+      "How is CE marking placement verified in your quality control process?"
+    ],
+    "maturity_levels": {
+      "basic": "CE marking correctly applied with visual inspection records",
+      "intermediate": "Standardized marking process with photographic records and quality control checklists",
+      "advanced": "Automated marking verification in production line with machine vision inspection and digital record-keeping"
+    },
+    "cross_references": ["MACHINERY:15", "CRA:30"]
+  },
+  {
+    "regulation": "RED",
+    "article": "19",
+    "requirement_summary": "Conformity assessment procedures for radio equipment",
+    "evidence_type": "certification",
+    "artifact_name": "Conformity Assessment Records",
+    "artifact_example": "RED_Conformity_Assessment_Module_Records.pdf",
+    "description": "Records of the conformity assessment procedure applied: internal production control (Annex II), EU-type examination (Annex III) plus conformity to type (Annex IV), or full quality assurance (Annex V). For equipment not covered by harmonised standards or only partly covered, the manufacturer must use EU-type examination or full quality assurance involving a notified body.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "Which conformity assessment procedure was applied for this radio equipment?",
+      "If harmonised standards were not fully applied, was a notified body involved?",
+      "Can you provide the notified body certificates and assessment reports?",
+      "How do you determine the appropriate conformity assessment module for each product?"
+    ],
+    "maturity_levels": {
+      "basic": "Appropriate conformity assessment module applied with records on file",
+      "intermediate": "Decision matrix for module selection, systematic notified body engagement, and certificate tracking",
+      "advanced": "Conformity assessment management platform with automated module selection, digital certificate lifecycle management, and regulatory intelligence integration"
+    },
+    "cross_references": ["MACHINERY:25", "AI_ACT:43", "CRA:32"]
+  },
+  {
+    "regulation": "RED",
+    "article": "10",
+    "requirement_summary": "Manufacturer identification, labelling, and user information",
+    "evidence_type": "document",
+    "artifact_name": "Product Identification and Labelling Records",
+    "artifact_example": "RED_Product_Labelling_Records.pdf",
+    "description": "Records demonstrating compliance with manufacturer identification and labelling obligations including: type, batch or serial number on the equipment; manufacturer name and contact details; frequency band and maximum RF transmit power; accessories and software needed for proper operation; and information on restrictions of use in Member States. Equipment must also include registration information for the Single Market and class identifier where applicable.",
+    "retention_period": "10 years after placing on market",
+    "auditor_questions": [
+      "Does the radio equipment bear the required identification markings (type, batch, serial number)?",
+      "Are frequency band and maximum transmit power clearly indicated on the equipment or its packaging?",
+      "How are restrictions on use in specific Member States communicated to users?",
+      "What information is provided about necessary accessories and software for intended operation?"
+    ],
+    "maturity_levels": {
+      "basic": "All required labelling and identification information applied to products",
+      "intermediate": "Labelling template system with automated generation of country-specific restriction notices and language translations",
+      "advanced": "Digital labelling system integrated with regulatory database, automated compliance checks for market-specific requirements, and electronic product registration"
+    },
+    "cross_references": ["MACHINERY:10", "CRA:13", "GPSR:9"]
+  },
+  {
+    "regulation": "RED",
+    "article": "43",
+    "requirement_summary": "Market surveillance and enforcement",
+    "evidence_type": "log",
+    "artifact_name": "Market Surveillance Response Log",
+    "artifact_example": "RED_Market_Surveillance_Log_2025.xlsx",
+    "description": "Log of all market surveillance activities and interactions with national authorities, including compliance checks, requests for documentation, non-conformity notifications, corrective actions taken (withdrawal, recall), and formal objection proceedings. Covers the manufacturer's obligation to cooperate with authorities and take corrective action when equipment presents a risk.",
+    "retention_period": "10 years from incident or corrective action",
+    "auditor_questions": [
+      "What market surveillance interactions have occurred in the past reporting period?",
+      "Have any non-conformity issues been identified by market surveillance authorities?",
+      "What corrective actions were taken in response to surveillance findings?",
+      "How do you track and close out corrective actions resulting from market surveillance?"
+    ],
+    "maturity_levels": {
+      "basic": "Records maintained of authority interactions and corrective actions",
+      "intermediate": "Structured surveillance response system with root cause analysis, CAPA tracking, and authority communication records",
+      "advanced": "Integrated post-market surveillance platform with proactive compliance monitoring, automated incident reporting, and predictive risk identification"
+    },
+    "cross_references": ["MACHINERY:20", "GPSR:10", "CRA:14"]
+  }
+]

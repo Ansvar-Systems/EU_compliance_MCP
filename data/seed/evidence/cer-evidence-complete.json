@@ -1,0 +1,230 @@
+[
+  {
+    "regulation": "CER",
+    "article": "6",
+    "requirement_summary": "Identification of critical entities",
+    "evidence_type": "document",
+    "artifact_name": "Critical Entity Identification Records",
+    "artifact_example": "CER_Critical_Entity_Identification.pdf",
+    "description": "Documentation of the critical entity identification process, demonstrating that all criteria from Article 6(2) were applied: the entity provides essential services, operates and has critical infrastructure on Member State territory, and an incident would have significant disruptive effects as determined under Article 7(1)",
+    "retention_period": "Duration of critical entity status + 5 years",
+    "auditor_questions": [
+      "Show me the documentation of how this entity was identified as a critical entity under the CER Directive",
+      "Which essential services does the entity provide as listed in the Annex?",
+      "How was the significance of potential disruptive effects assessed in accordance with Article 7(1)?",
+      "When was the entity notified of its critical entity status and what was the timeline for compliance?"
+    ],
+    "maturity_levels": {
+      "basic": "Identification criteria documented, entity notified of critical status",
+      "intermediate": "Detailed assessment of significant disruption criteria, cross-sector dependency analysis, compliance timeline tracked",
+      "advanced": "Dynamic identification process, continuous reassessment, proactive engagement with competent authority on sector developments"
+    },
+    "cross_references": [
+      "NIS2:2",
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "13",
+    "requirement_summary": "Resilience measures - prevention, protection, response, and recovery",
+    "evidence_type": "document",
+    "artifact_name": "Resilience Plan",
+    "artifact_example": "CER_Resilience_Plan_2025.pdf",
+    "description": "Resilience plan or equivalent documents describing appropriate and proportionate technical, security, and organisational measures covering: incident prevention with disaster risk reduction, physical protection of premises and critical infrastructure, response and crisis management procedures, business continuity and recovery measures including alternative supply chains, and employee security management",
+    "retention_period": "Duration of critical entity status + 5 years",
+    "auditor_questions": [
+      "Show me the resilience plan covering all measures required under Article 13(1)(a) through (f)",
+      "How do your physical protection measures address fencing, barriers, perimeter monitoring, and access controls?",
+      "What risk and crisis management procedures and alert routines are in place?",
+      "How do you ensure adequate employee security management, including background checks and training?"
+    ],
+    "maturity_levels": {
+      "basic": "Resilience plan exists covering all six areas of Article 13(1)",
+      "intermediate": "Comprehensive measures with regular testing, alternative supply chains identified, training programmes implemented",
+      "advanced": "Integrated resilience management system, continuous monitoring, automated alert routines, advanced physical and cyber protection"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "DORA:11"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "13",
+    "requirement_summary": "Physical protection measures for critical infrastructure",
+    "evidence_type": "document",
+    "artifact_name": "Physical Security Assessment",
+    "artifact_example": "Physical_Security_Assessment_Site_2025.pdf",
+    "description": "Assessment and documentation of physical protection measures for premises and critical infrastructure, including fencing, barriers, perimeter monitoring tools and routines, detection equipment, access controls, and their appropriateness and proportionality to identified risks",
+    "retention_period": "Duration of critical entity status + 5 years",
+    "auditor_questions": [
+      "Show me the physical security assessment for your critical infrastructure premises",
+      "What fencing, barriers, and perimeter monitoring tools are deployed?",
+      "How do detection equipment and access controls prevent unauthorised physical access?",
+      "How are physical protection measures proportionate to the risks identified in the entity risk assessment?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic physical security measures in place with fencing, access controls, and detection equipment",
+      "intermediate": "Comprehensive perimeter monitoring, layered access controls, detection equipment tested regularly, measures proportionate to risk",
+      "advanced": "Advanced surveillance and detection systems, AI-powered anomaly detection, integrated physical-cyber security monitoring, regular red team exercises"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "DORA:9"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "14",
+    "requirement_summary": "Background checks on personnel",
+    "evidence_type": "procedure",
+    "artifact_name": "Background Check Procedures",
+    "artifact_example": "CER_Background_Check_Procedures.pdf",
+    "description": "Documented procedures for conducting background checks on persons in sensitive roles or with direct/remote access to premises, information, or control systems, including identity corroboration, criminal records checks via ECRIS, and compliance with GDPR and national data protection law",
+    "retention_period": "Duration of employment + 3 years",
+    "auditor_questions": [
+      "Show me your background check procedures for personnel in sensitive roles",
+      "How do you determine which personnel categories require background checks?",
+      "How are criminal records checked via the European Criminal Records Information System?",
+      "How do you ensure background checks comply with GDPR and are proportionate and strictly limited to what is necessary?"
+    ],
+    "maturity_levels": {
+      "basic": "Background check procedures exist covering identity corroboration and criminal records for sensitive roles",
+      "intermediate": "Categories of personnel clearly defined, ECRIS checks performed, GDPR compliance documented, checks conducted for new recruits and role changes",
+      "advanced": "Automated background check workflows, continuous vetting for highest-risk roles, integrated with HR systems, cross-border checks via ECRIS completed within 10 working days"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "LED:4",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "15",
+    "requirement_summary": "Incident notification to competent authority",
+    "evidence_type": "log",
+    "artifact_name": "CER Incident Notification Log",
+    "artifact_example": "CER_Incident_Notification_Log_2025.csv",
+    "description": "Log of incident notifications submitted to the competent authority for incidents that significantly disrupt or have the potential to significantly disrupt essential services, including initial notification within 24 hours and detailed report within one month, with assessment of significance based on number of affected users, duration, and geographical area",
+    "retention_period": "7 years",
+    "auditor_questions": [
+      "Show me the incident notification log including initial notifications and detailed reports",
+      "For this incident, demonstrate that the initial notification was submitted within 24 hours",
+      "How did you assess the significance of the disruption based on affected users, duration, and geographical area?",
+      "Where the incident affected six or more Member States, show evidence of notification to the Commission"
+    ],
+    "maturity_levels": {
+      "basic": "Incident notifications submitted within required timelines with basic significance assessment",
+      "intermediate": "Structured notification process, significance criteria applied systematically, cross-border impact assessed, detailed reports comprehensive",
+      "advanced": "Automated incident detection and notification pipeline, real-time significance scoring, integrated cross-border alert system"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "13",
+    "requirement_summary": "Business continuity and recovery measures",
+    "evidence_type": "test_result",
+    "artifact_name": "Business Continuity Test Report",
+    "artifact_example": "CER_BCP_Test_Report_2025.pdf",
+    "description": "Testing results for business continuity measures including alternative supply chain arrangements, demonstrating the critical entity's ability to recover from incidents and resume provision of essential services",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the business continuity plan test results for your critical infrastructure",
+      "What alternative supply chains have been identified for resuming essential service provision?",
+      "What recovery time objectives are defined and were they met during testing?",
+      "How frequently are business continuity measures tested and updated?"
+    ],
+    "maturity_levels": {
+      "basic": "Business continuity plan tested annually with basic recovery demonstrated",
+      "intermediate": "Regular testing with realistic scenarios, alternative supply chains tested, recovery objectives defined and tracked",
+      "advanced": "Continuous resilience testing, automated failover capabilities, supply chain diversification strategy, sub-hour recovery demonstrated"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "DORA:11",
+      "DORA:12"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "13",
+    "requirement_summary": "Employee security management and training",
+    "evidence_type": "document",
+    "artifact_name": "Employee Security Management Programme",
+    "artifact_example": "CER_Employee_Security_Programme_2025.pdf",
+    "description": "Documentation of employee security management measures including categories of personnel exercising critical functions, access rights to premises and sensitive information, background check procedures, training requirements and qualifications, and awareness raising including exercises",
+    "retention_period": "Duration of employment + 3 years",
+    "auditor_questions": [
+      "Show me the employee security management programme covering all Article 13(1)(e) requirements",
+      "How do you categorise personnel who exercise critical functions, including external service providers?",
+      "What access rights procedures govern premises, critical infrastructure, and sensitive information?",
+      "Show me evidence of training courses, information materials, and exercises conducted for relevant personnel"
+    ],
+    "maturity_levels": {
+      "basic": "Personnel categories defined, access rights documented, basic training provided",
+      "intermediate": "Comprehensive security training programme, regular exercises, external service provider personnel included, access rights regularly reviewed",
+      "advanced": "Continuous security awareness programme, role-based training, simulated attack exercises, automated access rights management"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "GDPR:32",
+      "DORA:13"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "18",
+    "requirement_summary": "Advisory mission cooperation for critical entities of particular European significance",
+    "evidence_type": "document",
+    "artifact_name": "Advisory Mission Documentation",
+    "artifact_example": "CER_Advisory_Mission_Report_2025.pdf",
+    "description": "Documentation related to advisory missions organised by the Commission for critical entities of particular European significance, including access provided to information, systems, and facilities, findings report, and measures taken pursuant to the Commission's opinion",
+    "retention_period": "5 years after advisory mission completion",
+    "auditor_questions": [
+      "Show me the advisory mission report and findings for your critical entity",
+      "How did you provide access to information, systems, and facilities as required for the advisory mission?",
+      "What measures were taken in response to the Commission's opinion on compliance with Chapter III obligations?",
+      "How were lessons learned from the advisory mission communicated to the Critical Entities Resilience Group?"
+    ],
+    "maturity_levels": {
+      "basic": "Advisory mission cooperation provided, findings reviewed",
+      "intermediate": "Active engagement with advisory team, remediation actions tracked, compliance improvements documented",
+      "advanced": "Proactive advisory mission engagement, all recommendations implemented, continuous improvement based on findings"
+    },
+    "cross_references": [
+      "NIS2:32",
+      "DORA:24"
+    ]
+  },
+  {
+    "regulation": "CER",
+    "article": "13",
+    "requirement_summary": "Liaison officer designation",
+    "evidence_type": "document",
+    "artifact_name": "Liaison Officer Designation",
+    "artifact_example": "CER_Liaison_Officer_Designation.pdf",
+    "description": "Formal designation of a liaison officer or equivalent as the point of contact with the competent authorities, including contact details, authority, and availability for coordinating on resilience matters",
+    "retention_period": "Duration of critical entity status + 3 years",
+    "auditor_questions": [
+      "Show me the formal designation of the liaison officer as point of contact with competent authorities",
+      "What is the liaison officer's authority and scope of responsibility?",
+      "How does the liaison officer coordinate with the competent authority on incident notifications and resilience matters?",
+      "Is the liaison officer available and reachable for urgent communications?"
+    ],
+    "maturity_levels": {
+      "basic": "Liaison officer formally designated with contact details provided to competent authority",
+      "intermediate": "Liaison officer authority documented, regular communication with competent authority, deputy designated for availability",
+      "advanced": "24/7 liaison availability, established relationship with competent authority, proactive engagement on resilience matters"
+    },
+    "cross_references": [
+      "NIS2:8",
+      "DORA:14"
+    ]
+  }
+]

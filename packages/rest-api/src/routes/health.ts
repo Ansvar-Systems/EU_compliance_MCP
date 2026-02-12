@@ -4,10 +4,10 @@
 
 import { Router } from 'express';
 import type { Response } from 'express';
-import { DatabaseConnection } from '@ansvar/eu-regulations-core';
+import type { DatabaseAdapter } from '@ansvar/eu-regulations-core';
 import { AuthenticatedRequest } from '../middleware/index.js';
 
-export function createHealthRouter(db: DatabaseConnection): Router {
+export function createHealthRouter(db: DatabaseAdapter): Router {
   const router = Router();
 
   /**
@@ -18,14 +18,13 @@ export function createHealthRouter(db: DatabaseConnection): Router {
   router.get('/', async (req: AuthenticatedRequest, res: Response) => {
     try {
       const dbHealthy = await db.testConnection();
-      const poolStats = db.getPoolStats();
 
       const health = {
         status: dbHealthy ? 'healthy' : 'unhealthy',
         timestamp: new Date().toISOString(),
         database: {
           connected: dbHealthy,
-          pool: poolStats
+          type: process.env.DATABASE_URL ? 'postgresql' : 'sqlite'
         },
         service: 'eu-regulations-api',
         version: process.env.npm_package_version || '0.4.1'

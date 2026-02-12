@@ -1,0 +1,204 @@
+[
+  {
+    "regulation": "EECC",
+    "article": "40",
+    "requirement_summary": "Security of networks and services",
+    "evidence_type": "document",
+    "artifact_name": "Network and Service Security Framework",
+    "artifact_example": "Network_Security_Framework_2025.pdf",
+    "description": "Comprehensive documentation of technical and organisational measures taken to manage risks to the security of networks and electronic communications services, including risk assessment, incident prevention, and impact minimisation measures",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your documented security measures for network and service protection",
+      "How do you assess and manage risks to the security of your networks?",
+      "What measures are in place to prevent and minimise the impact of security incidents?",
+      "How do you ensure business continuity of your electronic communications services?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic security measures documented, risk assessment performed annually",
+      "intermediate": "Comprehensive risk management framework, regular vulnerability assessments, incident prevention controls",
+      "advanced": "Continuous risk monitoring, automated threat detection, resilience testing, zero-trust architecture"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "GDPR:32",
+      "CRA:13"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "41",
+    "requirement_summary": "Implementation and enforcement of security measures",
+    "evidence_type": "test_result",
+    "artifact_name": "Security Measures Implementation Audit",
+    "artifact_example": "Security_Implementation_Audit_2025.pdf",
+    "description": "Audit results and test reports demonstrating the effective implementation of security measures mandated by the competent authority, including compliance with technical implementing measures and security audit results",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the results of your most recent security audit or assessment",
+      "How do you demonstrate compliance with security measures mandated by the national authority?",
+      "What remediation actions have been taken based on audit findings?",
+      "How do you verify the effectiveness of implemented security controls?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual security audit completed, basic compliance verified",
+      "intermediate": "Regular penetration testing, structured remediation tracking, compliance dashboards",
+      "advanced": "Continuous compliance monitoring, automated security validation, third-party assurance programme"
+    },
+    "cross_references": [
+      "EECC:40",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "42",
+    "requirement_summary": "Security incident reporting obligations",
+    "evidence_type": "procedure",
+    "artifact_name": "Security Incident Reporting Procedure",
+    "artifact_example": "Security_Incident_Reporting_Procedure.pdf",
+    "description": "Documented procedure for reporting security incidents with significant impact on network or service operation to the competent authority, including initial notification timelines, impact assessment criteria, and user notification requirements",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for reporting security incidents to the competent authority",
+      "How do you assess whether an incident has a significant impact requiring notification?",
+      "What are your notification timelines and escalation procedures?",
+      "Show me records of incidents reported in the past year and their resolution"
+    ],
+    "maturity_levels": {
+      "basic": "Basic reporting procedure exists, manual incident assessment",
+      "intermediate": "Automated impact assessment criteria, structured reporting templates, SLA tracking",
+      "advanced": "Real-time incident classification, automated authority notification, integrated incident management platform"
+    },
+    "cross_references": [
+      "NIS2:23",
+      "GDPR:33",
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "43",
+    "requirement_summary": "ENISA involvement in security implementation",
+    "evidence_type": "document",
+    "artifact_name": "ENISA Cooperation Documentation",
+    "artifact_example": "ENISA_Cooperation_Records_2025.pdf",
+    "description": "Documentation of cooperation with ENISA including adoption of technical guidance, participation in cross-border incident response, and implementation of harmonised security requirements",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "How do you incorporate ENISA technical guidance into your security measures?",
+      "Show me evidence of cooperation with ENISA on cross-border security matters",
+      "How do you implement harmonised security requirements recommended by ENISA?",
+      "What role does ENISA guidance play in your security framework?"
+    ],
+    "maturity_levels": {
+      "basic": "Awareness of ENISA guidance, basic implementation of recommendations",
+      "intermediate": "Systematic adoption of ENISA technical guidelines, participation in ENISA activities",
+      "advanced": "Active contribution to ENISA standards development, leadership in cross-border security cooperation"
+    },
+    "cross_references": [
+      "EECC:40",
+      "NIS2:13",
+      "CYBERSECURITY_ACT:6"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "97",
+    "requirement_summary": "Contract information and transparency for consumers",
+    "evidence_type": "document",
+    "artifact_name": "Consumer Contract Transparency Documentation",
+    "artifact_example": "Consumer_Contract_Transparency_2025.pdf",
+    "description": "Documentation demonstrating that consumer contracts contain all mandatory information including service characteristics, pricing, duration, renewal terms, termination conditions, and quality parameters in a clear and comprehensible manner",
+    "retention_period": "Duration of contract + 3 years",
+    "auditor_questions": [
+      "Show me a sample contract and how it includes all mandatory information requirements",
+      "How do you ensure contract terms are presented in a clear and comprehensible manner?",
+      "What is your process for providing a contract summary in the standardised format?",
+      "How do you notify consumers of contract modifications?"
+    ],
+    "maturity_levels": {
+      "basic": "Contracts include mandatory information, basic contract summary provided",
+      "intermediate": "Standardised contract summary format, multi-channel delivery, regular compliance reviews",
+      "advanced": "Interactive digital contracts, personalised information presentation, automated compliance checking"
+    },
+    "cross_references": [
+      "GDPR:13",
+      "DSA:14"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "102",
+    "requirement_summary": "Number portability obligations",
+    "evidence_type": "procedure",
+    "artifact_name": "Number Portability Procedure",
+    "artifact_example": "Number_Portability_Procedure_2025.pdf",
+    "description": "Documented procedure for enabling number portability including porting timelines, process for receiving and donating providers, minimisation of service interruption, and consumer information requirements",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me your number portability procedure and average porting times",
+      "How do you minimise service interruption during the porting process?",
+      "What information do you provide to consumers about their portability rights?",
+      "How do you handle porting requests and what is your rejection rate and reasons?"
+    ],
+    "maturity_levels": {
+      "basic": "Porting procedure exists, basic compliance with maximum porting timeline",
+      "intermediate": "Automated porting workflows, reduced porting times, consumer notification system",
+      "advanced": "Same-day porting capability, seamless transition process, real-time status tracking for consumers"
+    },
+    "cross_references": [
+      "EECC:97"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "115",
+    "requirement_summary": "Universal service obligations",
+    "evidence_type": "document",
+    "artifact_name": "Universal Service Compliance Report",
+    "artifact_example": "Universal_Service_Compliance_2025.pdf",
+    "description": "Documentation demonstrating compliance with universal service obligations including provision of adequate broadband internet access and voice communications at an affordable price, accessibility for persons with disabilities, and geographic coverage requirements",
+    "retention_period": "Duration of obligations + 5 years",
+    "auditor_questions": [
+      "How do you ensure universal service availability across your designated area?",
+      "Show me evidence of affordable pricing for consumers with low income or special needs",
+      "What measures ensure accessibility for persons with disabilities?",
+      "How do you report on geographic coverage and service quality?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic universal service provision, compliance reporting submitted",
+      "intermediate": "Targeted affordability programmes, accessibility features, coverage mapping",
+      "advanced": "Proactive coverage expansion, innovative accessibility solutions, real-time quality monitoring"
+    },
+    "cross_references": [
+      "EECC:97"
+    ]
+  },
+  {
+    "regulation": "EECC",
+    "article": "40",
+    "requirement_summary": "Supply chain security for networks",
+    "evidence_type": "policy",
+    "artifact_name": "Network Supply Chain Security Policy",
+    "artifact_example": "Supply_Chain_Security_Policy_2025.pdf",
+    "description": "Policy addressing supply chain security risks for electronic communications networks and services, including vendor risk assessment, critical component sourcing, and third-party security requirements",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your supply chain security policy for network equipment and services",
+      "How do you assess security risks from third-party vendors and suppliers?",
+      "What criteria do you use for critical component sourcing decisions?",
+      "How do you monitor ongoing supplier compliance with security requirements?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic vendor assessment process, security requirements in procurement contracts",
+      "intermediate": "Structured vendor risk management, regular supplier audits, critical component tracking",
+      "advanced": "Continuous supplier monitoring, automated risk scoring, diversified sourcing strategy, supply chain transparency"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "CRA:13",
+      "DORA:28"
+    ]
+  }
+]

@@ -55,14 +55,13 @@ export interface AuthenticatedRequest extends Request {
  * Middleware to validate Microsoft Entra ID JWT tokens
  */
 export function validateEntraIdToken(req: AuthenticatedRequest, res: Response, next: NextFunction) {
-  // Skip auth in development mode if explicitly disabled
-  if (process.env.NODE_ENV === 'development' && process.env.SKIP_AUTH === 'true') {
-    console.warn('⚠️  Authentication skipped (development mode)');
+  // Skip auth if explicitly disabled (for testing/development)
+  if (process.env.SKIP_AUTH === 'true') {
     req.user = {
-      oid: 'dev-user',
-      tid: 'dev-tenant',
-      name: 'Development User',
-      email: 'dev@example.com'
+      oid: 'anonymous',
+      tid: 'anonymous',
+      name: 'Anonymous User',
+      email: 'anonymous@example.com'
     };
     return next();
   }

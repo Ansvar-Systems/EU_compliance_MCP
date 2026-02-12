@@ -4,8 +4,10 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.5.x   | :white_check_mark: |
-| < 0.5   | :x:                |
+| 0.8.x   | :white_check_mark: |
+| < 0.8   | :x:                |
+
+We support only the latest minor version. Please upgrade to receive security patches.
 
 ## Security Scanning
 
@@ -58,11 +60,40 @@ This project follows security best practices:
 
 ## Database Security
 
+### Regulation Database (SQLite)
+
 The regulation database (`data/regulations.db`) is:
 - Pre-built and version-controlled (tamper evident)
 - Opened in read-only mode (no write risk)
 - Source data from official EUR-Lex (auditable)
 - Ingestion scripts require manual execution (no auto-download)
+
+### PostgreSQL Connections (Optional)
+
+For deployments using PostgreSQL (Cloudflare Workers, REST API):
+
+- ✅ **TLS/SSL enabled by default** in production
+- ✅ **Certificate validation** enforced for managed providers
+- ✅ **Custom CA support** for self-hosted deployments
+- ✅ **Secure-by-default** configuration with explicit opt-out
+
+**Configuration**: See [docs/DATABASE_SSL.md](docs/DATABASE_SSL.md) for detailed SSL/TLS setup guide.
+
+**Environment Variables**:
+```bash
+# Secure (default in production)
+DATABASE_URL=postgresql://...
+DATABASE_SSL_MODE=require  # or omit, auto-enabled in production
+
+# Self-hosted with custom CA
+DATABASE_SSL_MODE=verify-ca
+DATABASE_SSL_CA_CERT=/path/to/ca.crt
+
+# Local dev only (no SSL)
+DATABASE_SSL_MODE=disable
+```
+
+**Never use in production**: `DATABASE_SSL_MODE=disable` or `rejectUnauthorized: false`
 
 ## Third-Party Dependencies
 
@@ -73,6 +104,16 @@ We minimize dependencies and regularly audit:
 
 All dependencies are tracked via `package-lock.json` and scanned for vulnerabilities.
 
+## Security Audit Results
+
+**Latest Audit**: 2026-02-07
+
+- **npm dependencies**: 2 false positives (verified safe via `npm ls`)
+- **Code scanning**: 1 real issue (TLS bypass) - **FIXED** in commit 199c94b
+- **OSSF Scorecard**: 29 best-practice recommendations (not vulnerabilities)
+
+See [GitHub Security Tab](https://github.com/Ansvar-Systems/EU_compliance_MCP/security) for live results.
+
 ---
 
-**Last Updated**: 2026-01-28
+**Last Updated**: 2026-02-07

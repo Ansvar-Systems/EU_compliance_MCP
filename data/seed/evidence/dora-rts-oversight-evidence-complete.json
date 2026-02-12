@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_RTS_OVERSIGHT",
+    "article": "2",
+    "requirement_summary": "Information submission to Lead Overseer covering organisational structure, security, and governance",
+    "evidence_type": "document",
+    "artifact_name": "Oversight Information Package for Lead Overseer",
+    "artifact_example": "Oversight_Information_Package.pdf",
+    "description": "Comprehensive information package submitted to the Lead Overseer upon request, covering contractual arrangements with financial entities, organisational and group structure, major shareholder information, market share data, internal governance arrangements, ICT security strategies and policies, data protection measures, data centre locations, risk management and incident management frameworks, change management controls, business continuity plans, performance and security monitoring mechanisms, and ICT third-party management framework including subcontractor due diligence.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me the information package provided to the Lead Overseer covering all categories specified in Article 2.",
+      "How do you ensure completeness of information covering contractual arrangements, organisational structure, and governance details?",
+      "What process do you follow to compile information on subcontractors including the full technological value chain of ICT services provided to EU financial entities?",
+      "How do you maintain and update information about data centre locations, third-country processing arrangements, and applicable local laws?"
+    ],
+    "maturity_levels": {
+      "basic": "Information compiled manually upon Lead Overseer request covering all required categories",
+      "intermediate": "Pre-prepared information repository with regular updates, structured data collection processes across all required categories, rapid response capability",
+      "advanced": "Centralised oversight data platform with automated data collection, real-time updates, pre-validated information ready for immediate submission, integrated supply chain visibility"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_OVERSIGHT",
+    "article": "3",
+    "requirement_summary": "Remediation plans addressing Lead Overseer recommendations",
+    "evidence_type": "document",
+    "artifact_name": "Oversight Remediation Plan and Tracking Records",
+    "artifact_example": "Oversight_Remediation_Plan.pdf",
+    "description": "Documented remediation plans developed in response to recommendations issued by the Lead Overseer following oversight activities. Must include description of identified findings, proposed remediation measures with timelines, responsible parties, status tracking, and confirmation evidence demonstrating that remedies have been implemented. Progress reports and closure documentation must be maintained.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me your remediation plans addressing all recommendations received from the Lead Overseer.",
+      "How do you track the implementation status of each remediation measure and what reporting is provided to the Lead Overseer?",
+      "Where is the evidence confirming that completed remediation measures have been effectively implemented?",
+      "What is your process for escalating remediation delays or difficulties to senior management and the Lead Overseer?"
+    ],
+    "maturity_levels": {
+      "basic": "Remediation plans documented for each finding with assigned responsibilities and target dates",
+      "intermediate": "Structured remediation tracking with regular status updates to Lead Overseer, evidence collection for closure, escalation procedures for delays",
+      "advanced": "Integrated remediation management platform with automated progress tracking, real-time Lead Overseer reporting, root cause analysis driving preventive improvements"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_OVERSIGHT",
+    "article": "4",
+    "requirement_summary": "Structure and format requirements for information provided to Lead Overseer",
+    "evidence_type": "procedure",
+    "artifact_name": "Lead Overseer Communication and Reporting Procedure",
+    "artifact_example": "Lead_Overseer_Reporting_Procedure.pdf",
+    "description": "Procedure governing the structure, format, and submission of information to the Lead Overseer. Must specify use of dedicated secure electronic channels as indicated by the Lead Overseer, adherence to the structure indicated in information requests, clear location of relevant information in submitted documentation, and use of a language customary in the sphere of international finance.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for submitting information to the Lead Overseer including the secure electronic channels used.",
+      "How do you ensure submitted documentation follows the structure indicated by the Lead Overseer in their information requests?",
+      "What quality controls ensure that relevant information is clearly locatable within submitted documentation?",
+      "In what language are submissions prepared, and how do you handle translation requirements for source documents?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic procedure exists for Lead Overseer submissions using secure channels with documentation in international finance language",
+      "intermediate": "Standardised reporting templates aligned with Lead Overseer requirements, quality review process before submission, document management system for tracking submissions",
+      "advanced": "Automated reporting workflow with template management, pre-submission validation checks, secure electronic channel integration, multi-language document management"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_OVERSIGHT",
+    "article": "5",
+    "requirement_summary": "Cooperation with general investigations and on-site inspections by Lead Overseer",
+    "evidence_type": "procedure",
+    "artifact_name": "Oversight Investigation and Inspection Cooperation Procedure",
+    "artifact_example": "Oversight_Investigation_Cooperation_Procedure.pdf",
+    "description": "Procedure for cooperating with the Lead Overseer during general investigations and on-site inspections. Must cover access provisions for Lead Overseer staff to premises, systems, and data, internal coordination arrangements for inspection support, document production procedures, interview scheduling for key personnel, and procedures for handling confidential information during oversight activities.",
+    "retention_period": "Duration of designation + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for facilitating Lead Overseer general investigations and on-site inspections.",
+      "How do you ensure the Lead Overseer has effective access to all relevant premises, systems, and data during inspections?",
+      "What internal coordination arrangements are in place to support inspection activities including interview scheduling?",
+      "How do you handle and protect confidential information during oversight activities while ensuring full cooperation?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic cooperation procedure exists with access provisions and document production capabilities",
+      "intermediate": "Structured inspection readiness programme with designated liaison points, pre-prepared access arrangements, document production workflows",
+      "advanced": "Continuous inspection readiness with virtual data rooms, automated document retrieval, dedicated oversight cooperation team, regular dry-run exercises"
+    },
+    "cross_references": [
+      "DORA:31"
+    ]
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "regulation": "DGA",
+    "article": "5",
+    "requirement_summary": "Conditions for re-use of categories of protected data",
+    "evidence_type": "procedure",
+    "artifact_name": "Protected Data Re-Use Procedure",
+    "artifact_example": "Protected_Data_Reuse_Procedure_2025.pdf",
+    "description": "Documented procedure for managing re-use requests for categories of protected data held by public sector bodies, including conditions for access, anonymisation, secure processing environments, and non-disclosure agreements",
+    "retention_period": "Duration of data availability + 5 years",
+    "auditor_questions": [
+      "How do you handle requests for re-use of protected public sector data?",
+      "What technical measures ensure data protection during re-use (anonymisation, aggregation, secure environments)?",
+      "Show me your process for assessing and granting re-use requests",
+      "How do you prevent re-identification of anonymised data?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic procedure exists for processing re-use requests",
+      "intermediate": "Secure processing environments available, anonymisation techniques applied, NDA templates in place",
+      "advanced": "Automated re-use request processing, privacy-preserving computation, continuous re-identification risk monitoring"
+    },
+    "cross_references": [
+      "GDPR:5",
+      "GDPR:89",
+      "DATA_ACT:3"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "7",
+    "requirement_summary": "Competent bodies for data re-use",
+    "evidence_type": "document",
+    "artifact_name": "Single Information Point Registration",
+    "artifact_example": "Single_Information_Point_Registration.pdf",
+    "description": "Documentation of the competent body designation and its role in assisting re-users, including information on available datasets, conditions for re-use, and technical support for accessing data",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Who is the designated competent body for assisting data re-users?",
+      "How do you provide information about available datasets and re-use conditions?",
+      "What technical support is available to help re-users access data?",
+      "How do you ensure interoperability of metadata across competent bodies?"
+    ],
+    "maturity_levels": {
+      "basic": "Competent body designated, basic information available to re-users",
+      "intermediate": "Structured dataset catalogue, clear conditions documentation, helpdesk support",
+      "advanced": "Automated discovery portal, machine-readable conditions, API-based dataset access"
+    },
+    "cross_references": [
+      "DGA:8"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "10",
+    "requirement_summary": "Requirements for data intermediation services providers",
+    "evidence_type": "policy",
+    "artifact_name": "Data Intermediation Services Policy",
+    "artifact_example": "Data_Intermediation_Policy_2025.pdf",
+    "description": "Policy documenting how the data intermediation services provider ensures neutrality, separates data intermediation from other services, and prevents conflicts of interest in data exchange facilitation",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "How do you ensure neutrality as a data intermediation services provider?",
+      "Show me evidence of structural separation between intermediation and other services",
+      "How do you prevent conflicts of interest in data exchange facilitation?",
+      "What pricing model do you use and how is it non-discriminatory?"
+    ],
+    "maturity_levels": {
+      "basic": "Policy exists defining neutrality principles and structural separation",
+      "intermediate": "Formal separation documented, conflict of interest register, regular audits",
+      "advanced": "Automated compliance monitoring, transparent governance structure, independent oversight board"
+    },
+    "cross_references": [
+      "DGA:12",
+      "DATA_ACT:5"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "11",
+    "requirement_summary": "Notification for data intermediation services",
+    "evidence_type": "document",
+    "artifact_name": "Data Intermediation Service Notification",
+    "artifact_example": "DIS_Notification_Filing_2025.pdf",
+    "description": "Copy of the notification submitted to the competent authority for providing data intermediation services, including details of the provider, type of service, and start date of activities",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me the notification submitted to the competent authority",
+      "What information was included in the notification?",
+      "How do you notify the authority of any material changes to the notified information?",
+      "Have you received confirmation or any requests for additional information from the authority?"
+    ],
+    "maturity_levels": {
+      "basic": "Notification submitted to competent authority before starting operations",
+      "intermediate": "Change management process for notification updates, compliance tracking",
+      "advanced": "Automated notification updates, proactive regulatory engagement, cross-border notification coordination"
+    },
+    "cross_references": [
+      "DGA:10"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "12",
+    "requirement_summary": "Conditions for providing data intermediation services",
+    "evidence_type": "procedure",
+    "artifact_name": "Data Intermediation Service Conditions Procedure",
+    "artifact_example": "DIS_Conditions_Compliance_Procedure.pdf",
+    "description": "Documented procedures ensuring compliance with conditions for data intermediation including fair and non-discriminatory access, data format interoperability, logging of data exchange activities, and security measures",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "How do you ensure fair, transparent, and non-discriminatory access to your intermediation service?",
+      "Show me your data exchange activity logs for the past quarter",
+      "What security measures protect data during intermediation?",
+      "How do you facilitate interoperability between different data formats?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic access policies, manual data exchange logging",
+      "intermediate": "Automated logging, format conversion capabilities, documented security controls",
+      "advanced": "Real-time monitoring, automated compliance verification, advanced interoperability framework"
+    },
+    "cross_references": [
+      "DGA:10",
+      "GDPR:32"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "15",
+    "requirement_summary": "Cross-border access to data for re-use",
+    "evidence_type": "document",
+    "artifact_name": "Cross-Border Data Access Framework",
+    "artifact_example": "Cross_Border_Data_Access_Framework.pdf",
+    "description": "Documentation of mechanisms supporting cross-border re-use of protected data including single information point accessibility, interoperable metadata standards, and cooperation with other Member States",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "How do you support cross-border access to datasets for re-use?",
+      "What interoperable metadata standards do you use?",
+      "How do you cooperate with competent bodies in other Member States?",
+      "Show me evidence that cross-border re-users can access your data under equivalent conditions"
+    ],
+    "maturity_levels": {
+      "basic": "Basic cross-border access enabled, single information point accessible online",
+      "intermediate": "Standardised metadata, multilingual support, defined cooperation procedures",
+      "advanced": "Federated data access infrastructure, automated cross-border request processing, real-time interoperability"
+    },
+    "cross_references": [
+      "DGA:7",
+      "DATA_ACT:28"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "16",
+    "requirement_summary": "General requirements for registration of data altruism organisations",
+    "evidence_type": "document",
+    "artifact_name": "Data Altruism Organisation Registration",
+    "artifact_example": "Data_Altruism_Registration_2025.pdf",
+    "description": "Registration documentation for recognised data altruism organisations including proof of non-profit status, objectives of general interest, independence from for-profit entities, and transparency requirements",
+    "retention_period": "Duration of registration + 5 years",
+    "auditor_questions": [
+      "Show me your registration as a recognised data altruism organisation",
+      "How do you demonstrate your non-profit status and objectives of general interest?",
+      "What governance measures ensure independence from for-profit entities?",
+      "How do you maintain the register of data altruism activities?"
+    ],
+    "maturity_levels": {
+      "basic": "Registration completed, basic governance structure in place",
+      "intermediate": "Published transparency report, independent governance board, activity register maintained",
+      "advanced": "Real-time transparency dashboard, automated governance reporting, independent oversight mechanisms"
+    },
+    "cross_references": [
+      "DGA:18",
+      "GDPR:6"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "18",
+    "requirement_summary": "Public register of recognised data altruism organisations",
+    "evidence_type": "log",
+    "artifact_name": "Data Altruism Activity Register",
+    "artifact_example": "Data_Altruism_Activity_Register_2025.csv",
+    "description": "Maintained register of data altruism activities including data subjects and data holders contributing data, purposes of data use, and data processing activities performed",
+    "retention_period": "Duration of registration + 5 years",
+    "auditor_questions": [
+      "Show me your register of data altruism activities for the past year",
+      "How do you track consent given by data subjects for altruistic purposes?",
+      "What purposes has the collected data been used for?",
+      "How do you ensure transparency about data use to contributing data subjects?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic activity register maintained with manual updates",
+      "intermediate": "Structured register with categorised activities, regular reporting to authorities",
+      "advanced": "Automated activity tracking, real-time consent management, public transparency portal"
+    },
+    "cross_references": [
+      "DGA:16",
+      "GDPR:7"
+    ]
+  },
+  {
+    "regulation": "DGA",
+    "article": "21",
+    "requirement_summary": "Competent authorities for data intermediation and altruism",
+    "evidence_type": "document",
+    "artifact_name": "Regulatory Compliance Documentation",
+    "artifact_example": "DGA_Regulatory_Compliance_2025.pdf",
+    "description": "Documentation of interactions with competent authorities designated under the DGA, including notifications, compliance communications, and records of supervisory activities",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Who is your designated competent authority under the DGA?",
+      "Show me records of communications with the competent authority",
+      "How do you respond to supervisory requests or investigations?",
+      "What is your process for notifying the authority of compliance issues?"
+    ],
+    "maturity_levels": {
+      "basic": "Competent authority identified, basic communication records maintained",
+      "intermediate": "Structured regulatory engagement process, compliance calendar, proactive reporting",
+      "advanced": "Integrated regulatory management system, automated compliance reporting, proactive regulatory dialogue"
+    },
+    "cross_references": [
+      "DGA:11",
+      "DGA:16"
+    ]
+  }
+]

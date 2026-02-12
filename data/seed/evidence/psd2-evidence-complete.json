@@ -1,0 +1,252 @@
+[
+  {
+    "regulation": "PSD2",
+    "article": "5",
+    "requirement_summary": "Authorization of payment institutions",
+    "evidence_type": "certification",
+    "artifact_name": "Payment Institution Authorization",
+    "artifact_example": "PSD2_Authorization_Decision_2025.pdf",
+    "description": "Evidence of authorization from competent authority to provide payment services, including the application, programme of operations, business plan, governance arrangements, internal control mechanisms, and risk assessment procedures",
+    "retention_period": "Duration of authorization + 10 years",
+    "auditor_questions": [
+      "Show me your authorization decision from the competent authority",
+      "What payment services are you authorized to provide?",
+      "Show me the programme of operations and business plan submitted with the authorization",
+      "How do you maintain ongoing compliance with authorization conditions?"
+    ],
+    "maturity_levels": {
+      "basic": "Authorization obtained, basic compliance monitoring in place",
+      "intermediate": "Regular internal reviews of authorization compliance, documented change management process",
+      "advanced": "Continuous compliance monitoring, automated regulatory change tracking, proactive engagement with competent authority"
+    },
+    "cross_references": [
+      "MICA:59",
+      "MIFID2:16"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "10",
+    "requirement_summary": "Capital requirements for payment institutions",
+    "evidence_type": "document",
+    "artifact_name": "Capital Adequacy Report",
+    "artifact_example": "PSD2_Capital_Adequacy_Report_Q4_2025.pdf",
+    "description": "Documentation of compliance with initial capital and ongoing own funds requirements for payment institutions, calculated using one of the three methods prescribed in Article 9, with regular reporting to competent authorities",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your initial capital documentation and evidence it meets the required threshold",
+      "Which calculation method do you use for ongoing own funds requirements?",
+      "Show me quarterly own funds calculations and demonstrate continuous compliance",
+      "How do you project future capital needs based on business growth?"
+    ],
+    "maturity_levels": {
+      "basic": "Capital requirements met, quarterly calculations performed",
+      "intermediate": "Monthly monitoring with early warning indicators, documented capital planning process",
+      "advanced": "Real-time capital monitoring, automated stress testing, forward-looking capital adequacy projections"
+    },
+    "cross_references": [
+      "MICA:60",
+      "MIFID2:16"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "18",
+    "requirement_summary": "Safeguarding requirements for payment funds",
+    "evidence_type": "procedure",
+    "artifact_name": "Funds Safeguarding Procedures",
+    "artifact_example": "Funds_Safeguarding_Procedures_2025.pdf",
+    "description": "Documented procedures for safeguarding funds received from payment service users or through other payment service providers, either by segregation in a separate account at a credit institution or investment in secure liquid low-risk assets, or coverage by an insurance policy or comparable guarantee",
+    "retention_period": "Duration of operations + 7 years",
+    "auditor_questions": [
+      "Which safeguarding method do you use (segregation, insurance, or guarantee)?",
+      "Show me evidence of fund segregation from the payment institution's own funds",
+      "How do you ensure funds are not commingled with other clients' funds?",
+      "Show me the reconciliation process between client funds held and obligations to payment service users"
+    ],
+    "maturity_levels": {
+      "basic": "Safeguarding method chosen and implemented, basic reconciliation performed",
+      "intermediate": "Daily reconciliation, independent verification, documented escalation procedures for discrepancies",
+      "advanced": "Real-time reconciliation, automated alerts for discrepancies, third-party attestation of safeguarding compliance"
+    },
+    "cross_references": [
+      "MICA:65",
+      "DORA:9"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "45",
+    "requirement_summary": "Access to payment account information",
+    "evidence_type": "log",
+    "artifact_name": "Account Information Access Logs",
+    "artifact_example": "AISP_Access_Logs_2025.csv",
+    "description": "Logs of access to payment account information by account information service providers (AISPs), documenting consent obtained, data accessed, and security measures applied during each access",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me how consent is obtained before account information is accessed",
+      "What authentication mechanisms are used for account information access?",
+      "Show me access logs including timestamps, data requested, and AISP identity",
+      "How do you ensure only the data consented to is shared with the AISP?"
+    ],
+    "maturity_levels": {
+      "basic": "Access logs maintained with consent records",
+      "intermediate": "Granular consent management, automated access monitoring, anomaly detection",
+      "advanced": "Real-time access monitoring with AI-driven anomaly detection, consent dashboards for payment service users"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:7"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "69",
+    "requirement_summary": "Rights and obligations in relation to the authorization and use of payment instruments",
+    "evidence_type": "document",
+    "artifact_name": "Payment Instrument Terms and Conditions",
+    "artifact_example": "Payment_Instrument_Terms_2025.pdf",
+    "description": "Documentation of terms and conditions governing the issuance and use of payment instruments, including the respective obligations of the payment service provider and the payment service user regarding safekeeping, notification of loss, and liability allocation",
+    "retention_period": "Duration of customer relationship + 5 years",
+    "auditor_questions": [
+      "Show me the terms and conditions provided to payment service users for payment instruments",
+      "How are users informed of their obligation to keep personalized security credentials safe?",
+      "What is the notification procedure when a payment instrument is lost, stolen or misappropriated?",
+      "How do you handle blocking of payment instruments and what are the notification requirements?"
+    ],
+    "maturity_levels": {
+      "basic": "Terms and conditions documented and provided to users, basic notification procedures",
+      "intermediate": "Multi-channel notification options, automated instrument blocking, clear liability framework",
+      "advanced": "Real-time fraud detection triggering automatic blocking, proactive user communication, AI-driven risk assessment"
+    },
+    "cross_references": [
+      "PSD2:73",
+      "GDPR:13"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "73",
+    "requirement_summary": "Liability for unauthorized payment transactions",
+    "evidence_type": "procedure",
+    "artifact_name": "Unauthorized Transaction Liability Procedure",
+    "artifact_example": "Unauthorized_Transaction_Procedure_2025.pdf",
+    "description": "Documented procedure for handling unauthorized payment transactions, including immediate refund obligations (by end of next business day), investigation process, liability allocation rules, and the EUR 50 maximum payer liability for unauthorized transactions involving compromised security credentials",
+    "retention_period": "5 years from transaction dispute resolution",
+    "auditor_questions": [
+      "Show me your procedure for handling unauthorized transaction claims",
+      "How do you ensure refunds are issued by the end of the next business day?",
+      "What investigation process do you follow to determine liability?",
+      "Show me evidence of the EUR 50 liability cap being applied correctly in past cases"
+    ],
+    "maturity_levels": {
+      "basic": "Refund procedure documented, basic investigation process in place",
+      "intermediate": "Automated refund processing within SLA, structured investigation workflow with audit trail",
+      "advanced": "Real-time fraud detection reducing unauthorized transactions, automated liability assessment, predictive analytics for dispute patterns"
+    },
+    "cross_references": [
+      "PSD2:97",
+      "GDPR:32"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "95",
+    "requirement_summary": "Security measures for operational and security risks",
+    "evidence_type": "policy",
+    "artifact_name": "Payment Security Risk Management Policy",
+    "artifact_example": "Payment_Security_Risk_Policy_2025.pdf",
+    "description": "Policy establishing mitigation measures and control mechanisms to manage operational and security risks relating to payment services, including security measures to protect confidentiality and integrity of personalized security credentials",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your operational and security risk management policy for payment services",
+      "What specific security measures protect the confidentiality of personalized security credentials?",
+      "How do you perform risk assessments for your payment service operations?",
+      "Show me evidence of regular security testing and vulnerability assessments"
+    ],
+    "maturity_levels": {
+      "basic": "Security risk policy documented, basic controls implemented",
+      "intermediate": "Regular risk assessments, penetration testing, security monitoring with incident response",
+      "advanced": "Continuous security monitoring, automated threat intelligence integration, red team exercises, DevSecOps pipeline"
+    },
+    "cross_references": [
+      "DORA:6",
+      "NIS2:21"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "96",
+    "requirement_summary": "Incident reporting for payment services",
+    "evidence_type": "log",
+    "artifact_name": "Major Incident Report Log",
+    "artifact_example": "PSD2_Incident_Reports_2025.csv",
+    "description": "Log of all major operational or security incidents reported to the competent authority without undue delay, including initial notification, interim reports, and final root cause analysis, plus aggregated statistical data on fraud submitted at least annually",
+    "retention_period": "5 years from incident closure",
+    "auditor_questions": [
+      "Show me the incident reporting log with all major operational and security incidents",
+      "What is your timeline for notifying the competent authority of a major incident?",
+      "Show me an example of a complete incident report including root cause analysis",
+      "How do you classify incidents to determine reporting obligations?"
+    ],
+    "maturity_levels": {
+      "basic": "Incident log maintained, competent authority notified for major incidents",
+      "intermediate": "Structured incident classification, automated notification workflow, root cause analysis for all major incidents",
+      "advanced": "Real-time incident detection and automated classification, predictive incident analytics, continuous improvement feedback loop"
+    },
+    "cross_references": [
+      "DORA:19",
+      "NIS2:23"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "97",
+    "requirement_summary": "Strong customer authentication (SCA)",
+    "evidence_type": "test_result",
+    "artifact_name": "SCA Implementation Test Results",
+    "artifact_example": "SCA_Testing_Report_2025.pdf",
+    "description": "Test results demonstrating that strong customer authentication is applied when the payer accesses their payment account online, initiates an electronic payment transaction, or carries out any remote action that may imply a risk of payment fraud, using two or more independent elements from knowledge, possession, and inherence categories",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me your SCA implementation and which authentication factors are used",
+      "How do you ensure independence of the two authentication elements?",
+      "What dynamic linking mechanism do you use for electronic payment transactions?",
+      "Show me test results demonstrating SCA compliance across all required transaction types"
+    ],
+    "maturity_levels": {
+      "basic": "SCA implemented with two independent factors, basic testing performed",
+      "intermediate": "Comprehensive test coverage, transaction risk analysis for exemptions, regular review of authentication methods",
+      "advanced": "Adaptive authentication with real-time risk scoring, biometric factors, continuous SCA compliance monitoring across all channels"
+    },
+    "cross_references": [
+      "PSD2:98",
+      "EIDAS2:6"
+    ]
+  },
+  {
+    "regulation": "PSD2",
+    "article": "98",
+    "requirement_summary": "Regulatory technical standards for authentication and communication",
+    "evidence_type": "document",
+    "artifact_name": "RTS Compliance Documentation for SCA and Communication",
+    "artifact_example": "PSD2_RTS_Compliance_Report_2025.pdf",
+    "description": "Documentation demonstrating compliance with the EBA regulatory technical standards on strong customer authentication and common and secure open standards of communication, including dedicated interface specifications for account access",
+    "retention_period": "Duration of operations + 3 years",
+    "auditor_questions": [
+      "Show me your compliance assessment against the EBA RTS on SCA and CSC",
+      "What dedicated interface do you provide for third-party provider access?",
+      "How do you ensure the interface performs at the same level as the customer-facing interface?",
+      "Show me the SCA exemptions you apply and the transaction risk analysis supporting them"
+    ],
+    "maturity_levels": {
+      "basic": "Dedicated interface implemented, basic SCA exemptions documented",
+      "intermediate": "Performance monitoring of dedicated interface, comprehensive exemption framework with transaction monitoring",
+      "advanced": "Real-time interface performance parity monitoring, adaptive exemption thresholds based on fraud analytics, API developer portal with sandbox"
+    },
+    "cross_references": [
+      "PSD2:97",
+      "DORA:9"
+    ]
+  }
+]

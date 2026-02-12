@@ -3,7 +3,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
-import Database from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 import { searchRegulations, type SearchInput } from './search.js';
 import { getArticle, type GetArticleInput } from './article.js';
@@ -19,7 +19,7 @@ interface ToolDefinition {
   name: string;
   description: string;
   inputSchema: any;
-  handler: (db: Database.Database, args: any) => Promise<any>;
+  handler: (db: DatabaseAdapter, args: any) => Promise<any>;
 }
 
 /**
@@ -264,7 +264,7 @@ export const TOOLS: ToolDefinition[] = [
  * Register all tools with an MCP server instance.
  * Use this for both stdio and HTTP servers to ensure parity.
  */
-export function registerTools(server: Server, db: Database.Database): void {
+export function registerTools(server: Server, db: DatabaseAdapter): void {
   // List available tools
   server.setRequestHandler(ListToolsRequestSchema, async () => ({
     tools: TOOLS.map(tool => ({

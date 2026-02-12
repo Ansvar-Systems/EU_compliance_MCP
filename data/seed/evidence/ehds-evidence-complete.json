@@ -1,0 +1,232 @@
+[
+  {
+    "regulation": "EHDS",
+    "article": "3",
+    "requirement_summary": "Right of access to personal electronic health data",
+    "evidence_type": "procedure",
+    "artifact_name": "Patient Health Data Access Procedure",
+    "artifact_example": "Patient_Data_Access_Procedure_2025.pdf",
+    "description": "Documented procedure enabling natural persons to access their personal electronic health data free of charge through electronic health data access services, including identity verification, data format specifications, and response timelines",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "How can patients access their personal electronic health data?",
+      "What electronic health data access services do you provide?",
+      "How do you ensure access is free of charge and without undue delay?",
+      "What data formats are used to provide health data to patients?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic patient portal with health record access, manual verification",
+      "intermediate": "Standardised health data formats, automated identity verification, mobile access",
+      "advanced": "Real-time health data access, interoperable patient portal, API-based data retrieval, cross-border access"
+    },
+    "cross_references": [
+      "GDPR:15",
+      "GDPR:20",
+      "EHDS:5"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "5",
+    "requirement_summary": "Categories of primary use electronic health data",
+    "evidence_type": "document",
+    "artifact_name": "Electronic Health Data Categories Mapping",
+    "artifact_example": "EHD_Categories_Mapping_2025.pdf",
+    "description": "Documentation mapping the categories of electronic health data maintained in the system including patient summaries, electronic prescriptions, medical images, laboratory results, and discharge reports, with data quality and completeness assessments",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "What categories of electronic health data do you maintain?",
+      "How do you ensure completeness and accuracy of each data category?",
+      "Show me the mapping between your data systems and the required EHD categories",
+      "How do you handle the European electronic health record exchange format?"
+    ],
+    "maturity_levels": {
+      "basic": "Core health data categories identified and documented",
+      "intermediate": "Standardised data formats implemented, quality checks automated, cross-system mapping completed",
+      "advanced": "Full compliance with European exchange format, real-time data quality monitoring, semantic interoperability"
+    },
+    "cross_references": [
+      "EHDS:3",
+      "EHDS:12"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "7",
+    "requirement_summary": "Right of natural persons to share electronic health data",
+    "evidence_type": "procedure",
+    "artifact_name": "Health Data Sharing Procedure",
+    "artifact_example": "Health_Data_Sharing_Procedure_2025.pdf",
+    "description": "Procedure enabling patients to share their electronic health data with healthcare providers and other authorised recipients, including consent management, access controls, and audit trails for data sharing events",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "How can patients share their electronic health data with healthcare providers?",
+      "What consent mechanisms are in place for health data sharing?",
+      "Show me the audit trail for health data sharing events",
+      "How do you ensure shared data remains within the authorised scope?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic data sharing capability, manual consent collection",
+      "intermediate": "Electronic consent management, structured sharing workflows, comprehensive audit trails",
+      "advanced": "Granular consent controls, real-time sharing with cross-border support, automated access revocation"
+    },
+    "cross_references": [
+      "GDPR:7",
+      "GDPR:20",
+      "EHDS:3"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "12",
+    "requirement_summary": "Data quality and integrity requirements",
+    "evidence_type": "test_result",
+    "artifact_name": "Health Data Quality Assessment Report",
+    "artifact_example": "Health_Data_Quality_Assessment_2025.pdf",
+    "description": "Assessment results demonstrating the quality, integrity, and accuracy of electronic health data including validation test results, data completeness metrics, and conformance testing against European standards",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the results of your health data quality assessments",
+      "How do you measure and monitor data completeness and accuracy?",
+      "What validation processes ensure data integrity throughout the lifecycle?",
+      "How do you handle data quality issues when they are identified?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic data validation rules, periodic quality checks",
+      "intermediate": "Automated quality monitoring, defined KPIs for completeness and accuracy, remediation workflows",
+      "advanced": "Real-time data quality dashboards, AI-assisted anomaly detection, continuous conformance testing"
+    },
+    "cross_references": [
+      "EHDS:5",
+      "GDPR:5"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "33",
+    "requirement_summary": "Secondary use data access conditions",
+    "evidence_type": "policy",
+    "artifact_name": "Secondary Use Data Access Policy",
+    "artifact_example": "Secondary_Use_Data_Access_Policy_2025.pdf",
+    "description": "Policy defining conditions under which electronic health data can be accessed for secondary use purposes including research, innovation, policy-making, and public health, covering permitted purposes, data minimisation, and access restrictions",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "What is your policy for granting access to health data for secondary use?",
+      "How do you assess whether a secondary use request falls within permitted purposes?",
+      "What data minimisation measures are applied to secondary use datasets?",
+      "How do you ensure data is only accessed in secure processing environments?"
+    ],
+    "maturity_levels": {
+      "basic": "Policy exists defining permitted secondary use purposes and basic conditions",
+      "intermediate": "Structured application and review process, secure processing environments, anonymisation procedures",
+      "advanced": "Automated access management, privacy-preserving analytics, federated data access, real-time usage monitoring"
+    },
+    "cross_references": [
+      "GDPR:89",
+      "DGA:5",
+      "EHDS:35"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "35",
+    "requirement_summary": "Minimum categories of electronic data for secondary use",
+    "evidence_type": "document",
+    "artifact_name": "Secondary Use Data Catalogue",
+    "artifact_example": "Secondary_Use_Data_Catalogue_2025.pdf",
+    "description": "Catalogue of electronic health data categories made available for secondary use, including electronic health records, claims data, genomic data, and public health registries, with descriptions of data quality and availability",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me the catalogue of health data categories available for secondary use",
+      "How do you determine which data categories to make available?",
+      "What metadata do you provide about each data category?",
+      "How do you ensure data holders fulfil their obligation to make data available?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic data catalogue with core health data categories listed",
+      "intermediate": "Detailed metadata descriptions, quality indicators, standardised data formats",
+      "advanced": "Machine-readable catalogue, automated data availability assessment, real-time updates"
+    },
+    "cross_references": [
+      "EHDS:33",
+      "DGA:5"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "42",
+    "requirement_summary": "Data quality and utility label",
+    "evidence_type": "document",
+    "artifact_name": "Data Quality and Utility Label Documentation",
+    "artifact_example": "Data_Quality_Utility_Label_2025.pdf",
+    "description": "Documentation of the data quality and utility label applied to health datasets, describing the framework used to assess and communicate data quality characteristics including completeness, accuracy, timeliness, and fitness for purpose",
+    "retention_period": "Duration of dataset availability + 3 years",
+    "auditor_questions": [
+      "Show me the data quality and utility labels applied to your health datasets",
+      "What criteria do you use to determine quality and utility ratings?",
+      "How frequently do you reassess and update quality labels?",
+      "How are data quality labels communicated to potential data users?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic quality labelling applied to key datasets",
+      "intermediate": "Comprehensive quality framework, regular reassessment cycle, user feedback integration",
+      "advanced": "Automated quality scoring, real-time label updates, benchmarking against EU-wide standards"
+    },
+    "cross_references": [
+      "EHDS:12",
+      "EHDS:35"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "50",
+    "requirement_summary": "Security requirements for health data infrastructure",
+    "evidence_type": "test_result",
+    "artifact_name": "Health Data Security Assessment",
+    "artifact_example": "Health_Data_Security_Assessment_2025.pdf",
+    "description": "Security assessment results for health data access infrastructure including penetration testing, access control validation, encryption verification, and audit log integrity checks for systems processing electronic health data",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the results of your security assessment for health data systems",
+      "What encryption measures protect electronic health data at rest and in transit?",
+      "How do you control and monitor access to health data infrastructure?",
+      "What security certifications or standards does your infrastructure comply with?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual security assessment, basic encryption and access controls",
+      "intermediate": "Regular penetration testing, role-based access control, comprehensive audit logging",
+      "advanced": "Continuous security monitoring, zero-trust architecture, automated compliance validation, certified secure environments"
+    },
+    "cross_references": [
+      "GDPR:32",
+      "NIS2:21",
+      "CYBERSECURITY_ACT:46"
+    ]
+  },
+  {
+    "regulation": "EHDS",
+    "article": "53",
+    "requirement_summary": "Data altruism in health",
+    "evidence_type": "procedure",
+    "artifact_name": "Health Data Altruism Procedure",
+    "artifact_example": "Health_Data_Altruism_Procedure_2025.pdf",
+    "description": "Procedure for managing health data altruism activities including consent collection from data subjects, purpose limitation for altruistic data use, governance of altruistic data processing, and transparency reporting",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "How do you manage health data altruism consent and governance?",
+      "What purposes are permitted for health data altruism?",
+      "How do you ensure data subjects can withdraw consent for altruistic use?",
+      "Show me your transparency report on health data altruism activities"
+    ],
+    "maturity_levels": {
+      "basic": "Basic consent mechanism for health data altruism, purpose documentation",
+      "intermediate": "Granular consent management, structured governance framework, regular transparency reporting",
+      "advanced": "Dynamic consent platform, automated purpose compliance checks, real-time altruism impact reporting"
+    },
+    "cross_references": [
+      "DGA:16",
+      "DGA:18",
+      "GDPR:7"
+    ]
+  }
+]

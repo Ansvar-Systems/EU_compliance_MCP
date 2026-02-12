@@ -1,4 +1,4 @@
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../database/types.js';
 
 export type Sector =
   | 'financial'
@@ -51,34 +51,36 @@ export interface ApplicabilityResult {
 }
 
 export async function checkApplicability(
-  db: Database,
+  db: DatabaseAdapter,
   input: ApplicabilityInput
 ): Promise<ApplicabilityResult> {
   const { sector, subsector, detail_level = 'full' } = input;
 
   // Query for matching rules - check both sector match and subsector match
+  // Note: We handle deduplication in JavaScript, so no need for DISTINCT ON
   let sql = `
-    SELECT DISTINCT
+    SELECT
       regulation,
       confidence,
       basis_article as basis,
-      notes
-    FROM applicability_rules
-    WHERE applies = 1
-      AND (
-        (sector = ? AND (subsector IS NULL OR subsector = ?))
-        OR (sector = ? AND subsector IS NULL)
-      )
-    ORDER BY
+      notes,
       CASE confidence
         WHEN 'definite' THEN 1
         WHEN 'likely' THEN 2
         WHEN 'possible' THEN 3
-      END,
-      regulation
+      END as conf_order
+    FROM applicability_rules
+    WHERE applies = true
+      AND (
+        (sector = $1 AND (subsector IS NULL OR subsector = $2))
+        OR (sector = $3 AND subsector IS NULL)
+      )
+    ORDER BY regulation, conf_order
   `;
 
-  const rows = db.prepare(sql).all(sector, subsector || '', sector) as Array<{
+  const result = await db.query(sql, [sector, subsector || '', sector]);
+
+  const rows = result.rows as Array<{
     regulation: string;
     confidence: 'definite' | 'likely' | 'possible';
     basis: string | null;
@@ -105,12 +107,15 @@ export async function checkApplicability(
   if (detail_level === 'summary') {
     // Get regulation metadata for summary
     const regIds = applicable_regulations.map(r => r.regulation);
-    const placeholders = regIds.map(() => '?').join(', ');
-    const regData = db.prepare(`
-      SELECT id, full_name, effective_date
-      FROM regulations
-      WHERE id IN (${placeholders})
-    `).all(...regIds) as Array<{
+    const placeholders = regIds.map((_, i) => `$${i + 1}`).join(', ');
+    const regDataResult = await db.query(
+      `SELECT id, full_name, effective_date
+       FROM regulations
+       WHERE id IN (${placeholders})`,
+      regIds
+    );
+
+    const regData = regDataResult.rows as Array<{
       id: string;
       full_name: string;
       effective_date: string | null;

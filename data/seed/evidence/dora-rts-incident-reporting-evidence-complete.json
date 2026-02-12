@@ -1,0 +1,122 @@
+[
+  {
+    "regulation": "DORA_RTS_INCIDENT_REPORTING",
+    "article": "2",
+    "requirement_summary": "Initial notification content for major ICT-related incidents",
+    "evidence_type": "document",
+    "artifact_name": "Major Incident Initial Notification Template and Records",
+    "artifact_example": "Major_Incident_Initial_Notification_Records.pdf",
+    "description": "Documented initial notifications containing all required fields: incident reference code, date and time of detection and classification, incident description, classification criteria used, affected Member States, discovery method, origin information (where available), business continuity plan activation status, reclassification information (where applicable), and any other relevant information. Must demonstrate submissions within 4 hours of classification and no later than 24 hours from awareness.",
+    "retention_period": "5 years from incident closure",
+    "auditor_questions": [
+      "Show me completed initial notifications for recent major incidents including all required data fields from Article 2.",
+      "How do you ensure the initial notification is submitted within 4 hours from classification as major and no later than 24 hours from incident awareness?",
+      "What process assigns the incident reference code and captures the detection timestamp accurately?",
+      "How do you determine and document which Member States are impacted by the incident?"
+    ],
+    "maturity_levels": {
+      "basic": "Template-based initial notifications with manual completion of all required fields and tracked submission times",
+      "intermediate": "Semi-automated notification workflow with pre-populated fields from incident management system, automated time tracking, systematic Member State impact assessment",
+      "advanced": "Fully automated initial notification generation from SIEM/incident platform with real-time classification triggers, automated regulatory submission via secure channels, geo-aware impact determination"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_REPORTING",
+    "article": "3",
+    "requirement_summary": "Intermediate report content for major ICT-related incidents",
+    "evidence_type": "document",
+    "artifact_name": "Major Incident Intermediate Report Template and Records",
+    "artifact_example": "Major_Incident_Intermediate_Report_Records.pdf",
+    "description": "Documented intermediate reports containing all required fields: competent authority reference code, date and time of incident occurrence, recovery date and time (where applicable), updated classification criteria, incident type, threat actor techniques (where applicable), affected functional areas and business processes, affected infrastructure components, client financial interest impact, reporting to other authorities, temporary actions taken or planned, and indicators of compromise. Must be submitted within 72 hours of initial notification with updates upon activity recovery.",
+    "retention_period": "5 years from incident closure",
+    "auditor_questions": [
+      "Show me intermediate reports for recent major incidents demonstrating all required data fields from Article 3.",
+      "How do you ensure the intermediate report is submitted within 72 hours of the initial notification?",
+      "What process identifies and documents the threat actor techniques, affected infrastructure components, and indicators of compromise?",
+      "How do you track and report on the impact on client financial interests and temporary recovery actions?"
+    ],
+    "maturity_levels": {
+      "basic": "Template-based intermediate reports with manual completion within required timeline",
+      "intermediate": "Structured reporting workflow with automated deadline tracking, integrated threat intelligence for technique identification, systematic impact assessment",
+      "advanced": "Automated intermediate report generation with real-time data feeds from incident response platform, automated IOC extraction, continuous impact monitoring with client notification integration"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_REPORTING",
+    "article": "4",
+    "requirement_summary": "Final report content including root cause analysis and cost assessment",
+    "evidence_type": "document",
+    "artifact_name": "Major Incident Final Report Template and Records",
+    "artifact_example": "Major_Incident_Final_Report_Records.pdf",
+    "description": "Documented final reports containing root cause analysis, resolution dates and times, root cause remediation confirmation, incident resolution details, information relevant for resolution authorities (where applicable), direct and indirect costs and losses with financial recovery information, and recurring incident identification. Must be submitted within one month of the intermediate report.",
+    "retention_period": "5 years from incident closure",
+    "auditor_questions": [
+      "Show me final reports for recent major incidents including the root cause analysis and resolution details.",
+      "How do you calculate and document the direct and indirect costs and losses stemming from major incidents?",
+      "What methodology do you use for root cause analysis and how do you confirm root causes have been addressed?",
+      "How do you identify and report on recurring ICT-related incidents within the final report?"
+    ],
+    "maturity_levels": {
+      "basic": "Final reports completed with basic root cause analysis and cost estimation within required timeline",
+      "intermediate": "Structured root cause analysis methodology, comprehensive cost tracking including indirect impacts, systematic recurring incident identification",
+      "advanced": "Advanced root cause analysis techniques with automated cost modelling, financial recovery tracking, pattern recognition for recurring incidents, lessons-learned integration into risk management"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_REPORTING",
+    "article": "5",
+    "requirement_summary": "Time limits for initial notification, intermediate and final reports",
+    "evidence_type": "log",
+    "artifact_name": "Incident Reporting Timeline Compliance Log",
+    "artifact_example": "Incident_Reporting_Timeline_Log.xlsx",
+    "description": "Log tracking compliance with all reporting deadlines: initial notification within 4 hours of classification and 24 hours of awareness, intermediate report within 72 hours of initial notification with updates upon activity recovery, and final report within one month of intermediate report. Must document any delays with explanations provided to the competent authority, and track weekend/bank holiday provisions noting that credit institutions, CCPs, trading venues, and NIS2 essential/important entities are exempt from weekend extensions.",
+    "retention_period": "5 years from incident closure",
+    "auditor_questions": [
+      "Show me your timeline compliance log demonstrating adherence to all reporting deadlines for major incidents.",
+      "Were there any instances where deadlines were missed, and what explanations were provided to the competent authority?",
+      "How do you track the different deadline requirements for weekends and bank holidays based on your entity classification?",
+      "What escalation procedures are in place when reporting deadlines are at risk of being breached?"
+    ],
+    "maturity_levels": {
+      "basic": "Manual timeline tracking with documented submission timestamps and delay explanations where applicable",
+      "intermediate": "Automated deadline monitoring with alerts for approaching deadlines, systematic delay documentation, entity classification-aware deadline calculations",
+      "advanced": "Real-time compliance dashboard with automated deadline management, pre-emptive alerts, automated competent authority notification for delays, full audit trail of all reporting actions"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  },
+  {
+    "regulation": "DORA_RTS_INCIDENT_REPORTING",
+    "article": "6",
+    "requirement_summary": "Voluntary notification of significant cyber threats",
+    "evidence_type": "document",
+    "artifact_name": "Significant Cyber Threat Voluntary Notification Records",
+    "artifact_example": "Cyber_Threat_Voluntary_Notifications.pdf",
+    "description": "Records of voluntary notifications submitted for significant cyber threats including detection date and time, threat description, potential impact assessment on the entity and its clients or counterparts, classification criteria that would have triggered a major incident report if materialised, threat status and activity changes, preventive actions taken, notifications to other entities or authorities, and indicators of compromise.",
+    "retention_period": "5 years from notification",
+    "auditor_questions": [
+      "Show me records of voluntary cyber threat notifications submitted to the competent authority.",
+      "What criteria do you use to determine when a significant cyber threat warrants voluntary notification?",
+      "How do you assess the potential impact of a significant cyber threat on your entity, clients, and financial counterparts?",
+      "What process captures and shares indicators of compromise associated with significant cyber threats?"
+    ],
+    "maturity_levels": {
+      "basic": "Ad hoc voluntary notifications with basic threat descriptions and impact assessments",
+      "intermediate": "Structured threat assessment process triggering systematic voluntary notifications, documented IOC sharing, coordinated notification with other authorities",
+      "advanced": "Integrated threat intelligence platform driving automated threat significance assessment, real-time IOC sharing via structured formats, proactive industry-wide threat notification coordination"
+    },
+    "cross_references": [
+      "DORA:19"
+    ]
+  }
+]

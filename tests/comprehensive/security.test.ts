@@ -8,17 +8,17 @@ import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import { searchRegulations } from '../../src/tools/search.js';
 import { getArticle } from '../../src/tools/article.js';
 import { getRecital } from '../../src/tools/recital.js';
-import type { Database } from 'better-sqlite3';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('Security & Input Validation', () => {
-  let db: Database;
+  let db: DatabaseAdapter;
 
   beforeAll(() => {
     db = createTestDatabase();
   });
 
-  afterAll(() => {
-    closeTestDatabase(db);
+  afterAll(async () => {
+    await closeTestDatabase(db);
   });
 
   describe('SQL Injection Prevention', () => {
@@ -39,14 +39,12 @@ describe('Security & Input Validation', () => {
         expect(Array.isArray(results)).toBe(true);
 
         // Verify tables still exist and data intact (test DB has 14 articles, 4 recitals)
-        const articlesCount = db
-          .prepare('SELECT COUNT(*) as count FROM articles')
-          .get() as { count: number };
+        const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
+        const articlesCount = articlesResult.rows[0] as { count: number };
         expect(articlesCount.count).toBe(14); // Test DB sample data
 
-        const recitalsCount = db
-          .prepare('SELECT COUNT(*) as count FROM recitals')
-          .get() as { count: number };
+        const recitalsResult = await db.query('SELECT COUNT(*) as count FROM recitals');
+        const recitalsCount = recitalsResult.rows[0] as { count: number };
         expect(recitalsCount.count).toBe(4); // Test DB sample data
       }
     });
@@ -65,9 +63,8 @@ describe('Security & Input Validation', () => {
         expect(result === null || typeof result === 'object').toBe(true);
 
         // Verify data integrity (test DB has 14 articles)
-        const articlesCount = db
-          .prepare('SELECT COUNT(*) as count FROM articles')
-          .get() as { count: number };
+        const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
+        const articlesCount = articlesResult.rows[0] as { count: number };
         expect(articlesCount.count).toBe(14);
       }
     });
@@ -84,9 +81,8 @@ describe('Security & Input Validation', () => {
         expect(result === null || typeof result === 'object').toBe(true);
 
         // Verify tables exist (test DB has 4 recitals)
-        const recitalsCount = db
-          .prepare('SELECT COUNT(*) as count FROM recitals')
-          .get() as { count: number };
+        const recitalsResult = await db.query('SELECT COUNT(*) as count FROM recitals');
+        const recitalsCount = recitalsResult.rows[0] as { count: number };
         expect(recitalsCount.count).toBe(4);
       }
     });
@@ -252,37 +248,35 @@ describe('Security & Input Validation', () => {
   });
 
   describe('Database Connection Security', () => {
-    it('prepared statements are used for all queries', () => {
+    it('prepared statements are used for all queries', async () => {
       // Test database is in-memory and needs write access for setup
       // In production, database is opened as read-only
       // Here we test that prepared statements prevent injection
       const maliciousInput = "'; DROP TABLE articles; --";
       
       // This should not execute the DROP TABLE
-      const stmt = db.prepare('SELECT * FROM articles WHERE regulation = ? LIMIT 1');
-      const result = stmt.get(maliciousInput);
+      const result = await db.query('SELECT * FROM articles WHERE regulation = $1 LIMIT 1', [maliciousInput]);
       
       // Should return null or undefined (no regulation with that name), not drop the table
-      expect(result === null || result === undefined).toBe(true);
+      expect(result.rows.length).toBe(0);
       
       // Verify table still exists
-      const count = db.prepare('SELECT COUNT(*) as count FROM articles').get() as { count: number };
+      const countResult = await db.query('SELECT COUNT(*) as count FROM articles');
+      const count = countResult.rows[0] as { count: number };
       expect(count.count).toBe(14);
     });
 
-    it('prepared statements prevent injection', () => {
+    it('prepared statements prevent injection', async () => {
       const maliciousRegulation = "GDPR'; DROP TABLE articles; --";
 
-      const stmt = db.prepare('SELECT * FROM articles WHERE regulation = ? LIMIT 1');
-      const result = stmt.get(maliciousRegulation);
+      const result = await db.query('SELECT * FROM articles WHERE regulation = $1 LIMIT 1', [maliciousRegulation]);
 
-      // Should return null (no matching regulation) without executing DROP
-      expect(result).toBeUndefined();
+      // Should return empty result (no matching regulation) without executing DROP
+      expect(result.rows.length).toBe(0);
 
       // Verify articles table still exists (test DB has 14 articles)
-      const articlesCount = db
-        .prepare('SELECT COUNT(*) as count FROM articles')
-        .get() as { count: number };
+      const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
+        const articlesCount = articlesResult.rows[0] as { count: number };
       expect(articlesCount.count).toBe(14);
     });
   });

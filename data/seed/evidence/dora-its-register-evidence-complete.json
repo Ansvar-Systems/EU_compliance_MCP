@@ -1,0 +1,98 @@
+[
+  {
+    "regulation": "DORA_ITS_REGISTER",
+    "article": "2",
+    "requirement_summary": "Ranking of ICT third-party service providers in the supply chain",
+    "evidence_type": "document",
+    "artifact_name": "ICT Third-Party Provider Supply Chain Ranking Register",
+    "artifact_example": "ICT_Provider_Supply_Chain_Ranking.xlsx",
+    "description": "Register documenting the ranking assigned to each ICT third-party service provider in the supply chain. Direct providers must be assigned rank 1. All subcontractors must be assigned ranks higher than 1, with the rank reflecting their position in the supply chain relative to the financial entity. The register must demonstrate a clear and accurate hierarchy of all providers and subcontractors.",
+    "retention_period": "Duration of contractual arrangement + 5 years",
+    "auditor_questions": [
+      "Show me the ranking of all ICT third-party service providers in your supply chain with rank 1 for all direct providers.",
+      "How do you determine the rank of subcontractors and ensure the ranking accurately reflects the ICT service supply chain hierarchy?",
+      "What process do you use to identify and rank all subcontractors that effectively underpin ICT services supporting critical or important functions?",
+      "How frequently is the supply chain ranking reviewed and updated to reflect changes in provider relationships?"
+    ],
+    "maturity_levels": {
+      "basic": "Supply chain ranking documented with rank 1 for direct providers and higher ranks for subcontractors",
+      "intermediate": "Comprehensive supply chain mapping with systematic ranking methodology, regular reviews, and documented subcontractor identification process",
+      "advanced": "Dynamic supply chain visualization with automated ranking updates, real-time subcontractor change detection, and integrated supply chain risk scoring"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "DORA_ITS_REGISTER",
+    "article": "3",
+    "requirement_summary": "Register of information using standard templates with data quality requirements",
+    "evidence_type": "document",
+    "artifact_name": "Register of Information on ICT Third-Party Arrangements",
+    "artifact_example": "Register_of_Information_ICT_Third_Party.xlsx",
+    "description": "Complete register of information maintained using the standard templates from Annexes I to IV at entity level and at sub-consolidated and consolidated level where applicable. Must include information on all ICT services provided by direct providers and all subcontractors underpinning critical or important functions. Must adhere to data quality principles: accuracy, completeness, consistency, integrity, uniformity, and validity. All legal entity providers must be identified using valid LEI or EUID identifiers.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your complete register of information using the standard templates from Annexes I to IV.",
+      "How do you ensure the register adheres to all six data quality principles: accuracy, completeness, consistency, integrity, uniformity, and validity?",
+      "Are all legal entity ICT third-party service providers identified using valid and active LEI or EUID identifiers?",
+      "How do you ensure consistency between entity-level and consolidated-level register information within your group?"
+    ],
+    "maturity_levels": {
+      "basic": "Register maintained using standard templates with all required fields populated and LEI/EUID identifiers recorded",
+      "intermediate": "Automated data quality checks for all six principles, regular register reviews with error correction, consolidated and entity-level consistency verification",
+      "advanced": "Centralised register management platform with automated LEI validation, real-time data quality monitoring, automated consolidated view generation, and regulatory submission integration"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "DORA_ITS_REGISTER",
+    "article": "4",
+    "requirement_summary": "Data format requirements for register templates",
+    "evidence_type": "procedure",
+    "artifact_name": "Register Data Management Procedure",
+    "artifact_example": "Register_Data_Management_Procedure.pdf",
+    "description": "Procedure governing data format requirements for the register of information templates. Each template must be a table with predefined columns and indefinite rows. Each data element must contain a single value with additional rows added for multiple valid values. All data elements must be completed at entity, sub-consolidated, and consolidated level as applicable.",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your procedure for maintaining the register data format with single values per data element and additional rows for multiple values.",
+      "How do you ensure all data elements are completed at the appropriate levels: entity, sub-consolidated, and consolidated?",
+      "What validation controls prevent data format errors such as multiple values in a single cell?",
+      "How are template updates from the ESAs incorporated into your register management process?"
+    ],
+    "maturity_levels": {
+      "basic": "Register maintained in compliant table format with manual data entry controls",
+      "intermediate": "Automated data validation rules enforcing single-value-per-cell and multi-level completeness checks",
+      "advanced": "Integrated register management system with automated format compliance, input validation, multi-level data generation, and version-controlled template management"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  },
+  {
+    "regulation": "DORA_ITS_REGISTER",
+    "article": "5",
+    "requirement_summary": "Assessment and documentation of criticality or importance of ICT services in the register",
+    "evidence_type": "document",
+    "artifact_name": "ICT Service Criticality Assessment Documentation",
+    "artifact_example": "ICT_Service_Criticality_Assessment.pdf",
+    "description": "Documentation supporting the assessment of criticality or importance of each ICT service recorded in the register. Must include the rationale and criteria used to determine whether each ICT service supports a critical or important function, the methodology for the assessment, evidence of regular reassessment, and the linkage between ICT services and the business functions they support.",
+    "retention_period": "Duration of contractual arrangement + 5 years",
+    "auditor_questions": [
+      "Show me the criticality assessment for each ICT service in your register including the criteria and methodology used.",
+      "How do you link ICT services recorded in the register to the critical or important functions they support?",
+      "What triggers a reassessment of the criticality classification of an ICT service?",
+      "How do you ensure subcontractors supporting critical or important functions are properly identified and classified in the register?"
+    ],
+    "maturity_levels": {
+      "basic": "Criticality assessments documented for each ICT service with basic rationale and periodic reviews",
+      "intermediate": "Structured criticality methodology with clear criteria, business function mapping, regular reassessment cycle, subcontractor criticality cascade",
+      "advanced": "Dynamic criticality scoring integrated with business impact analysis, automated reassessment triggers based on service changes, real-time business function dependency mapping"
+    },
+    "cross_references": [
+      "DORA:28"
+    ]
+  }
+]

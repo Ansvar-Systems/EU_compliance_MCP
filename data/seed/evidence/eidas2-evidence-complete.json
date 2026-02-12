@@ -1,0 +1,206 @@
+[
+  {
+    "regulation": "EIDAS2",
+    "article": "5a",
+    "requirement_summary": "European Digital Identity Wallet provision",
+    "evidence_type": "document",
+    "artifact_name": "EDIW Implementation Documentation",
+    "artifact_example": "EDIW_Implementation_Plan_2025.pdf",
+    "description": "Documentation of European Digital Identity Wallet provision, demonstrating secure, trusted, and seamless cross-border access enabling users to request, obtain, store, share, and present person identification data and electronic attestations of attributes under sole user control",
+    "retention_period": "Duration of wallet provision + 5 years",
+    "auditor_questions": [
+      "Show me your implementation plan for the European Digital Identity Wallet",
+      "How do you ensure users maintain full control over the use of and data in their wallet?",
+      "How does the wallet support selective disclosure of data and pseudonym generation?",
+      "How is the wallet source code made available under open-source licence as required?"
+    ],
+    "maturity_levels": {
+      "basic": "Wallet implementation meets minimum requirements, open-source components published",
+      "intermediate": "Full selective disclosure capability, user transaction logging with dashboard, pseudonym generation, cross-border interoperability tested",
+      "advanced": "Privacy-by-design architecture, zero-knowledge proof support, comprehensive interoperability with all Member States, accessibility compliance"
+    },
+    "cross_references": [
+      "GDPR:25",
+      "GDPR:17"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "5a",
+    "requirement_summary": "Wallet security and data protection",
+    "evidence_type": "test_result",
+    "artifact_name": "Wallet Security Assessment Report",
+    "artifact_example": "EDIW_Security_Assessment_2025.pdf",
+    "description": "Security assessment results demonstrating that the European Digital Identity Wallet meets assurance level high requirements, ensuring security-by-design, and that wallet providers do not collect unnecessary information about wallet use or combine data with other services without explicit user request",
+    "retention_period": "Duration of wallet provision + 5 years",
+    "auditor_questions": [
+      "Show me the security assessment demonstrating assurance level high for the wallet",
+      "How do you ensure the wallet provider does not collect information about wallet use beyond what is necessary?",
+      "How do you prevent relying parties from tracking or correlating user transactions?",
+      "What measures protect against security breaches and how are users notified without delay?"
+    ],
+    "maturity_levels": {
+      "basic": "Assurance level high assessment completed, basic security-by-design measures implemented",
+      "intermediate": "Privacy-preserving unlinkability implemented, data minimisation enforced, breach notification procedures tested",
+      "advanced": "Continuous security monitoring, real-time breach detection with immediate user notification, advanced anti-tracking measures, formal verification of privacy properties"
+    },
+    "cross_references": [
+      "GDPR:32",
+      "GDPR:25",
+      "CYBERSECURITY_ACT:52"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "8",
+    "requirement_summary": "Assurance levels for electronic identification schemes",
+    "evidence_type": "certification",
+    "artifact_name": "eID Scheme Assurance Level Assessment",
+    "artifact_example": "eID_Assurance_Level_Assessment.pdf",
+    "description": "Assessment and certification documentation demonstrating the assurance level (low, substantial, or high) of the electronic identification scheme, including evaluation of identity proofing, issuance procedures, authentication mechanisms, and issuing entity reliability",
+    "retention_period": "Duration of scheme operation + 5 years",
+    "auditor_questions": [
+      "What assurance level has been assigned to your electronic identification scheme and what evidence supports this?",
+      "Show me the identity proofing and verification procedures and how they meet the assigned assurance level",
+      "How does the authentication mechanism meet the technical specifications for the assigned level?",
+      "How do you ensure the assurance level is maintained as the scheme evolves?"
+    ],
+    "maturity_levels": {
+      "basic": "Assurance level assessed against Commission implementing acts, basic technical specifications met",
+      "intermediate": "Comprehensive assessment covering all elements (proofing, issuance, authentication), regular reassessment schedule",
+      "advanced": "Continuous assurance validation, automated compliance testing against technical specifications, proactive adaptation to updated standards"
+    },
+    "cross_references": [
+      "CYBERSECURITY_ACT:52",
+      "EUCC:4"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "19a",
+    "requirement_summary": "Requirements for non-qualified trust service providers",
+    "evidence_type": "policy",
+    "artifact_name": "Non-Qualified Trust Service Risk Management Policy",
+    "artifact_example": "NonQTSP_Risk_Management_Policy.pdf",
+    "description": "Policies and corresponding measures for managing legal, business, operational, and other risks to the provision of non-qualified trust services, covering registration/onboarding procedures, administrative checks, and management/implementation of trust services",
+    "retention_period": "Duration of service provision + 5 years",
+    "auditor_questions": [
+      "Show me your risk management policies covering legal, business, and operational risks for non-qualified trust services",
+      "What registration and onboarding procedures are in place for your trust service?",
+      "How do you notify the supervisory body of security breaches within 24 hours of becoming aware?",
+      "How do you notify affected individuals and the public when breaches have significant impact?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk management policy exists covering required areas, breach notification procedure documented",
+      "intermediate": "Comprehensive risk assessment, structured breach notification within 24 hours, affected individual notification process",
+      "advanced": "Continuous risk monitoring, automated breach detection and notification, proactive risk mitigation, regular policy review aligned with implementing acts"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "GDPR:33",
+      "GDPR:34"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "20",
+    "requirement_summary": "Supervision and audit of qualified trust service providers",
+    "evidence_type": "certification",
+    "artifact_name": "QTSP Conformity Assessment Report",
+    "artifact_example": "QTSP_Conformity_Assessment_2025.pdf",
+    "description": "Conformity assessment report from an accredited body confirming that the qualified trust service provider and its services fulfil requirements of eIDAS and Article 21 of NIS2, submitted to the supervisory body within three working days of receipt, with audits conducted at least every 24 months",
+    "retention_period": "Duration of qualified status + 7 years",
+    "auditor_questions": [
+      "Show me the most recent conformity assessment report submitted to the supervisory body",
+      "Was the audit conducted within the required 24-month cycle?",
+      "Was the supervisory body informed at least one month before the planned audit?",
+      "How were any non-conformities identified in the audit addressed within the set time limit?"
+    ],
+    "maturity_levels": {
+      "basic": "Biennial audit completed by accredited CAB, report submitted within 3 working days",
+      "intermediate": "Audit planning coordinated with supervisory body, non-conformity remediation tracked, NIS2 compliance integrated",
+      "advanced": "Continuous compliance monitoring between audits, proactive supervisory engagement, zero non-conformity track record"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "CYBERSECURITY_ACT:58"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "21",
+    "requirement_summary": "Initiation of a qualified trust service",
+    "evidence_type": "document",
+    "artifact_name": "QTSP Notification Package",
+    "artifact_example": "QTSP_Notification_Package_2025.pdf",
+    "description": "Notification documentation submitted to the supervisory body when commencing a qualified trust service, including conformity assessment report confirming fulfilment of eIDAS requirements and NIS2 Article 21, enabling supervisory body verification and granting of qualified status within three months",
+    "retention_period": "Duration of qualified status + 5 years",
+    "auditor_questions": [
+      "Show me the notification package submitted to the supervisory body to commence the qualified trust service",
+      "Does the conformity assessment report confirm compliance with both eIDAS and NIS2 requirements?",
+      "When was qualified status granted and indicated in the trusted lists?",
+      "Did you commence providing the qualified trust service only after qualified status appeared in the trusted list?"
+    ],
+    "maturity_levels": {
+      "basic": "Notification submitted with conformity assessment report, qualified status granted",
+      "intermediate": "Comprehensive notification package, dual compliance (eIDAS + NIS2) confirmed, trusted list inclusion verified",
+      "advanced": "Streamlined notification process, pre-engagement with supervisory body, rapid qualified status attainment"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "CYBERSECURITY_ACT:46"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "24",
+    "requirement_summary": "Requirements for qualified trust service providers",
+    "evidence_type": "document",
+    "artifact_name": "QTSP Compliance Documentation",
+    "artifact_example": "QTSP_Compliance_Documentation_2025.pdf",
+    "description": "Comprehensive documentation demonstrating that the qualified trust service provider meets all requirements of Article 24, including use of trustworthy systems, reliable staff, financial resources, notification of changes to supervisory body, and provision of revocation/validity status information to relying parties",
+    "retention_period": "Duration of qualified status + 7 years",
+    "auditor_questions": [
+      "Show me evidence that your systems and products are trustworthy and protected against data alteration",
+      "How do you verify the identity of persons to whom qualified certificates are issued?",
+      "What financial resources or liability insurance do you maintain to cover obligations?",
+      "How do you inform the supervisory body of changes that could affect qualified status?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic compliance documentation covering all Article 24 requirements",
+      "intermediate": "Comprehensive compliance with trustworthy systems, trained staff, financial reserves, proactive supervisory body communication",
+      "advanced": "Continuous compliance assurance, automated identity verification, robust financial safeguards, real-time supervisory body reporting"
+    },
+    "cross_references": [
+      "NIS2:21",
+      "GDPR:32",
+      "CYBERSECURITY_ACT:51"
+    ]
+  },
+  {
+    "regulation": "EIDAS2",
+    "article": "5a",
+    "requirement_summary": "Wallet transaction log and user dashboard",
+    "evidence_type": "log",
+    "artifact_name": "Wallet Transaction Audit Log",
+    "artifact_example": "EDIW_Transaction_Log_2025-Q1.json",
+    "description": "Transaction log accessible to users via a common dashboard, showing an up-to-date list of relying parties with established connections, all data exchanged, and enabling users to request erasure of personal data, report allegedly unlawful requests, and exercise data portability rights",
+    "retention_period": "Duration of wallet lifecycle + 3 years",
+    "auditor_questions": [
+      "Show me the transaction log and common dashboard accessible to wallet users",
+      "How can users view which relying parties they have shared data with and what data was exchanged?",
+      "How can users request erasure of their personal data from a relying party through the wallet?",
+      "How can users report allegedly unlawful or suspicious data requests to the competent data protection authority?"
+    ],
+    "maturity_levels": {
+      "basic": "Transaction log maintained with relying party list and data exchanged, basic dashboard available",
+      "intermediate": "User-friendly dashboard with erasure request and reporting features, data portability supported, transaction history searchable",
+      "advanced": "Real-time transaction visibility, one-click GDPR Article 17 erasure requests, automated suspicious request flagging, comprehensive data portability"
+    },
+    "cross_references": [
+      "GDPR:17",
+      "GDPR:20",
+      "GDPR:77"
+    ]
+  }
+]

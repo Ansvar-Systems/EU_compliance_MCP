@@ -1,0 +1,252 @@
+[
+  {
+    "regulation": "AIFMD",
+    "article": "7",
+    "requirement_summary": "Application for authorization as an AIFM",
+    "evidence_type": "certification",
+    "artifact_name": "AIFM Authorization Application and Decision",
+    "artifact_example": "AIFM_Authorization_Decision_2025.pdf",
+    "description": "Complete authorization application and decision from the competent authority of the home Member State, including programme of activities, information on remuneration policies, delegation arrangements, depositary information, and details of each AIF to be managed",
+    "retention_period": "Duration of authorization + 10 years",
+    "auditor_questions": [
+      "Show me your AIFM authorization decision from the competent authority",
+      "What investment strategies are you authorized to pursue?",
+      "Show me the programme of activities submitted with the authorization application",
+      "How do you notify the competent authority of material changes to authorization conditions?"
+    ],
+    "maturity_levels": {
+      "basic": "Authorization obtained with all required documentation submitted",
+      "intermediate": "Regular compliance reviews against authorization conditions, structured change notification process",
+      "advanced": "Continuous compliance monitoring, automated regulatory change assessment, proactive regulatory engagement"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "MICA:59"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "9",
+    "requirement_summary": "Initial capital and own funds requirements",
+    "evidence_type": "document",
+    "artifact_name": "AIFM Capital Adequacy Report",
+    "artifact_example": "AIFM_Capital_Adequacy_Report_Q4_2025.pdf",
+    "description": "Documentation of compliance with initial capital requirements (EUR 125,000 minimum for internally managed AIFs, EUR 300,000 for external AIFMs) and ongoing own funds requirements including additional own funds based on portfolios exceeding EUR 250 million or professional indemnity insurance",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me evidence that initial capital requirements are met",
+      "How do you calculate additional own funds for portfolios exceeding EUR 250 million?",
+      "Do you hold professional indemnity insurance and what professional liability risks does it cover?",
+      "Show me quarterly own funds calculations and continuous compliance evidence"
+    ],
+    "maturity_levels": {
+      "basic": "Capital requirements met, basic quarterly calculations",
+      "intermediate": "Monthly capital monitoring, stress testing, insurance coverage adequacy reviews",
+      "advanced": "Real-time capital adequacy monitoring, automated capital planning, dynamic insurance coverage aligned with AUM growth"
+    },
+    "cross_references": [
+      "PSD2:10",
+      "MICA:60"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "12",
+    "requirement_summary": "General operating conditions for AIFMs",
+    "evidence_type": "policy",
+    "artifact_name": "AIFM General Operating Conditions Policy",
+    "artifact_example": "AIFM_Operating_Conditions_Policy_2025.pdf",
+    "description": "Policy documenting that the AIFM acts honestly, with due skill, care, and diligence, and in the best interests of the AIFs it manages, their investors, and the integrity of the market, with effective resources and procedures for proper performance of business activities",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your policies for acting in the best interests of investors and the market",
+      "How do you ensure adequate resources and procedures for proper business performance?",
+      "What conflict of interest prevention mechanisms do you have in place?",
+      "Show me evidence of fair treatment of all investors in the AIFs you manage"
+    ],
+    "maturity_levels": {
+      "basic": "Operating conditions policies documented, basic conflict of interest procedures",
+      "intermediate": "Regular policy reviews, conflict of interest register, independent compliance monitoring",
+      "advanced": "Automated conflict detection, continuous conduct monitoring, investor outcome tracking"
+    },
+    "cross_references": [
+      "MIFID2:24",
+      "MICA:16"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "13",
+    "requirement_summary": "Remuneration policies and practices",
+    "evidence_type": "policy",
+    "artifact_name": "AIFM Remuneration Policy",
+    "artifact_example": "AIFM_Remuneration_Policy_2025.pdf",
+    "description": "Documented remuneration policy for categories of staff whose professional activities have a material impact on the risk profiles of the AIFs they manage, including fixed and variable remuneration components, deferral and retention arrangements, and alignment with risk management",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your remuneration policy and how it applies to identified staff",
+      "How do you identify staff whose activities have a material impact on AIF risk profiles?",
+      "What deferral and retention arrangements apply to variable remuneration?",
+      "How does your remuneration policy align with the risk profile, rules, and instruments of incorporation of each AIF?"
+    ],
+    "maturity_levels": {
+      "basic": "Remuneration policy documented, identified staff categories defined",
+      "intermediate": "Independent remuneration committee, performance and risk-adjusted remuneration, deferral mechanisms implemented",
+      "advanced": "Multi-year performance assessment, claw-back provisions, remuneration outcomes analysis linked to fund performance"
+    },
+    "cross_references": [
+      "SFDR:5",
+      "MIFID2:9"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "15",
+    "requirement_summary": "Risk management systems and procedures",
+    "evidence_type": "document",
+    "artifact_name": "AIF Risk Management Framework",
+    "artifact_example": "AIF_Risk_Management_Framework_2025.pdf",
+    "description": "Documented risk management system for identifying, measuring, managing, and monitoring all risks relevant to each AIF's investment strategy, including market risk, credit risk, liquidity risk, counterparty risk, and operational risk, with functional and hierarchical separation from portfolio management",
+    "retention_period": "Duration of operations + 5 years",
+    "auditor_questions": [
+      "Show me your risk management system and how it is functionally separated from portfolio management",
+      "How do you set and monitor risk limits for each AIF?",
+      "What stress testing and scenario analysis do you perform?",
+      "Show me evidence of risk reporting to senior management and the risk limit review process"
+    ],
+    "maturity_levels": {
+      "basic": "Risk management framework documented, basic risk limits set for each AIF",
+      "intermediate": "Regular stress testing, independent risk function, documented limit breach escalation",
+      "advanced": "Real-time risk monitoring, dynamic risk limits, advanced scenario analysis, integrated risk dashboards with portfolio management"
+    },
+    "cross_references": [
+      "DORA:6",
+      "MIFID2:16"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "16",
+    "requirement_summary": "Liquidity management procedures",
+    "evidence_type": "procedure",
+    "artifact_name": "AIF Liquidity Management Procedures",
+    "artifact_example": "AIF_Liquidity_Management_Procedures_2025.pdf",
+    "description": "Documented liquidity management procedures for each AIF that is not unleveraged closed-ended, ensuring consistency between the investment strategy, liquidity profile, and redemption policy, including liquidity stress testing and liquidity management tools",
+    "retention_period": "Duration of fund operations + 5 years",
+    "auditor_questions": [
+      "Show me your liquidity management procedures and how they align with each AIF's redemption policy",
+      "How frequently do you perform liquidity stress tests and what scenarios are modelled?",
+      "What liquidity management tools are available (gates, side pockets, redemption suspension)?",
+      "Show me evidence that the investment strategy, liquidity profile, and redemption policy are consistent"
+    ],
+    "maturity_levels": {
+      "basic": "Liquidity management procedures documented, basic stress testing performed",
+      "intermediate": "Regular stress testing with multiple scenarios, documented LMT framework, liquidity monitoring dashboards",
+      "advanced": "Real-time liquidity monitoring, dynamic redemption risk modelling, automated stress testing with regulatory scenario integration"
+    },
+    "cross_references": [
+      "AIFMD:15",
+      "SFDR:6"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "18",
+    "requirement_summary": "General principles for valuation of AIF assets",
+    "evidence_type": "procedure",
+    "artifact_name": "AIF Asset Valuation Procedures",
+    "artifact_example": "AIF_Valuation_Procedures_2025.pdf",
+    "description": "Documented valuation procedures ensuring proper and independent valuation of AIF assets and calculation of NAV per unit or share, performed at least once a year (or more frequently as required by AIF rules), with either an external valuer appointed or an independent valuation function within the AIFM",
+    "retention_period": "Duration of fund operations + 7 years",
+    "auditor_questions": [
+      "Show me your valuation procedures and who performs the valuations",
+      "How do you ensure independence of the valuation function from portfolio management?",
+      "What valuation methodologies do you use for illiquid or hard-to-value assets?",
+      "How frequently are valuations performed and how is the NAV calculated and communicated?"
+    ],
+    "maturity_levels": {
+      "basic": "Valuation procedures documented, valuations performed at required frequency",
+      "intermediate": "Independent external valuer or documented internal independence, valuation committee, pricing sources validated",
+      "advanced": "Automated valuation systems with multiple pricing sources, independent model validation, real-time NAV calculation capability"
+    },
+    "cross_references": [
+      "MIFID2:16",
+      "AIFMD:22"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "20",
+    "requirement_summary": "Depositary functions and responsibilities",
+    "evidence_type": "document",
+    "artifact_name": "Depositary Agreement and Oversight Documentation",
+    "artifact_example": "Depositary_Agreement_Oversight_2025.pdf",
+    "description": "Depositary agreement and documentation of the depositary's functions including safekeeping of AIF assets, cash flow monitoring, oversight of the AIFM's compliance with applicable rules and fund instruments, and the depositary's liability regime",
+    "retention_period": "Duration of depositary agreement + 7 years",
+    "auditor_questions": [
+      "Show me the depositary agreement and the depositary's appointment documentation",
+      "How does the depositary perform its cash flow monitoring function?",
+      "What safekeeping arrangements are in place for financial instruments held in custody?",
+      "How does the depositary oversee the AIFM's compliance with the AIF rules and applicable law?"
+    ],
+    "maturity_levels": {
+      "basic": "Depositary appointed, agreement in place covering all required functions",
+      "intermediate": "Regular depositary oversight reporting, documented reconciliation procedures, sub-custodian due diligence",
+      "advanced": "Real-time cash flow monitoring, automated reconciliation, comprehensive sub-custodian oversight framework"
+    },
+    "cross_references": [
+      "MICA:30",
+      "PSD2:18"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "22",
+    "requirement_summary": "Annual report requirements for AIFs",
+    "evidence_type": "document",
+    "artifact_name": "AIF Annual Report",
+    "artifact_example": "AIF_Annual_Report_2024.pdf",
+    "description": "Annual report for each AIF managed, available to investors within six months of the end of the financial year, containing a balance sheet or statement of assets and liabilities, an income and expenditure account, a report on activities, and material changes to information provided to investors, audited by an external auditor",
+    "retention_period": "10 years",
+    "auditor_questions": [
+      "Show me the most recent annual report for each AIF you manage",
+      "Was the annual report made available within six months of the financial year end?",
+      "Show me the external audit report on the annual accounts",
+      "How are material changes to disclosed information communicated to investors?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual report produced within deadline, external audit obtained",
+      "intermediate": "Comprehensive reporting beyond minimum requirements, investor-friendly format, timely publication",
+      "advanced": "Interactive digital reporting, real-time investor portal with fund information, integrated ESG reporting"
+    },
+    "cross_references": [
+      "SFDR:11",
+      "CSRD:19a"
+    ]
+  },
+  {
+    "regulation": "AIFMD",
+    "article": "23",
+    "requirement_summary": "Disclosure to investors before investment",
+    "evidence_type": "document",
+    "artifact_name": "Pre-Investment Investor Disclosure Package",
+    "artifact_example": "Investor_Disclosure_Package_2025.pdf",
+    "description": "Documentation of all information disclosed to investors before they invest, including investment strategy and objectives, description of asset types, valuation procedures, liquidity risk management, all fees and charges, latest annual report, and fair treatment of investors information",
+    "retention_period": "Duration of fund operations + 5 years",
+    "auditor_questions": [
+      "Show me the disclosure package provided to investors before they invest",
+      "How do you disclose all fees, charges, and expenses borne by investors?",
+      "What information do you provide about the AIF's investment strategy and risk profile?",
+      "How do you communicate material changes to disclosed information to existing investors?"
+    ],
+    "maturity_levels": {
+      "basic": "All required pre-investment disclosures provided to investors",
+      "intermediate": "Clear and accessible disclosure format, regular disclosure reviews, investor communication strategy",
+      "advanced": "Digital investor portal with real-time information, personalized risk disclosures, interactive fee transparency tools"
+    },
+    "cross_references": [
+      "SFDR:6",
+      "MIFID2:24"
+    ]
+  }
+]

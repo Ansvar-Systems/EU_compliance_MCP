@@ -1,0 +1,210 @@
+[
+  {
+    "regulation": "EPRIVACY",
+    "article": "4",
+    "requirement_summary": "Security of processing for electronic communications",
+    "evidence_type": "document",
+    "artifact_name": "Electronic Communications Security Policy",
+    "artifact_example": "eCommunications_Security_Policy.pdf",
+    "description": "Documented technical and organisational measures safeguarding security of publicly available electronic communications services, ensuring personal data access only by authorised personnel, protection against unlawful destruction, loss, alteration, or disclosure, and implementation of a security policy for personal data processing",
+    "retention_period": "Duration of service provision + 5 years",
+    "auditor_questions": [
+      "Show me your security policy for the processing of personal data in electronic communications",
+      "How do you ensure personal data can only be accessed by authorised personnel for legally authorised purposes?",
+      "What measures protect personal data against accidental or unlawful destruction, loss, or alteration?",
+      "How are your security measures appropriate to the risk presented, considering state of the art and cost of implementation?"
+    ],
+    "maturity_levels": {
+      "basic": "Security policy exists with basic access controls and data protection measures",
+      "intermediate": "Comprehensive security measures aligned with state of the art, regular risk assessments, auditable access controls",
+      "advanced": "Continuous security monitoring, automated threat detection for communications infrastructure, security measures independently audited"
+    },
+    "cross_references": [
+      "GDPR:32",
+      "NIS2:21",
+      "EECC:40"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "4",
+    "requirement_summary": "Personal data breach notification",
+    "evidence_type": "log",
+    "artifact_name": "Personal Data Breach Inventory",
+    "artifact_example": "Personal_Data_Breach_Inventory_2025.csv",
+    "description": "Inventory of personal data breaches maintained by the provider of electronic communications services, comprising facts surrounding each breach, its effects, and remedial actions taken, sufficient for national authority compliance verification. Includes records of notifications to competent authority and affected subscribers",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the personal data breach inventory with facts, effects, and remedial actions for each breach",
+      "For this breach, demonstrate that the competent national authority was notified without undue delay",
+      "When breaches adversely affect personal data or privacy, show evidence that affected subscribers were notified",
+      "Where subscriber notification was not required, show the technological protection measures that rendered data unintelligible to unauthorised persons"
+    ],
+    "maturity_levels": {
+      "basic": "Breach inventory maintained with basic facts and effects, authority notifications submitted",
+      "intermediate": "Structured breach inventory, automated notification workflows, subscriber notification templates prepared, encryption evidence documented",
+      "advanced": "Real-time breach detection and automated triage, immediate authority notification pipeline, proactive subscriber communication system"
+    },
+    "cross_references": [
+      "GDPR:33",
+      "GDPR:34",
+      "NIS2:23"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "5",
+    "requirement_summary": "Confidentiality of communications",
+    "evidence_type": "policy",
+    "artifact_name": "Communications Confidentiality Policy",
+    "artifact_example": "Communications_Confidentiality_Policy.pdf",
+    "description": "Policy ensuring confidentiality of communications and related traffic data, prohibiting listening, tapping, storage, or surveillance of communications by persons other than users without consent, except where legally authorised under Article 15(1)",
+    "retention_period": "Duration of service provision + 5 years",
+    "auditor_questions": [
+      "Show me your policy ensuring confidentiality of communications and traffic data",
+      "How do you prevent unauthorised interception or surveillance of communications?",
+      "What technical measures ensure that only authorised personnel can access communication data?",
+      "Where lawful interception is performed, show me the legal authorisation and procedural safeguards"
+    ],
+    "maturity_levels": {
+      "basic": "Confidentiality policy exists prohibiting unauthorised interception and surveillance",
+      "intermediate": "End-to-end encryption deployed, lawful interception procedures documented with legal basis, regular compliance audits",
+      "advanced": "Advanced encryption for all communications, automated detection of unauthorised interception attempts, zero-trust network architecture"
+    },
+    "cross_references": [
+      "GDPR:5",
+      "LED:4",
+      "EECC:40"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "5",
+    "requirement_summary": "Cookie consent and terminal equipment access (Art 5(3))",
+    "evidence_type": "document",
+    "artifact_name": "Cookie and Storage Consent Records",
+    "artifact_example": "Cookie_Consent_Audit_Report_2025.pdf",
+    "description": "Documentation of consent mechanisms for storing information or gaining access to information stored in terminal equipment of subscribers or users, including clear and comprehensive information about purposes of processing, records of consent obtained, and exemptions for technical storage necessary for communication transmission or services explicitly requested by the user",
+    "retention_period": "Duration of consent + 3 years",
+    "auditor_questions": [
+      "Show me your cookie consent mechanism and how users are provided clear and comprehensive information about processing purposes",
+      "How do you obtain valid consent before storing or accessing information on user terminal equipment?",
+      "How do you distinguish between cookies requiring consent and those exempt (technical necessity or explicitly requested service)?",
+      "Show me evidence that consent is freely given, specific, and can be withdrawn by the user"
+    ],
+    "maturity_levels": {
+      "basic": "Cookie consent banner implemented with basic information about purposes",
+      "intermediate": "Granular consent management platform, cookie categorisation, consent records retained, regular compliance scans",
+      "advanced": "Automated cookie scanning and categorisation, real-time consent enforcement, privacy-by-default configuration, GDPR-aligned consent management"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:7",
+      "DSA:26"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "6",
+    "requirement_summary": "Traffic data processing and retention",
+    "evidence_type": "procedure",
+    "artifact_name": "Traffic Data Processing Procedures",
+    "artifact_example": "Traffic_Data_Processing_Procedures.pdf",
+    "description": "Documented procedures for processing and retaining traffic data, ensuring erasure or anonymisation when no longer needed for communication transmission, limiting processing for billing and marketing to authorised purposes and personnel, and obtaining prior consent for marketing use",
+    "retention_period": "Duration of service provision + 3 years",
+    "auditor_questions": [
+      "Show me your procedures for erasing or anonymising traffic data when no longer needed for transmission",
+      "What traffic data is retained for billing purposes and for how long?",
+      "Where traffic data is processed for marketing, show me the consent obtained from subscribers",
+      "How do you ensure traffic data processing is restricted to authorised personnel for authorised purposes?"
+    ],
+    "maturity_levels": {
+      "basic": "Procedures exist for traffic data erasure and purpose-limited retention",
+      "intermediate": "Automated data retention and deletion schedules, consent management for marketing use, access restricted to authorised personnel",
+      "advanced": "Real-time traffic data lifecycle management, automated anonymisation, granular purpose-based access controls, continuous compliance monitoring"
+    },
+    "cross_references": [
+      "GDPR:5",
+      "GDPR:6",
+      "EECC:40"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "9",
+    "requirement_summary": "Location data processing",
+    "evidence_type": "procedure",
+    "artifact_name": "Location Data Processing Procedures",
+    "artifact_example": "Location_Data_Processing_Procedures.pdf",
+    "description": "Documented procedures for processing location data other than traffic data, ensuring processing occurs only when anonymised or with prior consent of the user/subscriber, limited to the type and duration necessary for the value added service, with ability for users to withdraw consent at any time",
+    "retention_period": "Duration of service provision + 3 years",
+    "auditor_questions": [
+      "Show me your procedures for processing location data other than traffic data",
+      "How do you obtain prior consent before processing location data for value added services?",
+      "How can users withdraw their consent for location data processing at any time?",
+      "What measures ensure location data processing is restricted to authorised personnel and limited to what is necessary?"
+    ],
+    "maturity_levels": {
+      "basic": "Location data procedures exist, consent obtained before processing",
+      "intermediate": "Granular location consent management, user-friendly withdrawal mechanism, data minimisation enforced",
+      "advanced": "Real-time location data governance, automated consent enforcement, privacy-preserving location services, continuous compliance monitoring"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:7",
+      "EECC:40"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "13",
+    "requirement_summary": "Unsolicited communications and direct marketing consent",
+    "evidence_type": "document",
+    "artifact_name": "Direct Marketing Consent Records",
+    "artifact_example": "Direct_Marketing_Consent_Records_2025.xlsx",
+    "description": "Records of prior consent obtained from subscribers or users for receiving direct marketing via automated calling machines, fax, or electronic mail, including evidence of the soft opt-in exception for existing customer electronic contact details and mechanisms for users to object to further communications",
+    "retention_period": "Duration of marketing activity + 3 years",
+    "auditor_questions": [
+      "Show me evidence of prior consent for each subscriber receiving direct marketing communications",
+      "Where the soft opt-in exception is relied upon, show that electronic contact details were obtained in the context of a sale of a product or service",
+      "How do recipients object to direct marketing, and is the mechanism free of charge and easy to use?",
+      "How do you ensure that marketing emails do not disguise or conceal the sender identity?"
+    ],
+    "maturity_levels": {
+      "basic": "Consent records maintained, basic opt-out mechanism provided",
+      "intermediate": "Consent management platform, automated opt-out processing, soft opt-in criteria documented, sender identity verified",
+      "advanced": "Real-time consent enforcement, preference centre for granular marketing control, automated compliance with anti-spam requirements"
+    },
+    "cross_references": [
+      "GDPR:6",
+      "GDPR:7",
+      "DSA:26"
+    ]
+  },
+  {
+    "regulation": "EPRIVACY",
+    "article": "4",
+    "requirement_summary": "Security risk notification to subscribers",
+    "evidence_type": "log",
+    "artifact_name": "Subscriber Security Risk Notification Log",
+    "artifact_example": "Subscriber_Risk_Notifications_2025.csv",
+    "description": "Log of notifications to subscribers concerning particular risks of security breaches of the network, including information about possible remedies and likely costs involved, particularly for risks outside the scope of measures to be taken by the service provider",
+    "retention_period": "3 years",
+    "auditor_questions": [
+      "Show me the log of security risk notifications sent to subscribers in the past year",
+      "How do you identify when a particular risk of a breach of network security exists?",
+      "What information do you provide to subscribers about possible remedies and likely costs?",
+      "How quickly are subscribers notified after identifying a particular security risk?"
+    ],
+    "maturity_levels": {
+      "basic": "Subscribers notified of particular security risks with basic remedy information",
+      "intermediate": "Structured risk notification process, templated communications with remedies and cost information, timely delivery",
+      "advanced": "Proactive real-time risk alerts, personalised remedy recommendations, automated notification system integrated with threat detection"
+    },
+    "cross_references": [
+      "GDPR:34",
+      "NIS2:23",
+      "EECC:40"
+    ]
+  }
+]

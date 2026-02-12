@@ -2,6 +2,8 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import Database from 'better-sqlite3';
 import { registerTools, TOOLS } from '../../src/tools/registry.js';
+import { createSqliteAdapter } from '../../src/database/sqlite-adapter.js';
+import type { DatabaseAdapter } from '../../src/database/types.js';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -10,12 +12,14 @@ const __dirname = dirname(__filename);
 const DB_PATH = join(__dirname, '../../data/regulations.db');
 
 describe('HTTP/Stdio Server Parity', () => {
-  let db: Database.Database;
+  let rawDb: Database.Database;
+  let db: DatabaseAdapter;
   let stdioServer: Server;
   let httpServer: Server;
 
   beforeAll(() => {
-    db = new Database(DB_PATH, { readonly: true });
+    rawDb = new Database(DB_PATH, { readonly: true });
+    db = createSqliteAdapter(rawDb);
 
     // Create mock stdio server
     stdioServer = new Server(
@@ -33,7 +37,7 @@ describe('HTTP/Stdio Server Parity', () => {
   });
 
   afterAll(() => {
-    if (db) db.close();
+    if (rawDb) rawDb.close();
   });
 
   it('should have all 9 tools registered in the registry', () => {

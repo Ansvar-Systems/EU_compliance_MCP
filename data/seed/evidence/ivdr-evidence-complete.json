@@ -1,0 +1,254 @@
+[
+  {
+    "regulation": "IVDR",
+    "article": "5",
+    "requirement_summary": "Placing on the market and putting into service",
+    "evidence_type": "document",
+    "artifact_name": "IVD Market Placement Compliance Documentation",
+    "artifact_example": "IVD_Market_Placement_Compliance_2025.pdf",
+    "description": "Documentation demonstrating that in vitro diagnostic medical devices placed on the market or put into service comply with IVDR requirements, including evidence of conformity assessment completion and CE marking",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me evidence that this IVD device complies with all applicable IVDR requirements",
+      "How do you verify conformity assessment is completed before placing an IVD on the market?",
+      "What controls prevent non-compliant IVDs from being released to market?",
+      "How do you manage the transition of devices from the IVDD to the IVDR framework?"
+    ],
+    "maturity_levels": {
+      "basic": "Compliance checklist for market placement, CE marking process documented",
+      "intermediate": "Automated compliance verification workflow, regulatory tracking system",
+      "advanced": "Integrated product lifecycle compliance management, real-time regulatory intelligence"
+    },
+    "cross_references": [
+      "MDR:5",
+      "GPSR:4"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "10",
+    "requirement_summary": "General obligations of manufacturers",
+    "evidence_type": "document",
+    "artifact_name": "IVD Quality Management System Documentation",
+    "artifact_example": "IVD_QMS_Documentation_2025.pdf",
+    "description": "Comprehensive quality management system documentation for IVD manufacturers covering design controls, performance evaluation, risk management, post-market surveillance, and compliance with general safety and performance requirements",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me your quality management system documentation for IVD devices",
+      "How does your QMS address the specific requirements for IVD performance evaluation?",
+      "What risk management processes are integrated into your IVD development lifecycle?",
+      "How do you handle non-conformities and corrective actions for IVD devices?"
+    ],
+    "maturity_levels": {
+      "basic": "QMS documentation exists covering core IVDR requirements, ISO 13485 aligned",
+      "intermediate": "Integrated QMS with automated CAPA tracking, performance evaluation procedures, management reviews",
+      "advanced": "Digital QMS with real-time compliance monitoring, AI-assisted quality analytics, continuous improvement"
+    },
+    "cross_references": [
+      "MDR:10",
+      "IVDR:78",
+      "IVDR:82"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "14",
+    "requirement_summary": "General obligations of distributors",
+    "evidence_type": "procedure",
+    "artifact_name": "IVD Distributor Compliance Verification Procedure",
+    "artifact_example": "IVD_Distributor_Compliance_Procedure_2025.pdf",
+    "description": "Procedure for IVD distributors to verify that devices bear CE marking, EU declaration of conformity has been drawn up, required labelling is present, and storage and transport conditions are maintained",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "How do you verify IVD devices comply with IVDR requirements before distribution?",
+      "What checks do you perform on CE marking and labelling compliance?",
+      "How do you ensure proper storage conditions including temperature requirements?",
+      "What is your process when you identify a potentially non-compliant IVD device?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic verification checklist for incoming IVD devices",
+      "intermediate": "Structured incoming inspection, temperature monitoring, traceability records",
+      "advanced": "Automated compliance verification, IoT-based condition monitoring, real-time supply chain visibility"
+    },
+    "cross_references": [
+      "MDR:14",
+      "GPSR:9"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "17",
+    "requirement_summary": "EU declaration of conformity for IVDs",
+    "evidence_type": "certification",
+    "artifact_name": "IVD EU Declaration of Conformity",
+    "artifact_example": "IVD_EU_Declaration_Conformity_2025.pdf",
+    "description": "EU declaration of conformity for IVD devices containing device identification, manufacturer details, risk class, conformity assessment procedure followed, applicable common specifications and standards, and signed declaration",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me the EU declaration of conformity for this IVD device",
+      "Does the declaration include all information required under Annex IV?",
+      "How do you maintain the declaration when applicable standards or common specifications change?",
+      "How do you manage declarations across your IVD device portfolio?"
+    ],
+    "maturity_levels": {
+      "basic": "Declaration exists with all mandatory information for each IVD device",
+      "intermediate": "Centralised declaration management, version control, regular review cycle",
+      "advanced": "Automated declaration generation, real-time compliance tracking, integrated with regulatory database"
+    },
+    "cross_references": [
+      "MDR:20",
+      "IVDR:48"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "24",
+    "requirement_summary": "Unique Device Identification system for IVDs",
+    "evidence_type": "document",
+    "artifact_name": "IVD UDI System Implementation Documentation",
+    "artifact_example": "IVD_UDI_Implementation_2025.pdf",
+    "description": "Documentation of UDI system implementation for IVD devices including UDI-DI and UDI-PI assignment, carrier placement on labels, and data submission to the UDI database for all IVD risk classes",
+    "retention_period": "Duration of device market availability + 10 years",
+    "auditor_questions": [
+      "Show me your UDI assignment and management process for IVD devices",
+      "How do you ensure UDI carriers are properly placed on IVD labels and packaging?",
+      "How do you handle UDI requirements for devices with multiple components?",
+      "How do you submit and maintain UDI data in the EUDAMED database?"
+    ],
+    "maturity_levels": {
+      "basic": "UDI assigned to all IVD devices, basic data submitted to UDI database",
+      "intermediate": "Automated UDI management, barcode verification at packaging, supply chain UDI tracking",
+      "advanced": "Full UDI traceability from manufacturing to laboratory, EUDAMED integration, real-time tracking"
+    },
+    "cross_references": [
+      "MDR:27",
+      "IVDR:26"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "26",
+    "requirement_summary": "Registration of manufacturers and devices",
+    "evidence_type": "document",
+    "artifact_name": "IVD Manufacturer and Device Registration Records",
+    "artifact_example": "IVD_Registration_Records_2025.pdf",
+    "description": "Records of IVD manufacturer registration and device registration including single registration number, device identification for all IVD classes, and verification of complete registration status",
+    "retention_period": "Duration of operations + 10 years",
+    "auditor_questions": [
+      "Show me your manufacturer registration and single registration number for IVD devices",
+      "Are all marketed IVD devices properly registered?",
+      "How do you maintain registration when your IVD portfolio changes?",
+      "What process ensures timely registration of new IVD devices before market placement?"
+    ],
+    "maturity_levels": {
+      "basic": "Manufacturer registered, core IVD devices registered in system",
+      "intermediate": "Complete IVD portfolio registration, regular verification, change management process",
+      "advanced": "Automated registration management, real-time status monitoring, cross-reference validation"
+    },
+    "cross_references": [
+      "MDR:30",
+      "IVDR:24"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "48",
+    "requirement_summary": "Conformity assessment procedures for IVDs",
+    "evidence_type": "certification",
+    "artifact_name": "IVD Conformity Assessment Certificate",
+    "artifact_example": "IVD_Conformity_Assessment_Certificate_2025.pdf",
+    "description": "Certificate and documentation from the conformity assessment process for IVD devices including the assessment route selected based on device risk class (A, B, C, D), notified body assessment results, and performance evaluation review",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me the conformity assessment certificate for this IVD device",
+      "What conformity assessment route was selected based on the device risk class?",
+      "How did the notified body assess your performance evaluation data?",
+      "What common specifications were applied during the assessment?"
+    ],
+    "maturity_levels": {
+      "basic": "Appropriate conformity assessment route selected, certificate obtained",
+      "intermediate": "Proactive notified body engagement, comprehensive technical documentation",
+      "advanced": "Streamlined assessment process, pre-submission reviews, continuous compliance validation"
+    },
+    "cross_references": [
+      "MDR:52",
+      "IVDR:17"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "78",
+    "requirement_summary": "Post-market surveillance system for IVDs",
+    "evidence_type": "document",
+    "artifact_name": "IVD Post-Market Surveillance Plan and Report",
+    "artifact_example": "IVD_PMS_Plan_Report_2025.pdf",
+    "description": "Post-market surveillance plan and periodic safety update report for IVD devices documenting systematic data collection on device performance, complaint analysis, performance data trending, and risk-benefit updates",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me your post-market surveillance plan and most recent report for IVD devices",
+      "How do you monitor the performance of your IVD devices in real-world use?",
+      "What data sources do you use for IVD post-market surveillance?",
+      "How do PMS findings feed back into performance evaluation and risk management?"
+    ],
+    "maturity_levels": {
+      "basic": "PMS plan exists, basic complaint tracking, periodic reporting",
+      "intermediate": "Structured data collection, performance trending, proactive risk assessment",
+      "advanced": "AI-powered signal detection, real-world performance analytics, automated safety reporting"
+    },
+    "cross_references": [
+      "MDR:83",
+      "IVDR:82",
+      "IVDR:88"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "82",
+    "requirement_summary": "Vigilance reporting for IVD serious incidents",
+    "evidence_type": "log",
+    "artifact_name": "IVD Vigilance Incident Report Log",
+    "artifact_example": "IVD_Vigilance_Log_2025.csv",
+    "description": "Log of all serious incidents and field safety corrective actions for IVD devices reported through the vigilance system, including initial reports, follow-up reports, and final reports with root cause analysis",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me the vigilance log of serious incidents for IVD devices in the past year",
+      "How do you ensure timely reporting of serious incidents within required timeframes?",
+      "What field safety corrective actions have been implemented for IVD devices?",
+      "How do you assess the impact of false results from IVD devices on patient safety?"
+    ],
+    "maturity_levels": {
+      "basic": "Vigilance reporting process exists, incidents reported within deadlines",
+      "intermediate": "Structured vigilance system, automated timeline tracking, root cause analysis",
+      "advanced": "Integrated vigilance platform, automated authority reporting, predictive incident analytics"
+    },
+    "cross_references": [
+      "MDR:87",
+      "IVDR:78"
+    ]
+  },
+  {
+    "regulation": "IVDR",
+    "article": "88",
+    "requirement_summary": "Performance studies for IVD devices",
+    "evidence_type": "document",
+    "artifact_name": "IVD Performance Study Documentation",
+    "artifact_example": "IVD_Performance_Study_2025.pdf",
+    "description": "Documentation of performance studies including study protocols, analytical performance data, clinical performance data, scientific validity evidence, and study reports demonstrating that the IVD device achieves its intended performance",
+    "retention_period": "Lifetime of device + 10 years",
+    "auditor_questions": [
+      "Show me the performance study documentation for this IVD device",
+      "How do you demonstrate analytical performance (sensitivity, specificity, accuracy)?",
+      "What clinical performance data supports the device's intended purpose?",
+      "How do you handle performance studies that produce unexpected results?"
+    ],
+    "maturity_levels": {
+      "basic": "Performance studies completed with required data elements",
+      "intermediate": "Comprehensive study protocols, statistical analysis plans, independent data review",
+      "advanced": "Adaptive study designs, real-world performance validation, continuous performance monitoring"
+    },
+    "cross_references": [
+      "IVDR:48",
+      "IVDR:78"
+    ]
+  }
+]

@@ -66,6 +66,13 @@ export class SQLiteAdapter implements DatabaseAdapter {
     regulations?: string[],
     limit: number = 10
   ): Promise<SearchResult<Article>[]> {
+    // Sanitize query for FTS5: replace hyphens with spaces, escape special chars
+    const sanitizedQuery = query
+      .replace(/-/g, ' ')           // hyphens become spaces (FTS5 treats - as NOT)
+      .replace(/['"(){}[\]^~*:]/g, ' ')  // remove other FTS5 special chars
+      .replace(/\s+/g, ' ')         // collapse multiple spaces
+      .trim();
+
     let sql = `
       SELECT
         a.rowid, a.regulation, a.article_number, a.title, a.text, a.chapter,
@@ -75,7 +82,7 @@ export class SQLiteAdapter implements DatabaseAdapter {
       WHERE articles_fts MATCH ?
     `;
 
-    const params: any[] = [query];
+    const params: any[] = [sanitizedQuery];
 
     if (regulations && regulations.length > 0) {
       const placeholders = regulations.map(() => '?').join(',');

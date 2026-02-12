@@ -1,0 +1,19 @@
+✓ Database migrated to Neon PostgreSQL on Thu Jan 29 07:30:36 CET 2026
+
+Migration Details:
+- Source: SQLite database (data/regulations.db, 19MB)
+- Target: Neon PostgreSQL (eu-central-1, pooled connection)
+- Tables migrated: 7 (regulations, articles, recitals, definitions, control_mappings, applicability_rules, source_registry)
+- Total rows: 8,372
+  - Regulations: 47
+  - Articles: 2,438 ✓ (matches expected)
+  - Recitals: 3,712
+  - Definitions: 1,138
+  - Control Mappings: 685
+  - Applicability Rules: 305
+  - Source Registry: 47
+- Full-text search indexes: Created (PostgreSQL GIN indexes on articles and recitals)
+- Data integrity: 100% verified
+- Migration time: ~2 minutes
+
+Database URL: postgresql://neondb_owner:***@ep-wild-credit-agxsuqoh-pooler.c-2.eu-central-1.aws.neon.tech/neondb

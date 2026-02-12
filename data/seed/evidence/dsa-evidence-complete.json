@@ -1,0 +1,251 @@
+[
+  {
+    "regulation": "DSA",
+    "article": "14",
+    "requirement_summary": "Terms of service transparency obligations",
+    "evidence_type": "document",
+    "artifact_name": "Terms of Service Transparency Report",
+    "artifact_example": "ToS_Transparency_Report_2025.pdf",
+    "description": "Documentation demonstrating that terms of service include clear information on content moderation policies, algorithmic decision-making, restrictions applied, and complaint mechanisms in plain and intelligible language",
+    "retention_period": "Duration of service + 3 years",
+    "auditor_questions": [
+      "Show me your current terms of service and how they describe content moderation policies",
+      "How do you ensure terms of service are written in clear and unambiguous language?",
+      "What process do you follow when updating terms of service to notify users?",
+      "How do you make terms accessible to users including those with disabilities?"
+    ],
+    "maturity_levels": {
+      "basic": "Terms of service exist with basic content moderation information",
+      "intermediate": "Structured terms with clear sections on algorithmic decisions, regular legal review",
+      "advanced": "Machine-readable terms, multilingual support, A/B tested readability, real-time version tracking"
+    },
+    "cross_references": [
+      "GDPR:13",
+      "DMA:5"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "16",
+    "requirement_summary": "Notice and action mechanism for illegal content",
+    "evidence_type": "procedure",
+    "artifact_name": "Notice and Action Mechanism Procedure",
+    "artifact_example": "Notice_Action_Mechanism_Procedure.pdf",
+    "description": "Documented procedure allowing individuals and entities to notify the provider of illegal content, including electronic submission, acknowledgement, decision process, and notification of outcomes",
+    "retention_period": "Duration of service + 5 years",
+    "auditor_questions": [
+      "Show me your notice and action mechanism for reporting illegal content",
+      "How do you ensure notices contain sufficient information for an informed decision?",
+      "What is your process for handling notices in a timely, diligent, and objective manner?",
+      "How do you notify the submitter of the outcome and available remedies?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic reporting form exists, manual processing of notices",
+      "intermediate": "Automated notice intake, prioritisation workflows, acknowledgement system",
+      "advanced": "AI-assisted content classification, real-time processing, multi-language support, automated escalation"
+    },
+    "cross_references": [
+      "DSA:17",
+      "DSA:22"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "17",
+    "requirement_summary": "Statement of reasons for content restrictions",
+    "evidence_type": "log",
+    "artifact_name": "Content Restriction Decision Log",
+    "artifact_example": "Content_Restriction_Decisions_2025.csv",
+    "description": "Log of all decisions to restrict content including the statement of reasons provided to affected users, specifying the legal or contractual basis, facts, and remedies available",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the log of content restriction decisions for the past quarter",
+      "Do statements of reasons include the specific grounds and legal basis for restrictions?",
+      "How do you inform affected users about available internal complaint mechanisms?",
+      "How are decisions stored and made accessible for audit purposes?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic notification sent with reason for restriction",
+      "intermediate": "Structured statements of reasons with clear legal references, searchable database",
+      "advanced": "Automated statement generation, integration with DSA Transparency Database, analytics on decision patterns"
+    },
+    "cross_references": [
+      "DSA:20",
+      "GDPR:22"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "20",
+    "requirement_summary": "Internal complaint-handling system",
+    "evidence_type": "procedure",
+    "artifact_name": "Internal Complaint-Handling Procedure",
+    "artifact_example": "Internal_Complaint_Handling_SOP.pdf",
+    "description": "Documented internal complaint-handling system enabling users to lodge complaints against content moderation decisions, ensuring human review and timely resolution",
+    "retention_period": "Duration of service + 3 years",
+    "auditor_questions": [
+      "Show me your internal complaint-handling system and how users access it",
+      "How do you ensure complaints are handled by qualified staff with human oversight?",
+      "What is your average resolution time for complaints?",
+      "How do you communicate outcomes to complainants including available external remedies?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic complaint intake process, manual handling",
+      "intermediate": "Structured complaint workflow, SLA tracking, dedicated review team",
+      "advanced": "Integrated complaint management platform, AI-assisted triage, proactive resolution analytics"
+    },
+    "cross_references": [
+      "DSA:17",
+      "DSA:22"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "22",
+    "requirement_summary": "Trusted flaggers framework",
+    "evidence_type": "document",
+    "artifact_name": "Trusted Flagger Framework Documentation",
+    "artifact_example": "Trusted_Flagger_Framework_2025.pdf",
+    "description": "Documentation of the trusted flagger framework including agreements with designated trusted flaggers, priority processing mechanisms, and reporting on flagger activity",
+    "retention_period": "Duration of designation + 3 years",
+    "auditor_questions": [
+      "Which trusted flaggers have you established relationships with?",
+      "How do you prioritise notices submitted by trusted flaggers?",
+      "What metrics do you track on trusted flagger activity and accuracy?",
+      "How do you handle cases where a trusted flagger submits inaccurate notices?"
+    ],
+    "maturity_levels": {
+      "basic": "Awareness of trusted flagger concept, basic prioritisation of flagged content",
+      "intermediate": "Formal agreements with trusted flaggers, dedicated processing queue, performance tracking",
+      "advanced": "API integration with trusted flaggers, automated priority routing, quality analytics dashboard"
+    },
+    "cross_references": [
+      "DSA:16"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "27",
+    "requirement_summary": "Recommender system transparency",
+    "evidence_type": "document",
+    "artifact_name": "Recommender System Transparency Documentation",
+    "artifact_example": "Recommender_System_Transparency_2025.pdf",
+    "description": "Documentation describing the main parameters used in recommender systems, why they are significant, and options for users to modify or influence those parameters including non-profiling alternatives",
+    "retention_period": "Duration of service + 3 years",
+    "auditor_questions": [
+      "Show me documentation of the main parameters used in your recommender systems",
+      "How do you explain recommender system logic to users in plain language?",
+      "What options do users have to modify or opt out of personalised recommendations?",
+      "Do you offer at least one recommendation option not based on profiling?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic description of recommendation logic in terms of service",
+      "intermediate": "Dedicated transparency page, user preference controls, non-profiling option available",
+      "advanced": "Interactive explanation tools, granular user controls, algorithmic impact assessment published"
+    },
+    "cross_references": [
+      "GDPR:22",
+      "AI_ACT:13"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "34",
+    "requirement_summary": "Risk assessment obligations for VLOPs/VLOSEs",
+    "evidence_type": "document",
+    "artifact_name": "Systemic Risk Assessment Report",
+    "artifact_example": "Systemic_Risk_Assessment_2025.pdf",
+    "description": "Comprehensive risk assessment identifying and analysing systemic risks arising from the design, functioning, and use of the service, including risks to fundamental rights, public discourse, electoral processes, and public health",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your most recent systemic risk assessment",
+      "How do you identify risks to fundamental rights from your service design?",
+      "What methodology do you use for assessing risks to electoral processes and public discourse?",
+      "How frequently do you conduct systemic risk assessments?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual risk assessment covering major categories",
+      "intermediate": "Structured methodology, stakeholder consultation, independent expert input",
+      "advanced": "Continuous risk monitoring, predictive risk modelling, real-time systemic risk dashboards"
+    },
+    "cross_references": [
+      "AI_ACT:9",
+      "DSA:35"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "35",
+    "requirement_summary": "Mitigation of systemic risks",
+    "evidence_type": "document",
+    "artifact_name": "Systemic Risk Mitigation Plan",
+    "artifact_example": "Risk_Mitigation_Plan_2025.pdf",
+    "description": "Documented risk mitigation measures addressing identified systemic risks, including content moderation adaptations, algorithmic adjustments, terms of service updates, and cooperation with authorities",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the mitigation measures you have implemented for each identified systemic risk",
+      "How do you measure the effectiveness of your risk mitigation measures?",
+      "What crisis protocols do you have for rapid response to emerging systemic risks?",
+      "How do you coordinate mitigation efforts with relevant authorities and civil society?"
+    ],
+    "maturity_levels": {
+      "basic": "Basic mitigation measures identified for each risk category",
+      "intermediate": "Structured mitigation plans with KPIs, regular effectiveness reviews",
+      "advanced": "Adaptive mitigation systems, automated response triggers, independent impact evaluation"
+    },
+    "cross_references": [
+      "DSA:34",
+      "DSA:37"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "37",
+    "requirement_summary": "Independent audit obligations for VLOPs/VLOSEs",
+    "evidence_type": "certification",
+    "artifact_name": "Independent Audit Report",
+    "artifact_example": "DSA_Independent_Audit_Report_2025.pdf",
+    "description": "Annual independent audit assessing compliance with DSA obligations, risk assessment and mitigation measures, and commitments under codes of conduct, performed by an organisation with proven expertise",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me the most recent independent audit report",
+      "How was the auditing organisation selected and what qualifications do they hold?",
+      "What findings were identified and what is the status of remediation?",
+      "How did you implement the audit recommendations?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual audit completed by qualified auditor",
+      "intermediate": "Detailed audit implementation plan, tracking of recommendations, mid-year progress reviews",
+      "advanced": "Continuous assurance programme, real-time compliance monitoring, proactive remediation"
+    },
+    "cross_references": [
+      "DMA:15",
+      "DORA:26"
+    ]
+  },
+  {
+    "regulation": "DSA",
+    "article": "42",
+    "requirement_summary": "Transparency reporting obligations",
+    "evidence_type": "document",
+    "artifact_name": "DSA Transparency Report",
+    "artifact_example": "DSA_Transparency_Report_2025.pdf",
+    "description": "Published transparency report including statistics on content moderation actions, notice and action outcomes, complaint handling, automated tool usage, and human review decisions",
+    "retention_period": "5 years",
+    "auditor_questions": [
+      "Show me your published transparency report for the most recent reporting period",
+      "How do you calculate and verify the statistics in the report?",
+      "What content moderation actions were taken using automated means vs human review?",
+      "How do you ensure the report is publicly accessible and machine-readable?"
+    ],
+    "maturity_levels": {
+      "basic": "Annual transparency report published with basic statistics",
+      "intermediate": "Detailed statistics, breakdown by content type and action, machine-readable format",
+      "advanced": "Real-time transparency dashboard, interactive data exploration, comparative trend analysis"
+    },
+    "cross_references": [
+      "DMA:11",
+      "GDPR:30"
+    ]
+  }
+]

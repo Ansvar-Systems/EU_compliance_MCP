@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: read
-  security-events: write  # For SARIF upload
 
 jobs:
   scan:
@@ -22,10 +21,11 @@ jobs:
         with:
           fetch-depth: 0  # Full history for accurate scanning
 
+      - name: Install Gitleaks
+        run: |
+          GITLEAKS_VERSION=$(curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest | grep tag_name | cut -d '"' -f4)
+          curl -sSL "https://github.com/gitleaks/gitleaks/releases/download/${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION#v}_linux_x64.tar.gz" | tar xz
+          sudo mv gitleaks /usr/local/bin/
+
       - name: Run Gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}  # Optional: for Gitleaks Pro features
-        with:
-          config: .gitleaks.toml
+        run: gitleaks detect --source . --config .gitleaks.toml --verbose

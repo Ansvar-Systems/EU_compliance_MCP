@@ -1,0 +1,178 @@
+[
+  {
+    "regulation": "EUDR",
+    "article": "3",
+    "requirement_summary": "Prohibition of non-compliant products on the EU market",
+    "evidence_type": "document",
+    "artifact_name": "Deforestation-Free Compliance Declaration",
+    "artifact_example": "EUDR_Compliance_Declaration_2025.pdf",
+    "description": "Documentation declaring that relevant products placed on the market or exported are deforestation-free, have been produced in accordance with the relevant legislation of the country of production, and are covered by a due diligence statement. Covers the seven commodities (cattle, cocoa, coffee, oil palm, rubber, soya, wood) and derived products listed in Annex I.",
+    "retention_period": "5 years from placing on market or export",
+    "auditor_questions": [
+      "Can you demonstrate that all relevant products comply with the three requirements of Article 3?",
+      "How do you verify that products are deforestation-free using the cut-off date of 31 December 2020?",
+      "What evidence shows that products were produced in accordance with the country of production's legislation?",
+      "How do you track which commodities and derived products fall under the EUDR scope?"
+    ],
+    "maturity_levels": {
+      "basic": "Compliance declarations available for all relevant products placed on market or exported",
+      "intermediate": "Systematic compliance verification process with commodity-specific assessment and supplier documentation",
+      "advanced": "Integrated supply chain traceability system with satellite monitoring, automated deforestation-free verification, and real-time compliance dashboards"
+    },
+    "cross_references": ["CSDDD:5", "CSRD:1"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "4",
+    "requirement_summary": "Obligations of operators — due diligence before placing on market or export",
+    "evidence_type": "procedure",
+    "artifact_name": "Operator Due Diligence System Procedure",
+    "artifact_example": "EUDR_Operator_DD_System_Procedure.pdf",
+    "description": "Documented due diligence system that operators must exercise prior to placing relevant products on the market or exporting them. The system must include three elements: (1) collection of information, data and documents per Article 9, (2) risk assessment per Article 10, and (3) risk mitigation per Article 11. Operators must exercise due diligence for each supplier.",
+    "retention_period": "5 years from placing on market or export",
+    "auditor_questions": [
+      "Can you describe your due diligence system covering information collection, risk assessment, and risk mitigation?",
+      "Is due diligence performed for each supplier before products are placed on the market?",
+      "How does your system differentiate between standard and enhanced due diligence for high-risk countries?",
+      "What resources are dedicated to operating the due diligence system?"
+    ],
+    "maturity_levels": {
+      "basic": "Due diligence procedure established covering all three elements (information, risk assessment, mitigation)",
+      "intermediate": "Supplier-specific due diligence with risk-differentiated approach, dedicated team, and documented decision-making",
+      "advanced": "Automated due diligence platform with AI-powered risk screening, satellite-verified geolocation data, and continuous supply chain monitoring"
+    },
+    "cross_references": ["CSDDD:5", "CBAM:7"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "9",
+    "requirement_summary": "Information requirements — data collection and documentation",
+    "evidence_type": "document",
+    "artifact_name": "Product Information and Traceability Records",
+    "artifact_example": "EUDR_Product_Traceability_Records_2025.xlsx",
+    "description": "Comprehensive information records for each relevant product as required by Article 9, including: product description (trade name, type, species with scientific name), quantity, country of production, geolocation of all plots of land where commodities were produced, date/time range of production, supplier and buyer details, and verifiable evidence of deforestation-free status and legal compliance. Must be kept for 5 years.",
+    "retention_period": "5 years from placing on market or export",
+    "auditor_questions": [
+      "Can you produce the full Article 9 information package for this product including geolocation data?",
+      "How do you collect and verify the geolocation of all plots of land where commodities were produced?",
+      "Are species identified by both common name and full scientific name?",
+      "How do you obtain and verify evidence that commodities are deforestation-free?"
+    ],
+    "maturity_levels": {
+      "basic": "Article 9 information collected and organised for each relevant product with basic documentation",
+      "intermediate": "Structured data collection system with digital geolocation records, species verification, and supplier data integration",
+      "advanced": "Blockchain-based traceability system with satellite imagery integration, automated species identification, and real-time data verification against multiple sources"
+    },
+    "cross_references": ["CSDDD:6"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "10",
+    "requirement_summary": "Risk assessment of product non-compliance",
+    "evidence_type": "document",
+    "artifact_name": "EUDR Risk Assessment Report",
+    "artifact_example": "EUDR_Risk_Assessment_Report_2025.pdf",
+    "description": "Risk assessment establishing whether there is a risk that relevant products are non-compliant. Must consider 14 criteria from Article 10(2) including: country risk benchmarking assignment, presence of forests, indigenous peoples consultation, prevalence of deforestation, reliability of supplier information, corruption levels, supply chain complexity, and substantiated concerns. Products may only be placed on market if risk is negligible. Assessments must be reviewed at least annually.",
+    "retention_period": "5 years from assessment date",
+    "auditor_questions": [
+      "How do you conduct the risk assessment against the 14 criteria specified in Article 10(2)?",
+      "How do you incorporate the country benchmarking system into your risk assessment?",
+      "What is the process for determining that risk is negligible before placing products on market?",
+      "How frequently are risk assessments reviewed and what triggers an update?"
+    ],
+    "maturity_levels": {
+      "basic": "Risk assessment performed for each product covering all Article 10(2) criteria with documented conclusion",
+      "intermediate": "Systematic risk assessment framework with quantified risk scoring, country-specific assessments, and annual reviews",
+      "advanced": "Dynamic risk assessment system with real-time risk scoring, satellite deforestation monitoring integration, and machine learning-based risk prediction"
+    },
+    "cross_references": ["CSDDD:7", "CBAM:7"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "11",
+    "requirement_summary": "Risk mitigation measures",
+    "evidence_type": "procedure",
+    "artifact_name": "Risk Mitigation Action Plan",
+    "artifact_example": "EUDR_Risk_Mitigation_Plan_2025.pdf",
+    "description": "Documented risk mitigation measures implemented when the risk assessment reveals a non-negligible risk. Must include additional information, data, or documents gathered; independent surveys and audits; and any other due diligence measures adequate to bring the risk to a negligible level. If risk cannot be reduced to negligible, the product must not be placed on the market or exported.",
+    "retention_period": "5 years from mitigation action",
+    "auditor_questions": [
+      "What risk mitigation measures are implemented when non-negligible risk is identified?",
+      "Can you provide evidence of independent surveys or audits conducted as part of mitigation?",
+      "How do you determine that mitigation measures have reduced risk to a negligible level?",
+      "What happens when risk cannot be mitigated to negligible — how is the no-go decision documented?"
+    ],
+    "maturity_levels": {
+      "basic": "Mitigation measures documented and applied when risk is non-negligible with outcome recorded",
+      "intermediate": "Structured mitigation programme with escalation levels, independent verification, and supplier improvement plans",
+      "advanced": "Proactive risk mitigation with continuous monitoring, predictive deforestation risk alerts, and automated supply chain re-routing when risks are identified"
+    },
+    "cross_references": ["CSDDD:8"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "4",
+    "requirement_summary": "Due diligence statement submission",
+    "evidence_type": "document",
+    "artifact_name": "Due Diligence Statement",
+    "artifact_example": "EUDR_Due_Diligence_Statement_2025.pdf",
+    "description": "Due diligence statement submitted to the competent authorities via the information system before placing relevant products on the market or exporting them. Contains a declaration that due diligence was carried out and that no or only negligible risk was found. Each statement receives a reference number that must accompany the product through the supply chain. Customs authorities verify the statement reference at import.",
+    "retention_period": "5 years from submission",
+    "auditor_questions": [
+      "Has a due diligence statement been submitted for each batch of relevant products placed on market or exported?",
+      "Can you provide the reference number for the due diligence statement accompanying this product?",
+      "How do you ensure the statement reference number is communicated through the supply chain?",
+      "What is your process for submitting statements through the EU information system?"
+    ],
+    "maturity_levels": {
+      "basic": "Due diligence statements submitted for all relevant products with reference numbers tracked",
+      "intermediate": "Automated statement generation integrated with procurement system and customs declaration process",
+      "advanced": "Fully integrated digital compliance platform with automated statement submission, supply chain reference number propagation, and real-time customs verification readiness"
+    },
+    "cross_references": ["CSDDD:15"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "12",
+    "requirement_summary": "Benchmarking system — country risk classification",
+    "evidence_type": "document",
+    "artifact_name": "Country Risk Benchmarking Records",
+    "artifact_example": "EUDR_Country_Benchmarking_Assessment_2025.pdf",
+    "description": "Documentation of how the Commission's country benchmarking system (low, standard, high risk) is incorporated into due diligence processes. The benchmarking assigns risk levels to countries or parts thereof based on deforestation rates, agricultural expansion, and governance indicators. Operators sourcing from high-risk countries face enhanced due diligence obligations; those sourcing from low-risk countries benefit from simplified due diligence.",
+    "retention_period": "5 years from assessment date",
+    "auditor_questions": [
+      "How does the country benchmarking classification influence your due diligence intensity?",
+      "What enhanced due diligence measures apply for products sourced from high-risk countries?",
+      "How do you monitor changes to country benchmarking classifications?",
+      "For low-risk countries, what simplified due diligence is applied and how is it documented?"
+    ],
+    "maturity_levels": {
+      "basic": "Country risk classifications tracked and applied to due diligence decision-making",
+      "intermediate": "Risk-differentiated due diligence procedures based on benchmarking with automated country classification updates",
+      "advanced": "Dynamic country risk monitoring with supplementary data sources, sub-national risk granularity, and predictive risk classification modelling"
+    },
+    "cross_references": ["CSDDD:7", "CBAM:16"]
+  },
+  {
+    "regulation": "EUDR",
+    "article": "14",
+    "requirement_summary": "Cooperation with competent authorities",
+    "evidence_type": "log",
+    "artifact_name": "Competent Authority Interaction Log",
+    "artifact_example": "EUDR_Authority_Interaction_Log_2025.xlsx",
+    "description": "Log of all interactions with competent authorities including inspections, information requests, compliance checks, and enforcement actions. Competent authorities have the power to check due diligence statements, request information, conduct inspections, and take corrective measures. Operators must make all due diligence information available to competent authorities upon request.",
+    "retention_period": "5 years from interaction",
+    "auditor_questions": [
+      "What interactions have you had with competent authorities regarding EUDR compliance?",
+      "Can you make all due diligence documentation available to competent authorities upon request?",
+      "Have any compliance checks or inspections been conducted and what were the outcomes?",
+      "How do you respond to information requests from competent authorities?"
+    ],
+    "maturity_levels": {
+      "basic": "Interactions with competent authorities recorded with outcomes documented",
+      "intermediate": "Structured authority engagement process with designated compliance contact, inspection readiness protocol, and response tracking",
+      "advanced": "Proactive compliance management with pre-audit readiness assessments, automated information production, and regulatory relationship management programme"
+    },
+    "cross_references": ["CSDDD:14", "CSRD:1"]
+  }
+]
