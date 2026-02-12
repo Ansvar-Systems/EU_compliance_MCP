@@ -1,8 +1,8 @@
 # Regulation Coverage
 
-## 37 Regulations — Full Text, Searchable
+## 49 Regulations — Full Text, Searchable
 
-**Total: 2,278 articles, 1,145 definitions, 3,508 recitals**
+**Total: 2,528 articles, 1,226 definitions, 3,869 recitals**
 
 ---
 
@@ -51,6 +51,8 @@
 ## Product Safety & Sustainability
 | Regulation | Articles | Definitions |
 |------------|----------|-------------|
+| European Chips Act | 41 | 24 |
+| Critical Raw Materials Act (CRMA) | 49 | 64 |
 | GPSR (Product Safety) | 52 | 28 |
 | Machinery Regulation | 54 | 36 |
 | PLD (Product Liability) | 24 | 18 |
@@ -71,11 +73,11 @@
 
 ## Security Framework Mappings
 
-- **686 total control mappings**:
-  - 313 ISO 27001:2022 controls mapped to regulation requirements
-  - 373 NIST CSF 2.0 controls mapped to regulation requirements
+- **709 total control mappings**:
+  - 324 ISO 27001:2022 controls mapped to regulation requirements
+  - 385 NIST CSF 2.0 controls mapped to regulation requirements
 
-- **305 sector applicability rules** for determining which regulations apply
+- **323 sector applicability rules** for determining which regulations apply
 
 ---
 

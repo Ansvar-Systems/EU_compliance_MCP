@@ -13,7 +13,7 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 - `scripts/` - Ingestion and build scripts
 - `tests/` - Vitest test suite
 
-## Regulations Included (47 Total)
+## Regulations Included (49 Total)
 
 ### Core Data Protection & Cybersecurity
 | ID | Regulation | CELEX | Source |
@@ -87,6 +87,8 @@ MCP server providing searchable access to EU cybersecurity regulations. Local-fi
 ### Sustainability & Supply Chain
 | ID | Regulation | CELEX | Source |
 |----|------------|-------|--------|
+| CHIPS_ACT | European Chips Act | 32023R1781 | EUR-Lex |
+| CRMA | Critical Raw Materials Act | 32024R1252 | EUR-Lex |
 | CSRD | Corporate Sustainability Reporting Directive | 32022L2464 | EUR-Lex |
 | CSDDD | Corporate Sustainability Due Diligence Directive | 32024L1760 | EUR-Lex |
 | CBAM | Carbon Border Adjustment Mechanism | 32023R0956 | EUR-Lex |
@@ -317,9 +319,9 @@ The `GITHUB_TOKEN` is automatic and used for:
 | Articles | 2,438 |
 | Recitals | 3,712 (43/47 regulations) |
 | Definitions | 1,138 |
-| ISO 27001 Mappings | 312 |
-| NIST CSF 2.0 Mappings | 373 |
-| Applicability Rules | 305 |
+| ISO 27001 Mappings | 324 |
+| NIST CSF 2.0 Mappings | 385 |
+| Applicability Rules | 323 |
 | **Database Size** | **~18MB** |
 
 ## Completed Features

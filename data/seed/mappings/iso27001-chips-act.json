@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "A.5.7",
+    "control_name": "Threat intelligence",
+    "regulation": "CHIPS_ACT",
+    "articles": ["19", "20"],
+    "coverage": "partial",
+    "notes": "Art 19-20 require strategic mapping and monitoring of semiconductor supply chain vulnerabilities and disruptions"
+  },
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "CHIPS_ACT",
+    "articles": ["21", "22"],
+    "coverage": "full",
+    "notes": "Art 21-22 establish key market actor monitoring and alert mechanisms for supply chain security"
+  },
+  {
+    "control_id": "A.5.22",
+    "control_name": "Monitoring, review and change management of supplier services",
+    "regulation": "CHIPS_ACT",
+    "articles": ["20", "22"],
+    "coverage": "full",
+    "notes": "Art 20 continuous monitoring of semiconductor supply chains; Art 22 alert mechanisms for disruptions"
+  },
+  {
+    "control_id": "A.5.23",
+    "control_name": "Information security for use of cloud services",
+    "regulation": "CHIPS_ACT",
+    "articles": ["13", "14"],
+    "coverage": "related",
+    "notes": "Art 13-14 Integrated Production Facilities and Open EU Foundries must ensure security of semiconductor design data and IP"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "CHIPS_ACT",
+    "articles": ["22", "24"],
+    "coverage": "partial",
+    "notes": "Art 22-24 crisis response mechanisms address semiconductor supply vulnerabilities and emergency toolbox measures"
+  },
+  {
+    "control_id": "A.8.9",
+    "control_name": "Configuration management",
+    "regulation": "CHIPS_ACT",
+    "articles": ["13", "17"],
+    "coverage": "related",
+    "notes": "Art 13 Integrated Production Facilities; Art 17 Design Centers of Excellence maintain secure semiconductor design configurations"
+  }
+]

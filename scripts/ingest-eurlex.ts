@@ -55,6 +55,9 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32023R2854': { id: 'DATA_ACT', full_name: 'Data Act', effective_date: '2025-09-12' },
   '32022R2065': { id: 'DSA', full_name: 'Digital Services Act', effective_date: '2024-02-17' },
   '32022R1925': { id: 'DMA', full_name: 'Digital Markets Act', effective_date: '2023-05-02' },
+  // Product & Supply Chain regulations
+  '32023R1781': { id: 'CHIPS_ACT', full_name: 'European Chips Act', effective_date: '2023-09-18' },
+  '32024R1252': { id: 'CRMA', full_name: 'Critical Raw Materials Act', effective_date: '2024-05-23' },
   // UN Regulations (adopted by EU)
   '42021X0387': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system', effective_date: '2021-01-22' },
   '42025X0005': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system (Supplement 3)', effective_date: '2025-01-10' },

@@ -9,7 +9,7 @@
 [![Database](https://img.shields.io/badge/database-pre--built-green)](docs/COVERAGE_GAPS.md)
 [![Recitals](https://img.shields.io/badge/recitals-3500%2B-blue)](docs/COVERAGE_GAPS.md)
 
-Query **37 EU regulations** — from GDPR and AI Act to DORA, MiFID II, eIDAS, Medical Device Regulation, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query **49 EU regulations** — from GDPR and AI Act to DORA, Chips Act, MiFID II, eIDAS, Medical Device Regulation, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
 
@@ -94,11 +94,11 @@ Once connected, just ask naturally:
 
 ## What's Included
 
-- **37 Regulations** — GDPR, DORA, NIS2, AI Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 30 more
-- **2,438 Articles** + 3,712 Recitals + 1,138 Official Definitions
+- **49 Regulations** — GDPR, DORA, NIS2, AI Act, Chips Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 40 more
+- **2,528 Articles** + 3,869 Recitals + 1,226 Official Definitions
 - **Full-Text Search** — Find relevant articles across all regulations instantly
-- **Control Mappings** — 686 mappings to ISO 27001:2022 & NIST CSF 2.0
-- **Sector Rules** — Check which regulations apply to your industry
+- **Control Mappings** — 709 mappings to ISO 27001:2022 & NIST CSF 2.0
+- **Sector Rules** — 323 applicability rules across all sectors and industries
 - **Daily Updates** — Automatic freshness checks against EUR-Lex
 
 **Detailed coverage:** [docs/coverage.md](docs/coverage.md)

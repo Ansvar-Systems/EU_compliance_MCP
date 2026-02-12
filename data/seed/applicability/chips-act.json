@@ -1,0 +1,67 @@
+[
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "manufacturing",
+    "subsector": "semiconductor",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "3",
+    "notes": "Semiconductor design, manufacturing, packaging, and testing facilities are primary targets; eligible for Chips for Europe Initiative support"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "manufacturing",
+    "subsector": "electronics",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "13",
+    "notes": "Electronics manufacturers using semiconductors are part of supply chain; may benefit from Integrated Production Facilities and Open EU Foundries"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "transport",
+    "subsector": "automotive",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "22",
+    "notes": "Automotive sector heavily dependent on semiconductor supply; subject to crisis monitoring and alert mechanisms for supply disruptions"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "digital_infrastructure",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "3",
+    "notes": "Data centers, telecom infrastructure, and cloud providers are key consumers; may participate in European chips infrastructure initiatives"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "energy",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "22",
+    "notes": "Smart grid and renewable energy systems depend on semiconductors; subject to supply chain monitoring"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "healthcare",
+    "applies": true,
+    "confidence": "possible",
+    "basis_article": "22",
+    "notes": "Medical devices use semiconductors; subject to crisis response mechanisms during shortages"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "financial",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "Financial services are semiconductor users, not producers; not subject to Chips Act requirements"
+  },
+  {
+    "regulation": "CHIPS_ACT",
+    "sector": "public_administration",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "Public sector is a semiconductor consumer; may participate in governance (European Semiconductor Board) but not subject to production requirements"
+  }
+]

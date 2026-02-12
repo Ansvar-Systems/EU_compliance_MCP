@@ -1,0 +1,56 @@
+[
+  {
+    "framework": "NIST_CSF",
+    "control_id": "GV.SC-01",
+    "control_name": "Establish and maintain a cybersecurity supply chain risk management policy",
+    "regulation": "CHIPS_ACT",
+    "articles": ["19", "20", "21"],
+    "coverage": "full",
+    "notes": "Art 19-21 establish comprehensive semiconductor supply chain risk management framework"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "GV.SC-02",
+    "control_name": "Establish cybersecurity requirements for suppliers",
+    "regulation": "CHIPS_ACT",
+    "articles": ["13", "21"],
+    "coverage": "partial",
+    "notes": "Art 13 Integrated Production Facilities; Art 21 key market actor requirements"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "ID.RA-02",
+    "control_name": "Cyber threat intelligence is received from information sharing forums",
+    "regulation": "CHIPS_ACT",
+    "articles": ["20", "22"],
+    "coverage": "full",
+    "notes": "Art 20 monitoring and assessment; Art 22 alert mechanisms and information sharing"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "ID.SC-01",
+    "control_name": "Suppliers are identified, prioritized, and assessed",
+    "regulation": "CHIPS_ACT",
+    "articles": ["19", "21"],
+    "coverage": "full",
+    "notes": "Art 19 strategic mapping; Art 21 identification of key market actors in semiconductor supply chain"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "ID.SC-02",
+    "control_name": "Suppliers are monitored for performance",
+    "regulation": "CHIPS_ACT",
+    "articles": ["20", "21", "22"],
+    "coverage": "full",
+    "notes": "Art 20-22 continuous monitoring of semiconductor supply chain performance and disruptions"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "RS.MA-01",
+    "control_name": "The incident response plan is executed during or after an incident",
+    "regulation": "CHIPS_ACT",
+    "articles": ["23", "24"],
+    "coverage": "full",
+    "notes": "Art 23-24 semiconductor crisis stage activation and emergency toolbox response measures"
+  }
+]

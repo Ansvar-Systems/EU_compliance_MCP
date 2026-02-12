@@ -1,0 +1,56 @@
+[
+  {
+    "framework": "NIST_CSF",
+    "control_id": "GV.SC-01",
+    "control_name": "Establish and maintain a cybersecurity supply chain risk management policy",
+    "regulation": "CRMA",
+    "articles": ["4", "5", "18"],
+    "coverage": "full",
+    "notes": "Art 4-5 supply chain due diligence; Art 18-19 strategic mapping and risk management for critical raw materials"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "GV.SC-02",
+    "control_name": "Establish cybersecurity requirements for suppliers",
+    "regulation": "CRMA",
+    "articles": ["5", "15"],
+    "coverage": "partial",
+    "notes": "Art 5 supply chain transparency; Art 15 permitting with security considerations"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "ID.RA-01",
+    "control_name": "Asset vulnerabilities are identified and documented",
+    "regulation": "CRMA",
+    "articles": ["18", "19"],
+    "coverage": "full",
+    "notes": "Art 18-19 identification and monitoring of critical raw materials supply chain vulnerabilities"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "ID.SC-01",
+    "control_name": "Suppliers are identified, prioritized, and assessed",
+    "regulation": "CRMA",
+    "articles": ["4", "18", "19"],
+    "coverage": "full",
+    "notes": "Art 4 strategic projects; Art 18-19 mapping and assessment of critical raw materials suppliers"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "ID.SC-02",
+    "control_name": "Suppliers are monitored for performance",
+    "regulation": "CRMA",
+    "articles": ["19", "29"],
+    "coverage": "full",
+    "notes": "Art 19 continuous monitoring; Art 29 periodic review and update of critical raw materials list"
+  },
+  {
+    "framework": "NIST_CSF",
+    "control_id": "RS.MA-01",
+    "control_name": "The incident response plan is executed during or after an incident",
+    "regulation": "CRMA",
+    "articles": ["23", "24", "25"],
+    "coverage": "full",
+    "notes": "Art 23-25 crisis response mechanisms, emergency toolbox, and supply security measures"
+  }
+]

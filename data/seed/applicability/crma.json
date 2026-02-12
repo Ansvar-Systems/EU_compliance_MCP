@@ -1,0 +1,85 @@
+[
+  {
+    "regulation": "CRMA",
+    "sector": "manufacturing",
+    "subsector": "mining",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "4",
+    "notes": "Mining and extraction of strategic raw materials (lithium, cobalt, rare earths, etc.) subject to permitting, monitoring, and supply chain due diligence"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "manufacturing",
+    "subsector": "battery",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "5",
+    "notes": "Battery manufacturers using critical raw materials must comply with supply chain transparency and strategic stockpiling provisions"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "manufacturing",
+    "subsector": "semiconductor",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "4",
+    "notes": "Semiconductor production uses critical raw materials (silicon, gallium, germanium); subject to supply chain monitoring and risk assessment"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "transport",
+    "subsector": "automotive",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "5",
+    "notes": "EV manufacturers and automotive supply chains using batteries/magnets containing critical raw materials subject to due diligence requirements"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "energy",
+    "subsector": "renewable",
+    "applies": true,
+    "confidence": "definite",
+    "basis_article": "4",
+    "notes": "Wind turbines (permanent magnets), solar panels (silicon), and energy storage systems use critical raw materials; subject to supply chain rules"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "manufacturing",
+    "subsector": "electronics",
+    "applies": true,
+    "confidence": "likely",
+    "basis_article": "5",
+    "notes": "Electronics manufacturers using critical raw materials in components must ensure supply chain transparency"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "digital_infrastructure",
+    "applies": true,
+    "confidence": "possible",
+    "basis_article": "5",
+    "notes": "Data center operators using servers/storage with critical raw materials may be subject to supply chain monitoring during crises"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "financial",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "Financial services do not directly extract or process critical raw materials; not subject to CRMA requirements"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "healthcare",
+    "applies": false,
+    "confidence": "likely",
+    "notes": "Healthcare sector uses medical devices containing critical materials but is typically end-user, not producer; indirect exposure only"
+  },
+  {
+    "regulation": "CRMA",
+    "sector": "public_administration",
+    "applies": false,
+    "confidence": "definite",
+    "notes": "Public sector participates in governance and strategic stockpiling but is not subject to production/supply chain requirements"
+  }
+]

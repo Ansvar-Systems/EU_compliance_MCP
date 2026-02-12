@@ -1,0 +1,50 @@
+[
+  {
+    "control_id": "A.5.7",
+    "control_name": "Threat intelligence",
+    "regulation": "CRMA",
+    "articles": ["18", "19"],
+    "coverage": "partial",
+    "notes": "Art 18-19 strategic mapping and monitoring of critical raw materials supply chain risks and vulnerabilities"
+  },
+  {
+    "control_id": "A.5.19",
+    "control_name": "Information security in supplier relationships",
+    "regulation": "CRMA",
+    "articles": ["4", "5"],
+    "coverage": "full",
+    "notes": "Art 4-5 supply chain due diligence and transparency requirements for critical raw materials"
+  },
+  {
+    "control_id": "A.5.20",
+    "control_name": "Addressing information security within supplier agreements",
+    "regulation": "CRMA",
+    "articles": ["5", "15"],
+    "coverage": "full",
+    "notes": "Art 5 supply chain due diligence; Art 15 permitting procedures with security considerations"
+  },
+  {
+    "control_id": "A.5.22",
+    "control_name": "Monitoring, review and change management of supplier services",
+    "regulation": "CRMA",
+    "articles": ["19", "29"],
+    "coverage": "full",
+    "notes": "Art 19 continuous monitoring; Art 29 regular review and updates of critical raw materials list"
+  },
+  {
+    "control_id": "A.5.30",
+    "control_name": "ICT readiness for business continuity",
+    "regulation": "CRMA",
+    "articles": ["23", "25"],
+    "coverage": "partial",
+    "notes": "Art 23-25 crisis response mechanisms and emergency supply measures ensure business continuity"
+  },
+  {
+    "control_id": "A.8.8",
+    "control_name": "Management of technical vulnerabilities",
+    "regulation": "CRMA",
+    "articles": ["23", "24"],
+    "coverage": "partial",
+    "notes": "Art 23-24 address supply chain vulnerabilities through alert mechanisms and emergency toolbox"
+  }
+]
