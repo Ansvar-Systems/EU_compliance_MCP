@@ -1,11 +1,11 @@
-import type Database from 'better-sqlite3';
+import type Database from '@ansvar/mcp-sqlite';
 import type { DatabaseAdapter, QueryResult } from './types.js';
 
 /**
  * Adapter that wraps better-sqlite3 Database to match DatabaseAdapter interface.
  * Allows existing SQLite-based entry points (stdio) to work with the new adapter interface.
  */
-export function createSqliteAdapter(db: Database.Database): DatabaseAdapter {
+export function createSqliteAdapter(db: InstanceType<typeof Database>): DatabaseAdapter {
   return {
     type: 'sqlite' as const,
 

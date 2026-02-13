@@ -72,7 +72,6 @@
     "src"
   ],
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.13",
     "@types/express": "^5.0.0",
     "@types/glob": "^9.0.0",
     "@types/jsdom": "^27.0.0",
@@ -92,8 +91,8 @@
     }
   },
   "dependencies": {
+    "@ansvar/mcp-sqlite": "^1.0.3",
     "@modelcontextprotocol/sdk": "^1.26.0",
-    "better-sqlite3": "^12.6.2",
     "jsdom": "^27.4.0",
     "pg": "^8.13.2"
   }

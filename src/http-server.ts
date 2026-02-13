@@ -14,7 +14,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
-import Database from 'better-sqlite3';
+import Database from '@ansvar/mcp-sqlite';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { randomUUID } from 'crypto';
