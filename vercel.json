@@ -6,7 +6,7 @@
     "api/mcp.ts": {
       "maxDuration": 30,
       "memory": 512,
-      "includeFiles": "{data/regulations.db,node_modules/**/node-sqlite3-wasm/**/*.wasm}"
+      "includeFiles": "{data/regulations.db,node_modules/.pnpm/node-sqlite3-wasm*/node_modules/node-sqlite3-wasm/dist/node-sqlite3-wasm.wasm}"
     }
   },
   "rewrites": [

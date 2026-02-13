@@ -44,3 +44,4 @@ internal/
 
 # MCPB bundles (build artifacts, created by CI)
 *.mcpb
+.vercel
