@@ -5,7 +5,8 @@
   "functions": {
     "api/mcp.ts": {
       "maxDuration": 30,
-      "memory": 512
+      "memory": 512,
+      "includeFiles": "data/regulations.db"
     }
   },
   "rewrites": [

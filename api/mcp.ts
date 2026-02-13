@@ -2,17 +2,16 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import Database from '@ansvar/mcp-sqlite';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { join } from 'path';
 
 import { registerTools } from '../src/tools/registry.js';
 import { createSqliteAdapter } from '../src/database/sqlite-adapter.js';
 import type { DatabaseAdapter } from '../src/database/types.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const DB_PATH = join(__dirname, '..', 'data', 'regulations.db');
+// Vercel bundles includeFiles relative to project root
+// process.cwd() points to the project root in Vercel Lambda
+const DB_PATH = process.env.EU_COMPLIANCE_DB_PATH
+  || join(process.cwd(), 'data', 'regulations.db');
 
 let db: DatabaseAdapter | null = null;
 
@@ -25,6 +24,16 @@ function getDatabase(): DatabaseAdapter {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // CORS headers for remote MCP clients
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, mcp-session-id');
+
+  if (req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
+
   const database = getDatabase();
 
   const server = new Server(
