@@ -1,0 +1,82 @@
+{
+  "manifest_version": "0.3",
+  "name": "eu-regulations-mcp",
+  "display_name": "EU Regulations MCP",
+  "version": "1.0.0",
+  "description": "Query 49 EU cybersecurity regulations directly from Claude. Search GDPR, NIS2, DORA, EU AI Act, Cyber Resilience Act, and more with full-text search, cross-regulation comparison, and compliance mapping.",
+  "long_description": "The EU Regulations MCP Server provides comprehensive, searchable access to 49 European regulations covering data protection, cybersecurity, digital services, financial services, healthcare, product safety, and sustainability.\n\n**Key capabilities:**\n- Full-text search across 2,500+ regulation articles\n- Cross-regulation requirement comparison with synonym expansion\n- ISO 27001:2022 and NIST CSF 2.0 control mappings\n- Sector-based applicability analysis\n- Evidence and audit artifact requirements\n- Official term definitions from all regulations\n\n**Regulations include:** GDPR, NIS2, DORA (+ 10 RTS/ITS), EU AI Act, Cyber Resilience Act, eIDAS 2.0, DSA, DMA, Data Act, MiCA, PSD2, MDR, EHDS, and many more.",
+  "author": {
+    "name": "Ansvar Systems",
+    "email": "hello@ansvar.eu",
+    "url": "https://ansvar.eu"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP"
+  },
+  "homepage": "https://ansvar.eu",
+  "keywords": [
+    "compliance",
+    "gdpr",
+    "nis2",
+    "dora",
+    "ai-act",
+    "eu-regulations",
+    "cybersecurity",
+    "european-union"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/index.js"],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "list_regulations",
+      "description": "List all available EU regulations and their structure"
+    },
+    {
+      "name": "get_article",
+      "description": "Retrieve the full text of a specific regulation article"
+    },
+    {
+      "name": "get_recital",
+      "description": "Retrieve a recital from a regulation for interpretive context"
+    },
+    {
+      "name": "search_regulations",
+      "description": "Full-text search across all EU regulation articles"
+    },
+    {
+      "name": "get_definitions",
+      "description": "Look up official term definitions from EU regulations"
+    },
+    {
+      "name": "compare_requirements",
+      "description": "Compare how multiple regulations address the same topic"
+    },
+    {
+      "name": "map_controls",
+      "description": "Map ISO 27001 or NIST CSF controls to regulation requirements"
+    },
+    {
+      "name": "check_applicability",
+      "description": "Determine which regulations apply based on sector and characteristics"
+    },
+    {
+      "name": "get_evidence_requirements",
+      "description": "Get compliance evidence and audit artifacts for regulation requirements"
+    }
+  ],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}

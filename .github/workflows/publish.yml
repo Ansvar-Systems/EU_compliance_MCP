@@ -37,10 +37,6 @@ jobs:
 
       - run: pnpm install --frozen-lockfile --ignore-scripts
 
-      - name: Rebuild native dependencies
-        run: |
-          cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3
-          npm run install
 
       - run: pnpm run build
       - run: pnpm run build:db

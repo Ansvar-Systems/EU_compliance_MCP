@@ -1,13 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "eu.ansvar/eu-regulations-mcp",
-  "description": "Query 47 EU regulations (GDPR, NIS2, DORA, AI Act) - 2,438 articles, 3,712 recitals, ISO 27001",
+  "description": "Query 49 EU regulations (GDPR, NIS2, DORA, AI Act, CRA) - 2,528 articles, 3,869 recitals, ISO 27001 & NIST CSF 2.0 mappings",
   "repository": {
     "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP",
     "source": "github"
   },
   "homepage": "https://ansvar.eu",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "keywords": [
     "compliance",
@@ -25,7 +25,7 @@
     {
       "registryType": "npm",
       "identifier": "@ansvar/eu-regulations-mcp",
-      "version": "0.7.1",
+      "version": "1.0.0",
       "transport": {
         "type": "stdio"
       }

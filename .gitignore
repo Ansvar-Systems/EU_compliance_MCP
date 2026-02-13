@@ -41,3 +41,6 @@ internal/
 .worktrees/
 .dev.vars
 .wrangler/
+
+# MCPB bundles (build artifacts, created by CI)
+*.mcpb

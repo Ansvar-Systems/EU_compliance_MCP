@@ -1,0 +1,16 @@
+name: Build MCPB Bundle
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mcpb:
+    uses: Ansvar-Systems/mcp-server-template/.github/workflows/mcpb-bundle-node.yml@main
+    with:
+      server-name: eu-regulations-mcp
