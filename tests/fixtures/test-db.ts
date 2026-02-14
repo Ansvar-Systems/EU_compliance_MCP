@@ -101,6 +101,29 @@ CREATE TABLE applicability_rules (
   basis_article TEXT,
   notes TEXT
 );
+
+-- Source registry
+CREATE TABLE source_registry (
+  regulation TEXT PRIMARY KEY REFERENCES regulations(id),
+  celex_id TEXT NOT NULL,
+  eur_lex_version TEXT,
+  last_fetched TEXT,
+  articles_expected INTEGER,
+  articles_parsed INTEGER,
+  quality_status TEXT CHECK(quality_status IN ('complete', 'review', 'incomplete')),
+  notes TEXT
+);
+
+-- Evidence requirements
+CREATE TABLE evidence_requirements (
+  id INTEGER PRIMARY KEY,
+  regulation TEXT NOT NULL REFERENCES regulations(id),
+  article TEXT NOT NULL,
+  requirement_summary TEXT,
+  evidence_type TEXT,
+  artifact_name TEXT,
+  description TEXT
+);
 `;
 
 const SAMPLE_DATA = `
@@ -173,6 +196,18 @@ INSERT INTO applicability_rules (regulation, sector, subsector, applies, confide
   ('DORA', 'financial', 'bank', 1, 'definite', '2', 'Credit institutions in scope'),
   ('DORA', 'financial', 'insurance', 1, 'definite', '2', 'Insurance undertakings in scope'),
   ('DORA', 'financial', 'investment', 1, 'definite', '2', 'Investment firms in scope');
+
+-- Sample source registry entries
+INSERT INTO source_registry (regulation, celex_id, eur_lex_version, last_fetched, articles_expected, articles_parsed, quality_status) VALUES
+  ('GDPR', '32016R0679', '2016-05-04', '2026-02-14T06:00:00Z', 6, 6, 'complete'),
+  ('NIS2', '32022L2555', '2022-12-27', '2026-02-14T06:00:00Z', 4, 4, 'complete'),
+  ('DORA', '32022R2554', '2022-12-27', '2026-02-14T06:00:00Z', 4, 4, 'complete');
+
+-- Sample evidence requirements
+INSERT INTO evidence_requirements (regulation, article, requirement_summary, evidence_type, artifact_name, description) VALUES
+  ('GDPR', '32', 'Security of processing', 'policy', 'Information Security Policy', 'Document describing technical and organisational measures'),
+  ('GDPR', '33', 'Breach notification process', 'procedure', 'Breach Notification Procedure', 'Process for notifying supervisory authority within 72 hours'),
+  ('DORA', '17', 'Incident management', 'procedure', 'ICT Incident Management Process', 'Documented process for detecting, managing and notifying ICT incidents');
 `;
 
 export function createTestDatabase(): DatabaseAdapter {

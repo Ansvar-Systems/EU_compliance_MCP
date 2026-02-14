@@ -14,6 +14,7 @@ import { mapControls, type MapControlsInput } from './map.js';
 import { checkApplicability, type ApplicabilityInput } from './applicability.js';
 import { getDefinitions, type DefinitionsInput } from './definitions.js';
 import { getEvidenceRequirements, type EvidenceInput } from './evidence.js';
+import { getAbout, type AboutContext } from './about.js';
 
 interface ToolDefinition {
   name: string;
@@ -261,13 +262,42 @@ export const TOOLS: ToolDefinition[] = [
 ];
 
 /**
+ * Create the about tool with captured startup context.
+ * Uses a closure so the handler signature stays compatible with ToolDefinition.
+ */
+function createAboutTool(context: AboutContext): ToolDefinition {
+  return {
+    name: 'about',
+    description:
+      'Server metadata, dataset statistics, freshness, and provenance. ' +
+      'Call this to verify data coverage, currency, and content basis before relying on results.',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+      required: [],
+    },
+    handler: async (db) => {
+      return await getAbout(db, context);
+    },
+  };
+}
+
+/**
+ * Build the full tools list including context-dependent tools.
+ */
+export function buildTools(context: AboutContext): ToolDefinition[] {
+  return [...TOOLS, createAboutTool(context)];
+}
+
+/**
  * Register all tools with an MCP server instance.
  * Use this for both stdio and HTTP servers to ensure parity.
  */
-export function registerTools(server: Server, db: DatabaseAdapter): void {
+export function registerTools(server: Server, db: DatabaseAdapter, context?: AboutContext): void {
+  const allTools = context ? buildTools(context) : TOOLS;
   // List available tools
   server.setRequestHandler(ListToolsRequestSchema, async () => ({
-    tools: TOOLS.map(tool => ({
+    tools: allTools.map(tool => ({
       name: tool.name,
       description: tool.description,
       inputSchema: tool.inputSchema,
@@ -277,7 +307,7 @@ export function registerTools(server: Server, db: DatabaseAdapter): void {
   // Handle tool calls
   server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const { name, arguments: args } = request.params;
-    const tool = TOOLS.find(t => t.name === name);
+    const tool = allTools.find(t => t.name === name);
 
     if (!tool) {
       return {

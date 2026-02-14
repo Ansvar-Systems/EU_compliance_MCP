@@ -9,16 +9,23 @@ import {
 import Database from '@ansvar/mcp-sqlite';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { createHash } from 'crypto';
+import { readFileSync, statSync } from 'fs';
 
 import { registerTools } from './tools/registry.js';
 import { createSqliteAdapter } from './database/sqlite-adapter.js';
 import type { DatabaseAdapter } from './database/types.js';
+import type { AboutContext } from './tools/about.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Database path - look for regulations.db in data folder
 const DB_PATH = process.env.EU_COMPLIANCE_DB_PATH || join(__dirname, '..', 'data', 'regulations.db');
+
+// Read package version
+const PKG_PATH = join(__dirname, '..', 'package.json');
+const pkgVersion: string = JSON.parse(readFileSync(PKG_PATH, 'utf-8')).version;
 
 let db: DatabaseAdapter;
 
@@ -33,10 +40,32 @@ function getDatabase(): DatabaseAdapter {
   }
   return db;
 }
+
+/**
+ * Compute about context at startup: version, DB fingerprint, build date.
+ */
+function computeAboutContext(): AboutContext {
+  let fingerprint = 'unknown';
+  let dbBuilt = new Date().toISOString();
+
+  try {
+    const dbBuffer = readFileSync(DB_PATH);
+    fingerprint = createHash('sha256').update(dbBuffer).digest('hex').slice(0, 12);
+    const dbStat = statSync(DB_PATH);
+    dbBuilt = dbStat.mtime.toISOString();
+  } catch {
+    // Non-fatal: fingerprint stays 'unknown' if DB can't be read for hashing
+  }
+
+  return { version: pkgVersion, fingerprint, dbBuilt };
+}
+
+const aboutContext = computeAboutContext();
+
 const server = new Server(
   {
     name: 'eu-regulations-mcp',
-    version: '0.1.0',
+    version: pkgVersion,
   },
   {
     capabilities: {
@@ -45,8 +74,8 @@ const server = new Server(
   }
 );
 
-// Register all tools using shared registry
-registerTools(server, getDatabase());
+// Register all tools using shared registry (with about context)
+registerTools(server, getDatabase(), aboutContext);
 
 // Start the server
 async function main() {

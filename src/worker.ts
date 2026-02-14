@@ -36,7 +36,7 @@ import { RateLimiter } from './middleware/rate-limit.js';
 import type { DatabaseAdapter } from './database/types.js';
 
 // Import tool registry (single source of truth for tools)
-import { TOOLS } from './tools/registry.js';
+import { TOOLS, buildTools } from './tools/registry.js';
 
 // Import tool handlers
 import { searchRegulations } from './tools/search.js';
@@ -48,6 +48,15 @@ import { mapControls } from './tools/map.js';
 import { checkApplicability } from './tools/applicability.js';
 import { getDefinitions } from './tools/definitions.js';
 import { getEvidenceRequirements } from './tools/evidence.js';
+import { getAbout } from './tools/about.js';
+
+// Worker about context (no filesystem access — uses static values)
+const WORKER_VERSION = '1.0.0';
+const WORKER_ABOUT_CONTEXT = {
+  version: WORKER_VERSION,
+  fingerprint: 'postgres',
+  dbBuilt: 'live',
+};
 
 interface Env {
   DATABASE_URL: string;
@@ -174,14 +183,15 @@ function handleListTools(origin?: string): Response {
     return headers;
   }
 
+  const allTools = buildTools(WORKER_ABOUT_CONTEXT);
   return new Response(
     JSON.stringify({
-      tools: TOOLS.map(tool => ({
+      tools: allTools.map(tool => ({
         name: tool.name,
         description: tool.description,
         inputSchema: tool.inputSchema,
       })),
-      count: TOOLS.length,
+      count: allTools.length,
       timestamp: new Date().toISOString(),
     }),
     {
@@ -216,7 +226,7 @@ async function handleHealthCheck(env: Env, origin?: string): Promise<Response> {
       JSON.stringify({
         status: 'healthy',
         server: 'eu-regulations-mcp',
-        version: '0.6.5',
+        version: WORKER_VERSION,
         database: 'connected',
         timestamp: new Date().toISOString(),
       }),
@@ -452,6 +462,9 @@ async function handleToolCall(
       case 'get_evidence_requirements':
         result = await getEvidenceRequirements(database, body.params);
         break;
+      case 'about':
+        result = await getAbout(database, WORKER_ABOUT_CONTEXT);
+        break;
       default:
         const baseHeaders = {
           'Content-Type': 'application/json',
@@ -630,7 +643,7 @@ export default {
         return new Response(
           JSON.stringify({
             server: 'eu-regulations-mcp',
-            version: '0.6.5',
+            version: WORKER_VERSION,
             description:
               'HTTP API for EU cybersecurity regulations (ChatGPT/Copilot compatible)',
             endpoints: {
