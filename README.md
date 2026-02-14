@@ -34,11 +34,52 @@ This MCP server makes EU regulations **searchable, cross-referenceable, and AI-r
 
 ## Quick Start
 
-### Installation
+### Use Remotely (No Install Needed)
 
-**Option 1: Claude Desktop (Recommended)**
+> Connect directly to the hosted version — zero dependencies, nothing to install.
 
-Add to your `claude_desktop_config.json`:
+**Endpoint:** `https://eu-regulations-mcp.vercel.app/mcp`
+
+| Client | How to Connect |
+|--------|---------------|
+| **Claude.ai** | Settings > Connectors > Add Integration > paste URL |
+| **Claude Code** | `claude mcp add eu-regulations --transport http https://eu-regulations-mcp.vercel.app/mcp` |
+| **Claude Desktop** | Add to config (see below) |
+| **GitHub Copilot** | Add to VS Code settings (see below) |
+
+**Claude Desktop** — add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "eu-regulations": {
+      "type": "url",
+      "url": "https://eu-regulations-mcp.vercel.app/mcp"
+    }
+  }
+}
+```
+
+**GitHub Copilot** — add to VS Code `settings.json`:
+
+```json
+{
+  "github.copilot.chat.mcp.servers": {
+    "eu-regulations": {
+      "type": "http",
+      "url": "https://eu-regulations-mcp.vercel.app/mcp"
+    }
+  }
+}
+```
+
+### Use Locally (npm)
+
+```bash
+npx @ansvar/eu-regulations-mcp
+```
+
+**Claude Desktop** — add to `claude_desktop_config.json`:
 
 **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
@@ -54,16 +95,7 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-Restart Claude Desktop. Done!
-
-**Option 2: MCP Registry**
-
-Browse and install from the [official MCP registry](https://registry.modelcontextprotocol.io/):
-- Search for "EU Regulations" or view directly: [`eu.ansvar/eu-regulations-mcp`](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
-- One-click install (when registry integration is live in Claude Desktop)
-- Automatic updates when new versions are released
-
-**Option 3: Cursor / VS Code**
+**Cursor / VS Code:**
 
 ```json
 {
@@ -75,16 +107,6 @@ Browse and install from the [official MCP registry](https://registry.modelcontex
   }
 }
 ```
-
-**Option 4: Global npm Install**
-
-```bash
-npm install -g @ansvar/eu-regulations-mcp
-```
-
-Then use `"command": "eu-regulations-mcp"` in your config (without npx).
-
----
 
 ## Example Queries
 
