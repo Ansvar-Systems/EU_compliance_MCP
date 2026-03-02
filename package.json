@@ -101,8 +101,12 @@
       "hono": ">=4.11.7",
       "ajv": ">=8.18.0",
       "qs": ">=6.14.2",
-      "@modelcontextprotocol/sdk": ">=1.26.0"
+      "@modelcontextprotocol/sdk": ">=1.26.0",
+      "basic-ftp": "^5.2.0"
     }
+  },
+  "overrides": {
+    "basic-ftp": "^5.2.0"
   },
   "dependencies": {
     "@ansvar/mcp-sqlite": "^1.0.3",
