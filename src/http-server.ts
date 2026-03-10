@@ -96,10 +96,8 @@ function createMcpServer(): Server {
 
 // Start HTTP server with Streamable HTTP transport
 async function main() {
-  const mcpServer = createMcpServer();
-
-  // Map to store transports by session ID
-  const transports = new Map<string, StreamableHTTPServerTransport>();
+  // Map to store transports and their associated MCP server instances by session ID
+  const sessions = new Map<string, { transport: StreamableHTTPServerTransport; server: Server }>();
 
   const httpServer = createServer(async (req, res) => {
     const url = new URL(req.url || '/', `http://localhost:${PORT}`);
@@ -117,23 +115,27 @@ async function main() {
       const sessionId = req.headers['mcp-session-id'] as string | undefined;
 
       let transport: StreamableHTTPServerTransport;
+      let mcpServer: Server | undefined;
 
-      if (sessionId && transports.has(sessionId)) {
+      if (sessionId && sessions.has(sessionId)) {
         // Reuse existing transport for this session
-        transport = transports.get(sessionId)!;
+        transport = sessions.get(sessionId)!.transport;
       } else {
-        // Create new transport with session ID generator
+        // Create a new MCP server + transport per session to avoid
+        // "Already connected to a transport" errors on concurrent connections
+        mcpServer = createMcpServer();
+
         transport = new StreamableHTTPServerTransport({
           sessionIdGenerator: () => randomUUID(),
         });
 
-        // Connect MCP server to transport
+        // Connect this session's MCP server to its transport
         await mcpServer.connect(transport);
 
-        // Store transport by session ID once it's assigned
+        // Clean up session on close
         transport.onclose = () => {
           if (transport.sessionId) {
-            transports.delete(transport.sessionId);
+            sessions.delete(transport.sessionId);
           }
         };
       }
@@ -141,9 +143,9 @@ async function main() {
       // Handle the request
       await transport.handleRequest(req, res);
 
-      // Store transport if new session was created
-      if (transport.sessionId && !transports.has(transport.sessionId)) {
-        transports.set(transport.sessionId, transport);
+      // Store session if new
+      if (transport.sessionId && !sessions.has(transport.sessionId) && mcpServer) {
+        sessions.set(transport.sessionId, { transport, server: mcpServer });
       }
 
       return;
