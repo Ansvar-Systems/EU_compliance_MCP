@@ -58,7 +58,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/ansvar-systems/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/nenna-ai-gmbh/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
             type=raw,value=dev,enable=${{ github.ref == 'refs/heads/dev' }}
@@ -82,7 +82,7 @@ jobs:
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|-------|-------|" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Image | \`${{ env.REGISTRY }}/ansvar-systems/${{ env.IMAGE_NAME }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Image | \`${{ env.REGISTRY }}/nenna-ai-gmbh/${{ env.IMAGE_NAME }}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Tags | $(echo '${{ steps.meta.outputs.tags }}' | tr '\n' ', ') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Branch | \`${{ github.ref_name }}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Commit | \`${{ github.sha }}\` |" >> "$GITHUB_STEP_SUMMARY"
