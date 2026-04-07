@@ -1,4 +1,5 @@
 import type { DatabaseAdapter } from '../database/types.js';
+import { buildCitation } from '../utils/citation.js';
 
 export interface GetRecitalInput {
   regulation: string;
@@ -56,5 +57,11 @@ export async function getRecital(
     recital_number: row.recital_number,
     text: row.text,
     related_articles: row.related_articles ? JSON.parse(row.related_articles) : null,
+    _citation: buildCitation(
+      `${row.regulation} Recital ${row.recital_number}`,
+      `${row.regulation} Recital ${row.recital_number}`,
+      'get_recital',
+      { regulation, recital_number: String(recital_number) },
+    ),
   };
 }

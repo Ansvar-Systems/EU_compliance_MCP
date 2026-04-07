@@ -1,5 +1,6 @@
 import type { DatabaseAdapter } from '../database/types.js';
 import { escapeFts5Query } from './fts-utils.js';
+import { buildCitation } from '../utils/citation.js';
 
 export interface SearchGuidanceInput {
   query: string;
@@ -137,7 +138,17 @@ export async function getGuidanceSection(
 
   const result = await db.query(sql, [document_id, section_number]);
   if (result.rows.length === 0) return null;
-  return result.rows[0] as GuidanceSection;
+  const section = result.rows[0] as GuidanceSection;
+  return {
+    ...section,
+    _citation: buildCitation(
+      `${section.document_reference} Section ${section.section_number}`,
+      `${section.title} — ${section.document_reference}`,
+      'get_guidance_section',
+      { document_id, section_number },
+      section.pdf_url,
+    ),
+  } as GuidanceSection & { _citation: ReturnType<typeof buildCitation> };
 }
 
 export async function listGuidance(

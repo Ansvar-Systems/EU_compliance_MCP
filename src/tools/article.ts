@@ -1,4 +1,5 @@
 import type { DatabaseAdapter } from '../database/types.js';
+import { buildCitation } from '../utils/citation.js';
 
 export interface GetArticleInput {
   regulation: string;
@@ -66,6 +67,10 @@ export async function getArticle(
     truncated = true;
   }
 
+  const displayText = row.title
+    ? `${row.regulation} Article ${row.article_number} — ${row.title}`
+    : `${row.regulation} Article ${row.article_number}`;
+
   return {
     regulation: row.regulation,
     article_number: row.article_number,
@@ -77,5 +82,11 @@ export async function getArticle(
     truncated,
     original_length: truncated ? originalLength : undefined,
     token_estimate: truncated ? tokenEstimate : undefined,
+    _citation: buildCitation(
+      `${row.regulation} Article ${row.article_number}`,
+      displayText,
+      'get_article',
+      { regulation, article },
+    ),
   };
 }
