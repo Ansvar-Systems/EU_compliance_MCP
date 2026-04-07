@@ -1,4 +1,5 @@
 import type { DatabaseAdapter } from '../database/types.js';
+import { buildCitation } from '../utils/citation.js';
 
 export interface DefinitionsInput {
   term: string;
@@ -53,5 +54,11 @@ export async function getDefinitions(
     regulation: row.regulation,
     article: row.article,
     definition: row.definition,
+    _citation: buildCitation(
+      `${row.regulation} — ${row.term}`,
+      `Definition of "${row.term}" in ${row.regulation} (${row.article})`,
+      'get_definitions',
+      { term: row.term, ...(regulation ? { regulation } : {}) },
+    ),
   }));
 }
