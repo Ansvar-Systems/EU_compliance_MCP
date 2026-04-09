@@ -32,6 +32,8 @@ import {
   listGuidance,
   type ListGuidanceInput,
 } from './guidance.js';
+import { listSources } from './list-sources.js';
+import { checkDataFreshness } from './freshness.js';
 
 interface ToolDefinition {
   name: string;
@@ -524,6 +526,32 @@ export const TOOLS: ToolDefinition[] = [
       return await listGuidance(db, input);
     },
   },
+  {
+    name: 'list_sources',
+    description:
+      'List all data sources used by this MCP server, including their licenses, content types, ' +
+      'and coverage. Use this to understand data provenance before relying on results for legal purposes.',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+    },
+    handler: async (_db, _args) => {
+      return listSources();
+    },
+  },
+  {
+    name: 'check_data_freshness',
+    description:
+      'Check when regulation data was last updated against EUR-Lex. Returns per-source freshness ' +
+      'timestamps and the update check method. Use this to assess data currency before time-sensitive analysis.',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+    },
+    handler: async (db, _args) => {
+      return await checkDataFreshness(db);
+    },
+  },
 ];
 
 /**
@@ -583,11 +611,28 @@ export function registerTools(server: Server, db: DatabaseAdapter, context?: Abo
 
     try {
       const result = await tool.handler(db, args || {});
+      const _meta = {
+        disclaimer:
+          'Content is derived from EUR-Lex official texts and is not an official legal publication. ' +
+          'Only documents published in the Official Journal of the EU are legally authentic (Article 297 TFEU).',
+        copyright:
+          'EUR-Lex content reusable under EUR-Lex reuse policy (CC BY 4.0). Server code: Apache-2.0.',
+        source_url: 'https://eur-lex.europa.eu',
+        data_age: new Date().toISOString().split('T')[0],
+      };
+      const wrapped =
+        typeof result === 'string'
+          ? result
+          : Array.isArray(result)
+          ? { data: result, _meta }
+          : result && typeof result === 'object'
+          ? { ...result, _meta }
+          : { data: result, _meta };
       return {
         content: [
           {
             type: 'text',
-            text: typeof result === 'string' ? result : JSON.stringify(result, null, 2),
+            text: typeof wrapped === 'string' ? wrapped : JSON.stringify(wrapped, null, 2),
           },
         ],
       };
