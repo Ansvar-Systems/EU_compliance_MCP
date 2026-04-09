@@ -12,6 +12,7 @@ on:
 permissions:
   contents: read
   security-events: write
+  actions: read
 
 jobs:
   scan:
@@ -33,7 +34,8 @@ jobs:
           ignore-unfixed: false
 
       - name: Upload Trivy results to GitHub Security
-        uses: github/codeql-action/upload-sarif@v3
+        continue-on-error: true
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: 'trivy-results.sarif'
