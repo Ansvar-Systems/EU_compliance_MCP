@@ -1,6 +1,6 @@
 # EU Regulations MCP Server
 
-**The EUR-Lex alternative for the AI age.**
+MCP server providing structured access to full-text EU regulations via Claude, Cursor, and other MCP-compatible clients.
 
 [![npm version](https://badge.fury.io/js/@ansvar%2Feu-regulations-mcp.svg)](https://www.npmjs.com/package/@ansvar/eu-regulations-mcp)
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
@@ -10,7 +10,7 @@
 [![Database](https://img.shields.io/badge/database-pre--built-green)](docs/COVERAGE_GAPS.md)
 [![Recitals](https://img.shields.io/badge/recitals-3500%2B-blue)](docs/COVERAGE_GAPS.md)
 
-Query **50 EU regulations** — from GDPR and AI Act to DORA, Chips Act, MiFID II, eIDAS, Medical Device Regulation, MDCG cybersecurity guidance, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query **49 EU regulations** — from GDPR and AI Act to DORA, Chips Act, MiFID II, eIDAS, Medical Device Regulation, MDCG cybersecurity guidance, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
 
@@ -242,8 +242,8 @@ If you deploy a remote authenticated endpoint, use OAuth 2.0 over TLS with certi
 This server is part of **Ansvar's Compliance Suite** - three MCP servers that work together for end-to-end compliance coverage:
 
 ### 🇪🇺 EU Regulations MCP (This Project)
-**Query 47 EU regulations directly from Claude**
-- GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 39 more
+**Query 49 EU regulations directly from Claude**
+- GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 41 more
 - Full regulatory text with article-level search
 - Cross-regulation reference and comparison
 - **Install:** `npx @ansvar/eu-regulations-mcp`
@@ -317,7 +317,7 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 
 We build AI-accelerated threat modeling and compliance tools for automotive, financial services, and healthcare. This MCP server started as our internal reference tool — turns out everyone building for EU markets has the same EUR-Lex frustrations.
 
-So we're open-sourcing it. Navigating 37 regulations shouldn't require a legal team.
+So we're open-sourcing it. Navigating 49 regulations shouldn't require a legal team.
 
 **[ansvar.eu](https://ansvar.eu)** — Stockholm, Sweden
 
@@ -325,7 +325,7 @@ So we're open-sourcing it. Navigating 37 regulations shouldn't require a legal t
 
 ## Documentation
 
-- **[Coverage Details](docs/coverage.md)** — All 37 regulations with article counts
+- **[Coverage Details](docs/coverage.md)** — All 49 regulations with article counts
 - **[Use Cases](docs/use-cases.md)** — Industry-specific guidance (fintech, healthcare, IoT, etc.)
 - **[Available Tools](docs/tools.md)** — Detailed tool descriptions
 - **[Development Guide](docs/development.md)** — Adding regulations, webhooks, CI/CD
