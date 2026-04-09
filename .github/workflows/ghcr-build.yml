@@ -11,16 +11,16 @@
 # No manual deploy step needed.
 #
 # DATABASE PROVISIONING:
-# If the Dockerfile COPYs a .db file and that file is missing, empty, or an
-# LFS pointer after checkout, this workflow downloads database.db.gz from the
-# repo's latest GitHub Release. This handles two failure modes:
-#   1. Repos using Git LFS where the runner lacks LFS (fallback to release)
-#   2. Repos with data/*.db in .gitignore (placeholder only, real DB in release)
+# Handles three scenarios for getting data into the Docker image:
+#   1. Dockerfile COPYs a .db file that's in the repo (normal case — no action)
+#   2. Dockerfile COPYs a .db file but it's LFS/gitignored — downloads from release
+#   3. Dockerfile has NO COPY data/ (sector MCPs) — downloads from release and
+#      patches the Dockerfile to inject the COPY + update the DB_PATH env var
 #
 # PREREQUISITES:
 # 1. Repository must have a Dockerfile at the root (or specify path)
 # 2. GITHUB_TOKEN has automatic write:packages permission (no secrets needed)
-# 3. For repos with gitignored/LFS databases: a GitHub Release with database.db.gz
+# 3. For repos with gitignored/LFS/missing databases: a GitHub Release with database.db.gz
 #
 # =============================================================================
 
@@ -58,47 +58,80 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Check if Dockerfile copies any .db file
+          # --- Case 1 & 2: Dockerfile COPYs a .db file ---
           DB_FILES=$(grep -oP 'COPY\s+\K(data/\S+\.db)' Dockerfile 2>/dev/null || true)
-          if [ -z "$DB_FILES" ]; then
-            echo "No .db files in Dockerfile COPY, skipping"
+          if [ -n "$DB_FILES" ]; then
+            for DB_FILE in $DB_FILES; do
+              if [ -f "$DB_FILE" ] && [ "$(wc -c < "$DB_FILE")" -gt 1024 ]; then
+                echo "OK: $DB_FILE is valid ($(du -sh "$DB_FILE" | cut -f1))"
+                continue
+              fi
+
+              # Detect LFS pointer or empty file
+              if [ -f "$DB_FILE" ]; then
+                if head -1 "$DB_FILE" 2>/dev/null | grep -q 'version https://git-lfs'; then
+                  echo "WARN: $DB_FILE is an LFS pointer, not actual data"
+                else
+                  echo "WARN: $DB_FILE exists but is empty or too small ($(wc -c < "$DB_FILE") bytes)"
+                fi
+              else
+                echo "WARN: $DB_FILE does not exist"
+              fi
+
+              # Download from GitHub Releases
+              TAG=$(gh release view --json tagName -q '.tagName' 2>/dev/null) || true
+              if [ -z "$TAG" ]; then
+                echo "ERROR: $DB_FILE invalid and no GitHub Release available"
+                exit 1
+              fi
+
+              echo "Downloading database.db.gz from release $TAG..."
+              mkdir -p data
+              if gh release download "$TAG" -p "database.db.gz" -D data/ 2>/dev/null; then
+                gunzip -f data/database.db.gz
+                echo "OK: Downloaded $(du -sh data/database.db | cut -f1) from release $TAG"
+              else
+                echo "ERROR: Could not download database.db.gz from release $TAG"
+                exit 1
+              fi
+            done
             exit 0
           fi
 
-          for DB_FILE in $DB_FILES; do
-            if [ -f "$DB_FILE" ] && [ "$(wc -c < "$DB_FILE")" -gt 1024 ]; then
-              echo "OK: $DB_FILE is valid ($(du -sh "$DB_FILE" | cut -f1))"
-              continue
-            fi
+          # --- Case 3: Dockerfile has NO COPY data/ (sector MCPs) ---
+          # Check if a GitHub Release has a database asset
+          TAG=$(gh release view --json tagName -q '.tagName' 2>/dev/null) || true
+          if [ -z "$TAG" ]; then
+            echo "No .db COPY in Dockerfile and no release — nothing to provision"
+            exit 0
+          fi
 
-            # Detect LFS pointer or empty file
-            if [ -f "$DB_FILE" ]; then
-              if head -1 "$DB_FILE" 2>/dev/null | grep -q 'version https://git-lfs'; then
-                echo "WARN: $DB_FILE is an LFS pointer, not actual data"
-              else
-                echo "WARN: $DB_FILE exists but is empty or too small ($(wc -c < "$DB_FILE") bytes)"
-              fi
-            else
-              echo "WARN: $DB_FILE does not exist"
-            fi
+          echo "No .db COPY in Dockerfile but release $TAG exists — downloading and patching..."
+          mkdir -p data
+          if ! gh release download "$TAG" -p "database.db.gz" -D data/ 2>/dev/null; then
+            echo "No database.db.gz asset in release — skipping"
+            exit 0
+          fi
+          gunzip -f data/database.db.gz
+          echo "Downloaded $(du -sh data/database.db | cut -f1) from release $TAG"
 
-            # Download from GitHub Releases
-            TAG=$(gh release view --json tagName -q '.tagName' 2>/dev/null) || true
-            if [ -z "$TAG" ]; then
-              echo "ERROR: $DB_FILE invalid and no GitHub Release available"
-              exit 1
-            fi
+          # Patch the Dockerfile: inject COPY data/ before USER line
+          if grep -q '^USER' Dockerfile; then
+            sed -i '/^USER/i \
+          # Injected by CI: copy database from release asset\
+          COPY data/database.db ./data/database.db' Dockerfile
+          else
+            echo 'COPY data/database.db ./data/database.db' >> Dockerfile
+          fi
 
-            echo "Downloading database.db.gz from release $TAG..."
-            mkdir -p data
-            if gh release download "$TAG" -p "database.db.gz" -D data/ 2>/dev/null; then
-              gunzip -f data/database.db.gz
-              echo "OK: Downloaded $(du -sh data/database.db | cut -f1) from release $TAG"
-            else
-              echo "ERROR: Could not download database.db.gz from release $TAG"
-              exit 1
-            fi
-          done
+          # Update the *_DB_PATH env var to point to database.db
+          DB_ENV=$(grep -oP 'ENV\s+\K\w+_DB_PATH' Dockerfile | head -1 || true)
+          if [ -n "$DB_ENV" ]; then
+            sed -i "s|${DB_ENV}=.*|${DB_ENV}=/app/data/database.db|" Dockerfile
+            echo "Updated $DB_ENV to /app/data/database.db"
+          fi
+
+          echo "Dockerfile patched for data injection"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
