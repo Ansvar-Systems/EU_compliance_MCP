@@ -1,0 +1,83 @@
+{
+  "generated": "2026-04-09",
+  "total_regulations": 49,
+  "total_articles": 2528,
+  "total_definitions": 1226,
+  "total_recitals": 3869,
+  "security_framework_mappings": {
+    "total": 709,
+    "iso_27001_2022": 324,
+    "nist_csf_2_0": 385
+  },
+  "applicability_rules": 323,
+  "categories": {
+    "core_data_protection_cybersecurity": [
+      { "id": "GDPR", "name": "General Data Protection Regulation", "articles": 99, "definitions": 26 },
+      { "id": "NIS2", "name": "NIS2 Directive", "articles": 46, "definitions": 41 },
+      { "id": "DORA", "name": "Digital Operational Resilience Act", "articles": 64, "definitions": 65 },
+      { "id": "AI_ACT", "name": "AI Act", "articles": 113, "definitions": 68 },
+      { "id": "CRA", "name": "Cyber Resilience Act", "articles": 71, "definitions": 51 },
+      { "id": "CYBERSECURITY_ACT", "name": "EU Cybersecurity Act", "articles": 69, "definitions": 22 },
+      { "id": "CYBER_SOLIDARITY", "name": "Cyber Solidarity Act", "articles": 26, "definitions": 17 },
+      { "id": "EPRIVACY", "name": "ePrivacy Directive", "articles": 21, "definitions": null },
+      { "id": "LED", "name": "Law Enforcement Directive", "articles": 65, "definitions": 16 },
+      { "id": "EUCC", "name": "EUCC (Cybersecurity Certification)", "articles": 50, "definitions": 15 }
+    ],
+    "digital_services_identity": [
+      { "id": "EIDAS2", "name": "eIDAS 2.0", "articles": 49, "definitions": 57 },
+      { "id": "DATA_ACT", "name": "Data Act", "articles": 50, "definitions": 42 },
+      { "id": "DSA", "name": "Digital Services Act", "articles": 93, "definitions": 24 },
+      { "id": "DMA", "name": "Digital Markets Act", "articles": 54, "definitions": 33 },
+      { "id": "DGA", "name": "Data Governance Act", "articles": 38, "definitions": 21 },
+      { "id": "EECC", "name": "European Electronic Communications Code", "articles": 128, "definitions": 42 }
+    ],
+    "healthcare_medical": [
+      { "id": "EHDS", "name": "European Health Data Space", "articles": 105, "definitions": null },
+      { "id": "MDR", "name": "Medical Devices Regulation", "articles": 123, "definitions": 64 },
+      { "id": "IVDR", "name": "In Vitro Diagnostic Regulation", "articles": 113, "definitions": 70 }
+    ],
+    "financial_services": [
+      { "id": "MICA", "name": "Markets in Crypto-Assets Regulation", "articles": 149, "definitions": 51 },
+      { "id": "PSD2", "name": "Payment Services Directive 2", "articles": 117, "definitions": 48 },
+      { "id": "MIFID2", "name": "MiFID II", "articles": 97, "definitions": 63 },
+      { "id": "MIFIR", "name": "MiFIR", "articles": 55, "definitions": 47 },
+      { "id": "AIFMD", "name": "Alternative Investment Fund Managers Directive", "articles": 71, "definitions": null },
+      { "id": "SFDR", "name": "Sustainable Finance Disclosure Regulation", "articles": 20, "definitions": 24 },
+      { "id": "EU_TAXONOMY", "name": "EU Taxonomy Regulation", "articles": 27, "definitions": 23 }
+    ],
+    "product_safety_sustainability": [
+      { "id": "CHIPS_ACT", "name": "European Chips Act", "articles": 41, "definitions": 24 },
+      { "id": "CRMA", "name": "Critical Raw Materials Act", "articles": 49, "definitions": 64 },
+      { "id": "GPSR", "name": "General Product Safety Regulation", "articles": 52, "definitions": 28 },
+      { "id": "MACHINERY", "name": "Machinery Regulation", "articles": 54, "definitions": 36 },
+      { "id": "PLD", "name": "Product Liability Directive", "articles": 24, "definitions": 18 },
+      { "id": "RED", "name": "Radio Equipment Directive", "articles": 52, "definitions": 26 },
+      { "id": "CSRD", "name": "Corporate Sustainability Reporting Directive", "articles": 8, "definitions": null },
+      { "id": "CSDDD", "name": "Corporate Sustainability Due Diligence Directive", "articles": 39, "definitions": null },
+      { "id": "CBAM", "name": "Carbon Border Adjustment Mechanism", "articles": 36, "definitions": 34 },
+      { "id": "EUDR", "name": "EU Deforestation Regulation", "articles": 38, "definitions": 40 },
+      { "id": "CER", "name": "Critical Entities Resilience Directive", "articles": 29, "definitions": 10 }
+    ],
+    "automotive": [
+      { "id": "UN_R155", "name": "UN Regulation No. 155 (Vehicle Cybersecurity)", "articles": 17, "definitions": 13 },
+      { "id": "UN_R156", "name": "UN Regulation No. 156 (Software Updates)", "articles": 16, "definitions": 11 }
+    ]
+  },
+  "data_sources": [
+    {
+      "name": "EUR-Lex",
+      "url": "https://eur-lex.europa.eu",
+      "license": "CC BY 4.0"
+    },
+    {
+      "name": "UNECE",
+      "url": "https://unece.org",
+      "license": "Public domain"
+    },
+    {
+      "name": "ENISA",
+      "url": "https://www.enisa.europa.eu",
+      "license": "CC BY 4.0"
+    }
+  ]
+}
