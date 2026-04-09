@@ -10,9 +10,17 @@
 # automatically restarts containers when a new :latest image is detected.
 # No manual deploy step needed.
 #
+# DATABASE PROVISIONING:
+# If the Dockerfile COPYs a .db file and that file is missing, empty, or an
+# LFS pointer after checkout, this workflow downloads database.db.gz from the
+# repo's latest GitHub Release. This handles two failure modes:
+#   1. Repos using Git LFS where the runner lacks LFS (fallback to release)
+#   2. Repos with data/*.db in .gitignore (placeholder only, real DB in release)
+#
 # PREREQUISITES:
 # 1. Repository must have a Dockerfile at the root (or specify path)
 # 2. GITHUB_TOKEN has automatic write:packages permission (no secrets needed)
+# 3. For repos with gitignored/LFS databases: a GitHub Release with database.db.gz
 #
 # =============================================================================
 
@@ -43,6 +51,54 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Provision database
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if Dockerfile copies any .db file
+          DB_FILES=$(grep -oP 'COPY\s+\K(data/\S+\.db)' Dockerfile 2>/dev/null || true)
+          if [ -z "$DB_FILES" ]; then
+            echo "No .db files in Dockerfile COPY, skipping"
+            exit 0
+          fi
+
+          for DB_FILE in $DB_FILES; do
+            if [ -f "$DB_FILE" ] && [ "$(wc -c < "$DB_FILE")" -gt 1024 ]; then
+              echo "OK: $DB_FILE is valid ($(du -sh "$DB_FILE" | cut -f1))"
+              continue
+            fi
+
+            # Detect LFS pointer or empty file
+            if [ -f "$DB_FILE" ]; then
+              if head -1 "$DB_FILE" 2>/dev/null | grep -q 'version https://git-lfs'; then
+                echo "WARN: $DB_FILE is an LFS pointer, not actual data"
+              else
+                echo "WARN: $DB_FILE exists but is empty or too small ($(wc -c < "$DB_FILE") bytes)"
+              fi
+            else
+              echo "WARN: $DB_FILE does not exist"
+            fi
+
+            # Download from GitHub Releases
+            TAG=$(gh release view --json tagName -q '.tagName' 2>/dev/null) || true
+            if [ -z "$TAG" ]; then
+              echo "ERROR: $DB_FILE invalid and no GitHub Release available"
+              exit 1
+            fi
+
+            echo "Downloading database.db.gz from release $TAG..."
+            mkdir -p data
+            if gh release download "$TAG" -p "database.db.gz" -D data/ 2>/dev/null; then
+              gunzip -f data/database.db.gz
+              echo "OK: Downloaded $(du -sh data/database.db | cut -f1) from release $TAG"
+            else
+              echo "ERROR: Could not download database.db.gz from release $TAG"
+              exit 1
+            fi
+          done
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
