@@ -51,7 +51,8 @@ export async function getArticle(
   db: DatabaseAdapter,
   input: GetArticleInput
 ): Promise<Article | null> {
-  const { regulation, article } = input;
+  const { regulation } = input;
+  const article = normalizeArticleNumber(input.article);
 
   const sql = `
     SELECT

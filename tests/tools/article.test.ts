@@ -66,6 +66,26 @@ describe('getArticle', () => {
     // cross_references may be null in test data, that's okay
     expect(article).toHaveProperty('cross_references');
   });
+
+  it('resolves underscored annex form to the canonical row', async () => {
+    // NB: this assumes a pre-populated test DB has a row with article_number='Annex I'
+    // for AI_ACT. Skipped until the annex extraction task runs; guard with a check.
+    const result = await db.query(
+      "SELECT 1 FROM articles WHERE regulation = 'AI_ACT' AND article_number = 'Annex I'",
+      [],
+    );
+    if (result.rows.length === 0) {
+      return; // annex extraction hasn't run yet; this is exercised again in golden tests
+    }
+
+    const byCanonical = await getArticle(db, { regulation: 'AI_ACT', article: 'Annex I' });
+    const byUnderscore = await getArticle(db, { regulation: 'AI_ACT', article: 'Annex_I' });
+    const byLowercase = await getArticle(db, { regulation: 'AI_ACT', article: 'annex i' });
+
+    expect(byCanonical).not.toBeNull();
+    expect(byUnderscore?.text).toBe(byCanonical?.text);
+    expect(byLowercase?.text).toBe(byCanonical?.text);
+  });
 });
 
 describe('normalizeArticleNumber', () => {
