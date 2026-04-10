@@ -40,8 +40,8 @@ describe('HTTP/Stdio Server Parity', () => {
     if (rawDb) rawDb.close();
   });
 
-  it('should have all 16 tools registered in the registry', () => {
-    expect(TOOLS).toHaveLength(16);
+  it('should have all 18 tools registered in the registry', () => {
+    expect(TOOLS).toHaveLength(18);
 
     const toolNames = TOOLS.map(t => t.name);
     expect(toolNames).toContain('search_regulations');
@@ -62,6 +62,9 @@ describe('HTTP/Stdio Server Parity', () => {
     expect(toolNames).toContain('search_guidance');
     expect(toolNames).toContain('get_guidance_section');
     expect(toolNames).toContain('list_guidance');
+    // Source registry / freshness tools
+    expect(toolNames).toContain('list_sources');
+    expect(toolNames).toContain('check_data_freshness');
   });
 
   it('should have identical tool names and descriptions', () => {
@@ -84,6 +87,9 @@ describe('HTTP/Stdio Server Parity', () => {
       'search_guidance',
       'get_guidance_section',
       'list_guidance',
+      // Source registry / freshness tools
+      'list_sources',
+      'check_data_freshness',
     ];
 
     const registeredNames = TOOLS.map(t => t.name);
