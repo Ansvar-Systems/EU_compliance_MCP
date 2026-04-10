@@ -8,10 +8,7 @@ const CONFIG = {
   issuingBody: 'AI Office',
   reference: 'C(2025) 884 final',
   datePublished: '2025-02-04',
-  // PDF URL to be resolved from the Commission library page at ingestion time.
-  // If the direct PDF link in the library listing changes, update this constant.
-  pdfUrl:
-    'https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act',
+  pdfUrl: 'https://ec.europa.eu/newsroom/dae/redirection/document/112367',
   pageUrl:
     'https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act',
   relatedRegulation: 'AI_ACT',

@@ -8,10 +8,9 @@ const CONFIG = {
   issuingBody: 'AI Office',
   reference: 'Training Data Summary Template v1.0',
   datePublished: '2025-07-24',
-  pdfUrl:
-    'https://digital-strategy.ec.europa.eu/en/library/template-public-summary-training-content-general-purpose-ai-models',
+  pdfUrl: 'https://ec.europa.eu/newsroom/dae/redirection/document/118480',
   pageUrl:
-    'https://digital-strategy.ec.europa.eu/en/library/template-public-summary-training-content-general-purpose-ai-models',
+    'https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models',
   relatedRegulation: 'AI_ACT',
   status: 'published',
   metadata: {

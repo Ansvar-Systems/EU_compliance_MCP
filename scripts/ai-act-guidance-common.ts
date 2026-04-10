@@ -20,18 +20,34 @@ export interface GuidanceDocConfig {
   issuingBody: string;
   reference: string | null;
   datePublished: string; // ISO
+  /**
+   * Primary PDF URL. Stored in guidance_documents.pdf_url as provenance.
+   * If pdfUrls is set, pdfUrl should be the first entry for display purposes.
+   */
   pdfUrl: string;
+  /**
+   * Optional: multiple PDFs for multi-chapter documents (e.g. GPAI CoP has
+   * separate PDFs per chapter). All URLs are fetched, text is concatenated,
+   * then section parsing runs over the combined text. Section numbers from
+   * each PDF may collide (each chapter has its own 1/1.1/1.2 scheme); a
+   * per-chapter prefix is applied when `pdfUrls` has more than one entry.
+   */
+  pdfUrls?: Array<{ url: string; sectionPrefix?: string }>;
   pageUrl: string;
   relatedRegulation: string; // e.g. 'AI_ACT'
   status: string; // 'published', 'draft', etc.
   metadata?: Record<string, unknown>;
   /**
    * Minimum number of parsed sections before the script accepts the result.
-   * Full-document fallback is NOT used for AI Act guidance — fewer than
-   * minSections causes the script to throw so the dataset does not ship with
-   * a single 100-page blob hiding behind one FTS row.
+   * Default behaviour: fewer than minSections causes the script to throw, so
+   * the dataset does not ship with a single 100-page blob hiding behind one
+   * FTS row. For documents whose formatting defeats the section parser but
+   * that we still want to expose (e.g. GPAI CoP, which uses Commitment/Measure
+   * headings rather than dotted numbers), set allowFullDocFallback:true so
+   * the helper emits one section per PDF containing the full chapter text.
    */
   minSections: number;
+  allowFullDocFallback?: boolean;
 }
 
 export interface ParsedSection {
@@ -142,22 +158,72 @@ export async function ingestGuidanceDocument(config: GuidanceDocConfig): Promise
   );
   db.exec(schemaSql);
 
-  console.log(`Fetching PDF: ${config.pdfUrl}`);
-  const pdfBuffer = await fetchPdf(config.pdfUrl);
-  console.log(`  ${(pdfBuffer.length / 1024).toFixed(0)} KB`);
+  let sections: ParsedSection[] = [];
+  // Retain raw per-chapter (or whole-doc) text for fallback use.
+  const rawChunks: Array<{ prefix: string; text: string }> = [];
 
-  const text = await extractPdfText(pdfBuffer);
-  console.log(`  Extracted ${text.length} chars of text`);
+  if (config.pdfUrls && config.pdfUrls.length > 0) {
+    // Multi-chapter document: fetch each PDF, parse sections, apply prefix.
+    for (const entry of config.pdfUrls) {
+      console.log(`Fetching PDF: ${entry.url}${entry.sectionPrefix ? ` (prefix: ${entry.sectionPrefix})` : ''}`);
+      const pdfBuffer = await fetchPdf(entry.url);
+      console.log(`  ${(pdfBuffer.length / 1024).toFixed(0)} KB`);
+      const text = await extractPdfText(pdfBuffer);
+      console.log(`  Extracted ${text.length} chars of text`);
+      rawChunks.push({ prefix: entry.sectionPrefix || 'chapter', text });
+      const chapterSections = parseSections(text);
+      console.log(`  Parsed ${chapterSections.length} sections`);
+      for (const sec of chapterSections) {
+        sections.push({
+          ...sec,
+          sectionNumber: entry.sectionPrefix
+            ? `${entry.sectionPrefix}.${sec.sectionNumber}`
+            : sec.sectionNumber,
+          parentSection: entry.sectionPrefix
+            ? (sec.parentSection
+              ? `${entry.sectionPrefix}.${sec.parentSection}`
+              : entry.sectionPrefix)
+            : sec.parentSection,
+        });
+      }
+      await sleep(RATE_LIMIT_MS);
+    }
+    console.log(`  Total: ${sections.length} sections across ${config.pdfUrls.length} PDFs`);
+  } else {
+    console.log(`Fetching PDF: ${config.pdfUrl}`);
+    const pdfBuffer = await fetchPdf(config.pdfUrl);
+    console.log(`  ${(pdfBuffer.length / 1024).toFixed(0)} KB`);
 
-  const sections = parseSections(text);
-  console.log(`  Parsed ${sections.length} sections`);
+    const text = await extractPdfText(pdfBuffer);
+    console.log(`  Extracted ${text.length} chars of text`);
+    rawChunks.push({ prefix: 'full', text });
+
+    sections = parseSections(text);
+    console.log(`  Parsed ${sections.length} sections`);
+  }
 
   if (sections.length < config.minSections) {
-    db.close();
-    throw new Error(
-      `Parsed ${sections.length} sections for ${config.id}; expected at least ${config.minSections}. ` +
-        `Section parser may need adjustment for this document's numbering scheme.`,
-    );
+    if (config.allowFullDocFallback) {
+      console.log(
+        `  Section parser yielded ${sections.length} < ${config.minSections}; ` +
+          `falling back to one section per chunk (allowFullDocFallback).`,
+      );
+      sections = rawChunks
+        .filter((chunk) => chunk.text.trim().length > 100)
+        .map((chunk) => ({
+          sectionNumber: chunk.prefix,
+          title: `${chunk.prefix} (full text)`,
+          content: chunk.text.trim(),
+          parentSection: null,
+        }));
+      console.log(`  Emitting ${sections.length} full-doc fallback sections.`);
+    } else {
+      db.close();
+      throw new Error(
+        `Parsed ${sections.length} sections for ${config.id}; expected at least ${config.minSections}. ` +
+          `Section parser may need adjustment for this document's numbering scheme.`,
+      );
+    }
   }
 
   const insertDoc = db.prepare(`

@@ -29,6 +29,7 @@
     "ingest:versions:seed": "tsx scripts/ingest-version-history.ts --seed-baseline",
     "ingest:versions:dry-run": "tsx scripts/ingest-version-history.ts --dry-run",
     "ingest:with-browser": "tsx scripts/ingest-eurlex-browser.ts",
+    "ingest:ai-act-guidance": "npm run build:db && tsx scripts/ingest-ai-act-prohibited-practices.ts && tsx scripts/ingest-ai-act-definition-guidelines.ts && tsx scripts/ingest-ai-act-gpai-cop.ts && tsx scripts/ingest-ai-act-gpai-scope.ts && tsx scripts/ingest-ai-act-training-data-template.ts && tsx scripts/seed-ai-act-guidance-placeholders.ts",
     "reingest:all": "tsx scripts/bulk-reingest-all.ts",
     "migrate:postgres": "tsx scripts/migrate-to-postgres.ts",
     "lint": "eslint src --ext .ts",
