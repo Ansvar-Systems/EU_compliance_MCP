@@ -4,27 +4,55 @@
   "regulation_name": "General Data Protection Regulation",
   "celex_id": "32016R0679",
   "effective_date": "2018-05-25",
-  "guide_updated": "2026-03-17",
+  "guide_updated": "2026-04-10",
 
   "delegated_acts": [],
 
   "proportionality": {
-    "description": "GDPR applies proportionality through risk-based obligations and SME derogations",
+    "description": "GDPR applies proportionality through risk-based obligations, SME derogations, and processing-scale thresholds",
     "tiers": [
       {
         "name": "full",
-        "applies_to": "All controllers and processors handling personal data",
+        "applies_to": "All controllers and processors handling personal data in the EU or of EU data subjects",
         "key_articles": ["5-11", "12-23", "24-43"],
-        "note": "Full GDPR obligations"
+        "note": "Full GDPR obligations — data protection principles, data subject rights, controller/processor duties, international transfers"
       },
       {
         "name": "reduced_record_keeping",
         "applies_to": "Enterprises with fewer than 250 employees (Art. 30(5) derogation)",
         "key_articles": ["30(5)"],
-        "note": "Exemption from records of processing UNLESS processing is not occasional, involves special categories, or is likely to result in risk to rights and freedoms"
+        "note": "Exemption from records of processing activities UNLESS processing is not occasional, involves special categories (Art. 9) or criminal convictions (Art. 10), or is likely to result in risk to rights and freedoms. In practice, most organisations still need records."
+      },
+      {
+        "name": "dpo_required",
+        "applies_to": "Public authorities, entities whose core activities require large-scale systematic monitoring, or large-scale processing of special categories (Art. 37)",
+        "key_articles": ["37", "38", "39"],
+        "note": "Mandatory DPO appointment. DPO has protected position (Art. 38(3) — no dismissal for performing duties). Member States may extend DPO requirements to additional categories."
+      },
+      {
+        "name": "dpia_required",
+        "applies_to": "Processing likely to result in high risk to rights and freedoms (Art. 35)",
+        "key_articles": ["35", "36"],
+        "note": "Mandatory DPIA for: systematic evaluation (profiling), large-scale special categories, systematic public monitoring. DPA blacklists/whitelists supplement. Prior consultation (Art. 36) if risk remains high after mitigation."
       }
     ],
-    "derogations": []
+    "derogations": [
+      {
+        "article": "2(2)(c)",
+        "applies_to": "Purely personal or household activity",
+        "description": "Processing by natural persons in the course of purely personal or household activities is outside GDPR scope entirely"
+      },
+      {
+        "article": "85-91",
+        "applies_to": "Member State derogations",
+        "description": "Member States may derogate for journalism/academic/artistic expression (Art. 85), public access to documents (Art. 86), national ID numbers (Art. 87), employment context (Art. 88), archiving/research (Art. 89)"
+      },
+      {
+        "article": "49",
+        "applies_to": "International transfers without adequacy decision or safeguards",
+        "description": "Specific derogations for transfers: explicit consent, contractual necessity, important public interest, legal claims, vital interests. These are narrow exceptions, not general authorisation."
+      }
+    ]
   },
 
   "pitfalls": [
@@ -32,22 +60,57 @@
       "id": "dpo_mandatory_conditions",
       "severity": "high",
       "article": "37",
-      "description": "DPO appointment is mandatory only in three cases: (a) public authority, (b) core activities require large-scale systematic monitoring, (c) core activities involve large-scale processing of special categories. Not all organizations need a DPO.",
+      "description": "DPO appointment is mandatory only in three cases: (a) public authority, (b) core activities require large-scale systematic monitoring of data subjects, (c) core activities involve large-scale processing of special categories (Art. 9) or criminal convictions (Art. 10). Not all organisations need a DPO. 'Core activities' means main operations, not supporting functions like payroll.",
       "detail_level": "quick"
     },
     {
       "id": "legitimate_interest_balancing",
       "severity": "high",
       "article": "6(1)(f)",
-      "description": "Legitimate interest requires a three-part test: (1) identify the legitimate interest, (2) necessity test, (3) balancing test against data subject rights. A bare assertion of legitimate interest is insufficient.",
+      "description": "Legitimate interest requires a three-part test: (1) identify a legitimate interest pursued by controller or third party, (2) necessity — is processing necessary for that interest, (3) balancing test — do data subject rights override. All three must be documented. EDPB Guidelines on Legitimate Interest provide detailed guidance. Not available to public authorities for performance of their tasks.",
       "detail_level": "quick"
     },
     {
       "id": "72h_breach_notification",
       "severity": "high",
       "article": "33",
-      "description": "72-hour breach notification to supervisory authority runs from 'becoming aware' of the breach, not from the breach itself. Awareness test is nuanced — controller must have reasonable degree of certainty.",
+      "description": "72-hour breach notification to DPA runs from 'becoming aware' of the breach, not from occurrence. Awareness test: controller must have reasonable degree of certainty a breach has occurred. Processors must notify controllers 'without undue delay' (Art. 33(2)). If DPA notification is delayed beyond 72 hours, a justification is required. Separate from NIS2 CSIRT notification (Art. 23) and CRA vulnerability reporting (Art. 14).",
       "detail_level": "quick"
+    },
+    {
+      "id": "consent_withdrawal",
+      "severity": "high",
+      "article": "7(3)",
+      "description": "Data subjects can withdraw consent at any time, and withdrawal must be as easy as giving consent. Processing before withdrawal remains lawful. If you cannot ensure the service works after withdrawal, do not use consent as the legal basis — use a different ground (e.g., legitimate interest, contractual necessity).",
+      "detail_level": "quick"
+    },
+    {
+      "id": "controller_vs_processor",
+      "severity": "high",
+      "article": "4(7-8), 28",
+      "description": "Controller determines purposes and means; processor processes on behalf of controller. This is a factual assessment, not contractual. A party labelled 'processor' in a contract but making decisions about processing purposes is actually a controller or joint controller (Art. 26). Misclassification creates compliance gaps.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "schrems_ii_transfer_impact",
+      "severity": "high",
+      "article": "44-49",
+      "description": "After Schrems II (C-311/18), Standard Contractual Clauses alone may be insufficient for transfers to countries with problematic surveillance laws. A Transfer Impact Assessment (TIA) is required to evaluate whether the importer can comply with the SCCs given local law. Supplementary measures (encryption, pseudonymisation) may be needed. EDPB Recommendations 01/2020 provide the TIA methodology.",
+      "detail_level": "full"
+    },
+    {
+      "id": "right_to_erasure_exceptions",
+      "severity": "medium",
+      "article": "17(3)",
+      "description": "Right to erasure is NOT absolute. Art. 17(3) lists exceptions: freedom of expression, legal obligation, public health, archiving in public interest, legal claims. A blanket 'we cannot delete your data' response is wrong, but so is assuming all erasure requests must be fulfilled.",
+      "detail_level": "full"
+    },
+    {
+      "id": "automated_decision_making",
+      "severity": "medium",
+      "article": "22",
+      "description": "Art. 22 prohibits decisions based solely on automated processing (including profiling) that produce legal or similarly significant effects. Exceptions: contractual necessity, authorised by law, explicit consent. Where an exception applies, the controller must implement suitable safeguards including the right to obtain human intervention, express their point of view, and contest the decision.",
+      "detail_level": "full"
     }
   ],
 
@@ -55,34 +118,151 @@
     {
       "regulation": "DORA",
       "relationship": "stacking",
-      "key_provisions": ["DORA Art. 30"],
-      "note": "GDPR Art. 28 processor agreements stack with DORA Art. 30 ICT contract provisions for financial entities."
+      "key_provisions": ["DORA Art. 30", "GDPR Art. 28"],
+      "note": "GDPR Art. 28 processor agreements stack with DORA Art. 30 ICT contract provisions for financial entities. Both sets of clauses must be in the contract."
     },
     {
       "regulation": "NIS2",
       "relationship": "stacking",
-      "key_provisions": ["NIS2 Art. 35"],
-      "note": "NIS2 Art. 35 incident notification to CSIRT is separate from GDPR Art. 33 breach notification to DPA."
+      "key_provisions": ["NIS2 Art. 35", "GDPR Art. 33"],
+      "note": "NIS2 Art. 35 incident notification to CSIRT is SEPARATE from GDPR Art. 33 breach notification to DPA. Both apply simultaneously if the incident involves personal data. Different timelines, different authorities."
+    },
+    {
+      "regulation": "AI_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["AI Act Art. 10", "GDPR Art. 22", "GDPR Art. 35"],
+      "note": "AI Act requirements on training data stack with GDPR (purpose limitation, data minimisation, accuracy). AI Act Art. 10(5) allows special category processing for bias detection under conditions. GDPR Art. 22 automated decision-making rights stack with AI Act transparency obligations."
+    },
+    {
+      "regulation": "EPRIVACY",
+      "relationship": "lex_specialis",
+      "key_provisions": ["ePrivacy Art. 5(3)", "GDPR Art. 6"],
+      "note": "ePrivacy Directive is lex specialis for electronic communications — governs cookies/tracking (Art. 5(3)), confidentiality of communications. GDPR provides the overarching framework; ePrivacy specifies rules for the electronic communications channel."
+    },
+    {
+      "regulation": "DSA",
+      "relationship": "stacking",
+      "key_provisions": ["DSA Art. 34a", "GDPR Art. 35"],
+      "note": "DSA systemic risk assessments for VLOPs/VLOSEs must consider impacts on fundamental rights including data protection. DSA transparency requirements stack with GDPR data subject information rights."
+    },
+    {
+      "regulation": "DATA_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["Data Act Art. 1(5)"],
+      "note": "Data Act explicitly does not affect GDPR. Where IoT/connected product data includes personal data, both apply. Data Act access rights do not override GDPR legal bases or data subject rights."
     }
   ],
 
-  "key_structures": [],
-  "key_recitals": [],
+  "key_structures": [
+    {
+      "article": "5",
+      "title": "Principles — the foundation of all GDPR obligations",
+      "description": "7 principles: (a) lawfulness, fairness, transparency, (b) purpose limitation, (c) data minimisation, (d) accuracy, (e) storage limitation, (f) integrity and confidentiality, (g) accountability. Para 2: controller must be able to DEMONSTRATE compliance ('accountability principle'). Every GDPR obligation traces back to these principles. Compliance assessments should start here.",
+      "detail_level": "full"
+    },
+    {
+      "article": "6",
+      "title": "Lawfulness of processing — six legal bases",
+      "description": "Six legal bases: (a) consent, (b) contractual necessity, (c) legal obligation, (d) vital interests, (e) public task, (f) legitimate interests. Each has different conditions and consequences. Consent can be withdrawn (Art. 7(3)). Legitimate interest requires balancing test. Legal obligation and public task are available to public authorities. Choosing the wrong basis creates downstream compliance issues.",
+      "detail_level": "full"
+    },
+    {
+      "article": "28",
+      "title": "Processor obligations — mandatory contract terms",
+      "description": "Para 3: processor contract must contain: (a) process only on documented instructions, (b) confidentiality obligations, (c) security measures per Art. 32, (d) conditions for sub-processing, (e) assist with data subject rights, (f) assist with DPIA and prior consultation, (g) delete or return data on termination, (h) make information available for audits. These are minimum requirements — additional clauses may be needed for specific sectors (e.g., DORA Art. 30 for financial entities).",
+      "detail_level": "full"
+    },
+    {
+      "article": "35",
+      "title": "Data Protection Impact Assessment — when and how",
+      "description": "Para 1: DPIA required when processing is 'likely to result in a high risk'. Para 3: always required for: (a) systematic evaluation of personal aspects (profiling with legal effects), (b) large-scale special categories or criminal convictions, (c) systematic monitoring of publicly accessible area. Para 7: assessment must contain: systematic description of processing, necessity/proportionality assessment, risk assessment, envisaged mitigation measures. National DPA blacklists (Art. 35(4)) and whitelists (Art. 35(5)) supplement the criteria.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 4,
+      "clarifies": "Right to data protection is not absolute — must be balanced against other fundamental rights (proportionality principle). This underlies the legitimate interest balancing test.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 32,
+      "clarifies": "Consent — must be freely given, specific, informed, unambiguous indication by statement or clear affirmative action. Silence, pre-ticked boxes, or inactivity do NOT constitute consent.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 47,
+      "clarifies": "Legitimate interest — direct marketing may be regarded as carried out for a legitimate interest. Data subjects' reasonable expectations (based on their relationship with the controller) are central to the balancing test.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 75,
+      "clarifies": "Risk to rights and freedoms — physical, material, or non-material damage including discrimination, identity theft, financial loss, reputational damage, loss of confidentiality of data protected by professional secrecy. Sets the threshold for when DPIAs and breach notifications are triggered.",
+      "detail_level": "full"
+    },
+    {
+      "number": 91,
+      "clarifies": "DPIA scope — 'large scale' considers number of data subjects, volume of data, range of processing activities, duration, geographical extent. A single doctor's practice is not large-scale; a hospital is.",
+      "detail_level": "full"
+    },
+    {
+      "number": 101,
+      "clarifies": "International transfers — the level of protection guaranteed by GDPR must travel with the data. Adequacy decisions, appropriate safeguards (SCCs, BCRs), or derogations (Art. 49) ensure this.",
+      "detail_level": "full"
+    }
+  ],
 
   "national_implementation": {
-    "pattern": "GDPR is directly applicable. Search Law MCPs for national implementing acts (e.g., BDSG in Germany, AVG in Netherlands, DPA 2018 in UK pre-Brexit).",
-    "known_examples": []
+    "pattern": "GDPR is directly applicable but Art. 23 and Art. 85-91 allow Member State derogations. Search Law MCPs for national implementing acts that modify or supplement GDPR provisions.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "BDSG (Bundesdatenschutzgesetz)",
+        "note": "German Federal Data Protection Act — supplements GDPR with employment data rules (Sec. 26), DPO threshold (Sec. 38: 20+ persons regularly processing personal data), video surveillance rules (Sec. 4)."
+      },
+      {
+        "country": "NL",
+        "law": "UAVG (Uitvoeringswet AVG)",
+        "note": "Dutch GDPR Implementation Act — supplements with national ID number processing rules, health data research exemptions, and DPA (Autoriteit Persoonsgegevens) administrative procedural rules."
+      },
+      {
+        "country": "SE",
+        "law": "SFS 2018:218 (Lag med kompletterande bestämmelser till EU:s dataskyddsförordning)",
+        "note": "Swedish supplementary act — age of consent for information society services set at 13, restrictions on processing of personal identity numbers, national archive derogations."
+      },
+      {
+        "country": "FR",
+        "law": "Loi n° 78-17 (Loi Informatique et Libertés, amended 2019)",
+        "note": "French data protection act — extensive health data processing rules, CNIL enforcement specifics, national security processing derogations."
+      }
+    ]
   },
 
-  "evidence_hint": "Call get_evidence_requirements(regulation='GDPR') for per-article audit artifacts.",
+  "evidence_hint": "Call get_evidence_requirements(regulation='GDPR') for per-article audit artifacts. Key artifacts: Records of processing activities (Art. 30), Data Protection Impact Assessments (Art. 35), Processor agreements (Art. 28), Consent records (Art. 7), Breach notification register (Art. 33(5)), International transfer safeguards documentation (Art. 44-49), DPO designation documentation (Art. 37).",
 
   "timeline": [
     {
+      "event": "GDPR entered into force",
+      "date": "2016-05-24",
+      "note": "Regulation published, 2-year transition period begins"
+    },
+    {
       "event": "GDPR applicable",
       "date": "2018-05-25",
-      "note": "All GDPR requirements in force"
+      "note": "All GDPR requirements in force, Directive 95/46/EC repealed"
+    },
+    {
+      "event": "Standard Contractual Clauses (new set)",
+      "date": "2021-06-04",
+      "note": "Commission Implementing Decision (EU) 2021/914 — new SCCs for international transfers. Old SCCs must be replaced by 2022-12-27."
+    },
+    {
+      "event": "EU-US Data Privacy Framework",
+      "date": "2023-07-10",
+      "note": "Adequacy decision for US organisations certified under the DPF. Permits transfers without SCCs to certified recipients."
     }
   ],
 
-  "citation_format": "Cite as: GDPR Art. X(Y). For recitals: GDPR Recital N."
+  "citation_format": "Cite as: GDPR Art. X(Y). For recitals: GDPR Recital N. For EDPB guidelines: EDPB Guidelines N/YYYY on [topic]. For national implementing acts: reference the specific national law."
 }

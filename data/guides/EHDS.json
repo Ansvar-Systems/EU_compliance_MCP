@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "EHDS",
+  "regulation_name": "European Health Data Space Regulation",
+  "celex_id": "32025R0327",
+  "effective_date": "2025-03-26",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "EHDS_IA_EHR_FORMAT",
+      "celex_id": "pending",
+      "title": "European Electronic Health Record Exchange Format",
+      "article_count": 0,
+      "parent_article": "15(1)",
+      "covers": "Technical specifications for the European electronic health record exchange format: harmonized datasets, coding systems, and interoperability specifications for priority categories of personal electronic health data. Deadline: 26 March 2027."
+    },
+    {
+      "id": "EHDS_IA_DATA_QUALITY",
+      "celex_id": "pending",
+      "title": "Data Quality Requirements for Registration",
+      "article_count": 0,
+      "parent_article": "13(4)",
+      "covers": "Data quality requirements for registration of personal electronic health data in EHR systems, including semantics, uniformity, consistency, accuracy, and completeness. Deadline: 26 March 2027."
+    },
+    {
+      "id": "EHDS_DA_PRIORITY_CATEGORIES",
+      "celex_id": "pending",
+      "title": "Delegated Acts on Priority Category Amendments",
+      "article_count": 0,
+      "parent_article": "14(2)",
+      "covers": "Commission empowered to amend Annex I (main characteristics of priority categories) to adapt to technical developments and international standards"
+    }
+  ],
+
+  "proportionality": {
+    "description": "EHDS distinguishes between primary use (healthcare provision) and secondary use (research, public health, policymaking). Obligations differ based on actor type: healthcare providers, EHR system manufacturers, health data holders, health data users, and health data access bodies.",
+    "tiers": [
+      {
+        "name": "primary_use",
+        "applies_to": "Healthcare providers, natural persons (patients), EHR system manufacturers",
+        "key_articles": ["3-15", "23", "26-48"],
+        "note": "Individual access to own health data (Art. 3), data portability (Art. 7), access restriction rights (Art. 8), opt-out option (Art. 10, if Member State provides). EHR systems must meet interoperability requirements (Art. 26-48), CE marking (Art. 41). Health professionals access via Art. 11-12."
+      },
+      {
+        "name": "secondary_use",
+        "applies_to": "Health data holders, health data users, health data access bodies",
+        "key_articles": ["50-80"],
+        "note": "Data holders must make data available to access bodies (Art. 60). Users access data only through data permits (Art. 68) or health data requests (Art. 69). Processing in secure environments only (Art. 73). Opt-out right for individuals (Art. 71). Prohibited secondary uses listed in Art. 54."
+      },
+      {
+        "name": "ehr_system_manufacturer",
+        "applies_to": "Manufacturers of EHR systems placing them on the EU market",
+        "key_articles": ["26-41"],
+        "note": "Must implement two mandatory harmonized software components: European interoperability component and European logging component (Art. 2(2)(n)(o)). Technical documentation (Art. 37), EU declaration of conformity (Art. 39), CE marking (Art. 41). Similar regulatory structure to medical device regulation."
+      },
+      {
+        "name": "wellness_app",
+        "applies_to": "Manufacturers of wellness applications claiming EHR interoperability",
+        "key_articles": ["47-48"],
+        "note": "Wellness apps claiming interoperability with EHR systems must meet labeling requirements (Art. 47) and interoperability requirements (Art. 48). Lighter regime than full EHR system requirements."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "1(9)",
+        "applies_to": "Processing for national security, law enforcement",
+        "description": "EHDS does not apply to health data processing for prevention, investigation, detection, or prosecution of criminal offences, or for activities outside Union law scope (Art. 1(9))."
+      },
+      {
+        "article": "71",
+        "applies_to": "Natural persons opting out of secondary use",
+        "description": "Natural persons have the right to opt out from secondary use of their personal electronic health data (Art. 71). Member States define the scope and conditions. Some secondary use purposes (e.g., pharmacovigilance, public health emergencies) may override opt-out in exceptional circumstances as defined by Member State law."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "primary_vs_secondary_use",
+      "severity": "high",
+      "article": "2(1)(d)-(e)",
+      "description": "EHDS distinguishes PRIMARY use (healthcare provision -- Art. 2(1)(d)) from SECONDARY use (research, public health, policymaking -- Art. 2(1)(e), Art. 53). These have entirely different governance frameworks, access mechanisms, and legal bases. Primary use goes through healthcare provider access. Secondary use requires a data permit from a health data access body (Art. 68) and processing in a secure environment (Art. 73). Conflating the two regimes is a common error.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "opt_out_not_absolute",
+      "severity": "high",
+      "article": "71",
+      "description": "The right to opt out of secondary use (Art. 71) exists but is not absolute. Member States define the scope and conditions. Opt-out may not apply to certain secondary use purposes (e.g., public health protection, pharmacovigilance) depending on national law. The regulation sets the framework but Member States determine the practical scope.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "health_data_access_bodies",
+      "severity": "high",
+      "article": "55-59",
+      "description": "Secondary use access requires health data access bodies (Art. 55) that Member States must establish. These bodies issue data permits (Art. 68), operate secure processing environments (Art. 73), and enforce data minimisation (Art. 66). They are distinct from data protection authorities and healthcare regulators. Without operational access bodies, secondary use is not possible regardless of legal basis.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "prohibited_secondary_uses",
+      "severity": "high",
+      "article": "54",
+      "description": "Art. 54 lists prohibited secondary uses including: decisions detrimental to natural persons based on their health data, advertising or marketing activities, providing access to insurers/banks/employers or other third parties to influence terms, developing products or services harmful to public health. These are absolute prohibitions, not subject to consent or legitimate interest.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "ehr_system_not_medical_device",
+      "severity": "medium",
+      "article": "1(5)",
+      "description": "EHDS is without prejudice to medical device regulations (Art. 1(5)). An EHR system is not automatically a medical device. But if an EHR system has medical device functionality (e.g., clinical decision support), it may be subject to BOTH EHDS and MDR/IVDR. The two regulatory frameworks apply in parallel where scopes overlap.",
+      "detail_level": "full"
+    },
+    {
+      "id": "secure_processing_mandatory",
+      "severity": "medium",
+      "article": "73",
+      "description": "All secondary use processing of personal electronic health data must occur in a secure processing environment operated by or on behalf of the health data access body (Art. 73). Data cannot be extracted from the secure environment in identifiable form. Results can only be exported after review. This is not optional -- direct data transfers to researchers are not permitted under EHDS secondary use framework.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["GDPR Art. 9", "GDPR Art. 89", "EHDS Art. 1(3)"],
+      "note": "EHDS builds on GDPR without replacing it. Health data is special category data under GDPR Art. 9. EHDS provides specific legal bases for primary use (healthcare provision) and secondary use (Art. 53 purposes + GDPR Art. 9(2)(g)/(h)/(i)/(j)). GDPR rights (access, rectification, erasure) apply alongside EHDS-specific rights. EHDS Art. 65 addresses relationship with DPA supervision."
+    },
+    {
+      "regulation": "MDR",
+      "relationship": "stacking",
+      "key_provisions": ["EHDS Art. 1(5)", "MDR Art. 2"],
+      "note": "EHDS does not affect MDR or IVDR (Art. 1(5)). Medical devices generating electronic health data must comply with both frameworks. EHR systems with clinical decision support may qualify as medical devices under MDR. EHDS interoperability requirements apply to device-generated data that enters EHR systems."
+    },
+    {
+      "regulation": "AI_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["EHDS Art. 1(5)", "AI Act Art. 6"],
+      "note": "AI systems processing health data must comply with both EHDS and AI Act. Health AI systems classified as high-risk under AI Act Art. 6 face dual requirements. EHDS secondary use framework may provide training data access for health AI development, but subject to data permit conditions and secure processing environment requirements."
+    },
+    {
+      "regulation": "DATA_ACT",
+      "relationship": "complementary",
+      "key_provisions": ["EHDS Art. 1(3)"],
+      "note": "EHDS is without prejudice to Data Act (Regulation (EU) 2023/2854). Data Act general data sharing rules apply alongside EHDS-specific health data rules. Where EHDS provides specific provisions for health data, it takes precedence as lex specialis."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "14",
+      "title": "Priority categories of personal electronic health data -- the data scope",
+      "description": "Six priority categories for primary use: (a) patient summaries, (b) electronic prescriptions, (c) electronic dispensations, (d) medical imaging and reports, (e) medical test results and reports, (f) discharge reports. Main characteristics defined in Annex I. Member States may add categories. Commission may amend Annex I via delegated acts (Art. 14(2)). These categories define which data must be exchangeable in the European format.",
+      "detail_level": "full"
+    },
+    {
+      "article": "53",
+      "title": "Purposes for secondary use -- the permitted list",
+      "description": "Art. 53 exhaustively lists permitted secondary use purposes: (a) public interest in public health, (b) public sector health policy, (c) statistics, (d) education/teaching in health, (e) scientific research in health, (f) innovation (development of health products/services), (g) AI system training in healthcare, (h) personalized healthcare, (i) public sector official statistics, (j) patient safety including pharmacovigilance, (k) regulatory activities of health sector authorities, (l) quality and safety of medicines and devices. Any secondary use outside this list is not permitted under EHDS.",
+      "detail_level": "full"
+    },
+    {
+      "article": "68",
+      "title": "Data permit -- the access mechanism for secondary use",
+      "description": "Health data access body issues a data permit specifying: permitted purposes, datasets, conditions of use, security measures, technical setup. Permits are time-limited. Data user must access data only in secure processing environment (Art. 73). Re-identification attempts are prohibited. Results can only be exported after access body review (anonymized/aggregated only). Breach of permit conditions triggers enforcement (Art. 63) including administrative fines (Art. 64).",
+      "detail_level": "full"
+    },
+    {
+      "article": "73",
+      "title": "Secure processing environment -- the technical control",
+      "description": "All personal electronic health data for secondary use must be processed in a secure environment (Art. 73). Requirements include: access restricted to authorized users, state-of-the-art technical and organizational measures, logging of all processing activities, ability to prevent extraction of identifiable data, regular security audits. Health data access bodies operate or certify these environments. This prevents data leakage and ensures compliance even when data users are in different jurisdictions.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 1,
+      "clarifies": "Health data space rationale -- explains that individuals should have control over their health data and that secondary use for research and public health serves a public interest, requiring a balanced regulatory framework",
+      "detail_level": "quick"
+    },
+    {
+      "number": 5,
+      "clarifies": "Relationship with GDPR -- explains that EHDS provides specific rules complementing but not replacing GDPR. GDPR remains the baseline; EHDS adds health-sector-specific access rights and secondary use governance",
+      "detail_level": "quick"
+    },
+    {
+      "number": 40,
+      "clarifies": "Secondary use rationale and safeguards -- explains why access to health data for research and innovation serves the public interest, while requiring strict safeguards (data permits, secure environments, prohibited uses) to protect individuals",
+      "detail_level": "full"
+    },
+    {
+      "number": 55,
+      "clarifies": "Health data access bodies independence -- explains that these bodies must be functionally independent and free from conflicts of interest, with adequate resources and expertise to handle sensitive health data",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "EHDS is a regulation (directly applicable), but requires Member States to establish health data access bodies (Art. 55), designate market surveillance authorities (Art. 43), and make implementation choices (e.g., opt-out scope per Art. 71). Search Law MCPs for national implementing measures.",
+    "known_examples": [
+      {
+        "country": "FI",
+        "law": "Findata (existing health data permit authority)",
+        "note": "Finland's existing Findata already operates as a health data permit authority. Expected to be designated as health data access body under EHDS with minimal adaptation."
+      },
+      {
+        "country": "FR",
+        "law": "Health Data Hub (Plateforme des donnees de sante)",
+        "note": "France's Health Data Hub expected to become the health data access body. Already operates secure processing environments for health research data."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='EHDS') for per-article audit artifacts. Key artifacts: EHR system EU declaration of conformity (Art. 39), EHR system technical documentation (Art. 37), CE marking (Art. 41), Data permit records (Art. 68), Secure processing environment audit reports (Art. 73), Health data access body annual reports (Art. 59), Data quality and utility labels (Art. 78), Opt-out mechanism records (Art. 71).",
+
+  "timeline": [
+    {
+      "event": "Entry into force",
+      "date": "2025-03-26",
+      "note": "EHDS Regulation published and enters into force"
+    },
+    {
+      "event": "Implementing acts on EHR exchange format and data quality",
+      "date": "2027-03-26",
+      "note": "Commission must adopt implementing acts on European electronic health record exchange format (Art. 15(1)) and data quality requirements (Art. 13(4))"
+    },
+    {
+      "event": "Primary use rights applicable",
+      "date": "2029-03-26",
+      "note": "Individual access rights (Art. 3-10), health professional access (Art. 11-12), and EHR system requirements (Chapter III) become applicable 4 years after entry into force"
+    },
+    {
+      "event": "Secondary use framework applicable",
+      "date": "2029-03-26",
+      "note": "Health data access bodies operational (Art. 55), data permit system active (Art. 68), secure processing environments required (Art. 73). 4 years after entry into force."
+    },
+    {
+      "event": "Cross-border infrastructure (MyHealth@EU) fully operational",
+      "date": "2029-03-26",
+      "note": "Cross-border primary use infrastructure (Art. 23) and secondary use infrastructure HealthData@EU (Art. 75) must be operational"
+    }
+  ],
+
+  "citation_format": "Cite as: EHDS Art. X(Y) for the regulation. Full citation: Regulation (EU) 2025/327, Art. X. For Annex references: EHDS Annex N. For implementing/delegated acts: Commission Implementing/Delegated Regulation (EU) YYYY/NNNN, Art. X."
+}

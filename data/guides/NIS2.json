@@ -4,27 +4,53 @@
   "regulation_name": "Network and Information Security Directive 2",
   "celex_id": "32022L2555",
   "effective_date": "2024-10-17",
-  "guide_updated": "2026-03-17",
+  "guide_updated": "2026-04-10",
 
-  "delegated_acts": [],
+  "delegated_acts": [
+    {
+      "id": "NIS2_IR_TECHNICAL_REQUIREMENTS",
+      "celex_id": "32024R2690",
+      "title": "Technical and Methodological Requirements for Cybersecurity Risk-Management Measures (DNS, TLD, Cloud, Data Centres, CDN, Managed Services, Online Marketplaces, Search Engines, Social Networks, Trust Services)",
+      "article_count": 43,
+      "parent_article": "21(5)",
+      "covers": "Detailed technical requirements implementing Art. 21(2) risk-management measures for digital infrastructure and digital service providers. Specifies minimum security policies, incident handling, business continuity, supply chain security, network security, access control, encryption, vulnerability handling, and cyber hygiene."
+    }
+  ],
 
   "proportionality": {
-    "description": "NIS2 distinguishes essential and important entities with different supervisory regimes",
+    "description": "NIS2 distinguishes essential and important entities with different supervisory regimes, and applies size-cap rules with sector-specific exceptions",
     "tiers": [
       {
         "name": "essential",
-        "applies_to": "Annex I sectors above size thresholds, plus designated entities (Art. 3(1))",
-        "key_articles": ["21", "23", "32"],
-        "note": "Proactive supervision by competent authority. Higher fines (Art. 34): max EUR 10M or 2% worldwide turnover."
+        "applies_to": "Large enterprises in Annex I sectors (energy, transport, banking, financial market infrastructure, health, drinking water, wastewater, digital infrastructure, ICT service management B2B, public administration, space) + all qualified trust service providers, TLD registries, DNS providers regardless of size + entities designated by Member States per Art. 3(1)(d-e)",
+        "key_articles": ["3(1)", "21", "23", "32"],
+        "note": "Proactive (ex ante) supervision by competent authority. Fines: max EUR 10M or 2% worldwide annual turnover. Security audits, on-site inspections, targeted audits."
       },
       {
         "name": "important",
-        "applies_to": "Annex I/II sectors meeting medium enterprise thresholds (Art. 3(2))",
-        "key_articles": ["21", "23", "33"],
-        "note": "Reactive supervision (ex post). Lower fines: max EUR 7M or 1.4% worldwide turnover."
+        "applies_to": "Medium enterprises in Annex I sectors + all medium/large enterprises in Annex II sectors (postal, waste management, chemicals, food, manufacturing, digital providers, research) + entities designated by Member States per Art. 3(2)",
+        "key_articles": ["3(2)", "21", "23", "33"],
+        "note": "Reactive (ex post) supervision — only after evidence of non-compliance. Fines: max EUR 7M or 1.4% worldwide annual turnover."
+      },
+      {
+        "name": "size_cap_exceptions",
+        "applies_to": "Entities that are essential regardless of size",
+        "key_articles": ["2(2)"],
+        "note": "Certain entities are in scope regardless of size: qualified trust service providers, TLD name registries, DNS service providers, sole providers of a critical service in a Member State, entities whose disruption could have significant impact on public safety/security/health."
       }
     ],
-    "derogations": []
+    "derogations": [
+      {
+        "article": "2(3)",
+        "applies_to": "Micro and small enterprises",
+        "description": "Generally excluded UNLESS falling under the size-cap exceptions of Art. 2(2)"
+      },
+      {
+        "article": "4",
+        "applies_to": "Entities subject to sector-specific EU legislation with equivalent cybersecurity requirements",
+        "description": "Lex specialis principle: where sector-specific EU acts (e.g., DORA for financial entities, EECC for telecoms) impose at least equivalent cybersecurity or notification obligations, those provisions prevail over NIS2"
+      }
+    ]
   },
 
   "pitfalls": [
@@ -32,22 +58,57 @@
       "id": "transposition_variance",
       "severity": "high",
       "article": "41",
-      "description": "NIS2 is a directive, not a regulation. Member states transpose into national law with variations. Always check the national implementing act via the relevant Law MCP.",
+      "description": "NIS2 is a directive, not a regulation. Member States transpose with local variations (entity registration, additional sectors, specific incident thresholds, management body liability). Always check the national implementing act via the relevant Law MCP. As of 2026, several Member States transposed late.",
       "detail_level": "quick"
     },
     {
       "id": "supply_chain_art21",
       "severity": "high",
       "article": "21(2)(d)",
-      "description": "Art. 21(2)(d) requires supply chain security measures including security-related aspects of relationships with direct suppliers and service providers. This extends beyond ICT vendors.",
+      "description": "Art. 21(2)(d) requires supply chain security measures including security-related aspects of relationships with DIRECT SUPPLIERS AND SERVICE PROVIDERS. This extends beyond ICT vendors to any supplier whose compromise could affect your network and information systems. The assessment must consider each supplier's vulnerabilities, product quality, cybersecurity practices, and development procedures.",
       "detail_level": "quick"
     },
     {
       "id": "lex_specialis_dora",
-      "severity": "medium",
+      "severity": "high",
       "article": "4",
-      "description": "NIS2 Art. 4 recognizes lex specialis: where sector-specific EU legislation (e.g., DORA) imposes equivalent or higher cybersecurity requirements, those provisions prevail. Financial entities subject to DORA may be exempt from NIS2 cybersecurity risk management.",
+      "description": "Art. 4 lex specialis: where sector-specific EU legislation (e.g., DORA for financial entities, EECC for telecoms) imposes at least equivalent cybersecurity requirements, those prevail. But lex specialis applies per OBLIGATION, not per entity. A financial entity exempt from NIS2 risk management under Art. 21 may still have NIS2 incident reporting obligations if DORA's reporting scope is narrower.",
       "detail_level": "quick"
+    },
+    {
+      "id": "management_body_personal_liability",
+      "severity": "high",
+      "article": "20",
+      "description": "Art. 20(1) requires management bodies to approve cybersecurity risk-management measures AND oversee implementation. Art. 20(2) requires management body members to follow training. Failure to comply can lead to temporary prohibition from exercising managerial functions (Art. 32(5)(b) for essential entities). This is personal liability for board members, not just corporate liability.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "incident_reporting_three_stage",
+      "severity": "high",
+      "article": "23",
+      "description": "Art. 23(4) requires three reports for significant incidents: (a) early warning within 24 hours (including whether suspected unlawful/malicious), (b) incident notification within 72 hours with initial assessment (severity, impact, IoCs), (c) final report within 1 month with root cause, mitigation measures, cross-border impact. Cross-border incidents trigger Art. 23(5-6) multi-CSIRT coordination. This is separate from GDPR Art. 33 breach notification.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "significant_incident_threshold",
+      "severity": "medium",
+      "article": "23(3)",
+      "description": "Only 'significant' incidents must be reported. Art. 23(3) defines significance: (a) has caused or is capable of causing severe operational disruption or financial loss, (b) has affected or is capable of affecting other natural or legal persons by causing considerable material or non-material damage. The IR 2024/2690 specifies thresholds for digital infrastructure entities.",
+      "detail_level": "full"
+    },
+    {
+      "id": "all_hazards_approach",
+      "severity": "medium",
+      "article": "21(1)",
+      "description": "Art. 21(1) requires an 'all-hazards approach' — not just cyber threats but also physical threats (fire, flood), human error, and systemic failures. Risk-management measures must protect network and information systems AND their physical environment. Recital 79 reinforces this.",
+      "detail_level": "full"
+    },
+    {
+      "id": "ten_minimum_measures",
+      "severity": "medium",
+      "article": "21(2)",
+      "description": "Art. 21(2)(a-j) lists 10 mandatory minimum cybersecurity measures: (a) risk analysis and IS policies, (b) incident handling, (c) business continuity and crisis management, (d) supply chain security, (e) security in network/IS acquisition and development, (f) policies for assessing effectiveness, (g) cyber hygiene and training, (h) cryptography and encryption policies, (i) HR security and access control, (j) MFA/continuous authentication. All 10 must be addressed — 'risk-based' does not mean optional.",
+      "detail_level": "full"
     }
   ],
 
@@ -56,38 +117,150 @@
       "regulation": "DORA",
       "relationship": "lex_specialis",
       "key_provisions": ["NIS2 Art. 4", "NIS2 Recital 28"],
-      "note": "DORA is lex specialis for financial entities. Where DORA addresses ICT risk, NIS2 defers."
+      "note": "DORA is lex specialis for financial entities on ICT risk management (Art. 21) and incident reporting (Art. 23). DORA requirements prevail where they meet or exceed NIS2. NIS2 may still apply for non-ICT aspects."
     },
     {
       "regulation": "CER",
       "relationship": "complementary",
-      "key_provisions": ["CER Art. 1"],
-      "note": "Critical Entities Resilience Directive complements NIS2 for physical resilience of critical infrastructure."
+      "key_provisions": ["CER Art. 1", "NIS2 Art. 2(12)"],
+      "note": "Critical Entities Resilience Directive covers physical resilience of critical infrastructure. NIS2 covers cyber resilience. An entity can be subject to both. CER Art. 1 explicitly states it does not affect NIS2."
+    },
+    {
+      "regulation": "CRA",
+      "relationship": "complementary",
+      "key_provisions": ["CRA Art. 14"],
+      "note": "CRA covers product manufacturers' cybersecurity obligations; NIS2 covers operators' security. Different reporting timelines: CRA vulnerability reporting (24h/72h/14d to CSIRT) vs NIS2 incident reporting (24h/72h/1 month to CSIRT). An entity manufacturing and operating products may need both."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["NIS2 Art. 35", "GDPR Art. 33"],
+      "note": "NIS2 Art. 35 incident notification to CSIRT is SEPARATE from GDPR Art. 33 breach notification to DPA. Both apply simultaneously if the incident involves personal data. Different timelines and different authorities."
+    },
+    {
+      "regulation": "EECC",
+      "relationship": "lex_specialis",
+      "key_provisions": ["EECC Art. 40-41", "NIS2 Art. 4"],
+      "note": "European Electronic Communications Code has its own security requirements for telecom providers. Where EECC imposes equivalent or higher cybersecurity obligations, it prevails over NIS2."
+    },
+    {
+      "regulation": "CYBERSECURITY_ACT",
+      "relationship": "complementary",
+      "key_provisions": ["Cybersecurity Act Art. 46-65"],
+      "note": "Cybersecurity Act establishes EUCC certification schemes. NIS2 entities may use EUCC certificates to demonstrate compliance with Art. 21 risk-management measures. ENISA supports NIS2 implementation under both frameworks."
     }
   ],
 
-  "key_structures": [],
-  "key_recitals": [],
+  "key_structures": [
+    {
+      "article": "21",
+      "title": "Cybersecurity risk-management measures — the core obligation",
+      "description": "5 paragraphs. Para 1: all-hazards approach, proportionate to risk exposure and entity size, considering state of the art and international standards. Para 2(a-j): 10 mandatory minimum measures (risk analysis, incident handling, BCP, supply chain, acquisition security, effectiveness assessment, cyber hygiene, cryptography, HR security, MFA). Para 3: Commission may adopt implementing acts specifying technical requirements. Para 4: Member States may require specific products/services to be certified under Cybersecurity Act schemes. Para 5: Commission adopts implementing acts for specific entity types (implemented via IR 2024/2690 for digital infrastructure).",
+      "detail_level": "full"
+    },
+    {
+      "article": "23",
+      "title": "Incident reporting — three-stage escalation",
+      "description": "11 paragraphs. Para 1: report 'significant' incidents to CSIRT or competent authority. Para 3: significance test (severe operational disruption, financial loss, or considerable damage to others). Para 4: three stages — (a) early warning 24h, (b) incident notification 72h, (c) final report 1 month. Para 5: CSIRT provides guidance and technical advice. Para 6: cross-border coordination via single points of contact. Para 9: voluntary reporting for non-significant incidents. Para 11: Commission implementing acts may specify notification format.",
+      "detail_level": "full"
+    },
+    {
+      "article": "20",
+      "title": "Governance — management body accountability",
+      "description": "Para 1: management bodies of essential and important entities must APPROVE cybersecurity risk-management measures and OVERSEE their implementation. Personal liability for failure to comply (Art. 32(5)(b) for essential entities). Para 2: management body members must undergo training. Training must be sufficient to identify risks, assess practices, and evaluate their impact on services.",
+      "detail_level": "full"
+    },
+    {
+      "article": "3",
+      "title": "Entity classification — essential vs important",
+      "description": "Para 1: essential entities = (a) Annex I + large enterprise, (b) qualified trust service providers, (c) TLD registries, (d) DNS service providers, (e) entities designated by Member States. Para 2: important entities = any entity in scope that is not essential. The size-cap rule uses EU SME definition (Recommendation 2003/361/EC): medium = 50-249 employees AND turnover <= EUR 50M; large = 250+ employees OR turnover > EUR 50M.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 28,
+      "clarifies": "Lex specialis principle — where sector-specific Union acts require essential or important entities to adopt cybersecurity risk-management measures or notify incidents with at least equivalent effect, the sector-specific provisions should apply.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 7,
+      "clarifies": "Replacement of NIS1 — explains the shortcomings of Directive (EU) 2016/1148 (divergent implementation, unclear scope, insufficient response capabilities) that NIS2 addresses.",
+      "detail_level": "full"
+    },
+    {
+      "number": 79,
+      "clarifies": "All-hazards approach — measures should address physical and environmental security, including measures to protect against system failure, human error, malicious acts, or natural events. Consistent with ISO/IEC 27001.",
+      "detail_level": "full"
+    },
+    {
+      "number": 84,
+      "clarifies": "Supply chain security — explains that risk assessments should consider supply chain vulnerabilities, overall quality of products and cybersecurity practices of suppliers, and the results of EU-level coordinated security risk assessments of critical supply chains (Art. 22).",
+      "detail_level": "full"
+    },
+    {
+      "number": 89,
+      "clarifies": "Significant incident threshold — clarifies that the number of affected users, duration, geographic scope, extent of disruption, and economic/societal impact are factors in determining significance.",
+      "detail_level": "full"
+    },
+    {
+      "number": 133,
+      "clarifies": "Management body liability — makes clear that compliance obligations are without prejudice to national law on liability rules for public institutions and on the liability of civil servants.",
+      "detail_level": "full"
+    }
+  ],
 
   "national_implementation": {
-    "pattern": "NIS2 is a directive — search the relevant Law MCP for national transposition acts (deadline was 2024-10-17).",
-    "known_examples": []
+    "pattern": "NIS2 is a directive — Member States must transpose into national law. Transposition deadline was 2024-10-17. Search the relevant Law MCP for the national implementing act. Key transposition variations: entity registration procedures, additional sectors, specific incident thresholds, management liability details.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG)",
+        "note": "German NIS2 transposition — extends BSI's supervisory role, introduces registration obligation for essential and important entities via BSI portal."
+      },
+      {
+        "country": "SE",
+        "law": "SFS 2025:xxx",
+        "note": "Swedish NIS2 transposition — complements existing protective security legislation. MSB (Swedish Civil Contingencies Agency) as national competent authority."
+      },
+      {
+        "country": "NL",
+        "law": "Cyberbeveiligingswet",
+        "note": "Dutch NIS2 transposition — replaces Wbni (Wet beveiliging netwerk- en informatiesystemen). NCSC-NL as national CSIRT."
+      }
+    ]
   },
 
-  "evidence_hint": "Call get_evidence_requirements(regulation='NIS2') for per-article audit artifacts.",
+  "evidence_hint": "Call get_evidence_requirements(regulation='NIS2') for per-article audit artifacts. Key artifacts: Cybersecurity risk-management policy (Art. 21), Incident response plan (Art. 21(2)(b)), Business continuity plan (Art. 21(2)(c)), Supply chain security assessment (Art. 21(2)(d)), Management body training records (Art. 20(2)), Entity registration documentation, Incident notification records (Art. 23).",
 
   "timeline": [
     {
-      "event": "Transposition deadline",
-      "date": "2024-10-17",
-      "note": "Member states must transpose into national law"
+      "event": "NIS2 entered into force",
+      "date": "2023-01-16",
+      "note": "Directive published, transposition period begins"
     },
     {
-      "event": "NIS2 applicable",
+      "event": "Transposition deadline",
+      "date": "2024-10-17",
+      "note": "Member States must adopt national implementing measures. Several states transposed late."
+    },
+    {
+      "event": "NIS1 repealed",
       "date": "2024-10-18",
-      "note": "Directive in force"
+      "note": "Directive (EU) 2016/1148 repealed, NIS2 fully applicable"
+    },
+    {
+      "event": "List of essential and important entities",
+      "date": "2025-04-17",
+      "note": "Member States must establish list of essential and important entities and update regularly (Art. 3(3))"
+    },
+    {
+      "event": "First review of entity lists",
+      "date": "2027-04-17",
+      "note": "Art. 3(3) periodic review — at least every 2 years"
     }
   ],
 
-  "citation_format": "Cite as: NIS2 Art. X(Y). Note: NIS2 is Directive (EU) 2022/2555."
+  "citation_format": "Cite as: NIS2 Art. X(Y). Note: NIS2 is Directive (EU) 2022/2555. For implementing acts: Commission Implementing Regulation (EU) 2024/2690, Art. X."
 }

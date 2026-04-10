@@ -4,39 +4,95 @@
   "regulation_name": "Artificial Intelligence Act",
   "celex_id": "32024R1689",
   "effective_date": "2024-08-01",
-  "guide_updated": "2026-03-17",
+  "guide_updated": "2026-04-10",
 
-  "delegated_acts": [],
+  "delegated_acts": [
+    {
+      "id": "AI_ACT_DA_ANNEX_III_UPDATE",
+      "celex_id": "pending",
+      "title": "Update to Annex III High-Risk AI Systems List",
+      "article_count": 0,
+      "parent_article": "6(6)",
+      "covers": "Commission may add or remove high-risk use cases from Annex III via delegated act, based on criteria in Art. 6(2)"
+    },
+    {
+      "id": "AI_ACT_DA_ANNEX_I_UPDATE",
+      "celex_id": "pending",
+      "title": "Update to Annex I Product Safety Legislation List",
+      "article_count": 0,
+      "parent_article": "6(7)",
+      "covers": "Commission may amend the list of Union harmonisation legislation in Annex I whose safety components make AI systems high-risk"
+    }
+  ],
 
   "proportionality": {
-    "description": "AI Act uses a risk-based classification: prohibited, high-risk, limited risk, minimal risk",
+    "description": "AI Act uses risk-based classification: prohibited, high-risk (two pathways), limited risk (transparency), minimal risk, plus separate GPAI model regime",
     "tiers": [
       {
         "name": "prohibited",
-        "applies_to": "AI systems per Art. 5 (social scoring, real-time biometric ID in public spaces with exceptions, etc.)",
+        "applies_to": "AI systems per Art. 5: social scoring by public authorities, real-time remote biometric identification in public spaces (with exceptions), exploitation of vulnerabilities of specific groups, subliminal manipulation causing harm, emotion recognition in workplace/education, untargeted facial image scraping, biometric categorization inferring sensitive attributes",
         "key_articles": ["5"],
-        "note": "Banned outright. Applies from 2025-02-02."
+        "note": "Banned outright. Applies from 2025-02-02. Narrow exceptions for law enforcement under Art. 5(2-3) with prior judicial authorization."
       },
       {
-        "name": "high_risk",
-        "applies_to": "AI systems in Annex III areas or safety components of Annex I products (Art. 6)",
-        "key_articles": ["6-15", "16-27"],
-        "note": "Full conformity assessment, CE marking, post-market monitoring. Applies from 2026-08-02."
+        "name": "high_risk_annex_I",
+        "applies_to": "AI systems that are safety components of products covered by Union harmonisation legislation in Annex I (e.g., MDR, machinery, toys, lifts, radio equipment, civil aviation, vehicles) AND subject to third-party conformity assessment",
+        "key_articles": ["6(1)", "8-15", "16-27"],
+        "note": "Full conformity assessment per the relevant sectoral legislation. AI Act requirements in Chapter III apply in addition. Applies from 2027-08-02."
+      },
+      {
+        "name": "high_risk_annex_III",
+        "applies_to": "AI systems in Annex III use cases: biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, justice. ONLY if they pose 'significant risk of harm' (Art. 6(2))",
+        "key_articles": ["6(2-3)", "8-15", "16-27"],
+        "note": "Art. 6(3) self-assessment exception: provider may determine system is not high-risk if it does not pose significant risk. Must document reasoning and notify. Market surveillance authority can override. Applies from 2026-08-02."
       },
       {
         "name": "limited_risk",
-        "applies_to": "AI systems interacting with persons, emotion recognition, biometric categorization, deepfakes (Art. 50)",
+        "applies_to": "AI systems with transparency obligations: systems interacting with persons, emotion recognition, biometric categorization, deepfake generation (Art. 50)",
         "key_articles": ["50"],
-        "note": "Transparency obligations only."
+        "note": "Transparency obligations only — must disclose AI interaction, label synthetic content. No conformity assessment. Applies from 2026-08-02."
       },
       {
-        "name": "gpai",
-        "applies_to": "General-purpose AI models (Art. 51-56)",
-        "key_articles": ["51-56"],
-        "note": "Transparency, documentation, copyright compliance. Systemic risk models have additional obligations. Applies from 2025-08-02."
+        "name": "gpai_standard",
+        "applies_to": "General-purpose AI models per Art. 51 — models trained on broad data at scale, capable of performing wide range of tasks",
+        "key_articles": ["51-53"],
+        "note": "Transparency: technical documentation, downstream provider info, copyright policy summary, training data summary. Applies from 2025-08-02."
+      },
+      {
+        "name": "gpai_systemic_risk",
+        "applies_to": "GPAI models with systemic risk — training compute >10^25 FLOPs (Art. 51(2)) or Commission designation based on criteria in Art. 51(3)",
+        "key_articles": ["51(2-3)", "55"],
+        "note": "Additional obligations: model evaluation including adversarial testing, systemic risk assessment and mitigation, serious incident tracking and reporting, adequate cybersecurity protections. 10^25 FLOP threshold subject to Commission amendment."
+      },
+      {
+        "name": "minimal_risk",
+        "applies_to": "All other AI systems not falling into above categories",
+        "key_articles": [],
+        "note": "No mandatory requirements. Voluntary codes of conduct encouraged (Art. 95). Majority of AI systems fall here."
       }
     ],
-    "derogations": []
+    "derogations": [
+      {
+        "article": "2(3)",
+        "applies_to": "Military, defence, national security AI systems",
+        "description": "Excluded from AI Act scope entirely"
+      },
+      {
+        "article": "2(6)",
+        "applies_to": "AI systems for scientific R&D",
+        "description": "AI systems placed on market or put into service exclusively for scientific research and development purposes are excluded"
+      },
+      {
+        "article": "6(3)",
+        "applies_to": "Annex III AI systems with documented low-risk determination",
+        "description": "Provider may determine an Annex III system is not high-risk if it does not pose significant risk of harm. Must document, register, and notify before placing on market."
+      },
+      {
+        "article": "57-62",
+        "applies_to": "AI regulatory sandboxes",
+        "description": "Member States shall establish regulatory sandboxes for testing innovative AI systems under relaxed conditions with supervisory authority oversight"
+      }
+    ]
   },
 
   "pitfalls": [
@@ -44,22 +100,57 @@
       "id": "phased_application",
       "severity": "high",
       "article": "113",
-      "description": "AI Act applies in phases: prohibitions (Feb 2025), GPAI (Aug 2025), high-risk Annex III (Aug 2026), high-risk Annex I (Aug 2027). Assess which deadlines apply to the specific AI system.",
+      "description": "AI Act applies in phases: prohibited practices (Feb 2025), AI literacy (Feb 2025), GPAI (Aug 2025), high-risk Annex III (Aug 2026), high-risk Annex I + all remaining (Aug 2027). Assess which deadlines apply to the specific AI system. Most organisations focus only on Aug 2026 and miss earlier obligations.",
       "detail_level": "quick"
     },
     {
       "id": "art6_classification_nuance",
       "severity": "high",
       "article": "6",
-      "description": "Art. 6(2) high-risk classification applies to Annex III systems ONLY if they pose a significant risk. Art. 6(3) allows providers to self-assess and declare non-high-risk if criteria are met, but must document the assessment.",
+      "description": "Art. 6(2) high-risk classification for Annex III systems requires the system to pose a 'significant risk of harm to health, safety, or fundamental rights'. Art. 6(3) allows providers to self-assess and declare non-high-risk if criteria are met, BUT must document the assessment, register it, and notify market surveillance authority before placing on market. Incorrect self-classification carries full liability.",
       "detail_level": "quick"
     },
     {
       "id": "gpai_systemic_risk",
-      "severity": "medium",
+      "severity": "high",
       "article": "51",
-      "description": "GPAI models with systemic risk (>10^25 FLOPs training compute or Commission designation) face additional obligations: adversarial testing, incident tracking, cybersecurity protections. Threshold is in Art. 51(2).",
+      "description": "GPAI models with systemic risk (>10^25 FLOPs or Commission designation) face additional obligations: adversarial testing, incident tracking, cybersecurity. The FLOP threshold is a presumption — Commission can designate below-threshold models based on criteria in Art. 51(3) including capabilities with high impact, number of registered end-users, cross-border reach.",
       "detail_level": "quick"
+    },
+    {
+      "id": "ai_literacy_obligation",
+      "severity": "medium",
+      "article": "4",
+      "description": "Art. 4 requires providers AND deployers to ensure staff dealing with AI have sufficient AI literacy, considering technical knowledge, experience, education, context of use, and affected persons. This applies from Feb 2025 — BEFORE the high-risk system requirements. Often overlooked as it applies to ALL AI systems, not just high-risk.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "deployer_vs_provider",
+      "severity": "high",
+      "article": "3(3-4), 26",
+      "description": "Provider develops or commissions the AI system; deployer uses it. Deployers have their own obligations (Art. 26): risk management for their specific use, human oversight, monitoring, logging, informing affected persons. A deployer that substantially modifies a high-risk system or repurposes it becomes the provider (Art. 25) and inherits full provider obligations.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "fundamental_rights_impact_assessment",
+      "severity": "medium",
+      "article": "27",
+      "description": "Art. 27 requires deployers that are public bodies or private entities providing public services to perform a fundamental rights impact assessment BEFORE deploying high-risk AI. This is separate from the provider's conformity assessment and the GDPR DPIA. Covers impact on equality, non-discrimination, privacy, freedom of expression, access to justice.",
+      "detail_level": "full"
+    },
+    {
+      "id": "post_market_monitoring",
+      "severity": "medium",
+      "article": "72",
+      "description": "High-risk AI providers must establish a post-market monitoring system (Art. 72) proportionate to the nature and risks. Must actively collect data on performance throughout the AI system lifecycle. This goes beyond traditional product safety monitoring — includes monitoring for drift, bias, and accuracy degradation.",
+      "detail_level": "full"
+    },
+    {
+      "id": "conformity_re_assessment",
+      "severity": "medium",
+      "article": "43(4)",
+      "description": "Substantial modification to a high-risk AI system triggers a new conformity assessment. 'Substantial modification' includes changes beyond what the provider determined at initial assessment and documented in technical documentation. Continuous learning systems that update autonomously may trigger this repeatedly if updates meaningfully change system behavior.",
+      "detail_level": "full"
     }
   ],
 
@@ -67,26 +158,119 @@
     {
       "regulation": "GDPR",
       "relationship": "stacking",
-      "key_provisions": ["GDPR Art. 22"],
-      "note": "AI Act requirements stack with GDPR automated decision-making provisions (Art. 22) and data protection impact assessments (Art. 35)."
+      "key_provisions": ["GDPR Art. 22", "GDPR Art. 35"],
+      "note": "AI Act requirements stack with GDPR. Art. 22 automated decision-making rights apply alongside AI Act transparency. GDPR DPIAs (Art. 35) stack with AI Act fundamental rights impact assessments (Art. 27). AI Act Art. 10(5) permits special category processing for bias detection — a carve-out from GDPR Art. 9 prohibition."
+    },
+    {
+      "regulation": "CRA",
+      "relationship": "complementary",
+      "key_provisions": ["CRA Art. 12"],
+      "note": "High-risk AI systems that comply with CRA Annex I cybersecurity requirements are deemed to meet AI Act Art. 15 cybersecurity requirements. CRA conformity assessment covers cybersecurity part; AI Act assessment covers AI-specific requirements."
     },
     {
       "regulation": "PLD",
       "relationship": "complementary",
       "key_provisions": [],
-      "note": "Revised Product Liability Directive covers AI-caused damage. AI Act conformity evidence may be relevant to PLD claims."
+      "note": "Revised Product Liability Directive covers AI-caused damage. AI system is a 'product' under PLD. Non-compliance with AI Act requirements strengthens a PLD defect claim. Disclosure of evidence rules (PLD Art. 8) interact with AI Act transparency."
+    },
+    {
+      "regulation": "MDR",
+      "relationship": "stacking",
+      "key_provisions": ["AI Act Annex I", "MDR"],
+      "note": "AI-enabled medical devices are high-risk under AI Act Art. 6(1) (safety components of MDR products). Conformity assessment under MDR covers AI Act requirements simultaneously. Notified bodies for MDR must also verify AI Act compliance."
+    },
+    {
+      "regulation": "DSA",
+      "relationship": "stacking",
+      "key_provisions": ["DSA Art. 34a"],
+      "note": "VLOP/VLOSE recommender systems using AI must comply with both DSA transparency requirements and AI Act obligations. DSA systemic risk assessments must consider AI system risks."
+    },
+    {
+      "regulation": "MACHINERY",
+      "relationship": "stacking",
+      "key_provisions": ["Machinery Regulation Annex I"],
+      "note": "AI-enabled machinery is high-risk under AI Act Art. 6(1). Machinery Regulation safety requirements (Annex I) stack with AI Act requirements. Single conformity assessment path."
     }
   ],
 
-  "key_structures": [],
-  "key_recitals": [],
+  "key_structures": [
+    {
+      "article": "6",
+      "title": "Classification rules for high-risk AI systems — dual pathway",
+      "description": "Two independent pathways to high-risk: (1) Art. 6(1) — AI system is a safety component of an Annex I product AND that product requires third-party conformity assessment. (2) Art. 6(2) — AI system falls into an Annex III use case AND poses significant risk of harm. Art. 6(3) allows providers to self-exempt from pathway (2) with documentation, registration, and notification. Art. 6(4) Commission updates Annex III categories.",
+      "detail_level": "full"
+    },
+    {
+      "article": "9",
+      "title": "Risk management system — continuous lifecycle",
+      "description": "Para 1: continuous iterative process throughout entire AI system lifecycle (not one-time). Para 2: must include (a) identify and analyse known/foreseeable risks, (b) estimate and evaluate risks from intended use and reasonably foreseeable misuse, (c) evaluate risks from post-market monitoring data, (d) adopt suitable risk management measures. Para 5: testing before placing on market and throughout lifecycle. Para 7: residual risks communicated to deployer.",
+      "detail_level": "full"
+    },
+    {
+      "article": "13",
+      "title": "Transparency and information to deployers",
+      "description": "Para 1: high-risk AI systems designed to enable deployers to interpret output appropriately. Para 2: accompanied by instructions for use with: (a) provider identity, (b) system characteristics, capabilities, limitations, (c) intended purpose, (d) performance metrics including for specific persons/groups, (e) expected lifetime, maintenance, (f) human oversight measures, (g) computational resources, (h) input data specifications.",
+      "detail_level": "full"
+    },
+    {
+      "article": "50",
+      "title": "Transparency for limited-risk AI — disclosure framework",
+      "description": "Para 1: AI systems interacting with persons must disclose AI nature (unless obvious from context). Para 2: emotion recognition or biometric categorization systems — inform affected persons. Para 3: providers of AI generating synthetic content must mark output as artificially generated (machine-readable). Para 4: deepfakes — deployers must disclose artificial generation/manipulation. Artistic/satirical exceptions in para 4 second subparagraph.",
+      "detail_level": "full"
+    },
+    {
+      "article": "53",
+      "title": "GPAI model obligations — documentation and transparency",
+      "description": "Para 1: GPAI providers must (a) draw up technical documentation per Annex XI, (b) provide information/documentation to downstream providers, (c) establish copyright compliance policy, (d) publish sufficiently detailed training data summary per Annex XII template. Para 2: models released under free and open-source licence exempt from (a) and (b) UNLESS they have systemic risk. Para 3: technical documentation must be kept up to date.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 47,
+      "clarifies": "High-risk classification — intended purpose test. Whether an AI system poses significant risk depends on the function performed, specific modalities of use, severity and probability of harm, number of potentially affected persons. Context and manner of use are determinative.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 53,
+      "clarifies": "Art. 6(3) self-exemption — a provider who considers an Annex III system not high-risk must document findings, register in EU database, and is subject to market surveillance authority review. The exemption is not automatic.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 97,
+      "clarifies": "GPAI systemic risk — 10^25 FLOP threshold is a proxy for capability. Systemic risk can also arise from high-impact capabilities, number of end-users, cross-border reach, or other factors justifying Commission designation regardless of compute used.",
+      "detail_level": "full"
+    },
+    {
+      "number": 27,
+      "clarifies": "AI literacy — obligation applies proportionately to provider/deployer context, technical knowledge of staff, and nature of AI systems being operated. Not a one-size-fits-all training requirement.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 66,
+      "clarifies": "Risk management scope — includes risks both from the intended use AND from reasonably foreseeable misuse. The system must be resilient against both.",
+      "detail_level": "full"
+    },
+    {
+      "number": 132,
+      "clarifies": "Post-market monitoring — must be proportionate to the AI system's nature and risks. For high-risk AI, must include analysis of deployer feedback, actual system performance, and emerging risks. Data must feed back into the risk management system.",
+      "detail_level": "full"
+    }
+  ],
 
   "national_implementation": {
-    "pattern": "AI Act is a regulation (directly applicable). Search Law MCPs for national implementing measures (e.g., national AI supervisory authority designation).",
-    "known_examples": []
+    "pattern": "AI Act is a regulation (directly applicable). Member States designate national competent authorities and market surveillance authorities (Art. 70). Regulatory sandboxes are nationally established (Art. 57). Search Law MCPs for national AI supervision acts.",
+    "known_examples": [
+      {
+        "country": "ES",
+        "law": "AESIA — Agencia Española de Supervisión de la IA",
+        "note": "Spain established the first EU national AI supervisory authority (2023), now tasked with AI Act enforcement."
+      }
+    ]
   },
 
-  "evidence_hint": "Call get_evidence_requirements(regulation='AI_ACT') for per-article audit artifacts.",
+  "evidence_hint": "Call get_evidence_requirements(regulation='AI_ACT') for per-article audit artifacts. Key artifacts: Risk management system documentation (Art. 9), Technical documentation per Annex IV (Art. 11), Quality management system (Art. 17), Conformity assessment documentation (Art. 43), EU declaration of conformity (Art. 47), Post-market monitoring plan (Art. 72), Fundamental rights impact assessment (Art. 27 — deployers only), AI literacy training records (Art. 4).",
 
   "timeline": [
     {
@@ -95,21 +279,26 @@
       "note": "AI Act published in OJ"
     },
     {
-      "event": "Prohibited practices applicable",
+      "event": "Prohibited practices + AI literacy",
       "date": "2025-02-02",
-      "note": "Art. 5 prohibitions in force"
+      "note": "Art. 5 prohibitions and Art. 4 AI literacy obligations applicable"
     },
     {
-      "event": "GPAI obligations applicable",
+      "event": "GPAI model obligations",
       "date": "2025-08-02",
-      "note": "Art. 51-56 GPAI model requirements"
+      "note": "Art. 51-56 GPAI requirements including systemic risk obligations. Codes of practice should be ready."
     },
     {
-      "event": "High-risk Annex III applicable",
+      "event": "High-risk Annex III + transparency",
       "date": "2026-08-02",
-      "note": "Full high-risk requirements for Annex III AI systems"
+      "note": "Full high-risk requirements for Annex III systems. Art. 50 transparency obligations. Conformity assessment, CE marking, post-market monitoring."
+    },
+    {
+      "event": "High-risk Annex I + all remaining",
+      "date": "2027-08-02",
+      "note": "High-risk requirements for AI safety components of Annex I products (machinery, medical devices, etc.). All AI Act provisions fully applicable."
     }
   ],
 
-  "citation_format": "Cite as: AI Act Art. X(Y). For Annex references: AI Act Annex N, Section X."
+  "citation_format": "Cite as: AI Act Art. X(Y). For Annex references: AI Act Annex N, Section X. For GPAI Codes of Practice: GPAI Code of Practice [version], Section X."
 }

@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "MDR",
+  "regulation_name": "Medical Device Regulation",
+  "celex_id": "32017R0745",
+  "effective_date": "2021-05-26",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [],
+
+  "proportionality": {
+    "description": "MDR classifies devices into risk classes (I, IIa, IIb, III) per Annex VIII rules, with ascending conformity assessment requirements. Custom-made and investigational devices have separate regimes.",
+    "tiers": [
+      {
+        "name": "class_I",
+        "applies_to": "Low-risk devices per Annex VIII classification rules (e.g., bandages, wheelchairs, stethoscopes without electronics). Class I sterile, Class I measuring, and Class I reusable surgical instruments have additional requirements.",
+        "key_articles": ["51", "52(7)"],
+        "note": "Self-declaration of conformity (no notified body) for basic Class I. Sterile (Annex IX Ch I or Annex XI Part A), measuring (Annex IX Ch I or Annex XI Part A), and reusable surgical (Annex IX Ch I or Annex XI Part A) require notified body for those specific aspects."
+      },
+      {
+        "name": "class_IIa",
+        "applies_to": "Medium-risk devices per Annex VIII (e.g., surgical gloves, hearing aids, ultrasound diagnostic, dental crowns)",
+        "key_articles": ["51", "52(6)"],
+        "note": "Notified body assessment required. Options: Annex IX (QMS + technical documentation) or Annex XI (product conformity verification, with type-examination option)."
+      },
+      {
+        "name": "class_IIb",
+        "applies_to": "Higher-risk devices per Annex VIII (e.g., ventilators, X-ray machines, hip implants, surgical lasers)",
+        "key_articles": ["51", "52(4-5)"],
+        "note": "Notified body assessment required with more scrutiny. For implantable devices: Annex IX (QMS + Ch II clinical evaluation scrutiny) or Annex X + XI. Specific clinical evidence requirements."
+      },
+      {
+        "name": "class_III",
+        "applies_to": "Highest-risk devices per Annex VIII (e.g., pacemakers, hip prostheses, breast implants, spinal fixation, drug-device combinations). All implantable devices not in Class IIb.",
+        "key_articles": ["51", "52(3)"],
+        "note": "Mandatory Annex IX (QMS + Ch I + Ch II clinical evaluation scrutiny) or Annex X (type-examination) + Annex XI Part A (production QA). Art. 54 clinical scrutiny procedure for novel Class III or Class IIb implantables."
+      },
+      {
+        "name": "custom_made",
+        "applies_to": "Devices specifically made for an individual patient per prescription (Art. 2(3))",
+        "key_articles": ["52(8)", "Annex XIII"],
+        "note": "Exempt from standard conformity assessment. Must comply with Annex XIII requirements (statement, documentation, traceability). No CE marking."
+      },
+      {
+        "name": "software_as_medical_device",
+        "applies_to": "Software intended by the manufacturer to be used for medical purposes (SaMD). Rule 11 of Annex VIII.",
+        "key_articles": ["Annex VIII Rule 11"],
+        "note": "Rule 11: software that drives or influences medical device use classified same as device. Standalone diagnostic/monitoring software: Class IIa minimum. Software intended for diagnosis or treatment of Class III conditions: Class III. MDCG 2019-11 guidance clarifies qualification criteria."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "97",
+        "applies_to": "Devices lawfully placed on the market under Directive 93/42/EEC or 90/385/EEC",
+        "description": "Transitional provisions: devices with valid EC certificates under prior directives may continue to be placed on market until certificate expiry (extended deadlines). Full MDR transition for different classes staggered through 2027-2028."
+      },
+      {
+        "article": "59",
+        "applies_to": "Devices essential for health protection with no adequate alternative",
+        "description": "Member States may authorize devices without conformity assessment in the interest of public health or patient safety. Valid only in the authorizing Member State. Must notify Commission."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "samd_classification_rule11",
+      "severity": "high",
+      "article": "Annex VIII Rule 11",
+      "description": "Software as a Medical Device (SaMD) is classified under Rule 11 of Annex VIII. Software that provides information used for diagnosis or treatment decisions is Class IIa minimum — NOT Class I. Software driving therapy of Class III conditions is Class III. MDCG 2019-11 guidance clarifies the qualification boundary between SaMD and non-medical software. An AI-based diagnostic tool is almost always Class IIa or higher.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "gspr_not_optional",
+      "severity": "high",
+      "article": "Annex I",
+      "description": "General Safety and Performance Requirements (GSPR) in Annex I apply to ALL devices. The 23 chapters cover risk management (Ch 1), clinical evaluation (Ch 6-7), design requirements (Ch 8-12), information supply (Ch 23). GSPR compliance is not a checklist exercise — each requirement must be addressed with rationale for why it applies or does not apply, per the risk management process.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "clinical_evaluation_continuous",
+      "severity": "high",
+      "article": "61",
+      "description": "Clinical evaluation is a continuous process, not a one-time assessment. Art. 61(11) requires manufacturers to update clinical evaluation throughout the device lifecycle using post-market surveillance data. For Class III and implantable devices, Art. 61(4) generally requires clinical investigation data (not just literature review). Insufficient clinical evidence is the top reason for notified body certificate refusals.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "udi_system",
+      "severity": "medium",
+      "article": "27",
+      "description": "Unique Device Identification (UDI) system assigns a unique code to every device model and production batch. Art. 27(4) requires UDI carrier on device label AND all higher levels of packaging. Timelines differ by class: Class III + implantables (already applicable), Class IIa/IIb (applicable), Class I (applicable). UDI data must be submitted to EUDAMED.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "authorized_representative_eu",
+      "severity": "medium",
+      "article": "11",
+      "description": "Non-EU manufacturers MUST designate an authorised representative established in the EU (Art. 11). The AR has specific obligations including maintaining registration, ensuring technical documentation is available, reporting, and cooperating with competent authorities. Without an AR, the device cannot be legally placed on the EU market.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "post_market_surveillance_vs_vigilance",
+      "severity": "medium",
+      "article": "83-92",
+      "description": "Post-market surveillance (PMS, Art. 83-86) and vigilance (Art. 87-92) are DISTINCT systems. PMS is proactive systematic data collection. Vigilance is reactive reporting of serious incidents and field safety corrective actions. Both are mandatory. PMS feeds clinical evaluation updates. Vigilance has strict timelines: serious incidents within 15 days (Art. 87(5)), with 2 days for serious public health threats.",
+      "detail_level": "full"
+    },
+    {
+      "id": "person_responsible_for_regulatory_compliance",
+      "severity": "medium",
+      "article": "15",
+      "description": "Every manufacturer must have at least one 'person responsible for regulatory compliance' (PRRC) with specific qualifications: (a) law/medicine/engineering/science degree + 1 year professional experience, OR (b) 4 years professional experience in regulatory affairs or QMS. MDCG 2023-4 provides further guidance. Micro/small enterprises may use external PRRC.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "IVDR",
+      "relationship": "sister_regulation",
+      "key_provisions": ["IVDR Art. 1"],
+      "note": "In Vitro Diagnostic Regulation (EU) 2017/746 is the companion to MDR for diagnostic devices. Same structure and principles but separate classification system (Class A-D) and different annexes. Companion diagnostics subject to both IVDR and MDR Art. 117(5)."
+    },
+    {
+      "regulation": "AI_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["AI Act Art. 6(1)", "AI Act Annex I"],
+      "note": "AI-based medical devices are high-risk under AI Act Art. 6(1) (MDR is in AI Act Annex I). AI Act conformity assessment runs alongside MDR assessment. AI requirements (risk management, data governance, transparency, human oversight, accuracy/robustness/cybersecurity) stack with MDR GSPR."
+    },
+    {
+      "regulation": "CRA",
+      "relationship": "exclusion",
+      "key_provisions": ["CRA Art. 2(2)(a)"],
+      "note": "CRA Art. 2(2)(a) explicitly excludes products subject to MDR. Medical devices follow MDR cybersecurity requirements (Annex I Sec. 17.2-17.4) instead of CRA. But accessories that are NOT medical devices may fall under CRA."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["MDR Art. 110", "GDPR Art. 9"],
+      "note": "Medical devices processing health data must comply with GDPR. MDR Art. 110 addresses data protection for Eudamed and device registries. Clinical investigations must comply with GDPR Art. 9 (health data) and informed consent requirements."
+    },
+    {
+      "regulation": "MACHINERY",
+      "relationship": "complementary",
+      "key_provisions": ["Machinery Regulation Art. 2"],
+      "note": "Some devices may qualify as both medical devices and machinery (e.g., surgical robots). MDR prevails for the medical device aspects. Where both apply, conformity with MDR is presumed to satisfy machinery safety for overlapping requirements."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "51",
+      "title": "Classification of devices — risk-tiered system",
+      "description": "Para 1: devices classified as Class I, IIa, IIb, or III based on Annex VIII rules. Classification considers: duration of contact (transient/short-term/long-term), invasiveness, energy source, implantability, intended purpose, and whether device contains medicinal substance or biological tissue. 22 classification rules in Annex VIII.",
+      "detail_level": "full"
+    },
+    {
+      "article": "52",
+      "title": "Conformity assessment procedures — class-dependent",
+      "description": "Para 3: Class III → Annex IX (QMS) or Annex X (type-exam) + Annex XI Part A. Para 4-5: Class IIb → Annex IX or Annex X + Annex XI (Part A or Part B). Para 6: Class IIa → Annex IX or Annex XI Part A or Part B. Para 7: Class I → self-declaration (Annex IV Declaration of Conformity). Para 8: Custom-made → Annex XIII.",
+      "detail_level": "full"
+    },
+    {
+      "article": "10",
+      "title": "General obligations of manufacturers — 16 paragraphs",
+      "description": "Core manufacturer duties: (1-2) establish QMS per Annex IX, (3) risk management per Annex I, (4) clinical evaluation per Art. 61, (5) technical documentation per Annexes II-III, (6) UDI compliance, (7-8) labelling and IFU, (9) EU declaration of conformity + CE marking, (10) PMS system per Art. 83, (11) corrective action when non-compliant, (12) registration, (13) financial coverage for liability, (14) document retention (10 years minimum, 15 for implantables).",
+      "detail_level": "full"
+    },
+    {
+      "article": "61",
+      "title": "Clinical evaluation — continuous lifecycle process",
+      "description": "Para 1: clinical evaluation based on clinical data providing sufficient clinical evidence. Para 3: clinical evaluation must follow defined and methodologically sound procedure. Para 4: Class III and implantable devices generally require clinical investigation (not just literature). Para 11: continuous update throughout lifecycle using PMS data. Art. 54 scrutiny procedure for novel Class III and implantable Class IIb.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 1,
+      "clarifies": "Internal market rationale — ensuring high quality and safety of medical devices while maintaining a favourable environment for innovation. Dual objective underlies proportionality assessments.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 17,
+      "clarifies": "Software qualification — explains that software in its own right is a medical device when specifically intended by the manufacturer to be used for diagnostic or therapeutic purposes. General-purpose software used in a healthcare setting is NOT automatically a medical device.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 60,
+      "clarifies": "Clinical evaluation role — clinical evaluation should be continuous, using the best available clinical data. For well-established technologies, clinical evaluation based on clinical literature may be sufficient. For novel devices, clinical investigations are typically needed.",
+      "detail_level": "full"
+    },
+    {
+      "number": 80,
+      "clarifies": "Post-market surveillance purpose — PMS is about actively collecting and reviewing post-market experience data and feeding it back into clinical evaluation. Not just adverse event collection but systematic data analysis.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "MDR is a regulation (directly applicable). Member States designate competent authorities (Art. 101) and notified bodies (Art. 36-44). Search Law MCPs for national medical device laws that supplement MDR.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+        "note": "German MDR implementation act — supplements MDR with national provisions on competent authorities (BfArM/PEI), penalties, clinical investigations, and market surveillance."
+      },
+      {
+        "country": "SE",
+        "law": "SFS 2021:600 (Lag om medicintekniska produkter)",
+        "note": "Swedish medical devices act — Läkemedelsverket as competent authority. Penalties, market surveillance procedures, clinical investigation oversight."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='MDR') for per-article audit artifacts. Key artifacts: Technical Documentation (Annex II-III), Clinical Evaluation Report (Art. 61), Risk Management File (Annex I Ch 1), Quality Management System documentation (Annex IX), Post-Market Surveillance Plan and Report (Art. 84-86), Declaration of Conformity (Annex IV), UDI documentation (Art. 27).",
+
+  "timeline": [
+    {
+      "event": "MDR entered into force",
+      "date": "2017-05-25",
+      "note": "3-year transition period begins (extended due to COVID-19)"
+    },
+    {
+      "event": "MDR date of application",
+      "date": "2021-05-26",
+      "note": "MDR applicable. Repeals Directive 93/42/EEC (MDD) and 90/385/EEC (AIMDD)."
+    },
+    {
+      "event": "Extended transition — Class III and implantable Class IIb",
+      "date": "2027-12-31",
+      "note": "Deadline for transitioning Class III and implantable Class IIb devices with valid MDD/AIMDD certificates to MDR"
+    },
+    {
+      "event": "Extended transition — Class IIa, IIb, and Class I (sterile/measuring)",
+      "date": "2028-12-31",
+      "note": "Deadline for transitioning remaining classes with valid MDD certificates to MDR"
+    }
+  ],
+
+  "citation_format": "Cite as: MDR Art. X(Y). For Annex references: MDR Annex N, Chapter/Section X. For MDCG guidance: MDCG YYYY-NN on [topic]."
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "CYBERSECURITY_ACT",
+  "regulation_name": "EU Cybersecurity Act",
+  "celex_id": "32019R0881",
+  "effective_date": "2019-06-27",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "CSA_IR_EUCC",
+      "celex_id": "32024R0482",
+      "title": "European Common Criteria Cybersecurity Certification Scheme (EUCC)",
+      "article_count": 50,
+      "parent_article": "49",
+      "covers": "First certification scheme adopted under the Cybersecurity Act framework — ICT product certification at assurance levels substantial and high using Common Criteria"
+    },
+    {
+      "id": "CSA_IR_EUCS",
+      "celex_id": "pending",
+      "title": "European Cybersecurity Certification Scheme for Cloud Services (EUCS)",
+      "article_count": 0,
+      "parent_article": "49",
+      "covers": "Cloud services certification scheme — under preparation by ENISA. Sovereignty requirements debated. Not yet adopted."
+    }
+  ],
+
+  "proportionality": {
+    "description": "The Cybersecurity Act defines three assurance levels for certification schemes. Certification is voluntary unless Union legislation makes it mandatory for specific product categories.",
+    "tiers": [
+      {
+        "name": "basic",
+        "applies_to": "ICT products, services, and processes requiring baseline security assurance",
+        "key_articles": ["52(1)"],
+        "note": "Minimizes known basic risks of incidents and cyberattacks. Evaluation may include documentary review and basic functional testing. Conformity self-assessment permitted (Art. 53)."
+      },
+      {
+        "name": "substantial",
+        "applies_to": "ICT products, services, and processes requiring moderate security assurance",
+        "key_articles": ["52(2)"],
+        "note": "Minimizes known cybersecurity risks and risk of incidents caused by actors with limited skills and resources. Evaluation includes checking that security requirements are correctly implemented. Third-party assessment required."
+      },
+      {
+        "name": "high",
+        "applies_to": "ICT products, services, and processes requiring highest security assurance",
+        "key_articles": ["52(3)"],
+        "note": "Minimizes risk of state-of-the-art cyberattacks by actors with significant skills and resources. Evaluation includes penetration testing and source code review. National cybersecurity certification authority involvement required."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "56(2)",
+        "applies_to": "Products, services, or processes already certified under national schemes",
+        "description": "National certificates issued under schemes that are superseded by a European scheme remain valid until expiry, unless the Commission specifies otherwise in the adopting act"
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "certification_voluntary",
+      "severity": "high",
+      "article": "56(1)-(2)",
+      "description": "Cybersecurity certification under this Act is VOLUNTARY unless specific Union legislation makes a particular European cybersecurity certificate mandatory. As of 2026, the CRA Art. 8 is the first law that may require EUCC certificates for critical products (Annex IV). Do not state that Cybersecurity Act certification is required unless a sectoral law mandates it.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "enisa_advisory_not_binding",
+      "severity": "high",
+      "article": "46-49",
+      "description": "ENISA prepares candidate certification schemes (Art. 49) and supports implementation, but the COMMISSION adopts schemes via implementing acts (Art. 49(7)). ENISA recommendations are advisory. National cybersecurity certification authorities make binding certification decisions. Do not attribute binding powers to ENISA.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "self_assessment_basic_only",
+      "severity": "medium",
+      "article": "53",
+      "description": "Conformity self-assessment is only permitted at assurance level basic, and only if the specific scheme allows it (Art. 53(1)). Substantial and high assurance always require third-party assessment. A scheme may also prohibit self-assessment at basic level.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "national_schemes_sunset",
+      "severity": "medium",
+      "article": "57",
+      "description": "Pre-existing national cybersecurity certification schemes covered by a new European scheme CEASE to produce effects from the date set by the Commission in the implementing act (Art. 57(1)). National schemes not covered by any European scheme continue to exist. Do not assume all national schemes are automatically replaced.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "scheme_specific_evaluation",
+      "severity": "medium",
+      "article": "54",
+      "description": "Each European certification scheme defines its own evaluation criteria, assurance levels, and whether self-assessment is permitted (Art. 54(1)). Art. 54 lists 23 elements each scheme must address. There is no single set of requirements -- each scheme is self-contained.",
+      "detail_level": "full"
+    },
+    {
+      "id": "ict_services_processes_included",
+      "severity": "medium",
+      "article": "46(1)",
+      "description": "The certification framework covers ICT products, ICT services, AND ICT processes (Art. 46(1)). Many analyses only consider product certification. Service and process certification schemes are possible under the same framework.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "CRA",
+      "relationship": "complementary",
+      "key_provisions": ["CRA Art. 8", "CRA Art. 27(4)"],
+      "note": "EUCC certificates issued under Cybersecurity Act create presumption of conformity with CRA Annex I requirements. CRA Art. 8 allows Commission to require European cybersecurity certificates for critical products (Annex IV). Cybersecurity Act provides the certification infrastructure that CRA relies on."
+    },
+    {
+      "regulation": "NIS2",
+      "relationship": "complementary",
+      "key_provisions": ["NIS2 Art. 24", "NIS2 Recital 79"],
+      "note": "NIS2 Art. 24 allows Member States to require essential and important entities to use certified ICT products under European cybersecurity certification schemes. ENISA's role under Cybersecurity Act (incident reporting, technical analysis) supports NIS2 implementation."
+    },
+    {
+      "regulation": "EUCC",
+      "relationship": "parent_framework",
+      "key_provisions": ["Art. 49", "Art. 54"],
+      "note": "EUCC (Implementing Regulation 2024/482) is the first scheme adopted under the Cybersecurity Act certification framework. The Cybersecurity Act sets the meta-rules; EUCC implements them for ICT products using Common Criteria."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "49",
+      "title": "Preparation, adoption and review of certification schemes",
+      "description": "Multi-stage process: Commission requests ENISA to prepare candidate scheme (para 1). ENISA prepares with expert involvement, public consultation (para 2-3). Commission adopts via implementing act (para 7). Review at least every 5 years (para 8). ENISA publishes guidance on maintaining schemes (para 6). The scheme itself then governs all certification under its scope.",
+      "detail_level": "full"
+    },
+    {
+      "article": "54",
+      "title": "Elements of certification schemes -- 23-point framework",
+      "description": "Art. 54(1) lists 23 mandatory elements each scheme must define: (a) scope and covered products/services, (b) purpose, (c) references to standards, (d) assurance levels, (e) evaluation criteria, (f) specific evaluation methods, (g) information required from applicant, (h) certificate use rules, (i) mark/label rules, (j) certificate mutual recognition, (k) audit and certification body rules, (l) supervisory body rules, (m) complaint procedures, (n) vulnerability disclosure policies, (o) certificate validity, (p) liability regime, (q) maximum validity period, (r) disclosure policies, (s) data retention and protection, (t) mutual recognition with third countries, (u) self-assessment rules, (v) peer review format, (w) certificate content format.",
+      "detail_level": "full"
+    },
+    {
+      "article": "58",
+      "title": "National cybersecurity certification authorities -- enforcement powers",
+      "description": "Each Member State designates one or more authorities (para 1). Powers include: supervise compliance (para 7), require information from certificate holders (para 8(a)), carry out investigations and audits (para 8(b)), withdraw certificates (para 8(e)), issue penalties in line with Art. 65 (para 9). Must cooperate with market surveillance authorities and data protection authorities (para 5-6).",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 69,
+      "clarifies": "Voluntary nature of certification -- explains that the internal market benefits from voluntary uptake, and that mandatory certification should only be required by specific Union legislation after impact assessment",
+      "detail_level": "quick"
+    },
+    {
+      "number": 74,
+      "clarifies": "Three assurance levels rationale -- explains the calibration: basic for simple connected devices, substantial for products handling personal data or network infrastructure, high for critical infrastructure",
+      "detail_level": "quick"
+    },
+    {
+      "number": 77,
+      "clarifies": "Relationship with existing national schemes -- explains the transition mechanism and coexistence with national schemes pending European scheme adoption",
+      "detail_level": "full"
+    },
+    {
+      "number": 7,
+      "clarifies": "ENISA permanent mandate -- explains why the previous temporary mandate was replaced with permanent status, given the increasing importance of cybersecurity at Union level",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "Cybersecurity Act is a regulation (directly applicable). Member States designate national cybersecurity certification authorities (Art. 58) and set penalties (Art. 65). Search Law MCPs for national implementing measures.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "BSI-Gesetz (BSIG)",
+        "note": "BSI designated as national cybersecurity certification authority. BSI also acts as conformity assessment body for high-assurance certifications."
+      },
+      {
+        "country": "FR",
+        "law": "ANSSI mandate",
+        "note": "ANSSI designated as national cybersecurity certification authority. France has extensive pre-existing national certification scheme (CSPN/CC) now integrated with EUCC."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='CYBERSECURITY_ACT') for per-article audit artifacts. Key artifacts: National Cybersecurity Certification Authority designation (Art. 58), Certification scheme compliance documentation, European cybersecurity certificate (Art. 56), Conformity self-assessment statement (Art. 53, basic level only), Vulnerability disclosure policy (Art. 55).",
+
+  "timeline": [
+    {
+      "event": "Entry into force",
+      "date": "2019-06-27",
+      "note": "Regulation published and effective. ENISA permanent mandate begins."
+    },
+    {
+      "event": "ENISA permanent mandate confirmed",
+      "date": "2019-06-28",
+      "note": "ENISA's temporary mandate (from 2004) replaced with permanent mandate. Budget and staff increased."
+    },
+    {
+      "event": "First certification scheme adopted (EUCC)",
+      "date": "2024-02-07",
+      "note": "Implementing Regulation (EU) 2024/482 adopts the EUCC for ICT products based on Common Criteria."
+    },
+    {
+      "event": "EUCC fully applicable",
+      "date": "2025-02-27",
+      "note": "EUCC certificates can be issued from this date. Transitional period for national schemes covered by EUCC."
+    }
+  ],
+
+  "citation_format": "Cite as: Cybersecurity Act Art. X(Y) for main regulation. For certification schemes adopted under the Act: cite the specific implementing regulation, e.g., EUCC Implementing Regulation (EU) 2024/482, Art. X."
+}

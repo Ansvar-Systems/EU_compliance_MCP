@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "DMA",
+  "regulation_name": "Digital Markets Act",
+  "celex_id": "32022R1925",
+  "effective_date": "2022-11-01",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "DMA_DA_QUANTITATIVE_THRESHOLDS",
+      "celex_id": "pending",
+      "title": "Methodology for Quantitative Thresholds",
+      "article_count": 0,
+      "parent_article": "3(6)",
+      "covers": "Commission empowered to specify methodology for determining whether quantitative thresholds in Art. 3(2) are met, and to adjust methodology to market and technological developments"
+    },
+    {
+      "id": "DMA_DA_ANNEX_METHODOLOGY",
+      "celex_id": "pending",
+      "title": "Amendment of Annex Methodology and Indicators",
+      "article_count": 0,
+      "parent_article": "3(7)",
+      "covers": "Commission empowered to update the methodology and list of indicators in the Annex for counting active end users and business users"
+    }
+  ],
+
+  "proportionality": {
+    "description": "DMA applies only to designated gatekeepers for their listed core platform services. Obligations are service-specific, with some subject to further specification through compliance dialogues (Art. 8). Non-gatekeeper platforms are not subject to DMA obligations.",
+    "tiers": [
+      {
+        "name": "designated_gatekeeper",
+        "applies_to": "Undertakings designated as gatekeepers per Art. 3 for specific core platform services",
+        "key_articles": ["3", "5", "6", "7"],
+        "note": "Full obligations under Art. 5 (self-executing), Art. 6 (subject to further specification under Art. 8), and Art. 7 (messaging interoperability). Must comply within 6 months of core platform service listing (Art. 3(10)). Currently 7 designated gatekeepers (as of 2026)."
+      },
+      {
+        "name": "compliance_dialogue",
+        "applies_to": "Gatekeepers seeking specification of Art. 6 obligations",
+        "key_articles": ["8"],
+        "note": "Art. 6 obligations may be further specified through a regulatory dialogue between the gatekeeper and Commission (Art. 8). Gatekeeper submits compliance measures, Commission assesses effectiveness. This does not apply to Art. 5 obligations which are self-executing."
+      },
+      {
+        "name": "emerging_gatekeeper",
+        "applies_to": "Undertakings meeting some but not all Art. 3(2) thresholds",
+        "key_articles": ["3(8)"],
+        "note": "Commission may designate through market investigation (Art. 17) even if quantitative thresholds are not met, based on qualitative criteria (Art. 3(8)): size, network effects, data advantages, lock-in, conglomerate structure, etc."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "9",
+        "applies_to": "Gatekeepers demonstrating economic viability risk",
+        "description": "Commission may suspend specific obligations for a core platform service if compliance would endanger the economic viability of the gatekeeper's operations in the Union (Art. 9(1)). Suspension must be time-limited and proportionate. Rarely granted."
+      },
+      {
+        "article": "10",
+        "applies_to": "Public health and public security grounds",
+        "description": "Commission may exempt a gatekeeper from specific obligations on grounds of public morality, public health, public security, or exceptional circumstances beyond the gatekeeper's control (Art. 10(1)). Decision reviewed annually."
+      },
+      {
+        "article": "3(5)",
+        "applies_to": "Undertakings meeting quantitative thresholds but rebutting gatekeeper presumption",
+        "description": "An undertaking may present 'sufficiently substantiated arguments' that it does not satisfy Art. 3(1) requirements despite meeting all quantitative thresholds (Art. 3(5)). Commission may accept these arguments or open a market investigation (Art. 17(3))."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "gatekeeper_designation_required",
+      "severity": "high",
+      "article": "3",
+      "description": "DMA obligations apply ONLY to undertakings formally designated as gatekeepers by the Commission (Art. 3(4) or 3(8)). Meeting the quantitative thresholds alone does not trigger obligations -- the Commission must issue a designation decision. Obligations apply 6 months after the specific core platform service is listed (Art. 3(10)). Do not assume a large platform is a gatekeeper without checking the designation list.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "obligations_are_service_specific",
+      "severity": "high",
+      "article": "3(9)",
+      "description": "Obligations apply per core platform service listed in the designation decision (Art. 3(9)), not to the entire gatekeeper undertaking. A gatekeeper designated for its operating system and app store has different obligation profiles for each. One service may be listed while another of the same gatekeeper is not.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "self_preferencing_nuance",
+      "severity": "high",
+      "article": "6(5)",
+      "description": "Art. 6(5) prohibits treating the gatekeeper's own services more favourably in ranking. But this applies to 'similar services or products of a third party' -- the comparison must be with similar offerings. Ranking decisions must apply 'transparent, fair and non-discriminatory conditions.' The obligation is about equal treatment in ranking methodology, not equal outcomes.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "interoperability_phased",
+      "severity": "medium",
+      "article": "7(2)",
+      "description": "Messaging interoperability (Art. 7) is phased: (a) 1-to-1 text messaging and file sharing from designation, (b) group text messaging within 2 years, (c) voice and video calls within 4 years. Each phase has different technical requirements. The obligation is on the gatekeeper to provide technical interfaces; third-party providers must request interoperability (Art. 7(5)).",
+      "detail_level": "quick"
+    },
+    {
+      "id": "compliance_function_mandatory",
+      "severity": "medium",
+      "article": "28",
+      "description": "Every gatekeeper must establish an independent compliance function (Art. 28) staffed with sufficient authority, stature, and resources. The compliance officer must have direct access to management. This is a structural requirement, not just a reporting obligation. The compliance function must be operational before the obligation compliance deadline.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "fines_up_to_10_percent",
+      "severity": "medium",
+      "article": "30",
+      "description": "Non-compliance fines can reach up to 10% of worldwide annual turnover (Art. 30(1)). For systematic non-compliance (Art. 18), fines can reach 20% of worldwide turnover. Periodic penalty payments up to 5% of average daily turnover (Art. 31). These are among the highest fine levels in EU law. Commission has sole enforcement authority -- no national enforcement.",
+      "detail_level": "full"
+    },
+    {
+      "id": "no_national_enforcement",
+      "severity": "medium",
+      "article": "1(5), 37-38",
+      "description": "DMA is enforced exclusively by the Commission (Art. 37-38). Member States cannot impose additional gatekeeper-specific obligations for contestability and fairness purposes (Art. 1(5)). National competition rules continue to apply for non-DMA matters. National courts may apply DMA but cannot contradict Commission decisions (Art. 1(7)).",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "DSA",
+      "relationship": "complementary",
+      "key_provisions": ["DSA Art. 33-43"],
+      "note": "DMA and DSA are the twin pillars of EU digital platform regulation. DSA addresses content moderation and platform transparency. DMA addresses market contestability and fairness. A platform may be subject to both: DSA as a very large online platform and DMA as a gatekeeper. Obligations are cumulative."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["GDPR Art. 6", "GDPR Art. 20", "DMA Art. 5(2)"],
+      "note": "DMA Art. 5(2) restricts cross-service data combination unless the user consents per GDPR Art. 4(11) and Art. 7. DMA data portability obligations (Art. 6(9)-(10)) complement GDPR Art. 20 (right to data portability) with broader scope including non-personal data. GDPR consent requirements apply to DMA data processing conditions."
+    },
+    {
+      "regulation": "DATA_ACT",
+      "relationship": "complementary",
+      "key_provisions": ["Data Act Art. 5-6"],
+      "note": "Data Act data sharing obligations for connected devices complement DMA data portability requirements. Both aim to reduce data lock-in. Where both apply, the more specific rule governs. Data Act switching provisions (Art. 23-31) align with DMA anti-lock-in obligations."
+    },
+    {
+      "regulation": "CRA",
+      "relationship": "stacking",
+      "key_provisions": ["DMA Art. 6(4)", "CRA Art. 13"],
+      "note": "Gatekeeper operating systems must allow third-party app installation (DMA Art. 6(4)). Gatekeepers may take security measures if strictly necessary and proportionate (Art. 6(4) para 2). CRA cybersecurity requirements may provide justification for certain security-motivated restrictions on third-party software."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "3",
+      "title": "Designation of gatekeepers -- three-criteria test plus quantitative thresholds",
+      "description": "Three cumulative criteria: (a) significant impact on internal market, (b) core platform service is important gateway, (c) entrenched and durable position. Presumed met if: turnover >= EUR 7.5B or market cap >= EUR 75B and service in 3+ Member States (para 2(a)); >= 45M monthly active end users and >= 10K yearly active business users in EU (para 2(b)); thresholds met for 3 consecutive years (para 2(c)). Undertaking must self-notify within 2 months (para 3). Commission designates within 45 working days (para 4). Qualitative designation possible via Art. 3(8) market investigation.",
+      "detail_level": "full"
+    },
+    {
+      "article": "5",
+      "title": "Self-executing obligations -- 10 categories of prohibited conduct",
+      "description": "Art. 5 lists obligations that are directly applicable without further specification. Para 2: no cross-service personal data combination without consent. Para 3: no MFN clauses (price parity). Para 4: free communication with end users. Para 5: allow content access from third-party apps. Para 6: no restriction on raising issues with authorities. Para 7: no tying of identification, browser engine, or payment services. Para 8: no bundling of core platform service registrations. Para 9-10: advertising transparency obligations.",
+      "detail_level": "full"
+    },
+    {
+      "article": "6",
+      "title": "Obligations subject to further specification -- 13 conduct requirements",
+      "description": "Para 2: no use of non-public business user data for competition. Para 3: allow app uninstallation and default changes. Para 4: allow third-party app stores and sideloading. Para 5: no self-preferencing in ranking. Para 6: no restrictions on switching. Para 7: interoperability for hardware/software features. Para 8: advertising performance measurement access. Para 9: end user data portability. Para 10: business user data access. Para 11: search data access. Para 12: FRAND access conditions for app stores and services. Para 13: fair termination conditions. Commission may further specify these through Art. 8 compliance dialogue.",
+      "detail_level": "full"
+    },
+    {
+      "article": "28",
+      "title": "Compliance function -- structural governance requirement",
+      "description": "Gatekeeper must establish an independent compliance function (para 1). Function must have: sufficient authority, stature, resources, and access to management body (para 2). Compliance officer must monitor and report on obligations compliance (para 3). Commission may request compliance officer to report on measures taken (para 4). The function must be operational within the 6-month compliance period after designation.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 2,
+      "clarifies": "Core platform service characteristics -- explains why certain digital services create gatekeeping positions: network effects, data accumulation, multi-homing costs, vertical integration, lock-in effects",
+      "detail_level": "quick"
+    },
+    {
+      "number": 23,
+      "clarifies": "Quantitative threshold rationale -- explains why the EUR 7.5B/EUR 75B and 45M/10K thresholds were chosen as indicators of significant market impact and gateway position",
+      "detail_level": "quick"
+    },
+    {
+      "number": 37,
+      "clarifies": "Self-executing vs further-specified obligations -- explains why Art. 5 obligations are directly applicable while Art. 6 obligations may need specification through regulatory dialogue, based on technical complexity and market variation",
+      "detail_level": "full"
+    },
+    {
+      "number": 62,
+      "clarifies": "Relationship with competition law -- explains that DMA creates ex-ante obligations complementing ex-post competition enforcement. DMA addresses structural issues that competition law alone cannot remedy efficiently. Both frameworks apply in parallel.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "DMA is a regulation (directly applicable). Commission has sole enforcement authority. Member States may designate national competent authorities for cooperation (Art. 37-38) but cannot impose additional gatekeeper obligations for DMA purposes.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "GWB (Gesetz gegen Wettbewerbsbeschrankungen) Section 19a",
+        "note": "Germany's GWB Section 19a (pre-DMA) gives Bundeskartellamt powers over undertakings of overriding cross-market significance for competition. Complements but distinct from DMA. Art. 1(5) prevents overlapping obligations for DMA contestability/fairness purposes."
+      },
+      {
+        "country": "NL",
+        "law": "ACM (Authority for Consumers and Markets)",
+        "note": "ACM designated as national competent authority for DMA cooperation per Art. 37-38. Assists Commission with investigations and information gathering."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='DMA') for per-article audit artifacts. Key artifacts: Gatekeeper designation decision (Art. 3(4)), Annual compliance report (Art. 11), Non-confidential summary of compliance measures (Art. 11), Consumer profiling report (Art. 15), Compliance function documentation (Art. 28), Interoperability reference offer (Art. 7(4)), Data portability tools documentation (Art. 6(9)).",
+
+  "timeline": [
+    {
+      "event": "Entry into force",
+      "date": "2022-11-01",
+      "note": "DMA published in Official Journal"
+    },
+    {
+      "event": "Full application",
+      "date": "2023-05-02",
+      "note": "All DMA provisions applicable. Gatekeeper notification obligation active."
+    },
+    {
+      "event": "First gatekeeper designations",
+      "date": "2023-09-06",
+      "note": "Commission designates Alphabet, Amazon, Apple, ByteDance, Meta, Microsoft as gatekeepers for 22 core platform services"
+    },
+    {
+      "event": "First compliance deadline",
+      "date": "2024-03-06",
+      "note": "6 months after designation -- first batch of gatekeepers must comply with Art. 5, 6, and 7 obligations for all listed core platform services"
+    },
+    {
+      "event": "Booking.com designated",
+      "date": "2024-05-13",
+      "note": "Commission designates Booking.com as 7th gatekeeper for its online intermediation service"
+    },
+    {
+      "event": "Three-year review",
+      "date": "2026-05-02",
+      "note": "Commission reviews DMA scope, rules, and enforcement (Art. 53). Includes assessment of whether new core platform service categories should be added."
+    }
+  ],
+
+  "citation_format": "Cite as: DMA Art. X(Y) for the regulation. Full citation: Regulation (EU) 2022/1925, Art. X. For Commission designation decisions: cite the decision reference. For the Annex: DMA Annex (methodology and indicators for active users)."
+}
