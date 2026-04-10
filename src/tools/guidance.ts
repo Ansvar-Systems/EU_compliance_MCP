@@ -2,6 +2,19 @@ import type { DatabaseAdapter } from '../database/types.js';
 import { escapeFts5Query } from './fts-utils.js';
 import { buildCitation } from '../utils/citation.js';
 
+/**
+ * Status vocabulary for guidance_documents.status (free-form TEXT column, no
+ * CHECK constraint):
+ *
+ * - planned    — Commission has announced the document but no public draft yet.
+ * - draft      — A public draft is available (e.g. Commission second-draft code).
+ * - published  — Final version, in force.
+ * - current    — Legacy synonym of 'published', kept for MDCG ingestion compat.
+ * - superseded — Replaced by a newer version; link via metadata.supersededBy.
+ *
+ * New ingestion scripts SHOULD use 'published' over 'current' for consistency.
+ */
+
 export interface SearchGuidanceInput {
   query: string;
   document_id?: string;
