@@ -111,7 +111,43 @@
       "text": "This Directive is addressed to the Member States.\n\n(\n\n1\n\n)\n\nOJ C 365 E, 19.12.2000, p. 223.\n\n(\n\n2\n\n)\n\nOJ C 123, 25.4.2001, p. 53.\n\n(\n\n3\n\n) Opinion of the European Parliament of 13 November 2001 (not yet published in the Official Journal), Council Common Position of 28 January 2002 (OJ C 113 E, 14.5.2002, p. 39) and Decision of the European Parliament of 30 May 2002 (not yet published in the Official Journal). Council Decision of 25 June 2002.\n\n(\n\n4\n\n)\n\nOJ L 281, 23.11.1995, p. 31.\n\n(\n\n5\n\n)\n\nOJ L 24, 30.1.1998, p. 1.\n\n(\n\n6\n\n)\n\nOJ L 178, 17.7.2000, p. 1.\n\n(\n\n7\n\n)\n\nOJ L 91, 7.4.1999, p. 10.\n\n(\n\n8\n\n)\n\nOJ L 108, 24.4.2002, p. 33.\n\n(\n\n9\n\n)\n\nOJ L 204, 21.7.1998, p. 37. Directive as amended by Directive 98/48/EC (OJ L 217, 5.8.1998, p. 18).\n\n(\n\n10\n\n)\n\nOJ L 36, 7.2.1987, p. 31. Decision as last amended by the 1994 Act of Accession.\n\n(\n\n11\n\n)\n\nOJ L 105, 13.4.2006, p. 54.\n\n////////////////////////$(document).ready(function(){generateTOC(true,'', 'Top','true');scrollToCurrentUrlAnchor();});//"
     }
   ],
-  "definitions": [],
+  "definitions": [
+    {
+      "term": "user",
+      "definition": "any natural person using a publicly available electronic communications service, for private or business purposes, without necessarily having subscribed to this service;",
+      "article": "2"
+    },
+    {
+      "term": "traffic data",
+      "definition": "any data processed for the purpose of the conveyance of a communication on an electronic communications network or for the billing thereof; ▼M2",
+      "article": "2"
+    },
+    {
+      "term": "location data",
+      "definition": "any data processed in an electronic communications network or by an electronic communications service, indicating the geographic position of the terminal equipment of a user of a publicly available electronic communications service; ▼B",
+      "article": "2"
+    },
+    {
+      "term": "communication",
+      "definition": "any information exchanged or conveyed between a finite number of parties by means of a publicly available electronic communications service. This does not include any information conveyed as part of a broadcasting service to the public over an electronic communications network except to the extent that the information can be related to the identifiable subscriber or user receiving the information; ▼M2 ————— ▼B",
+      "article": "2"
+    },
+    {
+      "term": "value added service",
+      "definition": "any service which requires the processing of traffic data or location data other than traffic data beyond what is necessary for the transmission of a communication or the billing thereof;",
+      "article": "2"
+    },
+    {
+      "term": "electronic mail",
+      "definition": "any text, voice, sound or image message sent over a public communications network which can be stored in the network or in the recipient's terminal equipment until it is collected by the recipient; ▼M2",
+      "article": "2"
+    },
+    {
+      "term": "personal data breach",
+      "definition": "a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise processed in connection with the provision of a publicly available electronic communications service in the Community. ▼M2",
+      "article": "2"
+    }
+  ],
   "recitals": [
     {
       "recital_number": 1,
@@ -155,7 +191,10 @@
     },
     {
       "recital_number": 11,
-      "text": "Like Directive 95/46/EC, this Directive does not address issues of protection of fundamental rights and freedoms related to activities which are not governed by Community law. Therefore it does not alter the existing balance between the individual's right to privacy and the possibility for Member States to take the measures referred to in Article 15(1) of this Directive, necessary for the protection of public security, defence, State security (including the economic well-being of the State when the activities relate to State security matters) and the enforcement of criminal law. Consequently, this Directive does not affect the ability of Member States to carry out lawful interception of electronic communications, or take other measures, if necessary for any of these purposes and in accordance with the European Convention for the Protection of Human Rights and Fundamental Freedoms, as interpreted by the rulings of the European Court of Human Rights. Such measures must be appropriate, strictly proportionate to the intended purpose and necessary within a democratic society and should be subject to adequate safeguards in accordance with the European Convention for the Protection of Human Rights and Fundamental Freedoms."
+      "text": "Like Directive 95/46/EC, this Directive does not address issues of protection of fundamental rights and freedoms related to activities which are not governed by Community law. Therefore it does not alter the existing balance between the individual's right to privacy and the possibility for Member States to take the measures referred to in Article 15(1) of this Directive, necessary for the protection of public security, defence, State security (including the economic well-being of the State when the activities relate to State security matters) and the enforcement of criminal law. Consequently, this Directive does not affect the ability of Member States to carry out lawful interception of electronic communications, or take other measures, if necessary for any of these purposes and in accordance with the European Convention for the Protection of Human Rights and Fundamental Freedoms, as interpreted by the rulings of the European Court of Human Rights. Such measures must be appropriate, strictly proportionate to the intended purpose and necessary within a democratic society and should be subject to adequate safeguards in accordance with the European Convention for the Protection of Human Rights and Fundamental Freedoms.",
+      "related_articles": [
+        "15"
+      ]
     },
     {
       "recital_number": 12,
@@ -251,7 +290,10 @@
     },
     {
       "recital_number": 35,
-      "text": "In digital mobile networks, location data giving the geographic position of the terminal equipment of the mobile user are processed to enable the transmission of communications. Such data are traffic data covered by Article 6 of this Directive. However, in addition, digital mobile networks may have the capacity to process location data which are more precise than is necessary for the transmission of communications and which are used for the provision of value added services such as services providing individualised traffic information and guidance to drivers. The processing of such data for value added services should only be allowed where subscribers have given their consent. Even in cases where subscribers have given their consent, they should have a simple means to temporarily deny the processing of location data, free of charge."
+      "text": "In digital mobile networks, location data giving the geographic position of the terminal equipment of the mobile user are processed to enable the transmission of communications. Such data are traffic data covered by Article 6 of this Directive. However, in addition, digital mobile networks may have the capacity to process location data which are more precise than is necessary for the transmission of communications and which are used for the provision of value added services such as services providing individualised traffic information and guidance to drivers. The processing of such data for value added services should only be allowed where subscribers have given their consent. Even in cases where subscribers have given their consent, they should have a simple means to temporarily deny the processing of location data, free of charge.",
+      "related_articles": [
+        "6"
+      ]
     },
     {
       "recital_number": 36,
