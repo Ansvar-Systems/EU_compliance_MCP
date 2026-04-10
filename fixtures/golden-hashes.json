@@ -1,6 +1,6 @@
 {
-  "_description": "SHA-256 hashes of critical data points for drift detection. If any hash changes, upstream data may have been updated and the database needs re-ingestion.",
-  "_generated": "2026-02-20",
+  "_description": "SHA-256 hashes of critical data points for drift detection. If any hash changes, upstream data may have been updated and the database needs re-ingestion. Note: as of 2026-04-10, 13 AI Act annexes (Annex I..XIII) are stored in the articles table alongside numeric articles.",
+  "_generated": "2026-04-10",
   "articles": {
     "GDPR:1": "2f6e0655e4f5d9847444d2efaeaa4bb99c24b5c431a25116a521ae7d222ac235",
     "GDPR:17": "9e7cc66a53e0991a9dfd64a62ffa398960e9877c31ccb8ddd87f8bf4067b4967",
@@ -17,6 +17,6 @@
   },
   "counts": {
     "regulations": 64,
-    "articles": 4461
+    "articles": 4474
   }
 }
