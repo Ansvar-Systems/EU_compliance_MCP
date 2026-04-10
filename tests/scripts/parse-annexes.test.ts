@@ -68,4 +68,18 @@ describe('parseAnnexes (AI Act fixture)', () => {
     const a13 = annexes.find((a) => a.number === 'Annex XIII')!;
     expect(a13.text.toLowerCase()).toContain('systemic risk');
   });
+
+  it('integration: parseAnnexes output is structurally consistent with seed JSON Article shape', () => {
+    const asArticles = annexes.map((a) => ({
+      number: a.number,
+      title: a.title,
+      text: a.text,
+    }));
+    for (const art of asArticles) {
+      expect(typeof art.number).toBe('string');
+      expect(art.number.startsWith('Annex ')).toBe(true);
+      expect(typeof art.title).toBe('string');
+      expect(typeof art.text).toBe('string');
+    }
+  });
 });

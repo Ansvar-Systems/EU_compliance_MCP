@@ -375,6 +375,19 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
   const { articles, definitions } = parseArticles(html, celexId);
   console.log(`Parsed ${articles.length} articles, ${definitions.length} definitions`);
 
+  const annexes = parseAnnexes(html);
+  console.log(`Parsed ${annexes.length} annexes`);
+
+  // Merge annexes into the articles array so build-db.ts inserts them into
+  // the articles table with their canonical 'Annex N' number.
+  for (const annex of annexes) {
+    articles.push({
+      number: annex.number,
+      title: annex.title,
+      text: annex.text,
+    });
+  }
+
   if (articles.length === 0) {
     console.error('No articles found! The HTML structure may have changed.');
     console.log('Saving raw HTML for debugging...');
