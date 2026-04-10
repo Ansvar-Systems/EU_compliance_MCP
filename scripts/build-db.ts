@@ -240,6 +240,14 @@ function buildDatabase() {
   console.log('Creating schema...');
   db.exec(SCHEMA);
 
+  // Apply guidance schema (from add-guidance-tables.sql). Kept as a separate file
+  // so ingestion scripts can also apply it idempotently on pre-existing DBs.
+  const GUIDANCE_SCHEMA = readFileSync(
+    join(__dirname, 'add-guidance-tables.sql'),
+    'utf-8',
+  );
+  db.exec(GUIDANCE_SCHEMA);
+
   // Load and insert seed files
   if (existsSync(SEED_DIR)) {
     const seedFiles = readdirSync(SEED_DIR).filter((f: string) => f.endsWith('.json'));
