@@ -9,6 +9,7 @@
  */
 
 import { writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
 import { JSDOM } from 'jsdom';
 import { fetchEurLexWithBrowser } from './ingest-eurlex-browser.js';
 
@@ -17,6 +18,69 @@ interface Article {
   title?: string;
   text: string;
   chapter?: string;
+}
+
+export interface Annex {
+  number: string; // canonical form: "Annex I" through "Annex XIII"
+  title: string;
+  text: string;
+}
+
+/**
+ * Extract EU-regulation annexes from EUR-Lex HTML.
+ *
+ * Recognises ANNEX markers in the line-oriented body text. Each annex starts
+ * at its marker line, ends at the next marker or end of body. The first short
+ * non-empty line after the marker is treated as the annex title.
+ *
+ * Exported for unit testing and for reuse by the main ingestion flow.
+ */
+export function parseAnnexes(html: string): Annex[] {
+  const dom = new JSDOM(html);
+  const doc = dom.window.document;
+  const allText = doc.body?.textContent || '';
+  const lines = allText.split('\n').map((l) => l.trim());
+
+  const annexes: Annex[] = [];
+  let current: { roman: string; titleLines: string[]; bodyLines: string[] } | null = null;
+  let seenTitle = false;
+
+  const flush = () => {
+    if (!current) return;
+    const title = current.titleLines.join(' ').trim();
+    // text includes the title line so the full annex content is searchable
+    const bodyText = current.bodyLines.join('\n').trim();
+    const text = bodyText ? `${title}\n${bodyText}` : title;
+    annexes.push({
+      number: `Annex ${current.roman}`,
+      title,
+      text,
+    });
+    current = null;
+    seenTitle = false;
+  };
+
+  for (const line of lines) {
+    if (!line) continue;
+    const match = line.match(/^ANNEX\s+([IVXLCDM]+)$/);
+    if (match) {
+      flush();
+      current = { roman: match[1], titleLines: [], bodyLines: [] };
+      seenTitle = false;
+      continue;
+    }
+    if (!current) continue;
+    if (!seenTitle) {
+      // First non-empty line after the marker becomes the title.
+      current.titleLines.push(line);
+      seenTitle = true;
+      continue;
+    }
+    current.bodyLines.push(line);
+  }
+  flush();
+
+  return annexes;
 }
 
 interface Definition {
@@ -340,29 +404,33 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
   console.log(`Recitals: ${recitals.length}`);
 }
 
-// Main
-const args = process.argv.slice(2);
-const useBrowser = args.includes('--browser');
-const [celexId, outputPath] = args.filter(arg => arg !== '--browser');
+// Main — only runs when executed directly, not when imported as a module
+const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 
-if (!celexId || !outputPath) {
-  console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]');
-  console.log('Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json');
-  console.log('Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
-  console.log('\nOptions:');
-  console.log('  --browser    Use Puppeteer to bypass EUR-Lex WAF challenges');
-  console.log('\nKnown CELEX IDs:');
-  Object.entries(REGULATION_METADATA).forEach(([id, meta]) => {
-    console.log(`  ${id} - ${meta.id} (${meta.full_name})`);
+if (isMain) {
+  const args = process.argv.slice(2);
+  const useBrowser = args.includes('--browser');
+  const [celexId, outputPath] = args.filter(arg => arg !== '--browser');
+
+  if (!celexId || !outputPath) {
+    console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]');
+    console.log('Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json');
+    console.log('Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
+    console.log('\nOptions:');
+    console.log('  --browser    Use Puppeteer to bypass EUR-Lex WAF challenges');
+    console.log('\nKnown CELEX IDs:');
+    Object.entries(REGULATION_METADATA).forEach(([id, meta]) => {
+      console.log(`  ${id} - ${meta.id} (${meta.full_name})`);
+    });
+    process.exit(1);
+  }
+
+  if (useBrowser) {
+    console.log('Browser mode enabled - using Puppeteer to fetch content\n');
+  }
+
+  ingestRegulation(celexId, outputPath, useBrowser).catch(err => {
+    console.error('Error:', err);
+    process.exit(1);
   });
-  process.exit(1);
 }
-
-if (useBrowser) {
-  console.log('Browser mode enabled - using Puppeteer to fetch content\n');
-}
-
-ingestRegulation(celexId, outputPath, useBrowser).catch(err => {
-  console.error('Error:', err);
-  process.exit(1);
-});
