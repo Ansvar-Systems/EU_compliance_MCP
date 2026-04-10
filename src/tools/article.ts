@@ -1,6 +1,32 @@
 import type { DatabaseAdapter } from '../database/types.js';
 import { buildCitation } from '../utils/citation.js';
 
+/**
+ * Normalize user input for the `article` parameter of get_article.
+ *
+ * Numeric articles ("1", "113", "5a") pass through after trimming.
+ * Annex references are normalized to the canonical stored form "Annex <ROMAN>":
+ * underscores become spaces, whitespace is collapsed, case is folded so "Annex"
+ * is title case and the Roman numeral is uppercase.
+ *
+ * Empty or whitespace-only input returns "".
+ */
+export function normalizeArticleNumber(input: string): string {
+  if (!input) return '';
+
+  // Collapse underscores to spaces, trim, collapse internal whitespace.
+  const collapsed = input.replace(/_/g, ' ').trim().replace(/\s+/g, ' ');
+  if (!collapsed) return '';
+
+  // Match "annex" (any case) followed by a Roman numeral.
+  const annexMatch = collapsed.match(/^annex\s+([ivxlcdm]+)$/i);
+  if (annexMatch) {
+    return `Annex ${annexMatch[1].toUpperCase()}`;
+  }
+
+  return collapsed;
+}
+
 export interface GetArticleInput {
   regulation: string;
   article: string;

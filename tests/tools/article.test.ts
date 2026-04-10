@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
-import { getArticle } from '../../src/tools/article.js';
+import { getArticle, normalizeArticleNumber } from '../../src/tools/article.js';
 import type { DatabaseAdapter } from '../../src/database/types.js';
 
 describe('getArticle', () => {
@@ -65,5 +65,33 @@ describe('getArticle', () => {
     expect(article).toBeDefined();
     // cross_references may be null in test data, that's okay
     expect(article).toHaveProperty('cross_references');
+  });
+});
+
+describe('normalizeArticleNumber', () => {
+  it('passes numeric article numbers through unchanged', () => {
+    expect(normalizeArticleNumber('1')).toBe('1');
+    expect(normalizeArticleNumber('113')).toBe('113');
+    expect(normalizeArticleNumber('5a')).toBe('5a');
+  });
+
+  it('normalizes annex variations to canonical "Annex N" form', () => {
+    expect(normalizeArticleNumber('Annex I')).toBe('Annex I');
+    expect(normalizeArticleNumber('annex i')).toBe('Annex I');
+    expect(normalizeArticleNumber('ANNEX III')).toBe('Annex III');
+    expect(normalizeArticleNumber('Annex_III')).toBe('Annex III');
+    expect(normalizeArticleNumber('annex_iii')).toBe('Annex III');
+    expect(normalizeArticleNumber('ANNEX_III')).toBe('Annex III');
+    expect(normalizeArticleNumber('Annex  XIII')).toBe('Annex XIII');
+    expect(normalizeArticleNumber(' Annex V ')).toBe('Annex V');
+  });
+
+  it('returns empty string for empty or whitespace-only input', () => {
+    expect(normalizeArticleNumber('')).toBe('');
+    expect(normalizeArticleNumber('   ')).toBe('');
+  });
+
+  it('leaves non-annex non-numeric input alone (trimmed)', () => {
+    expect(normalizeArticleNumber('  7b  ')).toBe('7b');
   });
 });
