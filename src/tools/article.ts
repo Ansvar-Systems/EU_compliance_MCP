@@ -18,6 +18,7 @@ export interface Article {
   truncated?: boolean;
   original_length?: number;
   token_estimate?: number;
+  _citation?: ReturnType<typeof buildCitation>;
 }
 
 export async function getArticle(

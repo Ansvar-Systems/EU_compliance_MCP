@@ -11,6 +11,7 @@ export interface Recital {
   recital_number: number;
   text: string;
   related_articles: string[] | null;
+  _citation?: ReturnType<typeof buildCitation>;
 }
 
 export async function getRecital(
