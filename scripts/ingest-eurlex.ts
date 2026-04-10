@@ -47,14 +47,10 @@ export function parseAnnexes(html: string): Annex[] {
 
   const flush = () => {
     if (!current) return;
-    const title = current.titleLines.join(' ').trim();
-    // text includes the title line so the full annex content is searchable
-    const bodyText = current.bodyLines.join('\n').trim();
-    const text = bodyText ? `${title}\n${bodyText}` : title;
     annexes.push({
       number: `Annex ${current.roman}`,
-      title,
-      text,
+      title: current.titleLines.join(' ').trim(),
+      text: current.bodyLines.join('\n').trim(),
     });
     current = null;
     seenTitle = false;
