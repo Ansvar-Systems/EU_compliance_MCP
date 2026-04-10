@@ -1,5 +1,12 @@
--- MDCG and other guidance documents (non-binding, issued by advisory groups)
+-- Guidance documents (non-binding, issued by advisory groups or the European Commission).
 -- Structurally different from regulations: section-based, not article-based.
+--
+-- status vocabulary (free-form TEXT column, no CHECK constraint):
+--   planned    - announced but no public draft yet
+--   draft      - public draft available (e.g. Commission second-draft code of practice)
+--   published  - final version, in force
+--   current    - legacy synonym of 'published' (kept for MDCG ingestion backwards compat)
+--   superseded - replaced by a newer version; link via metadata.supersededBy
 
 CREATE TABLE IF NOT EXISTS guidance_documents (
   id TEXT PRIMARY KEY,

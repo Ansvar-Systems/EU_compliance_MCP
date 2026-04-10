@@ -9,6 +9,7 @@
  */
 
 import { writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
 import { JSDOM } from 'jsdom';
 import { fetchEurLexWithBrowser } from './ingest-eurlex-browser.js';
 
@@ -17,6 +18,131 @@ interface Article {
   title?: string;
   text: string;
   chapter?: string;
+}
+
+export interface Annex {
+  number: string; // canonical form: "Annex I" through "Annex XIII"
+  title: string;
+  text: string;
+}
+
+/**
+ * Extract EU-regulation annexes from EUR-Lex HTML.
+ *
+ * Recognises ANNEX markers in the line-oriented body text. Each annex starts
+ * at its marker line, ends at the next marker or end of body. The first short
+ * non-empty line after the marker is treated as the annex title.
+ *
+ * Exported for unit testing and for reuse by the main ingestion flow.
+ */
+export function parseAnnexes(html: string): Annex[] {
+  const dom = new JSDOM(html);
+  const doc = dom.window.document;
+  const allText = doc.body?.textContent || '';
+  const lines = allText.split('\n').map((l) => l.trim());
+
+  const annexes: Annex[] = [];
+  let current: { roman: string; titleLines: string[]; bodyLines: string[] } | null = null;
+  let seenTitle = false;
+
+  const flush = () => {
+    if (!current) return;
+    annexes.push({
+      number: `Annex ${current.roman}`,
+      title: current.titleLines.join(' ').trim(),
+      text: current.bodyLines.join('\n').trim(),
+    });
+    current = null;
+    seenTitle = false;
+  };
+
+  for (const line of lines) {
+    if (!line) continue;
+    const match = line.match(/^ANNEX\s+([IVXLCDM]+)$/);
+    if (match) {
+      flush();
+      current = { roman: match[1], titleLines: [], bodyLines: [] };
+      seenTitle = false;
+      continue;
+    }
+    if (!current) continue;
+    if (!seenTitle) {
+      // First non-empty line after the marker becomes the title.
+      current.titleLines.push(line);
+      seenTitle = true;
+      continue;
+    }
+    current.bodyLines.push(line);
+  }
+  flush();
+
+  return annexes;
+}
+
+/**
+ * AI Act-specific sanity checks on extracted annexes. Throws on failure so the
+ * ingestion script exits non-zero and the seed JSON is not overwritten with
+ * a truncated or malformed document.
+ */
+export function validateAiActAnnexes(annexes: Annex[], article113Text: string): void {
+  const expectedNumbers = [
+    'Annex I', 'Annex II', 'Annex III', 'Annex IV', 'Annex V',
+    'Annex VI', 'Annex VII', 'Annex VIII', 'Annex IX', 'Annex X',
+    'Annex XI', 'Annex XII', 'Annex XIII',
+  ];
+  if (annexes.length !== 13) {
+    throw new Error(`AI Act: expected 13 annexes, got ${annexes.length}`);
+  }
+  const actualNumbers = annexes.map((a) => a.number);
+  for (let i = 0; i < expectedNumbers.length; i++) {
+    if (actualNumbers[i] !== expectedNumbers[i]) {
+      throw new Error(
+        `AI Act annex[${i}] number mismatch: expected ${expectedNumbers[i]}, got ${actualNumbers[i]}`,
+      );
+    }
+  }
+  for (const annex of annexes) {
+    if (!annex.title) throw new Error(`AI Act ${annex.number}: empty title`);
+    if (annex.text.length < 500) {
+      throw new Error(
+        `AI Act ${annex.number}: text only ${annex.text.length} chars (minimum 500)`,
+      );
+    }
+  }
+
+  const a3 = annexes[2].text.toLowerCase();
+  const a3Keywords = [
+    'biometric', 'critical infrastructure', 'education', 'employment',
+    'essential', 'law enforcement', 'migration', 'administration of justice',
+  ];
+  for (const kw of a3Keywords) {
+    if (!a3.includes(kw)) {
+      throw new Error(`AI Act Annex III missing keyword "${kw}" — parser may be truncating`);
+    }
+  }
+
+  const a11 = annexes[10].text.toLowerCase();
+  if (!a11.includes('training')) {
+    throw new Error('AI Act Annex XI missing "training" keyword');
+  }
+  if (!/floating point|computational|compute/.test(a11)) {
+    throw new Error('AI Act Annex XI missing compute-related keywords');
+  }
+
+  const a13 = annexes[12].text.toLowerCase();
+  if (!a13.includes('systemic risk')) {
+    throw new Error('AI Act Annex XIII missing "systemic risk" keyword');
+  }
+
+  if (article113Text.length > 4000) {
+    throw new Error(
+      `AI Act Article 113 text is ${article113Text.length} chars — ` +
+        'should be under 4000 after annex extraction. Are the annexes still concatenated?',
+    );
+  }
+  if (/ANNEX\s+(I|XIII)\b/.test(article113Text)) {
+    throw new Error('AI Act Article 113 text still contains ANNEX markers');
+  }
 }
 
 interface Definition {
@@ -315,6 +441,35 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
   const { articles, definitions } = parseArticles(html, celexId);
   console.log(`Parsed ${articles.length} articles, ${definitions.length} definitions`);
 
+  const annexes = parseAnnexes(html);
+  console.log(`Parsed ${annexes.length} annexes`);
+
+  // For AI Act specifically: rewrite Article 113 to contain only the transitional
+  // provisions (paragraphs 1-4) and validate the annex extraction. The stray
+  // ANNEX text that the article parser captured as part of Article 113 ends at
+  // the first ANNEX I marker.
+  if (metadata?.id === 'AI_ACT') {
+    const art113 = articles.find((a) => a.number === '113');
+    if (!art113) {
+      throw new Error('AI Act: Article 113 not found in parsed articles');
+    }
+    const annexStart = art113.text.search(/\n?ANNEX\s+I\b/);
+    if (annexStart > 0) {
+      art113.text = art113.text.slice(0, annexStart).trim();
+    }
+    validateAiActAnnexes(annexes, art113.text);
+  }
+
+  // Merge annexes into the articles array so build-db.ts inserts them into
+  // the articles table with their canonical 'Annex N' number.
+  for (const annex of annexes) {
+    articles.push({
+      number: annex.number,
+      title: annex.title,
+      text: annex.text,
+    });
+  }
+
   if (articles.length === 0) {
     console.error('No articles found! The HTML structure may have changed.');
     console.log('Saving raw HTML for debugging...');
@@ -340,29 +495,33 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
   console.log(`Recitals: ${recitals.length}`);
 }
 
-// Main
-const args = process.argv.slice(2);
-const useBrowser = args.includes('--browser');
-const [celexId, outputPath] = args.filter(arg => arg !== '--browser');
+// Main — only runs when executed directly, not when imported as a module
+const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 
-if (!celexId || !outputPath) {
-  console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]');
-  console.log('Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json');
-  console.log('Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
-  console.log('\nOptions:');
-  console.log('  --browser    Use Puppeteer to bypass EUR-Lex WAF challenges');
-  console.log('\nKnown CELEX IDs:');
-  Object.entries(REGULATION_METADATA).forEach(([id, meta]) => {
-    console.log(`  ${id} - ${meta.id} (${meta.full_name})`);
+if (isMain) {
+  const args = process.argv.slice(2);
+  const useBrowser = args.includes('--browser');
+  const [celexId, outputPath] = args.filter(arg => arg !== '--browser');
+
+  if (!celexId || !outputPath) {
+    console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]');
+    console.log('Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json');
+    console.log('Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
+    console.log('\nOptions:');
+    console.log('  --browser    Use Puppeteer to bypass EUR-Lex WAF challenges');
+    console.log('\nKnown CELEX IDs:');
+    Object.entries(REGULATION_METADATA).forEach(([id, meta]) => {
+      console.log(`  ${id} - ${meta.id} (${meta.full_name})`);
+    });
+    process.exit(1);
+  }
+
+  if (useBrowser) {
+    console.log('Browser mode enabled - using Puppeteer to fetch content\n');
+  }
+
+  ingestRegulation(celexId, outputPath, useBrowser).catch(err => {
+    console.error('Error:', err);
+    process.exit(1);
   });
-  process.exit(1);
 }
-
-if (useBrowser) {
-  console.log('Browser mode enabled - using Puppeteer to fetch content\n');
-}
-
-ingestRegulation(celexId, outputPath, useBrowser).catch(err => {
-  console.error('Error:', err);
-  process.exit(1);
-});
