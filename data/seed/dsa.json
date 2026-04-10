@@ -561,7 +561,128 @@
       "chapter": "V"
     }
   ],
-  "definitions": [],
+  "definitions": [
+    {
+      "term": "information society service",
+      "definition": "a ‘service’ as defined in Article 1(1), point (b), of Directive (EU) 2015/1535;",
+      "article": "3"
+    },
+    {
+      "term": "recipient of the service",
+      "definition": "any natural or legal person who uses an intermediary service, in particular for the purposes of seeking information or making it accessible;",
+      "article": "3"
+    },
+    {
+      "term": "consumer",
+      "definition": "any natural person who is acting for purposes which are outside his or her trade, business, craft, or profession;",
+      "article": "3"
+    },
+    {
+      "term": "to offer services in the union",
+      "definition": "enabling natural or legal persons in one or more Member States to use the services of a provider of intermediary services that has a substantial connection to the Union;",
+      "article": "3"
+    },
+    {
+      "term": "substantial connection to the union",
+      "definition": "a connection of a provider of intermediary services with the Union resulting either from its establishment in the Union or from specific factual criteria, such as: — a significant number of recipients of the service in one or more Member States in relation to its or their population; or — the targeting of activities towards one or more Member States;",
+      "article": "3"
+    },
+    {
+      "term": "trader",
+      "definition": "any natural person, or any legal person irrespective of whether it is privately or publicly owned, who is acting, including through any person acting in his or her name or on his or her behalf, for purposes relating to his or her trade, business, craft or profession;",
+      "article": "3"
+    },
+    {
+      "term": "intermediary service",
+      "definition": "one of the following information society services:",
+      "article": "3"
+    },
+    {
+      "term": "illegal content",
+      "definition": "any information that, in itself or in relation to an activity, including the sale of products or the provision of services, is not in compliance with Union law or the law of any Member State which is in compliance with Union law, irrespective of the precise subject matter or nature of that law;",
+      "article": "3"
+    },
+    {
+      "term": "online platform",
+      "definition": "a hosting service that, at the request of a recipient of the service, stores and disseminates information to the public, unless that activity is a minor and purely ancillary feature of another service or a minor functionality of the principal service and, for objective and technical reasons, cannot be used without that other service, and the integration of the feature or functionality into the other service is not a means to circumvent the applicability of this Regulation;",
+      "article": "3"
+    },
+    {
+      "term": "online search engine",
+      "definition": "an intermediary service that allows users to input queries in order to perform searches of, in principle, all websites, or all websites in a particular language, on the basis of a query on any subject in the form of a keyword, voice request, phrase or other input, and returns results in any format in which information related to the requested content can be found;",
+      "article": "3"
+    },
+    {
+      "term": "dissemination to the public",
+      "definition": "making information available, at the request of the recipient of the service who provided the information, to a potentially unlimited number of third parties;",
+      "article": "3"
+    },
+    {
+      "term": "distance contract",
+      "definition": "‘distance contract’ as defined in Article 2, point (7), of Directive 2011/83/EU;",
+      "article": "3"
+    },
+    {
+      "term": "online interface",
+      "definition": "any software, including a website or a part thereof, and applications, including mobile applications;",
+      "article": "3"
+    },
+    {
+      "term": "digital services coordinator of establishment",
+      "definition": "the Digital Services Coordinator of the Member State where the main establishment of a provider of an intermediary service is located or its legal representative resides or is established;",
+      "article": "3"
+    },
+    {
+      "term": "digital services coordinator of destination",
+      "definition": "the Digital Services Coordinator of a Member State where the intermediary service is provided;",
+      "article": "3"
+    },
+    {
+      "term": "active recipient of an online platform",
+      "definition": "a recipient of the service that has engaged with an online platform by either requesting the online platform to host information or being exposed to information hosted by the online platform and disseminated through its online interface;",
+      "article": "3"
+    },
+    {
+      "term": "active recipient of an online search engine",
+      "definition": "a recipient of the service that has submitted a query to an online search engine and been exposed to information indexed and presented on its online interface;",
+      "article": "3"
+    },
+    {
+      "term": "advertisement",
+      "definition": "information designed to promote the message of a legal or natural person, irrespective of whether to achieve commercial or non-commercial purposes, and presented by an online platform on its online interface against remuneration specifically for promoting that information;",
+      "article": "3"
+    },
+    {
+      "term": "recommender system",
+      "definition": "a fully or partially automated system used by an online platform to suggest in its online interface specific information to recipients of the service or prioritise that information, including as a result of a search initiated by the recipient of the service or otherwise determining the relative order or prominence of information displayed;",
+      "article": "3"
+    },
+    {
+      "term": "content moderation",
+      "definition": "the activities, whether automated or not, undertaken by providers of intermediary services, that are aimed, in particular, at detecting, identifying and addressing illegal content or information incompatible with their terms and conditions, provided by recipients of the service, including measures taken that affect the availability, visibility, and accessibility of that illegal content or that information, such as demotion, demonetisation, disabling of access to, or removal thereof, or that affect the ability of the recipients of the service to provide that information, such as the termination or suspension of a recipient’s account;",
+      "article": "3"
+    },
+    {
+      "term": "terms and conditions",
+      "definition": "all clauses, irrespective of their name or form, which govern the contractual relationship between the provider of intermediary services and the recipients of the service;",
+      "article": "3"
+    },
+    {
+      "term": "persons with disabilities",
+      "definition": "‘persons with disabilities’ as referred to in Article 3, point (1), of Directive (EU) 2019/882 of the European Parliament and of the Council (38);",
+      "article": "3"
+    },
+    {
+      "term": "commercial communication",
+      "definition": "‘commercial communication’ as defined in Article 2, point (f), of Directive 2000/31/EC;",
+      "article": "3"
+    },
+    {
+      "term": "turnover",
+      "definition": "the amount derived by an undertaking within the meaning of Article 5(1) of Council Regulation (EC) No 139/2004 (39). LIABILITY OF PROVIDERS OF INTERMEDIARY SERVICES",
+      "article": "3"
+    }
+  ],
   "recitals": [
     {
       "recital_number": 1,

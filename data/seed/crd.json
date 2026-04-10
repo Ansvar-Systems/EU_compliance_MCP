@@ -826,10 +826,318 @@
     {
       "number": "165",
       "title": "Addressees",
-      "text": "This Directive is addressed to the Member States.\n\nDone at Brussels, 26 June 2013.\n\nFor the European Parliament\n\nThe President\n\nM. SCHULZ\n\nFor the Council\n\nThe President\n\nA. SHATTER\n\n(1)\n\nOJ C 105, 11.4.2012, p. 1.\n\n(2)\n\nOJ L 177, 30.6.2006, p. 1.\n\n(3)\n\nOJ L 177, 30.6.2006, p. 201.\n\n(4)  See page 1 of this Official Journal.\n\n(5)\n\nOJ L 145, 30.4.2004, p. 1.\n\n(6)\n\nOJ L 331, 15.12.2010, p. 12.\n\n(7)  Council Framework Decision 2009/315/JHA of 26 February 2009 on the organisation and content of the exchange of information extracted from the criminal record between Member States (OJ L 93, 7.4.2009, p. 23).\n\n(8)  Council Decision 2009/316/JHA of 6 April 2009 on the establishment of the European Criminal Records Information System (ECRIS) in application of Article 11 of Framework Decision 2009/315/JHA (OJ L 93, 7.4.2009, p. 33).\n\n(9)\n\nOJ L 125, 5.5.2001, p. 15.\n\n(10)\n\nOJ L 331, 15.12.2010, p. 1.\n\n(11)\n\nOJ L 55, 28.2.2011, p. 13.\n\n(12)\n\nOJ L 35, 11.2.2003, p. 1.\n\n(13)\n\nOJ L 319, 5.12.2007, p. 1\n\n(14)\n\nOJ L 302, 17.11.2009, p. 32.\n\n(15)\n\nOJ L 267, 10.10.2009, p. 7.\n\n(16)\n\nOJ L 174, 1.7.2011, p. 1.\n\n(17)\n\nOJ L 281, 23.11.1995, p. 31.\n\n(18)\n\nOJ L 8, 12.1.2001, p. 1.\n\n(19)\n\nOJ C 175, 19.6.2012, p. 1.\n\n(20)\n\nOJ L 390, 31.12.2004, p. 38.\n\n(21)\n\nOJ L 309, 25.11.2005, p. 15.\n\n(22)\n\nOJ L 9, 15.1.2003, p. 3.\n\n(23)\n\nOJ L 3, 7.1.2004, p. 36.\n\n(24)\n\nOJ L 331, 15.12.2010, p. 84.\n\n(25)\n\nOJ L 331, 15.12.2010, p. 48.\n\n(26)\n\nOJ L 157, 9.6.2006, p. 87.\n\n(27)\n\nOJ L 222, 14.8.1978, p. 11.\n\n(28)\n\nOJ L 193, 18.7.1983, p. 1.\n\n(29)\n\nOJ L 120, 15.5.2009, p. 22.\n\n(30)  Commission Directive 2006/73/EC of 10 August 2006 implementing Directive 2004/39/EC of the European Parliament and of the Council as regards organisational requirements and operating conditions for investment firms and defined terms for the purposes of that Directive (OJ L 241, 2.9.2006, p. 26).\n\n(31)\n\nOJ L 124, 20.5.2003, p. 36.\n\nANNEX I\n\nLIST OF ACTIVITIES SUBJECT TO MUTUAL RECOGNITION\n\n1.\n\nTaking deposits and other repayable funds.\n\n2.\n\nLending including, inter alia: consumer credit, credit agreements relating to immovable property, factoring, with or without recourse, financing of commercial transactions (including forfeiting).\n\n3.\n\nFinancial leasing.\n\n4.\n\nPayment services as defined in Article 4(3) of Directive 2007/64/EC.\n\n5.\n\nIssuing and administering other means of payment (e.g. travellers' cheques and bankers' drafts) insofar as such activity is not covered by point 4.\n\n6.\n\nGuarantees and commitments.\n\n7.\n\nTrading for own account or for account of customers in any of the following:\n\n(a)\n\nmoney market instruments (cheques, bills, certificates of deposit, etc.);\n\n(b)\n\nforeign exchange;\n\n(c)\n\nfinancial futures and options;\n\n(d)\n\nexchange and interest-rate instruments;\n\n(e)\n\ntransferable securities.\n\n8.\n\nParticipation in securities issues and the provision of services relating to such issues.\n\n9.\n\nAdvice to undertakings on capital structure, industrial strategy and related questions and advice as well as services relating to mergers and the purchase of undertakings.\n\n10.\n\nMoney broking.\n\n11.\n\nPortfolio management and advice.\n\n12.\n\nSafekeeping and administration of securities.\n\n13.\n\nCredit reference services.\n\n14.\n\nSafe custody services.\n\n15.\n\nIssuing electronic money.\n\nThe services and activities provided for in Sections A and B of Annex I to Directive 2004/39/EC, when referring to the financial instruments provided for in Section C of Annex I of that Directive, are subject to mutual recognition in accordance with this Directive.\n\nANNEX II\n\nCORRELATION TABLE\n\nThis Directive\n\nDirective 2006/48/EC\n\nDirective 2006/49/EC"
+      "text": "This Directive is addressed to the Member States.\n\nDone at Brussels, 26 June 2013.\n\nFor the European Parliament\n\nThe President\n\nM. SCHULZ\n\nFor the Council\n\nThe President\n\nA. SHATTER\n\n(1)\n\nOJ C 105, 11.4.2012, p. 1.\n\n(2)\n\nOJ L 177, 30.6.2006, p. 1.\n\n(3)\n\nOJ L 177, 30.6.2006, p. 201.\n\n(4)  See page 1 of this Official Journal.\n\n(5)\n\nOJ L 145, 30.4.2004, p. 1.\n\n(6)\n\nOJ L 331, 15.12.2010, p. 12.\n\n(7)  Council Framework Decision 2009/315/JHA of 26 February 2009 on the organisation and content of the exchange of information extracted from the criminal record between Member States (OJ L 93, 7.4.2009, p. 23).\n\n(8)  Council Decision 2009/316/JHA of 6 April 2009 on the establishment of the European Criminal Records Information System (ECRIS) in application of Article 11 of Framework Decision 2009/315/JHA (OJ L 93, 7.4.2009, p. 33).\n\n(9)\n\nOJ L 125, 5.5.2001, p. 15.\n\n(10)\n\nOJ L 331, 15.12.2010, p. 1.\n\n(11)\n\nOJ L 55, 28.2.2011, p. 13.\n\n(12)\n\nOJ L 35, 11.2.2003, p. 1.\n\n(13)\n\nOJ L 319, 5.12.2007, p. 1\n\n(14)\n\nOJ L 302, 17.11.2009, p. 32.\n\n(15)\n\nOJ L 267, 10.10.2009, p. 7.\n\n(16)\n\nOJ L 174, 1.7.2011, p. 1.\n\n(17)\n\nOJ L 281, 23.11.1995, p. 31.\n\n(18)\n\nOJ L 8, 12.1.2001, p. 1.\n\n(19)\n\nOJ C 175, 19.6.2012, p. 1.\n\n(20)\n\nOJ L 390, 31.12.2004, p. 38.\n\n(21)\n\nOJ L 309, 25.11.2005, p. 15.\n\n(22)\n\nOJ L 9, 15.1.2003, p. 3.\n\n(23)\n\nOJ L 3, 7.1.2004, p. 36.\n\n(24)\n\nOJ L 331, 15.12.2010, p. 84.\n\n(25)\n\nOJ L 331, 15.12.2010, p. 48.\n\n(26)\n\nOJ L 157, 9.6.2006, p. 87.\n\n(27)\n\nOJ L 222, 14.8.1978, p. 11.\n\n(28)\n\nOJ L 193, 18.7.1983, p. 1.\n\n(29)\n\nOJ L 120, 15.5.2009, p. 22.\n\n(30)  Commission Directive 2006/73/EC of 10 August 2006 implementing Directive 2004/39/EC of the European Parliament and of the Council as regards organisational requirements and operating conditions for investment firms and defined terms for the purposes of that Directive (OJ L 241, 2.9.2006, p. 26).\n\n(31)\n\nOJ L 124, 20.5.2003, p. 36."
+    },
+    {
+      "number": "Annex I",
+      "title": "LIST OF ACTIVITIES SUBJECT TO MUTUAL RECOGNITION",
+      "text": "ANNEX I\n\nLIST OF ACTIVITIES SUBJECT TO MUTUAL RECOGNITION\n\n1.\n\nTaking deposits and other repayable funds.\n\n2.\n\nLending including, inter alia: consumer credit, credit agreements relating to immovable property, factoring, with or without recourse, financing of commercial transactions (including forfeiting).\n\n3.\n\nFinancial leasing.\n\n4.\n\nPayment services as defined in Article 4(3) of Directive 2007/64/EC.\n\n5.\n\nIssuing and administering other means of payment (e.g. travellers' cheques and bankers' drafts) insofar as such activity is not covered by point 4.\n\n6.\n\nGuarantees and commitments.\n\n7.\n\nTrading for own account or for account of customers in any of the following:\n\n(a)\n\nmoney market instruments (cheques, bills, certificates of deposit, etc.);\n\n(b)\n\nforeign exchange;\n\n(c)\n\nfinancial futures and options;\n\n(d)\n\nexchange and interest-rate instruments;\n\n(e)\n\ntransferable securities.\n\n8.\n\nParticipation in securities issues and the provision of services relating to such issues.\n\n9.\n\nAdvice to undertakings on capital structure, industrial strategy and related questions and advice as well as services relating to mergers and the purchase of undertakings.\n\n10.\n\nMoney broking.\n\n11.\n\nPortfolio management and advice.\n\n12.\n\nSafekeeping and administration of securities.\n\n13.\n\nCredit reference services.\n\n14.\n\nSafe custody services.\n\n15.\n\nIssuing electronic money.\n\nThe services and activities provided for in Sections A and B of Annex I to Directive 2004/39/EC, when referring to the financial instruments provided for in Section C of Annex I of that Directive, are subject to mutual recognition in accordance with this Directive.",
+      "chapter": "Annexes"
+    },
+    {
+      "number": "Annex II",
+      "title": "CORRELATION TABLE",
+      "text": "ANNEX II\n\nCORRELATION TABLE\n\nThis Directive\n\nDirective 2006/48/EC\n\nDirective 2006/49/EC",
+      "chapter": "Annexes"
     }
   ],
-  "definitions": [],
+  "definitions": [
+    {
+      "term": "credit institution",
+      "definition": "credit institution as defined in point (1) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "investment firm",
+      "definition": "investment firm as defined in point (2) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "institution",
+      "definition": "institution as defined in point (3) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "local firm",
+      "definition": "local firm as defined in point (4) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "insurance undertaking",
+      "definition": "insurance undertaking as defined in point (5) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "reinsurance undertaking",
+      "definition": "reinsurance undertaking as defined in point (6) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "management body",
+      "definition": "an institution's body or bodies, which are appointed in accordance with national law, which are empowered to set the institution's strategy, objectives and overall direction, and which oversee and monitor management decision-making, and include the persons who effectively direct the business of the institution;",
+      "article": "3"
+    },
+    {
+      "term": "management body in its supervisory function",
+      "definition": "the management body acting in its role of overseeing and monitoring management decision-making;",
+      "article": "3"
+    },
+    {
+      "term": "senior management",
+      "definition": "those natural persons who exercise executive functions within an institution and who are responsible, and accountable to the management body, for the day-to-day management of the institution;",
+      "article": "3"
+    },
+    {
+      "term": "systemic risk",
+      "definition": "a risk of disruption in the financial system with the potential to have serious negative consequences for the financial system and the real economy;",
+      "article": "3"
+    },
+    {
+      "term": "model risk",
+      "definition": "the potential loss an institution may incur, as a consequence of decisions that could be principally based on the output of internal models, due to errors in the development, implementation or use of such models;",
+      "article": "3"
+    },
+    {
+      "term": "originator",
+      "definition": "originator as defined in point (13) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "sponsor",
+      "definition": "sponsor as defined in point (14) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "parent undertaking",
+      "definition": "parent undertaking as defined in point (15) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "subsidiary",
+      "definition": "subsidiary as defined in point (16) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "branch",
+      "definition": "branch as defined in point (17) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "ancillary services undertaking",
+      "definition": "ancillary services undertaking as defined in point (18) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "asset management company",
+      "definition": "asset management company as defined in point (19) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "financial holding company",
+      "definition": "financial holding company as defined in point (20) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "mixed financial holding company",
+      "definition": "mixed financial holding company as defined in point (21) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "mixed activity holding company",
+      "definition": "mixed activity holding company as defined in point (22) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "financial institution",
+      "definition": "financial institution as defined in point (26) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "financial sector entity",
+      "definition": "financial sector entity as defined in point (27) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "parent institution in a member state",
+      "definition": "parent institution in a Member State as defined in point (28) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "eu parent institution",
+      "definition": "EU parent institution as defined in point (29) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "parent financial holding company in a member state",
+      "definition": "parent financial holding company in a Member State as defined in point (30) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "eu parent financial holding company",
+      "definition": "EU parent financial holding company as defined in point (31) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "parent mixed financial holding company in a member state",
+      "definition": "parent mixed financial holding company in a Member State as defined in point (32) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "eu parent mixed financial holding company",
+      "definition": "EU parent mixed financial holding company as defined in point (33) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "systemically important institution",
+      "definition": "an EU parent institution, an EU parent financial holding company, an EU parent mixed financial holding company or an institution the failure or malfunction of which could lead to systemic risk;",
+      "article": "3"
+    },
+    {
+      "term": "central counterparty",
+      "definition": "central counterparty as defined in point (34) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "participation",
+      "definition": "participation as defined in point (35) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "qualifying holding",
+      "definition": "qualifying holding as defined in point (36) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "control",
+      "definition": "control as defined in point (37) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "close links",
+      "definition": "close links as defined in point (38) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "competent authority",
+      "definition": "competent authority as defined in point (40) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "consolidating supervisor",
+      "definition": "consolidating supervisor as defined in point (41) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "authorisation",
+      "definition": "authorisation as defined in point (42) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "home member state",
+      "definition": "home Member State as defined in point (43) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "host member state",
+      "definition": "host Member State as defined in point (44) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "escb central banks",
+      "definition": "ESCB central banks as defined in point (45) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "central banks",
+      "definition": "central banks as defined in point (46) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "consolidated situation",
+      "definition": "consolidated situation as defined in point (47) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "consolidated basis",
+      "definition": "consolidated basis as defined in point (48) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "sub-consolidated basis",
+      "definition": "sub-consolidated basis as defined in point (49) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "financial instrument",
+      "definition": "financial instrument as defined in point (50) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "own funds",
+      "definition": "own funds as defined in point (118) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "operational risk",
+      "definition": "operational risk as defined in point (52) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "credit risk mitigation",
+      "definition": "credit risk mitigation as defined in point (57) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "securitisation",
+      "definition": "securitisation as defined in point (61) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "securitisation position",
+      "definition": "securitisation position as defined in point (62) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "securitisation special purpose entity",
+      "definition": "securitisation special purpose entity as defined in point (66) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "discretionary pension benefits",
+      "definition": "discretionary pension benefits as defined in point (73) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "trading book",
+      "definition": "trading as defined in point (86) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "regulated market",
+      "definition": "regulated market as defined in point (92) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "leverage",
+      "definition": "leverage as defined in point (93) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "risk of excessive leverage",
+      "definition": "risk of excessive leverage as defined in point (94) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "external credit assessment institution",
+      "definition": "external credit assessment institution as defined in point (98) of Article 4(1) of Regulation (EU) No 575/2013;",
+      "article": "3"
+    },
+    {
+      "term": "internal approaches",
+      "definition": "the internal ratings based approach referred to in Article 143(1), the internal models approach referred to in Article 221, the own estimates approach referred to in Article 225, the advanced measurement approaches referred to in Article 312(2), the internal models method referred to in Articles 283 and 363, and the internal assessment approach referred to in Article 259(3) of Regulation (EU) No 575/2013. 2. Where this Directive refers to the management body and, pursuant to national law, the managerial and supervisory functions of the management body are assigned to different bodies or different members within one body, the Member State shall identify the bodies or members of the management body responsible in accordance with its national law, unless otherwise specified by this Directive. TITLE II COMPETENT AUTHORITIES",
+      "article": "3"
+    }
+  ],
   "recitals": [
     {
       "recital_number": 1,
