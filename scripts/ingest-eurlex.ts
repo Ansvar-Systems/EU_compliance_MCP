@@ -79,6 +79,72 @@ export function parseAnnexes(html: string): Annex[] {
   return annexes;
 }
 
+/**
+ * AI Act-specific sanity checks on extracted annexes. Throws on failure so the
+ * ingestion script exits non-zero and the seed JSON is not overwritten with
+ * a truncated or malformed document.
+ */
+export function validateAiActAnnexes(annexes: Annex[], article113Text: string): void {
+  const expectedNumbers = [
+    'Annex I', 'Annex II', 'Annex III', 'Annex IV', 'Annex V',
+    'Annex VI', 'Annex VII', 'Annex VIII', 'Annex IX', 'Annex X',
+    'Annex XI', 'Annex XII', 'Annex XIII',
+  ];
+  if (annexes.length !== 13) {
+    throw new Error(`AI Act: expected 13 annexes, got ${annexes.length}`);
+  }
+  const actualNumbers = annexes.map((a) => a.number);
+  for (let i = 0; i < expectedNumbers.length; i++) {
+    if (actualNumbers[i] !== expectedNumbers[i]) {
+      throw new Error(
+        `AI Act annex[${i}] number mismatch: expected ${expectedNumbers[i]}, got ${actualNumbers[i]}`,
+      );
+    }
+  }
+  for (const annex of annexes) {
+    if (!annex.title) throw new Error(`AI Act ${annex.number}: empty title`);
+    if (annex.text.length < 500) {
+      throw new Error(
+        `AI Act ${annex.number}: text only ${annex.text.length} chars (minimum 500)`,
+      );
+    }
+  }
+
+  const a3 = annexes[2].text.toLowerCase();
+  const a3Keywords = [
+    'biometric', 'critical infrastructure', 'education', 'employment',
+    'essential', 'law enforcement', 'migration', 'administration of justice',
+  ];
+  for (const kw of a3Keywords) {
+    if (!a3.includes(kw)) {
+      throw new Error(`AI Act Annex III missing keyword "${kw}" — parser may be truncating`);
+    }
+  }
+
+  const a11 = annexes[10].text.toLowerCase();
+  if (!a11.includes('training')) {
+    throw new Error('AI Act Annex XI missing "training" keyword');
+  }
+  if (!/floating point|computational|compute/.test(a11)) {
+    throw new Error('AI Act Annex XI missing compute-related keywords');
+  }
+
+  const a13 = annexes[12].text.toLowerCase();
+  if (!a13.includes('systemic risk')) {
+    throw new Error('AI Act Annex XIII missing "systemic risk" keyword');
+  }
+
+  if (article113Text.length > 4000) {
+    throw new Error(
+      `AI Act Article 113 text is ${article113Text.length} chars — ` +
+        'should be under 4000 after annex extraction. Are the annexes still concatenated?',
+    );
+  }
+  if (/ANNEX\s+(I|XIII)\b/.test(article113Text)) {
+    throw new Error('AI Act Article 113 text still contains ANNEX markers');
+  }
+}
+
 interface Definition {
   term: string;
   definition: string;
@@ -377,6 +443,22 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
 
   const annexes = parseAnnexes(html);
   console.log(`Parsed ${annexes.length} annexes`);
+
+  // For AI Act specifically: rewrite Article 113 to contain only the transitional
+  // provisions (paragraphs 1-4) and validate the annex extraction. The stray
+  // ANNEX text that the article parser captured as part of Article 113 ends at
+  // the first ANNEX I marker.
+  if (metadata?.id === 'AI_ACT') {
+    const art113 = articles.find((a) => a.number === '113');
+    if (!art113) {
+      throw new Error('AI Act: Article 113 not found in parsed articles');
+    }
+    const annexStart = art113.text.search(/\n?ANNEX\s+I\b/);
+    if (annexStart > 0) {
+      art113.text = art113.text.slice(0, annexStart).trim();
+    }
+    validateAiActAnnexes(annexes, art113.text);
+  }
 
   // Merge annexes into the articles array so build-db.ts inserts them into
   // the articles table with their canonical 'Annex N' number.

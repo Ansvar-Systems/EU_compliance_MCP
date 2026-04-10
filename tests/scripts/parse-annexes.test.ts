@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { parseAnnexes } from '../../scripts/ingest-eurlex.js';
+import { parseAnnexes, validateAiActAnnexes } from '../../scripts/ingest-eurlex.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -81,5 +81,32 @@ describe('parseAnnexes (AI Act fixture)', () => {
       expect(typeof art.title).toBe('string');
       expect(typeof art.text).toBe('string');
     }
+  });
+});
+
+describe('validateAiActAnnexes', () => {
+  const goodAnnexes = parseAnnexes(FIXTURE);
+  const art113Short =
+    'This Regulation shall enter into force on the twentieth day following that ' +
+    'of its publication in the Official Journal. It shall apply from 2 August 2026.';
+
+  it('accepts valid AI Act annexes with short Article 113', () => {
+    expect(() => validateAiActAnnexes(goodAnnexes, art113Short)).not.toThrow();
+  });
+
+  it('rejects when fewer than 13 annexes present', () => {
+    expect(() => validateAiActAnnexes(goodAnnexes.slice(0, 12), art113Short)).toThrow(
+      /expected 13 annexes/,
+    );
+  });
+
+  it('rejects when Article 113 is still over 4000 chars', () => {
+    const longArt113 = 'x'.repeat(5000);
+    expect(() => validateAiActAnnexes(goodAnnexes, longArt113)).toThrow(/under 4000/);
+  });
+
+  it('rejects when Article 113 still contains ANNEX markers', () => {
+    const polluted = art113Short + '\nANNEX I\nList of harmonisation...';
+    expect(() => validateAiActAnnexes(goodAnnexes, polluted)).toThrow(/ANNEX markers/);
   });
 });
