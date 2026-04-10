@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "CER",
+  "regulation_name": "Critical Entities Resilience Directive",
+  "celex_id": "32022L2557",
+  "effective_date": "2023-01-16",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "CER_DA_ESSENTIAL_SERVICES",
+      "celex_id": "32023R2450",
+      "title": "Non-Exhaustive List of Essential Services",
+      "article_count": 3,
+      "parent_article": "5(1)",
+      "covers": "Commission delegated act establishing a non-exhaustive list of essential services in the 11 CER sectors and subsectors, used by competent authorities for risk assessment and critical entity identification"
+    },
+    {
+      "id": "CER_IA_RESILIENCE_MEASURES",
+      "celex_id": "pending",
+      "title": "Technical and Methodological Specifications for Resilience Measures",
+      "article_count": 0,
+      "parent_article": "13(6)",
+      "covers": "Implementing act setting technical and methodological specifications for the resilience measures in Art. 13(1) -- under preparation"
+    }
+  ],
+
+  "proportionality": {
+    "description": "CER is a directive requiring national transposition. Obligations apply to entities identified as 'critical' by Member States. Certain sectors have reduced obligations. SME-specific support measures are required.",
+    "tiers": [
+      {
+        "name": "full",
+        "applies_to": "Critical entities identified per Art. 6 in the 8 core sectors (energy, transport, health, drinking water, wastewater, digital infrastructure, public administration, space)",
+        "key_articles": ["6", "12", "13", "14", "15"],
+        "note": "Full obligations: risk assessment (Art. 12), resilience measures (Art. 13), background checks (Art. 14), incident notification (Art. 15). Applies 10 months after entity receives notification of critical status."
+      },
+      {
+        "name": "exempted_sectors",
+        "applies_to": "Critical entities in banking (point 3), financial market infrastructure (point 4), and digital infrastructure (point 8) sectors of the Annex",
+        "key_articles": ["8"],
+        "note": "Art. 11 and Chapters III, IV, and VI do NOT apply. These sectors are covered by DORA (banking, financial market infrastructure) or NIS2 (digital infrastructure) for their resilience obligations. Member States may still apply higher national standards."
+      },
+      {
+        "name": "european_significance",
+        "applies_to": "Critical entities providing essential services to or in six or more Member States",
+        "key_articles": ["17", "18"],
+        "note": "Additional oversight layer: Commission advisory missions (Art. 18), coordinated assessment among affected Member States. Critical entity of particular European significance identified per Art. 17."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "1(5)-(7)",
+        "applies_to": "National security, defence, law enforcement entities",
+        "description": "CER does not apply to public administration entities in national security, public security, defence, or law enforcement (Art. 1(6)). Member States may also exempt specific critical entities in these areas from Art. 11 and Chapters III, IV, VI (Art. 1(7))."
+      },
+      {
+        "article": "1(3)",
+        "applies_to": "Entities covered by equivalent sector-specific Union law",
+        "description": "Where sector-specific Union law requires equivalent resilience measures, those provisions apply instead of CER (Art. 1(3)). Must be recognized as equivalent by the Member State."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "directive_not_regulation",
+      "severity": "high",
+      "article": "1",
+      "description": "CER is a DIRECTIVE, not a regulation. It requires Member State transposition into national law by 17 October 2024. Requirements will vary by country. National transposition may add requirements beyond CER minimums (Art. 3 allows higher national standards). Always check national implementing law, not just the directive text.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "all_hazards_approach",
+      "severity": "high",
+      "article": "12(2)",
+      "description": "CER risk assessments must cover ALL relevant risks: natural disasters (floods, earthquakes, pandemics), human-caused threats (terrorism, sabotage, insider threats), AND cyber threats (Art. 12(2)). This is an all-hazards approach. Limiting risk assessment to only physical or only cyber threats is insufficient. Cross-sectoral and cross-border dependencies must also be assessed.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "eleven_sectors_not_ten",
+      "severity": "medium",
+      "article": "Annex",
+      "description": "CER covers 11 sectors listed in the Annex: (1) energy, (2) transport, (3) banking, (4) financial market infrastructure, (5) health, (6) drinking water, (7) wastewater, (8) digital infrastructure, (9) public administration, (10) space, (11) food production, processing, and distribution. Many summaries omit or merge sectors. The exact list matters because Art. 8 exempts sectors 3, 4, and 8.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "identification_by_member_state",
+      "severity": "high",
+      "article": "6",
+      "description": "Entities are not automatically 'critical' -- each Member State identifies them per Art. 6 criteria: (a) provides essential services, (b) operates on that Member State's territory, (c) incident would cause significant disruption. An entity must be formally notified (Art. 6(3)). Obligations begin 10 months after notification. Do not assume an entity is a critical entity without checking whether it has been identified by its Member State.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "nis2_coordination_mandatory",
+      "severity": "medium",
+      "article": "1(2)",
+      "description": "CER explicitly requires coordinated implementation with NIS2 (Art. 1(2)). CER handles physical resilience; NIS2 handles cyber resilience. But Art. 9(6) also requires CER competent authorities to share information with NIS2 competent authorities on cybersecurity risks affecting critical entities. The two regimes are designed to work in parallel, not in isolation.",
+      "detail_level": "full"
+    },
+    {
+      "id": "background_checks_scope",
+      "severity": "medium",
+      "article": "14",
+      "description": "Background checks (Art. 14) apply to persons in sensitive roles, with direct access to premises or information systems, or under consideration for such positions. Member States define the conditions. Checks must include identity verification and criminal records (Art. 14(3)), using the European Criminal Records Information System. This is a Member State-regulated process, not an entity-level decision.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "NIS2",
+      "relationship": "complementary",
+      "key_provisions": ["NIS2 Art. 2(3)", "CER Art. 1(2)", "CER Art. 9(6)"],
+      "note": "CER and NIS2 are twin directives -- CER for physical resilience, NIS2 for cybersecurity. An entity identified as critical under CER is automatically considered an essential entity under NIS2 (NIS2 Art. 2(3)). Competent authorities must share information (CER Art. 9(6)). CER explicitly defers cyber matters to NIS2 (Art. 1(2))."
+    },
+    {
+      "regulation": "DORA",
+      "relationship": "lex_specialis",
+      "key_provisions": ["CER Art. 8"],
+      "note": "Banking and financial market infrastructure entities identified as critical under CER are exempted from CER Chapters III, IV, and VI (Art. 8) because DORA provides sector-specific resilience requirements. They remain subject to CER identification (Art. 6) and Member State strategy obligations."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["CER Art. 1(9)", "CER Art. 14"],
+      "note": "CER is without prejudice to GDPR (Art. 1(9)). Background checks (Art. 14) must comply with GDPR and Directive 2016/680 (law enforcement data). Incident notifications may contain personal data -- GDPR obligations apply in parallel."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "6",
+      "title": "Identification of critical entities -- the three-criteria test",
+      "description": "Three cumulative criteria: (a) entity provides essential services, (b) operates on Member State territory with critical infrastructure located there, (c) incident would have significant disruptive effects per Art. 7 factors (user count, sector dependencies, impact severity/duration, market share, geographic area, importance for service continuity). Identification must be completed by 17 July 2026. Entity notified within 1 month. Chapter III applies 10 months after notification. List reviewed every 4 years.",
+      "detail_level": "full"
+    },
+    {
+      "article": "13",
+      "title": "Resilience measures -- six mandatory categories",
+      "description": "Para 1 requires measures in 6 areas: (a) incident prevention (including disaster risk reduction and climate adaptation), (b) physical protection (fencing, barriers, access controls, detection), (c) incident response and mitigation (crisis management procedures, alert routines), (d) recovery (business continuity, alternative supply chains), (e) employee security management (background checks, access rights, training), (f) awareness raising (training courses, exercises). Para 2: resilience plan required. Para 3: liaison officer designation. Art. 16 encourages use of European and international standards.",
+      "detail_level": "full"
+    },
+    {
+      "article": "15",
+      "title": "Incident notification -- two-stage obligation",
+      "description": "Para 1: initial notification within 24 hours of awareness, detailed report within 1 month. Significance determined by: (a) number/proportion of affected users, (b) duration, (c) geographic area including cross-border impact. Special escalation: incidents affecting 6+ Member States trigger Commission notification. Para 2: notification must include information on nature, cause, consequences, cross-border impact. Para 3: competent authority informs affected Member States. Para 4: authority provides follow-up information to the entity.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 2,
+      "clarifies": "All-hazards approach rationale -- explains that critical infrastructure faces natural disasters, terrorism, insider threats, pandemics, and accidents, requiring a comprehensive approach beyond cybersecurity alone",
+      "detail_level": "quick"
+    },
+    {
+      "number": 7,
+      "clarifies": "Relationship with NIS2 -- explains the complementary nature: CER addresses physical security and broader resilience, while NIS2 addresses cybersecurity. Both apply to the same entities but through separate competent authorities.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 15,
+      "clarifies": "Banking and financial sector exemption -- explains why sectors 3, 4, and 8 are exempted from CER operational requirements, given that DORA (for financial) and NIS2 (for digital infrastructure) provide equivalent or higher requirements",
+      "detail_level": "full"
+    },
+    {
+      "number": 26,
+      "clarifies": "Critical entities of particular European significance -- explains the additional oversight mechanism for entities whose disruption would affect 6+ Member States, including Commission advisory missions",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "CER is a directive requiring Member State transposition by 17 October 2024. Search Law MCPs for national transposition laws using keywords like 'critical entities', 'critical infrastructure resilience', or the directive reference 2022/2557.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "KRITIS-Dachgesetz",
+        "note": "Germany's CER transposition law. Extends existing KRITIS framework (previously cyber-focused) to cover physical resilience. BSI and BBK (Federal Office for Civil Protection) share competent authority roles."
+      },
+      {
+        "country": "NL",
+        "law": "Wet weerbaarheid vitale entiteiten",
+        "note": "Dutch CER transposition. Builds on existing Vitale Infrastructuur framework. NCTV (National Coordinator for Security and Counterterrorism) as competent authority."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='CER') for per-article audit artifacts. Key artifacts: Critical entity notification receipt (Art. 6(3)), Critical entity risk assessment (Art. 12), Resilience plan (Art. 13(2)), Background check procedures and records (Art. 14), Incident notification records (Art. 15), Liaison officer designation (Art. 13(3)).",
+
+  "timeline": [
+    {
+      "event": "Entry into force",
+      "date": "2023-01-16",
+      "note": "CER directive published and enters into force"
+    },
+    {
+      "event": "Delegated act on essential services list",
+      "date": "2023-11-17",
+      "note": "Commission deadline to adopt delegated act per Art. 5(1)"
+    },
+    {
+      "event": "National transposition deadline",
+      "date": "2024-10-17",
+      "note": "Member States must transpose CER into national law"
+    },
+    {
+      "event": "Member State risk assessment and strategy",
+      "date": "2026-01-17",
+      "note": "Member States must complete risk assessment (Art. 5) and adopt resilience strategy (Art. 4)"
+    },
+    {
+      "event": "Critical entity identification",
+      "date": "2026-07-17",
+      "note": "Member States must identify critical entities (Art. 6(1))"
+    },
+    {
+      "event": "Critical entity obligations apply",
+      "date": "2027-05-17",
+      "note": "Latest date by which Chapter III obligations (risk assessment, resilience measures, background checks, incident notification) apply to identified entities (10 months after identification deadline)"
+    }
+  ],
+
+  "citation_format": "Cite as: CER Art. X(Y) or CER Directive Art. X(Y). Full citation: Directive (EU) 2022/2557, Art. X. For national transposition: cite the national implementing law. For the Annex sectors: CER Annex, point N."
+}

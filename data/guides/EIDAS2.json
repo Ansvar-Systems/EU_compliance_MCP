@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "EIDAS2",
+  "regulation_name": "European Digital Identity Framework (eIDAS 2.0)",
+  "celex_id": "32024R1183",
+  "effective_date": "2024-05-20",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "EIDAS2_IA_WALLET_SPECS",
+      "celex_id": "pending",
+      "title": "Implementing Acts on European Digital Identity Wallet Technical Specifications",
+      "article_count": 0,
+      "parent_article": "5a(23)",
+      "covers": "Reference standards, specifications, and procedures for wallet implementation including: person identification data handling, attestation of attributes issuance and validation, relying party authentication, trust mark display, and offline mode operation"
+    },
+    {
+      "id": "EIDAS2_IA_RELYING_PARTY",
+      "celex_id": "pending",
+      "title": "Implementing Acts on Relying Party Registration and Authentication",
+      "article_count": 0,
+      "parent_article": "5b(11)",
+      "covers": "Technical specifications for relying party registration, authentication to wallets, and data request procedures. Deadline: 21 November 2024."
+    },
+    {
+      "id": "EIDAS2_IA_WALLET_CERTIFICATION",
+      "celex_id": "pending",
+      "title": "Implementing Acts on Wallet Certification",
+      "article_count": 0,
+      "parent_article": "5c(6)",
+      "covers": "Standards and procedures for certification of European Digital Identity Wallets. Security certification requirements, conformity assessment procedures."
+    }
+  ],
+
+  "proportionality": {
+    "description": "eIDAS 2.0 applies different obligations to different actor types: Member States (wallet provision), qualified trust service providers (supervised services), non-qualified trust service providers (minimum requirements), and relying parties (registration and data minimisation).",
+    "tiers": [
+      {
+        "name": "member_state_wallet",
+        "applies_to": "Member States providing European Digital Identity Wallets",
+        "key_articles": ["5a", "5c", "5d", "5e"],
+        "note": "Each Member State must provide at least one wallet within 24 months of implementing act adoption (Art. 5a(1)). Wallet must meet high assurance level (Art. 5a(11)). Free of charge for natural persons (Art. 5a(13)). Open-source application code required (Art. 5a(3))."
+      },
+      {
+        "name": "qualified_trust_service",
+        "applies_to": "Qualified trust service providers",
+        "key_articles": ["20", "21", "24"],
+        "note": "Full supervision regime: initiation assessment (Art. 21), biennial audits (Art. 20(1)), qualified status on trusted lists (Art. 22), security breach notification to supervisory body (Art. 19(2)). 17 categories of qualified trust services defined in Art. 3(16)."
+      },
+      {
+        "name": "non_qualified_trust_service",
+        "applies_to": "Non-qualified trust service providers",
+        "key_articles": ["19a"],
+        "note": "Lighter requirements: apply appropriate technical and organizational measures (Art. 19a(1)), notify supervisory body of security breaches (Art. 19a(2)), cooperate with supervisory body (Art. 19a(3)). No prior audit required."
+      },
+      {
+        "name": "relying_party",
+        "applies_to": "Natural or legal persons relying on wallets for service provision",
+        "key_articles": ["5b"],
+        "note": "Must register in Member State of establishment (Art. 5b(1)). Cannot request data beyond what was declared at registration (Art. 5b(3)). Must authenticate to wallet users (Art. 5b(8)). Must accept pseudonyms where identification not legally required (Art. 5b(9))."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "5a(15)",
+        "applies_to": "Wallet non-users",
+        "description": "Use of European Digital Identity Wallets is voluntary. Access to public and private services, the labour market, and freedom to conduct business shall not be restricted for persons not using wallets. Alternative identification means must remain available."
+      },
+      {
+        "article": "5a(22)",
+        "applies_to": "Wallet electronic identification schemes",
+        "description": "Wallets and their underlying electronic identification schemes are exempt from Art. 7, 9, 10, 12, and 12a requirements that apply to other notified electronic identification schemes."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "wallet_is_mandatory_for_states",
+      "severity": "high",
+      "article": "5a(1)",
+      "description": "Each Member State MUST provide at least one European Digital Identity Wallet within 24 months of the implementing acts (Art. 5a(1)). This is a binding obligation on states. However, USE of wallets by citizens and businesses is entirely VOLUNTARY (Art. 5a(15)). Do not confuse the provision obligation with a usage mandate.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "relying_party_registration",
+      "severity": "high",
+      "article": "5b(1)-(3)",
+      "description": "Any entity wanting to rely on wallets for digital service provision must register in their Member State of establishment (Art. 5b(1)). Registration must declare what data will be requested from users (Art. 5b(2)(c)). The entity CANNOT request data beyond what was declared (Art. 5b(3)). Failing to register or over-requesting data is a compliance violation.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "qualified_vs_non_qualified",
+      "severity": "high",
+      "article": "3(16)-(17)",
+      "description": "Trust services and qualified trust services have very different legal regimes. Qualified trust services have presumption of legal effect (e.g., qualified e-signatures equal handwritten signatures per Art. 25(2)), require prior audit (Art. 21), biennial supervision (Art. 20), and appear on trusted lists (Art. 22). Non-qualified services have minimal requirements (Art. 19a). The distinction is critical for determining obligations.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "wallet_data_minimisation",
+      "severity": "medium",
+      "article": "5a(14), 5a(16)",
+      "description": "Wallet providers must not collect information beyond what is necessary for wallet service provision (Art. 5a(14)). Must not combine wallet data with data from other services unless user expressly requests it. The wallet technical framework must prevent tracking and correlation of transactions by attestation providers (Art. 5a(16)(a)). Privacy-preserving techniques for unlinkability are required where attestation does not require identification (Art. 5a(16)(b)).",
+      "detail_level": "quick"
+    },
+    {
+      "id": "cross_border_recognition",
+      "severity": "medium",
+      "article": "5f, 6",
+      "description": "European Digital Identity Wallets issued in one Member State must be recognized in all other Member States (Art. 5f). Electronic identification means notified at assurance level substantial or high must also be recognized cross-border (Art. 6). But cross-border recognition depends on implementing acts being adopted. Without the technical specifications, recognition is legally mandated but practically impossible.",
+      "detail_level": "full"
+    },
+    {
+      "id": "open_source_with_exceptions",
+      "severity": "medium",
+      "article": "5a(3)",
+      "description": "Wallet application software must be open-source licensed (Art. 5a(3)). However, Member States MAY exempt 'specific components other than those installed on user devices' from open-source disclosure, for duly justified reasons. This creates a potential for back-end opacity while maintaining front-end transparency.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["GDPR Art. 5", "GDPR Art. 17", "eIDAS2 Art. 5a(4)(d)"],
+      "note": "Wallet dashboard must enable users to request data erasure from relying parties per GDPR Art. 17 (eIDAS2 Art. 5a(4)(d)(ii)). Data minimisation principles (GDPR Art. 5(1)(c)) reinforced by wallet technical framework preventing tracking (Art. 5a(16)). All personal data processing through wallets subject to GDPR."
+    },
+    {
+      "regulation": "NIS2",
+      "relationship": "stacking",
+      "key_provisions": ["NIS2 Art. 2", "eIDAS2 Art. 19a"],
+      "note": "Trust service providers are in scope of NIS2 as essential entities. Cybersecurity obligations under NIS2 apply alongside eIDAS2 security requirements. ENISA involvement in both regimes creates alignment. Qualified trust service providers face dual supervision (eIDAS2 supervisory body + NIS2 competent authority)."
+    },
+    {
+      "regulation": "CYBERSECURITY_ACT",
+      "relationship": "complementary",
+      "key_provisions": ["eIDAS2 Art. 5c", "CSA Art. 49"],
+      "note": "Wallet certification (Art. 5c) may reference European cybersecurity certification schemes adopted under the Cybersecurity Act. EUCC or future schemes could provide conformity assessment infrastructure for wallet security components."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "5a",
+      "title": "European Digital Identity Wallets -- the core obligation article",
+      "description": "24 paragraphs. Para 1: Member State provision obligation (24 months after implementing acts). Para 3: open-source requirement. Para 4: user capabilities (store, share, present data; generate pseudonyms; sign; view transaction log; request erasure). Para 5: technical requirements (common protocols, authentication, assurance level high). Para 11: high assurance level mandatory. Para 13: free for natural persons. Para 14: data minimisation. Para 15: voluntary use. Para 16: unlinkability and privacy. Para 23: implementing acts deadline (21 November 2024). This single article contains most wallet-related obligations.",
+      "detail_level": "full"
+    },
+    {
+      "article": "5b",
+      "title": "Relying Parties -- registration and data access rules",
+      "description": "11 paragraphs. Para 1: mandatory registration in Member State of establishment. Para 2: registration information (authentication data, contact, intended use with data categories). Para 3: data request limited to declared scope. Para 5: registration information publicly available. Para 8: relying parties must identify themselves to users. Para 9: pseudonyms must be accepted unless identification legally required. Para 10: intermediaries acting for relying parties are treated as relying parties.",
+      "detail_level": "full"
+    },
+    {
+      "article": "24",
+      "title": "Requirements for qualified trust service providers -- supervision baseline",
+      "description": "Para 2 lists requirements: (a) inform supervisory body of service changes, (b) employ qualified personnel, (c) maintain financial resources or liability insurance, (d) inform affected persons of security breaches, (e) use trustworthy systems and products, (f) use reliable systems for personal data protection, (g) implement organizational and technical measures against forgery and theft, (h) record and keep accessible all relevant information, (i) have up-to-date termination plan, (j) comply with all applicable legal requirements. eIDAS2 extends these to wallet providers (Art. 5a(20)).",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 4,
+      "clarifies": "Wallet rationale -- explains that the original eIDAS Regulation did not address private sector identity or cross-border identity wallets, creating gaps that eIDAS2 fills with the European Digital Identity Wallet",
+      "detail_level": "quick"
+    },
+    {
+      "number": 11,
+      "clarifies": "User control principle -- explains that wallets must give users full control over their data, including selective disclosure (sharing only specific attributes, not full identity), and protection against profiling by wallet providers",
+      "detail_level": "quick"
+    },
+    {
+      "number": 16,
+      "clarifies": "Voluntary use safeguard -- explains that wallet use must be genuinely voluntary, with accessible alternatives remaining available for all public and private services. No service may require wallet use exclusively.",
+      "detail_level": "full"
+    },
+    {
+      "number": 28,
+      "clarifies": "Open-source requirement rationale -- explains that open-source code for user-facing components builds trust and enables independent security verification, while allowing back-end exceptions for justified security reasons",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "eIDAS2 amending regulation is directly applicable. However, wallet provision (Art. 5a(1)) and supervisory body designation require national implementation. Search Law MCPs for national wallet implementation laws and trust service supervision frameworks.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "Vertrauensdienstegesetz (VDG) amendments",
+        "note": "Germany amending VDG to incorporate eIDAS2 wallet requirements. BNetzA (Federal Network Agency) continues as supervisory body for trust services."
+      },
+      {
+        "country": "NL",
+        "law": "Wet elektronische identificatie amendments",
+        "note": "Netherlands adapting existing eID framework for eIDAS2 wallet. RDW/BZK involved in wallet provision planning."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='EIDAS2') for per-article audit artifacts. Key artifacts: Wallet certification documentation (Art. 5c), Relying party registration records (Art. 5b), Qualified trust service provider audit reports (Art. 20), Trusted list entries (Art. 22), Security breach notification records (Art. 19a/24), Data protection impact assessment for wallet processing (GDPR Art. 35).",
+
+  "timeline": [
+    {
+      "event": "Amending regulation enters into force",
+      "date": "2024-05-20",
+      "note": "Regulation (EU) 2024/1183 amending eIDAS (910/2014) published and effective"
+    },
+    {
+      "event": "Implementing acts deadline (wallet specifications, relying party rules)",
+      "date": "2024-11-21",
+      "note": "Commission must adopt implementing acts on wallet technical specifications (Art. 5a(23)) and relying party rules (Art. 5b(11))"
+    },
+    {
+      "event": "Member States must provide at least one wallet",
+      "date": "2026-11-21",
+      "note": "24 months after implementing acts on Art. 5a(23) and Art. 5c(6). Exact date depends on actual implementing act adoption."
+    },
+    {
+      "event": "Relying party registration operational",
+      "date": "2026-11-21",
+      "note": "Member State registration systems for relying parties must be operational by wallet go-live date"
+    }
+  ],
+
+  "citation_format": "Cite as: eIDAS2 Art. X(Y) or eIDAS Art. X(Y) (as amended). Full citation: Regulation (EU) No 910/2014, as amended by Regulation (EU) 2024/1183, Art. X. For original unamended articles: eIDAS Art. X(Y). For new articles added by amendment: Art. 5a, 5b, 5c, etc."
+}

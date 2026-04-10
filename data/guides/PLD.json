@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "PLD",
+  "regulation_name": "Product Liability Directive (Revised)",
+  "celex_id": "32024L2853",
+  "effective_date": "2026-12-09",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [],
+
+  "proportionality": {
+    "description": "PLD applies strict liability for defective products regardless of fault. Liability falls on the economic operator who placed the product on the EU market. The directive covers software, AI, and digital products for the first time.",
+    "tiers": [
+      {
+        "name": "manufacturer",
+        "applies_to": "Manufacturer of the finished product, component, or raw material (Art. 7(1))",
+        "key_articles": ["7(1)", "10-12"],
+        "note": "Primary liable party. Strict liability — no need to prove fault. Must compensate for death, personal injury, property damage (above EUR 500 threshold), and destruction/corruption of data not used exclusively for professional purposes."
+      },
+      {
+        "name": "authorised_representative_or_importer",
+        "applies_to": "Authorised representative, importer, or fulfilment service provider when manufacturer is outside the EU (Art. 7(2))",
+        "key_articles": ["7(2)"],
+        "note": "Liable as if they were the manufacturer when the actual manufacturer is not established in the EU. Ensures EU-based recourse for injured parties."
+      },
+      {
+        "name": "distributor",
+        "applies_to": "Distributor when manufacturer/importer/AR cannot be identified (Art. 7(4))",
+        "key_articles": ["7(4)"],
+        "note": "Distributor liable only if they do not identify the manufacturer or their own supplier within 1 month of request. Incentivises supply chain transparency."
+      },
+      {
+        "name": "software_provider",
+        "applies_to": "Developer or provider of software, including AI systems (Art. 4)",
+        "key_articles": ["4(1)", "4(4)"],
+        "note": "Software is a 'product' under revised PLD (Art. 4(1)). Includes standalone software, AI systems, and software updates/upgrades. Failure to provide a security update is treated as a product defect (Art. 4(4))."
+      },
+      {
+        "name": "modifier",
+        "applies_to": "Person who substantially modifies a product outside manufacturer's control (Art. 7(3))",
+        "key_articles": ["7(3)"],
+        "note": "Treated as the manufacturer if the modification affects safety. Relevant for third-party integrators, FOSS downstream developers, and aftermarket modifiers."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "11",
+        "applies_to": "Defences available to manufacturers",
+        "description": "Defences: (a) product not placed on market by defendant, (b) defect did not exist at time of placing on market, (c) not manufactured for sale or economic distribution, (d) defect caused by compliance with mandatory rules of Union/national law, (e) state of scientific/technical knowledge at time of placing on market did not allow defect to be discovered ('development risk defence' — Member States may exclude per Art. 11(2))."
+      },
+      {
+        "article": "4(5)",
+        "applies_to": "Open-source software not supplied in the course of commercial activity",
+        "description": "Free and open-source software developed or supplied outside the course of a commercial activity is not a 'product' for PLD purposes. Same test as CRA: 'commercial activity' is the boundary."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "software_is_product",
+      "severity": "high",
+      "article": "4(1)",
+      "description": "Under revised PLD, software — including AI systems — is explicitly a 'product' (Art. 4(1)). This overturns decades of case law in several Member States that excluded pure software from product liability. Any standalone software placed on the EU market is subject to strict liability for defects causing harm. This applies from Dec 2026.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "security_update_failure",
+      "severity": "high",
+      "article": "4(4)",
+      "description": "Failure to provide a necessary security update constitutes a product defect (Art. 4(4)). This applies even after the product is placed on the market. The obligation to provide updates aligns with CRA support period requirements. A product that was non-defective at launch becomes defective if the manufacturer fails to push a critical security update.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "disclosure_of_evidence",
+      "severity": "high",
+      "article": "8",
+      "description": "Art. 8 gives claimants the right to request disclosure of relevant evidence from the defendant. If the defendant refuses without justification, the court may presume the defect or the causal link. This reversal of the evidence burden is new and significant — a 'black box' AI system where the manufacturer refuses to explain its functioning faces a presumption of defect.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "presumption_of_defectiveness",
+      "severity": "high",
+      "article": "9",
+      "description": "Art. 9 creates a presumption of defectiveness when: (a) defendant failed to comply with an obligation to disclose evidence, (b) claimant establishes product did not comply with mandatory safety requirements (e.g., CRA, AI Act, MDR), (c) damage was caused by an obvious malfunction during normal use. Non-compliance with CRA or AI Act creates a PLD presumption.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "component_supplier_liability",
+      "severity": "medium",
+      "article": "7(1)(b)",
+      "description": "Component manufacturers are liable alongside the finished product manufacturer if the defect is attributable to the component (Art. 7(1)(b)). For software components and libraries: if a third-party library contains a vulnerability that causes harm, the library developer (if acting commercially) is jointly liable with the product manufacturer. Open-source library developers outside commercial activity are excluded (Art. 4(5)).",
+      "detail_level": "quick"
+    },
+    {
+      "id": "data_loss_damage",
+      "severity": "medium",
+      "article": "5",
+      "description": "PLD covers destruction or corruption of data (Art. 5(1)(c)) — but only data not used exclusively for professional purposes. This means consumer and mixed-use data loss from a defective product is compensable. A ransomware attack exploiting a CRA non-compliant vulnerability could trigger PLD claims for data destruction.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "CRA",
+      "relationship": "complementary",
+      "key_provisions": ["PLD Art. 9(2)(a)", "CRA Annex I"],
+      "note": "CRA non-compliance creates a presumption of product defectiveness under PLD Art. 9(2)(a). CRA's security update obligation (support period) aligns with PLD Art. 4(4). A product failing CRA essential cybersecurity requirements faces strict liability for resulting harm."
+    },
+    {
+      "regulation": "AI_ACT",
+      "relationship": "complementary",
+      "key_provisions": ["PLD Art. 9(2)(a)", "AI Act Art. 6-15"],
+      "note": "AI Act non-compliance creates PLD presumption of defectiveness. PLD disclosure rules (Art. 8) address the 'black box' problem for AI: if manufacturer refuses to explain AI functioning, court presumes defect. AI Act transparency obligations (Art. 13) support PLD evidence disclosure."
+    },
+    {
+      "regulation": "MDR",
+      "relationship": "stacking",
+      "key_provisions": ["MDR Art. 10(16)"],
+      "note": "Medical devices are products under PLD. MDR conformity provides evidence of non-defectiveness but is not conclusive. PLD strict liability applies independently of MDR compliance. MDR Art. 10(16) requires manufacturers to have sufficient financial coverage for PLD claims."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "complementary",
+      "key_provisions": ["GDPR Art. 82"],
+      "note": "PLD covers data destruction/corruption as compensable damage. GDPR Art. 82 provides a separate right to compensation for GDPR violations. Both can be claimed in parallel for a data breach caused by a defective product."
+    },
+    {
+      "regulation": "GPSR",
+      "relationship": "complementary",
+      "key_provisions": ["GPSR Art. 1"],
+      "note": "General Product Safety Regulation provides public law safety requirements. PLD provides private law damage compensation. GPSR non-compliance strengthens PLD defect claims. Both apply to consumer products."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "7",
+      "title": "Liable economic operators — cascading liability chain",
+      "description": "Para 1: manufacturer of finished product, component, or raw material. Para 2: authorised representative, importer, or fulfilment service provider when manufacturer is outside EU. Para 3: person who substantially modifies a product outside manufacturer's control. Para 4: distributor, if manufacturer/importer/AR cannot be identified within 1 month. Para 5: online marketplace, if no other liable entity can be identified. Each level ensures EU-based recourse.",
+      "detail_level": "full"
+    },
+    {
+      "article": "8",
+      "title": "Disclosure of evidence — addressing information asymmetry",
+      "description": "Para 1: national courts can order defendant to disclose relevant evidence at their disposal. Para 2: if defendant refuses without justification, court may presume defect existed or causal link is established. Para 3: proportionality — courts must balance disclosure against protection of trade secrets and confidentiality. Para 4: overriding interest test for trade secrets.",
+      "detail_level": "full"
+    },
+    {
+      "article": "9",
+      "title": "Presumption of defectiveness — the enforcement teeth",
+      "description": "Para 1: court MAY presume defect if claimant faces excessive difficulty proving defect due to technical/scientific complexity. Para 2: court SHALL presume defect if (a) defendant failed to disclose evidence, (b) product did not comply with mandatory safety requirements, (c) obvious malfunction during normal use. Para 3: defendant may rebut presumption.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 12,
+      "clarifies": "Software as product — confirms that software and digital manufacturing files are products. The defect may be in the digital content itself, not only in physical components.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 14,
+      "clarifies": "FOSS exclusion — free and open-source software outside commercial activity is excluded to protect the open-source ecosystem. Same boundary as CRA: 'commercial activity' test.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 28,
+      "clarifies": "Evidence disclosure rationale — addresses the information asymmetry between claimant and manufacturer, particularly acute for complex technologies like AI. Preserves trade secret protections while preventing them from being used as a shield against accountability.",
+      "detail_level": "full"
+    },
+    {
+      "number": 32,
+      "clarifies": "Presumption of defectiveness from regulatory non-compliance — non-compliance with mandatory safety requirements (CRA, AI Act, MDR, etc.) creates a rebuttable presumption that the product was defective. The manufacturer may still prove the non-compliance did not cause the specific damage.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "PLD is a directive — Member States must transpose by 9 December 2026. Existing product liability laws (implementing Directive 85/374/EEC) will be replaced. Key transposition choices: whether to allow the development risk defence (Art. 11(2)).",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "Produkthaftungsgesetz (ProdHaftG) — to be amended",
+        "note": "Germany has allowed the development risk defence under current ProdHaftG. Transposition will determine whether it remains."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='PLD') for per-article audit artifacts. Key artifacts: Product conformity documentation (supports Art. 9 defence), Security update delivery records (Art. 4(4)), Supply chain traceability (Art. 7), Technical documentation available for disclosure (Art. 8), Insurance/financial coverage for liability (Art. 7).",
+
+  "timeline": [
+    {
+      "event": "Revised PLD published",
+      "date": "2024-11-18",
+      "note": "Directive (EU) 2024/2853 published in Official Journal"
+    },
+    {
+      "event": "Transposition deadline",
+      "date": "2026-12-09",
+      "note": "Member States must adopt national implementing measures by this date"
+    },
+    {
+      "event": "Application date",
+      "date": "2026-12-09",
+      "note": "Revised PLD applies to products placed on market from this date. Existing PLD (Directive 85/374/EEC) repealed."
+    }
+  ],
+
+  "citation_format": "Cite as: PLD Art. X(Y). Note: Revised PLD is Directive (EU) 2024/2853. For prior directive: Directive 85/374/EEC, Art. X."
+}

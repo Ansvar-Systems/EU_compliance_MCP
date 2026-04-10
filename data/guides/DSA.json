@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "DSA",
+  "regulation_name": "Digital Services Act",
+  "celex_id": "32022R2065",
+  "effective_date": "2024-02-17",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [],
+
+  "proportionality": {
+    "description": "DSA applies tiered obligations based on the type and size of digital intermediary service: all intermediaries → hosting → online platforms → very large online platforms (VLOPs) and very large online search engines (VLOSEs)",
+    "tiers": [
+      {
+        "name": "intermediary_services",
+        "applies_to": "All intermediary services: mere conduit, caching, and hosting (Art. 3-9). Every online service that transmits, stores, or hosts third-party information.",
+        "key_articles": ["11-15"],
+        "note": "Base obligations: point of contact (Art. 11), legal representative in EU (Art. 13), transparency reporting (Art. 15), terms of service must reference content moderation (Art. 14)."
+      },
+      {
+        "name": "hosting_services",
+        "applies_to": "Services that store information provided by recipients at their request (Art. 6). Includes cloud, web hosting, file sharing.",
+        "key_articles": ["16-18"],
+        "note": "Additional: notice-and-action mechanism (Art. 16), statement of reasons for restrictions (Art. 17), notification of suspected criminal offences (Art. 18)."
+      },
+      {
+        "name": "online_platforms",
+        "applies_to": "Hosting services that publicly disseminate information at recipient request (Art. 3(i)). Includes social media, marketplaces, app stores.",
+        "key_articles": ["19-32"],
+        "note": "Additional: internal complaint-handling system (Art. 20), out-of-court dispute settlement (Art. 21), trusted flaggers (Art. 22), measures against misuse (Art. 23), transparency of recommender systems (Art. 27), online advertising transparency (Art. 26), minors protection (Art. 28). Exemption for micro/small enterprises (Art. 19(2))."
+      },
+      {
+        "name": "vlop_vlose",
+        "applies_to": "Very Large Online Platforms (>45M monthly active users in EU) and Very Large Online Search Engines (>45M monthly active users). Designated by Commission per Art. 33.",
+        "key_articles": ["33-43"],
+        "note": "Additional: systemic risk assessment (Art. 34), risk mitigation measures (Art. 35), crisis response (Art. 36), independent audit (Art. 37), recommender system alternatives (Art. 38), additional online advertising transparency (Art. 39), data access for researchers (Art. 40), compliance officer (Art. 41), annual supervisory fee (Art. 43). Commission as direct supervisor."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "19(2)",
+        "applies_to": "Micro and small enterprises",
+        "description": "Online platform obligations (Section 3) do not apply to micro or small enterprises as defined in Recommendation 2003/361/EC, unless they are designated as VLOPs"
+      },
+      {
+        "article": "4-6",
+        "applies_to": "Intermediary services acting as mere conduit, caching, or hosting",
+        "description": "Liability safe harbours: not liable for transmitted/hosted content if conditions met (no actual knowledge, expeditious removal). These safe harbours from e-Commerce Directive are preserved and updated."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "four_tier_cumulative",
+      "severity": "high",
+      "article": "1",
+      "description": "DSA obligations are CUMULATIVE, not alternative. A VLOP must comply with ALL four tiers: intermediary + hosting + platform + VLOP/VLOSE obligations. Analysis must assess against each tier, not just the highest applicable one.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "vlop_designation_threshold",
+      "severity": "high",
+      "article": "33",
+      "description": "VLOP/VLOSE designation is based on 45 million monthly active users in the EU — approximately 10% of EU population. This is assessed every 6 months. The Commission makes the designation (not self-assessment). Once designated, 4-month grace period to comply with additional obligations. Designation can be reviewed if threshold is no longer met.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "systemic_risk_assessment_scope",
+      "severity": "high",
+      "article": "34",
+      "description": "Art. 34 systemic risk assessment for VLOPs/VLOSEs must cover: (a) dissemination of illegal content, (b) negative effects on fundamental rights, (c) negative effects on civic discourse and electoral processes, (d) negative effects on public security, (e) negative effects on gender-based violence and minors. This is broader than content moderation — includes algorithmic amplification, recommender system design, and business model risks.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "notice_and_action_specifics",
+      "severity": "medium",
+      "article": "16",
+      "description": "Notice-and-action mechanism (Art. 16) requires hosting services to accept notices with: (a) explanation of why content is illegal, (b) URL or identifier, (c) name and email of submitter, (d) statement of good faith. Notices must be processed in timely, diligent, non-arbitrary manner. Hosting services must NOT use automated-only processing for decisions to remove content.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "dark_patterns_prohibition",
+      "severity": "medium",
+      "article": "25",
+      "description": "Art. 25 prohibits online platforms from designing interfaces in a way that deceives, manipulates, or materially distorts users' ability to make free and informed decisions ('dark patterns'). Applies to all interface designs including subscription cancellation, cookie consent, and default settings. Goes beyond GDPR consent requirements.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "advertising_transparency_repository",
+      "severity": "medium",
+      "article": "39",
+      "description": "VLOPs/VLOSEs must maintain a publicly available advertising repository (Art. 39) containing: content of each ad, the advertiser, who paid, delivery period, targeting parameters, and total number of recipients per Member State. Repository must be searchable and maintained for 1 year after last display. This is a VLOP-specific obligation beyond the general Art. 26 requirements.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["DSA Art. 26(3)", "GDPR Art. 6"],
+      "note": "DSA advertising transparency and profiling restrictions stack with GDPR. Art. 26(3) prohibits targeted advertising based on profiling using special categories of personal data (Art. 9 GDPR). Art. 28 prohibits profiling-based advertising to minors. GDPR data subject rights fully apply."
+    },
+    {
+      "regulation": "DMA",
+      "relationship": "complementary",
+      "key_provisions": ["DMA Art. 1"],
+      "note": "DSA addresses content-related obligations; DMA addresses market power/gatekeeper obligations. A service can be both a VLOP under DSA and a gatekeeper under DMA. DSA focuses on content moderation and transparency; DMA on interoperability and self-preferencing."
+    },
+    {
+      "regulation": "AI_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["AI Act Art. 6"],
+      "note": "AI-based recommender systems and content moderation tools on platforms must comply with both DSA transparency requirements (Art. 27) and AI Act obligations where applicable. VLOP systemic risk assessments (Art. 34) must consider AI system risks."
+    },
+    {
+      "regulation": "AVMSD",
+      "relationship": "complementary",
+      "key_provisions": ["AVMSD Art. 28b"],
+      "note": "Audiovisual Media Services Directive applies to video-sharing platforms. DSA provides additional obligations. Where both apply, DSA supplementary obligations apply on top of AVMSD."
+    },
+    {
+      "regulation": "TERREG",
+      "relationship": "complementary",
+      "key_provisions": ["Regulation (EU) 2021/784"],
+      "note": "Terrorist Content Online Regulation requires removal within 1 hour. DSA general notice-and-action is complementary — TERREG takes precedence for terrorist content specifically."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "16",
+      "title": "Notice-and-action mechanism — the hosting service core obligation",
+      "description": "Para 1: hosting services must enable any person to notify allegedly illegal content. Para 2: mechanism must be easy to access, user-friendly, allow electronic submission. Para 3: notices must contain (a) reason why illegal, (b) location (URL), (c) identity of submitter, (d) good faith statement. Para 4: sufficiently precise and adequately substantiated notices give rise to 'actual knowledge' for safe harbour purposes (Art. 6). Para 5: notification of action taken to submitter.",
+      "detail_level": "full"
+    },
+    {
+      "article": "34",
+      "title": "Systemic risk assessment — VLOP/VLOSE specific",
+      "description": "Para 1: at least annually, identify, analyse, and assess systemic risks arising from design, functioning, and use of the service. Para 2: risk categories — (a) illegal content dissemination, (b) fundamental rights impact, (c) civic discourse/electoral impact, (d) public security, (e) gender-based violence and minors. Para 3: consider algorithmic systems, content moderation, terms of service, advertising systems, and data practices in the assessment.",
+      "detail_level": "full"
+    },
+    {
+      "article": "37",
+      "title": "Independent audit — VLOP/VLOSE accountability",
+      "description": "Para 1: annual independent audit of DSA compliance by organisations meeting independence, technical competence, and due diligence criteria. Para 3: audit report with opinion (positive, positive with comments, or negative). Para 4: VLOP/VLOSE must take audit recommendations into account. Para 6: audit report transmitted to Digital Services Coordinator and Commission.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 9,
+      "clarifies": "Safe harbour preservation — DSA maintains and updates the e-Commerce Directive liability exemptions. Intermediaries are not liable for content they neither originate nor select the recipient of, provided they act expeditiously upon obtaining knowledge.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 53,
+      "clarifies": "Notice-and-action — notices giving rise to actual knowledge must be sufficiently precise and substantiated. A notice that merely asserts illegality without explanation is not sufficient to trigger the safe harbour removal obligation.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 84,
+      "clarifies": "VLOP/VLOSE systemic risk — risk assessment must consider how the service's design (including algorithmic systems) may amplify or reduce systemic risks, not just the content itself. The business model and monetisation strategy are relevant factors.",
+      "detail_level": "full"
+    },
+    {
+      "number": 67,
+      "clarifies": "Dark patterns — prohibition targets practices that subvert or impair users' autonomy and informed decision-making. Includes manipulative framing, deceptive defaults, and confusing interface design.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "DSA is a regulation (directly applicable). Member States designate Digital Services Coordinators (Art. 49). Commission supervises VLOPs/VLOSEs directly. Search Law MCPs for national DSA implementation acts.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "Digitale-Dienste-Gesetz (DDG)",
+        "note": "German Digital Services Act — Bundesnetzagentur as Digital Services Coordinator. Replaces parts of NetzDG (Network Enforcement Act)."
+      },
+      {
+        "country": "FR",
+        "law": "ARCOM as Digital Services Coordinator",
+        "note": "France — Autorité de Régulation de la Communication Audiovisuelle et Numérique (ARCOM) designated. Builds on existing Avia law framework."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='DSA') for per-article audit artifacts. Key artifacts: Transparency reports (Art. 15/24/42), Notice-and-action mechanism documentation (Art. 16), Content moderation terms of service (Art. 14), Recommender system parameters documentation (Art. 27), Advertising repository (Art. 39 — VLOPs), Systemic risk assessment report (Art. 34 — VLOPs), Independent audit report (Art. 37 — VLOPs).",
+
+  "timeline": [
+    {
+      "event": "DSA entered into force",
+      "date": "2022-11-16",
+      "note": "Published in Official Journal"
+    },
+    {
+      "event": "VLOP/VLOSE obligations applicable",
+      "date": "2023-08-25",
+      "note": "4 months after designation. First batch of 19 VLOPs/VLOSEs designated Apr 2023."
+    },
+    {
+      "event": "Full application — all DSA requirements",
+      "date": "2024-02-17",
+      "note": "All obligations for all intermediary services, hosting services, and platforms applicable."
+    }
+  ],
+
+  "citation_format": "Cite as: DSA Art. X(Y). Note: DSA is Regulation (EU) 2022/2065. For VLOP designation decisions: Commission Decision of [date] designating [service] as a VLOP."
+}

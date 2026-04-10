@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "EUCC",
+  "regulation_name": "EU Common Criteria Cybersecurity Certification Scheme",
+  "celex_id": "32024R0482",
+  "effective_date": "2024-02-07",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "EUCC_ANNEX_I_SOTA",
+      "celex_id": "32024R0482_ANNEX_I",
+      "title": "State-of-the-Art Documents and Technical Domains",
+      "article_count": 0,
+      "parent_article": "7(1)(d)",
+      "covers": "Lists technical domains (smartcards, hardware devices with security boxes, network devices, etc.) and associated state-of-the-art documents that harmonize evaluation methodology for specific product categories"
+    },
+    {
+      "id": "EUCC_ANNEX_II_PP",
+      "celex_id": "32024R0482_ANNEX_II",
+      "title": "Certified Protection Profiles",
+      "article_count": 0,
+      "parent_article": "7(1)(e)",
+      "covers": "Lists certified protection profiles that define security requirements for specific ICT product categories, used as evaluation targets for product certification"
+    }
+  ],
+
+  "proportionality": {
+    "description": "EUCC certificates are issued at two assurance levels (substantial and high), mapped to five AVA_VAN vulnerability analysis levels. Higher levels require more rigorous evaluation and involve national authority oversight.",
+    "tiers": [
+      {
+        "name": "substantial",
+        "applies_to": "ICT products evaluated at AVA_VAN level 1 or 2",
+        "key_articles": ["4(2)", "21", "22"],
+        "note": "Evaluation by accredited ITSEF and certification by accredited certification body. No national authority authorization required. Covers products where moderate assurance is sufficient."
+      },
+      {
+        "name": "high",
+        "applies_to": "ICT products evaluated at AVA_VAN level 3, 4, or 5",
+        "key_articles": ["4(3)", "7(3)", "21", "22"],
+        "note": "AVA_VAN 3: accredited body may suffice depending on national rules. AVA_VAN 4-5: requires technical domain or certified protection profile listed in Annex I/II, or exceptional national authority approval (Art. 7(3)(c)). Significantly more rigorous evaluation including penetration testing."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "6",
+        "applies_to": "All EUCC applicants",
+        "description": "Conformity self-assessment is explicitly NOT permitted under EUCC (Art. 6). Every EUCC certification requires third-party assessment, unlike the Cybersecurity Act basic level."
+      },
+      {
+        "article": "12(3)",
+        "applies_to": "Certificate validity extensions",
+        "description": "Certificate validity beyond 5 years requires prior approval from the national cybersecurity certification authority. ECCG must be notified."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "products_only",
+      "severity": "high",
+      "article": "1",
+      "description": "EUCC applies to ICT PRODUCTS only (and protection profiles for ICT processes leading to product certification). It does NOT cover ICT services or ICT processes directly. A cloud service cannot be certified under EUCC -- that requires the forthcoming EUCS scheme. Confusing product and service certification is a common error.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "no_self_assessment",
+      "severity": "high",
+      "article": "6",
+      "description": "Conformity self-assessment is explicitly prohibited under EUCC (Art. 6). Every certification requires evaluation by an accredited ITSEF and certification by an accredited certification body. This differs from the Cybersecurity Act framework, which allows self-assessment at basic level.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "five_year_certificate_limit",
+      "severity": "medium",
+      "article": "12",
+      "description": "EUCC certificates have a maximum validity of 5 years (Art. 12(2)). Extension beyond 5 years requires prior national authority approval (Art. 12(3)). Products with longer lifecycles need renewal planning. Expired certificates cannot be used for CRA presumption of conformity.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "ava_van_4_5_restrictions",
+      "severity": "high",
+      "article": "7(3)",
+      "description": "Certification at AVA_VAN level 4 or 5 (high assurance) is only possible in three scenarios: (a) product in a technical domain listed in Annex I, (b) product covered by a certified protection profile in Annex II that includes AVA_VAN 4-5, or (c) exceptional case approved by national authority. Cannot simply request high-assurance certification for any product.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "cra_presumption_scope",
+      "severity": "medium",
+      "article": "CRA Art. 8/27",
+      "description": "EUCC certificates create presumption of conformity with CRA Annex I requirements, but ONLY for the security properties covered by the certificate scope. If the EUCC certificate covers a narrow security target (e.g., only cryptographic module), CRA conformity is only presumed for those aspects. Full CRA compliance may still require additional assessment.",
+      "detail_level": "full"
+    },
+    {
+      "id": "conformity_body_accreditation",
+      "severity": "medium",
+      "article": "21-24",
+      "description": "Both certification bodies (Art. 21) and ITSEFs (Art. 22) must be accredited by national accreditation bodies under Regulation (EC) 765/2008. For high-assurance evaluations, additional authorization by the national cybersecurity certification authority may be required. Accreditation scope limits what products the body can evaluate.",
+      "detail_level": "full"
+    },
+    {
+      "id": "vulnerability_management_ongoing",
+      "severity": "medium",
+      "article": "32-39",
+      "description": "Certificate holders have ONGOING vulnerability management obligations (Art. 32-39). They must monitor for vulnerabilities (Art. 32), follow defined procedures (Art. 33), perform impact analysis (Art. 34), report to national authority (Art. 37), and publish advisories (Art. 39). This is not a one-time assessment -- it runs for the certificate's lifetime.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "CYBERSECURITY_ACT",
+      "relationship": "implementing",
+      "key_provisions": ["CSA Art. 46-65", "CSA Art. 49"],
+      "note": "EUCC is the first certification scheme adopted under the Cybersecurity Act framework (Art. 49). The Cybersecurity Act defines the meta-rules (assurance levels, scheme elements, national authority role); EUCC implements them for ICT products using ISO/IEC 15408 (Common Criteria)."
+    },
+    {
+      "regulation": "CRA",
+      "relationship": "complementary",
+      "key_provisions": ["CRA Art. 8(1)", "CRA Art. 27(4)"],
+      "note": "EUCC certificates create presumption of conformity with CRA essential requirements (Annex I) per CRA Art. 27(4). For CRA critical products (Annex IV), the Commission may require European cybersecurity certificates (Art. 8(1)), making EUCC the primary conformity pathway for hardware security devices."
+    },
+    {
+      "regulation": "NIS2",
+      "relationship": "complementary",
+      "key_provisions": ["NIS2 Art. 24"],
+      "note": "NIS2 allows Member States to require essential and important entities to use EUCC-certified products for their network and information systems. EUCC certification status may be relevant to NIS2 supply chain security requirements."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "4",
+      "title": "Assurance levels -- AVA_VAN mapping",
+      "description": "Two assurance levels mapped to 5 AVA_VAN vulnerability analysis levels. Substantial = AVA_VAN 1-2 (basic vulnerability resistance). High = AVA_VAN 3-5 (resistance to enhanced-basic through methodical attackers). Para 4 distinguishes conformant vs augmented use of assurance components per Common Criteria (Annex VIII). This mapping determines evaluation rigor, body accreditation requirements, and certificate scope.",
+      "detail_level": "full"
+    },
+    {
+      "article": "7",
+      "title": "Evaluation criteria and methods -- the constraint framework for high assurance",
+      "description": "Para 1: minimum evaluation requirements (standards, vulnerability assessment, risk level, state-of-the-art documents, protection profiles). Para 3: AVA_VAN 4-5 restricted to three scenarios: (a) technical domain in Annex I, (b) certified protection profile in Annex II, (c) exceptional national authority approval. Para 4: exceptional case procedure requires national authority assessment and ECCG notification. This article is the gating function for high-assurance certification.",
+      "detail_level": "full"
+    },
+    {
+      "article": "32-39",
+      "title": "Vulnerability management -- post-certification obligations",
+      "description": "Chapter VI (Art. 32-39) establishes ongoing obligations after certification. Art. 32: scope covers all vulnerabilities in certified product. Art. 33: documented procedures required. Art. 34: impact analysis determines whether certificate remains valid. Art. 35: impact analysis report format. Art. 36: remediation and certificate status (may trigger withdrawal). Art. 37: information sharing with national authority. Art. 38: cross-border cooperation between authorities. Art. 39: public vulnerability disclosure.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 1,
+      "clarifies": "Relationship with Cybersecurity Act -- EUCC implements Article 49 of Regulation 2019/881. ENISA prepared the candidate scheme, Commission adopted as implementing regulation.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 5,
+      "clarifies": "Common Criteria alignment -- explains that EUCC is based on ISO/IEC 15408 (Common Criteria) and ISO/IEC 18045 (Common Evaluation Methodology), building on decades of established international evaluation practice.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 12,
+      "clarifies": "Technical domains and state-of-the-art documents -- explains why specific technical areas need harmonized evaluation approaches beyond the general Common Criteria methodology, and how Annex I documents achieve this.",
+      "detail_level": "full"
+    },
+    {
+      "number": 18,
+      "clarifies": "Vulnerability management rationale -- explains why post-certification monitoring is necessary and how the impact analysis process determines certificate status after a vulnerability is discovered.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "EUCC is an implementing regulation (directly applicable). Member States designate national cybersecurity certification authorities (per Cybersecurity Act Art. 58) and accredit conformity assessment bodies. Search Law MCPs for national measures.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "BSI certification program",
+        "note": "BSI operates as both national cybersecurity certification authority and certification body. Existing German CC certification scheme (BSI-CC) integrates with EUCC."
+      },
+      {
+        "country": "FR",
+        "law": "ANSSI certification program",
+        "note": "ANSSI operates as national cybersecurity certification authority. French CSPN scheme (first-level security certification) and CC scheme transition to EUCC framework."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='EUCC') for per-article audit artifacts. Key artifacts: Security Target documentation (Art. 5), Evaluation Technical Report from ITSEF (Art. 10(4)), EUCC Certificate (Art. 10), Certification Report (Annex V format), Vulnerability management procedures (Art. 33), Vulnerability impact analysis reports (Art. 34-35), Conformity assessment body accreditation certificate (Art. 21-24).",
+
+  "timeline": [
+    {
+      "event": "EUCC published in Official Journal",
+      "date": "2024-02-07",
+      "note": "Implementing Regulation (EU) 2024/482 published"
+    },
+    {
+      "event": "EUCC enters into force",
+      "date": "2024-02-27",
+      "note": "20 days after publication"
+    },
+    {
+      "event": "EUCC applicable -- certificates can be issued",
+      "date": "2025-02-27",
+      "note": "12 months after entry into force. Conformity assessment bodies must be accredited and authorized by this date."
+    },
+    {
+      "event": "National CC/CSPN scheme transition",
+      "date": "2025-02-27",
+      "note": "National schemes covered by EUCC scope cease to produce new certificates. Existing national certificates remain valid until expiry."
+    }
+  ],
+
+  "citation_format": "Cite as: EUCC Art. X(Y) for the implementing regulation. For annexes: EUCC Annex N. Full citation: Commission Implementing Regulation (EU) 2024/482, Art. X. For the parent framework: Cybersecurity Act Art. X."
+}

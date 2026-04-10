@@ -8,9 +8,9 @@ MCP server providing structured access to full-text EU regulations via Claude, C
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/EU_compliance_MCP?style=social)](https://github.com/Ansvar-Systems/EU_compliance_MCP)
 [![Daily EUR-Lex Check](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml)
 [![Database](https://img.shields.io/badge/database-pre--built-green)](docs/COVERAGE_GAPS.md)
-[![Recitals](https://img.shields.io/badge/recitals-3500%2B-blue)](docs/COVERAGE_GAPS.md)
+[![Recitals](https://img.shields.io/badge/recitals-4900%2B-blue)](docs/COVERAGE_GAPS.md)
 
-Query **49 EU regulations** — from GDPR and AI Act to DORA, Chips Act, MiFID II, eIDAS, Medical Device Regulation, MDCG cybersecurity guidance, and more — directly from Claude, Cursor, or any MCP-compatible client.
+Query **61 EU regulations** — from GDPR and AI Act to DORA, Chips Act, MiFID II, eIDAS, Medical Device Regulation, MDCG cybersecurity guidance, and more — directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building digital products, financial services, healthcare tech, or connected devices for the European market, this is your compliance reference.
 
@@ -128,11 +128,12 @@ Once connected, just ask naturally:
 
 ## What's Included
 
-- **49 Regulations** — GDPR, DORA, NIS2, AI Act, Chips Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 40 more
-- **2,528 Articles** + 3,869 Recitals + 1,226 Official Definitions
-- **Full-Text Search** — Find relevant articles across all regulations instantly
+- **61 Regulations** — GDPR, DORA, NIS2, AI Act, CRA, Chips Act, MiCA, eIDAS 2.0, Medical Device Regulation, and 50 more
+- **4,095 Articles** (including 50 individually addressable annexes) + 4,970 Recitals + 1,448 Official Definitions
+- **16 Regulation Guides** — Pitfalls, proportionality tiers, cross-regulation analysis, key article structures for DORA, CRA, AI Act, GDPR, NIS2, MDR, MiCA, DSA, Data Act, PLD, and 6 more
+- **Full-Text Search** — Find relevant articles and annexes across all regulations instantly
 - **Control Mappings** — 709 mappings to ISO 27001:2022 & NIST CSF 2.0
-- **Evidence Requirements** — 407 audit artifacts across all 49 regulations
+- **Evidence Requirements** — 407 audit artifacts across all 61 regulations
 - **Sector Rules** — 323 applicability rules across all sectors and industries
 - **Daily Updates** — Automatic freshness checks against EUR-Lex
 
@@ -242,7 +243,7 @@ If you deploy a remote authenticated endpoint, use OAuth 2.0 over TLS with certi
 This server is part of **Ansvar's Compliance Suite** - three MCP servers that work together for end-to-end compliance coverage:
 
 ### 🇪🇺 EU Regulations MCP (This Project)
-**Query 49 EU regulations directly from Claude**
+**Query 61 EU regulations directly from Claude**
 - GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 41 more
 - Full regulatory text with article-level search
 - Cross-regulation reference and comparison
@@ -317,7 +318,7 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 
 We build AI-accelerated threat modeling and compliance tools for automotive, financial services, and healthcare. This MCP server started as our internal reference tool — turns out everyone building for EU markets has the same EUR-Lex frustrations.
 
-So we're open-sourcing it. Navigating 49 regulations shouldn't require a legal team.
+So we're open-sourcing it. Navigating 61 regulations shouldn't require a legal team.
 
 **[ansvar.eu](https://ansvar.eu)** — Stockholm, Sweden
 
@@ -325,7 +326,7 @@ So we're open-sourcing it. Navigating 49 regulations shouldn't require a legal t
 
 ## Documentation
 
-- **[Coverage Details](docs/coverage.md)** — All 49 regulations with article counts
+- **[Coverage Details](docs/coverage.md)** — All 61 regulations with article counts
 - **[Use Cases](docs/use-cases.md)** — Industry-specific guidance (fintech, healthcare, IoT, etc.)
 - **[Available Tools](docs/tools.md)** — Detailed tool descriptions
 - **[Development Guide](docs/development.md)** — Adding regulations, webhooks, CI/CD

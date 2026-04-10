@@ -5,6 +5,40 @@ All notable changes to the EU Regulations MCP Server will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+**12 New Regulation Guides (4 → 16)**
+- Tier A: CRA, MDR, MiCA, DSA, DATA_ACT, PLD
+- Tier B: CYBERSECURITY_ACT, EUCC, CER, EIDAS2, EHDS, DMA
+- Each guide includes proportionality tiers, pitfalls, cross-regulation analysis, key article structures, key recitals, timelines, and citation formats
+
+**41 Individually Addressable Annexes**
+- CRA: 8 annexes (essential requirements, product categories, conformity procedures)
+- AI Act: 13 annexes (high-risk use cases, GPAI tech docs, systemic risk criteria)
+- NIS2: 3 annexes (sector scope lists for essential/important entity classification)
+- MDR: 17 annexes (GSPR, classification rules, QMS conformity, clinical evaluation)
+
+**Recital-to-Article Mappings**
+- 98 recitals mapped bidirectionally to referenced articles across DORA, AI Act, CRA, NIS2, GDPR, MDR
+
+### Changed
+
+- Upgraded AI Act guide (3→8 pitfalls, +5 key structures, +6 key recitals, +2 delegated acts)
+- Upgraded NIS2 guide (+1 delegated act, 3→8 pitfalls, +4 structures, +6 recitals, +3 national examples)
+- Upgraded GDPR guide (3→8 pitfalls, +6 cross-regulation refs, +4 structures, +6 recitals, +4 national examples)
+
+### Data Quality
+
+- 4,095 articles across 61 regulations (was 2,528 across 49)
+- 4,970 recitals (was 3,869)
+- 1,448 official definitions (was 1,226)
+- 50 FTS-indexed annexes (was 0)
+- 16 regulation guides (was 4)
+
+---
+
 ## [1.0.0] - 2026-02-12
 
 ### 🎉 Production Release

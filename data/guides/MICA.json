@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "MICA",
+  "regulation_name": "Markets in Crypto-Assets Regulation",
+  "celex_id": "32023R1114",
+  "effective_date": "2024-12-30",
+  "guide_updated": "2026-04-10",
+
+  "delegated_acts": [
+    {
+      "id": "MICA_RTS_AUTHORISATION",
+      "celex_id": "various",
+      "title": "RTS on authorisation requirements for CASPs",
+      "article_count": 0,
+      "parent_article": "62(5)",
+      "covers": "ESMA RTS specifying information for CASP authorisation applications, organisational requirements, complaints handling procedures"
+    },
+    {
+      "id": "MICA_RTS_WHITEPAPER",
+      "celex_id": "various",
+      "title": "RTS on crypto-asset white paper content and format",
+      "article_count": 0,
+      "parent_article": "6(11)",
+      "covers": "EBA/ESMA RTS on content, format, and presentation of white papers for different categories of crypto-assets"
+    },
+    {
+      "id": "MICA_RTS_ART_RESERVES",
+      "celex_id": "various",
+      "title": "RTS on reserve of assets for ARTs",
+      "article_count": 0,
+      "parent_article": "36(4)",
+      "covers": "EBA RTS on composition, management, custody, and investment of the reserve of assets backing asset-referenced tokens"
+    }
+  ],
+
+  "proportionality": {
+    "description": "MiCA applies different obligations based on the type of crypto-asset (utility token, ART, EMT) and the service provider type (CASP, credit institution, investment firm). Significance thresholds trigger additional requirements.",
+    "tiers": [
+      {
+        "name": "crypto_asset_offeror",
+        "applies_to": "Any person offering crypto-assets other than ARTs or EMTs to the public, or seeking admission to trading (Title II)",
+        "key_articles": ["4-15"],
+        "note": "White paper obligation (notification to competent authority), marketing communications rules, right of withdrawal (Art. 13). Exempted: <150 persons, <EUR 1M in 12 months, or offered only to qualified investors."
+      },
+      {
+        "name": "art_issuer",
+        "applies_to": "Issuers of asset-referenced tokens (stablecoins backed by multiple assets/currencies) — Title III",
+        "key_articles": ["16-47"],
+        "note": "Authorisation from competent authority required. Reserve of assets, custody, own funds (2% of reserve), redemption rights, governance. Credit institutions exempt from authorisation but must notify and comply with substantive requirements."
+      },
+      {
+        "name": "art_significant",
+        "applies_to": "Significant asset-referenced token issuers per Art. 43 criteria (customer base >10M, market cap >EUR 5B, transactions >EUR 500M/day or 2.5M/day, reserve >EUR 1B, significance in 7+ Member States)",
+        "key_articles": ["43-47"],
+        "note": "Additional requirements: 3% own funds (up from 2%), liquidity management policy, interoperability, EBA direct supervision."
+      },
+      {
+        "name": "emt_issuer",
+        "applies_to": "Issuers of e-money tokens (stablecoins pegged to single fiat currency) — Title IV",
+        "key_articles": ["48-58"],
+        "note": "Must be authorised credit institution or e-money institution. Issuance and redeemability at par value. 100% reserve in secure low-risk assets. E-Money Directive provisions apply by reference."
+      },
+      {
+        "name": "casp",
+        "applies_to": "Crypto-Asset Service Providers — Title V",
+        "key_articles": ["59-92"],
+        "note": "Authorisation from national competent authority. Prudential requirements, governance, custody rules, trading platform rules, exchange/transfer rules, advice/portfolio management rules. Passporting across EU via notification."
+      },
+      {
+        "name": "credit_institution_casp",
+        "applies_to": "Credit institutions providing crypto-asset services (Art. 60)",
+        "key_articles": ["60"],
+        "note": "No separate CASP authorisation needed. Must notify competent authority 40 working days in advance. Must comply with substantive CASP requirements (conduct, governance, etc.)."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "4(2-3)",
+        "applies_to": "Small offerings and qualified investor offerings",
+        "description": "White paper exemptions: (a) offerings to <150 persons per Member State, (b) total consideration <EUR 1M over 12 months, (c) offered solely to qualified investors. Crypto-assets that are free of charge also exempt."
+      },
+      {
+        "article": "2(4)",
+        "applies_to": "Crypto-assets that qualify as financial instruments, deposits, funds, securitisation positions, insurance/pension products",
+        "description": "Out of MiCA scope — regulated under existing financial services legislation (MiFID II, banking directives, etc.)"
+      },
+      {
+        "article": "143",
+        "applies_to": "CASPs operating before MiCA application date",
+        "description": "Transitional: CASPs authorised or registered under national law may continue providing services for up to 18 months after MiCA application date (until 1 July 2026) or until authorised/refused under MiCA, whichever is earlier."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "financial_instrument_boundary",
+      "severity": "high",
+      "article": "2(4)",
+      "description": "MiCA does NOT apply to crypto-assets that qualify as financial instruments under MiFID II (e.g., security tokens, tokenised shares/bonds). The qualification depends on the rights attached, not the technology. Wrongly classifying a security token as a utility token means applying MiCA when MiFID II should apply — or vice versa. ESMA guidance on classification is key.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "art_vs_emt_distinction",
+      "severity": "high",
+      "article": "3(1)(6-7)",
+      "description": "Asset-referenced tokens (ART) reference multiple assets or currencies; e-money tokens (EMT) reference a single fiat currency. The distinction drives completely different regulatory regimes (Title III vs Title IV). An EMT issuer must be a credit institution or e-money institution. An ART issuer can be any authorised entity. Misclassification invalidates the entire compliance approach.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "significance_thresholds",
+      "severity": "high",
+      "article": "43, 56",
+      "description": "Significant ART/EMT issuers face additional requirements including EBA direct supervision, higher own funds (3% vs 2% for ART), liquidity stress testing, recovery plans. Significance is triggered by ANY of: >10M holders, >EUR 5B market cap, >2.5M transactions/day, reserve >EUR 1B, interconnectedness with financial system. These thresholds can be crossed dynamically.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "white_paper_liability",
+      "severity": "medium",
+      "article": "15",
+      "description": "Issuers of crypto-assets are liable for damage caused by misleading, inaccurate, or unclear information in their white paper (Art. 15). This is a private right of action — token holders can sue. The white paper must contain all information reasonably needed to make an informed purchase decision. Art. 15(3): limitation of liability requires the white paper to include a clear and prominent warning.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "travel_rule",
+      "severity": "high",
+      "article": "Transfer of Funds Regulation (TFR 2023/1113)",
+      "description": "MiCA works alongside the recast Transfer of Funds Regulation which extends the 'travel rule' to crypto-asset transfers. CASPs must collect and transmit originator and beneficiary information for ALL crypto-asset transfers, including self-hosted wallets above EUR 1,000. Non-compliance is a MiCA supervisory matter.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "interest_prohibition_emt",
+      "severity": "medium",
+      "article": "50",
+      "description": "EMT issuers and CASPs must NOT grant interest or any other benefit related to the length of time a holder holds EMTs (Art. 50). This prohibition prevents EMTs from functioning as interest-bearing deposit products. Loyalty programs and rebates unrelated to holding duration are permissible.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "MIFID2",
+      "relationship": "boundary",
+      "key_provisions": ["MiCA Art. 2(4)", "MiFID II Annex I"],
+      "note": "Crypto-assets qualifying as financial instruments fall under MiFID II, not MiCA. Classification is the critical boundary question. ESMA provides guidance on token classification. Investment firms authorized under MiFID II may provide crypto-asset services under Art. 60 without separate CASP authorisation."
+    },
+    {
+      "regulation": "AMLD",
+      "relationship": "stacking",
+      "key_provisions": ["AMLD Art. 2"],
+      "note": "CASPs are obliged entities under anti-money laundering legislation. AML/KYC obligations stack with MiCA prudential requirements. MiCA authorisation requires demonstrated AML compliance."
+    },
+    {
+      "regulation": "PSD2",
+      "relationship": "complementary",
+      "key_provisions": ["PSD2 Art. 2"],
+      "note": "E-money token operations overlap with payment services regulation. EMT issuers that are e-money institutions must also comply with PSD2/EMD where applicable."
+    },
+    {
+      "regulation": "DORA",
+      "relationship": "stacking",
+      "key_provisions": ["DORA Art. 2(1)"],
+      "note": "CASPs and significant token issuers are financial entities under DORA (Art. 2(1)(q)/(r)). DORA ICT risk management and incident reporting requirements apply alongside MiCA."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": [],
+      "note": "KYC data processing by CASPs must comply with GDPR. Blockchain immutability creates tension with right to erasure — technical measures needed."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "59",
+      "title": "CASP authorisation — gateway to the EU crypto market",
+      "description": "Para 1: legal person with registered office in a Member State. Para 2: apply to competent authority with information per Art. 62. Para 3: competent authority decision within 40 working days (extendable to 25 more). Para 4: authorisation grants EU-wide passport. Para 5: CASP must notify when starting to provide services in another Member State. Art. 63: conditions for withdrawal. Art. 64: cross-border provision via freedom of services.",
+      "detail_level": "full"
+    },
+    {
+      "article": "16",
+      "title": "ART authorisation — stablecoin framework",
+      "description": "Para 1: no ART may be offered or admitted to trading unless issuer is authorised AND white paper approved by competent authority. Para 2: credit institutions exempt from authorisation but must comply with substantive requirements and notify. Para 3: application must include business model, governance, reserve policy, custody arrangements, complaints handling, ICT security.",
+      "detail_level": "full"
+    },
+    {
+      "article": "67",
+      "title": "CASP prudential requirements — own funds",
+      "description": "Para 1: permanent minimum capital: Class 1 CASPs (custody, exchange) EUR 125,000; Class 2 (trading platform) EUR 150,000; Class 3 (portfolio management, transfer) EUR 50,000. Para 2: own funds must at all times be at least the higher of: (a) permanent minimum, (b) one quarter of fixed overheads of preceding year. Higher of (a) and (b) applies.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 22,
+      "clarifies": "Scope boundary with financial instruments — where crypto-assets exhibit characteristics of financial instruments, they should not fall within MiCA scope but under MiFID II. ESMA to provide guidance.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 40,
+      "clarifies": "ART reserve composition — must be highly liquid, with minimal market/credit/concentration risk. Not a profit centre — reserve management must prioritise safety over yield.",
+      "detail_level": "full"
+    },
+    {
+      "number": 61,
+      "clarifies": "CASP authorisation rationale — passport mechanism modelled on banking/investment firm passporting. Single authorisation enables EU-wide provision. Addresses regulatory arbitrage concerns.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "MiCA is a regulation (directly applicable). Member States designate competent authorities (Art. 93). Search Law MCPs for national crypto-asset laws that existed before MiCA and transitional arrangements.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "Kryptomärkteaufsichtsgesetz (KMAG)",
+        "note": "German crypto market supervision act — BaFin as competent authority. Builds on prior KWG-based crypto custody licensing. Transitional provisions for existing licensees."
+      },
+      {
+        "country": "FR",
+        "law": "Loi PACTE (as amended for MiCA transition)",
+        "note": "French law — AMF as competent authority. Existing DASP (digital asset service provider) registrations transition to MiCA CASP authorisation."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='MICA') for per-article audit artifacts. Key artifacts: White paper (Art. 6/19/51), CASP authorisation documentation (Art. 62), Reserve of assets policy and audit reports (Art. 36-38), Own funds calculations (Art. 67), Governance arrangements documentation (Art. 68), Complaints handling procedures (Art. 71), Custody safeguarding evidence (Art. 75).",
+
+  "timeline": [
+    {
+      "event": "MiCA entered into force",
+      "date": "2023-06-29",
+      "note": "Published in Official Journal"
+    },
+    {
+      "event": "Title III (ARTs) and Title IV (EMTs) applicable",
+      "date": "2024-06-30",
+      "note": "Stablecoin issuance rules applicable. Issuers of existing ARTs/EMTs must apply for authorisation."
+    },
+    {
+      "event": "Full application — all MiCA requirements",
+      "date": "2024-12-30",
+      "note": "Title II (other crypto-assets), Title V (CASPs), Title VI (market abuse) applicable."
+    },
+    {
+      "event": "Transitional period ends",
+      "date": "2026-07-01",
+      "note": "CASPs operating under national law transitional provisions must be authorised under MiCA by this date or cease operations."
+    }
+  ],
+
+  "citation_format": "Cite as: MiCA Art. X(Y). Note: MiCA is Regulation (EU) 2023/1114. For RTS/ITS: EBA/ESMA [RTS/ITS] under MiCA Art. X."
+}
