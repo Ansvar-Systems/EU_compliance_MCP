@@ -1,6 +1,10 @@
 # Dependencies
 node_modules/
 
+# Python bytecode (seed post-processing scripts)
+__pycache__/
+*.pyc
+
 # Build output
 dist/
 *.tsbuildinfo
