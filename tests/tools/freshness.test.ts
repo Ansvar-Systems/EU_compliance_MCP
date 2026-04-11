@@ -87,11 +87,60 @@ describe('check_data_freshness guidance block', () => {
     expect(draft?.note).toContain('second draft published 2026-03-05');
   });
 
+  it('populates dataset_built from db_metadata', async () => {
+    const result = await checkDataFreshness(db);
+    // Fixture DB has no db_metadata table, so dataset_built should be null
+    expect(result.dataset_built).toBeNull();
+  });
+
+  it('populates source_registry entries with correct columns', async () => {
+    // Create a DB with source_registry data
+    const raw = new Database(':memory:');
+    const guidanceSchema = readFileSync(
+      join(__dirname, '..', '..', 'scripts', 'add-guidance-tables.sql'),
+      'utf-8',
+    );
+    raw.exec(guidanceSchema);
+    raw.exec(`
+      CREATE TABLE IF NOT EXISTS source_registry (
+        regulation TEXT PRIMARY KEY,
+        celex_id TEXT,
+        eur_lex_version TEXT,
+        last_fetched TEXT,
+        articles_expected INTEGER,
+        articles_parsed INTEGER,
+        quality_status TEXT,
+        notes TEXT
+      );
+      CREATE TABLE IF NOT EXISTS db_metadata (
+        key TEXT PRIMARY KEY,
+        value TEXT NOT NULL
+      );
+      INSERT INTO source_registry (regulation, celex_id, last_fetched, quality_status, articles_expected, articles_parsed)
+        VALUES ('GDPR', '32016R0679', '2026-04-10T06:00:00Z', 'complete', 99, 99);
+      INSERT INTO db_metadata (key, value) VALUES ('built_at', '2026-04-10T19:48:17.483Z');
+    `);
+    const srcDb = createSqliteAdapter(raw);
+    const result = await checkDataFreshness(srcDb);
+    expect(result.last_checked).toBe('2026-04-10T06:00:00Z');
+    expect(result.source_registry_entries).toBe(1);
+    expect(result.sources[0].regulation).toBe('GDPR');
+    expect(result.sources[0].celex_id).toBe('32016R0679');
+    expect(result.sources[0].quality_status).toBe('complete');
+    expect(result.dataset_built).toBe('2026-04-10T19:48:17.483Z');
+    await srcDb.close();
+  });
+
   it('returns an empty guidance block fail-soft when guidance tables missing', async () => {
     const raw = new Database(':memory:');
     raw.exec(`
       CREATE TABLE IF NOT EXISTS source_registry (
-        regulation TEXT PRIMARY KEY, last_fetched TEXT, status TEXT, url TEXT
+        regulation TEXT PRIMARY KEY,
+        celex_id TEXT,
+        last_fetched TEXT,
+        quality_status TEXT,
+        articles_expected INTEGER,
+        articles_parsed INTEGER
       );
     `);
     const emptyDb = createSqliteAdapter(raw);

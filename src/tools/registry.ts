@@ -611,7 +611,18 @@ export function registerTools(server: Server, db: DatabaseAdapter, context?: Abo
 
     try {
       const result = await tool.handler(db, args || {});
-      const _meta = {
+
+      // Extract _citation from tool result (if present) for protocol-level exposure
+      let _citation: Record<string, unknown> | undefined;
+      let resultForText = result;
+      if (result && typeof result === 'object' && !Array.isArray(result) && result._citation) {
+        const { _citation: cit, ...rest } = result;
+        _citation = cit;
+        resultForText = rest;
+      }
+
+      // Protocol-level _meta (MCP spec: CallToolResult._meta)
+      const _meta: Record<string, unknown> = {
         disclaimer:
           'Content is derived from EUR-Lex official texts and is not an official legal publication. ' +
           'Only documents published in the Official Journal of the EU are legally authentic (Article 297 TFEU).',
@@ -619,20 +630,25 @@ export function registerTools(server: Server, db: DatabaseAdapter, context?: Abo
           'EUR-Lex content reusable under EUR-Lex reuse policy (CC BY 4.0). Server code: Apache-2.0.',
         source_url: 'https://eur-lex.europa.eu',
         data_age: new Date().toISOString().split('T')[0],
+        ..._citation ? { _citation } : {},
       };
-      const wrapped =
-        typeof result === 'string'
-          ? result
-          : Array.isArray(result)
-          ? { data: result, _meta }
-          : result && typeof result === 'object'
-          ? { ...result, _meta }
-          : { data: result, _meta };
+
+      // Text content: the tool result data without _citation (already in _meta)
+      const textPayload =
+        typeof resultForText === 'string'
+          ? resultForText
+          : Array.isArray(resultForText)
+          ? { data: resultForText }
+          : resultForText && typeof resultForText === 'object'
+          ? resultForText
+          : { data: resultForText };
+
       return {
+        _meta,
         content: [
           {
             type: 'text',
-            text: typeof wrapped === 'string' ? wrapped : JSON.stringify(wrapped, null, 2),
+            text: typeof textPayload === 'string' ? textPayload : JSON.stringify(textPayload, null, 2),
           },
         ],
       };
