@@ -1,10 +1,12 @@
 import type { DatabaseAdapter } from '../database/types.js';
 
 export interface SourceRegistryEntry {
-  source_id: string;
-  url: string | null;
+  regulation: string;
+  celex_id: string;
   last_fetched: string | null;
-  status: string | null;
+  quality_status: string | null;
+  articles_expected: number | null;
+  articles_parsed: number | null;
 }
 
 export interface PendingPublication {
@@ -115,7 +117,8 @@ export async function checkDataFreshness(db: DatabaseAdapter): Promise<DataFresh
   let lastChecked: string | null = null;
   try {
     const result = await db.query<SourceRegistryEntry>(
-      `SELECT source_id, url, last_fetched, status
+      `SELECT regulation, celex_id, last_fetched, quality_status,
+              articles_expected, articles_parsed
        FROM source_registry
        ORDER BY last_fetched DESC`,
     );
@@ -123,6 +126,18 @@ export async function checkDataFreshness(db: DatabaseAdapter): Promise<DataFresh
     lastChecked = sources.length > 0 ? sources[0].last_fetched : null;
   } catch {
     // source_registry table may not exist in all deployments
+  }
+
+  let datasetBuilt: string | null = null;
+  try {
+    const metaResult = await db.query<{ value: string }>(
+      `SELECT value FROM db_metadata WHERE key = 'built_at'`,
+    );
+    if (metaResult.rows.length > 0) {
+      datasetBuilt = metaResult.rows[0].value;
+    }
+  } catch {
+    // db_metadata table may not exist in all deployments
   }
 
   const guidance = await loadGuidanceBreakdown(db);
@@ -133,7 +148,7 @@ export async function checkDataFreshness(db: DatabaseAdapter): Promise<DataFresh
     source_registry_entries: sources.length,
     sources,
     guidance,
-    dataset_built: null,
+    dataset_built: datasetBuilt,
     note: NOTE,
   };
 }
