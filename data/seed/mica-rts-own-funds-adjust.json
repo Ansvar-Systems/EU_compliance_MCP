@@ -1,0 +1,50 @@
+{
+  "id": "MICA_RTS_OWN_FUNDS_ADJUST",
+  "full_name": "Commission Delegated Regulation (EU) 2025/419 — RTS on procedure and timeframe for ART/EMT issuers to adjust own funds amounts",
+  "celex_id": "32025R0419",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0419",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Scope of application",
+      "text": "This Regulation applies to the following issuers of asset-referenced tokens or e-money tokens:\n\n(a)\n\nissuers of significant asset-reference tokens;\n\n(b)\n\nelectronic money institutions issuing significant e-money tokens;\n\n(c)\n\nissuers of asset-reference tokens that are not significant, where required by the competent authority under Article 35(4) of Regulation (EU) 2023/1114;\n\n(d)\n\nelectronic money institutions issuing e-money tokens that are not significant, where required by the competent authority under Article 58(2) of Regulation (EU) 2023/1114."
+    },
+    {
+      "number": "2",
+      "title": "Timeframe",
+      "text": "1.   The competent authority of the home Member State shall notify the timeframe within which an issuer of asset-referenced tokens or e-money tokens referred to in Article 1 shall adjust its own funds, within 25 working days from the notification of a decision to classify an asset-referenced token or e-money token as significant, or from the notification to the issuer to comply with the requirement of Article 45(5) of Regulation (EU) 2023/1114. That timeframe shall be set after a dialogue with the relevant issuer.\n\n2.   The competent authority shall grant to the relevant issuer no more than 6 months after the notification referred to in paragraph 1 to adjust its own funds, having regard to the potential impact on the relevant issuer, its specificities and risks to the financial stability of the wider financial system.\n\n3.   Within 25 working days from receipt of the notification on the timeframe referred to in paragraph 1, the relevant issuer shall submit to the competent authority a detailed plan on how its own funds are to be adjusted to meet the requirement of Article 45(5) of Regulation (EU) 2023/1114.\n\nThe plan shall include time-bound steps and procedures to carry out the own funds’ adjustment within the set timeframe.\n\nThe plan shall ensure that the own funds items and instruments that will be used to comply with the increased and adjusted requirement fulfil all the conditions set out in Article 35(2) of Regulation (EU) 2023/1114.\n\n4.   The relevant issuer shall inform the competent authority immediately and in writing in case any step or procedure of the plan cannot be achieved in a timely manner. In such a case, the relevant issuer shall submit to the competent authority an update of the plan, including alternative steps or procedures that allow the issuer to adjust its own funds in the set timeframe.\n\n5.   The competent authority shall closely monitor the implementation of the plan.\n\n6.   The relevant issuer shall inform the competent authority of the completion of the steps provided in the plan, including a final notification to the competent authority when the required own funds adjustment has been completed, within 20 workings days from the completion."
+    },
+    {
+      "number": "3",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States.\n\nDone at Brussels, 16 December 2024.\n\nFor the Commission\n\nThe President\n\nUrsula VON DER LEYEN\n\n(1)\n\nOJ L 150, 9.6.2023, p. 40, ELI: http://data.europa.eu/eli/reg/2023/1114/oj.\n\n(2)  Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a European Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing Commission Decision 2009/78/EC (OJ L 331, 15.12.2010, p. 12, ELI: http://data.europa.eu/eli/reg/2010/1093/oj).\n\nELI: http://data.europa.eu/eli/reg_del/2025/419/oj\n\nISSN 1977-0677 (electronic edition)\n\n////////////////////////$(document).ready(function(){generateTOC(true,'', 'Top','false');scrollToCurrentUrlAnchor();});"
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "The requirement set out in Articles 45(5) of Regulation (EU) 2023/1114 also applies to electronic money institutions issuing significant e-money tokens, in accordance with Article 58(1), point (b), of that Regulation, where required by the competent authority under Article 35(4) of that Regulation, to issuers of asset-reference tokens that are not significant, and, where required by the competent authority under Article 58(2) of that Regulation, to electronic money institutions issuing e-money tokens that are not significant."
+    },
+    {
+      "recital_number": 2,
+      "text": "Issuers of significant asset-referenced tokens or significant e-money tokens, as well as issuers of asset-referenced tokens or e-money tokens that are not significant, but are subject to Article 45(5) of Regulation (EU) 2023/1114 in accordance with Article 35(4) or Article 58(2), respectively, of that Regulation, should elaborate a plan to adjust the level of own funds to the required level within the timeframe required. Those issuers should discuss and agree the feasibility of such plan with the relevant competent authorities. Implementation of such plan should be closely monitored by competent authorities and, for that purpose, the relevant issuers should notify to the competent authority steps taken, including a final notification of the adjustment completion."
+    },
+    {
+      "recital_number": 3,
+      "text": "Competent authorities of the home Member State should determine the timeframe for the issuers to adjust their own funds. Any such timeframe should have a maximum deadline and be as short as possible and based on a case-by-case assessment and determined after a dialogue with that issuer, having regard to the potential impact on that issuer, its specificities and risks to the financial stability of the wider financial system."
+    },
+    {
+      "recital_number": 4,
+      "text": "This Regulation is based on the draft regulatory technical standards submitted to the Commission by the European Banking Authority."
+    },
+    {
+      "recital_number": 5,
+      "text": "The European Banking Authority has conducted open public consultations on the draft regulatory technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Banking Stakeholder Group established in accordance with Article 37 of Regulation (EU) No 1093/2010 of the European Parliament and of the Council (2),\n\nHAS ADOPTED THIS REGULATION:"
+    },
+    {
+      "recital_number": 5,
+      "text": "The European Banking Authority has conducted open public consultations on the draft regulatory technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Banking Stakeholder Group established in accordance with Article 37 of Regulation (EU) No 1093/2010 of the European Parliament and of the Council (2),\n\nHAS ADOPTED THIS REGULATION:"
+    }
+  ]
+}

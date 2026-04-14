@@ -1,0 +1,73 @@
+{
+  "id": "MICA_RTS_LIQUIDITY",
+  "full_name": "Commission Delegated Regulation (EU) 2025/1264 — RTS on liquidity management policy for certain ART/EMT issuers",
+  "celex_id": "32025R1264",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1264",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Scope",
+      "text": "This Regulation applies to the following issuers of asset referenced tokens and e-money tokens:\n\n(a)\n\nissuers of significant asset-referenced tokens;\n\n(b)\n\nelectronic money institutions issuing significant e-money tokens;\n\n(c)\n\nissuers of asset-referenced tokens that are not significant, where required by a competent authority under Article 35(4) of Regulation (EU) 2023/1114;\n\n(d)\n\nelectronic money institutions issuing e-money tokens that are not significant, where required by a competent authority under Article 58(2) of Regulation (EU) 2023/1114."
+    },
+    {
+      "number": "2",
+      "title": "Policies and procedures for identifying, measuring and managing liquidity risk",
+      "text": "1.   The liquidity management policies and procedures shall include robust strategies, and processes for the identification, measurement, management, monitoring and internal reporting of liquidity risk over a set of time horizons appropriately reflecting that risk.\n\n2.   The liquidity management policies and procedures shall ensure that adequate levels of reserve assets are maintained to meet requests for redemption by holders of asset-referenced tokens or e-money tokens at any moment, including under stress scenarios.\n\n3.   The liquidity management policies and procedures shall be proportionate to the complexity, risk profile and scope of operation of the issuers of asset-referenced tokens or e-money tokens.\n\nThe management bodies of the issuers of asset-referenced tokens or e-money tokens shall approve the liquidity management policies and procedures and shall set risk tolerance levels to each asset-referenced token or e-money token.\n\nThe liquidity management policies and procedures shall reflect the current and expected liquidity risks of issuers of asset-referenced tokens or e-money tokens.\n\nThe issuers of asset-referenced tokens or e-money tokens shall monitor those risks on an ongoing basis. That monitoring shall include the following:\n\n(a)\n\nidentification of deposits with credit institutions, of the highly liquid financial instruments and of any other reserve assets;\n\n(b)\n\nthe setting of the criteria to determine the market value of the reserve assets;\n\n(c)\n\nthe assessment of concentration risk, creditworthiness and liquidity soundness, as well as the limits and time horizons of such risks, and the currencies’ consistency;\n\n(d)\n\nthe techniques for ensuring the stability of the reserve of assets’ value with respect to the referenced assets.\n\n4.   Issuers of asset-referenced tokens or e-money tokens shall establish arrangements for sound management of the intra-day liquidity risk. Those arrangements shall include the following:\n\n(a)\n\nthe identification of the expected intra-day liquidity needs and resources;\n\n(b)\n\nthe setting up of processes and procedures coherent with the profile of the issuer of the asset-referenced token or e-money token and the contingent and expected market situation.\n\n5.   Issuers of asset-referenced tokens or e-money tokens shall monitor their reserve assets to ensure that they are available to cover the value of the assets referenced by such tokens at all times, including during emergency situations, and shall assess the appropriateness of overcollateralisation, in particular where the assets referenced by the tokens are highly volatile or do not form part of the reserve of assets.\n\n6.   Issuers of asset-referenced tokens or e-money tokens shall monitor, on a regular basis, the appointment of custodians of reserve assets as referred to in Article 37 of Regulation (EU) 2023/1114, the custody policies and the related contractual arrangements.\n\n7.   Issuers of asset-referenced tokens or e-money tokens shall have in place specific measures and shall establish internal limits to avoid concentration of the reserve of assets by a custodian.\n\n8.   Issuers of asset-referenced tokens that reference at least one asset that is not an official currency shall establish processes and procedures to address risks arising from cases in which the reserve of assets are not composed by the assets referenced, including arrangements for managing risks arising from the use of derivative instruments or instruments tracking the referenced assets."
+    },
+    {
+      "number": "3",
+      "title": "Contingency policy and liquidity risk mitigation tools",
+      "text": "1.   As part of the liquidity management policies and procedures, issuers of asset-referenced tokens or e-money tokens shall develop and appropriately calibrate early warning signals. Those signals shall include the following warnings:\n\n(a)\n\nfor maximum deviations between the market value of the reserve of assets and the market value of the assets referenced by the tokens;\n\n(b)\n\nfor maximum deviations between the market value of the tokens and the market value of the assets referenced by the tokens.\n\n2.   Issuers of asset-referenced tokens or e-money tokens shall have in place and regularly review different liquidity risk mitigation tools, including adequate access to diversified funding sources, to react to any early warning signal, under normal and stress scenarios.\n\n3.   Issuers of asset-referenced tokens or e-money tokens shall adjust their strategies, early warning signals, internal policies and limits on liquidity risk, and develop effective liquidity contingency plans to take into account the outcome of regular stress testing.\n\n4.   When applying paragraphs 1, 2 and 3, issuers of asset-referenced tokens or e-money tokens shall maintain the following policy documentation:\n\n(a)\n\na description of the lines of responsibilities for designing, approving, monitoring, executing and maintaining up to date the liquidity contingency plan;\n\n(b)\n\na description of the strategies for addressing liquidity shortfalls in emergency situations;\n\n(c)\n\na description of tools, comprising the internal limits set out in the procedures for identifying, measuring and managing liquidity risk referred to in Article 2, to monitor market conditions that allow issuers of asset-referenced tokens or e-money tokens to determine, in a timely manner, whether either escalation or execution of measures, or both, is warranted."
+    },
+    {
+      "number": "4",
+      "title": "Segregation of the liquidity management policy and procedures",
+      "text": "1.   Issuers of asset-referenced tokens or e-money tokens shall apply the requirements set out in Articles 2 and 3 separately for each asset-referenced token or e-money token. The procedures for identifying, measuring, managing and reporting liquidity risk, the contingency policies and liquidity risk mitigation tools, the risk limits, the liquidity management tools and strategies referred to in those Articles shall be established, in content and form, taking into account the different assets referenced by the different asset-referenced token or e-money token and their correlation with the relevant segregated reserve of assets.\n\n2.   The liquidity management policy and procedures specified in this Regulation shall be separate, in content and form, from the liquidity policy and procedures related to activities of the issuer other than those related to issuing of asset-referenced tokens or e-money tokens."
+    },
+    {
+      "number": "5",
+      "title": "Process and procedures to test scenarios of liquidity stress",
+      "text": "1.   Issuers of asset-referenced tokens or e-money tokens shall include in their liquidity management policy the process and procedures to test scenarios of liquidity stress and the following information concerning each stress test:\n\n(a)\n\nrisks covered in the liquidity stress testing;\n\n(b)\n\nparameters considered, their calibration under stress, and the stress scenarios and time horizons used in the liquidity stress testing;\n\n(c)\n\nhistorical data and assumptions, including any expert judgments, considered by the issuer in the calibration of the parameters referred to in point (b);\n\n(d)\n\nthe outcome of the liquidity stress testing and any remedies taken.\n\n2.   The liquidity stress testing shall include a reverse stress test element to assess the limit of resilience of the liquidity profile of each reserve of assets."
+    },
+    {
+      "number": "6",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States.\n\nDone at Brussels, 27 June 2025.\n\nFor the Commission\n\nThe President\n\nUrsula VON DER LEYEN\n\n(1)\n\nOJ L 150, 9.6.2023, p. 40, ELI: http://data.europa.eu/eli/reg/2023/1114/oj.\n\n(2)  Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a European Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing Commission Decision 2009/78/EC (OJ L 331, 15.12.2010, p. 12, ELI: http://data.europa.eu/eli/reg/2010/1093/oj).\n\nELI: http://data.europa.eu/eli/reg_del/2025/1264/oj\n\nISSN 1977-0677 (electronic edition)\n\n////////////////////////$(document).ready(function(){generateTOC(true,'', 'Top','false');scrollToCurrentUrlAnchor();});"
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Pursuant to Article 35(4) and Article 58 of Regulation (EU) 2023/1114, the requirements laid down in Article 45(3) of that Regulation apply not only to issuers of significant asset referenced tokens, but also to electronic money institutions issuing significant e-money tokens and, where required by their competent authorities, to issuers of asset referenced tokens that are not significant and to electronic money institutions issuing e-money tokens that are not significant."
+    },
+    {
+      "recital_number": 2,
+      "text": "In accordance with Regulation (EU) 2023/1114, the Commission is to specify the minimum contents of the liquidity management policy and procedures for managing the liquidity risk of issuers of asset-referenced tokens or e-money tokens ensuring that the value of the reserve of assets can meet requests for redemption by holders of such tokens under normal and stress scenarios ensuring the normal continuity of the business. In order to meet requests for redemption, issuers of asset-referenced tokens or e-money tokens should pay particular attention to the volatility of the assets referenced relative to the reserve of assets and should perform a subsequent analysis of the necessary overcollateralisation. To mitigate any counterparty risk, issuers of asset-referenced tokens or e-money tokens should avoid risks of concentration of the custodians of the reserve of assets."
+    },
+    {
+      "recital_number": 3,
+      "text": "Issuers of asset-referenced tokens or e-money tokens should establish a liquidity contingency plan with early warning signals and liquidity risk mitigation tools. In particular, issuers of asset-referenced tokens or e-money tokens should monitor as an early warning signal the volatility of assets referenced relative to the reserve of assets and the evolution of any gap between the market value of the tokens and the market value of the assets referenced, in order to anticipate potential material redemption requests, particularly in view of any potential underestimation of the market value of tokens in the market. Given that an overestimation of the market value of a token might create an incentive to sell it, issuers of asset-referenced tokens or e-money tokens should pay attention to transaction volumes and prices in order to be ready to react to any adverse evolution in the market of the tokens."
+    },
+    {
+      "recital_number": 4,
+      "text": "As a reserve of assets for one asset-referenced token or e-money token is segregated from a reserve of assets of other such tokens, the liquidity management policy and procedures related to each of them should also be set out seperately."
+    },
+    {
+      "recital_number": 5,
+      "text": "In order to ensure the reserve assets have a resilient liquidity profile that enables issuers of asset-referenced tokens or e-money tokens to continue operating normally also under scenarios of liquidity stress, a detailed description of the risks covered, the parameters identified and their calibration for the purposes of testing scenarios of liquidity stress, should be included in the liquidity management policy. The review of that information, which should be updated for each liquidity stress testing exercise, is expected to allow supervisors to decide on appropriate measures to strengthen the issuers’ liquidity requirements if necessary."
+    },
+    {
+      "recital_number": 6,
+      "text": "This Regulation is based on the draft regulatory technical standards, developed in close cooperation with the European Securities and Markets Authority, submitted to the Commission by the European Banking Authority."
+    },
+    {
+      "recital_number": 7,
+      "text": "The European Banking Authority has conducted open public consultations on the draft regulatory technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Banking Stakeholder Group established in accordance with Article 37(1) of Regulation (EU) No 1093/2010 of the European Parliament and of the Council (2),\n\nHAS ADOPTED THIS REGULATION:"
+    },
+    {
+      "recital_number": 7,
+      "text": "The European Banking Authority has conducted open public consultations on the draft regulatory technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Banking Stakeholder Group established in accordance with Article 37(1) of Regulation (EU) No 1093/2010 of the European Parliament and of the Council (2),\n\nHAS ADOPTED THIS REGULATION:"
+    }
+  ]
+}
