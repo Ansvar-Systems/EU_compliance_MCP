@@ -1,0 +1,69 @@
+{
+  "id": "MICA_ITS_CASP_AUTH_FORMS",
+  "full_name": "Commission Implementing Regulation (EU) 2025/306 — ITS on forms for CASP authorisation applications",
+  "celex_id": "32025R0306",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0306",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Designation of a contact point",
+      "text": "Competent authorities shall designate a contact point for receiving the applications for authorisation as a crypto-asset service provider in accordance with Article 62 of Regulation (EU) 2023/1114.\n\nCompetent authorities shall keep the contact details of the designated contact point up-to-date and shall make those contact details public on their websites."
+    },
+    {
+      "number": "2",
+      "title": "Submission of the application for authorisation",
+      "text": "1.   A legal person or other undertaking seeking authorisation as a crypto-asset service provider in accordance with Article 62 of Regulation (EU) 2023/1114 (‘applicant’) shall submit to the competent authority its application for authorisation by filling in the form set out in the Annex of this Regulation.\n\n2.   The legal person or other undertaking shall submit the application in a manner which enables storage of information so that it is accessible for future reference and that allows the reproduction of the information stored."
+    },
+    {
+      "number": "3",
+      "title": "Receipt of the application for authorisation and acknowledgement of receipt",
+      "text": "Competent authorities shall send electronically, on paper, or in both forms, an acknowledgement of receipt to the applicant. That acknowledgement of receipt shall include the contact details of the department, function or staff member of the competent authority handling the application."
+    },
+    {
+      "number": "4",
+      "title": "Notification of changes",
+      "text": "1.   The applicant shall notify the competent authority of any changes to the information provided in the application for authorisation without undue delay. The applicant shall provide the updated information by using the form set out in the Annex.\n\n2.   Where the applicant provides updated information in accordance with paragraph 1, the time limit laid down in Article 63(9) of Regulation (EU) 2023/1114 shall start from the date of receipt of that updated information by the competent authority.\n\n3.   Crypto-asset service providers shall notify the competent authority of any changes to the information based on which the authorisation was granted."
+    },
+    {
+      "number": "5",
+      "title": "Communication of the decision",
+      "text": "Competent authorities shall notify the applicant of their decision granting or refusing the authorisation, as referred to in Article 63(9) of Regulation (EU) 2023/1114, in paper form, by electronic means or both."
+    },
+    {
+      "number": "6",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States."
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "To facilitate communication between legal persons or other undertakings seeking authorisation as a crypto-asset service providers in accordance with Article 62 of Regulation (EU) 2023/1114 (‘applicants’) and competent authorities, competent authorities should designate a contact point specifically for receiving the applications for authorisation as a crypto-asset service provider and should publish the information on the contact point on their website."
+    },
+    {
+      "recital_number": 2,
+      "text": "The information submitted by the applicant should be true, accurate, complete and up-to-date from the moment of submission of the application until the moment of granting the authorisation. Given that some information may only refer to the future, any future date included in the information should be specifically identified in the application."
+    },
+    {
+      "recital_number": 3,
+      "text": "To ensure a prompt and timely handling of applications for the authorisation of crypto-asset service providers, competent authorities should confirm the receipt of the application by sending electronically, on paper, or in both forms, an acknowledgement of receipt to the applicant. That acknowledgement of receipt should include the contact details of the persons or function in charge of handling the application for authorisation."
+    },
+    {
+      "recital_number": 4,
+      "text": "To allow competent authorities to base their assessment of the application for authorisation on accurate information, applicants should communicate to competent authorities any changes to the information provided in the application for authorisation, without undue delay. In that case, the time limits for the assessment of the application laid down in Article 63(9) of Regulation (EU) 2023/1114 should start from the date on which the updated information is received by the competent authority."
+    },
+    {
+      "recital_number": 5,
+      "text": "Competent authorities should be able to request additional information from the applicant during the assessment in accordance with the criteria and timelines laid down in Article 63(12) of Regulation (EU) 2023/1114."
+    },
+    {
+      "recital_number": 6,
+      "text": "This Regulation is based on the draft implementing technical standards submitted to the Commission by the European Securities and Markets Authority, in close cooperation with the European Banking Authority."
+    },
+    {
+      "recital_number": 7,
+      "text": "The European Securities and Markets Authority has conducted open public consultations on the draft implementing technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Securities and Markets Stakeholder Group established in accordance with Article 37 of Regulation (EU) No 1095/2010 of the European Parliament and of the Council (2),"
+    }
+  ]
+}

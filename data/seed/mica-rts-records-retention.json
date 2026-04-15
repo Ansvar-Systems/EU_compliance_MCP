@@ -1,0 +1,200 @@
+{
+  "id": "MICA_RTS_RECORDS_RETENTION",
+  "full_name": "Commission Delegated Regulation (EU) 2025/1140 — RTS on records retention for crypto-asset services, activities, orders and transactions",
+  "celex_id": "32025R1140",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1140",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Definitions",
+      "text": "For the purposes of this Regulation, the following definitions shall apply:\n\n(1)\n\n‘transaction’ means the conclusion of an acquisition or disposal of crypto-assets other than the crypto-assets referred to in Article 2(3) and (4) of Regulation (EU) 2023/1114;\n\n(2)\n\n‘undertaking a transaction’ means executing a transaction or transmitting an order for crypto-assets on behalf of a client;\n\n(3)\n\n‘executing a transaction’ means providing any of the following services or performing any of the following activities that result in a transaction:\n\n(a)\n\nreception and transmission of orders for crypto-assets on behalf of clients;\n\n(b)\n\nexecution of orders on behalf of clients;\n\n(c)\n\nexchange of crypto-assets for funds or for other crypto-assets;\n\n(d)\n\nmaking an investment decision in accordance with a discretionary mandate given by a client;\n\n(e)\n\ntransfer of crypto-assets to or from accounts."
+    },
+    {
+      "number": "2",
+      "title": "Retention of records",
+      "text": "1.   The records shall be retained in a medium that allows the storage of information in a way accessible for future reference by the competent authority, in such a form and manner that all of the following conditions are met:\n\n(a)\n\ncompetent authorities are able to access those records readily and to reconstitute each key stage of the processing of each crypto-asset service, activity, order or transaction;\n\n(b)\n\nit is possible to easily ascertain any corrections or other amendments to the records, and the contents of the records prior to such corrections or amendments;\n\n(c)\n\nit is not possible to manipulate or alter the records;\n\n(d)\n\nit allows for the exploitation of the data by means of an ICT or any other efficient system, where it is not possible to easily analyse the data due to its volume and nature;\n\n(e)\n\nthe crypto-asset service provider's record-keeping arrangements comply with the record keeping requirements under this Regulation irrespective of the technology used.\n\n2.   Crypto-assets service providers shall keep the records listed in Section 1 of the Annex, depending upon the nature of their services and activities.\n\n3.   The obligation to keep the records listed in Section 1 of the Annex shall not affect any obligation to keep records set out in any other Union act.\n\nSECTION 2\n\nRecord keeping relating to specific crypto-asset services and to activities of crypto-asset service providers"
+    },
+    {
+      "number": "3",
+      "title": "Record-keeping of the crypto-asset service provider’s policies and procedures",
+      "text": "1.   Crypto-asset service providers shall keep records of any policies and procedures they are required to maintain in writing under Regulation (EU) 2023/1114 and its implementing measures.\n\n2.   Crypto-asset service providers shall also keep the records of the assessment and periodical review, carried out by their management body, of the effectiveness of the policy arrangements, and procedures referred to in Articles 68(6) of Regulation (EU) 2023/1114, including of any deficiencies identified in relation to such policy arrangements and procedures and of any measures taken to address such deficiencies."
+    },
+    {
+      "number": "4",
+      "text": "Record-keeping of documents setting out the crypto-asset service provider’s and the client’s rights and obligations\n\n1.   Crypto-asset service providers shall keep the documents setting out their rights and obligations in relation to their provision of service, as well as those setting out the rights and obligations of their clients for a period of five years from the termination of the agreement to provide services.\n\n2.   At the request of a competent authority, made before the expiry of the five-year period referred to in paragraph 1, crypto-asset service providers shall keep the documents referred to in paragraph 1 for a period of up to seven years from the date of termination of the agreement to provide crypto-asset services."
+    },
+    {
+      "number": "5",
+      "title": "Record-keeping in relation to the safekeeping of clients’ crypto-assets and funds",
+      "text": "1.   Crypto-asset service providers shall keep records enabling them to distinguish, at any time and without delay, crypto-assets and funds held for one client from crypto-assets and funds held for any other client and from their own assets.\n\n2.   Crypto-asset service providers shall maintain their records in a way that ensures that they may be used for auditing purposes as records.\n\n3.   Such records shall include the following:\n\n(a)\n\nrecords that readily identify the balances of crypto-assets and funds held for each client;\n\n(b)\n\nwhere clients’ funds are held by crypto-asset service providers in accordance with Article 70(2) and (3) of Regulation (EU) 2023/1114, details of the accounts in which those funds are held and the relevant agreements between the crypto-assets service provider with the credit institutions or central banks with which the clients’ funds are placed;\n\n(c)\n\ndetails of the accounts opened with third parties holding crypto-assets for the crypto-assets service provider and of the outsourcing agreements with those third parties;\n\n(d)\n\ndetails of third parties carrying out any tasks outsourced in accordance with Article 73 of Regulation (EU) 2023/1114 and details of the outsourced tasks;\n\n(e)\n\nnames and functions of persons responsible for the safekeeping of clients’ crypto-assets and funds within the crypto-asset service provider;\n\n(f)\n\nagreements that establish client ownership over crypto-assets and funds.\n\nSECTION 3\n\nRecord-keeping of orders and transactions"
+    },
+    {
+      "number": "6",
+      "title": "Record-keeping of orders",
+      "text": "1.   For every initial order received from a client and for every initial decision to deal taken, crypto-asset service providers shall record and keep the details set out in the second and third columns of Table 2 of Section 2 of the Annex and the details set out in Table 4 of Section 4 of that Annex, to the extent that such details concern the initial orders and those decisions to deal.\n\n2.   Where a competent authority requests any of the details referred to in paragraph 1 in accordance with Article 94(1), points (a) or (d), or Article 94(3), point (a), of Regulation (EU) 2023/1114, the crypto-assets service providers shall provide such details as set out in the fourth column of Table 2 of Section 2 of the Annex to this Regulation.\n\n3.   Where the details set out in Table 2 of Section 2 of the Annex to this Regulation are also required pursuant to Article 76 of Regulation (EU) 2023/1114 or to Articles 25 and 26 of Regulation (EU) No 600/2014, they shall be maintained according to the standards set out in those Regulations."
+    },
+    {
+      "number": "7",
+      "title": "Record keeping of transactions",
+      "text": "1.   Crypto-asset service providers shall, immediately after having undertaken a transaction, record the details set out in the second and third columns of Table 3 of Section 3 and Table 4 of Section 4 of the Annex.\n\n2.   Where competent authorities request any of the details referred to in paragraph 1 in accordance with Article 94(1), points (a) or (d), or Article 94(3), point (a), of Regulation (EU) 2023/1114, the operators of trading platforms for crypto-assets shall provide such details as set out in the fourth column of Table 3 of Section 3 of the Annex."
+    },
+    {
+      "number": "8",
+      "text": "Identification of person or computer algorithm within the crypto-asset service provider making the investment decision\n\n1.   Where a person or computer algorithm within a crypto-asset service provider makes the investment decision to acquire or dispose of a specific crypto-asset on behalf of the crypto-asset service provider or on behalf of a client in accordance with a discretionary mandate given by the client, that person or computer algorithm shall be identified and recorded as specified in Field 41 of Table 3 of Section 3 of the Annex.\n\n2.   Where a person and computer algorithm are both involved in taking the investment decision, or more than one person or algorithm are involved in taking that decision, the crypto-asset service provider shall record the person or computer algorithm with primary responsibility for that decision."
+    },
+    {
+      "number": "9",
+      "title": "Designation to identify natural persons",
+      "text": "1.   A client who is a natural person shall be identified in the crypto-asset service provider’s records using the designation resulting from the concatenation of the ISO 3166-1 alpha-2 (2-letter country code) of the client’s nationality, followed by the national client identifier specified in Annex II to Delegated Regulation (EU) 2017/590, based on the client’s nationality.\n\n2.   The national client identifier referred to in paragraph 1 shall be assigned in accordance with the priority levels provided for in Annex II of Delegated Regulation (EU) 2017/590 using the highest priority identifier that a person has, regardless of whether that identifier is already known to the crypto-asset service provider.\n\n3.   For the purposes of identifying a natural person, if the person is a national of more than one European Economic Area (EEA) country, the country code of the first nationality when sorted alphabetically by its ISO 3166-1 alpha-2 code and the identifier of that nationality assigned in accordance with paragraph 2 shall be used.\n\n4.   Where a natural person has a non-EEA nationality, the highest priority identifier in accordance with the field referring to ‘all other countries’ provided in Annex II of Delegated Regulation (EU) 2017/590 shall be used. Where a natural person has EEA and non-EEA nationality, the country code of the EEA nationality and the highest priority identifier of that nationality assigned in accordance with paragraph 2 shall be used.\n\n5.   Where a client is a resident of a country other than the one of its nationality, crypto-asset service providers shall also identify that person based on the country of residence of the person as prescribed in Field 41 of Table 2 in the Annex.\n\n6.   Where the identifier assigned in accordance with paragraph 2 is based on CONCAT, the client shall be identified by the crypto-asset service provider using the concatenation of the following elements in the following order:\n\n(a)\n\nthe date of birth of the person in the format YYYYMMDD;\n\n(b)\n\nthe five first characters of the first name of the person;\n\n(c)\n\nthe five first characters of the surname of the person.\n\n7.   For the purposes of paragraph 6, prefixes to names shall be excluded and first names and surnames shorter than five characters shall be appended by ‘#’ so as to ensure that references to names and surnames in accordance with paragraph 6 contain five characters. All characters shall be in upper case. No apostrophes, accents, hyphens, punctuation marks or spaces shall be used."
+    },
+    {
+      "number": "10",
+      "text": "Identification of a person or computer algorithm determining conditions for the execution of a transaction\n\n1.   Where a person or computer algorithm within the crypto-asset service provider which executes a transaction determines which trading platform for crypto-assets located outside the Union to access, which other crypto-asset service provider to transmit orders to or any conditions related to the execution of a transaction, that employee or computer algorithm shall be identified in Field 41 of Table 3 in Section 3 of the Annex.\n\n2.   Where a person within the crypto-asset service provider takes decisions determining the execution of the transaction, the crypto-asset service provider shall assign a designation for identifying that person in its transaction records in accordance with Article 9.\n\n3.   Where a computer algorithm operating under the control of the crypto-asset service provider takes decisions determining the execution of the transaction, that computer algorithm shall be identified in Field 43 of the Table in Section 3 of the Annex.\n\n4.   Where a person and computer algorithm are both involved in execution of the transaction, or more than one person or algorithm are involved, the crypto-asset service provider shall record the person or computer algorithm primarily responsible for the execution of the transaction in Field 43 of Table 3 in Section 3 of the Annex."
+    },
+    {
+      "number": "11",
+      "title": "Recording of reception and transmission of orders",
+      "text": "1.   Crypto-asset service providers that receive and transmit to another crypto-asset service provider an order for crypto-assets on behalf of clients as referred to in Article 1(3)(a) shall record the details of such orders as specified in Fields 1, 2, 10, 12, 14, 15, 16, 17, 19, 20, 21, 25, 37 of Table 2 of Section 2 of the Annex, if and to the extent that those fields are relevant for that order.\n\n2.   Where the order transmitted was received from a crypto-asset service provider who had previously transmitted that order, the fields provided pursuant to paragraph 1 shall be those identifying the transmitting crypto-asset service provider.\n\n3.   Where an order is transmitted more than one time, the order details referred to in paragraph 1 shall be those of the client of the crypto-asset service provider who first transmitted the order and shall be recorded by the crypto-asset service provider who transmitted the order for the first time.\n\n4.   Where orders are aggregated for more than one client, the order details referred to in paragraph 1 shall be recorded for each client."
+    },
+    {
+      "number": "12",
+      "text": "Recording of orders and transactions executed via trading platforms or service providers to which Regulation (EU) 2023/1114 does not apply\n\n1.   Where a crypto-asset service provider executes an order or a transaction on behalf of a client through a trading platform for crypto-assets or a service provider to which Regulation (EU) 2023/1114 does not apply, the crypto-asset service provider shall record the details of the order or transaction as if it had executed the order or transaction itself.\n\n2.   The crypto-asset service provider shall record the information referred to in paragraph 1 in the fields specified in Table 2 of Section 2 and in Table 3 of Section 3 of the Annex, where those fields are applicable to the order or transaction in question."
+    },
+    {
+      "number": "13",
+      "text": "Recording of reception and transmission of orders to entities to which Regulation (EU) 2023/1114 does not apply\n\n1.   Where a crypto-asset service provider transmits an order to an entity to which Regulation (EU) 2023/1114 does not apply, the crypto-asset service provider shall record the details of the transmitted order in the fields specified in Table 2 of Section 2 of the Annex, to the extent those fields are applicable to the order or transaction in question.\n\n2.   Where the order is aggregated for several clients, the information referred to in Article 9 and 14, as applicable, shall be recorded for each client."
+    },
+    {
+      "number": "14",
+      "title": "Identification of clients that are legal entities",
+      "text": "1.   When providing to the competent authorities the information referred to in Articles 6 and 7, a crypto-asset service provider shall identify any clients that are legal entities by using a legal entity identifier code corresponding to those clients.\n\n2.   Crypto-asset service providers shall record the legal entity identifier codes that comply with the ISO 17442 standard and are included in the Global LEI database maintained by the Central Operating Unit appointed by the Legal Entity Identifier Regulatory Oversight Committee.\n\n3.   Where the client does not have a legal entity identifier compliant with the ISO 17442 standard, the crypto asset service provider shall obtain one for the client, or use an identifier defined at Union level which meets all of the following characteristics:\n\n(a)\n\nis unique;\n\n(b)\n\nis neutral;\n\n(c)\n\nis reliable;\n\n(d)\n\nis open source;\n\n(e)\n\nis scalable;\n\n(f)\n\nis accessible;\n\n(g)\n\nis available for free or at a reasonable cost;\n\n(h)\n\nis subject to an appropriate governance framework."
+    },
+    {
+      "number": "15",
+      "title": "Identification of crypto-assets",
+      "text": "When providing information to competent authorities under Articles 6 and 7, a crypto-asset service provider shall identify the crypto-assets that are the subject of the recorded order or transaction, or used as a means of payment, by using a digital token identifier that is compliant with the ISO 24165 standard or an equivalent unique identifier approved by ESMA at Union level, which meets all of the following characteristics:\n\n(a)\n\nis unique;\n\n(b)\n\nis neutral;\n\n(c)\n\nis reliable;\n\n(d)\n\nis open source;\n\n(e)\n\nis scalable;\n\n(f)\n\nis accessible;\n\n(g)\n\nis available at a reasonable cost basis; and\n\n(h)\n\nis subject to an appropriate governance framework."
+    },
+    {
+      "number": "16",
+      "title": "Recording of transactions undertaken by branches",
+      "text": "1.   Where a crypto-asset service provider undertakes a transaction wholly or partly through its branch, it shall include in its transaction records, the ISO 3166 country code of such branch, in accordance with Fields 7, 16, 34, 42 or 44 of Table 3 in Section 3 of the Annex.\n\n2.   The crypto-asset service provider shall include in the transaction records the following information:\n\n(a)\n\nwhether the branch received the order from a client or whether the branch made an investment decision for a client in accordance with a discretionary mandate given to it by the client;\n\n(b)\n\nwhether the branch has supervisory responsibility for the person taking the investment decision concerned;\n\n(c)\n\nwhether the branch has supervisory responsibility for the person determining the conditions for execution of the transaction;\n\n(d)\n\nwhether the transaction was fully or partially undertaken on a trading platform for crypto-assets located outside the Union using the branch’s membership of that trading platform for crypto-assets."
+    },
+    {
+      "number": "17",
+      "title": "Identification of the crypto-asset service provider undertaking orders and transactions",
+      "text": "1.   Crypto-asset service providers that undertake orders or transactions which trigger the obligation to keep records shall ensure that they are identified in the records to be maintained pursuant to this Regulation with a correct legal entity identifier which complies with the ISO 17442 standard and is included in the Global LEI database maintained by the Central Operating Unit appointed by the Legal Entity Identifier Regulatory Oversight Committee.\n\n2.   Crypto-asset service providers shall ensure that the reference data related to their legal entity identifier is renewed in accordance with the terms of any of the accredited Local Operating Units of the Global Legal Entity Identifier System."
+    },
+    {
+      "number": "18",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "transaction",
+      "definition": "the conclusion of an acquisition or disposal of crypto-assets other than the crypto-assets referred to in Article 2(3) and (4) of Regulation (EU) 2023/1114;",
+      "article": "1"
+    },
+    {
+      "term": "undertaking a transaction",
+      "definition": "executing a transaction or transmitting an order for crypto-assets on behalf of a client;",
+      "article": "1"
+    },
+    {
+      "term": "executing a transaction",
+      "definition": "providing any of the following services or performing any of the following activities that result in a transaction: (a) reception and transmission of orders for crypto-assets on behalf of clients; (b) execution of orders on behalf of clients; (c) exchange of crypto-assets for funds or for other crypto-assets; (d) making an investment decision in accordance with a discretionary mandate given by a client; (e) transfer of crypto-assets to or from accounts.",
+      "article": "1"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "The records crypto-asset service providers are required to keep should be adapted to their type of business and the range of crypto-asset services, activities, orders, and transactions they undertake."
+    },
+    {
+      "recital_number": 2,
+      "text": "Crypto-asset service providers should be free to determine the manner in which they keep records of relevant data relating to all orders and transactions in crypto-assets. However, consistent and comparable records on services, activities, orders and transactions are essential for competent authorities to fulfil their supervisory tasks and to take enforcement measures. In particular, competent authorities should be able to perform the same analysis on all record datasets, regardless of which crypto-asset service provider produced the record. Crypto-asset service providers should therefore provide consistent details of the records on services, activities, orders and transactions by using uniform standards where a competent authority requests such information pursuant to Article 94 of Regulation (EU) 2023/1114. For the same reasons, it is necessary to specify that the records should be maintained in a medium allowing effective supervision by competent authorities."
+    },
+    {
+      "recital_number": 3,
+      "text": "In order to leverage from the knowledge and application of Regulation (EU) No 600/2014 of the European Parliament and of the Council (2), to ensure consistent reporting standards across financial sector and to minimise the reporting burden for crypto-asset service providers, data should be recorded in accordance with the standards referred to in that Regulation. In order to ensure consistency between this Delegated Regulation and Commission Delegated Regulation (EU) 2025/416 (3), the same standards should apply when the records are also required in accordance with that Delegated Regulation."
+    },
+    {
+      "recital_number": 4,
+      "text": "To ensure that competent authorities can properly supervise services provided by crypto-asset service providers, it is necessary that crypto-asset service providers keep a record of the policy arrangements and procedures put in place to comply with Regulation (EU) 2023/1114."
+    },
+    {
+      "recital_number": 5,
+      "text": "Market abuse, including market manipulation, may be carried out through various means, including through algorithmic trading. Therefore, in order to ensure effective market surveillance, where investment decisions are made by a person other than the client or by a computer algorithm, that person or algorithm should be identified in the order and transaction records using unique, robust and consistent identifiers. For the same reasons, it is important to lay down that where more than one person in a crypto-asset service provider makes the investment decision, the person with primary responsibility for the decision is to be identified in the record."
+    },
+    {
+      "recital_number": 6,
+      "text": "To ensure unique, consistent and robust identification of natural persons in order and transaction records, those natural persons should be identified by a concatenation of the country of their nationality followed by identifiers assigned by the country of nationality of those persons. Where those identifiers are not available, natural persons should be identified by identifiers created from a concatenation of their date of birth and name."
+    },
+    {
+      "recital_number": 7,
+      "text": "It is necessary that certain personal data are recorded by crypto-asset service providers to identify their clients or other natural persons relevant for orders or transactions in crypto-assets, as these data are fundamental to ensure efficient supervision by competent authorities, including in the area of market abuse. For all instances of identifying natural persons, this is to be done by following the level of prioritization of the different identifiers detailed in Annex II of Commission Delegated Regulation (EU) 2017/590 (4)."
+    },
+    {
+      "recital_number": 8,
+      "text": "It is possible that natural persons who need to be identified for recordkeeping purposes are residents of a country other than the one of their nationality. The country of residence of natural persons can affect several obligations under Regulation (EU) 2023/1114, and is therefore an important data element for ensuring effective supervision by competent authorities. Whenever their country of residence is different from that person’s nationality, this should be indicated by providing the country code of the country of residence of that natural person."
+    },
+    {
+      "recital_number": 9,
+      "text": "To facilitate market surveillance and to allow for the comparability of the records to be kept by crypto-asset service providers, clients of crypto-asset service providers that are legal entities should be identified with a code that is compatible with the internationally established criteria for the development of robust identification systems for the monitoring of financial markets. Such code should be unique, neutral, reliable, open source, scalable, accessible, available for free or at a reasonable cost, and subject to an appropriate governance framework. These criteria were also used by the competent authorities for assessing the most appropriate identifiers in previous technical standards on supervisory data (5) (6), to ensure consistency and comparability of data on financial transactions, and therefore should also be applicable in the context of this Regulation."
+    },
+    {
+      "recital_number": 10,
+      "text": "LEI is a widely recognised, financially and operationally accessible international identifier used in financial markets. LEI is an international identifier that ensures access to the underlying data at all times, allowing for comparability and aggregation of information at Union level, improving the quality and timeliness of aggregated data and reducing the reporting burden for crypto-asset service providers. Therefore, crypto-asset services providers should, where available, record the LEI of clients that are legal persons on whose behalf they carry out orders and execute transactions. However, there are other legal entity identifiers that may be appropriate for use in the context of this Regulation. Directive (EU) 2017/1132 of the European Parliament and of the Council (7) requires companies subject to that Directive to have a European Unique identifier (‘EUID’), which unequivocally identifies companies and as such is an appropriate tool for the identification of entities in the EU. Within a period of 18 months after the entry into force of this Regulation, the Commission and ESMA will work closely to facilitate the use of EUID as a tool to identify clients that are legal entities for the purpose of this Regulation. Following the completion of this work, the Commission should assess the readiness to use EUID for the purposes of Article 14. Additionally, to ensure openness to other identifiers which may be fit for supervisory purposes and support the integrity of the market, this Regulation sets out criteria that should be met by those alternative identifiers. To enable the market to use such eligible alternative identifiers, ESMA should approve their use where they meet the criteria set out in this Regulation."
+    },
+    {
+      "recital_number": 11,
+      "text": "A unique method for the identification and classification of parties compliant with the above-mentioned criteria and instruments that follow these principles directly supports efforts to achieve data-driven market monitoring by competent authorities."
+    },
+    {
+      "recital_number": 12,
+      "text": "Manual or algorithmic abusive behaviours can also occur when a crypto-asset service provider determines the trading platform for crypto-asset to access or the crypto-asset service provider to which the orders are to be transmitted or any other conditions related to the execution of the order. Therefore, to ensure effective market surveillance, a person or computer algorithm within the crypto-asset service provider performing such activities should be identified in the order and transaction records. For the same reasons, where both a person and computer algorithm are involved, or more than one person or algorithm is involved, the crypto-asset service provider should determine, on a consistent basis following predetermined criteria, which person or algorithm is primarily responsible for those activities."
+    },
+    {
+      "recital_number": 13,
+      "text": "To ensure that competent authorities have access to information that is relevant, accurate and complete, the details relating to the order to be transmitted between crypto asset service providers should be specified."
+    },
+    {
+      "recital_number": 14,
+      "text": "Given the cross-border nature of crypto assets trading, in order to avoid data gaps where a crypto-asset service provider transmits orders or executes transactions via an entity to which Regulation (EU) 2023/1114 does not apply, the crypto-asset service provider should record the transmission of those orders or the execution of those transactions as if it had transmitted those orders or executed those transactions itself. Such information may be of particular importance for the performance of adequate market monitoring and market abuse supervision by the competent authority."
+    },
+    {
+      "recital_number": 15,
+      "text": "To properly monitor the integrity and stability of the markets in crypto-assets, competent authorities need reliable, consistent and standardised information on the crypto-assets that are traded. Such information should enable them to identify the individual crypto-asset being traded according to internationally established principles. In addition, competent authorities should be able to retrieve the main characteristics of the crypto-assets traded, including their technology-specific features. Crypto-asset service providers should therefore use an internationally agreed digital token identifier to identify crypto-assets in the order and transactions records that they provide to competent authorities. The Digital Token Identifier (DTI) managed by the Digital Token Identifier Foundation is an internationally agreed identifier that guarantees reliable, consistent, standardised and available information and allows for comparability and aggregation of information at the level of the European Union, improving the quality and timeliness of aggregated data and reducing the reporting burden for crypto-asset service providers. Therefore, crypto-asset service providers should be able to use the DTI to identify crypto-assets. However, to ensure openness to other token identifiers which may be fit for supervisory purposes and support the integrity of the market, it is necessary to lay down criteria that should be met by those alternative identifiers. To enable the market to use eligible alternative identifiers, ESMA should approve their use where they meet the criteria set out in this Regulation."
+    },
+    {
+      "recital_number": 16,
+      "text": "To be able to properly monitor the integrity and stability of the markets in crypto-assets, competent authorities need reliable, consistent and standardised information on the crypto-assets that are traded. Such information should enable them to classify the individual crypto-asset being traded according to internationally established principles. Such classification should also enable authorities to connect data on white papers with data on transactions and orders in the same crypto asset. The ISO code for the Classification of Financial Instruments (CFI) is an international standard used for classifying financial instruments. However, crypto-assets that are not financial instruments cannot currently be described using the CFI code. The ISO CFI is being revised to accommodate the classification of crypto-assets, but this revision will not be finalized before the application of this Regulation. Therefore, until such revision is completed, an interim classification indicating the type of crypto-assets (crypto-assets other than asset-referenced tokens and e-money tokens, asset-referenced tokens, and e-money tokens) should be used."
+    },
+    {
+      "recital_number": 17,
+      "text": "To ensure efficient and effective market monitoring by competent authorities, transaction records should reflect whether the transaction was executed wholly or partly through a branch of the crypto-asset service provider located in another Member State or in a third country. The inclusion of data detailing the activity of each branch in the records kept by the crypto-asset service providers, should not lead to a disproportionate administrative burden for the crypto-asset service provider, but would enable competent authorities to supervise the services provided by crypto-asset service providers more efficiently and to enhance the visibility on how those services are provided within the different Member States."
+    },
+    {
+      "recital_number": 18,
+      "text": "In line with the principle of data minimisation, crypto-asset service providers should only keep information that is necessary and sufficient to enable competent authorities to carry out a comprehensive assessment of the crypto-asset service provider’s compliance with the relevant requirements of Regulation (EU) 2023/1114 and with that Regulation’s provisions on market abuse. When processing personal data included in the records, crypto-asset service providers and competent authorities should comply with the relevant provisions of Regulation (EU) 2016/679 of the European Parliament and of the Council (8)."
+    },
+    {
+      "recital_number": 19,
+      "text": "In order to ensure certain and efficient identification of crypto-asset service providers responsible for executing orders or transactions, those providers should ensure that they are identified in the records maintained pursuant to their record-keeping obligations using validated, issued, and duly renewed legal entity identifiers (LEIs). Pursuant to Article 62 in Regulation (EU) 2023/1114, crypto-asset service providers are required to obtain a legal entity identifier in order to be authorised. Furthermore, to enable the competent authorities to fulfil their supervisory tasks and take enforcement measures in accordance with Article 68(10) of Regulation (EU) 2023/1114, such identifier should be verified, up-to-date and included in the records to be maintained in accordance with this Regulation."
+    },
+    {
+      "recital_number": 20,
+      "text": "The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 of the European Parliament and of the Council (9) and delivered an opinion on 28 August 2024."
+    },
+    {
+      "recital_number": 21,
+      "text": "This Regulation is based on the draft regulatory technical standards submitted to the Commission by the European Securities and Markets Authority (‘ESMA’)."
+    },
+    {
+      "recital_number": 22,
+      "text": "ESMA has conducted open public consultations on the draft regulatory technical standards upon which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Securities and Markets Stakeholder Group established in accordance with Article 37 of Regulation (EU) No 1095/2010 of the European Parliament and of the Council (10),"
+    }
+  ]
+}

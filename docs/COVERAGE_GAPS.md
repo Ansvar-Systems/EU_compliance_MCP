@@ -88,10 +88,9 @@ Auditors, lawyers, and compliance officers use recitals to interpret vague requi
 ### 2. Delegated Acts & Technical Standards ❌ (Medium Priority)
 
 **What's missing:**
-- **DORA**: RTS/ITS from EBA/EIOPA/ESMA on ICT risk management
+- **DORA**: partial — 8 RTS/ITS seeded (`data/seed/dora-rts-*`, `dora-its-*`); remaining Level 2 acts outstanding
 - **AI Act**: Codes of practice, harmonized standards
 - **NIS2**: Implementing acts on incident notification formats
-- **MiCA**: Technical standards on crypto-asset service providers
 - **eIDAS 2.0**: Implementing acts on trust service providers
 
 **Test queries that fail:**

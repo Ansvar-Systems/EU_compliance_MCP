@@ -1,0 +1,68 @@
+{
+  "id": "MICA_ITS_FINANCIAL_ENTITY_FORMS",
+  "full_name": "Commission Implementing Regulation (EU) 2025/304 — ITS on forms for crypto-asset service notifications by financial entities",
+  "celex_id": "32025R0304",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0304",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Designation of a contact point",
+      "text": "Competent authorities shall designate a contact point for receiving the notifications submitted by financial entities in accordance with Article 60 of Regulation (EU) 2023/1114. Competent authorities shall keep the contact details of the designated contact point up-to-date and shall make those contact details public on their websites."
+    },
+    {
+      "number": "2",
+      "title": "Submission of the notification",
+      "text": "1.   The notifying entity shall submit to the competent authority its notification by filling in the form set out in the Annex of this Regulation.\n\n2.   The notifiying entity shall submit the notification in a manner which enables storage of information in a way accessible for future reference and which allows the unchanged reproduction of the information stored."
+    },
+    {
+      "number": "3",
+      "title": "Receipt of the notification and acknowledgement of receipt",
+      "text": "Within five working days of receipt of the notification, the competent authority shall send electronically, on paper, or in both forms, an acknowledgement of receipt to the notifying entity. The acknowledgement of receipt shall include the contact details of the department, function or staff member of the competent authority handling the notification."
+    },
+    {
+      "number": "4",
+      "title": "Notification of changes",
+      "text": "The notifying entity shall notify the competent authority of any changes to the information provided in the notification without undue delay. The notifying entity shall provide the updated information by using the form set out in the Annex."
+    },
+    {
+      "number": "5",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States."
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "Regulation (EU) 2023/1114 requires that common standard forms, templates and procedures are set out to ensure a uniform mechanism by which national competent authorities effectively exercise their powers in respect of the notifications they receive from already regulated entities of their intention to become crypto-asset service providers."
+    },
+    {
+      "recital_number": 2,
+      "text": "To facilitate the communication between a notifying entity and the relevant competent authority, competent authorities should designate a contact point for the notification process and should publish the contact information on their website."
+    },
+    {
+      "recital_number": 3,
+      "text": "In order to facilitate access to the information submitted and facilitate its control and future accessibility and analysis, the notification should be submitted in a digital format (web form) that automatically controls and performs preliminary checks on the information submitted and then stores it when complete."
+    },
+    {
+      "recital_number": 4,
+      "text": "The information submitted by the notifying entity should be accurate, complete and up-to-date. Pursuant to Article 60(9) of Regulation (EU) 2023/1114, where the information referred to in Commission Delegated Regulation (EU) 2025/303 (2) has previously been submitted to the competent authority, the notifying entity is to expressly state that any information that was submitted previously is still up-to-date. Given that some information may only refer to the future, any future date included in the information should be specifically identified in the application."
+    },
+    {
+      "recital_number": 5,
+      "text": "To ensure a prompt and timely handling of notifications from financial entities, competent authorities should confirm the receipt of the notification by sending electronically, on paper, or in both forms, an acknowledgement of receipt to the notifying entity. That acknowledgement of receipt should include the contact details of the persons or function in charge of handling the notification."
+    },
+    {
+      "recital_number": 6,
+      "text": "To allow the competent authority to assess whether all required information has been provided in the notification in accordance with Article 60(8), first subparagraph, of Regulation (EU) 2023/1114, the notifying entity should communicate any changes to the information provided without undue delay."
+    },
+    {
+      "recital_number": 7,
+      "text": "This Regulation is based on the draft implementing technical standards submitted to the Commission by the European Securities and Markets Authority (‘ESMA’) and developed in close cooperation with the European Banking Authority."
+    },
+    {
+      "recital_number": 8,
+      "text": "ESMA has conducted open public consultations on the draft implementing technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Securities and Markets Stakeholder Group established in accordance with Article 37 of Regulation (EU) No 1095/2010 of the European Parliament and of the Council (3),"
+    }
+  ]
+}
