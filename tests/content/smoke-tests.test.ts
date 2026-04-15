@@ -159,13 +159,41 @@ describe('Content Smoke Tests (Critical Articles)', () => {
     });
   });
 
+  describe('MiCA Level 2 (RTS/ITS)', () => {
+    it('MICA_RTS_COMPLAINTS_CASP Article 1 - defines complaint for CASPs', () => {
+      const article = getArticle('MICA_RTS_COMPLAINTS_CASP', '1');
+
+      expect(article).toBeDefined();
+      expect(article!.title).toContain('complaints-handling procedures');
+      expect(article!.text).toContain('statement of dissatisfaction');
+      expect(article!.text).toContain('crypto-asset service provider');
+    });
+
+    it('MICA_RTS_CONTINUITY Article 2 - business continuity arrangements', () => {
+      const article = getArticle('MICA_RTS_CONTINUITY', '2');
+
+      expect(article).toBeDefined();
+      expect(article!.title).toContain('Business continuity');
+      expect(article!.text).toContain('business continuity policy');
+      expect(article!.text).toContain('2023/1114');
+    });
+
+    it('MICA_RTS_COOP_THIRD_COUNTRY Article 1 - cooperation template', () => {
+      const article = getArticle('MICA_RTS_COOP_THIRD_COUNTRY', '1');
+
+      expect(article).toBeDefined();
+      expect(article!.text).toContain('cooperation arrangements');
+      expect(article!.text).toContain('2023/1114');
+    });
+  });
+
   // Meta-test: Ensure we're actually testing against production DB
   it('validates test is using production database with all regulations', () => {
     const regulationCount = db
       .prepare('SELECT COUNT(*) as count FROM regulations')
       .get() as { count: number };
 
-    expect(regulationCount.count).toBe(64);
+    expect(regulationCount.count).toBe(97);
   });
 
   it('validates sampled articles represent diverse characteristics', () => {

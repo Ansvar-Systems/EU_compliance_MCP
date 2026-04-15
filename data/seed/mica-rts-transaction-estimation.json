@@ -1,0 +1,97 @@
+{
+  "id": "MICA_RTS_TRANSACTION_ESTIMATION",
+  "full_name": "Commission Delegated Regulation (EU) 2025/298 — RTS on methodology to estimate transaction numbers and values for ARTs and non-EU-denominated EMTs",
+  "celex_id": "32025R0298",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0298",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Subject matter",
+      "text": "1.   This Regulation specifies the methodology to estimate the quarterly average number and average aggregate value of transactions per day that are associated to uses of an asset-referenced token as a means of exchange within a single currency area, in accordance with Article 22(1), point (d), of Regulation (EU) 2023/1114.\n\n2.   In accordance with Article 58(3) of Regulation (EU) 2023/1114, this Regulation also applies mutatis mutandis to e-money tokens denominated in a currency that is not an official currency of a Member State."
+    },
+    {
+      "number": "2",
+      "title": "Definitions",
+      "text": "For the purposes of this Regulation, the following definitions shall apply:\n\n(1)\n\n‘single currency area’ means one or several countries that have the same official currency;\n\n(2)\n\n‘custodial wallet’ means a crypto-asset wallet address where a crypto-asset service provider ensures the safekeeping or controlling, on behalf of its client, of crypto-assets or of the means of access to such crypto-assets, where applicable in the form of private cryptographic keys;\n\n(3)\n\n‘non-custodial wallet’ means a crypto-asset wallet address where the user controls the means of access to the crypto-assets, where applicable in the form of private cryptographic keys."
+    },
+    {
+      "number": "3",
+      "title": "Transactions associated to uses of an asset referenced token as a means of exchange",
+      "text": "1.   The issuer shall estimate the number and value of transactions associated to uses of an asset-referenced token as a means of exchange, as referred to in Article 22(1), point (d), of Regulation (EU) 2023/1114, by deducting from the total number and value of transactions with that token during the relevant quarter the following:\n\n(a)\n\ntransactions where the asset-referenced token is exchanged for funds or other crypto-assets with the issuer or with a crypto-asset service provider;\n\n(b)\n\ntransactions where the asset-referenced token is used as collateral for the purpose of conducting transactions with financial instruments;\n\n(c)\n\ntransactions where the asset-referenced token is used to settle a derivative contract;\n\n(d)\n\nother transactions with the asset-referenced token where the issuer has reasonable grounds to assume that the purpose of the respective transactions is not to pay for goods or services.\n\nIn order to exclude from the estimate referred to in the first subparagraph the transactions referred to in point (d) of the first subparagraph, the issuer shall be able to demonstrate to the competent authority, upon request, that it had reasonable grounds to assume that those transactions do not relate to the use of the asset-referenced token to pay for goods or services.\n\n2.   Transactions associated to uses of an asset-referenced token as a means of exchange shall include transactions where one or several crypto-assets that are different from the asset-referenced token are used to pay for goods and services, provided that those transactions are settled in the asset-referenced token.\n\n3.   The transactions referred to in paragraph 1 shall include the following:\n\n(a)\n\ntransactions settled on a distributed ledger;\n\n(b)\n\ntransactions settled outside a distributed ledger;\n\n(c)\n\ntransactions between custodial wallets;\n\n(d)\n\ntransactions between a custodial wallet and a non-custodial wallet or other type of distributed ledger addresses that is not controlled by a holder of the asset-referenced token or a crypto-asset service provider.\n\n4.   The transactions referred to in paragraph 1 shall not include transfers between different accounts or addresses of the same person.\n\n5.   The transactions referred to in paragraph 1 shall only include transactions where both the payer and the payee are located in the same single currency area within the Union. The location of a payer or a payee refers to their habitual residence, for natural persons, and to the registered office address, for legal persons."
+    },
+    {
+      "number": "4",
+      "title": "Calculation of the average number and average aggregate value of transactions",
+      "text": "1.   The issuer shall calculate the quarterly average number and average aggregate value of transactions per day referred to in Article 22(1), point (d), of Regulation (EU) 2023/1114 for each single currency area, as this information stands on the following reporting reference dates: 31 March, 30 June, 30 September and 31 December.\n\n2.   The value of the transactions referred in paragraph 1 shall be reported in the official currency of the home Member State of the issuer.\n\n3.   The issuer shall determine the value of the transactions referred to in paragraph 1 as follows:\n\n(a)\n\nwhere the basket of assets referenced by the asset referenced token includes one or more official currencies that are different from the official currency referred to in paragraph 2 of this Article, the issuer shall determine the value of the respective transactions per day by using the relevant exchange rates applicable at the end of each calendar day during the applicable reporting period in accordance with the valuation, or the principles of valuation, of the asset referenced token referred to in Article 39(2), point (c), of Regulation (EU) 2023/1114;\n\n(b)\n\nwhere the basket of assets referenced by the asset referenced token includes assets other than an official currency, the issuer shall determine the value of the respective transactions per day by using market prices calculated at the end of each calendar day during the applicable reporting period, whenever possible, in accordance with the valuation, or the principles of valuation, of the asset referenced token referred to in Article 39(2), point (c), and Article 36(11) and (12) of Regulation (EU) 2023/1114;\n\n(c)\n\nwith respect to e-money tokens denominated in a currency that is not an official currency of a Member State, the issuer shall determine the value of the respective transactions per day by using the relevant exchange rates applicable at the end of each calendar day during the applicable reporting period."
+    },
+    {
+      "number": "5",
+      "title": "Data quality",
+      "text": "1.   The issuer shall have systems and procedures in place to ensure that the data submitted to the competent authority pursuant to Article 22(1), point (d), of Regulation (EU) 2023/1114 is correct, complete and submitted within the timeframe set out in Implementing Regulation (EU) 2024/2902.\n\n2.   The systems and procedures referred to in paragraph 1 shall allow the issuer to reconcile the data received from the crypto-asset service provider of the payee, or, in the case of transactions from a custodial wallet to a non-custodial wallet, the data received from the crypto-asset service provider of the payer pursuant to Article 22(3) of (EU) Regulation 2023/1114 and Implementing Regulation (EU) 2024/2902 with the data available to the issuer from other sources, including, where applicable, transactional data available on the distributed ledger."
+    },
+    {
+      "number": "6",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "single currency area",
+      "definition": "one or several countries that have the same official currency;",
+      "article": "2"
+    },
+    {
+      "term": "custodial wallet",
+      "definition": "a crypto-asset wallet address where a crypto-asset service provider ensures the safekeeping or controlling, on behalf of its client, of crypto-assets or of the means of access to such crypto-assets, where applicable in the form of private cryptographic keys;",
+      "article": "2"
+    },
+    {
+      "term": "non-custodial wallet",
+      "definition": "a crypto-asset wallet address where the user controls the means of access to the crypto-assets, where applicable in the form of private cryptographic keys.",
+      "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "The concept of a ‘transaction’ in Article 22(1) of Regulation (EU) 2023/1114 is indifferent as to the type of wallets used by the payer or by the payee for initiating or receiving a transaction associated to the use of an asset-referenced token as a means of exchange. Accordingly, for specifying the methodology referred to in Article 22(6) of Regulation (EU) 2023/1114, it is necessary to consider that the reporting in Article 22(1), point (d), of that Regulation should include transactions between custodial wallets as well as transactions between a custodial wallet, on the one hand, and a non-custodial wallet or other types of distributed ledger addresses that are not controlled by a holder of an asset-referenced token or by a crypto asset service provider, on the other hand. Transactions between non-custodial wallets, or between non-custodial wallets and other types of distributed ledger addresses that are not controlled by a holder of an asset-referenced token or by a crypto asset service provider, should not be included in the scope of the reporting in Article 22(1), point (d), of Regulation (EU) 2023/1114, taking into account that issuers may not have the necessary information to report such transactions under those provisions. That should be without prejudice to the reporting obligations of issuers in respect of such transactions under Article 22(1), point (c), of Regulation (EU) 2023/1114 and Commission Implementing Regulation (EU) 2024/ 2902 (2)."
+    },
+    {
+      "recital_number": 2,
+      "text": "According to Article 22(1), second subparagraph, of Regulation (EU) 2023/1114, transactions associated to uses as a means of exchange are only transactions that lead to a change in the natural or legal person entitled to the asset-referenced token. That applies even where the beneficial owner within the meaning of Article 3, point (6), of Directive (EU) 2015/849 of the European Parliament and of the Council (3) remains the same, and irrespective of whether those transactions are settled on the distributed ledger (‘on-chain’) or outside the distributed ledger (‘off-chain’). Accordingly, for the purpose of the reporting under Article 22(1), point (d), of Regulation (EU) 2023/1114, the data to be reported by the issuer to the competent authority should not include transfers of an asset referenced token between different addresses or accounts of the same person."
+    },
+    {
+      "recital_number": 3,
+      "text": "Article 22(1), third subparagraph, of Regulation (EU) 2023/1114 provides that certain transactions are not to be considered as associated to uses of asset-referenced tokens as a means of exchange. In particular, as clarified in recital 61 of that Regulation, transactions associated to uses of asset-referenced tokens as a means of exchange are those transactions associated with payments of debts including in the context of transactions with merchants and should not include transactions associated with investment functions and services, such as a means of exchange for funds or other crypto-assets, unless there is evidence that the asset-referenced token is used for settlement of transactions in other crypto-assets. Therefore, it is necessary to further specify the type of transactions that are to be reported under Article 22(1), point (d), of Regulation (EU) 2023/1114."
+    },
+    {
+      "recital_number": 4,
+      "text": "The issuer should estimate the number and value of transactions associated to uses of an asset-referenced token as a means of exchange as referred to in Article 22(1), point (d), of Regulation (EU) 2023/1114 by deducting from the total number and value of transactions settled in the asset referenced token, during the relevant quarter, transactions where the asset-referenced token is exchanged for funds or other crypto-assets with the issuer or with a crypto-asset service provider, transactions where the asset-referenced token is used as collateral for the purpose of conducting transactions with financial instruments and transactions where the asset-referenced token is used to settle a derivative contract. In addition, the issuer may also deduct other transactions with the asset-referenced token where the issuer has reasonable grounds to assume that the purpose of the respective transactions is not to pay for goods or services, provided that the issuer is able to demonstrate to the competent authority, upon request, that it had reasonable grounds to assume that those transactions do not relate to the use of the asset-referenced token to pay for goods or services."
+    },
+    {
+      "recital_number": 5,
+      "text": "Transactions associated to uses of an asset-referenced token as a means of exchange should also include transactions where one or several crypto-assets that are different from the asset-referenced token are used to pay for goods and services, provided that those transactions are settled in the asset-referenced token. That can include, for example, cases where an asset-referenced token is used as a bridge asset to settle transactions with a crypto-asset different from the asset-referenced token, where the purpose of that transaction is to pay for goods or services, and cases where an asset-referenced token is used as a bridge asset to settle a transaction involving two crypto-assets different from the asset-referenced token, where the purpose of that transaction is to pay for goods or services. By contrast, transactions where the parties wish to trade or exchange two distinct crypto-assets different from the asset-referenced token and agree to settle the transaction using an asset-referenced token, without the purpose of the underlying transaction being to pay for goods or services, should not fall within the scope of the reporting in Article 22(1), point (d), of Regulation (EU) 2023/1114."
+    },
+    {
+      "recital_number": 6,
+      "text": "The issuer should determine for each transaction in scope of Article 22(1), point (d), of Regulation (EU) 2023/1114 the single currency area for which that transaction should be reported. The transactions referred to in Article 22(1), point (d), of that Regulation should cover transactions where both the payer and the payee are located in the same single currency area within the Union."
+    },
+    {
+      "recital_number": 7,
+      "text": "To ensure that the quarterly average number and the average aggregate value of transactions per day are estimated on the basis of reliable and sound data and to enhance the quality of reporting, the issuer should have systems and procedures in place that allow it to reconcile the data received from the crypto-asset service provider of the payee or, in the case of transactions from a custodial wallet to a non-custodial wallet, the data received from the crypto-asset service provider of the payer, pursuant to Article 22(3) of Regulation (EU) 2023/1114 and Implementing Regulation (EU) 2024/2902 with the data available to the issuer from other sources, including, where applicable, transactional data available on the distributed ledger."
+    },
+    {
+      "recital_number": 8,
+      "text": "In accordance with Article 58(3) of Regulation (EU) 2023/1114, the provisions of Articles 22 and 23, and Article 24(3) of that Regulation are to apply also to e-money tokens denominated in a currency that is not an official currency of a Member State. Accordingly, this Regulation should also apply mutatis mutandis to such e-money tokens."
+    },
+    {
+      "recital_number": 9,
+      "text": "This Regulation is based on the draft regulatory technical standards submitted to the Commission by the European Banking Authority."
+    },
+    {
+      "recital_number": 10,
+      "text": "The European Banking Authority has conducted open public consultations on the draft regulatory technical standards on which this Regulation is based, analysed the potential related costs and benefits and requested the advice of the Banking Stakeholder Group established in accordance with Article 37 of Regulation (EU) No 1093/2010 of the European Parliament and of the Council (4),"
+    }
+  ]
+}
