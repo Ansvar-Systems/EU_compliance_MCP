@@ -95,11 +95,11 @@
   },
   {
     "id": "regulation-count",
-    "description": "Total regulation count is 64",
+    "description": "Total regulation count is 97",
     "tool": "about",
     "input": {},
     "assertions": [
-      { "path": "dataset.counts.regulations", "equals": 64 }
+      { "path": "dataset.counts.regulations", "equals": 97 }
     ]
   },
   {
