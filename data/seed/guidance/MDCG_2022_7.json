@@ -1,0 +1,50 @@
+{
+  "id": "MDCG_2022_7",
+  "title": "MDCG 2022-7",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2022-7",
+  "date_published": "2022-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/b5429d14-25a9-4cfc-b059-355388f03e05_en?filename=mdcg_2022-7_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Is it possible to create UDI records manually in Eudamed",
+      "content": "1. Is it possible to create UDI records manually in Eudamed\n22\n? If yes, can they be\nupdated or deleted, if obsolete?\nInformation on registration of UDIs in the UDI/Device module can be found in the\nEudamed section of the European Commission website.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Do manufacturers need to report the UDI-PI to the Eudamed database?",
+      "content": "2. Do manufacturers need to report the UDI-PI to the Eudamed database?\nThe UDI-PI does not need to be reported to the UDI/Device registration module of\nEudamed. However, the UDI-PI\n23\ntype (e.g. expiry date or manufacturing date, lot\nnumber, serial number) needs to be provided for device registration to the Eudamed\nUDI/Device registration module.\nWhen reporting vigilance incidents such as serious incidents and Field Safety\nCorrective Actions\n24\n, the UDI-PI of the individual device that is involved in the incident\nshould be provided to the Eudamed Vigilance module.\n22\nShould you need info on M2M data exchange services, you can consult also Guidelines for Member States on the use of Data\nexchange solutions.\n23\nThe manner in which the production of the device is controlled (the type of UDI-PI that is used for production control) is\nrequired to be identified in the UDI / device registration module (expiry date or manufacturing date, lot number, serial number or\nsoftware identification).\n24\nPlease see Article 27(5) of the MDR and Article 24(5) of the IVDR ‘the UDI shall be used for reporting serious incidents and\nfield safety corrective actions in accordance with Article 87 MDR and Article 82 IVDR’.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Do UDI-DIs of kit components intended for retail points of sale need to appear on",
+      "content": "3. Do UDI-DIs of kit components intended for retail points of sale need to appear on\nthe outside of the kit (according to the IVDR)?\nWhere this is a kit exclusively intended for retail points of sale, the products would\nrequire only UDI-DI in the AIDC, but a full UDI in HRI. The identification and traceability\nof the specific batches of product would be managed through the information presented\non the pack i.e. HRI UDI and LOT XXXXX, Expiry date etc. In this case the conclusion\nwould be that printing of component UDI-DIs on the outside of the kit is not required.\n20\nPlease, for further information on UoU, also see IMDRF Unique Device Identification system (UDI system) Application Guide -\nAppendix E, as endorsed at EU level in MDCG 2021-10 - ‘The status of Appendixes E-I of IMDRF N48 under the EU regulatory\nframework for medical devices’.\n21\nPlease, for further information on kits, also see IMDRF Unique Device Identification system (UDI system) Application Guide -\nAppendix G, as endorsed at EU level in MDCG 2021-10 - ‘The status of Appendixes E-I of IMDRF N48 under the EU regulatory\nframework for medical devices’.\nPlease also note that a kit is only applicable in the context of IVDs.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2022-7\n12\nUDI-DI, UDI-PI and Basic UDI-DI should be assigned to the kit itself. The UDI carrier\nshould show the UDI-DI of the kit. The UDI-DI of each component does not need to be\npart of the UDI carrier of the kit.\nIt can be noted that the exemption regarding retail point of sales packages only applies\nto the printing of UDI-PI in AIDC format.\nG. UDI and Eudamed",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Is a Configuration a combination of parts that are not devices in themselves?",
+      "content": "4. Is a Configuration a combination of parts that are not devices in themselves?\nAccording to the definition set out in Annex VI, part C, Section 1, a configuration is a\ncombination of items of equipment that operate together as a device to achieve an\nintended purpose. The combination of items may be modified, adjusted or customised\nto meet specific needs. The configuration in itself is qualified as a medical device.\nHowever, as the definition refers to items of equipment, it does not exclude that these\nindividual items of equipment may be qualified as medical devices in their own right\n(See definition of medical device Article 2(1) MDR – ‘instruments, apparatus, appliance,\nmaterial or other article’… ‘alone or in combination’).",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Is a Configurable device always a combination of devices, each of which is a",
+      "content": "5. Is a Configurable device always a combination of devices, each of which is a\ndevice in its own right?\nNo, not always. A configurable device can consist of several components, some of\nwhich may be considered a device in their own right.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "What are the UDI requirements applicable to a Configurable device?",
+      "content": "6. What are the UDI requirements applicable to a Configurable device?\nIn accordance with Annex VI, Part C, Section 6.4 a UDI shall be assigned to the\nconfigurable device in its entirety and shall be called the configurable device UDI\n19\n. The\nconfigurable device UDI-DI shall be assigned to groups of configurations, not per\nconfiguration within the group. (A group of configurations is defined as the collection of\npossible configurations for a given device as described in the technical documentation).\nA configurable device UDI-PI shall be assigned to each individual configurable device.\nThe carrier of the configurable device UDI shall be placed on the assembly that is most\nunlikely to be exchanged during the lifetime of the system and shall be identified as the\n19\nPlease, for further information on configurable devices, also see IMDRF Unique Device Identification system (UDI system)\nApplication Guide - Appendix H, as endorsed at EU level in MDCG 2021-10 - ‘The status of Appendixes E-I of IMDRF N48\nunder the EU regulatory framework for medical devices’.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2022-7\n10\nconfigurable device UDI. Each component that is considered a device and is\ncommercially available on its own shall be assigned a separate UDI.\nMoreover, in accordance with Article 29 (1) MDR, the configurable device shall be\nassigned a Basic UDI-DI as it is considered a device in its own right.\nE. Retail point of sale, promotional packs and marketing\nrelated samples",
+      "parent_section": null
+    }
+  ]
+}

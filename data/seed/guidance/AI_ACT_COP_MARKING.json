@@ -1,0 +1,26 @@
+{
+  "id": "AI_ACT_COP_MARKING",
+  "title": "Code of Practice on AI Content Marking and Labelling",
+  "issuing_body": "AI Office",
+  "document_reference": null,
+  "date_published": "2026-03-05",
+  "related_regulation": "AI_ACT",
+  "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-second-draft-code-practice-marking-and-labelling-ai-generated-content",
+  "pdf_url": null,
+  "status": "draft",
+  "metadata": {
+    "freshness_note": "Second public draft published 2026-03-05. Finalization expected H1 2026.",
+    "target_articles": [
+      "50"
+    ],
+    "draft_version": 2
+  },
+  "sections": [
+    {
+      "section_number": "0",
+      "title": "Status note",
+      "content": "Second public draft published 2026-03-05. Finalization expected H1 2026.",
+      "parent_section": null
+    }
+  ]
+}

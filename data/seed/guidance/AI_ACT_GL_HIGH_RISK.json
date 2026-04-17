@@ -1,0 +1,26 @@
+{
+  "id": "AI_ACT_GL_HIGH_RISK",
+  "title": "Commission Guidelines on High-Risk Classification (Article 6)",
+  "issuing_body": "AI Office",
+  "document_reference": null,
+  "date_published": null,
+  "related_regulation": "AI_ACT",
+  "url": "https://digital-strategy.ec.europa.eu/en/news/supporting-implementation-ai-act-clear-guidelines",
+  "pdf_url": null,
+  "status": "planned",
+  "metadata": {
+    "freshness_note": "Commission missed the February 2026 deadline. Draft expected Q2 2026. Critical for the August 2026 high-risk obligations deadline.",
+    "target_articles": [
+      "6",
+      "Annex III"
+    ]
+  },
+  "sections": [
+    {
+      "section_number": "0",
+      "title": "Status note",
+      "content": "Commission missed the February 2026 deadline. Draft expected Q2 2026. Critical for the August 2026 high-risk obligations deadline.",
+      "parent_section": null
+    }
+  ]
+}

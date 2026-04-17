@@ -1,0 +1,32 @@
+{
+  "id": "MDCG_2023_6",
+  "title": "MDCG 2023-6",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2023-6",
+  "date_published": "2023-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/15a33521-87f1-4939-92a1-ef23f2b09c6c_en?filename=mdcg_2023-6_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "3.1",
+      "title": "Product without an intended medical purpose vs product without an intended",
+      "content": "3.1 Product without an intended medical purpose vs product without an intended\nmedical purpose\nWhen referring to clinical data from an equivalent device, manufacturers should consider that\nequivalence between two devices without an intended medical purpose should be demonstrated in\naccordance with the criteria established in the MDR\n10\n. In particular, the demonstration has to\nconsider technical, biological and clinical characteristics.\nThe technical and biological criteria listed in the MDR can be directly considered to compare\ncharacteristics of products without an intended medical purpose. The criterion for the clinical\ncharacteristics should be considered taking into account that some of them are specifically referring\nto a medical purpose. The following table clarifies how the characteristics should be considered for\nproducts without an intended medical purpose.\nElements of the Clinical criterion\n(MDR, Annex XIV Part A Section 3)\nClarifications for the application of the Clinical\ncriterion to products without a medical purpose\nthe device is used for the same clinical\ncondition or purpose,\nonly ‘used for the same purpose’ applies\nincluding similar severity and stage of\ndisease,\n‘similar severity and stage of disease’ is not applicable\nat the same site in the body, ‘at the same site in the body' is directly applicable\nin a similar population, including as regards\nage, anatomy and physiology;\n‘in a similar population’ is directly applicable as well\nas the similar ‘age’, ‘anatomy’ and ‘physiology’\nhas the same kind of user; ‘the same kind of user’ is directly applicable\nhas similar relevant critical performance ‘similar relevant critical performance’ is directly\napplicable\nin view of the expected clinical effect for a\nspecific intended purpose\nthe expected ‘clinical’ effect is not applicable.\nNevertheless, the products have expected effects for\nthe specific intended purpose, therefore the\nrequirement should be considered as ‘in view of the\nexpected effect for a specific intended purpose’",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.2",
+      "title": "Product without an intended medical purpose vs analogous medical device",
+      "content": "3.2 Product without an intended medical purpose vs analogous medical device\nIn general, a comparison is not possible between a medical device and a product without an intended\nmedical purpose\n11\nbecause not all the clinical characteristics can be compared. In particular, the\n10\nMDR, Annex XIV Part A (3).\n11\nCS, recital (11).\nMedical Devices\nMedical Device Coordination Group Document MDCG 2023-6\nPage 4 of 4\ncharacteristic ‘similar severity and stage of disease’ would be defined and available for the medical\ndevice while it would not be defined and available for the product without an intended medical\npurpose\n12\n. As a consequence, the demonstration of equivalence cannot be completed and\nestablished between a device without an intended medical purpose and an analogous device with a\nmedical purpose\n13\n.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.3",
+      "title": "Product without an intended medical purpose vs dual-purpose device",
+      "content": "3.3 Product without an intended medical purpose vs dual-purpose device\nEquivalence between a product without an intended medical purpose and a device with both a\nmedical and a non-medical purpose (dual-purpose device) can be demonstrated comparing the\ncharacteristics related to the non-medical purpose for both the devices. For the dual-purpose device,\nonly the characteristics related to the non-medical purpose should be considered.\nIf equivalence is demonstrated, only clinical data of the dual-purpose device related to the general\nsafety and performance requirements\n14\napplicable for the non-medical purpose should be used for\nthe clinical evaluation of the product without an intended medical purpose.\n12\nThis further explains the sentence “To duly justify reliance on existing clinical data from an analogous medical\ndevice, the principles of demonstration of equivalence should be applied with the acceptance that the device\nunder evaluation will only have an aesthetic or another non-medical purpose whereas the analogous device\nhas a medical purpose” from point 4(f) of MDCG 2020-5.\n13\nIn cases where equivalence cannot be demonstrated, data from similar devices may be useful for a variety of\nother purposes (e.g., ensuring that the risk management system is comprehensive; understanding the state of\nthe art; helping to define the scope of the clinical evaluation) that are listed in point 5 of MDCG 2020-5.\n14\nMDR, Annex I.",
+      "parent_section": "3"
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "id": "MDCG_2025_5",
+  "title": "MDCG 2025-5",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2025-5",
+  "date_published": "2025-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/f22f559b-dee5-43b4-9595-3ccdcca9f7ad_en?filename=mdcg_2025-5_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Change to/addition of a primary or secondary endpoint;",
+      "content": "1. Change to/addition of a primary or secondary endpoint;",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Use of a new mode of measurement for the primary endpoint;",
+      "content": "2. Use of a new mode of measurement for the primary endpoint;",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "A change of performance study design which is likely to have a significant",
+      "content": "3. A change of performance study design which is likely to have a significant\nimpact on the statistical analysis or the benefit/risk assessment;",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "A change in the definition of the end of the performance study;",
+      "content": "4. A change in the definition of the end of the performance study;",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "A modification of the duration of the study and/or the follow up of subjects;",
+      "content": "5. A modification of the duration of the study and/or the follow up of subjects;",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "A modification of the sample taking and their preparation. E.g., method (whole",
+      "content": "6. A modification of the sample taking and their preparation. E.g., method (whole\nblood/ serum/ plasma/ finger pricking, other tube additive, fixing solution,\nstorage conditions, etc.);",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Changes in the number of scheduled subject visits;",
+      "content": "7. Changes in the number of scheduled subject visits;",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Change of a diagnostic or other assessment procedure which is likely to have a",
+      "content": "8. Change of a diagnostic or other assessment procedure which is likely to have a\nsignificant impact on the safety of the subject or the scientific value of the clinical\ndata collected in the performance study;",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Changes to the data monitoring committee which may affect, for example, the",
+      "content": "9. Changes to the data monitoring committee which may affect, for example, the\nsafety evaluation, or the independence and impartiality of the committee;",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Amending the number of subjects to be included in the performance study,",
+      "content": "10. Amending the number of subjects to be included in the performance study,\neither due to an adaptation of the sample size calculation or to maintain a\npreviously defined sample size calculation due to an increased unanticipated\ndropout rate;",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "Addition of an interim analysis not planned in the initial performance study plan;",
+      "content": "11. Addition of an interim analysis not planned in the initial performance study plan;",
+      "parent_section": null
+    },
+    {
+      "section_number": "12",
+      "title": "Deletion of an interim analysis;",
+      "content": "12. Deletion of an interim analysis;",
+      "parent_section": null
+    },
+    {
+      "section_number": "13",
+      "title": "Content change in the subject information sheet and informed consent forms,",
+      "content": "13. Content change in the subject information sheet and informed consent forms,\nor other information provided to the subject;",
+      "parent_section": null
+    },
+    {
+      "section_number": "14",
+      "title": "Change of inclusion or exclusion criteria if these changes are likely to have a",
+      "content": "14. Change of inclusion or exclusion criteria if these changes are likely to have a\nsignificant impact on the safety of the subject or scientific value of the clinical\ndata collected in the performance study.\nModifications related to the benefit/risk of the performance study",
+      "parent_section": null
+    },
+    {
+      "section_number": "15",
+      "title": "New technical or clinical data which is likely to impact on the benefit/risk",
+      "content": "15. New technical or clinical data which is likely to impact on the benefit/risk\nassessment;",
+      "parent_section": null
+    },
+    {
+      "section_number": "16",
+      "title": "The revocation or suspension of the conformity assessment certificate or",
+      "content": "16. The revocation or suspension of the conformity assessment certificate or\nanother certificate related to the devices used as calibrator or control of clinical\nperformance or performance characteristics of the device for performance\nstudy.\nModifications related to the use of the device for performance study or the\ndevice itself",
+      "parent_section": null
+    },
+    {
+      "section_number": "17",
+      "title": "Change of testing modalities (modification of procedure, techniques, or",
+      "content": "17. Change of testing modalities (modification of procedure, techniques, or\ninstructions for use) of the device for performance study;",
+      "parent_section": null
+    },
+    {
+      "section_number": "18",
+      "title": "The type and/or duration of the investigator's training;",
+      "content": "18. The type and/or duration of the investigator's training;",
+      "parent_section": null
+    },
+    {
+      "section_number": "19",
+      "title": "Changes to the device’s labeling or IFU;",
+      "content": "19. Changes to the device’s labeling or IFU;\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n33",
+      "parent_section": null
+    },
+    {
+      "section_number": "20",
+      "title": "Changes to the device’s intended purpose;",
+      "content": "20. Changes to the device’s intended purpose;",
+      "parent_section": null
+    },
+    {
+      "section_number": "21",
+      "title": "Changes to the risk management plan likely to impact on the benefit/risk of the",
+      "content": "21. Changes to the risk management plan likely to impact on the benefit/risk of the\nperformance study;",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "Changes to the device’s software or firmware.",
+      "content": "22. Changes to the device’s software or firmware.\nModifications of other information",
+      "parent_section": null
+    },
+    {
+      "section_number": "23",
+      "title": "Change of sponsor or the sponsor’s legal representative;",
+      "content": "23. Change of sponsor or the sponsor’s legal representative;",
+      "parent_section": null
+    },
+    {
+      "section_number": "24",
+      "title": "Change/addition of a clinical investigation site;",
+      "content": "24. Change/addition of a clinical investigation site;",
+      "parent_section": null
+    },
+    {
+      "section_number": "25",
+      "title": "Change of manufacturer;",
+      "content": "25. Change of manufacturer;",
+      "parent_section": null
+    },
+    {
+      "section_number": "26",
+      "title": "New insurance policy",
+      "content": "26. New insurance policy\n51\n;",
+      "parent_section": null
+    },
+    {
+      "section_number": "27",
+      "title": "Change in compensation paid to subjects and/or investigators/site;",
+      "content": "27. Change in compensation paid to subjects and/or investigators/site;",
+      "parent_section": null
+    },
+    {
+      "section_number": "28",
+      "title": "Change/addition of new investigator(s).",
+      "content": "28. Change/addition of new investigator(s).\nModifications related to the manufacturing process",
+      "parent_section": null
+    },
+    {
+      "section_number": "29",
+      "title": "Modification of the manufacturing site, process of manufacturing including",
+      "content": "29. Modification of the manufacturing site, process of manufacturing including\nchange in supply chain (e.g., antibodies, material of human or animal origin\nsuppliers or their sources, etc.). raw materials, reagent formulation, materials\nand coating of storage containers (such as tubes, plates and vials), production\nvolume, sterilisation method, sterilisation or packaging.\n51\nRenewal of an insurance certificate is considered a non-substantial modification, while a new\ninsurance certificate with new policies and/or conditions is considered a substantial modification.",
+      "parent_section": null
+    },
+    {
+      "section_number": "30",
+      "title": "What is the definition of left-over samples?",
+      "content": "30. What is the definition of left-over samples?\nThis term should be understood as unadulterated remnants of human derived\nspecimens\n33\ncollected as part of routine clinical practice, for research purposes or other\npurposes not connected to the clinical performance study in question and after all\nstandard or intended analyses have been performed. Such specimens/samples would be\notherwise discarded as there is no remaining clinical need for the individual from which it\nwas collected\n34\n.\nLeft-over samples can include specimen or sample\n35\nthat are collected in the past and\nobtained from repositories (e.g., tissue banks, commercial vendor collections)\n36\n.\nIf there is a clinical need for samples such as when being used for an interventional\nperformance study, they cannot be considered left-over samples.",
+      "parent_section": null
+    },
+    {
+      "section_number": "31",
+      "title": "What are the submission requirements when only left-over samples are",
+      "content": "31. What are the submission requirements when only left-over samples are\nused for a performance study?\nIf there is a clinical need for samples such as when being used for an interventional\nperformance study, they cannot be considered left-over samples (refer to Q30).\nA notification is required due to Article 58(2) of the IVDR for performance studies of\ncompanion diagnostics using left-over samples only.\nWhen left-over samples are used for non-companion diagnostic performance studies,\nthere might be situations\n37\nwhere Article 58(1) point (c) of the IVDR applies. If the study\n33\nSection 3.47, EN ISO 20916:2024: \"Specimen\" - discrete portion of a body fluid or tissue taken for\nexamination, study, or analysis of one or more quantities or characteristics to determine the character of\nthe whole.\n34\nSection 3.25, EN ISO 20916:2024.\n35\nSection 3.42, EN ISO 20916:2024:” Sample” – one or more representative parts taken from a\nspecimen, which are intended to provide information.\n36\nSection 3.6, EN ISO 20916:2024.\n37\nExamples could be performance studies where the subjects are exposed to other risks due to\nadditional examinations that are part of the performance study (Article 58(1)(c)).\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n22\nfulfils point (c) in Article 58(1), an application must be submitted to the competent\nauthority.\nFurther, a notification per Article 70(1) of the IVDR is required when left-over samples are\nused for performance studies conducted to further assess, within the scope of its intended\npurpose, a CE marked device where the study involves exposing subjects to additional\nprocedures which are burdensome or invasive.\nAppendix I of this guidance can be consulted for an overview of regulatory pathways.\nNote that when left-over samples are used for performance studies, Article 57 applies,\nincluding the need to follow applicable legislation on data protection, and that national\nrequirements for ethics submission needs to be checked.",
+      "parent_section": null
+    },
+    {
+      "section_number": "32",
+      "title": "With reference to Article 70(1), what does burdensome mean?",
+      "content": "32. With reference to Article 70(1), what does burdensome mean?\nAdditional procedures which are burdensome can include a wide variety of different\ninterventions. This may include procedures which may cause pain, discomfort, fear,\npotential risks or complications/side-effects, disturbances of lives and personal activities,\nor otherwise unpleasant experiences. It is mostly determined from the perspective of the\nperson bearing the burden.\nThe understanding of what is considered to be burdensome is expected to develop over\ntime. Sponsors are encouraged to document their assessment whether the additional\nprocedures imposed by the clinical performance study plan (CPSP) are considered\nburdensome, and where appropriate, contact the relevant authority or ethics committee\nin the Member State(s) to discuss cases where the sponsor is uncertain.",
+      "parent_section": null
+    },
+    {
+      "section_number": "33",
+      "title": "Article 70(1) and Article 70(2) of the IVDR refer to CE marked devices. Does",
+      "content": "33. Article 70(1) and Article 70(2) of the IVDR refer to CE marked devices. Does\nthis include IVDs that have been CE marked according to the IVD\nDirective?\nYes. The provisions in Article 70(1) and Article 70(2) can be applied to IVDs that are CE\nmarked either in accordance with the IVDD\n38\nor in accordance with the IVDR.",
+      "parent_section": null
+    },
+    {
+      "section_number": "34",
+      "title": "Are Article 58(1) and Article 58(2) applicable to performance studies with",
+      "content": "34. Are Article 58(1) and Article 58(2) applicable to performance studies with\nCE marked IVDs used within the scope of their intended purpose?\nNo, Articles 58(1) and 58(2) are only applicable for non-CE marked IVDs or CE marked\nIVDs used outside their intended purposes. Performance studies of IVDs conducted\nwithin the scope of its intended purpose are regulated by Article 70(1) and can fulfil the\ncondition for notification\n39\n. These performance studies do not have to comply with the\nother obligations of ‘additional requirements for certain performance studies’ in Article 58\n38\nProvided that “legacy devices” (devices previously CE marked under the IVDD) are duly placed on the\nmarket in compliance with the transitional provisions.\n39\nWhere the performance study would involve submitting subjects to procedures additional to those\nperformed under the normal conditions of use of the device and those additional procedures are invasive\nor burdensome.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n23\nsuch as an authorisation. They must in any case still comply with the general\nrequirements regarding performance studies outlined in Article 57.\nApplication/Notification",
+      "parent_section": null
+    },
+    {
+      "section_number": "35",
+      "title": "What is considered the identification number of a performance study until",
+      "content": "35. What is considered the identification number of a performance study until\nEUDAMED is functional?\nIn the absence of performance study functionalities in EUDAMED, the CIV-ID\n40\n(which is\ngenerated by a competent authority using the old database, Eudamed2) should be used\nas Union-wide single identification number\n41\n.\nUntil the EUDAMED module for performance studies is functional, national identification\nnumbers may also be used by competent authorities.",
+      "parent_section": null
+    },
+    {
+      "section_number": "36",
+      "title": "What documentation should be included in the application for a",
+      "content": "36. What documentation should be included in the application for a\nperformance study?\nAccording to IVDR Article 66(1), each performance study application must be\naccompanied by the documentation referred to in Sections 2\n42\nand 3 of Annex XIII and in\nAnnex XIV.\nThe guidance MDCG 2022-19 on performance study application/notification documents\ncontains a series of performance study application/notification documents which have\nbeen created to support performance study procedures with respect to the IVDR. In\naddition, it is necessary to check the website of the relevant competent authority in the\nMember State where the performance study is to be conducted, for national requirements\nregarding the application content.\nFor the content of some of the required documents, additional guidance can be found in\nthe annexes of the ISO 20916:2024.\nAdditional, supporting documents may be provided in order to show compliance with\napplicable requirements and to provide sufficient information on the proposed study and\ndevice(s) for performance study for the assessors to make a decision.",
+      "parent_section": null
+    },
+    {
+      "section_number": "37",
+      "title": "Does the performance evaluation plan need to be included in the",
+      "content": "37. Does the performance evaluation plan need to be included in the\napplication for a performance study?\nNo. The IVDR does not require the performance evaluation plan (PEP) to be included in\nthe application. However, the PEP provides a useful overview of product development\nand how the current performance study contributes to collection of analytical and/or\nclinical evidence. The PEP shall be provided to the competent authority upon request.\n40\nSometimes referred to as PS-ID for performance studies.\n41\nMDCG 2022-12– Guidance on harmonised administrative practices and alternative technical solutions\nuntil Eudamed is fully functional (for Regulation (EU) 2017/746 on in vitro diagnostic medical devices).\n42\nI.e., performance study plan as specified in section 2.3.2 Annex XIII IVDR.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n24",
+      "parent_section": null
+    },
+    {
+      "section_number": "38",
+      "title": "What documentation should be included in the notification of a",
+      "content": "38. What documentation should be included in the notification of a\ncompanion diagnostic performance study using only left-over samples\n(IVDR Article 58(2))?\nAs the IVDR does not specify any details on the notification required per Article 58(2), it\nis necessary for the sponsor to check with national competent authorities what\ndocumentation should be included.",
+      "parent_section": null
+    },
+    {
+      "section_number": "39",
+      "title": "Does the data used to support the compliance to the GSPR for the purpose",
+      "content": "39. Does the data used to support the compliance to the GSPR for the purpose\nof the performance study need to be the same information as the data\nincluded in the technical documentation as described in Annex II of the\nIVDR (for conformity assessment)?\nNo, full technical documentation is not required; however, compliance with the GSPR in\nAnnex I of the IVDR must be documented to a level appropriate for the planned use in\nthe performance study\n43\n.\nThe full data/underlying reports demonstrating compliance to the relevant GSPR should\nbe available to the competent authority upon request\n44\n.\nThe data/underlying reports are the basis for the manufacturer to sign the statement of\nconformity for performance study, where the manufacturer signs the statement that the\nGSPR are fulfilled, apart from the aspects which are part of the performance study\n45\n.\nThe documentation should provide an overview of which of the GSPR that are\napplicable, which have already been addressed by objective evidence and which ones\nwill be addressed by the proposed study.",
+      "parent_section": null
+    },
+    {
+      "section_number": "40",
+      "title": "What is expected regarding the requirement to list the technical and",
+      "content": "40. What is expected regarding the requirement to list the technical and\nfunctional features of the device, indicating those that are covered by the\nperformance study?\nTo fulfil the requirement to present this information in the CPSP\n46\n, a tabular presentation\nof the relevant product characteristics of the device for performance study is expected\nwith an indication of the associated product specifications and assignment of the\nexpected clinical outcome.\nIt should be stated whether each characteristic relates to the safety or the performance\nof the device. The expected clinical performance outcomes should be specified according\nto the performance study endpoints.\n43\nAn example where less data is needed could be a situation where an IVD is only used/stored/shipped\nwithin certain temperature limits during the performance study. In that case, it would not be necessary to\nhave data supporting stability of reagents outside these temperatures.\n44\nSection 4(6), chapter I Annex XIV of the IVDR.\n45\nSection 4(1), chapter I Annex XIV of the IVDR.\n46\nSection 2.3.2(aa), Annex XIII of the IVDR.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n25",
+      "parent_section": null
+    },
+    {
+      "section_number": "41",
+      "title": "Is it possible to have more than one device for performance study within",
+      "content": "41. Is it possible to have more than one device for performance study within\none performance study?\nYes, it is possible to assess more than one device for performance study within the same\nperformance study plan. In that case, all the devices for performance study should be\nincluded in the application form\n47\nby duplicating and completing the section of the form\nrelated to device information. Further, the device related documentation to accompany\nthe application per chapter I, Annex XIV to the IVDR (such as investigator’s brochure per\nsection 2 and statement per section 4.1) needs to cover\n48\nall of the devices for\nperformance study.\nIf it is not possible/feasible to include all the different devices for performance study in\none performance study plan, they should be split over different performance studies.",
+      "parent_section": null
+    },
+    {
+      "section_number": "42",
+      "title": "For a performance study that requires application or notification",
+      "content": "42. For a performance study that requires application or notification\n(according to Articles 58(1-2) or Article 70) and where collection and\nanalysis of specimens are performed in different countries, what are the\nsubmission requirements to the competent authority?\nAn application or notification is required for\n• all Members States where subjects are included\n• all Member States part of a performance study involving companion diagnostics\nusing only left-over samples (notification according to Art. 58(2) regardless of\nwhether the samples are sourced from an EU Member State or a non-EU country\nIn all other cases an application or notification under the IVDR is not required.",
+      "parent_section": null
+    },
+    {
+      "section_number": "43",
+      "title": "Is translation of the instructions for use needed into the languages of all",
+      "content": "43. Is translation of the instructions for use needed into the languages of all\nMember States from which patients will be enrolled, when no analysis is\noccurring in those Member States?\nTranslation requirements for Instructions for Use (IFU) are governed by national\nlegislation and should be confirmed with each Member State involved. While national\nregulatory requirements may vary, ensuring that the IFU is comprehensible to all users\ninvolved in the study is crucial, particularly for handling, pre-analytical, and operational\nsteps aligned with the CPSP. This may imply that translations are necessary for Member\nStates where sample collection occurs to ensure understanding among local site staff,\neven if analysis is conducted elsewhere. In such cases, a partial translation of the relevant\nsections of the IFU could be a viable option. Verification with each Member State’s\nregulations is recommended to confirm whether full or partial translation of the IFU is\nrequired. Regardless of national regulatory requirements, comprehension of the\nmanufacturer's IFU is one of the important aspects of the performance studies and the\n47\nMDCG 2022-19.\n48\nThe documentation for several devices could in some cases be combined, while some documents are\nmore suitable to provide separately per device; e.g., one investigator’s brochure issued by the sponsor\ncovering two devices used together with sufficient details on each device, while the statement of\nconformity may be two separate documents, one for each device and signed by the relevant party\nassuming responsibility for that particular device.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n26\nIVD medical device under investigation shall be used according to the CPSP and the IFU.\nThis concerns also preanalytical phase and pre-handling of the samples. Therefore, the\ninvestigator's brochure shall contain manufacturer's instructions for installation,\nmaintenance, maintaining hygiene standards and for use, including storage and handling\nrequirements, as well as, to the extent that such information is available, information to\nbe placed on the label, and IFU to be provided with the device when placed on the market.\nIn addition, the investigator’s brochure shall contain information relating to any relevant\ntraining required.\n49\nThe IFU may be divided over several sections, each describing a few steps of the\nprocedure in which the device(s) is intended to be used. The section(s) describing how\nto correctly obtain, prepare and store specimens so that they will be suitable for the\nintended analysis are especially important for the sampling sites and the information must\nbe suited for their needs.\nNote that for performance studies with devices for self-testing or near-patient testing, the\ninformation supplied to the user should be easily understandable and provided in the\nofficial Union language(s) determined by the Member State in which the device is made\navailable to the user or patient. Validation of the comprehensiveness and usability of the\nmanufacturer’s IFU is one of the important aspects of these studies.\nTimeline considerations for performance studies",
+      "parent_section": null
+    },
+    {
+      "section_number": "44",
+      "title": "In case different Member States are involved in specimen collection and",
+      "content": "44. In case different Member States are involved in specimen collection and\nin performing the analysis, when can the performance study start?\nThe study can only start in a Member State when at least one of the collection sites within\nthat Member State has the relevant authorisations\n50\nin place. Further, to ensure that\nsubjects are not unduly exposed to risks related to specimen collection, the sponsor has\nto ensure that the analysis site is ready.",
+      "parent_section": null
+    },
+    {
+      "section_number": "45",
+      "title": "Which date is considered as the start date of a performance study?",
+      "content": "45. Which date is considered as the start date of a performance study?\nIn general, the start date is considered to be the first act of recruitment in the performance\nstudy in a Member State. The first act of recruitment should be specified by the sponsor\nand could be, for example, the date of initiation of the performance study in the first site\nor the date when the first study-specific advertisement is published. In any case, the\nperformance study cannot start earlier than the authorisation date (or commencement\ndate notified for PMPF studies and performance studies involving companion diagnostics\nusing only left-over samples) or not later than the date recruitment starts. The start date\nof a performance study should be described in the performance study plan. For\nperformance studies using only left-over samples, the start date could correspond to the\ndate of the analysis of the first sample.\n49\nSection 2.2 of chapter I in Annex XIV of the IVDR.\n50\nIncluding ethical review not resulting in a negative opinion (Article 58(3) and Article 58(5)(b)).\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n27",
+      "parent_section": null
+    },
+    {
+      "section_number": "46",
+      "title": "Does the performance study notification need to be “authorised” or",
+      "content": "46. Does the performance study notification need to be “authorised” or\n“acknowledged” by the competent authority prior to study start?\nNotifications referred to in Article 58(2) and Article 70(1) are not required by the IVDR to\nbe authorised by the Member States prior to study start. Rather, acknowledgement of\nreceipt by the competent authority is sufficient but not necessary (check national\nrequirements) to proceed, provided that the 30-day timeline applicable to Article 70(1) is\nrespected. This is in contrast with an application for performance study under Article 66\nwhere an explicit authorisation from the Member State is to be given.\nNote that for performance studies conducted under Article 70(1) of the IVDR, points (b)\nto (l) and point (p) of Article 58(5) applies, which includes an ethical review by an ethics\ncommittee.\nSubstantial Modifications",
+      "parent_section": null
+    },
+    {
+      "section_number": "47",
+      "title": "How is a substantial modification defined?",
+      "content": "47. How is a substantial modification defined?\nA substantial modification of a performance study is a change to the performance study\nthat is likely to have a substantial impact on the safety, health or rights of the subject, or\non the robustness or reliability of data generated by the study. Modifications of the IVD or\nthe performance study plan, investigator’s brochure, the subject information sheet and\nother performance study documentation may or may not be considered as substantial\nmodifications depending on whether or not they fulfil the above definition.\nSponsors should also take into consideration the fact that some modifications may impact\nthe design or scientific outcome of the performance study to such an extent that this may\nrequire the initiation of a new performance study.\nThe procedure to notify a substantial modification is further described in Article 71 of the\nIVDR. A non-exhaustive list of modifications that may be interpreted as substantial can\nbe found in Appendix II: Non-exhaustive list of modifications that may be deemed\nsubstantial.\nIt is the sponsor’s responsibility to determine if the modification is substantial or not.\nHowever, if the sponsor is uncertain about the impact for a particular modification of a\nperformance study, the national competent authority may be consulted prior notification.",
+      "parent_section": null
+    },
+    {
+      "section_number": "48",
+      "title": "When can a sponsor submit a substantial modification notification?",
+      "content": "48. When can a sponsor submit a substantial modification notification?\nA notification of a planned substantial modification may be submitted in accordance with\nArticle 71 of the IVDR as soon as a performance study is allowed to commence in\naccordance with the IVDR. Moreover, it is not recommended to submit a substantial\nmodification while assessment of an already submitted substantial modification is still\nongoing. It is also important to consider whether national procedures may apply regarding\nmodifications to performance studies.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n28\nIn some situations, it may be acceptable to submit changes to submitted study\ndocumentation (with an updated version control) prior to the completion of the application\nor notification process. These changes would not be considered substantial\nmodifications. Changes in this manner would need to be agreed with the relevant\ncompetent authority.",
+      "parent_section": null
+    },
+    {
+      "section_number": "49",
+      "title": "Is a change to the device for performance study to be considered a",
+      "content": "49. Is a change to the device for performance study to be considered a\nsubstantial modification to the performance study or does it lead to the\nsubmission of a new performance study application?\nIn general, a change to the device for performance study is a substantial modification of\nthe performance study. As an example, a change to the device which alters the risk profile\nor adds new risks is likely to have a substantial impact on the safety or health or rights of\nthe subject and, thus, is a substantial modification. Some modifications to the device for\nperformance study are so extensive in nature that the ongoing performance study should\nbe terminated and a new performance study should be applied for. Modifications to the\ndevice which alter the suitability of the performance study design to provide evidence for\nthe safety, performance or clinical benefit of the device may result in refusal of the\nmodification and the submission of a new performance study application may be required.",
+      "parent_section": null
+    },
+    {
+      "section_number": "50",
+      "title": "According to Article 71(1) of the IVDR, if a sponsor intends to introduce",
+      "content": "50. According to Article 71(1) of the IVDR, if a sponsor intends to introduce\nmodifications to a performance study, the sponsor has to notify the\nMember State(s) within ‘one week’. From which point in time does this\n‘one week’ start?\nThe ‘one week’ period starts from the date when the relevant documents (such as\nperformance study plan, investigator brochure, subject information sheet and informed\nconsent form) are issued in an updated version.\nIt is acknowledged that changes to, e.g., a CPSP may require subsequent changes to\nother documents such as subject information, and that these changes may be done on a\ndifferent date. Such changes can be collected and submitted together when the last\naffected document is issued but note that the implementation of substantial modifications\nto the performance study cannot be done until the deadline in Article 71 of the IVDR has\nexpired or an authorisation letter is issued by the competent authority, and/or ethics\ncommittee if this is required according to national provisions.",
+      "parent_section": null
+    },
+    {
+      "section_number": "51",
+      "title": "Can the sponsor start to implement the substantial modification after 38",
+      "content": "51. Can the sponsor start to implement the substantial modification after 38\ndays of the notification date to the Member State?\nYes, if the sponsor has not heard from the Member State after 38 calendar days, the\nsubstantial modification may be implemented, provided that an ethics committee in that\nMember State has not issued a negative opinion in relation to the substantial modification.\nThis 38-day period, which starts when all the relevant documentation with clearly\nidentifiable changes have been submitted in their entirety, may be extended by a further\n7 calendar days by the Member States in order to consult with experts. The Member\nStates will notify the sponsor if such a consultation is taking place. The substantial\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n29\nmodification can be implemented sooner if the Member State has authorised the\nsubstantial modification.\nIf the Member State has sent a request for information, there may be, depending on\nnational provisions, a clock-stop, as long as the Member State has not received the\nadditional information.\nFurther, the sponsor needs to ensure that updated documents in relation to a substantial\nmodification are submitted to both the competent authority and the ethics committee\nwhere required. Note that there may be national provisions in place regarding, e.g., the\nnotification and review of substantial modifications to the ethics committees.\nOnce a substantial modification is authorised in a particular Member State, the change\ncan be implemented there, even if it is not yet authorised in other Member States.",
+      "parent_section": null
+    },
+    {
+      "section_number": "52",
+      "title": "Is it necessary to announce substantial modifications to competent",
+      "content": "52. Is it necessary to announce substantial modifications to competent\nauthorities of a performance study that is conducted with companion\ndiagnostics using left-over samples only?\nNo. Article 58(2) states that Article 58(1) does not apply to performance studies involving\ncompanion diagnostics using only left-over samples. As Article 58(1) refers to\nperformance studies having to meet several requirements, including those to be\ndesigned, authorised, conducted, recorded, and reported in accordance with Article 58(1)\nand Articles 59-77 – this does not apply to performance studies involving companion\ndiagnostics using only left-over samples. Article 71 on ‘substantial modifications to\nperformance studies’ does therefore not apply to performance studies involving\ncompanion diagnostics using only left-over samples.",
+      "parent_section": null
+    },
+    {
+      "section_number": "53",
+      "title": "What notification requirements apply to non-substantial modifications?",
+      "content": "53. What notification requirements apply to non-substantial modifications?\nArticle 71 of the IVDR does not describe how sponsors or authorities should deal with\nnon-substantial modifications. Once EUDAMED is available, sponsors are expected to\nkeep the information in the database up to date in accordance with Article 66(2) of the\nIVDR. However, in the absence of EUDAMED, Member States have not yet harmonised\ntheir approach, and it is thus necessary to check the national requirements.",
+      "parent_section": null
+    },
+    {
+      "section_number": "54",
+      "title": "If there is a common CTR/IVDR document (e.g., Informed Consent Form)",
+      "content": "54. If there is a common CTR/IVDR document (e.g., Informed Consent Form)\nwithin a combined study with modifications, must this updated document\nbe submitted through both regulatory pathways?\nDepending on the nature of the modification, it might be considered a substantial\nmodification according to the IVDR (see Q47) and/or the CTR.\nModifications to elements of a combined study, or documentation for the combined study,\nthat are not likely to have a substantial impact on the safety, health, or rights of the\nsubjects, or on the robustness or reliability of the data, may not require a notification of\nsubstantial modification regarding the performance study. Examples could include:\n• Modifications to informed consent documents that are requested by ethics\ncommittees during review of the medicinal product clinical trial application and\npertain only to explaining the risks of administration of the medicinal product.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n30\n• Modifications to the investigational medicinal product dossier or the\ninvestigator’s brochure for the medicinal product that are unrelated to the\nperformance study and to treatment decisions made on the basis of the IVD\nresult.\n• Modifications to the clinical trial protocol to add additional study visits,\nassessments and/or to clarify eligibility criteria, that are unrelated to the\nperformance of the device.\nIf the modification is only concerning the medicinal product under investigation, and\ndoes not impact the performance study, it does not have to be notified and assessed as\na substantial modification for the parallel performance study. Some Member States\nrequire that copies of updated documents for their records are provided for the\nperformance study (regarded as non-substantial modifications).\nRegarding possibilities for simplifying the process when substantial modifications are to\nbe made according to the CTR and the IVDR in parallel by means of coordinated\nassessment procedures and number of ethics committees involved, there are different\nsolutions to this applied in the Member States. The national differences are mainly\nrelated to the organisation at competent authority level and how the Member State has\nset up the ethics committees in relation to the medicinal product and device legislations.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2025-5\n31\nAppendix I: Performance studies under the IVDR – regulatory pathways",
+      "parent_section": null
+    }
+  ]
+}

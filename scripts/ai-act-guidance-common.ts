@@ -1,17 +1,18 @@
 /**
- * Shared PDF-fetch / text-parse / DB-insert helper for AI Act guidance
+ * Shared PDF-fetch / text-parse / seed-file helper for AI Act guidance
  * ingestion scripts. Each per-document script provides a GuidanceDocConfig
- * and calls ingestGuidanceDocument(config).
+ * and calls ingestGuidanceDocument(config), which writes a seed file to
+ * data/seed/guidance/<id>.json. build-db.ts is the single writer to the
+ * SQLite DB and picks up every seed file on rebuild.
  */
-import Database from 'better-sqlite3';
-import { readFileSync } from 'fs';
+import { mkdirSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const DB_PATH = join(__dirname, '..', 'data', 'regulations.db');
+const SEED_DIR = join(__dirname, '..', 'data', 'seed', 'guidance');
 const RATE_LIMIT_MS = 2000;
 
 export interface GuidanceDocConfig {
@@ -147,16 +148,6 @@ export function parseSections(text: string): ParsedSection[] {
 
 export async function ingestGuidanceDocument(config: GuidanceDocConfig): Promise<void> {
   console.log(`=== Ingesting ${config.id}: ${config.title} ===`);
-  const db = new Database(DB_PATH);
-  db.pragma('journal_mode = DELETE');
-  db.pragma('foreign_keys = ON');
-
-  // Ensure schema exists (idempotent).
-  const schemaSql = readFileSync(
-    join(__dirname, 'add-guidance-tables.sql'),
-    'utf-8',
-  );
-  db.exec(schemaSql);
 
   let sections: ParsedSection[] = [];
   // Retain raw per-chapter (or whole-doc) text for fallback use.
@@ -218,7 +209,6 @@ export async function ingestGuidanceDocument(config: GuidanceDocConfig): Promise
         }));
       console.log(`  Emitting ${sections.length} full-doc fallback sections.`);
     } else {
-      db.close();
       throw new Error(
         `Parsed ${sections.length} sections for ${config.id}; expected at least ${config.minSections}. ` +
           `Section parser may need adjustment for this document's numbering scheme.`,
@@ -226,45 +216,44 @@ export async function ingestGuidanceDocument(config: GuidanceDocConfig): Promise
     }
   }
 
-  const insertDoc = db.prepare(`
-    INSERT OR REPLACE INTO guidance_documents
-    (id, title, issuing_body, document_reference, date_published, related_regulation, url, pdf_url, status, metadata)
-    VALUES (@id, @title, @issuingBody, @reference, @datePublished, @relatedRegulation, @pageUrl, @pdfUrl, @status, @metadata)
-  `);
-  const insertSection = db.prepare(`
-    INSERT OR REPLACE INTO guidance_sections
-    (document_id, section_number, title, content, parent_section)
-    VALUES (@documentId, @sectionNumber, @title, @content, @parentSection)
-  `);
+  writeGuidanceSeed(config, sections);
+}
 
-  const tx = db.transaction((cfg: GuidanceDocConfig, secs: ParsedSection[]) => {
-    insertDoc.run({
-      id: cfg.id,
-      title: cfg.title,
-      issuingBody: cfg.issuingBody,
-      reference: cfg.reference,
-      datePublished: cfg.datePublished,
-      relatedRegulation: cfg.relatedRegulation,
-      pageUrl: cfg.pageUrl,
-      pdfUrl: cfg.pdfUrl,
-      status: cfg.status,
-      metadata: cfg.metadata ? JSON.stringify(cfg.metadata) : null,
-    });
-    for (const sec of secs) {
-      insertSection.run({
-        documentId: cfg.id,
-        sectionNumber: sec.sectionNumber,
-        title: sec.title,
-        content: sec.content,
-        parentSection: sec.parentSection,
-      });
-    }
-  });
-  tx(config, sections);
+/**
+ * Write a guidance seed file. Last-write-wins on duplicate section_number
+ * within a document, matching the historical INSERT OR REPLACE + UNIQUE
+ * constraint behaviour from the direct-DB writer.
+ */
+export function writeGuidanceSeed(
+  config: GuidanceDocConfig,
+  sections: ParsedSection[],
+): void {
+  mkdirSync(SEED_DIR, { recursive: true });
 
-  const count = (db
-    .prepare('SELECT COUNT(*) as cnt FROM guidance_sections WHERE document_id = ?')
-    .get(config.id) as { cnt: number }).cnt;
-  console.log(`  Stored ${count} sections for ${config.id}`);
-  db.close();
+  const byNumber = new Map<string, ParsedSection>();
+  for (const sec of sections) byNumber.set(sec.sectionNumber, sec);
+  const deduped = Array.from(byNumber.values());
+
+  const seed = {
+    id: config.id,
+    title: config.title,
+    issuing_body: config.issuingBody,
+    document_reference: config.reference,
+    date_published: config.datePublished,
+    related_regulation: config.relatedRegulation,
+    url: config.pageUrl,
+    pdf_url: config.pdfUrl,
+    status: config.status,
+    metadata: config.metadata ?? null,
+    sections: deduped.map((sec) => ({
+      section_number: sec.sectionNumber,
+      title: sec.title,
+      content: sec.content,
+      parent_section: sec.parentSection,
+    })),
+  };
+
+  const path = join(SEED_DIR, `${config.id}.json`);
+  writeFileSync(path, JSON.stringify(seed, null, 2) + '\n', 'utf-8');
+  console.log(`  Wrote ${deduped.length} sections to ${path}`);
 }

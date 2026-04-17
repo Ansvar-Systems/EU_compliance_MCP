@@ -1,0 +1,50 @@
+{
+  "id": "MDCG_2021_22_rev1",
+  "title": "MDCG 2021-22 rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-22 rev.1",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/98db0ec5-306f-4a0d-8bc9-5724f5d48942_en?filename=mdcg_2021-22_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Additional intended purpose outside Rule 1 or 2 of IVDR Annex VIII: A",
+      "content": "1) Additional intended purpose outside Rule 1 or 2 of IVDR Annex VIII: A\nclass D device with an intended purpose X and another class D device with\nthe intended purpose X and an additional intended purpose Y which falls\noutside of Rule 1 or 2 of IVDR Annex VIII should be considered of the same\ntype for the purposes of the expert panel consultation, provided all other\nelements of the intended purpose and technology used are similar. For\nexample, a device intended for screening blood donations for syphilis and\nanother device intended both for screening blood donations for syphilis and to\ndiagnose syphilis in the individual should be considered of the same type for\nthe purposes of the expert panel consultation.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "What procedure should a notified body follow to determine whether a given",
+      "content": "2. What procedure should a notified body follow to determine whether a given\ncertification is the first for that type of device?\nIt is the notified body who has to decide whether the certification of the device in\nquestion is a first certification of its type. This means that the notified body should\njudge whether the above elements of the definition of “type of device” are similar to\nan already certified device or to a device with the consultation of the expert panel\neither ongoing or completed (see question 1) for it to be considered of the same type.\nFor its decision, the notified body should:\n use its own knowledge and expertise;\n consider information provided by the manufacturer, including relevant\nresearch (e.g. scientific and market research);\n consider the information on type of device for the already completed and\nongoing consultations of the expert panel, referred to in question 3.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-22 Rev.1\nPage 5 of 6\nIf the notified body comes to the conclusion that it is the first certification of that type\nof device (either under Directive 98/79/EC or under Regulation (EU) 2017/746), and\nif no common specifications are available for that device, the notified body has to\nconsult the expert panel.\nThe notified bodies should document their assessment of whether a given\ncertification is the first of that type of device, and their corresponding conclusion.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "How should the notified body indicate the type of device in its submission",
+      "content": "3. How should the notified body indicate the type of device in its submission\nto the IVD expert panel?\nWhen consulting the IVD expert panel, the notified body should provide, as part of\nthe documents submitted to the Secretariat, the information requested in the template\nbelow describing the type of device.\nThe template duly completed by the notified body will be published on the website of\nthe expert panel for the ongoing consultations of the expert panel. Once the expert\npanel has issued its views, the template will be part of the views.\nTable 1: Template for description of the type of device for the purposes of\nexpert panel views according to Art 48(6) of Regulation (EU) 2017/746\nIntended purpose (P)\nP1 what is detected and/or measured\nplease specify the analyte(s) or marker(s), e.g. SARS-CoV-2 spike\nprotein, Kel1 (K)\nP2 function of the device\ne.g. diagnosis, aid to diagnosis, monitoring, determining the infectious\nload, tissue typing etc\nP3 the specific disorder, condition or risk factor of interest that\nit is intended to detect, define or differentiate\ne.g. hepatitis C infection, exposure to SARS-CoV-2, risk of HIV\ntransmission in blood transfusion etc.\nP4 whether it is automated or not\nP5 whether it is qualitative, semi-quantitative or quantitative\nP6 type of specimen(s)\ne.g. whole blood, serum, saliva etc\nP7 where applicable, the testing population\ne.g. persons with specific health conditions, persons with specific\nsymptoms, children in a certain age range\nP8 intended user\nTechnology (T)\nT1 principle of the assay method or principles of operation of\nthe instrument\ne.g. real-time PCR, qualitative PCR, digital PCR, sandwich\nimmunoassay, competitive immunoassay, immunoturbidimetric\nassay etc.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-22 Rev.1\nPage 6 of 6",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "What is the meaning of the phrase “where no CS are available” in Art 48(6)?",
+      "content": "4. What is the meaning of the phrase “where no CS are available” in Art 48(6)?\nThis should be understood as the case where no common specifications have been\nadopted and published in the Official Journal of the European Union for that type of\ndevice. After publication, the CS are considered “available”, so the consultation of the\nexpert panel is not required.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "If a notified body identifies that a consultation of an expert panel is",
+      "content": "5. If a notified body identifies that a consultation of an expert panel is\ncurrently ongoing for that type of device, what should it do regarding the\ncertification process?\nThis question does not concern the notified body that consults the expert panel on\nthe first certification for that type of device, but rather the notified bodies that might be\ndealing with a second, third certification etc. while the consultation on the first\ncertification is still ongoing. These notified bodies should not issue the certificate until\nthe consultation of the expert panel on the first certification for that type of device is\ncompleted and the views are published. It is highly recommended that the notified\nbodies should give consideration to the views of the expert panel in its decision to\nissue the certificate.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Control materials: If a device and control materials with assigned value",
+      "content": "6) Control materials: If a device and control materials with assigned value\n(positive or negative if they fall in class D) are produced by the same\nmanufacturer, they should be submitted to the expert panel together as part of\none consultation procedure.",
+      "parent_section": null
+    }
+  ]
+}
