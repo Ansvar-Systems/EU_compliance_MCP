@@ -1,0 +1,314 @@
+{
+  "id": "MDCG_2021_6",
+  "title": "MDCG 2021-6 - rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-6",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/f124f630-389e-4c45-90dc-24ec0a707838_en?filename=mdcg_2021-6_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Change to a primary or secondary endpoint;",
+      "content": "1. Change to a primary or secondary endpoint;",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Use of a new mode of measurement for the primary endpoint;",
+      "content": "2. Use of a new mode of measurement for the primary endpoint;",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "A change of clinical investigation design which is likely to have a significant impact on",
+      "content": "3. A change of clinical investigation design which is likely to have a significant impact on\nthe statistical analysis or the benefit/risk assessment;",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "A change in the definition of the end of the clinical investigation;",
+      "content": "4. A change in the definition of the end of the clinical investigation;",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "A modification of the duration of treatment and/or the follow up of subjects;",
+      "content": "5. A modification of the duration of treatment and/or the follow up of subjects;",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Changes in the number of scheduled subject visits;",
+      "content": "6. Changes in the number of scheduled subject visits;",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Change of a diagnostic or other assessment procedure which is likely to have a",
+      "content": "7. Change of a diagnostic or other assessment procedure which is likely to have a\nsignificant impact on the safety of the subject or the scientific value of the clinical data\ncollected in the clinical investigation;",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Changes to the data monitoring committee which may affect, for example, the safety",
+      "content": "8. Changes to the data monitoring committee which may affect, for example, the safety\nevaluation, or the independence and impartiality of the committee;",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Amending the number of subjects to be included in the clinical investigation, either due",
+      "content": "9. Amending the number of subjects to be included in the clinical investigation, either due\nto an adaptation of the sample size calculation or to maintain a previously defined\nsample size calculation due to an increased unanticipated dropout rate;",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Addition of an interim analysis not planned in the initial CIP;",
+      "content": "10. Addition of an interim analysis not planned in the initial CIP;",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "Deletion of an interim analysis;",
+      "content": "11. Deletion of an interim analysis;",
+      "parent_section": null
+    },
+    {
+      "section_number": "12",
+      "title": "Change of safety criteria to modify or interrupt treatment;",
+      "content": "12. Change of safety criteria to modify or interrupt treatment;",
+      "parent_section": null
+    },
+    {
+      "section_number": "13",
+      "title": "Content change in the subject information sheet and informed consent forms, or other",
+      "content": "13. Content change in the subject information sheet and informed consent forms, or other\ninformation provided to the subject;",
+      "parent_section": null
+    },
+    {
+      "section_number": "14",
+      "title": "Change of inclusion or exclusion criteria if these changes are likely to have a significant",
+      "content": "14. Change of inclusion or exclusion criteria if these changes are likely to have a significant\nimpact on the safety of the subject or scientific value of the clinical data collected in the\nclinical investigation.\nAmendments related to the benefit/risk of the clinical investigation",
+      "parent_section": null
+    },
+    {
+      "section_number": "15",
+      "title": "New preclinical or clinical data which is likely to impact on the benefit/risk assessment;",
+      "content": "15. New preclinical or clinical data which is likely to impact on the benefit/risk assessment;",
+      "parent_section": null
+    },
+    {
+      "section_number": "16",
+      "title": "The revocation or suspension of the conformity assessment certificates related to the",
+      "content": "16. The revocation or suspension of the conformity assessment certificates related to the\ndevice under investigation.\nAmendments related to the use of the investigational device",
+      "parent_section": null
+    },
+    {
+      "section_number": "17",
+      "title": "Change of treatment modalities (modification of procedure, techniques, instructions for",
+      "content": "17. Change of treatment modalities (modification of procedure, techniques, instructions for\nuse) of the investigated device;",
+      "parent_section": null
+    },
+    {
+      "section_number": "18",
+      "title": "The type and/or duration of the investigator's training.",
+      "content": "18. The type and/or duration of the investigator's training.\nAmendments related to other information",
+      "parent_section": null
+    },
+    {
+      "section_number": "19",
+      "title": "A change of sponsor or the sponsor’s legal representative;",
+      "content": "19. A change of sponsor or the sponsor’s legal representative;",
+      "parent_section": null
+    },
+    {
+      "section_number": "20",
+      "title": "Change/addition of a clinical investigation site;",
+      "content": "20. Change/addition of a clinical investigation site;",
+      "parent_section": null
+    },
+    {
+      "section_number": "21",
+      "title": "Change of manufacturer;",
+      "content": "21. Change of manufacturer;",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "New insurance policy;",
+      "content": "22. New insurance policy;",
+      "parent_section": null
+    },
+    {
+      "section_number": "23",
+      "title": "Change in compensation paid to subjects and/or investigators/site;",
+      "content": "23. Change in compensation paid to subjects and/or investigators/site;",
+      "parent_section": null
+    },
+    {
+      "section_number": "24",
+      "title": "Change of /addition of new investigator(s).",
+      "content": "24. Change of /addition of new investigator(s).\nAmendments related to the manufacturing process",
+      "parent_section": null
+    },
+    {
+      "section_number": "25",
+      "title": "Modification of the process of manufacturing, sterilization or packaging",
+      "content": "25. Modification of the process of manufacturing, sterilization or packaging\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n35\nAnnex III: Does my combination product study require an MDR clinical investigation submission?\n* Medical device defined in point (1) of Article 2 of the\nMDR. In vitro diagnostic medical device defined in point\n(1) of Article 2 of IVDR. For situations where medicinal\nproducts and IVD medical devices are investigated in\nparallel, please consult MDCG 2022-10.\nIf you are unsure if the device is a Medical Device, you\ncan seek advice from your NCA.\n** Integral as per the MDR Article 1(8) and 1(9); the\nmedicinal product and device must form a single entity,\nthat is intended exclusively for use in the given\ncombination and which is not reusable. Further\nclarification on the meaning of integral according to Article\n1(8) and 1(9) is provided in MDCG 2022-05.\n† Check if study meets CTR definition of clinical trial.\nConsultation with the appropriate medicinal product\ncompetent authority may be considered.\n‡ Depending on the applicable MDR Article, this may be\nan application, notification, or other national requirement\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n36\nStudy involving medicinal product and device\nCTA may be needed\n†\n.\nIs the device a\nMedical Device?*\nNo Yes\nDo the device and the\nmedicinal product form a\nsingle integral product**?\nYes, action of medicinal\nproduct is principal\n(not ancillary)\nYes, medicinal product\nis ancillary to device\nNo\nIs the study a Clinical\nInvestigation, per Article\n2(45) of the MDR?\nNo.\nMDR CI submission not needed.\nYes.\nMDR CI submission may be needed\n‡\n.\nCTA Clinical Trial Application (medicinal products)\nCI Clinical Investigation (medical devices)\nCTR Clinical Trials Regulation (EU Reg 2014/536)\nMDR Medical Device Regulation (EU Reg 2017/745)\nIVDR In Vitro Diagnostic Regulation (EU Reg 2017/746)\nNCA National Competent Authority",
+      "parent_section": null
+    },
+    {
+      "section_number": "26",
+      "title": "What documents do I have to submit for a clinical investigation that follows article",
+      "content": "26. What documents do I have to submit for a clinical investigation that follows article\n74(1) of the MDR?\nArticle 74(1) of the MDR points out that the same documentation has to be provided with a\nnotification as for an application, see chapter II in Annex XV of the MDR.\nThe guidance document MDCG 2021-08 on clinical investigation application/notification\ndocuments\n35\nprovides templates for clinical investigation application/notification created to\nsupport clinical investigation procedures with respect to the MDR. In addition, it is necessary\nto visit the website of the relevant competent authority in the country where the clinical\ninvestigation is to be conducted, to check national requirements regarding the notification\ncontent.",
+      "parent_section": null
+    },
+    {
+      "section_number": "27",
+      "title": "What documents do I have to submit for a clinical investigation that follows article 82",
+      "content": "27. What documents do I have to submit for a clinical investigation that follows article 82\nof the MDR?\nArticle 82 states minimum requirements for those clinical investigations that are not performed\npursuant to any of the purposes listed in Article 62(1). These clinical investigations shall comply\nwith the provisions of Article 62 (2) and (3), points (b), (c), (d), (f), (h), and (l) of Article 62(4)\nand Article 62(6).\nIt is not possible to provide general guidance on submission requirements for these studies,\nas the submission requirements for studies according to Article 82 of the MDR are subject to\nnational provisions. Thus, it is necessary to check the website of the relevant competent\nauthority and/or the relevant ethics committee in the country where the clinical investigation is\nto be conducted, to obtain information on national requirements.\n32\nMDCG 2021-08 Clinical investigation application/notification documents\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n22",
+      "parent_section": null
+    },
+    {
+      "section_number": "28",
+      "title": "What is the expected content of the Investigator’s Brochure (IB)?",
+      "content": "28. What is the expected content of the Investigator’s Brochure (IB)?\nThe purpose of the IB is to provide the investigators with sufficient data on safety and\nperformance of the investigational device, from pre-clinical testing or clinical investigations to\njustify human exposure to the investigational device.\nSection 2 in chapter II of Annex XV of the MDR lists the required content of the IB. In addition,\nit is recommended that the annex B of ISO 14155:2020\n33\nis adhered to.\nFor further guidance, consult MDCG document “Detailed guidance on content of the\nInvestigator’s Brochure for clinical investigations of medical devices”.",
+      "parent_section": null
+    },
+    {
+      "section_number": "29",
+      "title": "What is the expected content of the Clinical Investigation Plan (CIP)?",
+      "content": "29. What is the expected content of the Clinical Investigation Plan (CIP)?\nThe CIP\n34\nshall clearly outline the objectives and endpoints of the clinical investigation. The\nproposed design shall be adequately justified based on scientific and ethical principles.\nSection 3 in chapter II of Annex XV of the MDR lists the required content of the CIP. In\naddition, it is recommended that the annex A of ISO 14155:2020\n35\nis adhered to.\nFor further guidance, consult MDCG document “Detailed guidance on content of the Clinical\nInvestigation Plan for clinical investigations of medical devices”.\nModifications to clinical investigations",
+      "parent_section": null
+    },
+    {
+      "section_number": "30",
+      "title": "How is a substantial modification defined?",
+      "content": "30. How is a substantial modification defined?\nA substantial modification of a clinical investigation is a change to the clinical investigation which\nis likely to have a substantial impact on the safety or health or rights of the subject, or on the\nrobustness or reliability of clinical data generated by the investigation. Modifications of the clinical\ninvestigation plan (CIP), investigators brochure (IB), the subject information sheet and other\nclinical investigation documentation may or may not be considered as substantial modifications.\nSponsors should also take into consideration the fact that some modifications may seriously\nimpact the design or scientific outcome of the clinical investigation and may require the\ninitiation of a new clinical investigation.\nThe procedure to notify a substantial modification is further described in Article 75 of the MDR.\nA non-exhaustive list of modifications that may be interpreted as substantial can be found in\nAnnex II of this document.\n33\nClinical investigation of medical devices for human subjects - Good clinical practice (ISO\n14155:2020)\n34\nMay also be called “protocol”\n35\nClinical investigation of medical devices for human subjects - Good clinical practice (ISO\n14155:2020)\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n23\nIt is the sponsor’s responsibility to determine if the modification is substantial or not. However,\nif the sponsor is uncertain about the impact for a particular modification of a clinical\ninvestigation, the National Competent Authority may be consulted prior notification.",
+      "parent_section": null
+    },
+    {
+      "section_number": "31",
+      "title": "When can a sponsor submit a substantial modification notification?",
+      "content": "31. When can a sponsor submit a substantial modification notification?\nA notification of substantial modification may be submitted in accordance with Article 75 of the\nMDR\n36\nas soon as a clinical investigation is allowed to commence in accordance with the MDR.\nMoreover, it is not recommended to submit a substantial modification while assessment of an\nalready submitted substantial modification is still ongoing. It is also important to consider\nwhether national procedures may apply regarding modifications to clinical investigations.\n37",
+      "parent_section": null
+    },
+    {
+      "section_number": "32",
+      "title": "Is a change to the investigational device to be considered as a substantial",
+      "content": "32. Is a change to the investigational device to be considered as a substantial\nmodification to the clinical investigation or does it lead to the submission of a new\nclinical investigation application?\nIn general, a change to the investigational device is a substantial modification of the clinical\ninvestigation. As an example, a change to the device which alters the risk profile or adds new\nrisks is likely to have a substantial impact on the safety or health or rights of the subject and,\nthus, is a substantial modification.\nSome modifications to the investigational device are so extensive in nature that a new clinical\ninvestigation should be applied for. Modifications to the device which alter the suitability of the\nclinical investigation design to provide evidence for the safety, performance or clinical benefit\nof the device, may result in refusal of the modification and the submission of a new clinical\ninvestigation application may be required.\nIn order for the data resulting from a clinical investigation to be relevant for a certain device, in\na situation where several versions of the device have been used during the clinical\ninvestigation, the aspect of equivalence may need to be considered.\nMDCG 2020-5 provides guidance on equivalence in relation to clinical evaluation. This\nguidance may support sponsors in determining whether a modification of a device could be\ndone within the same clinical investigation, or if a new clinical investigation application should\nbe submitted. Member States will assess on a case-by-case basis if a change to the\ninvestigational device alters the suitability of the clinical investigation design to provide\nevidence for the safety, performance or clinical benefit of the device. If the modified\ninvestigational device is not equivalent to that one object of the initial application, according to\nMDCG 2020-5, a new clinical investigation may be required.\n36\nPlease refer to Q30 of this document for further details.\n37\nFor example, national procedures relating to Ethics Committee opinions.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n24",
+      "parent_section": null
+    },
+    {
+      "section_number": "33",
+      "title": "According to Article 75 of the MDR, if a sponsor intends to introduce modifications to",
+      "content": "33. According to Article 75 of the MDR, if a sponsor intends to introduce modifications to\na clinical investigation which are substantial, the sponsor has to notify the Member\nState within ‘one week’. From which point in time does this ‘one week’ start?\nThe ‘one week’ period starts from the date when the relevant documents (such as clinical\ninvestigation plan, investigator brochure, subject information sheet and informed consent form)\nare issued in an updated version.\nIt is acknowledged that changes to e.g. a CIP may require subsequent changes to other\ndocuments such as patient information, and that these changes may be done on a different\ndate. Such changes can be collected and submitted together when the last affected document\nis issued but note that the implementation of the changes to the clinical investigation can not\nbe done until the deadline in Article 75 of the MDR has expired or an authorisation letter is\nissued by the Competent Authority and/or Ethics Committee if this is required according to\nnational provisions.",
+      "parent_section": null
+    },
+    {
+      "section_number": "34",
+      "title": "Can the sponsor start to implement the substantial modification after 38 days of the",
+      "content": "34. Can the sponsor start to implement the substantial modification after 38 days of the\nnotification date to the Member State?\nYes, if the sponsor has not heard from the Member State after 38 days the substantial\nmodification may be implemented, provided that an Ethics Committee in that Member State\nhas not issued a negative opinion in relation to the substantial modification. This 38-day period,\nwhich starts when all the relevant documentation with clearly identifiable changes have been\nsubmitted in their entirety, may be extended by a further 7 days in order to consult with experts.\nMember States will notify the sponsor if such a consultation is taking place. The substantial\nmodification can be implemented sooner if the Member State has authorised the substantial\nmodification.\nIf the Member State has sent a request for information, there may be, depending on national\nprovisions, a clock-stop, as long as the Member State has not received the additional\ninformation.\nFurther, the sponsor needs to ensure that updated documents in relation to a substantial\nmodification are submitted to both the Competent Authority and the Ethics committee where\nrequired. Note that there may be national provisions in place regarding e.g. the notification\nand review of substantial modifications to Ethics committees.",
+      "parent_section": null
+    },
+    {
+      "section_number": "35",
+      "title": "What notification requirements apply to non-substantial modifications?",
+      "content": "35. What notification requirements apply to non-substantial modifications?\nArticle 75 of the MDR does not describe how sponsors or authorities shall deal with non-\nsubstantial modifications. Once EUDAMED is available, sponsors are expected to keep the\ninformation in the database up to date in accordance with Article 70(2) of the MDR. However,\nin the absence of EUDAMED Member States have not yet harmonised their approach, and it\nis thus necessary to check the national requirements.\nNote that there may be national provisions in place regarding e.g. the notification and review\nof non-substantial modifications to Ethics committees.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n25\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n26\nTimeline considerations for clinical investigations",
+      "parent_section": null
+    },
+    {
+      "section_number": "36",
+      "title": "Which date is considered as the start of the clinical investigation?",
+      "content": "36. Which date is considered as the start of the clinical investigation?\nReporting of the clinical investigation start date is not explicitly required by the MDR, but in\nsome Member States it is required by national legislation to report this to the relevant Authority.\nFurther, the start date of a clinical investigation should be indicated in EUDAMED (once\navailable) to disseminate relevant information to the public and for Competent Authority\ninspection planning purposes. The start date of a clinical investigation should be described in\nthe clinical investigation plan. In general it is considered to be, the first act of recruitment in the\nclinical investigation in a Member State. The first act of recruitment should be specified by the\nsponsor and could be, for example, the date of initiation of the clinical investigation in the first\nsite or the date when the first investigation-specific advertisement is published. In any case the\nclinical investigation cannot start earlier than the authorisation date (or commencement date\nnotified for PMCF clinical investigations) or not later than the date recruitment starts.",
+      "parent_section": null
+    },
+    {
+      "section_number": "37",
+      "title": "Which date is considered as the end date of a clinical investigation?",
+      "content": "37. Which date is considered as the end date of a clinical investigation?\nAs stated in Article 77(2) of the MDR, the end of a clinical investigation shall be deemed to\ncoincide with the last visit of the last subject unless another point in time for such end is set\nout in the clinical investigation plan (for example site closure occurring after the last visit of the\nlast subject).",
+      "parent_section": null
+    },
+    {
+      "section_number": "38",
+      "title": "Does the sponsor have to notify the end of the clinical investigation when it is",
+      "content": "38. Does the sponsor have to notify the end of the clinical investigation when it is\nconcluded in one or more Member States, or when the overall clinical investigation is\ncompleted globally?\nAccording to Article 77(3) of the MDR the sponsor shall notify each Member State in which a\nclinical investigation was being conducted of the end of that clinical investigation in that\nMember State. That notification shall be made within 15 days of the end of the clinical\ninvestigation in relation to that Member State.\nIf a clinical investigation is conducted in more than one Member State the sponsor shall also\nnotify all Member States in which that clinical investigation was conducted when the clinical\ninvestigation is completed in all Member States. That notification shall be made within 15 days\nof the end of the clinical investigation in the last Member State.\nIf the clinical investigation is still ongoing in one or more third countries when the end of the\nclinical investigation in the EU is reported, this will impact the sponsor’s ability to provide a\nclinical investigation report of the overall study (i.e. fulfil the reporting requirements of Article\n77(5) of the MDR). Therefore, the sponsor should inform the concerned Member States of the\nexpected end of study globally if this does not coincide with the end of study in the EU.\nSponsors are encouraged to notify the Member States concerned to confirm the actual end of\nstudy globally, once reached.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n27",
+      "parent_section": null
+    },
+    {
+      "section_number": "39",
+      "title": "When does the sponsor have to notify an early termination of a clinical investigation?",
+      "content": "39. When does the sponsor have to notify an early termination of a clinical investigation?\nIn case a clinical investigation is temporarily halted or terminated early, the sponsor has to\ninform the Member State concerned within 15 days, or within 24 hours if based on safety\ngrounds. This reporting timeline should be counted from the sponsor’s decision to\nhalt/terminate the clinical investigation.\nIn case of restart after temporarily halted study, a notification will be made to the CA. In case\nof temporarily halt on safety grounds, this notification should be submitted as a substantial\nmodification.\nNote that if inclusion of new subjects is halted in a country before the expected number of\nsubjects in that Member State was reached, and this is due to the achieved recruitment of\nthe total number of subjects globally, this is not considered as early termination.",
+      "parent_section": null
+    },
+    {
+      "section_number": "40",
+      "title": "When does the sponsor have to submit the clinical investigation report with the",
+      "content": "40. When does the sponsor have to submit the clinical investigation report with the\nresults?\nIrrespective of the outcome of the clinical investigation, within one year of the global end of the\nclinical investigation the sponsor shall submit to all the Member States in which a clinical\ninvestigation was conducted a clinical investigation report as referred to in Section 2.8 of\nChapter I and Section 7 of Chapter III of Annex XV to the MDR.\nFollowing a decision of an early termination or temporary halt, a clinical investigation report is\nrequired to be submitted within 3 months to all Member States in which the clinical investigation\nwas conducted. Sponsors are expected to submit a risk analysis concerning any safety\ngrounds related to the temporary halt.\nIn the event that the clinical investigation is restarted within three months of the temporary halt,\nthe sponsor does not have to submit a clinical investigation report until the clinical investigation\nhas been completed. The final clinical investigation report should include detail with respect to\nthe temporary halt.",
+      "parent_section": null
+    },
+    {
+      "section_number": "41",
+      "title": "For how long must study documentation be retained?",
+      "content": "41. For how long must study documentation be retained?\nIt is stated in section 3 chapter III (covering sponsor’s obligations) in Annex XV of the MDR\nthat the documentation mentioned in annex XV shall be kept for a period of at least 10 years\nafter the clinical investigation with the device in question has ended, or, in the event that the\ndevice is subsequently placed on the market, at least 10 years after the last device has been\nplaced on the market. In the case of implantable devices, the period shall be at least 15\nyears.\nNote that the phrase ‘placed on the market’ refers to each single individual device, i.e. the\nreference is to the last individual device transferred from the manufacturer to another party.\n38\nThis means that in practice documentation has to be stored for an extended period of time.\n38\nThis is eluded from the Blue Guide\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n28\nClinical investigation reports",
+      "parent_section": null
+    },
+    {
+      "section_number": "42",
+      "title": "What shall be the content of the clinical investigation report?",
+      "content": "42. What shall be the content of the clinical investigation report?\nThe minimum requirements for content of the clinical investigation report (which will be made\npublic according to Article 77 of the MDR) are defined in Chapter III point 7 of Annex XV to the\nMDR. The standard ISO 14155:2020, Annex D also has information which is relevant regarding\nthe content of a clinical investigation report.\nIt is important to note that the summary of serious adverse events, adverse device effects and\ndevice deficiencies should only present aggregated information related to these events.\nDescriptions of single events or line listings with direct or indirect personal data may jeopardise\nsubject privacy and should be avoided in a report which will be made public.\nTo put the information that is required (minimum content) in a relevant context and enhance\nthe understanding of the clinical investigation report, sponsors are encouraged to also include\nthe following information in the report:\nClinical investigation background\nPresentation of the context and reasons for conducting the clinical investigation.\nOutcome measures\nDescription of the selected outcome measures and their relevance for the assessment of safety\nand performance of the investigational device.\nClinical investigation conduct\n• Include information on the dates defining the periods of recruitment and follow-up of subjects\nin order to describe the time period during which the clinical investigation was conducted.\n• Interventions: Precise details of the interventions intended for each group and how and\nwhen they were actually administered should be included in the report. State the\nprecise dose (if relevant), treatment duration, control interventions and additional\ntreatment for each of the groups.\nClinical investigation subjects\nBaseline data (baseline demographic and clinical characteristics of each group) should be\nincluded. Also describe the flow of subjects through each stage (diagram, if appropriate).\nFor each group the numbers of subjects randomly assigned, receiving intended treatment,\ncompleting the clinical investigation, and analysed for the primary outcome should be stated.\nIndicate the number of subjects in each group which have been included in each analysis and\nwhether the analysis was by \"intention-to-treat\" or “per protocol”.\nDeviations and amendments\nDeviations from the initial clinical investigation plan and a description of any CIP amendments\nshould be described and justified.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n29",
+      "parent_section": null
+    },
+    {
+      "section_number": "43",
+      "title": "Is there a template for the mandatory summary of the clinical investigation report",
+      "content": "43. Is there a template for the mandatory summary of the clinical investigation report\nreferred to in article 77(5) of the MDR?\nYes, refer to the Commission Guidance on the content and structure of the summary of the\nclinical investigation report (2023/C 163/06)\n39\n.\nArrangements for the transitional period",
+      "parent_section": null
+    },
+    {
+      "section_number": "44",
+      "title": "When will EUDAMED allow applications for clinical investigation?",
+      "content": "44. When will EUDAMED allow applications for clinical investigation?\nThe use of EUDAMED for Clinical Investigation and Performance Studies becomes\nmandatory at the end of the 6 months transitional period after the publication of a notice in\nthe Official Journal of the European Union that EUDAMED has achieved full functionality\nfollowing the outcome of an independent audit. It will not be possible to submit applications\nvia EUDAMED before it is mandatory to use.\nLink to the EUDAMED: https://ec.europa.eu/tools/eudamed",
+      "parent_section": null
+    },
+    {
+      "section_number": "45",
+      "title": "Until the clinical investigation module in EUDAMED is ready, how can the sponsor",
+      "content": "45. Until the clinical investigation module in EUDAMED is ready, how can the sponsor\ncomply with the MDR?\nClinical investigation sponsors will not have the opportunity to register as actors in EUDAMED\nas of the date of application of the MDR, nor to submit applications or notifications via\nEUDAMED.\nTo submit an application:\nAll requested information to apply for or notify a clinical investigation should be submitted to\nthe national competent authorities unless otherwise specified in the MS concerned. Check with\nthe relevant National Competent Authority which system will be used for submission.\nThe Commission has a listing of the contact details for National Competent Authorities, which\nis available at:\nhttps://ec.europa.eu/health/sites/health/files/md_sector/docs/md_clinical_investigation_conta\nct_points.pdf\nTo fulfil the safety reporting requirements of the MDR Article 80:\nPlease see MDCG 2020-10/1 ‘Safety reporting in clinical investigations of medical devices\nunder the Regulation (EU) 2017/745’ for guidance.\n39\n2023/C 163/06\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n30",
+      "parent_section": null
+    },
+    {
+      "section_number": "46",
+      "title": "What will happen to those clinical investigations that started prior to the date of",
+      "content": "46. What will happen to those clinical investigations that started prior to the date of\napplication of Regulation (EU) 2017/745?\nClinical investigation that are currently being conducted with respect to Directive 93/42/EC and\nDirective 90/385/EC by the date of application of the MDR, can continue to be conducted.\nNevertheless, serious adverse events (SAEs) and device deficiencies occurring after the date\nof application of the MDR, shall be notified to the MS according to the rules defined in Article\n80 of the MDR.\nTo facilitate the transition and give time for sponsors to update Clinical Investigation Plans and\nprocedures in clinical investigations a sponsor may continue to report all SAEs to National\nCompetent Authorities until Eudamed reporting is mandatory. This applies only to studies\nwhich have started to be conducted in accordance with Article 10 of Directive 90/385/EEC or\nArticle 15 of Directive 93/42/EEC prior to 26 May 2021. Please refer to MDCG 2020-10/1\n‘Safety reporting in clinical investigations of medical devices under the Regulation (EU)\n2017/745’ for further guidance.",
+      "parent_section": null
+    },
+    {
+      "section_number": "47",
+      "title": "How should Article 120(11) of the MDR be interpreted – when is a clinical investigation",
+      "content": "47. How should Article 120(11) of the MDR be interpreted – when is a clinical investigation\nto be considered started to be conducted in accordance with Article 10 of Directive\n90/385/EEC or Article 15 of Directive 93/42/EEC?\nAs national interpretations and implementation of the directives in national legislation may\ndiffer between Member States, please check with the national competent authority in the\nMember State where the clinical investigation is to be conducted as to what they consider as\nstarted/starting date.\nLegal representative",
+      "parent_section": null
+    },
+    {
+      "section_number": "48",
+      "title": "What is the role and responsibility of the sponsor’s legal representative?",
+      "content": "48. What is the role and responsibility of the sponsor’s legal representative?\nIn article 62(2) of the MDR it is stated that: Where the sponsor of a clinical investigation is not\nestablished in the Union, that sponsor shall ensure that a natural or legal person is established\nin the Union as its legal representative\n40\n. Such legal representative shall be responsible for\nensuring compliance with the sponsor's obligations pursuant to this regulation, and shall be\nthe addressee for all communications with the sponsor provided for in this Regulation. Any\ncommunication with that legal representative shall be deemed to be a communication with the\nsponsor.\n40\nArticle 62(2) of the MDR allows Member States to choose not to apply the requirement for sponsors\nto have a legal representative in clinical investigations to be conducted solely on their territory, or on\ntheir territory and the territory of a third country, provided that they ensure that the sponsor establishes\nat least a contact person on their territory in respect of that clinical investigation who shall be the\naddressee for all communications with the sponsor.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n31\nPer the Regulation, the legal representative is responsible for ensuring compliance with the\nsponsor’s obligations pursuant to the MDR. It is not foreseen that this responsibility can be\ndelegated back to the sponsor, nor to a CRO.\nIt is recommended that the sponsor issues a study specific power of attorney to the designated\nlegal representative.\nIn order to enable the legal representative to ensure compliance with the sponsor’s obligations\nunder the MDR it is recommended that a contract between the parties obliges\n- the sponsor to provide the legal representative with all required information and\n- the legal representative to immediately notify the sponsor in case (s)he becomes aware\nof any noncompliance with the Regulation.\nIf tasks are delegated by a legal representative to another legal or natural person, the\nresponsibility to ensure compliance with the MDR still resides with the legal representative.\nAny delegation of tasks related to sponsor’s obligations must be done in compliance with\nchapter III of annex XV to the MDR. If the contract(s) between the sponsor and other entities\nare related to the compliance of the sponsor’s duties according to the MDR, it is also the\nresponsibility of the legal representative to ensure that these duties are well covered by the\nother entities.\nIt is acknowledged that responsibilities and tasks contracted to the legal representative may\nexpand beyond the legal requirements of the MDR, which is a business decision between the\nparties. In situations where the legal representative also functions as a CRO, it is\nrecommended that the agreement between the sponsor and the CRO clearly defines what\nresponsibilities are assigned in terms of the legal representative capacity and what tasks are\nassigned to the CRO capacity.",
+      "parent_section": null
+    },
+    {
+      "section_number": "49",
+      "title": "How should a legal representative check the sponsor’s compliance with the MDR?",
+      "content": "49. How should a legal representative check the sponsor’s compliance with the MDR?\nThe legal representative is responsible for ensuring compliance with the sponsor’s obligations\npursuant to the MDR. The MDR does not specify how a legal representative fulfils the legal\nobligations.\nThe legal representative may perform audits of the sponsor and its subcontractor(s), or check\ncompliance by other means, according to prior agreement.\nThe legal representative would need permanent and integral availability and access to the\ntechnical documentation of the investigated device and clinical investigation documentation, in\norder to be able to ensure that this information has been drawn up and complies with the MDR.\nFor the legal representative it would be necessary to be aware of specific aspects of the clinical\ninvestigation, i.e. not only to check the availability of procedures on a general level., in order\nto be able to ensure that the clinical investigation is compliant with the MDR in practice.\nIt is necessary that the legal representative verifies, in parallel and/or in addition to the sponsor,\nall relevant documentation and keeps records of the verification activities performed. This\nverification is included in the legal representative’s responsibility for ensuring compliance with\nthe sponsor's obligations pursuant to the MDR.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n32\nHowever, this does not mean that the legal representative replaces the sponsor with regard to\nits obligations expressed in Chapter III, Annex XV, nor does it mean a participation in the\nevaluation/review of the data of each document.",
+      "parent_section": null
+    },
+    {
+      "section_number": "50",
+      "title": "Would it be sufficient that the legal representative is able to provide documents from",
+      "content": "50. Would it be sufficient that the legal representative is able to provide documents from\nthe sponsor upon request by authorities?\nIt is expected that the legal representative has permanent and unlimited access to the complete\nand up-to-date investigation master file including, but not limited to, contracts and financial\narrangements related to the clinical investigation, evidence that the investigational sites and\nother participating entities and persons are appropriately qualified, relevant communication\nwhich can support the demonstration of compliance of sponsor’s duties according to the MDR,\nmonitoring reports and SAE reports. It should be specified in the contractual agreement\nbetween the sponsor and the legal representative how this is achieved.\nNote that it is clearly stated in section 3, chapter III, Annex XV of the MDR that the\ndocumentation should be kept at the disposal of the competent authorities, even if the sponsor\ngoes bankrupt or ceases its activity prior to the end of the specified retention period.\nFurther, sponsors and legal representatives should also consider the fact that securing storage\non EEA and Türkiye territory may be critical in the event that something happens to the\nsponsor’s documentation.\n.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n33\nAnnex I: Clinical investigation under the MDR – regulatory pathway\nMedical device\nCE Marked\nWithin intended purpose\nPMCF\nAdditional burdensome\nand/or invasive procedures\nNo additional burdensome\nand/or invasive procedures\nOther clinical investigation /\nNational provisions\nNot within intended purpose\nInvestigation* may be used for\nconformity procedure (to get\nCE mark)\nNot investigated for\nconformity procedure\nNot yet CE Marked**\nInvestigation\n*\nmay be used for\nconformity procedure (to get\nCE mark)\nNot investigated for\nconformity procedure\nNot to be CE marked\n(e.g. custom-made / in-house\nmanufactured devices)\nNot investigated for\nconformity procedure\nInvestigation* may be used for\nconformity procedure\n(although product is not to be\nCE marked)\nLegend:\nRegulatory status/scenario\nArticle 62 of the MDR\nArticle 74(1) of the MDR\nArticle 82 of the MDR and national provisions if any\n*Investigation refers to clinical investigation\n** Note that pilot studies and first in human studies\nare in general to be considered Article 62\n(see also question 9)\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-6 Rev. 1\n34\nAnnex II: Non-exhaustive list of modifications that may be interpreted as\nsubstantial\nAmendments related to the clinical investigation plan or subject information",
+      "parent_section": null
+    }
+  ]
+}

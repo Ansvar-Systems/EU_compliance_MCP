@@ -1,0 +1,158 @@
+{
+  "id": "MDCG_2021_12_rev1",
+  "title": "MDCG 2021-12 rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-12 rev.1",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/d90b3f63-1d62-43e6-bf5f-fb32ea7c47a2_en?filename=md_2021-12_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "What is the European Medical Device Nomenclature (EMDN)?",
+      "content": "1. What is the European Medical Device Nomenclature (EMDN)?\nPer Article 26 of Regulation (EU) 2017/745 on medical devices (MDR) and Article 23\nof Regulation (EU) 2017/746 on in vitro diagnostic medical devices (IVDR), the\nEuropean Medical Device Nomenclature (EMDN) aims at supporting the functioning of\nthe European database on medical devices (EUDAMED). Among its various uses, it\nwill be utilised by manufacturers for the registration of medical devices in EUDAMED,\nwhere it will be associated to each Unique Device Identifier – Device Identifier (UDI-\nDI\n1\n).\nAs the EMDN primarily serves regulatory purposes to support MDR and IVDR\nrequirements, it also plays a key role in MDR/IVDR device documentation and\ntechnical documentation, sampling of technical documentation conducted by notified\nbodies, post-market surveillance, vigilance and post-market data analysis, etc. It is\nintended to support all actors in their activities under the MDR/IVDR and provides key\ndevice descriptions to patients as regards their own devices and all other devices\navailable on the market and registered in EUDAMED.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "How was the EMDN created?",
+      "content": "2. How was the EMDN created?\nAccording to criteria and requirements set out by the European Commission and EU\nregulators in the Medical Device Coordination Group (MDCG) and based on\norientations provided by the MDCG, the EMDN was founded following a European\nCommission notice indicating the utilisation of the Italian Ministry’s ‘Classificazione\nNazionale Dispositivi medici (CND)’ as the basis for the future EMDN.\n1\nUDI-DI for legacy devices is the ‘EUDAMED ID’, see MDCG 2019-5 Registration of legacy devices in\nEUDAMED for further details.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1\nAt that time, the CND was already utilised in three Member States (Italy, Greece and\nPortugal) and supported the registrations of a variety of EU and international\nmanufacturers within the EU.\nDuring the course of 2019 and 2020, consultations and preparatory work on the CND\ntook place with stakeholders and key experts. A first version of the EMDN was released\non 4 May 2021.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "What are the key principles of EMDN?",
+      "content": "3. What are the key principles of EMDN?\nThe EMDN is based on fundamental key principles jointly set out by the European\nCommission and EU regulators. These principles include but are not limited to:\n(a) Regulators-led: regulators play a key role in managing, validating, updating\nand advising on the nomenclature.\n(b) Structured: the nomenclature has transparent hierarchies by which codes\nand terms could be meaningfully clustered into groups and types.\n(c) Predictable: the structure and content remain sufficiently stable to allow\nvarious regulatory uses of the nomenclature, in a manner which still allows\nfor the accommodation of technological innovation.\n(d) Transparent: the policies for updates of the nomenclature codes and terms\nare sound and reflect the needs of regulators and the wider healthcare\ncommunity.\n(e) Inclusive: the periodic reviews are open to all, based on real-world use and\ndemonstrable needs.\n(f) Available: codes and terms are available, in full, to all users.\n(g) Accessible: no manufacturer or natural/legal person should be subject to fee\nor suffer from any discrimination, compared to other operators, in relation to\nthe use of the nomenclature.\n(h) International: internationally recognised at the time of the date of application\nof the MDR/IVDR.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "How do I gain access to the EMDN?",
+      "content": "4. How do I gain access to the EMDN?\nThe entirety of the EMDN is accessible to all stakeholders, free of charge. It can hence\nbe utilised by a non-exhaustive list of stakeholders such as manufacturers, patients,\nresearch organisations, practitioners, hospitals, pharmacies etc. The EMDN can be\naccessed and downloaded in excel format here and on the European Commission’s\nMDCG endorsed documents and other guidance website page.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "How is the EMDN structured?",
+      "content": "5. How is the EMDN structured?\nThe EMDN is characterised by its alphanumeric structure that is established in a\nseven-level hierarchical tree. It clusters medical devices into three main levels:\n• Categories: the first hierarchical level,\n• Groups: the second hierarchical level,\n• Types: the third hierarchical level (which expands into several levels of detail\n(1°, 2°, 3°, 4° and 5°), where necessary.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1\nEach alphanumeric code begins with a letter referring to the ‘CATEGORY’ for which\nthe device falls under, followed by two numbers indicating the ‘GROUP’ and a series\nof numbers which refer to the ‘TYPE’. The maximum number of digits is set at 13.\nEach code is related to the term, which provides a concise and precise understanding\nof devices belonging to the same code, by outlining its characteristics or qualities.\nEach level includes both the code and the term.\nCategory 2: EMDN assignment",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Which level of the EMDN should I use to assign to each UDI-DI",
+      "content": "6. Which level of the EMDN should I use to assign to each UDI-DI\n1\nin\nEUDAMED?\nUsing the tree-like hierarchy of EMDN, manufacturers must always assign the most\ngranular and terminal code and term available (lowest level in the tree) to their device\n(UDI-DI\n1\n).",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "How many EMDN codes can I assign to each UDI-DI",
+      "content": "7. How many EMDN codes can I assign to each UDI-DI\n1\nin EUDAMED?\nAs a general rule, manufacturers must always identify the singular most appropriate\ncode to associate with the UDI-DI\n1\nof the device in question. An exemption to this rule\nis only foreseen for devices with multiple-intended purposes. In these cases, and\nespecially when dealing with complex medical device systems which allow a large\narray of diagnostic and therapeutic functions, more than one code may be used.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Is there a priority for the assignment of multiple codes to a singular UDI-",
+      "content": "8. Is there a priority for the assignment of multiple codes to a singular UDI-\nDI in EUDAMED?\nIn case multiple EMDN codes can be attributed to a singular UDI-DI, a hierarchy of\nsignificance between the chosen codes is not required.",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "What EMDN code should I assign to my device's UDI-DI if I can’t find an",
+      "content": "9. What EMDN code should I assign to my device's UDI-DI if I can’t find an\nappropriate EMDN term?\nThe user should always search the most granular (lowest) levels of the nomenclature\nfor the most appropriate EMDN term for the device’s UDI-DI\n1\nin question. It remains\nthe sole responsibility of the manufacturer to review the entire nomenclature for the\nidentification of the most appropriate term to report. Only if the most granular levels do\nnot match the device’s description, the manufacturer may assign the code extension\n‘99’ which refers to ‘other’ within that level type.\nNote: UDI-DIs\n1\nassociated with code extension ‘99’ are subject to additionally scrutiny\nduring the annual EMDN review procedure.",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "What should I do if there is no appropriate code to assign to my device's",
+      "content": "10. What should I do if there is no appropriate code to assign to my device's\nUDI-DI\n1\n?\na) assign the code extension 99 (term ‘Other’) to the device, as indicated in\nQuestion 9,\nb) make a proposal in the EMDN submission platform or through the MDCG\nNomenclature WG for the creation of a new level (code and term), providing a\nthorough description of the device in question\n2\n. Manufacturers are also\nencouraged to notify of such potential new code needs early in the certification\nprocess.\nc) once/if a new code is created, manufacturers must reflect this change and\nupdate their registration in EUDAMED and in all related regulatory\ndocumentation (see Question 23)\n2\nRefer to MDCG 2024-2 Procedures for the update of EMDN (europa.eu)\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1\nCategory 3: Questions related to the annual review procedure",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "What should I do if I want to submit a proposal for the EMDN update?",
+      "content": "11. What should I do if I want to submit a proposal for the EMDN update?\nPlease refer to the annual EMDN update procedure.",
+      "parent_section": null
+    },
+    {
+      "section_number": "12",
+      "title": "How are users informed about changes to the EMDN that have been",
+      "content": "12. How are users informed about changes to the EMDN that have been\nimplemented?\nDocumentation on changes made (in comparison with the previous EMDN version) will\nbe made available every year in December/January alongside the annual update\npublication on the European Commission’s MDCG endorsed documents and other\nguidance website page.",
+      "parent_section": null
+    },
+    {
+      "section_number": "13",
+      "title": "Will there be a notification to impacted users of the changed codes?",
+      "content": "13. Will there be a notification to impacted users of the changed codes?\nNotifications to users is not currently possible. Publications of the final annual revisions\nwill be available on the European Commission’s MDCG endorsed documents and\nother guidance website page.",
+      "parent_section": null
+    },
+    {
+      "section_number": "14",
+      "title": "Will there be a consultation process for changes that will be impacting",
+      "content": "14. Will there be a consultation process for changes that will be impacting\ncodes that are already in use by other actors?\nContacting individual actors of existing codes is not foreseen.",
+      "parent_section": null
+    },
+    {
+      "section_number": "15",
+      "title": "Is there a consultation mechanism during the technical evaluation for",
+      "content": "15. Is there a consultation mechanism during the technical evaluation for\nrequesters to provide additional information, justification or answers to\nquestions before rejection of the request?\nSubmitters may be contacted if the information submitted should be considered\ninsufficient. To ensure a fair and comprehensive assessment, submitters are invited to\nprovide comprehensive information at the time of submission to avoid unnecessary\ndelays.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "16",
+      "title": "Will there be a set timeframe where feedback / questions will need to be",
+      "content": "16. Will there be a set timeframe where feedback / questions will need to be\naddressed by the requester / submitter in order to meet the same\ncalendar year processing time?\nThe timeframe is 15 working days for clarification after the request from EMDN-\nTechnical Team mailbox, if the clarification arrives after the deadline date, the proposal\nmay not be processed in the same calendar year.",
+      "parent_section": null
+    },
+    {
+      "section_number": "17",
+      "title": "Will devices associated with more than one EMDN code be reviewed on",
+      "content": "17. Will devices associated with more than one EMDN code be reviewed on\na periodic basis to see if there is a synergy that should be captured in a\nnew code?\nUDI-DIs\n1\nassociated with multiple EMDN codes will be subject to additionally scrutiny\nduring the annual EMDN update procedure.\nExample: If a manufacturer assigns both the code relevant for CT systems and a\nsecond code for PET systems, this may be reviewed to include a new code for a\ncombined PET/CT. Note: this example is for descriptive purposes only. An EMDN code\nalready exists for such combined systems.",
+      "parent_section": null
+    },
+    {
+      "section_number": "18",
+      "title": "For requests that are accepted or rejected, how and when will the",
+      "content": "18. For requests that are accepted or rejected, how and when will the\nrequester be informed?\nPublications of the final annual revisions will be available on the European\nCommission’s MDCG endorsed documents and other guidance website page. In\naddition, documentation on changes made (in comparison with the previous EMDN\nversion) as well as a summary of all received submissions will be published in the same\nmanner. For submissions received, the assessments (Accepted / Not Accepted) and a\nshort description will be provided.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "19",
+      "title": "Is there a mechanism for requesting re-consideration of a submission or",
+      "content": "19. Is there a mechanism for requesting re-consideration of a submission or\na re-assessment?\nThis is not currently foreseen. Although it is possible to submit the same request in the\nfollowing annual procedure, the user is recommended to consult the rationale of\nrejection and the endorsed new version of EMDN.",
+      "parent_section": null
+    },
+    {
+      "section_number": "20",
+      "title": "Is there a prioritisation process on multiple requests that will be",
+      "content": "20. Is there a prioritisation process on multiple requests that will be\nreceived on the same code via the annual collection?\nThe prioritisation criteria could be based on the order of arrival and their role according\nto the scheme below:\n- Priority 1: Member States, NBs, WHO\n- Priority 2: Economic operators and trade associations\n- Priority 3: Health professionals, hospitals, laboratories, other users",
+      "parent_section": null
+    },
+    {
+      "section_number": "21",
+      "title": "Will there be an impact assessment before a change to existing codes is",
+      "content": "21. Will there be an impact assessment before a change to existing codes is\ndecided upon?\nAll potential changes will be assessed by the EMDN-Technical Team. The proposed\nchanges are intended to improve the EMDN structure for the intended MDR/IVDR\npurposes by ensuring the least impact to keep the structure stable but also\nappropriately represent the information needs to be fulfilled by the nomenclature.",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "Will any criteria be established to determine which proposals are",
+      "content": "22. Will any criteria be established to determine which proposals are\naccepted and which are rejected?\nEach change is aimed to improve the use of the EMDN. The criteria used for the\nevaluation of requests is related to the types of upgrades planned:\n1) the inclusion of new levels is planned to include types of devices not present in\nthe current version of the EMDN (new technologies, need for greater detail of a\nlevel).\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1\nFor this purpose, informative elements characterizing the products that will\npopulate the new level are evaluated (intended use, structural characteristics,\nfunctionality, constituent materials, sterility, reusability).\n2) changing existing terms is planned to make the existing terms more\nunderstandable or to correct errors.\n3) deletion of existing levels is provided to eliminate non-functional codes.\n4) moving levels is provided in the case of levels improperly placed in the existing\nhierarchical tree (category, group, or type).\nProposals that imply non-compliance with the principles of the EMDN by affecting the\nstability of its structure will be rejected.",
+      "parent_section": null
+    },
+    {
+      "section_number": "23",
+      "title": "What happens in EUDAMED in case of changes to EMDN related to",
+      "content": "23. What happens in EUDAMED in case of changes to EMDN related to\ncodes rendered obsolete or split?\nCodes which are rendered ‘obsolete’ will not be immediately deleted from EUDAMED\nand will remain visible for at least 5 years from the date of their obsolescence. While\nthe codes will still be displayed in during that a 5-year cycle (maximum certificate\nlifespan), manufacturers will no longer be able to use obsolete codes for device\nregistration or updates to existing registrations. An archive with obsolete codes and\nrelated information such as date and reason for obsolescence will be maintained and\nkept publicly available to all.\nCodes which are split will remain visible but, since they are no longer terminal codes,\nthey will not be available for device registration or updates to existing registrations. An\narchive with split codes and related information such as date and justification for\nsplitting, will be maintained and kept publicly available to all.",
+      "parent_section": null
+    },
+    {
+      "section_number": "24",
+      "title": "In case of changes in EMDN (new codes, split codes, obsolete codes),",
+      "content": "24. In case of changes in EMDN (new codes, split codes, obsolete codes),\nwhen do manufacturers need to update the relevant code(s)?\nManufacturers and notified bodies, as appropriate, are expected to reflect such\nupdates, as relevant, within different documentations (e.g. certificates, declaration of\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-12 Rev.1\nconformity) and in EUDAMED in a timely manner and reasonable manner\n3\n, and at the\nlatest prior to the next annual surveillance audit following the finalisation of the annual\nEMDN update cycle. Since individual contact is not foreseen, it is therefore\nrecommended that manufacturers make a standard practice to assess each annual\npublication of EMDN for any changes which may impact devices in their product\nportfolio, in order to notify their notified bodies ahead/during their annual surveillance\naudit.\n3\nAs the annual release of EMDN takes place in January of every year, it would not be reasonable to\nexpect manufacturers to implement all relevant changes ahead of an audit which takes place in the very\nfirst months of the year.",
+      "parent_section": null
+    }
+  ]
+}

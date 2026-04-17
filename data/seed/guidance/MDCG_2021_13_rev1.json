@@ -1,0 +1,68 @@
+{
+  "id": "MDCG_2021_13_rev1",
+  "title": "MDCG 2021-13 rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-13 rev.1",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/8e9adf30-71b5-4faf-a8fb-b35ce4804440_en?filename=md_mdcg_2021-13_q-a-actor_registr_eudamed_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "What is the procedure to register as actor in EUDAMED?",
+      "content": "1. What is the procedure to register as actor in EUDAMED?\nThe procedure to register as actors in EUDAMED\n3\nwill be laid down in a Commission\nImplementing Regulation on EUDAMED (in preparation), which will be applicable to\nall natural or legal persons registering to the system.\nThe actor registration request for any manufacturer, authorised representative,\nimporter or a system/procedure pack producer should be verified and approved by a\ncompetent authority.\nPlease note that when an actor not subject to the obligations of Article 31 MDR and\n28 IVDR submits an actor registration request in order to be able to report for the first\ntime a serious incident or a field safety corrective action (FSCA), this actor should\nimmediately provide information outside EUDAMED to the relevant national\ncompetent authority (ies) on the vigilance report and the pending actor registration\nrequest. It should also specify in the Actor registration form field “Any other\ninformation of significance for the competent authority” that the registration request is\ntriggered by a need to report a serious incident or a field safety corrective action.\nAfter the approval of the actor registration request, the actor will have to submit those\ndata to EUDAMED even if already communicated to the competent authority (ies)\noutside the system.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Do manufacturers of only custom-made devices have to",
+      "content": "2. Do manufacturers of only custom-made devices have to\nregister as actors in EUDAMED?\nAccording to Article 31 MDR, manufacturers of only custom-made devices are\nexempted from the obligation of registering as actors in EUDAMED before placing\ntheir devices on the market.\nHowever, the obligation to provide the information mentioned in Question 3 to\nEUDAMED applies to manufacturers of only custom-made devices. In order to be\nable to fulfil those obligations, they should register as actors in EUDAMED when\nsuch obligation to provide information occurs.\n3\nFor more information on how to use the Actor registration module, please refer to the document\n‘Guide to using EUDAMED – Actor registration module’.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-13 rev.1\nPage 4 of 7",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "When do manufacturers of only custom-made devices",
+      "content": "3. When do manufacturers of only custom-made devices\n4\nhave\nto register as actors in EUDAMED?\nArticles 52(8), 56(1) and (5) MDR require notified bodies to enter the information\nregarding the certificates issued for class III custom-made implantable devices in\nEUDAMED. Moreover, manufacturers shall report in EUDAMED serious incidents,\nfield safety corrective actions and their related field safety notices (Article 87 MDR),\nany trend on non-serious incidents (Article 88 MDR) for custom-made devices\n5\n.\nTherefore, manufacturers of only custom-made devices have to register as actors in\nEUDAMED in the following cases:\n in advance of the entering of the information in EUDAMED by the notified body\nregarding the first certificate for their Class III custom-made implantable\ndevice;\n they submit to EUDAMED for the first time vigilance reports for serious\nincidents, field safety corrective actions with their field safety notices, or trend\nreports in respect of custom-made devices of any risk class;\nThe registration as actors in EUDAMED will be required, in the abovementioned\ncases, also for non-EU manufacturers of only custom-made devices and the\nauthorised representatives for the concerned custom-made devices.\nRegistered manufacturers and authorised representatives of only custom-made\ndevices are assigned an Actor ID that is not a SRN.",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Do manufacturers of only legacy devices have to register as",
+      "content": "4. Do manufacturers of only legacy devices have to register as\nactors in EUDAMED?\nYes, manufacturers of only legacy devices\n6\nwill have to register as actors in\nEUDAMED.\nAccording to Article 123 (3) (d) MDR and Article 113 (3) (f) IVDR, the deadline for\nsuch registration is 6 months after the date of publication of the notice referred to in\nArticle 34 (3) MDR. Member states may accept/require the use of EUDAMED for the\npurpose of registration in accordance with national rules, during the transition period.\n4\nFor more information on custom-made devices, please refer to the document ‘Questions and\nAnswers on Custom-Made Devices’ - MDCG_2021-3\n5\nFor more information, please refer to the document ‘Questions and Answers on Custom-Made\nDevices’ - MDCG_2021-3\n6\nFor more information, please refer to the document ‘Management of legacy devices – MDR\nEUDAMED’ and the Guidance ‘Registration of legacy devices in EUDAMED’ – MDCG 2019-5\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-13 rev.1\nPage 5 of 7\nThe obligation to register as actors in EUDAMED is applicable also to non-EU\nmanufacturers and authorised representatives of only legacy devices.\nRegistered manufacturers and authorised representatives of only legacy devices are\nassigned an Actor ID that is not a SRN.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Do manufacturers of only ‘old’ devices have to register as",
+      "content": "5. Do manufacturers of only ‘old’ devices have to register as\nactors in EUDAMED?\nYes, manufacturers of only ‘old’ devices, which are made available on the Union\nmarket and/or are still in use, will have to register as actors in EUDAMED in case\nserious incidents reports or field safety corrective actions in respect of the device are\nrequested by the Member States to be reported in EUDAMED.\nThe obligation to register as actors in EUDAMED is applicable also, in the\nabovementioned cases, to non-EU manufacturers of only ‘old’ devices and their\nconcerned authorised representatives.\nIn case either the manufacturer or the authorised representative is not active\nanymore, serious incidents and the field safety corrective actions will not be reported\nin EUDAMED and the manufacturer or authorised representative will not have to\nregister as actor in EUDAMED.\nRegistered manufacturers and authorised representatives of only old devices are\nassigned an Actor ID that is not a SRN.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Do system and procedure pack producers (SPPP) have to",
+      "content": "6. Do system and procedure pack producers (SPPP) have to\nregister as actors in EUDAMED?\nAccording to Article 29 (2) MDR, before placing a system or procedure pack on the\nmarket, the natural or legal person responsible (SPPP) has an obligation to assign a\nBasic UDI-DI to be provided to the UDI database, together with the other data\nreferred to in Part B of Annex VI MDR.\nIn order to fulfil such obligation, as from 6 months after the date of publication of the\nnotice referred to in Article 34 (3) MDR, the SPPP will have to be registered as actor\nin EUDAMED before placing a system or procedure pack on the market. Member\nstates may accept/require the use of EUDAMED for the purpose of registration in\naccordance with national rules, during the transition period.\nRegistered SPPPs are assigned an Actor ID that is not a SRN.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-13 rev.1\nPage 6 of 7",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Who is the authority responsible for the approval of actor",
+      "content": "7. Who is the authority responsible for the approval of actor\nregistration requests of SPPP located in non-EU countries?\nThe authority responsible for approval of non-EU SPPPs actor registration requests\nshould be the authority of the place where the first system or procedure pack of that\nproducer is to be placed on the market. The CA may gather relevant additional\ninformation outside EUDAMED, when such information is not available inside\nEUDAMED, before validating a registration request.\nPlease note that SPPP located in a non-EU country do not have an obligation to\ndesignate an AR. Therefore, the SPPP should consider providing additional relevant\ninformation to the CA, in order to facilitate the verification of the data provided for the\npurpose of the registration request. In the “Any other information of significance for\nthe competent authority” field, the SPPP should specify the reason for which that\ncompetent authority was chosen.\nIn case the non-EU SPPP acts also as a non-EU manufacturer, who has an\nauthorised representative already designated, the authority responsible for the\nauthorised representative should be the authority responsible for the approval of the\nnon-EU SPPP actor registration request.",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "When the Actor ID may be considered as a Single",
+      "content": "8. When the Actor ID may be considered as a Single\nRegistration Number (SRN) pursuant to Article 31 MDR and\nArticle 28 IVDR?\nThe Actor ID will only be considered as a SRN when it will be issued to a\nmanufacturer or authorised representative or importer of MDR non-custom-made\ndevices and/or of IVDR devices, as referred to in Article 31 MDR and 28 IVDR.\nIn case it is issued to a manufacturer (EU and non-EU) or authorised representative\nor importer of only custom-made devices and/or only legacy devices and/or only ‘old’\ndevices or to a system/procedure pack producer, this Actor ID will not be considered\nas a SRN pursuant to Article 31 MDR and 28 IVDR.\nAs a consequence, manufacturers, authorised representatives and importers may\nhave an Actor ID that will be considered also as a SRN when, after their registration\nin EUDAMED, they become manufacturers, authorised representatives and importers\nof MDR non-custom-made devices and/or of IVDR devices.\nFor example, in case a manufacturer of only custom-made devices extends its\nactivities and becomes a non-custom-made devices manufacturer (or an IVDR\nmanufacturer), its Actor ID will be considered its SRN.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-13 rev.1\nPage 7 of 7",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Do importers who carry out the activities mentioned in",
+      "content": "9. Do importers who carry out the activities mentioned in\nArticle 16 MDR/IVDR also need to register as manufacturers\nin EUDAMED?\nOn one hand, importers who assume the obligations incumbent on manufacturers\naccording to Article 16(1) MDR/IVDR, as clarified in MDCG 2018-6, have the\nobligation to register as Manufacturers in EUDAMED.\nOn the other hand, importers who carry out the activities mentioned in Article 16(2)\nMDR/IVDR do not have any obligation to register as manufacturers in EUDAMED\nsince these activities are not considered a modification of a device that could affect\nits compliance with the applicable requirements, so they do not act as a\nmanufacturer.\nIn any case, importers are subject to the obligation of registering as Importers in\nEUDAMED in accordance with Article 31 MDR and 28 IVDR. This registration is due\nto the fact that the importer places the devices on the EU market, and is not due to\nthe fact that he carries out the activities mentioned in Article 16 (2) MDR/IVDR\n(namely, relabelling or repackaging of devices).",
+      "parent_section": null
+    }
+  ]
+}

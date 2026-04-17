@@ -1,0 +1,56 @@
+{
+  "id": "MDCG_2018_3_rev1",
+  "title": "MDCG 2018-3 rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2018-3 rev.1",
+  "date_published": "2018-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/b8fa4255-e011-4253-8249-88febab343f2_en?filename=md_2018-3-guidance-udi-spp_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Scope",
+      "content": "1. Scope\nThis guidance should be read in conjunction with the Guidance on \"Basic UDI-DI and\nchanges to UDI-DI\"\n1\nand the Guidance on \"UDI database. Definitions, descriptions\nand formats of the UDI core elements\"\n2\n. The guidance is not intended to be\nexhaustive in relation to all UDI obligations associated with systems and procedure\npacks. The scope of this guidance is therefore limited to the aspects specifically\naddressed below. For UDI-related aspects that are not specifically mentioned in this\nguidance, the reader should make reference to the relevant provisions of Medical\nDevice Regulation (EU) 2017/745 (MDR).",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Definitions",
+      "content": "2. Definitions\nIn accordance with Article 2 of the MDR,\n‘procedure pack’ means a combination of products packaged together and placed on\nthe market with the purpose of being used for a specific medical purpose;\n‘system’ means a combination of products, either packaged together or not, which\nare intended to be inter- connected or combined to achieve a specific medical\npurpose;\n“Specific medical purposes” are defined in Article 2(1) of the MDR.\nExamples of procedure packs are first aid kits, orthodontic procedure packs and skin\ntraction kits.\nExamples of systems are x-ray systems.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Principles of Article 22",
+      "content": "3. Principles of Article 22",
+      "parent_section": null
+    },
+    {
+      "section_number": "3.1",
+      "title": "Definition of a System or Procedure Pack Producer",
+      "content": "3.1 Definition of a System or Procedure Pack Producer\n1\nGuidance MDCG 2018-1 v3\n2\nGuidance UDIWG 2018-1\nMedical Devices\nMedical Device Coordination Group Document MDCG 2018-3 rev.1\nPage 3 of 4\nArticle 22 of the Medical Device Regulation lays down certain obligations for natural\nor legal persons, that combine medical devices bearing a CE marking alone or\ntogether with other products which are not devices and are compliant with the\nrespective legislation which apply to them, in order to place that combination on the\nmarket as either a system or a procedure pack. That combination is intended to\nachieve a specific medical purpose.\nFor the purpose of this guidance and operations related to EUDAMED, the natural or\nlegal person referred to in Article 22(1), 22(2) and 22(3) of the Medical Device\nRegulation shall be called the \"system or procedure pack producer\".",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.2",
+      "title": "Exemption with regard to \"system or procedure pack producer\"",
+      "content": "3.2 Exemption with regard to \"system or procedure pack producer\"\nBased on a request of a client or hospital, a natural or legal person in the supply\nchain may make available together different products, including CE marked devices,\nwhich are – in that entire combination – neither placed on the market by that natural\nor legal person, nor intended by that natural or legal person to be used together for a\nspecific medical purpose. Devices made available in the described manner are not\nconsidered as systems or procedure packs in accordance with the relevant\ndefinitions provided in Article 2 of the MDR. In this case, that natural or legal person\nis not regarded to be a system or procedure pack producer in accordance with Article\n22.1, and is considered to be a distributor as per Article 2(34) of the MDR. It is to be\nnoted that an importer may also make available devices to a client or hospital, in\nsuch manner.\nExample 1: a distributor supplies, upon request of a client, in one shipment, sterile\ntweezers, a sterile needle and surgery gloves.\nExample 2: Multi-device surgical sets comprised of individual devices delivered in\ntrays for replenishment and sterilization for the request and for convenience of the\nhealthcare provider and the healthcare system.\nUnder the conditions set in Article 22(4), systems and procedure packs are to be\ntreated as devices in their own right and the related natural or legal persons shall\nassume the obligations incumbent on manufacturers. This specific scenario is out of\nthe scope of the present guidance. Manufacturers of such devices shall refer to\ngeneral guidance on UDI which is available on the DG GROW website\n3\n.\n3\nGuidance adopted by MDCG is available at\nhttps://ec.europa.eu/health/md_sector/new_regulations/guidance_en\n.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2018-3 rev.1\nPage 4 of 4",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "4",
+      "title": "Registration of systems and procedure packs",
+      "content": "4. Registration of systems and procedure packs\nThe system or procedure pack producer shall apply for registration as a system or\nprocedure pack producer and obtain an SRN.\nSystems and procedure packs shall undergo a UDI registration, as described in\nArticle 29(2) of the MDR. Before placing on the market a system or procedure pack\npursuant to Article 22(1) and (3), that is not a custom-made device, the system or\nprocedure pack producer shall assign to the system or procedure pack, in\ncompliance with the rules of the issuing entity, a Basic UDI-DI and shall provide it to\nthe UDI database together with the other core data elements referred to in Part B of\nAnnex VI related to that system or procedure pack.\nThe UDI data elements applicable for systems and procedure packs are listed in the\nAnnex to this guidance.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Specific UDI rules for systems and procedure packs",
+      "content": "5. Specific UDI rules for systems and procedure packs\nThe Basic UDI-DI shall identify systems or procedure packs having the same group\nof components and the same intended purpose\n4\n, regardless of the original\ncomponents manufacturers.\nSystem and procedure packs shall be assigned and bear their own UDI (including\nboth UDI-DI and UDI-PI), in accordance with Annex VI, Part C, points 3.7 and 6.3.1.\nof the MDR\n4\nThis is to prevent that two systems or procedure packs with the same intended purpose, but having one or\nmore components coming from different manufacturers, would need to be assigned two different Basic UDI-\nDIs.",
+      "parent_section": null
+    }
+  ]
+}

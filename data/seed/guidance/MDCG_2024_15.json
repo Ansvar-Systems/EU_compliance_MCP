@@ -1,0 +1,56 @@
+{
+  "id": "MDCG_2024_15",
+  "title": "MDCG 2024-15",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2024-15",
+  "date_published": "2024-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/0e076d19-62dc-4ff9-83f2-be6072a45993_en?filename=mdcg_2024-15_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Introduction",
+      "content": "1. Introduction\nArticle 77(5) MDR requires that the sponsor submits to the Member States in which a clinical\ninvestigation was conducted a clinical investigation report within one year of the end of the clinical\ninvestigation or within three months of the early termination or temporary halt, irrespective of the\noutcome of the clinical investigation. Furthermore, the clinical investigation report shall be\naccompanied by a summary presented in terms that are easily understandable to the intended user.\nBoth the report and summary shall be submitted by means of EUDAMED.\nArticle 77(7) MDR require that the summary and the clinical investigation report shall become\npublicly accessible through EUDAMED at the latest when the device is registered in accordance with\nArticle 29 and before it is placed on the market. In cases of early termination or temporary halt, the\nsummary and the report shall become publicly accessible immediately after submission. If the device\nis not registered in accordance with Article 29 within one year of the summary and the report having\nbeen entered into EUDAMED pursuant to Article 77(5) MDR, they shall become publicly accessible\nat that point in time. These are the timelines for publication under this SOP.\nMDCG 2021-1 Rev. 1 “Guidance on harmonised administrative practices and alternative technical\nsolutions until EUDAMED is fully functional” indicates that concerning Article 77(5) “The upload\nof the relevant information should take place via the respective national procedures applicable to\nclinical investigations”. Regarding paragraph 7 of the same Article it indicates that the “CI reports\nand the respective summary reports should be shared and published via the use of a dedicated\npublicly available CIRCABC directory.”\nThe Commission guidance on the content and structure of the summary of the clinical investigation\nreport (2023/C 163/06) provides appropriate means of identifying the summaries of the CI reports.\nThe same principles are used for identifying the CI reports.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Procedure for the publication of the clinical investigation reports and their summaries",
+      "content": "2. Procedure for the publication of the clinical investigation reports and their summaries",
+      "parent_section": null
+    },
+    {
+      "section_number": "2.1",
+      "title": "Submission of the reports by the sponsors",
+      "content": "2.1 Submission of the reports by the sponsors\nAccording to article 77(5) and MDCG 2021-1 Rev. 1, the reports and their summaries will be\nsubmitted together by the sponsors to the competent authorities of the Member States in which a\nclinical investigation was conducted and will be published by the Commission in the form they are\nsubmitted to the Member States. No redaction will be performed by the Member States or the\nCommission, the sponsor bearing all the responsibility for the content of the documents including\nconfidentiality and data protection. The relevant contact for the competent authorities to be used for\nthe submission of the reports is the same as the one used for the application for the clinical\ninvestigation or the one indicated by the competent authority.",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "2.2",
+      "title": "Labelling of the documents and tracking",
+      "content": "2.2 Labelling of the documents and tracking\nThe competent authorities will label the documents as follows:\n• For the clinical investigation report: CIV-ID – CIR\n• For the clinical investigation report summary: CIV-ID – SCIR\nThe CIV-ID will have been generated according to MDCG 2021-20 instructions for generating CIV-\nID for MDR Clinical Investigations.\nMedical Device\nMedical Device Coordination Group Document MDCG 2024-15\n3\nA tracking file will be made available and will include the following information\n1\n:\n• Date of clinical investigation report & of its summary\n• Title of clinical investigation\n• Name and contact details of the sponsor of the study\n• Name of the entity funding the study\n• Single identification number (CIV-ID)\n• Clinical investigation plan code or number\n• Status – final, temporary halt, early termination",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "2.3",
+      "title": "Management of the documents",
+      "content": "2.3 Management of the documents\nThe Member State which generated the CIV-ID will transmit to the Commission the two documents\nlabelled as outlined above without undue delay after receiving them from the sponsor, indicating the\ndate of receipt. Only the clinical investigations conducted according to MDR Articles 62, and 74(1)\nwill be consistently transmitted. For clinical investigations falling under article 82 the CI reports and\ntheir summaries will be transmitted only if this is relevant due to the national reporting requirements.\nThe contact point is represented by a dedicated functional mailbox.\nBased on the CIV-ID, the Commission will verify that there is no duplication and then will update\nthe tracking file and upload the documents in the dedicated CIRCABC directory one year after it has\nbeen submitted to the relevant Competent Authorities. In cases of early termination or temporary halt,\nthe summary and the report shall become publicly accessible immediately after submission.",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "2.4",
+      "title": "Storage of the documents",
+      "content": "2.4 Storage of the documents\nThe documents will be stored in a dedicated public CIRCABC directory called “MDR Clinical\nInvestigation reports and their summaries” which may be found under the following link:\nhttps://circabc.europa.eu/ui/group/5bfd5ece-dc70-468c-b47d-8f871fe8405d/library/affe24c8-db4e-4e81-aedb-b555a0b395a4\nThe Member States will publicise this link at the national level through appropriate means such as\nposting it to their respective websites. Supplementary, the link will be made available on the\nCommission medical devices website on the page dedicated to the MDCG documents, within the\nclinical section.\nA dedicated tracking file listing the CI reports and their respective summaries uploaded in the library\nwill be placed in the root of the dedicated CIRCABC directory and kept up to date by the Commission.\nThe membership of this directory is the same as for the MDCG CIE Working Group. For the general\npublic, as the CIRCABC directory is publicly accessible, anybody interested in consulting and\ndownloading its content will be able to do so without the need to become a member.",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "3",
+      "title": "Validity of the document",
+      "content": "3. Validity of the document\nThis document will cease to be applicable, and become obsolete, once the use of the CI/PS\nEUDAMED module, which is relevant for the publication of the clinical investigation reports and\ntheir summaries, becomes mandatory.\n1\nSection 2.1 Cover page of 2023/C 163/06 modified.",
+      "parent_section": null
+    }
+  ]
+}

@@ -1,0 +1,488 @@
+{
+  "id": "MDCG_2024_4",
+  "title": "MDCG 2024-4",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2024-4",
+  "date_published": "2024-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/5cc894e0-331d-4fa2-8ab3-cdd4437c48fc_en?filename=mdcg_2024-4_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "2.1",
+      "title": "Performance studies of in vitro diagnostic medical devices",
+      "content": "2.1 Performance studies of in vitro diagnostic medical devices\nThe reporting modalities and format set out in this guidance apply to:\n• Performance studies covered by IVDR Article 58(1):\n• in which surgically invasive sample-taking is done only for the purpose of the\nperformance study;\n• that is an interventional clinical performance study as defined in IVDR Article\n2(46);\n• where the conduct of the study involves additional invasive procedures or other\nrisks for the subjects of the studies;\n• performance studies covered by IVDR Article 58(2) involving companion diagnostics\n(except when only using left-over samples);\n• PMPF studies covered by IVDR Article 70(1) that involve procedures additional to those\nperformed under the normal conditions of use of the IVD and where those additional\nprocedures are invasive or burdensome, in case a causal relationship between a SAE and\nthe preceding performance study has been established;\n• performance studies covered by IVDR Article 70(2) that are conducted to assess, outside\nthe scope of its intended purpose, an IVD that already bears the CE marking.\n2\n• combined studies of medicinal products and IVDs. When the study satisfies the definition\nof a performance study of an IVD, regardless of whether it is conducted in the context of\na clinical trial of a medicinal product, the requirements of the IVDR and including its safety\nreporting obligations apply to the study. This guidance document is then relevant for\ncompliance with the IVDR regarding safety reporting. MDCG 2022-10 provides further\nguidance on the interface between Regulation (EU) 536/2014 on clinical trials for\nmedicinal products for human use (CTR) and the IVDR.\n3 Abbreviations\nADE Adverse Device Effect\nAE Adverse Event\nASADE Anticipated Serious Adverse Device Effect\nCDx Companion diagnostic\n2\nThe performance study sponsor is responsible for reporting per IVDR Article 76. However, the device manufacturer remains\nresponsible for postmarket surveillance and vigilance obligations for the CE Mark device per IVDR Articles 82-83.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 6 of 23\nDD Device deficiency\nIVD In Vitro diagnostic medical device\nIVDR Regulation (EU) 2017/746 on in vitro diagnostic medical devices\nMDR Regulation (EU) 2017/745 on medical devices\nMS Member State\nNCA national competent authority\nPS Performance study\nPSP Performance study plan\nSADE Serious Adverse Device Effect\nSAE Serious Adverse Event\nUSADE Unanticipated serious adverse device effect\n4 Definitions",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "4.1",
+      "title": "Adverse Device Effect (ADE)",
+      "content": "4.1 Adverse Device Effect (ADE)\nAny adverse event related to the use of a device for performance study or a comparator\n3\n. See\nISO 20916 section 3.1.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.2",
+      "title": "Adverse Event (AE)",
+      "content": "4.2 Adverse Event (AE)\nAny untoward medical occurrence, inappropriate patient management decision, unintended\ndisease or injury or any untoward clinical signs, including an abnormal laboratory finding, in\nsubjects, users or other persons, in the context of a performance study, whether or not related\nto the device for performance study. See IVDR Article 2(60).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.3",
+      "title": "Anticipated Serious Adverse Device Effect (ASADE)",
+      "content": "4.3 Anticipated Serious Adverse Device Effect (ASADE)\nAny serious adverse device effect which by its nature, incidence, severity or outcome has been\nidentified in the risk assessment. See ISO 20916 section 3.5.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.4",
+      "title": "Companion diagnostic (CDx)",
+      "content": "4.4 Companion diagnostic (CDx)\nA device which is essential for the safe and effective use of a corresponding medicinal product\nto:\n(a) identify, before and/or during treatment, subjects who are most likely to benefit from the\ncorresponding medicinal product; or\n3\nA comparator might be: other CE-marked IVD, reference method, gold standard,…\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 7 of 23\n(b) identify, before and/or during treatment, subjects likely to be at increased risk of serious\nadverse reactions as a result of treatment with the corresponding medicinal product.\nSee IVDR Article 2(7).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.5",
+      "title": "Device for performance study",
+      "content": "4.5 Device for performance study\nA device intended by the manufacturer to be used in a performance study. A device intended to\nbe used for research purposes, without any medical objective, shall not be deemed to be a device\nfor performance study. See IVDR Article 2(45).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.6",
+      "title": "Device deficiency (DD)",
+      "content": "4.6 Device deficiency (DD)\nAny inadequacy in the identity, quality, durability, reliability, usability, safety or performance of\na device for performance study, including malfunction, use errors or inadequacy in information\nsupplied by the manufacturer. See IVDR Article 2(62).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.7",
+      "title": "Incident",
+      "content": "4.7 Incident\nAny malfunction or deterioration in the characteristics or performance of a device made available\non the market, including use-error due to ergonomic features, as well as any inadequacy in the\ninformation supplied by the manufacturer and any harm as a consequence of a medical decision,\naction taken or not taken on the basis of information or result(s) provided by the device. See\nIVDR Article 2(67).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.8",
+      "title": "In-house IVD",
+      "content": "4.8 In-house IVD\nAn IVD manufactured and used within the same health institution as outlined in IVDR Article 5(5).\nHealth institution is defined in IVDR Article 2(29).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.9",
+      "title": "Interventional clinical performance study",
+      "content": "4.9 Interventional clinical performance study\nA clinical performance study where the test results may influence patient management decisions\nand/or may be used to guide treatment. See IVDR Article 2(46).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.10",
+      "title": "Investigator",
+      "content": "4.10 Investigator\nAn individual responsible for the conduct of a performance study at a performance study site.\nSee IVDR Article 2(48).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.11",
+      "title": "Left-over sample",
+      "content": "4.11 Left-over sample\nUnadulterated remainder of human derived samples collected as part of routine clinical practice\nand after all standard analysis has been performed. Such specimens/samples would be otherwise\ndiscarded as there is no remaining clinical need for them. This can include specimens collected\nfor research or other purposes not connected to the clinical performance study in question. Left-\nover samples include “specimen or sample that are collected in the past and obtained from\nrepositories (e.g. tissue banks, commercial vendor collections). See ISO 20916 section 3.25.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 8 of 23",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.12",
+      "title": "Malfunction",
+      "content": "4.12 Malfunction\nAny failure of an device for performance study to perform in accordance with its intended use\nwhen used in accordance with the instructions for use or performance study plan. See ISO\n20916 section 3.27.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.13",
+      "title": "Manufacturer",
+      "content": "4.13 Manufacturer\nA natural or legal person who manufactures or fully refurbishes a device or has a device designed,\nmanufactured or fully refurbished, and markets that device under its name or trade mark. See\nIVDR Article 2(23).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.14",
+      "title": "New Finding",
+      "content": "4.14 New Finding\nNew information discovered as the result of an inquiry/investigation/test based on the\noccurrence of the event. Follow-up from the event. See MDCG 2020-10/1.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.15",
+      "title": "Performance study (PS)",
+      "content": "4.15 Performance study (PS)\nA study undertaken to establish or confirm the analytical or clinical performance of a device. See\nIVDR Article 2(42).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.16",
+      "title": "Performance study plan (PSP)",
+      "content": "4.16 Performance study plan (PSP)\nA document that describes the rationale, objectives, design methodology, monitoring, statistical\nconsiderations, organisation and conduct of a PS. See IVDR Article 2(43).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.17",
+      "title": "Serious Adverse Device Effect (SADE)",
+      "content": "4.17 Serious Adverse Device Effect (SADE)\nAny ADE that has resulted in any of the consequences characteristic of a serious adverse event.\nSee ISO 20916 section 3.43.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.18",
+      "title": "Serious Adverse Event (SAE)",
+      "content": "4.18 Serious Adverse Event (SAE)\nAny AE that led to any of the following:\na) a patient management decision resulting in death or an imminent life-threatening situation\nfor the individual being tested, or in the death of the individual's offspring,\nb) death,\nc) serious deterioration in the health of the individual being tested or the recipient of tested\ndonations or materials, that resulted in any of the following:\ni. life-threatening illness or injury,\nii. permanent impairment of a body structure or a body function,\niii. hospitalisation or prolongation of subject hospitalisation,\niv. medical or surgical intervention to prevent life-threatening illness or injury or\npermanent impairment to a body structure or a body function,\nv. chronic disease,\nd) foetal distress, foetal death or a congenital physical or mental impairment or birth defect.\nSee IVDR Article 2(61).\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 9 of 23",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.19",
+      "title": "Specimen",
+      "content": "4.19 Specimen\nAny discrete portion of a body fluid or tissue taken for examination, study, or analysis of one or\nmore quantities or characteristics to determine the character of the whole body fluid or tissue.\nSee ISO 20916 section 3.47.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.20",
+      "title": "Sponsor",
+      "content": "4.20 Sponsor\nAny individual, company, institution or organisation which takes responsibility for the initiation,\nfor the management and setting up of the financing of the PS. See IVDR Article 2(57).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.21",
+      "title": "Study procedure",
+      "content": "4.21 Study procedure\nAny procedure foreseen in the PS (e.g. specimen collection) with the aim of investigating the\ndevice.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.22",
+      "title": "Subject",
+      "content": "4.22 Subject\nAn individual who participates in a PS and whose specimen(s) undergo in vitro examination by a\ndevice for PS and/or by a device used for control purposes. See IVDR Article 2(47).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.23",
+      "title": "Unanticipated serious adverse device effect (USADE)",
+      "content": "4.23 Unanticipated serious adverse device effect (USADE)\nAny SADE, the nature, severity or outcome of which is not consistent with the reference safety\ninformation. See ISO 20916 section 3.52.\n5 Reporting method\nThe template of the Summary Reporting Form\n4\nin the appendix should be used for all studies\nfrom 26 May 2022. The tabular form in the appendix needs to be filled in/updated for each\nreportable event or for new findings/updates to already reported events. It shall be transmitted\nto all national competent authorities (NCAs) where the PS is being performed. For a new finding\nor update, the line of the SAE needs to be updated and the first column set to “m”. Write the\nnew findings in the free description of event column and highlight the additions. When\napplicable, update the others columns as well.\nFor more details on how to complete the form, see section 11. Reporting form.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "5.1",
+      "title": "Reportable events in pre-market PS initiated under directives legislation",
+      "content": "5.1 Reportable events in pre-market PS initiated under directives legislation\nAny SAE or DD that may (have) lead to a SAE occurring in a PS after 26 May 2022, regardless of\nwhen the PS started, should be reported in accordance with Article 76 of the IVDR.\n5",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.2",
+      "title": "Transition to reporting via Eudamed",
+      "content": "5.2 Transition to reporting via Eudamed\nOnce Eudamed is fully functional, the obligations and requirements that relate to safety reporting\nvia Eudamed shall apply. Full functionality of Eudamed shall start from six months after the date\nof publication of the notice referred to in IVDR Article 34(3) of the MDR.\n4\nNational provisions can apply\n5\nNational requirements may apply to PS that commenced under the IVDD.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 10 of 23",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.3",
+      "title": "Overview of formats to be used by sponsors when reporting to NCAs",
+      "content": "5.3 Overview of formats to be used by sponsors when reporting to NCAs\nFrom 26 May 2022 and until\nEudamed is available.\nThe tabular format of this guidance (Appendix- Summary Reporting\nForm) should be used.\nWhen Eudamed is available\nbut not yet mandatory and\nuntil the timepoint when\nEudamed becomes\nmandatory.\nEither the tabular format of this guidance (Appendix- Summary\nReporting Form) or the Eudamed web form can be used.\nNote: Once the shift to Eudamed reporting has been made for a specific\nPS, Eudamed should continue to be used for reporting all new events\nand updates to those events throughout the remainder of the study.\nWhen Eudamed is\nmandatory, i.e. from the\ndate corresponding to six\nmonths after the date of\npublication of the notice\nreferred to in MDR Article\n34(3).\nWeb form via Eudamed shall be used for all new events, and updates to\nthose events.\nThe tabular format of this guidance (Appendix- Summary Reporting\nForm) can be used only to transmit follow-up reports/final reports to\nthe NCAs on events which were initially reported in this format.",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.4",
+      "title": "Collecting reports from investigators",
+      "content": "5.4 Collecting reports from investigators\nThe format in which sponsors wish to receive single event reports from investigators will be up\nto the sponsor to design and they may be adapted to an individual PS. When sponsors design\nsuch reporting forms, they should consult this guidance document to ensure all relevant details\nare captured in the reports from the investigator, so that the sponsors can fulfil their reporting\nobligations.\n6 Reportable events\nFor the purpose of this guidance and based on the definitions above, the following events\nare considered reportable events in accordance with IVDR Article 76(2):\na) any SAE that has a causal relationship with the device\n6\n, the comparator\n7\nor the study\nprocedure or where such causal relationship is reasonably possible;\n6\nDevice= device for performance study.\n7\nA comparator might be: other CE-marked IVD, reference method, gold standard,…\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 11 of 23\nb) any DD that might have led to a SAE if appropriate action had not been taken, intervention\nhad not occurred, or circumstances had been less fortunate;\nc) any new findings in relation to any event referred to in points a) and b).\nFrom the definition above, it also follows that SAEs related to a CE marked IVD which is part of a\nPS with an IVD for PS (for example a CE marked comparator IVD or a CE marked IVD that is used\nduring the study procedure) are reportable if there is a causal (or reasonably possible)\nrelationship to that IVD. The reporting procedures described in this guide should then be\nfollowed by the PS sponsor, in addition to the normal vigilance reporting for CE marked devices\nby the manufacturer (double reporting is certainly possible).\nAll causality assessments should be made using section 10 of this guidance. Only causality level\n1 (i.e. “not related”) is excluded from reporting. If either the sponsor or the investigator has\nassigned a higher causality level than \"not related\", the event should be reported.\nAs not all safety provisions in the IVDR are applicable to all types of IVD PS, the following table\ndepicts the safety provisions laid out in the IVDR that are applicable per type of IVD PS.\nType of PS\nIVDR safety reporting\nprovisions\nPS referred to in IVDR Article 58(1-2):\nAny PS or any combined IVD study (a clinical study of a medicinal product,\nmedical device, in which an IVD is also studied):\na. in which surgically invasive sample-taking is done only for the purpose\nof the PS;\nb. that is an interventional clinical PS as defined in IVDR Article 2(46);\nc. where the conduct of the study involves additional invasive procedures\nor other risks for the subjects of the studies;\nd. involving CDx (except when only using left-over samples).\nIVDR Article 76(2-3)\nPMPF study referred to in IVDR Article 70(1) with additional burdensome and/or\ninvasive procedures.\nIVDR Article 76(5) AND IVDR\nArticle 76(6)\nFor more information, see\nsection 6.1: Exceptions for\nPMPF studies falling under\nIVDR Article 70(1) and\nSection 10: causality\nAssessment.\nPS referred to IVDR Article 70(2) conducted to assess, outside the scope of its\nintended purpose, a device which already bears the CE marking.\nIVDR Article 76(2-3)\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 12 of 23\nPS with an in-house IVD referred to in IVDR Article 5(5). No provisions on safety\nreporting according to the\nIVDR. However, safety\nreporting may be regulated\nby national legislation.",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "6.1",
+      "title": "Exceptions for PMPF studies falling under IVDR Article 70(1)",
+      "content": "6.1 Exceptions for PMPF studies falling under IVDR Article 70(1)\nSAE reporting for PMPF studies falling under Article 70(1) is governed by Articles 76(5) and 76(6).\nThis means that the provisions on vigilance apply and need to by the manufacturer of the CE\nmarked device(s). However, when a causal relationship between the SAE and the preceding PS\nhas been established, reporting procedures for PS should be followed by the PS sponsor.\nThis means that:\n• For the purpose of this guidance (safety reporting in PS), reportable events in PMPF\nstudies are those SAEs where a causal relationship between the SAE and the preceding\nPS has been established. The other relationship categories i.e. ‘not related’, ‘possible’\nand ‘probable’ do not need to be reported.\n• In the context of vigilance, IVDR Articles 82-85 need to be taken into account and this\nconcerns the serious incidents where a relationship between the incident and the\ndevice is at least reasonably possible.\nIt is thus possible that events occurring in such PS need to be reported to both the competent\nauthorities in charge of PS AND to the competent authorities in charge of vigilance.",
+      "parent_section": "6"
+    },
+    {
+      "section_number": "6.2",
+      "title": "Reportable events occurring in other MSs / Third Countries",
+      "content": "6.2 Reportable events occurring in other MSs / Third Countries",
+      "parent_section": "6"
+    },
+    {
+      "section_number": "9.1",
+      "title": "Report by sponsor to NCAs.",
+      "content": "9.1 Report by sponsor to NCAs.\nThe sponsor must report to all NCAs where the PS is authorised to start:\n• For all reportable events as described in section 6 which indicate an imminent risk of\ndeath, serious injury, or serious illness and that requires prompt remedial action for\nother patients/subjects, users or other persons or a new finding to it: immediately, but\n9\nCountries other than Switzerland, Turkey and those belonging to the EEA.\n10\nContact person established by the sponsor in line with IVDR Article 58(4) if accepted by MS.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 14 of 23\nnot later than 2 calendar days after awareness by sponsor of a new reportable event\nor of new information in relation with an already reported event.\nThis includes events that are of significant and unexpected nature such that they become\nalarming as a potential public health hazard. It also includes the possibility of multiple\ndeaths occurring at short intervals.\nThese concerns may be identified by either the NCA or the sponsor.\n• Any other reportable events as described in section 6 or a new finding/update to it:\nimmediately, but not later than 7 calendar days following the date of awareness\nby the sponsor of the new reportable event or of new information in relation with an\nalready reported event.\nIn some cases, a different periodicity or different modalities may be agreed between the\nparticipating NCAs and the sponsor according to the study’s design and to the pathology studied\nin the PS. This would allow implementation of adequate provision for PS in which SAE frequency\nis expected to be high due to the natural progression of the disease (e.g. palliative oncology).",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "9.2",
+      "title": "Report by the investigator to the sponsor",
+      "content": "9.2 Report by the investigator to the sponsor\nThe sponsor must implement and maintain a system to ensure that the reporting of the\nreportable events as defined under section 6 will be provided by the investigator to the sponsor\nimmediately, but not later than 3 calendar days after awareness of the event.\n10 Causality assessment\nThe relationship between the use of the in vitro diagnostic medical device\n11\n(including the study\nprocedure) and the occurrence of each SAE must be assessed and categorized.\nDuring causality assessment activity, clinical judgement must be used and the relevant\ndocuments, such as the Investigator’s Brochure, the PSP or the Risk Analysis Report must be\nconsulted, as all the foreseeable SAEs and the potential risks are listed and assessed there\n12\n.\nThe presence of confounding factors, such as concomitant medication/treatment, the natural\nhistory of the underlying disease, other concurrent illness or risk factors must also be considered.\nThe above considerations also apply to the SAEs occurring in the comparison group.\nFor the purpose of harmonizing reports, each SAE will be classified according to four different\nlevels of causality:",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "11.1",
+      "title": "Completion guidelines: Form header",
+      "content": "11.1 Completion guidelines: Form header",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "11.2",
+      "title": "Completion guidelines: Event details",
+      "content": "11.2 Completion guidelines: Event details\nEach unique reportable event is presented in a separate line. Updates to a previously reported\nevent should be made by changing the information in the same line, and clearly identified\naccording to the principles described below.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 19 of 23\nAny new information added in the form should be highlighted in bold and/or colour. This\nincludes any new lines added and any changes made to the information in an already existing\nline.\nIn the initial report, in any given line, no fields shall be left intentionally blank. To meet this\nrequirement, preliminary information should be filled in, despite the need of further updating.",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "5.2.1",
+      "title": "Ongoing events at time of transition to Eudamed",
+      "content": "5.2.1 Ongoing events at time of transition to Eudamed\nIt is acknowledged that at the time of transition to reporting via Eudamed, there will be ongoing\nevents for which initial reports have been made according to the procedures described in this\ndocument. For these reportable events, follow-up and final reports will be submitted to the NCAs\nby the same procedure, but all new reportable events shall be entered in Eudamed.\nWhether retrospective uploading of previous event reports to Eudamed will be possible is not\nclear at the time this guidance is issued.",
+      "parent_section": "5.2"
+    },
+    {
+      "section_number": "6.2.1",
+      "title": "Reportable events occurring in other MSs (MS)",
+      "content": "6.2.1 Reportable events occurring in other MSs (MS)\nThe sponsor shall report the reportable SAEs per PS. If several PS are conducted (e.g. specimen\ncollection in multiple sites) with the same device, only those SAEs that happen in PS that have the\nsame PSP code should be reported for those PS, and only to those MS where a PS with that specific\nPSP code is being conducted\n8\n.\nIt is acknowledged that the same PS can be conducted under different versions of the same PSP\ncode in different MS, e.g. with country specific adaptations, and in those cases the SAE reporting\ncan normally be combined for all the versions of the PSP for the same PS.\nReportable events occurring before the PS is authorised to start in a MS will be reported to this\nMS upon authorization in this MS.\n8\n“Is being conducted” has to be interpreted as “has been approved or have been notified to the NCA”.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 13 of 23",
+      "parent_section": "6.2"
+    },
+    {
+      "section_number": "6.2.2",
+      "title": "Reportable events occurring in third countries",
+      "content": "6.2.2 Reportable events occurring in third countries\nReportable events occurring in third countries\n9\nin which a PS is conducted (e.g. specimen\ncollection in that country) under the same PSP (see section 6.2.1 for what is meant with same\nPSP) have to be reported in accordance with this guidance to the NCA(s) of the European MS(s)\nin which the PS is being conducted.\n• The NCA will start receiving the reportable events occurring in third countries as soon as\nthe PS is authorised to start in that MS.\n• Reportable events occurring in third countries after the participating European sites\nhave closed, shall continue to be reported to the MSs in which the PS was conducted.\nReportable events occurring before the PS is authorized to start in a MS will be reported to this\nMS upon authorization in this MS.\n7 Report by whom\nReportable events have to be reported by the sponsor of the PS (or the PS sponsor’s delegate),\nwhich could be the manufacturer, the legal representative or another person\n10\nor entity.\n8 Report to whom\nReportable events must be reported at the same time to all NCAs where the PS has\ncommenced, using the summary table featured in the appendix.\nA list of PS contact points within the NCAs is published at the European Commission's webpage.\nFor the purpose of this guidance, a PS is considered to have commenced in an individual MS when\nthe sponsor is authorised to start the study in that MS in accordance with the provisions laid\ndown in the IVDR.\nMSs may also require separate reporting to the Ethics Committee(s).\n9 Reporting timelines",
+      "parent_section": "6.2"
+    },
+    {
+      "section_number": "3",
+      "title": "Commission Decision 2010/227/EU of 19 April 2010 on the European Databank on Medical",
+      "content": "3. Commission Decision 2010/227/EU of 19 April 2010 on the European Databank on Medical\nDevices (Eudamed).",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Codes for the representation of names of countries and their subdivisions – Part 1:",
+      "content": "4. Codes for the representation of names of countries and their subdivisions – Part 1:\nCountry codes (ISO 3166-1) published by International Organisation for Standardization\n(ISO).",
+      "parent_section": null
+    },
+    {
+      "section_number": "1",
+      "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017",
+      "content": "1. Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017\non in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission\nDecision 2010/227/EU.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Council Directive 98/79/EC of 27 October 1998 on in vitro diagnostic medical devices.",
+      "content": "2. Council Directive 98/79/EC of 27 October 1998 on in vitro diagnostic medical devices.",
+      "parent_section": null
+    },
+    {
+      "section_number": "11.1.1",
+      "title": "EUDAMED/CIV-ID",
+      "content": "11.1.1 EUDAMED/CIV-ID\nIt will not be possible to generate the Union-wide unique single identification number mentioned\nin IVDR Article 66 (1) before Eudamed is fully functional. Until Eudamed is fully functional, PS will\nget tracking numbers (CIV-ID) upon registration in the Eudamed2 database which is performed\nby the NCA upon receipt of an application. This CIV-ID is provided to the sponsor during the NCA’s\nhandling of the initial application for the PS and should be entered on the safety reporting form.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.2",
+      "title": "Title of PS",
+      "content": "11.1.2 Title of PS\nThe identifying title of the PS. The title indicated here should be consistent with other title entries\n(such as in PS application form, PSP cover page etc).",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.3",
+      "title": "PSP number/code",
+      "content": "11.1.3 PSP number/code\nThe unique identification code or short name assigned to the specific PSP by the sponsor\n(numeric, alphanumeric or acronym) should be indicated.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.4",
+      "title": "Contact person",
+      "content": "11.1.4 Contact person\nName, address, e-mail and telephone number should be provided for the person who is the\nsponsor’s point of contact in case the NCA has follow-up questions regarding submitted safety\nreport forms.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.5",
+      "title": "MS+NCA Reference numbers",
+      "content": "11.1.5 MS+NCA Reference numbers\nFor each participating MS, indicate the country code\n14\nand the NCA’s national reference number\nfor the PS.\nExample:\nSE 5.1-20YY-XXXXXX\n14\nUse ISO-3166-1 alpha-2 codes, i.e. two-letter country codes as defined in ISO 3166-1\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 18 of 23\nDK 20YYXXXXXX",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.6",
+      "title": "No. of subjects enrolled to date total & No. of specimens tested with the IVD to date",
+      "content": "11.1.6 No. of subjects enrolled to date total & No. of specimens tested with the IVD to date\ntotal\nIndicate the total number of subjects who have been enrolled and number of specimens that\nhave been tested with the IVD (per date of report) in the PS globally.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.7",
+      "title": "No. of subjects enrolled to date per country & No. of specimens collected to date per",
+      "content": "11.1.7 No. of subjects enrolled to date per country & No. of specimens collected to date per\ncountry\nList all countries where the PS has been authorised by the report date and indicate the number\nof enrolled subjects and number of obtained specimens in the PS (per date of report) in each\ncountry.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.8",
+      "title": "Device type",
+      "content": "11.1.8 Device type\nIndicate the type of device(s) assessed in the PS according to EMDN categories (use the level as\nspecialised as possible). The EMDN can be accessed and downloaded in pdf and excel format at\nwebgate.ec.europa. eu/dyna2/emdn and the European Commission’s website page for MDCG\ndocuments.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.9",
+      "title": "Reference MS",
+      "content": "11.1.9 Reference MS\nIndicate the name of the MS which drew the unique EUDAMED ID (normally the first MS receiving\nan application for the PS). Once the coordinated assessment procedure (per IVDR Article 74) is\nup and running, the coordinating MS should be indicated here.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.10",
+      "title": "No. of devices for PS used to date total",
+      "content": "11.1.10 No. of devices for PS used to date total\nIndicate the total number of devices for PS (e.g. reagent kits) which have been used (per date of\nreport) in the PS globally. The number of devices used could be indicative of a quality issue.\nTherefore, if not applicable to the device used, please provide justification and add another\nparameter to assess quality issues with the IVD.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.11",
+      "title": "No. of devices for PS used to date per country",
+      "content": "11.1.11 No. of devices for PS used to date per country\nList all countries where the PS has been authorised by the report date and indicate the number\nof devices for PS (e.g. reagent kits) which have been used in the PS (per date of report) in each\ncountry. The number of devices used could be indicative of a quality issue. Therefore, if not\napplicable to the device used, please provide justification and add another parameter to assess\nquality issues with the IVD.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.1.12",
+      "title": "Date of report",
+      "content": "11.1.12 Date of report\nIndicate the date when the report is compiled for transmission to NCAs. Format DD/MM/YYYY.",
+      "parent_section": "11.1"
+    },
+    {
+      "section_number": "11.2.1",
+      "title": "Status",
+      "content": "11.2.1 Status\nThe sponsor shall identify the new/updated information in the status column as:\nA = added = new reportable event;\nD = deleted = already reported event that has been deleted due to downgrading to non-\nserious, due to integration in another event, or … Add the reason for deletion in the\ncorresponding cell in column “Free description of event”.\nM = modified = new finding/update to an already reported event;\nU = unchanged.\nDo not add other options.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.2",
+      "title": "Date Sponsor received report of SAE/DD",
+      "content": "11.2.2 Date Sponsor received report of SAE/DD\nIndicate the date when the sponsor was first notified by the study site about the event. This date\nis checked for compliance with reporting timelines as outlined in section 9 Reporting timelines.\nFormat DD/MM/YYYY.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.3",
+      "title": "Country code",
+      "content": "11.2.3 Country code\nIndicate the country code\n14\nfor the country in which the subject associated with the event has\nbeen enrolled. Choose from dropdown menu or enter manually if code is not available.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.4.1",
+      "title": "Specimen collection",
+      "content": "11.2.4.1 Specimen collection\nName identifying the institution or site where the specimen was collected.",
+      "parent_section": "11.2.4"
+    },
+    {
+      "section_number": "11.2.4.2",
+      "title": "Specimen analysis",
+      "content": "11.2.4.2 Specimen analysis\nName identifying the institution or site where the specimen was analysed.",
+      "parent_section": "11.2.4"
+    },
+    {
+      "section_number": "11.2.5",
+      "title": "Subject ID code",
+      "content": "11.2.5 Subject ID code\nThe study specific subject ID code, i.e. the link between study data and the actual subject identity\n(which is not to be provided in this form).",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.6",
+      "title": "SAE or DD ID code",
+      "content": "11.2.6 SAE or DD ID code\nThe investigator, sponsor or manufacturer should assign a unique ID to each SAE or DD that has\noccurred. This number shall remain unchanged throughout all other alterations of the particular\nSAE reporting due to ongoing assessment.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.7",
+      "title": "Date of specimen collection",
+      "content": "11.2.7 Date of specimen collection\nIndicate the date of the relevant collection of the specimen. Format DD/MM/YYYY.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 20 of 23",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.8",
+      "title": "Date of event onset",
+      "content": "11.2.8 Date of event onset\nThe date when the first signs of an event were noticed may be different (earlier) than the date\nwhen the event fulfilled the seriousness criteria (see further the definition in section 4.15). The\ndate when the event became an SAE should be reported as Date of event onset. In case of DDs\nwhich did not lead to an SAE, the date the DD was discovered should be indicated.\nFormat DD/MM/YYYY.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.9",
+      "title": "SAE or DD",
+      "content": "11.2.9 SAE or DD\nChoose one option from SAE or DD. When a DD lead to a SAE, both need to be reported on\nseparate lines. In the line of the DD/SAE, refer to the associated SAE/DD. Complete all possible\ninformation in both lines. This might mean double reporting of some information, but it is\nnecessary that both the DD and the SAE have all information and can be analysed separately.\nDo not add other options.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.10",
+      "title": "Subject gender",
+      "content": "11.2.10 Subject gender\nChoose one option from the following list (do not add other options):\n• Female\n• Male\n• Other\n• Unknown",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.11",
+      "title": "Classification of event",
+      "content": "11.2.11 Classification of event\nChoose one option from the following list of consequence characteristics (do not add other\noptions):\n• Patient management decision resulting in death or an imminent life-threatening situation\nfor the individual being tested or in the death of the individual’s offspring\n• Death\n• Life-threatening illness or injury\n• Permanent impairment of body structure or body function\n• Hospitalization or prolongation of hospitalization\n• Medical or surgical intervention\n• Chronic disease\n• Foetal distress, foetal death or congenital physical or mental or birth defect\n• Not applicable (Note that this option is only to be selected in case of reportable DDs that\ndid not lead to an SAE)",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.12",
+      "title": "SAE connected to specimen collection or to specimen analysis",
+      "content": "11.2.12 SAE connected to specimen collection or to specimen analysis\nChoose one option from the following list (do not add other options):\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 21 of 23\n• Specimen collection\n• Specimen analysis (including pre-analytical, analytical and post-analytical phase)",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.13",
+      "title": "Free description of event",
+      "content": "11.2.13 Free description of event\nProvide a description of the event in free text.\nPlease provide other relevant information not already captured in this report.\nBelow is a non-exhaustive list of items that could be relevant to cover:\n• Nature of the observed symptoms\n• Duration and severity of the symptoms\n• Date of onset of first signs of the event (before it became a SAE)\n• Medical background of the subject\n• Medical care of the subject\n• Comments on the event in relation to already known safety data",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.14",
+      "title": "Device issue (if applicable)",
+      "content": "11.2.14 Device issue (if applicable)\nThe IMDRF codes applicable to device issues can be found in annex A on the IMDRF webpage\nrelated to AE terminology. You can use this worksheet to look up the appropriate codes. Please\nreport all the appropriate codes applicable for the SAE or DD reported. Please separate each code\nonly by “;”. Please do not use the terminology, but only the codes.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.15",
+      "title": "Clinical signs/symptoms",
+      "content": "11.2.15 Clinical signs/symptoms\nThe IMDRF codes applicable to clinical signs/symptoms can be found in annex E on the IMDRF\nwebpage related to AE terminology. Please report all the appropriate codes applicable for the\nSAE or DD reported. Please separate each code only by “;”. Please do not use the terminology,\nbut only the codes.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.16",
+      "title": "Clinical impact",
+      "content": "11.2.16 Clinical impact\nThe IMDRF codes applicable to clinical impact of the SAE or DD can be found in annex F on the\nIMDRF webpage related to AE terminology. Please report all the appropriate codes applicable for\nthe SAE or DD reported. Please separate each code only by “;”. Please do not use the terminology,\nbut only the codes.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.17",
+      "title": "Action / treatment / outcome",
+      "content": "11.2.17 Action / treatment / outcome\nProvide information in free text on actions taken, treatment(s) administered and the outcome.\n“Outcome” is a broader term then “event status” and the value to be entered here is considered\nto be more specific than the options given for “event status” (see 11.4.13).",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.18",
+      "title": "Relationship to procedure",
+      "content": "11.2.18 Relationship to procedure\nChoose one option from the following list of causality levels (for explanatory texts see section 10\nCausality assessment) (do not add other options):\n• Not related\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 22 of 23\n• Possible\n• Probable\n• Causal\n• Not applicable (please justify)\nPlease report the assessments by sponsor and investigator in the respective columns. The\ninvestigator could mean the specimen collection site investigator or the specimen analysis site\ninvestigator.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.19",
+      "title": "Relationship to device",
+      "content": "11.2.19 Relationship to device\nChoose one option from the following list of causality levels (for explanatory texts see section 10\nCausality assessment) (do not add other options):\n• Not related\n• Possible\n• Probable\n• Causal\n• Not applicable (please justify)\nPlease report the assessments by sponsor and investigator in the respective columns. The\ninvestigator could mean the specimen collection site investigator or the specimen analysis site\ninvestigator.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.20",
+      "title": "Study arm",
+      "content": "11.2.20 Study arm\nChoose one option from the following list:\n• Test group (described in the PSP)\n• Comparison group (described in the PSP)\n• Blinded\n• Not applicable\nNote: For some study designs it might be more relevant to add name of device; i.e. in a PS with\nseveral test groups it might be useful to differentiate which study device was used for testing the\nsubject.",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.21",
+      "title": "Event status (only applicable for SAE)",
+      "content": "11.2.21 Event status (only applicable for SAE)\nChoose one option from the following list (do not add other options):\n• Resolved\n• Resolved with Sequelae\n• Ongoing\n• Death\nDoesn’t need to be completed for DD.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2024-4\nPage 23 of 23",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "11.2.22",
+      "title": "Date of event resolution (only applicable for SAE)",
+      "content": "11.2.22 Date of event resolution (only applicable for SAE)\nAdd date in format DD/MM/YYYY. If event status is “Ongoing” enter Not Applicable.\n12 References",
+      "parent_section": "11.2"
+    },
+    {
+      "section_number": "5",
+      "title": "In vitro diagnostic medical devices — Clinical performance studies using specimens from",
+      "content": "5. In vitro diagnostic medical devices — Clinical performance studies using specimens from\nhuman subjects — Good study practice (ISO 20916) published by International\nOrganisation for Standardization (ISO).",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Documents by the International Medical Device Regulators Forum (IMDRF) to support",
+      "content": "6. Documents by the International Medical Device Regulators Forum (IMDRF) to support\nregulatory harmonization: https://www.imdrf.org/documents.",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "MDCG 2022-10: Q&A on the interface between Regulation (EU) 536/2014 on clinical trials",
+      "content": "7. MDCG 2022-10: Q&A on the interface between Regulation (EU) 536/2014 on clinical trials\nfor medicinal products for human use (CTR) and Regulation (EU) 2017/746 on in vitro\ndiagnostic medical devices (IVDR).\n13 Appendix – Performance Study Summary Safety Reporting Form",
+      "parent_section": null
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "id": "MDCG_2020_10",
+  "title": "MDCG 2020-10/1 rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2020-10",
+  "date_published": "2020-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/0537d335-7eed-4087-b65d-3c2bd8c72c1a_en?filename=md_mdcg_2020-10-1_guidance_safety_reporting_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1.1",
+      "title": "Safety reporting in the absence of Eudamed",
+      "content": "1.1 Safety reporting in the absence of Eudamed\nSince the electronic system referred to in Article 73 (Eudamed) will not be available and fully functional at the Date of application of the MDR this\nguidance outlines the procedures for safety reporting in clinical investigations in the absence of Eudamed.\nThis document defines Serious Adverse Event (SAE) reporting modalities and includes a summary tabulation reporting format.\n1\nThe PMCF investigations referred to in MDR Article 74(1).\nPage 5 of 19\n2 Scope",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "2.1",
+      "title": "Clinical investigations of medical devices",
+      "content": "2.1 Clinical investigations of medical devices\nThe reporting modalities and format set out in this guidance apply to:\n Pre-market clinical investigations covered by Articles 62 and 74(2) of the MDR conducted with:\na) Non-CE marked devices,\nb) CE marked devices used outside the intended use(s) covered by the CE-marking.\nc) The term pre-market clinical investigation may also include some studies covered by MDR Article 82.\nAs MDR Article 82 allows member states to define national requirements for such clinical investigations, sponsors are encouraged to check\nwith the applicable NCA\n2\nwhether this guidance or other reporting procedures should be applied.\nIn situations where a clinical investigation has started using a non-CE marked device, and the right to bear the CE marking has been obtained\nbefore the end of the clinical investigation, the SAE reporting continues until completion of the investigation, according to the clinical\ninvestigation plan and these guidelines apply throughout the SAE reporting period.\nFor pre-market clinical investigations involving CE marked comparator devices used within their intended purpose, SAEs occurring in or to\nsubjects that are in the comparator arm of an investigation shall also be reported in accordance with these guidelines.\nNote: SAEs concerning CE marked devices which meet the vigilance reporting criteria also need to be handled under the post-market\nsurveillance/vigilance system.\n Those Post-Market Clinical Follow Up (PMCF) investigations that involve procedures additional to those performed under the normal\nconditions of use of the device, and where those additional procedures imposed by the clinical investigation plan are invasive or\nburdensome, covered by MDR Article 74(1). For these clinical investigations the safety reporting for events pertaining to MDR Article 80(6)\nfollow the Serious Adverse Event reporting process only, and are outlined in this guidance. Events pertaining to MDR Article 80(5) are\nreported following the vigilance process only and are outside the scope of this guidance.\n Note that other post-market clinical investigations may be subject to safety reporting requirements in line with this guidance due to\nnational requirements following MDR Article 82, but there is no such general requirement. Sponsors are encouraged to check with the\napplicable NCA whether this guidance or other reporting procedures should be applied.\n Due to the transitional provisions in MDR Article 120(11) this guidance also covers clinical investigations which have started to be conducted\nin accordance with Article 10 of Directive 90/385/EEC (AIMDD) or Article 15 of Directive 93/42/EEC (MDD) prior to 26 May 2021. These\ninvestigations may continue to be conducted after date of application of the MDR, but the reporting of serious adverse events and device\ndeficiencies shall be carried out in accordance with the MDR requirements from 26 May 2021 and onwards.",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "2.2",
+      "title": "Medical devices used in clinical trials of medicinal products (drug trials)",
+      "content": "2.2 Medical devices used in clinical trials of medicinal products (drug trials)\n A CE-marked device which is used outside its intended purpose, or a non-CE marked device in a clinical drug trial would implicitly have to\nbe assessed for safety and performance and the study shall follow both MDR (Chapter VI) and the applicable legislation for clinical drug\ntrials. This guidance document is then relevant for compliance with the MDR regarding safety reporting.\n2\nFor the purpose of this guidance,\" NCAs\" encompasses the National Competent Authorities of the EEA, Switzerland and Turkey.\nPage 6 of 19\n If a drug-device study (or a drug trial) is not undertaken to assess the safety or performance of a device used in the study, the reporting\nrequirements of MDR Article 80 do not apply, as long as the device is CE marked and used within its intended purpose. This guidance is not\napplicable, but the vigilance reporting provisions of MDR apply in those situations, as for any commercially available device. Sponsors\nshould make sure that the device manufacturer is notified about any incidents related to the device and the legal manufacturer of the\ndevice is responsible for the subsequent vigilance reporting.\n3 Definitions",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "3.1",
+      "title": "Investigational device",
+      "content": "3.1 Investigational device\nA device that is assessed in a clinical investigation\n(MDR Article 2(46))\nNote: An investigational device can be a non-CE marked device or a CE marked device. The definition in MDR Article 2(46) does not differentiate\nbetween different regulatory statuses of devices. However, the reporting requirements are different depending on whether the clinical\ninvestigation is done for purposes described in Article 62, 74 or 82. The definition is understood to cover also the devices investigated in PMCF\ninvestigations, even if they are not subject to notification per Art 74.1.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.2",
+      "title": "Adverse Event (AE)",
+      "content": "3.2 Adverse Event (AE)\nAny untoward medical occurrence, unintended disease or injury or any untoward clinical signs, including an abnormal laboratory finding,\nin subjects, users or other persons, in the context of a clinical investigation, whether or not related to the investigational device.\n(MDR Article 2(57))\nNote:\na. This definition includes events that are anticipated as well as unanticipated events\nb. This definition includes events occurring in the context of a clinical investigation related to the investigational device, the comparator or\nthe procedures\n3\ninvolved.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.3",
+      "title": "Adverse device effect (ADE)",
+      "content": "3.3 Adverse device effect (ADE)\nAny adverse event related to the use of an investigational medical device or a comparator.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.4",
+      "title": "Anticipated serious adverse device effect (ASADE)",
+      "content": "3.4 Anticipated serious adverse device effect (ASADE)\nAny serious adverse device effect which by its nature, incidence, severity or outcome has been identified in the last risk assessment document\nupon serious adverse device effect occurred.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "4.1",
+      "title": "Transition to reporting via Eudamed",
+      "content": "4.1 Transition to reporting via Eudamed\nOnce Eudamed is available and fully functional the obligations and requirements that relate to performing safety reporting via Eudamed shall apply\nfrom the date corresponding to six months after the date of publication of the notice referred to in Article 34(3) of the MDR.\nPage 8 of 19",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.2",
+      "title": "Overview of formats to be used by sponsors when reporting to NCAs",
+      "content": "4.2 Overview of formats to be used by sponsors when reporting to NCAs\nUnder directives legislation\nUntil May 25th, 2021: The tabular format from MEDDEV 2.7/3 Appendix I should be used\nTransition period\nFrom May 26th, 2021 and until Eudamed is\navailable\nThe Tabular format of this guidance (Appendix- Summary Reporting Form) should be used.\nWhen Eudamed is available but not yet\nmandatory and until the timepoint when\nEudamed becomes mandatory\nEither the Tabular format of this guidance (Appendix- Summary Reporting Form) or the Eudamed web form\ncan be used.\nNote: Once the shift to Eudamed reporting has been made for a specific clinical investigation, Eudamed\nshould continue to be used for reporting all new events and updates to those events throughout the\nremainder of the clinical investigation.\nFrom the timepoint when Eudamed is mandatory*\n*From the date corresponding to six\nmonths after the date of publication of the\nnotice referred to in Article 34(3) of the\nMDR.\nWeb form via Eudamed shall be used for all new events, and updates to those events.\nThe Tabular format of this guidance (Appendix- Summary Reporting Form) can be used only to transmit\nfollow-up reports/final reports to the NCAs on events which were initially reported in this format.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.3",
+      "title": "Collecting reports from investigators",
+      "content": "4.3 Collecting reports from investigators\nThe format in which sponsors wish to receive single event reports from investigators will be up to the sponsor to design and they may be adapted\nto an individual clinical investigation. When sponsors design such reporting forms, they should consult this guidance document to ensure all\nrelevant details are captured in the reports from the investigator, so that the sponsors can fulfil their reporting obligations.\n5 Reportable events\nFor the purpose of this guidance and based on the definitions above, the following events are considered reportable events in accordance\nwith MDR Art. 80(2):\na) any serious adverse event that has a causal relationship with the investigational device, the comparator or the investigation procedure or\nwhere such causal relationship is reasonably possible;\nb) any device deficiency that might have led to a serious adverse event if appropriate action had not been taken, intervention had not\noccurred, or circumstances had been less fortunate;\nc) any new findings in relation to any event referred to in points a) and b).\nSerious adverse events related to a CE marked device which is part of the investigation procedure (for example a CE-marked implanting tool used\nin combination with a non-CE marked investigational device) are reportable per MDR Article 80(2) if there is a causal, (or reasonably possible)\nrelationship to the device, the comparator or the investigation procedure. The reporting procedures described in this guide should then be\nfollowed in addition to the normal vigilance reporting procedures for CE marked devices.\nPage 9 of 19\nAll causality assessments should be made using the guidance in section 9. Only causality level 1 (i.e. “not related”) is excluded from reporting. If\neither the sponsor or the investigator has assigned a higher causality level than \"not related\", the event should be reported.\nType of Clinical Investigation Applicable legislation MDR regulation\nClinical investigation may be used for\nconformity procedure for investigational\ndevice cf. article 62\nMDR MDR art. 80 §2-3\nPMCF investigation with additional\nburdensome and/or invasive procedures\nMDR\n MDR art. 80 §5 => MDR chapter VII\nAND\n MDR art. 80 §6\nNotwithstanding §5, this Article shall apply where a “causal\nrelationship” (per section 9 of this guide) between the serious adverse\nevent and the preceding investigational procedure has been\nestablished.\nFor more information see 5.1 Exceptions for PMCF investigations according\nto MDR Article 74.1\nPMCF investigation without additional\nburdensome and/or invasive procedures\nMDR MDR chapter VII\nOther clinical investigation cf. article 82\nor other national legislation\nNational legislation\nNo provisions in MDR. Safety reporting may be regulated in national\nlegislations in the country where the investigation is conducted.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "5.1",
+      "title": "Exceptions for PMCF investigations falling under MDR Article 74.1",
+      "content": "5.1 Exceptions for PMCF investigations falling under MDR Article 74.1\nFollowing Article 74.1 the SAE reporting for these PMCF clinical investigations is governed by Articles 80(5) and 80(6).\nThus the provisions of vigilance laid down in Articles 87-90 and acts adopted pursuant to Article 91 shall apply. However, the SAEs where a causal\nrelationship between the serious adverse event and the preceding investigational procedure has been established shall follow the reporting\nprocedures of clinical investigations as outlined in Article 80.\nThis means that:\n For the purpose of this guidance (safety reporting in clinical investigations) reportable events in PMCF clinical investigations are those\nserious adverse events where a causal relationship between the serious adverse event and a preceding investigational procedure has\nbeen established. The other relationship categories i.e. not related, possible and probable do not need to be reported in the context\nof the clinical investigation under Article 80.\n In the context of vigilance, articles 87-90 need to be taken into account and this concerns the Serious Incidents where a relationship\nbetween the incident and the device or a procedure stated in the IFU is at least reasonably possible. Also not related, possible and\nprobable events need to be reported in the context of vigilance (Art. 87-90).\nIt is thus possible that events occurring in such clinical investigations need to be reported to both the competent authorities in charge of SAE in\nclinical investigations AND to the competent authorities in charge of vigilance, as outlined above, including a relationship to a procedure stated in\nthe IFU.\nPage 10 of 19\n“Preceding investigational procedure” shall be understood as a procedure which is imposed by the Clinical Investigation Plan and which has taken\nplace before (or coincided in time) with the serious adverse event. This includes both the investigational device application procedure and any\nadditional burdensome or invasive procedure(s) which defines whether the study is subject to notification requirements following MDR article\n74(1).",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.2",
+      "title": "Reportable events occurring in other Member States / Third Countries",
+      "content": "5.2 Reportable events occurring in other Member States / Third Countries",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.3",
+      "title": "Transition period for reportable events in pre-market clinical investigations initiated under directives legislation",
+      "content": "5.3 Transition period for reportable events in pre-market clinical investigations initiated under directives legislation\nIt is acknowledged that the MDR implies changes to the reporting requirements compared to the directives’ requirements where all SAEs should\nbe reported regardless of relatedness. Under MDR sponsors are no longer obliged to report SAEs that are “not related” to the clinical investigation\nprocedures or the investigational device. At the date of application for MDR there will be ongoing events for clinical investigations initiated under\ndirectives legislation. As from the 26\nth\nof May 2021 sponsors are no longer expected to submit follow-up reports to NCAs for events that have been\ndeemed “not related“ (see section 9 of this document for guidance on causality assessment). For ongoing events that have a causality assessment\nother than “not related” follow up reports will still have to be provided.\nTo facilitate the transition and give time for sponsors to update Clinical Investigation Plans and study procedures in clinical investigations a sponsor\nmay continue to report all SAEs to NCAs until Eudamed reporting is mandatory (see section 4.1 Transition to reporting via Eudamed). This applies\nonly to studies which have started to be conducted\n5\nin accordance with Article 10 of Directive 90/385/EEC or Article 15 of Directive 93/42/EEC\nprior to 26 May 2021.",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.4",
+      "title": "Transition for reportable events in PMCF clinical investigations initiated under directives legislation",
+      "content": "5.4 Transition for reportable events in PMCF clinical investigations initiated under directives legislation\nIn case of PMCF studies which required SAE reporting according to the Pre-MDR national legislations, MDR article 80 (5) and 80(6) shall apply from\nMay 26\nth\n, 2021.\n4\nCountries other than Switzerland, Turkey and those belonging to the EEA.\n5\nFor the purpose of safety reporting this is defined as “Authorised to start in the individual Member State in line with applicable directives legislation, regardless of whether\nany subjects have been recruited in the Member State or not.”\nPage 11 of 19\n6 Report by whom\nReportable events have to be reported by the sponsor of the clinical investigation, which could be the manufacturer, the legal representative\nor another person\n6\nor entity\n,\n.\n7 Report to whom\nReportable events must be reported at the same time to all NCAs where the clinical investigation has commenced using the summary tabulation\nfeatured in the Appendix.\nA list of clinical investigation contact points within the NCAs is published at the Commission's homepage.\nFor the purpose of this guidance, an investigation is considered to have commenced in an individual Member State:\n• For investigations under the directives: When the sponsor is authorized to start the investigation in accordance with the notification\nprocedures in that Member State.\n• For investigations started under the MDR: When the sponsor is authorized to start the investigation in that Member State in accordance\nwith the provisions laid out in the MDR.\nMember States may also require separate reporting to the Ethics Committee(s).\n8 Reporting timelines",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "8.1",
+      "title": "Report by sponsor to NCAs.",
+      "content": "8.1 Report by sponsor to NCAs.\nThe sponsor must report to all NCAs where the clinical investigation is authorised to start:\n• For all reportable events as described in section 5 which indicate an imminent risk of death, serious injury, or serious illness and that\nrequires prompt remedial action for other patients/subjects, users or other persons or a new finding to it: Immediately, but not later\nthan 2 calendar days after awareness by sponsor of a new reportable event or of new information in relation with an already reported\nevent.\nThis includes events that are of significant and unexpected nature such that they become alarming as a potential public health hazard. It\nalso includes the possibility of multiple deaths occurring at short intervals.\nThese concerns may be identified by either the NCA or the manufacturer.\n• Any other reportable events as described in section 5 or a new finding/update to it: Immediately, but not later than 7 calendar days\nfollowing the date of awareness by the sponsor of the new reportable event or of new information in relation with an already reported\nevent.\nIn some cases, a different periodicity or different modalities may be agreed between the participating NCAs and the sponsor according to the\ninvestigation’s design and to the pathology under clinical investigation. This would allow implementation of adequate provision for clinical\ninvestigations in which SAE frequency is expected to be high due to the natural progression of the disease (e.g. palliative oncology).\n6\nContact person established by the sponsor in line with Article 62(2) if accepted by Member State.\nPage 12 of 19",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "8.2",
+      "title": "Report by the investigator to the sponsor",
+      "content": "8.2 Report by the investigator to the sponsor\nThe sponsor shall implement and maintain a system to ensure that the reporting of the reportable events as defined under chapter 5 will be\nprovided by the investigator to the sponsor immediately, but not later than 3 calendar days after investigation site study personnel’s\nawareness of the event.\n9 Causality assessment\nThe relationship between the use of the medical device\n7\n(including the medical - surgical procedure) and the occurrence of each adverse event\nshall be assessed and categorized.\nDuring causality assessment activity, clinical judgement shall be used and the relevant documents, such as the Investigator’s Brochure, the\nClinical Investigation Plan or the Risk Analysis Report shall be consulted, as all the foreseeable serious adverse events and the potential risks are\nlisted and assessed there\n8\n. The presence of confounding factors, such as concomitant medication/treatment, the natural history of the underlying\ndisease, other concurrent illness or risk factors shall also be considered.\nThe above considerations apply also to the serious adverse events occurring in the comparison group.\nFor the purpose of harmonizing reports, each SAE will be classified according to four different levels of causality:",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "10.1",
+      "title": "Completion guidelines: Form header",
+      "content": "10.1 Completion guidelines: Form header",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "10.2",
+      "title": "Completion guidelines: Event details",
+      "content": "10.2 Completion guidelines: Event details\nEach unique reportable event is presented in a separate line. Updates to a previously reported event should be made by changing the information\nin the same line, and clearly identified according to the principles described below.\nAny new information added in the form should be highlighted in bold and/or colour. This includes any new lines added and any changes made\nto the information in an already existing line.\n11\nUse ISO-3166-1 alpha-2 codes, i.e.two-letter country codes as defined in ISO 3166-1\nPage 16 of 19\nIn the initial report, in any given line, no fields shall be left intentionally blank. To meet this requirement, preliminary information should be filled\nin, despite the need of further updating.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "3.5",
+      "title": "Device deficiency (DD)",
+      "content": "3.5 Device deficiency (DD)\nAny inadequacy in the identity, quality, durability, reliability, safety or performance of an investigational device, including malfunction, use errors\nor inadequacy in information supplied by the manufacturer.\n(MDR Article 2(59))",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.6",
+      "title": "Incident",
+      "content": "3.6 Incident\nAny malfunction or deterioration in the characteristics or performance of a device made available on the market, including use-error due to\nergonomic features, as well as any inadequacy in the information supplied by the manufacturer and any undesirable side-effect.\n(MDR Article 2(64))\n3\nFor the purpose of safety reporting all activities related to the use of a medical device may be considered procedures\nPage 7 of 19",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.7",
+      "title": "New Finding",
+      "content": "3.7 New Finding\nNew information discovered as the result of an inquiry/investigation/test based on the occurrence of the event. Follow-up from the event.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.8",
+      "title": "Serious Adverse Event (SAE)",
+      "content": "3.8 Serious Adverse Event (SAE)\nAny adverse event that led to any of the following:\na) death,\nb) serious deterioration in the health of the subject, that resulted in any of the following:\ni. life-threatening illness or injury,\nii. permanent impairment of a body structure or a body function,\niii. hospitalisation or prolongation of patient hospitalisation,\niv. medical or surgical intervention to prevent life-threatening illness or injury or permanent impairment to a body structure or a body\nfunction,\nv. chronic disease,\nc) foetal distress, foetal death or a congenital physical or mental impairment or birth defect\n(MDR Article 2(58))",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.9",
+      "title": "Serious adverse device effect (SADE)",
+      "content": "3.9 Serious adverse device effect (SADE)\nAny adverse device effect that has resulted in any of the consequences characteristic of a serious adverse event.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.10",
+      "title": "Serious incident",
+      "content": "3.10 Serious incident\nAny incident that directly or indirectly led, might have led or might lead to any of the following:\na) the death of a patient, user or other person,\nb) the temporary or permanent serious deterioration of a patient's, user's or other person's state of health,\nc) a serious public health threat.\n(MDR Article 2(65))",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "3.11",
+      "title": "Unanticipated serious adverse device effect (USADE)",
+      "content": "3.11 Unanticipated serious adverse device effect (USADE)\nAny serious adverse device effect, the nature, severity or outcome of which is not consistent with the reference safety information.\n4 Reporting method\nA new template for the Summary Reporting Form should be used for all studies from 26 May 2021. The tabular format featured in the Appendix\nneeds to be filled in/updated for each reportable event or for new findings/updates to already reported events. It shall be transmitted to all NCAs\nwhere the clinical investigation is being performed. For a new finding or update, the line of the SAE needs to be updated and the first column set\nto “m”. Write the new findings in the free description of event column and highlight the additions. When applicable, update the others columns\nas well.\nFor more details on how to complete the form refer to section 10. Reporting form.",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "4.1.1",
+      "title": "Ongoing events at time of transition to Eudamed",
+      "content": "4.1.1 Ongoing events at time of transition to Eudamed\nIt is acknowledged that at the time of transition to reporting via Eudamed, there will be ongoing events for which initial reports have been made\naccording to the procedures described in this document. For these reportable events follow-up and final reports will be submitted to the NCAs by\nthe same procedure, but all new reportable events shall be entered in Eudamed.\nWhether retrospective uploading of previous event reports to Eudamed will be possible is not clear at the time this guidance is issued.",
+      "parent_section": "4.1"
+    },
+    {
+      "section_number": "5.2.1",
+      "title": "Reportable events occurring in other MS",
+      "content": "5.2.1 Reportable events occurring in other MS\nThe sponsor shall report the reportable SAEs per clinical investigation (CI). If several CIs are conducted with the same device, only those SAEs that\nhappen in CIs that have the same clinical investigation plan (CIP) code should be reported for those CIs, and only to those MS where a CI with that\nspecific CIP code is being conducted.\nIt is acknowledged that the same CI can be conducted under different versions of the same clinical investigation plan (same CIP code) in different\nMember States, e.g. with country specific adaptations, and in those cases the SAE reporting can normally be combined for all the versions of the CIP\nfor the same clinical investigation.",
+      "parent_section": "5.2"
+    },
+    {
+      "section_number": "5.2.2",
+      "title": "Reportable events occurring in Third Countries",
+      "content": "5.2.2 Reportable events occurring in Third Countries\nReportable events occurring in Third Countries\n4\nin which a clinical investigation is performed under the same clinical investigation plan\n( s e e 5 . 2 . 1 Reportable events occurring in other MS for what is meant with same CIP) have to be reported in accordance with this\nguidance to the NCA(s) of the European countries in which the clinical investigation is being conducted.\n The NCA shall start receiving the reportable events occurring in Third Countries as soon as the clinical investigation is authorised to start in\nthat Member State.\n Events occurring in Third Countries after the participating European sites have closed shall continue to be reported.",
+      "parent_section": "5.2"
+    },
+    {
+      "section_number": "4",
+      "title": "Codes for the representation of names of countries and their subdivisions – Part 1: Country codes (ISO 3166-1) published by International",
+      "content": "4. Codes for the representation of names of countries and their subdivisions – Part 1: Country codes (ISO 3166-1) published by International\nOrganisation for Standardization (ISO).\n12 Appendix – Clinical Investigation Summary Safety Reporting Form\n12\nAn adverse device effect is an adverse event related to the use of an investigational device. A serious adverse device effect is an adverse device effect that has resulted in\nany of the consequence characteristics of a serious adverse event.",
+      "parent_section": null
+    },
+    {
+      "section_number": "1",
+      "title": "Regulation (EU) 2017/745 of the European Parliament and of the council of 5 April 2017 on medical devices, amending Directive",
+      "content": "1. Regulation (EU) 2017/745 of the European Parliament and of the council of 5 April 2017 on medical devices, amending Directive\n2001/83/EC, Regulation (EC No 178/2002 and Regulation (EC) No 1223/2009 and repealing Council Directives 90/385/EEC and 93/42/EEC.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Council Directive 90/385/EEC of 20 June 1990 on the approximation of the laws of the Member States relating to active implantable medical",
+      "content": "2. Council Directive 90/385/EEC of 20 June 1990 on the approximation of the laws of the Member States relating to active implantable medical\ndevices, last amended by Directive 2007/47/EC.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Council Directive 93/42/EEC of 14 June 1993 concerning medical devices, last amended by Directive 2007/47/EC.",
+      "content": "3. Council Directive 93/42/EEC of 14 June 1993 concerning medical devices, last amended by Directive 2007/47/EC.",
+      "parent_section": null
+    },
+    {
+      "section_number": "10.1.1",
+      "title": "EUDAMED/CIV-ID",
+      "content": "10.1.1 EUDAMED/CIV-ID\nThe union-wide Single Identification Number mentioned in MDR Article 70(1) will not be possible to generate until Eudamed for MDR is fully\nfunctional. For the transition period, clinical investigations will get tracking numbers (CIV-ID) upon registration in the Eudamed2 database which\nis performed by the NCA upon receipt of an application. This CIV ID is provided to the sponsor during the NCA’s handling of the initial application\nfor the clinical investigation and should be entered on the safety reporting form.\nThe CIV ID should already be available for a clinical investigation started under the directives’ legislation, where it should be indicated on the\nMEDDEV 2.7/3 reporting form etc. Sponsors who are not aware of the CIV ID of their clinical investigations are invited to contact the concerned\nNCA to get this information.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.2",
+      "title": "Title of Clinical Investigation",
+      "content": "10.1.2 Title of Clinical Investigation\nThe identifying title of the Clinical Investigation. The title indicated here should be consistent with other title entries (such as in clinical investigation\napplication form, clinical investigation plan cover page etc).\nPage 15 of 19",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.3",
+      "title": "CIP number/code",
+      "content": "10.1.3 CIP number/code\nThe unique identification code or short name assigned to the specific clinical investigation plan by the Sponsor (numeric, alphanumeric or acronym)\nshould be indicated.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.4",
+      "title": "Contact person",
+      "content": "10.1.4 Contact person\nName, address, e-mail and telephone number should be provided for the person who is sponsor’s point of contact in case NCA have follow up\nquestions regarding submitted safety report forms.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.5",
+      "title": "MS+NCA Reference numbers",
+      "content": "10.1.5 MS+NCA Reference numbers\nFor each participating Member State indicate the country code\n11\nand the NCA’s national reference number for the clinical investigation.\nExample:\nSE 5.1-20YY-XXXXXX\nDK 20YYXXXXXX",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.6",
+      "title": "No. of subjects enrolled to date total",
+      "content": "10.1.6 No. of subjects enrolled to date total\nIndicate the total number of subjects who have been enrolled (per date of report) in the clinical investigation globally.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.7",
+      "title": "No. of subjects enrolled to date per country",
+      "content": "10.1.7 No. of subjects enrolled to date per country\nList all countries where the clinical investigation has been authorised by date of report and indicate the number of subjects who have been enrolled\nin the clinical investigation (per date of report) in each country.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.8",
+      "title": "Device type",
+      "content": "10.1.8 Device type\nIndicate the type of device(s) assessed in the clinical investigation (e.g. pacemaker, coronary stent, hip implant).",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.9",
+      "title": "Reference Member State",
+      "content": "10.1.9 Reference Member State\nIndicate the name of the Member State which drew the unique EUDAMED/CIV ID (normally the first Member State receiving an application for\nthe clinical investigation). Once the coordinated assessment procedure (per MDR Article 78) is up and running, the coordinating Member State\nshould be indicated here.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.10",
+      "title": "No. of investigational devices used to date total",
+      "content": "10.1.10 No. of investigational devices used to date total\nIndicate the total number of investigational devices which have been used (per date of report) in the clinical investigation globally.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.11",
+      "title": "No. of investigational devices used to date per country",
+      "content": "10.1.11 No. of investigational devices used to date per country\nList all countries where the clinical investigation has been authorised by date of report and indicate the number of investigational devices which\nhave been used in the clinical investigation (per date of report) in each country.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.1.12",
+      "title": "Date of report",
+      "content": "10.1.12 Date of report\nIndicate the date when the report is compiled for transmission to NCAs. Format DD/MM/YYYY.",
+      "parent_section": "10.1"
+    },
+    {
+      "section_number": "10.2.1",
+      "title": "Status",
+      "content": "10.2.1 Status\nThe sponsor shall identify the new/updated information in the status column as:\nA = added = new reportable event;\nD = deleted = already reported event that has been deleted due to downgrading to non-serious, due to integration in another event, or …\nAdd the reason for deletion in the corresponding cell in column “Description of event”.\nM = modified = new finding/update to an already reported event;\nU = unchanged.\nDo not add other options.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.2",
+      "title": "Date Sponsor received report of SAE/DD",
+      "content": "10.2.2 Date Sponsor received report of SAE/DD\nIndicate the date when the sponsor was first notified by the investigation site about the event. This date is checked for compliance with reporting\ntimelines as outlined in section 8 Reporting timelines.\nFormat DD/MM/YYYY.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.3",
+      "title": "Country code",
+      "content": "10.2.3 Country code\nIndicate the country code\n11\nfor the country in which the subject associated with the event has been enrolled.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.4",
+      "title": "Investigation site",
+      "content": "10.2.4 Investigation site\nName identifying institution or site where the clinical investigation is carried out.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.5",
+      "title": "Subject ID code",
+      "content": "10.2.5 Subject ID code\nThe study specific subject ID code, i.e. the link between study data and the actual subject identity (which is not to be provided in this form).",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.6",
+      "title": "SAE ID code",
+      "content": "10.2.6 SAE ID code\nThe investigator, sponsor or manufacturer should assign a unique ID to each SAE that has occurred, This number shall remain unchanged\nthroughout all other alterations of the particular SAE-reporting due to ongoing assessment.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.7",
+      "title": "Date of procedure/First use",
+      "content": "10.2.7 Date of procedure/First use\nIndicate the date of the relevant procedure or the date when the subject was exposed to the device for first use. Format DD/MM/YYYY.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.8",
+      "title": "Date of event onset",
+      "content": "10.2.8 Date of event onset\nThe date when the first signs of an event were noticed may be different (earlier) than the date when the event fulfilled the seriousness criteria\n(see further the definition in section 3.3 Serious Adverse Event (SAE)). The date when the event became an SAE should be reported as Date of\nevent onset. In case of Device Deficiencies which did not lead to an SAE, the date the DD was discovered should be indicated.\nFormat DD/MM/YYYY.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.9",
+      "title": "SAE or DD",
+      "content": "10.2.9 SAE or DD\nChoose one option from SAE(Serious Adverse Event) or DD (Device Deficiency).\nDo not add other options.\nPage 17 of 19",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.10",
+      "title": "Age",
+      "content": "10.2.10 Age\nThe subject’s age at date of event onset should be indicated.\nIn cases where exact date of birth is not available as a basis for age calculation, it is acknowledged that an approximate age at date of event onset\ncould be calculated based on the age at enrollment.\nNormally the Age should be indicated in Years, although for paediatric/neonatal populations it may be more relevant to indicated age in months,\nweeks or days. When a different unit than years is used, the unit should be indicated as appropriate.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.11",
+      "title": "Patient gender",
+      "content": "10.2.11 Patient gender\nChoose one option from the following list (do not add other options):\n Female\n Male\n Other\n Unknown",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.12",
+      "title": "Location of device",
+      "content": "10.2.12 Location of device\nFor this field, it is the location of the device at the time the report is submitted to NCA is of interest (i.e not at the time of investigator or sponsor\nawareness of the event). Changed location of the device is in itself not a reason to provide an updated report. However, whenever an update/final\nreport is provided for other reasons, it is relevant to update this field if the device for example has reached the sponsor by then.\nChoose one option from the following list (do not add other options):\n Investigational/study site\n Sponsor\n Subject\n Manufacturer\n Remains implanted\n Discarded\n Unknown\n Other",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.13",
+      "title": "Classification of event",
+      "content": "10.2.13 Classification of event\nChoose one option from the following list of consequence characteristics (do not add other options):\n Death\n Life-threatening illness or injury\n Permanent impairment/ Chronic disease\n Hospitalization\n Medical or surgical intervention\n Foetal distress, fœtal death or congenital physical or mental or birth defect\n Not applicable (Note that this option is only to be selected in case of reportable Device deficiencies that did not lead to an SAE)\nPage 18 of 19\nIt is acknowledged that for a specific event two or more options may be equally applicable, e.g.” Hospitalization” and “medical intervention”. The\nhighest-ranking classification should be indicated, using the following ranking order: 1) Death, 2) life threatening, 3) foetal distress, 4) permanent\nimpairment, 5) Medical or surgical intervention 6) hospitalization.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.14",
+      "title": "Free description of event",
+      "content": "10.2.14 Free description of event\nProvide a description of the event in free text. Below is a non-exhaustive list of items that could be relevant to cover:\n Nature of the observed symptoms\n Duration and severity of the symptoms\n Date of onset of first signs of the event (before it became a SAE)\n Medical background of the patient\n Medical care of the patient\n Comments on the event in relation to already known safety data\nUse of standardised terminology corresponding to relevant IMDRF codesis encouraged.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.15",
+      "title": "Device issue (if applicable)",
+      "content": "10.2.15 Device issue (if applicable)\nIn the worksheet “Device issue”, the IMDRF codes applicable to device issues can be found. You can use this worksheet to look up the appropriate\ncodes. Please report all the appropriate codes applicable for the SAE or DD reported. Please separate each code by “;”.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.16",
+      "title": "Clinical signs/symptoms",
+      "content": "10.2.16 Clinical signs/symptoms\nIn the worksheet “Device issue”, the IMDRF codes applicable to clinical signs/symptoms can be found. You can use this worksheet to look up the\nappropriate codes. Please report all the appropriate codes applicable for the SAE or DD reported. Please separate each code by “;”.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.17",
+      "title": "Clinical impact",
+      "content": "10.2.17 Clinical impact\nIn the worksheet “Device issue”, the IMDRF codes applicable to clinical impact of the SAE or DD can be found. You can use this worksheet to look\nup the appropriate codes. Please report all the appropriate codes applicable for the SAE or DD reported. Please separate each code by “;”.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.18",
+      "title": "Action/treatment /outcome",
+      "content": "10.2.18 Action/treatment /outcome\nProvide information in free text on actions taken, treatment(s) administered and the outcome.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.19",
+      "title": "Relationship to procedure",
+      "content": "10.2.19 Relationship to procedure\nChoose one option from the following list of causality levels (for explanatory texts see section 9 Causality assessment) (do not add other options):\n Not related\n Possible\n Probable\n Causal\nPlease report the assessments by sponsor and investigator in the respective columns.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.20",
+      "title": "Relationship to device",
+      "content": "10.2.20 Relationship to device\nChoose one option from the following list of causality levels (for explanatory texts see section 9 Causality assessment) (do not add other options):\n Not related\n Possible\n Probable\n Causal\nPage 19 of 19\nPlease report the assessments by sponsor and investigator in the respective columns.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.21",
+      "title": "Unanticipated SADE",
+      "content": "10.2.21 Unanticipated SADE\nChoose option Yes or No\nAn Unanticipated Serious Adverse Device Effect\n12\nis an effect which by its nature, incidence, severity or outcome has not been identified in the\ncurrent risk assessment. Procedures associated with the use of a device should be addressed in the risk assessment, which makes it possible to\ndetermine whether the procedure related SAEs are Unanticipated Serious Adverse Device Effect or not. SAEs related to procedures imposed by\nthe clinical investigation plan but not with the use of the device should not be considered Serious Adverse Device Effects.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.22",
+      "title": "Investigation arm",
+      "content": "10.2.22 Investigation arm\nChoose one option from the following list:\n Test group\n Comparison group\n Blinded\n Not applicable\nNote: For some study designs it might be more relevant to add name of device; i.e. in a clinical investigation with several test groups it might be\nuseful to differentiate which investigational device that the subject has been exposed to.",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.23",
+      "title": "Event status",
+      "content": "10.2.23 Event status\nChoose one option from the following list (do not add other options):\n Resolved\n Resolved with Sequelae\n Ongoing\n Death",
+      "parent_section": "10.2"
+    },
+    {
+      "section_number": "10.2.24",
+      "title": "Date of event resolution",
+      "content": "10.2.24 Date of event resolution\nAdd date in format DD/MM/YYYY. If event status is “Ongoing” enter Not Applicable.\n11 References",
+      "parent_section": "10.2"
+    }
+  ]
+}

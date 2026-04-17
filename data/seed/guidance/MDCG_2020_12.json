@@ -1,0 +1,26 @@
+{
+  "id": "MDCG_2020_12",
+  "title": "MDCG 2020-12",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2020-12",
+  "date_published": "2020-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/ced09394-5757-4eb0-9700-7442959e6c54_en?filename=md_mdcg_2020-12_guidance_transitional_provisions_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "4",
+      "title": "Before issuing an EC design-examination certificate or an EC type-examination certificate, the",
+      "content": "4. Before issuing an EC design-examination certificate or an EC type-examination certificate, the\nnotified bodies shall, through their competent authority, hereinafter ‘coordinating competent\nauthority’, inform the competent authorities of the other Member States and the Commission of their\nassessment carried out pursuant to paragraph 2 by means of a summary evaluation report in\naccordance with Annex II to this Regulation.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "The competent authorities of the Member States may submit comments on the summary evaluation",
+      "content": "5. The competent authorities of the Member States may submit comments on the summary evaluation\nreport referred to in paragraph 4 within the following deadlines:\n(a) in relation to medical devices using starting materials for which a TSE certificate of suitability as\nreferred to in paragraph 3 has been submitted, within four weeks from the date on which the notified\nbody informed the coordinating competent authority pursuant to paragraph 4;\n(b) in relation to medical devices using starting materials for which a TSE certificate of suitability has\nnot been submitted, within 12 weeks from the date on which the notified body informed the\ncoordinating competent authority pursuant to paragraph 4.\nThe competent authorities of the Member States and the Commission may agree on shortening the\ntime periods set out in points (a) and (b).",
+      "parent_section": null
+    }
+  ]
+}

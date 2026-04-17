@@ -1,0 +1,32 @@
+{
+  "id": "MDCG_2018_1_rev4",
+  "title": "MDCG 2018-1 rev.4",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2018-1 rev.4",
+  "date_published": "2018-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/cb1bf6e5-3972-4b3a-82d9-c5946738b2a5_en?filename=md_mdcg_2018-1_guidance_udi-di_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Is the Device Directly Marked (Yes/No)",
+      "content": "1. Is the Device Directly Marked (Yes/No)\nThe database design will force the creation of a new UDI-DI only if there is a change\nfrom Yes to No and not vice versa for this data element.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Manner in which production of the device Is controlled (expiry date or",
+      "content": "2. Manner in which production of the device Is controlled (expiry date or\nmanufacturing date, lot number, serial number, software identification) - Type\nof UDI-PI\nAs long as there is no change to the label, a change to this data element will not\nrequire the allocation of a new UDI-DI.\n1\nIt should be noted that a new regulatory decision classifying an existing product as CMR/Endocrine\ndisruptor might not result in a new UDI-DI for products already containing that substance. The decision on\nwhether to assign a new UDI-DI should be based on the conformity assessment of the product with regard\nto the impact of the information provided and the significance of the change.\n2\nSpecific attention shall be paid to the fact that changes of colour or language might also require a new UDI-\nDI when those changes might lead to misidentification of product or change the product\nsafety/performance. For example:\nA- Change of colour coding of e.g. connectors, latex-free surgical gloves, blood tubes\nB- Two identical self-testing devices, that exist in parallel and cannot be substituted due to local labelling\nrequirements (IVD Article 10(10) of Regulation 746/2017), requires different UDI-DIs\nSpecifications of EU designated issuing entity should be used as a reference source to identify other\npossible examples.\n3\nPlease refer to Guidance UDIWG 2018-1 on \"UDI database. Definitions, descriptions and formats of the UDI\ncore elements’ available at https://ec.europa.eu/docsroom/documents/28669\n4\nMedical Device\nMedical Device Coordination Group Document MDCG 2018-1 Rev.4",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Maximum number of Reuses",
+      "content": "3. Maximum number of Reuses\nAnnex VI Part B, 17 states that the manufacturer shall provide to the UDI database the\nmaximum number of reuses of the device concerned, if applicable.\n‘If applicable’ should be understood to cover those devices where based on clinical\nevidence and as a result of the risk management process, a manufacturer has\ndemonstrated a maximum number of reuses, which should not be surpassed. This may\ninclude but is not limited to devices for which there is evidence of degradation or\ndeterioration beyond a certain number of re-uses.\nWhilst the maximum number of re-uses depends on multiple factors such as the material,\nthe user and relevant process changes, examples of devices where this requirement\ncould apply include:\n• Minimally-invasive robotic instruments,\n• Larynx masks,\n• Surgical instruments : scalpels, curettes, clamps, drills, burs,\n• Endoscopic devices: biopsy forceps, polyp retrieval basket.\nWithout prejudice to ‘if applicable’, it is noted that the MDR generally does not require a\nmaximum number of re-uses for re-usable devices.\n1\nIf a maximum number of re-uses is established and claimed by the manufacturer, this\nnumber shall be provided to the UDI Database in EUDAMED and in addition, reflected in\nthe instructions for use in accordance with Annex I, GSPR 23.4 (n).\nFor such products whose maximum number of re-uses is determined, a change to this\ndata element will require the allocation of a new UDI-DI.\nWARNING: This guidance does not address requirements for reprocessed devices,\nsystems or procedure packs, software, Annex XVI, nor for cases of parallel trade or\nown brand labelling. Specific requirements for those products are addressed in specific\nguidance.\n1\nFor example, re-usable surgical instruments.",
+      "parent_section": null
+    }
+  ]
+}

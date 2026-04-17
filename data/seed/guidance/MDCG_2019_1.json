@@ -1,0 +1,20 @@
+{
+  "id": "MDCG_2019_1",
+  "title": "MDCG 2019-1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2019-1",
+  "date_published": "2019-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/f278d247-0020-411f-82a6-1d116691c410_en?filename=md_mdcg_2019_1_budi_rules_ie_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "0",
+      "title": "MDCG 2019-1",
+      "content": "Medical Devices\nMedical Devices Coordination Group Document MDCG 2019-1\nPage 1 of 2\nMDCG 2019-1\nMDCG guiding principles for issuing entities\nrules on Basic UDI-DI\nJanuary 2019\nThis document has been endorsed by the Medical Device Coordination Group\n(MDCG) established by Article 103 of Regulation (EU) 2017/745. The MDCG is\ncomposed of representatives of all Member States and it is chaired by a\nrepresentative of the European Commission.\nThe document is not a European Commission document and it cannot be regarded\nas reflecting the official position of the European Commission. Any views expressed\nin this document are not legally binding and only the Court of Justice of the European\nUnion can give binding interpretations of Union law.\nMedical Devices\nMedical Devices Coordination Group Document MDCG 2019-1\nPage 2 of 2\nIn order to ensure, to the maximum possible extent, the quality of the code value\nentered in Eudamed, the Basic UDI-DI requirements on format should be as close as\npossible to the ones for the UDI-DI. In particular,\n the Basic UDI-DI code value shall have maximum 25 characters, so that it\ndoes not differ too significantly from the maximum length of the UDI-DI as\nestablished by the issuing entities;\n a check digit/character must be part of the Basic UDI-DI, based on an\nalgorithm defined by the issuing entity. This algorithm shall be provided by the\nissuing entities to the Commission and to the manufacturers.",
+      "parent_section": null
+    }
+  ]
+}

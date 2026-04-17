@@ -1,15 +1,15 @@
 // Seed 3 placeholder guidance documents for AI Act materials that are not yet
 // published. Each placeholder gets one guidance_sections row containing the
-// freshness note so FTS search can surface it.
-import Database from 'better-sqlite3';
-import { readFileSync } from 'fs';
+// freshness note so FTS search can surface it. Writes seed files consumed by
+// build-db.ts.
+import { mkdirSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const DB_PATH = join(__dirname, '..', 'data', 'regulations.db');
+const SEED_DIR = join(__dirname, '..', 'data', 'seed', 'guidance');
 
 interface Placeholder {
   id: string;
@@ -65,55 +65,41 @@ const PLACEHOLDERS: Placeholder[] = [
 
 function main() {
   console.log('=== Seeding AI Act guidance placeholders ===');
-  const db = new Database(DB_PATH);
-  db.pragma('journal_mode = DELETE');
-  db.pragma('foreign_keys = ON');
+  mkdirSync(SEED_DIR, { recursive: true });
 
-  // Ensure schema exists.
-  const schemaSql = readFileSync(join(__dirname, 'add-guidance-tables.sql'), 'utf-8');
-  db.exec(schemaSql);
+  for (const row of PLACEHOLDERS) {
+    const metadata: Record<string, unknown> = {
+      freshness_note: row.freshness_note,
+      target_articles: row.target_articles,
+    };
+    if (row.draft_version !== undefined) metadata.draft_version = row.draft_version;
 
-  const insertDoc = db.prepare(`
-    INSERT OR REPLACE INTO guidance_documents
-    (id, title, issuing_body, document_reference, date_published, related_regulation, url, pdf_url, status, metadata)
-    VALUES (@id, @title, @issuing_body, NULL, @date_published, @related_regulation, @url, NULL, @status, @metadata)
-  `);
-  const insertSection = db.prepare(`
-    INSERT OR REPLACE INTO guidance_sections
-    (document_id, section_number, title, content, parent_section)
-    VALUES (?, '0', 'Status note', ?, NULL)
-  `);
+    const seed = {
+      id: row.id,
+      title: row.title,
+      issuing_body: row.issuing_body,
+      document_reference: null,
+      date_published: row.date_published,
+      related_regulation: row.related_regulation,
+      url: row.url,
+      pdf_url: null,
+      status: row.status,
+      metadata,
+      sections: [
+        {
+          section_number: '0',
+          title: 'Status note',
+          content: row.freshness_note,
+          parent_section: null,
+        },
+      ],
+    };
 
-  const tx = db.transaction((rows: Placeholder[]) => {
-    for (const row of rows) {
-      const metadata: Record<string, unknown> = {
-        freshness_note: row.freshness_note,
-        target_articles: row.target_articles,
-      };
-      if (row.draft_version !== undefined) metadata.draft_version = row.draft_version;
+    const path = join(SEED_DIR, `${row.id}.json`);
+    writeFileSync(path, JSON.stringify(seed, null, 2) + '\n', 'utf-8');
+  }
 
-      insertDoc.run({
-        id: row.id,
-        title: row.title,
-        issuing_body: row.issuing_body,
-        date_published: row.date_published,
-        related_regulation: row.related_regulation,
-        url: row.url,
-        status: row.status,
-        metadata: JSON.stringify(metadata),
-      });
-
-      // One section row so FTS search can surface the placeholder.
-      insertSection.run(row.id, row.freshness_note);
-    }
-  });
-  tx(PLACEHOLDERS);
-
-  const count = (db
-    .prepare("SELECT COUNT(*) as cnt FROM guidance_documents WHERE id LIKE 'AI_ACT_%' AND status IN ('planned','draft')")
-    .get() as { cnt: number }).cnt;
-  console.log(`Seeded ${count} placeholder documents.`);
-  db.close();
+  console.log(`Seeded ${PLACEHOLDERS.length} placeholder documents to ${SEED_DIR}`);
 }
 
 main();
