@@ -1,0 +1,26 @@
+{
+  "id": "MDCG_2021_23",
+  "title": "MDCG 2021-23",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-23",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/e985ea01-e6b7-4900-af3a-58e5b01678aa_en?filename=mdcg_2021-23_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "6.1",
+      "title": "Auditing",
+      "content": "6.1 Auditing\nInitial certification of the distributor / importer’s quality management system according to Article\n16(4) should always include an on-site audit\n9\n.\nIn order to verify the actual implementation as well as the proper functioning of a newly certified\ndistributor / importer’s quality management system, the notified body should perform annual\nsurveillance audits. The need to perform on-site surveillance audits should be based on a risk\nassessment in respect to the auditee, its organisation and experience gained in the initial audit and\nfollow-up activities.\nAlternatively, provided that a shorter validity period of the certificate is set (maximum 3 years) the\nnotified body may decide not to perform annual surveillance audits, unless it considers it necessary.\nAfter the first certification the notified body should perform one surveillance audit between 12 and\nmax. 24 months in order to confirm the certified quality management system is actually in place and\nimplemented.\n9\nIn duly justified cases when the notified body is unable to carry out the initial audit on-site, alternative\nmeasures can be applied, including remote audits. For these cases, it is anyhow expected the notified body\nto carry out an on-site audit as soon as possible and at the time of the first surveillance the latest.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-23\nPage 7 of 7\nAt the end of each certification cycle, a re-certification audit should be conducted in order to renew\nthe certificate. It is expected that notified bodies perform on-site re-certification audits\n10\n. Those re-\ncertification audits should take place not earlier than 15 months before the end of validity of the\ncertificate.\nIn case non-conformities are raised during the audits, additional audits may be conducted, either on-\nsite or off-site, to verify the effectiveness of the implemented corrective actions. Additional audits\nmay also need to be performed when the distributor or importer proposes (see section 6.2 below):\na) significant changes\n11\nto its processes covered by the certificate or\nb) an extension of activities and types of devices to be covered by the certificate.",
+      "parent_section": "6"
+    },
+    {
+      "section_number": "6.2",
+      "title": "Assessment of change notifications",
+      "content": "6.2 Assessment of change notifications\n12\nBased on the contractual requirements the distributor or importer need to submit any plan for\nchange that could affect the validity of the certificate according to Article 16(4) MDR / IVDR,\nespecially those in respect to the activities and types of devices covered.\nIn case of plans concerning relabelling and / or repackaging of new types of devices not\npreviously indicated on the Art 16(4) certificate, the distributer or importer should verify\nthat the notified body that issued the certificate is designated also for the new type(s). If this\nis not the case, the distributor or importer should apply to a notified body bearing the\nrequired designation\n13\n.\nThe notified body should assess such change notifications and, depending on the type of the\nproposed change, decide if there is the need to perform an audit, either on-site or off-site, prior to\ntheir approval. Changes that have a significant impact on the activities to be certified under Article\n16(4) such as broadening the scope of certificate, including new types of devices not previously\nindicated on the Art 16(4) certificate, concerning the activity in Article 16 (2) b) or change of the\nsite(s) (including subcontractors) where those activities are performed, should always require an on-\nsite assessment\n14\n. In case of new activities or new types of devices, the certificate needs to be\nsupplemented.\n10\nSimilarly to initial audits, also in case of re-certification audits, alternative measures can be applied,\nincluding remote audits when the notified body is unable to carry out the audit on-site.\n11\nFor the purpose of this document, significant changes are meant as changes having a significant impact on\nthe activities to be certified under Article 16(4), as referred to in paragraph 6.2 of this document.\n12\nFor notification obligations of distributors and importers see Questions & Answers for distributors and\nimporters.\n13\nThe distributor or importer can either ask for a voluntary change to a notified body designated for all types\nof relabelled / repackaged devices or have two (or more) separate notified bodies certifying the quality\nmanagement system for different types of devices according to Article 16(4).\n14\nAlternative measures can be applied in duly justified cases.",
+      "parent_section": "6"
+    }
+  ]
+}

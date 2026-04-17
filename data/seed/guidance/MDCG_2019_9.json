@@ -1,0 +1,68 @@
+{
+  "id": "MDCG_2019_9",
+  "title": "MDCG 2019-9 - rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2019-9",
+  "date_published": "2019-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/5f082b2f-8d51-495c-9ab9-985a9f39ece4_en?filename=md_mdcg_2019_9_sscp_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Device identification and general information",
+      "content": "1. Device identification and general information\no Device trade name\no Manufacturer; name and address\nMedical Device\nMedical Device Coordination Group Document MDCG 2019-9 Rev.1\n24(24)\no Basic UDI-DI\no Year when the device was first CE-marked",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Intended use of the device",
+      "content": "2. Intended use of the device\no Intended purpose\no Indications and intended patient groups\no Contraindications",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Device description",
+      "content": "3. Device description\no Device description and material/substances in contact with patient tissues\no Information about medicinal substances in the device, if any\no Description of how the device is achieving its intended mode of action\no Description of accessories, if any",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Risks and warnings",
+      "content": "4. Risks and warnings\nContact your healthcare professional if you believe that you are experiencing side-\neffects related to the device or its use or if you are concerned about risks. This\ndocument is not intended to replace a consultation with your healthcare\nprofessional if needed.\no How potential risks have been controlled or managed\no Remaining risks and undesirable effects\no Warnings and precautions\no Summary of any field safety corrective action, (FSCA including FSN) if\napplicable",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Summary of clinical evaluation and post-market clinical follow-up",
+      "content": "5. Summary of clinical evaluation and post-market clinical follow-up\no Clinical background of the device\no The clinical evidence for the CE-marking\no Safety",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Possible diagnostic or therapeutic alternatives",
+      "content": "6. Possible diagnostic or therapeutic alternatives\nWhen considering alternative treatments, it is recommended to contact your\nhealthcare professional who can take into account your individual situation.\no General description of therapeutic alternatives",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Suggested training for users",
+      "content": "7. Suggested training for users",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Reference to any harmonised standards and CS applied",
+      "content": "8. Reference to any harmonised standards and CS applied",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Revision history",
+      "content": "9. Revision history\nSSCP\nrevision\nnumber\nDate\nissued\nChange description Revision validated by the Notified\nBody\nYes\nValidation language:\nNo (only applicable for class IIa or\nsome IIb implantable devices (MDR,\nArticle 52 (4) 2\nnd\nparagraph) for which\nthe SSCP is not yet validated by the NB)\nYes\nValidation language:\nNo\nIf the SSCP concerns a device for which it is relevant to provide information to patients\nin lay man’s language, the following text can be included and then followed by a “page\nbreak”:\nA summary of the safety and clinical performance of the device, intended for patients,\nis given below.\nSummary of safety and clinical performance\nDocument revision:\nDate issued:\nThis Summary of Safety and Clinical Performance (SSCP) is intended to provide public\naccess to an updated summary of the main aspects of the safety and clinical\nperformance of the device. The information presented below is intended for patients or\nlay persons. A more extensive summary of its safety and clinical performance\nprepared for healthcare professionals is found in the first part of this document.\nThe SSCP is not intended to give general advice on the treatment of a medical\ncondition. Please contact your healthcare professional in case you have questions\nabout your medical condition or about the use of the device in your situation. This\nSSCP is not intended to replace an Implant card or the Instructions For Use to provide\ninformation on the safe use of the device.",
+      "parent_section": null
+    }
+  ]
+}

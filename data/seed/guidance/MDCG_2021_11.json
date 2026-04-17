@@ -1,0 +1,476 @@
+{
+  "id": "MDCG_2021_11",
+  "title": "MDCG 2021-11",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-11",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/498f68ec-ce00-425d-a722-69ac2be6c1b9_en?filename=md_2021-11_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Implantable cardiac pacemaker Pacemaker Version 1.1",
+      "content": "1. Implantable cardiac pacemaker Pacemaker Version 1.1\n2.\nImplantable cardiac leadless\npacemaker\nLeadless pacemaker Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Implantable cardiac monitor Cardiac monitor Version 1.1",
+      "content": "3. Implantable cardiac monitor Cardiac monitor Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Implantable cardiac defibrillator Defibrillator Version 1.1",
+      "content": "4. Implantable cardiac defibrillator Defibrillator Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Cardiac lead Cardiac lead Version 1.1",
+      "content": "5. Cardiac lead Cardiac lead Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Pacemaker ICD Lead Pacemaker ICD lead Version 1.1",
+      "content": "6. Pacemaker ICD Lead Pacemaker ICD lead Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Neural lead Neural lead Version 1.1",
+      "content": "7. Neural lead Neural lead Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Spinal Neural stimulator Spinal stimulator Version 1.1",
+      "content": "8. Spinal Neural stimulator Spinal stimulator Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Brain Neural stimulator Brain stimulator Version 1.1",
+      "content": "9. Brain Neural stimulator Brain stimulator Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Implantable pump Medicinal pump Version 1.1",
+      "content": "10. Implantable pump Medicinal pump Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "Cranial shunt Brain shunt Version 1.1",
+      "content": "11. Cranial shunt Brain shunt Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "12",
+      "title": "CSF shunt CSF shunt Version 1.1",
+      "content": "12. CSF shunt CSF shunt Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "13",
+      "title": "Lumbar shunt Lumbar shunt Version 1.1",
+      "content": "13. Lumbar shunt Lumbar shunt Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "14",
+      "title": "Hydrocephalus valve implant Brain valve Version 1.1",
+      "content": "14. Hydrocephalus valve implant Brain valve Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "15",
+      "title": "CSF Valve CSF Valve Version 1.1",
+      "content": "15. CSF Valve CSF Valve Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "16",
+      "title": "Lumbar valve Lumbar valve Version 1.1",
+      "content": "16. Lumbar valve Lumbar valve Version 1.1\n17.\nCranio-facial reconstruction\nImplant\nCraniofacial implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "18",
+      "title": "Dura patch Dura patch Version 1.1",
+      "content": "18. Dura patch Dura patch Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "19",
+      "title": "Intraocular lens Intraocular lens Version 1.1",
+      "content": "19. Intraocular lens Intraocular lens Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "20",
+      "title": "Ophthalmic filtration drain Glaucoma drain Version 1.1",
+      "content": "20. Ophthalmic filtration drain Glaucoma drain Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "21",
+      "title": "Ophthalmic liquid Ophthalmic liquid Version 1.1",
+      "content": "21. Ophthalmic liquid Ophthalmic liquid Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "Mechanical aortic valve Mech. Aortic Valve Version 1.1",
+      "content": "22. Mechanical aortic valve Mech. Aortic Valve Version 1.1\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-11",
+      "parent_section": null
+    },
+    {
+      "section_number": "23",
+      "title": "Mechanical mitral valve Mech. Mitral Valve Version 1.1",
+      "content": "23. Mechanical mitral valve Mech. Mitral Valve Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "24",
+      "title": "Mitral valve bio prosthesis Bio. Mitral valve Version 1.1",
+      "content": "24. Mitral valve bio prosthesis Bio. Mitral valve Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "25",
+      "title": "Pulmonary valve bio prosthesis Bio. Pulmonary valve Version 1.1",
+      "content": "25. Pulmonary valve bio prosthesis Bio. Pulmonary valve Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "26",
+      "title": "Valved graft Valved graft Version 1.1",
+      "content": "26. Valved graft Valved graft Version 1.1\n27.\nLeft atrial appendage closure Atrial closure\nVersion 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "28",
+      "title": "Neurovascular coil Neurovascular coil Version 1.1",
+      "content": "28. Neurovascular coil Neurovascular coil Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "29",
+      "title": "Neurovascular stent Neurovascular stent Version 1.1",
+      "content": "29. Neurovascular stent Neurovascular stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "30",
+      "title": "Neurovascular flow diverter Neurovascular stent Version 1.1",
+      "content": "30. Neurovascular flow diverter Neurovascular stent Version 1.1\n31.\nMitral annuloplasty ring Mitral ring\nVersion 1.1\n32.\nAnnuloplasty band Annuloplasty band\nVersion 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "33",
+      "title": "Vascular patch Vascular patch Version 1.1",
+      "content": "33. Vascular patch Vascular patch Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "34",
+      "title": "Vascular plug Vascular plug Version 1.1",
+      "content": "34. Vascular plug Vascular plug Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "35",
+      "title": "Aortic valve bio prosthesis Bio. Aortic valve Version 1.1",
+      "content": "35. Aortic valve bio prosthesis Bio. Aortic valve Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "36",
+      "title": "PFO-Occluder PFO Occluder Version 1.1",
+      "content": "36. PFO-Occluder PFO Occluder Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "37",
+      "title": "Aortic stent graft Aortic stent graft Version 1.1",
+      "content": "37. Aortic stent graft Aortic stent graft Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "38",
+      "title": "Aortic anchor Aortic anchor Version 1.1",
+      "content": "38. Aortic anchor Aortic anchor Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "39",
+      "title": "Oesophageal stent Oesophageal stent Version 1.1",
+      "content": "39. Oesophageal stent Oesophageal stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "40",
+      "title": "Enteral stent Enteral stent Version 1.1",
+      "content": "40. Enteral stent Enteral stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "41",
+      "title": "Biliary stent Biliary stent Version 1.1",
+      "content": "41. Biliary stent Biliary stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "42",
+      "title": "Tracheobronchial stent Tracheobronchial stent Version 1.1",
+      "content": "42. Tracheobronchial stent Tracheobronchial stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "43",
+      "title": "Pancreatic stent Pancreatic stent Version 1.1",
+      "content": "43. Pancreatic stent Pancreatic stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "44",
+      "title": "Renal stent Renal stent Version 1.1",
+      "content": "44. Renal stent Renal stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "45",
+      "title": "Endoscopic drainage stent Drainage stent Version 1.1",
+      "content": "45. Endoscopic drainage stent Drainage stent Version 1.1\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-11",
+      "parent_section": null
+    },
+    {
+      "section_number": "46",
+      "title": "Coronary stent Coronary stent Version 1.1",
+      "content": "46. Coronary stent Coronary stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "47",
+      "title": "Self-expanding peripheral stent Peripheral stent Version 1.1",
+      "content": "47. Self-expanding peripheral stent Peripheral stent Version 1.1\n48.\nBalloon expandable peripheral\nstent\nPeripheral stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "49",
+      "title": "Venous stent Venous stent Version 1.1",
+      "content": "49. Venous stent Venous stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "50",
+      "title": "Hip joint replacement Hip implant Version 1.1",
+      "content": "50. Hip joint replacement Hip implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "51",
+      "title": "Knee joint replacement Knee implant Version 1.1",
+      "content": "51. Knee joint replacement Knee implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "52",
+      "title": "Shoulder joint replacement Shoulder implant Version 1.1",
+      "content": "52. Shoulder joint replacement Shoulder implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "53",
+      "title": "Elbow replacement system Elbow implant Version 1.1",
+      "content": "53. Elbow replacement system Elbow implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "54",
+      "title": "Hand joint replacement Hand implant Version 1.1",
+      "content": "54. Hand joint replacement Hand implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "55",
+      "title": "Wrist implant Wrist implant Version 1.1",
+      "content": "55. Wrist implant Wrist implant Version 1.1\n56.\nExtremity replacement\ncomponent\nAnkle implant Version 1.1\n57.\nExtremity replacement\ncomponent\nFoot implant Version 1.1\n58.\nSpinal stent Spinal stent\nVersion 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "59",
+      "title": "Spinal fusion device Spinal fusion Version 1.1",
+      "content": "59. Spinal fusion device Spinal fusion Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "60",
+      "title": "Spinal fixation system Spinal fixation Version 1.1",
+      "content": "60. Spinal fixation system Spinal fixation Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "61",
+      "title": "Spinal stabilisation system Spinal stabiliser Version 1.1",
+      "content": "61. Spinal stabilisation system Spinal stabiliser Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "62",
+      "title": "Anchor Bone anchor Version 1.1",
+      "content": "62. Anchor Bone anchor Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "63",
+      "title": "Bone nailing implant Bone nail Version 1.1",
+      "content": "63. Bone nailing implant Bone nail Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "64",
+      "title": "Bone distraction device Bone distraction Version 1.1",
+      "content": "64. Bone distraction device Bone distraction Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "65",
+      "title": "Cranial clamp Cranial clamp Version 1.1",
+      "content": "65. Cranial clamp Cranial clamp Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "66",
+      "title": "Bone cement Bone cement Version 1.1",
+      "content": "66. Bone cement Bone cement Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "67",
+      "title": "Bone wax Bone wax Version 1.1",
+      "content": "67. Bone wax Bone wax Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "68",
+      "title": "Bone plug Bone plug Version 1.1",
+      "content": "68. Bone plug Bone plug Version 1.1\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-11",
+      "parent_section": null
+    },
+    {
+      "section_number": "69",
+      "title": "Hernia mesh Hernia mesh Version 1.1",
+      "content": "69. Hernia mesh Hernia mesh Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "70",
+      "title": "Flexible plate Tissue plate Version 1.1",
+      "content": "70. Flexible plate Tissue plate Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "71",
+      "title": "Breast implant Breast implant Version 1.1",
+      "content": "71. Breast implant Breast implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "72",
+      "title": "Intraperitoneal port Intraperitoneal port Version 1.1",
+      "content": "72. Intraperitoneal port Intraperitoneal port Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "73",
+      "title": "Vein adhesive Vein adhesive Version 1.1",
+      "content": "73. Vein adhesive Vein adhesive Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "74",
+      "title": "Absorbable haemostats Absorbable haemostats Version 1.1",
+      "content": "74. Absorbable haemostats Absorbable haemostats Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "75",
+      "title": "Ureteral bypass Ureteral bypass Version 1.1",
+      "content": "75. Ureteral bypass Ureteral bypass Version 1.1\n76.\nUrinary incontinence - injectable\nbulking agent\nBladder implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "77",
+      "title": "Ureteral stent Ureteral stent Version 1.1",
+      "content": "77. Ureteral stent Ureteral stent Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "78",
+      "title": "Enteral feeding devices Enteral feeding Version 1.1",
+      "content": "78. Enteral feeding devices Enteral feeding Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "79",
+      "title": "Fiducial marker Fiducial marker Version 1.1",
+      "content": "79. Fiducial marker Fiducial marker Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "80",
+      "title": "Embolic coils Embolic coil Version 1.1",
+      "content": "80. Embolic coils Embolic coil Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "81",
+      "title": "Embolic beads Embolic bead Version 1.1",
+      "content": "81. Embolic beads Embolic bead Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "82",
+      "title": "Embolic particles Embolic particles Version 1.1",
+      "content": "82. Embolic particles Embolic particles Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "83",
+      "title": "Prostatic implant Prostatic implant Version 1.1",
+      "content": "83. Prostatic implant Prostatic implant Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "84",
+      "title": "Urinary incontinence sling Incontinence sling Version 1.1",
+      "content": "84. Urinary incontinence sling Incontinence sling Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "85",
+      "title": "Pelvic organ prolapse mesh Pelvic mesh Version 1.1",
+      "content": "85. Pelvic organ prolapse mesh Pelvic mesh Version 1.1\n86.\nTesticular prosthesis - saline-\nfilled\nTesticular prosthesis Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "87",
+      "title": "Septal Patch Heart patch Version 1.1",
+      "content": "87. Septal Patch Heart patch Version 1.1",
+      "parent_section": null
+    },
+    {
+      "section_number": "88",
+      "title": "Gastric Band Gastric band Version 1.1",
+      "content": "88. Gastric Band Gastric band Version 1.1",
+      "parent_section": null
+    }
+  ]
+}

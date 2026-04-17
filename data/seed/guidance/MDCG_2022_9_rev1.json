@@ -1,0 +1,68 @@
+{
+  "id": "MDCG_2022_9_rev1",
+  "title": "MDCG 2022-9 rev.1",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2022-9 rev.1",
+  "date_published": "2022-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/b7cf356f-733f-4dce-9800-0933ff73622a_en?filename=mdcg_2022-9_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Device identification and general information",
+      "content": "1. Device identification and general information\n1.1. Device trade name\n1.2. Manufacturer; name and address\n1.3. Manufacturer’s single registration number (SRN)\n1.4. Basic UDI-DI\n4\n1.5. European Medical Device Nomenclature (EMDN) description / text\n1.6. Risk class of device\n1.7. Year when the device was first CE-marked under Regulation (EU) 2017/746\n1.8. Authorised representative if applicable; name and the SRN\n1.9. NB’s name (the NB that will validate the SSP) and the NB’s single\nidentification number",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Intended purpose and other indications",
+      "content": "2. Intended purpose and other indications\n2.1. Intended purpose (including intended patient groups)\n2.2. Indications\n2.3. Contra-indications and/or limitations",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Device description",
+      "content": "3. Device description\n3.1. General device description (including reference to previous generation(s) or\nMedical Devices\nMedical Device Coordination Group Document MDCG 2022-9 Rev.1\nPage 9 of 10\nvariant(s) if such exist, and a description of the differences)\n3.2. In case the device is a kit, description of the components (including regulatory\nstatus of components, for example, IVDs, medical devices and any Basic UDI-\nDIs)\n3.3. Description of how the device is achieving its intended purpose\n3.4. Description of accessories and/or other devices/equipment needed to be\nused in combination with the device in question, if any",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Reference to any harmonised standards and common specification applied",
+      "content": "4. Reference to any harmonised standards and common specification applied",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Risks and warnings",
+      "content": "5. Risks and warnings\nContact your healthcare professional if you are concerned about the use of the\ndevice or about the results. This document is not intended to replace a consultation\nwith your healthcare professional, if needed.\n5.1. How potential risks have been controlled or managed\n5.2. Remaining risks and undesirable effects\n5.3. Warnings and precautions\n5.4. Summary of any field safety corrective actions including field safety notices, if\napplicable",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Summary of performance evaluation and post-market performance follow-up",
+      "content": "6. Summary of performance evaluation and post-market performance follow-up\n6.1. Summary of scientific validity of the device\n6.2. Summary of performance data from studies of the device prior to CE-\nmarking, and if applicable from equivalent device and other sources\n6.3. An overall summary of the performance and safety\n6.4. Ongoing or planned post-market performance follow-up",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Metrological traceability of assigned values",
+      "content": "7. Metrological traceability of assigned values\n7.1. Explanation of the unit of measurement, if applicable\n7.2. Identification of applied reference materials and/or reference measurement\nprocedures of higher order used by the manufacturer for the calibration of the\ndevice",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Suggested profile and training for users, if applicable",
+      "content": "8. Suggested profile and training for users, if applicable",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Revision history",
+      "content": "9. Revision history\nSSP\nrevision\nnumber\nDate\nissued\nChange description\nRevision validated\nby the Notified Body\nMedical Devices\nMedical Device Coordination Group Document MDCG 2022-9 Rev.1\nPage 10 of 10\n☐ Yes\nValidation language:\n☐ No\n8\n☐ Yes\nValidation language:\n☐ No",
+      "parent_section": null
+    }
+  ]
+}

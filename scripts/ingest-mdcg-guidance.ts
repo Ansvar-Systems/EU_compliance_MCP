@@ -7,16 +7,15 @@
  *   npx tsx scripts/ingest-mdcg-guidance.ts --dry-run
  */
 
-import Database from 'better-sqlite3';
 import * as cheerio from 'cheerio';
-import { readFileSync } from 'fs';
+import { mkdirSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const DB_PATH = join(__dirname, '..', 'data', 'regulations.db');
+const SEED_DIR = join(__dirname, '..', 'data', 'seed', 'guidance');
 const RATE_LIMIT_MS = 2000;
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -189,36 +188,44 @@ function extractDocumentLinks($: cheerio.CheerioAPI): MdcgDocument[] {
   return documents;
 }
 
+function writeMdcgSeed(
+  doc: MdcgDocument,
+  sections: ParsedSection[],
+): void {
+  mkdirSync(SEED_DIR, { recursive: true });
+
+  const byNumber = new Map<string, ParsedSection>();
+  for (const sec of sections) byNumber.set(sec.sectionNumber, sec);
+  const deduped = Array.from(byNumber.values());
+
+  const seed = {
+    id: doc.id,
+    title: doc.title,
+    issuing_body: 'MDCG',
+    document_reference: doc.reference,
+    date_published: doc.datePublished,
+    related_regulation: doc.relatedRegulation,
+    url: doc.pageUrl,
+    pdf_url: doc.pdfUrl,
+    status: 'current',
+    metadata: null,
+    sections: deduped.map((sec) => ({
+      section_number: sec.sectionNumber,
+      title: sec.title,
+      content: sec.content,
+      parent_section: sec.parentSection,
+    })),
+  };
+
+  const path = join(SEED_DIR, `${doc.id}.json`);
+  writeFileSync(path, JSON.stringify(seed, null, 2) + '\n', 'utf-8');
+}
+
 async function main() {
   console.log('=== MDCG Guidance Document Ingestion ===');
-  console.log(`Database: ${DB_PATH}`);
+  console.log(`Seed output: ${SEED_DIR}`);
   console.log(`Dry run: ${DRY_RUN}`);
   console.log('');
-
-  // Apply schema migration
-  const db = new Database(DB_PATH);
-  db.pragma('journal_mode = DELETE');
-  db.pragma('foreign_keys = ON');
-
-  const schemaSql = readFileSync(
-    join(__dirname, 'add-guidance-tables.sql'),
-    'utf-8',
-  );
-  db.exec(schemaSql);
-  console.log('Schema migration applied.');
-
-  // Prepare statements
-  const insertDoc = db.prepare(`
-    INSERT OR REPLACE INTO guidance_documents
-    (id, title, issuing_body, document_reference, date_published, related_regulation, url, pdf_url, status)
-    VALUES (@id, @title, 'MDCG', @reference, @datePublished, @relatedRegulation, @url, @pdfUrl, 'current')
-  `);
-
-  const insertSection = db.prepare(`
-    INSERT OR REPLACE INTO guidance_sections
-    (document_id, section_number, title, content, parent_section)
-    VALUES (@documentId, @sectionNumber, @title, @content, @parentSection)
-  `);
 
   // Fetch index page
   console.log(`Fetching MDCG index page: ${MDCG_INDEX_URL}`);
@@ -235,7 +242,6 @@ async function main() {
     console.log(
       'Check the index URL and update the CSS selectors in extractDocumentLinks().',
     );
-    db.close();
     return;
   }
 
@@ -246,7 +252,6 @@ async function main() {
       console.log(`    PDF: ${doc.pdfUrl || 'no PDF link'}`);
       console.log(`    Regulation: ${doc.relatedRegulation}`);
     }
-    db.close();
     return;
   }
 
@@ -295,18 +300,7 @@ async function main() {
 
       const fullText = textParts.join('\n');
 
-      // Insert document record
-      insertDoc.run({
-        id: doc.id,
-        title: doc.title,
-        reference: doc.reference,
-        datePublished: doc.datePublished,
-        relatedRegulation: doc.relatedRegulation,
-        url: doc.pageUrl,
-        pdfUrl: doc.pdfUrl,
-      });
-
-      // Parse and insert sections
+      // Parse sections
       let sections = parseSections(fullText, doc.id);
 
       // Fallback: if no numbered sections found, store the entire document
@@ -323,18 +317,7 @@ async function main() {
         ];
       }
 
-      const insertMany = db.transaction((secs: ParsedSection[]) => {
-        for (const sec of secs) {
-          insertSection.run({
-            documentId: doc.id,
-            sectionNumber: sec.sectionNumber,
-            title: sec.title,
-            content: sec.content,
-            parentSection: sec.parentSection,
-          });
-        }
-      });
-      insertMany(sections);
+      writeMdcgSeed(doc, sections);
 
       totalSections += sections.length;
       successCount++;
@@ -354,17 +337,8 @@ async function main() {
   console.log('\n=== Ingestion Complete ===');
   console.log(`Documents: ${successCount} succeeded, ${failCount} failed`);
   console.log(`Sections: ${totalSections} total`);
-
-  // Verify counts
-  const docCount = db
-    .prepare("SELECT COUNT(*) as cnt FROM guidance_documents WHERE issuing_body = 'MDCG'")
-    .get() as { cnt: number };
-  const secCount = db
-    .prepare('SELECT COUNT(*) as cnt FROM guidance_sections')
-    .get() as { cnt: number };
-  console.log(`Database: ${docCount.cnt} documents, ${secCount.cnt} sections`);
-
-  db.close();
+  console.log(`Seed files written to ${SEED_DIR}`);
+  console.log('Run `npm run build:db` to rebuild the database from seed.');
 }
 
 main().catch((err) => {

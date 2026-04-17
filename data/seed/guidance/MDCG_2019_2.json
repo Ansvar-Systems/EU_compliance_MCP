@@ -1,0 +1,44 @@
+{
+  "id": "MDCG_2019_2",
+  "title": "MDCG 2019-2",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2019-2",
+  "date_published": "2019-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/12d1f9bd-afe3-42ea-b1a3-20b4986bb3d4_en?filename=md_mdcg_2019_2_gui_udi_dev_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Scope",
+      "content": "1. Scope\nArticle 1(8),1(9), 1(10) of the Medical Device Regulation (EU) 2017/745 (MDR) set\nthe basic criteria to determine whether and to what extent the relevant legislation on\nmedical devices, medicinal products, human tissue and cells apply to certain\nproducts containing a medical device part. In particular,\n“8. Any device which, when placed on the market or put into service, incorporates, as\nan integral part, a substance which, if used separately, would be considered to be a\nmedicinal product as defined in point 2 of Article 1 of Directive 2001/83/EC, including\na medicinal product derived from human blood or human plasma as defined in point\n10 of Article 1 of that Directive, and that has an action ancillary to that of the device,\nshall be assessed and authorised in accordance with this Regulation.\nHowever, if the action of that substance is principal and not ancillary to that of the\ndevice, the integral product shall be governed by Directive 2001/83/EC or Regulation\n(EC) No 726/2004 of the European Parliament and of the Council, as applicable. In\nthat case, the relevant general safety and performance requirements set out in Annex\nI to this Regulation shall apply as far as the safety and performance of the device part\nare concerned.",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Any device which is intended to administer a medicinal product as defined in point",
+      "content": "9. Any device which is intended to administer a medicinal product as defined in point\n2 of Article 1 of Directive 2001/83/EC shall be governed by this Regulation, without\nprejudice to the provisions of that Directive and of Regulation (EC) No 726/2004 with\nregard to the medicinal product.\nHowever, if the device intended to administer a medicinal product and the medicinal\nproduct are placed on the market in such a way that they form a single integral\nproduct which is intended exclusively for use in the given combination and which is\nnot reusable, that single integral product shall be governed by Directive 2001/83/EC\nor Regulation (EC) No 726/2004, as applicable. In that case, the relevant general\nsafety and performance requirements set out in Annex I to this Regulation shall apply\nas far as the safety and performance of the device part of the single integral product\nare concerned.”",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Any device which, when placed on the market or put into service, incorporates, as",
+      "content": "10. Any device which, when placed on the market or put into service, incorporates, as\nan integral part, non-viable tissues or cells of human origin or their derivatives that\nhave an action ancillary to that of the device shall be assessed and authorised in\naccordance with this Regulation. In that case, the provisions for donation,\nprocurement and testing laid down in Directive 2004/23/EC shall apply.\nHowever, if the action of those tissues or cells or their derivatives is principal and not\nancillary to that of the device and the product is not governed by Regulation (EC) No\n1394/2007, the product shall be governed by Directive 2004/23/EC. In that case, the\nrelevant general safety and performance requirements set out in Annex I to this\nRegulation shall apply as far as the safety and performance of the device part are\nconcerned”.\nMedical Devices\nMedical Devices Coordination Group Document MDCG 2019-2\nPage 3 of 3",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Application to UDI rules to the device part of products referred to in",
+      "content": "2. Application to UDI rules to the device part of products referred to in\npoint 1 that are governed by the medical device Regulations\nEXAMPLES:\n- Catheters coated with heparin or an antibiotic\n- Soft tissue fillers incorporating local anaesthetics\n- Implantable infusion pump\n- Spacer devices for use with metered dose inhalers\n- Bone void filler with an antibiotic\n- Bone void filler with animal growth factors, where the action of the growth\nfactors is demonstrated to be ancillary to that of the physical filler\nIf a product referred to in point 1 is assessed and authorised in accordance with the\nMedical device regulations, the device part will be subject to all UDI-related\nobligations.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Application to UDI rules to the device part of combination products that",
+      "content": "3. Application to UDI rules to the device part of combination products that\ndo not fall under the medical device Regulations\nEXAMPLES:\n- Non-reusable autoinjectors containing a medicinal product as integral part\n- Nebulizers precharged with a specific medicinal product\n- Patches for transdermal drug delivery\n- Wound dressings impregnated with an antibiotic, where the primary intended\npurpose is to administer the antibiotic to the wound\n- Bone void filler with animal growth factors, where the action of the growth\nfactors cannot be demonstrated to be ancillary to that of the physical filler\nIn general terms, if a product referred to in point 1 is governed by the medicinal\nproduct or tissue and cell legislation, the device part is required to comply only with\nthe relevant general safety and performance requirements set out in Annex I to the\nRegulation on medical devices. This cannot be interpreted as meaning that the\nrelevant obligations related to UDI, as laid down in Chapter III and Annex VI of the\nRegulation on medical devices, apply to the medical device part or the package of\nthe relevant combination. For this reason, the medical device part is not mandatorily\nrequired to comply with any UDI-related obligation. This also means that a UDI is not\nneeded on the package that combines the medicinal product and the medical device\n1 2\n.\n1\nHowever, if the medical device part bears a UDI on its label, that should not be deemed as being in contrast with the\napplicable medical device legislation\n2\nFor products such as prefilled syringes which are made on the basis of a UDI direct part marked (MDR compliant)\nsyringe it shall be noted that, while UDI rules do not apply to the device part of the integral product, the direct mark\nUDI on the syringe shall not be removed unless that mark compromises the safety and performance of the integral\nproduct.",
+      "parent_section": null
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "MDCG_2021_19",
+  "title": "MDCG 2021-19",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2021-19",
+  "date_published": "2021-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/64443e95-e1be-4ffd-80f7-9c6a1b0b99b6_en?filename=md_2021-19_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "7",
+      "title": "Review current labels and packages to determine where and how UDI will be applied.",
+      "content": "7. Review current labels and packages to determine where and how UDI will be applied.",
+      "parent_section": null
+    },
+    {
+      "section_number": "1",
+      "title": "Read and assess the MDR/IVDR UDI requirements. Identify additional documents such",
+      "content": "1. Read and assess the MDR/IVDR UDI requirements. Identify additional documents such\nas, guidance documents from the MDCG. Documents published by the IMDRF may also\nbe used as input\n18\n.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Define the roles and responsibilities with respect to legal requirements in your",
+      "content": "2. Define the roles and responsibilities with respect to legal requirements in your\norganisation.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Define the responsibilities within your organisation and the interfaces. Make sure that all",
+      "content": "3. Define the responsibilities within your organisation and the interfaces. Make sure that all\ninternal procedures that are affected by the UDI requirements are identified. Make sure\nthat all affected departments are involved in the implementation process.",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Determine the classification of each of devices and accessories (limited to medical",
+      "content": "4. Determine the classification of each of devices and accessories (limited to medical\ndevices in their own right) – this will help establish when the label and packages will need\nto be UDI compliant or when direct marking of the reusable device is needed.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Develop an accurate stock keeping units (SKUs) list of all such devices and accessories",
+      "content": "5. Develop an accurate stock keeping units (SKUs) list of all such devices and accessories\nand their packages.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Determine where the device manufacturing quality records are located and who owns",
+      "content": "6. Determine where the device manufacturing quality records are located and who owns\nthat data.",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "Determine which type of UDI carrier will be used for the purposes of UDI – UDI carriers",
+      "content": "8. Determine which type of UDI carrier will be used for the purposes of UDI – UDI carriers\ninclude, inter alia, ID/linear bar code, 2D/Matrix bar code, RFID.",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Develop appropriate barcode implementation strategies, including barcode verification.",
+      "content": "9. Develop appropriate barcode implementation strategies, including barcode verification.",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Select a designated issuing entity.",
+      "content": "10. Select a designated issuing entity.",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "Quality System - Review current Standard Operating Procedures and systems for the",
+      "content": "11. Quality System - Review current Standard Operating Procedures and systems for the\ninclusion of the UDI System. New Standard Operating Procedures may need to be\ngenerated to cover all requirements.\n18\nPlease see, MDCG 2021-10 - The status of Appendixes E-I of IMDRF N48 under the EU regulatory\nframework for medical devices.\nMedical Devices\nMedical Device Coordination Group Document MDCG 2021-19\nPage 10 of 10\nAuditing the implementation of the UDI system\nThe Notified Body should ensure that its personnel involved in auditing the UDI\nrequirements, as defined by the regulations, have the knowledge of these requirements. The\ndocumented assessment procedures should clearly outline the topics regarding the UDI\nsystem that needs to be covered by the auditors.\nAll applicable requirements of the UDI-system are part of the processes that are audited by\nthe Notified Body. Those processes include but are not limited to the following aspects:\n- selection of an issuing entity for the UDI codes;\n- structure of the UDI-DI system (e.g. granularity of the Basic UDI-DI, grouping of UDI-\nDI);\n- assignment of the UDI-DI codes;\n- definition of UDI-PI and applicability to the product types;\n- registration process into the UDI Database;\n- record keeping procedures;\n- issuing the EU Declaration of Conformity with the Basic UDI-DI;\n- Change management of the UDI system, including update of the database\n- labelling process, including barcode reference code and software validation\n- maintenance of printing equipment,\n- training of personnel on UDI system,\n- processes used in post market surveillance and other monitoring activities.\nIn order to ensure that the UDI System meets the requirements, it is recommended that the\nNotified Body considers the elements listed above when assessing the quality system of the\nmanufacturer .",
+      "parent_section": null
+    }
+  ]
+}

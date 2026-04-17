@@ -97,12 +97,9 @@ describe('AI Act guidance (golden contract)', () => {
     expect(ids).toContain('AI_ACT_COP_MARKING');
   });
 
-  it('check_data_freshness.guidance.total includes all 8 AI Act documents', async () => {
-    // Note: MDCG docs (~105) are only present if ingest-mdcg-guidance.ts has
-    // been run; they're not shipped in the base committed DB. The baseline
-    // assertion here is that the 8 AI Act documents are discoverable.
+  it('check_data_freshness.guidance.total covers AI Act + MDCG cohorts', async () => {
     const result = await checkDataFreshness(db);
-    expect(result.guidance.total).toBeGreaterThanOrEqual(8);
+    expect(result.guidance.total).toBeGreaterThanOrEqual(100);
   });
 
   it('placeholder note is surfaced in pending_publications', async () => {
@@ -111,5 +108,58 @@ describe('AI Act guidance (golden contract)', () => {
       (p) => p.id === 'AI_ACT_COP_MARKING',
     );
     expect(marking?.note).toContain('2026-03-05');
+  });
+});
+
+describe('MDCG guidance (golden contract)', () => {
+  let db: DatabaseAdapter;
+  let tmpDir: string;
+
+  beforeAll(() => {
+    tmpDir = mkdtempSync(join(tmpdir(), 'mdcg-guidance-golden-'));
+    const dbCopy = join(tmpDir, 'regulations.db');
+    copyFileSync(SOURCE_DB, dbCopy);
+    const sqliteDb = new Database(dbCopy, { readonly: true });
+    db = createSqliteAdapter(sqliteDb);
+  });
+
+  afterAll(async () => {
+    await db.close();
+    rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  it('list_guidance(issuing_body=MDCG) returns the full MDCG cohort', async () => {
+    const result = await listGuidance(db, { issuing_body: 'MDCG' });
+    expect(result.length).toBeGreaterThanOrEqual(50);
+  });
+
+  it('list_guidance(issuing_body=AI Office) preserves AI Office cohort', async () => {
+    const result = await listGuidance(db, { issuing_body: 'AI Office' });
+    expect(result.length).toBeGreaterThanOrEqual(8);
+  });
+
+  it('search_guidance finds MDCG content filtered by issuing_body', async () => {
+    const hits = await searchGuidance(db, {
+      query: 'medical device',
+      issuing_body: 'MDCG',
+      limit: 10,
+    });
+    expect(hits.length).toBeGreaterThan(0);
+    expect(hits.every((h) => h.document_id.startsWith('MDCG_'))).toBe(true);
+  });
+
+  it('get_guidance_section retrieves a section discovered via search_guidance', async () => {
+    const hits = await searchGuidance(db, {
+      query: 'medical device',
+      issuing_body: 'MDCG',
+      limit: 1,
+    });
+    expect(hits.length).toBeGreaterThan(0);
+    const section = await getGuidanceSection(db, {
+      document_id: hits[0].document_id,
+      section_number: hits[0].section_number,
+    });
+    expect(section).not.toBeNull();
+    expect(section!.content.length).toBeGreaterThan(20);
   });
 });

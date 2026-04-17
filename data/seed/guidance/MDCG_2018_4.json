@@ -1,0 +1,26 @@
+{
+  "id": "MDCG_2018_4",
+  "title": "MDCG 2018-4",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2018-4",
+  "date_published": "2018-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/f622a4d7-4ac8-44e3-9217-e2793aa7971f_en?filename=md_mdcg_2018_4_udi_core_spp_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "8",
+      "title": "The medical device nomenclature code as provided for in Article 26 (MDR)",
+      "content": "8. The medical device nomenclature code as provided for in Article 26 (MDR)\n2\n9. risk class (to be intended as the highest risk class of the device components\nof the system or procedure pack),\n10. if applicable, name or trade name,\n11.A. name or, if applicable, system or procedure pack model associated with\nthe BASIC UDI-DI in the statement drawn in accordance with Article 22.1 of\nthe MDR\n11.B. reference or catalogue number, or product number found on the system\nor procedure pack label or accompanying packaging to identify a system or\nprocedure pack\n13. additional product description,\n14. if applicable, storage and/or handling conditions of the system or\nprocedure pack (as indicated on the label or in the instructions for use),\n15. if applicable, additional trade names of the system/procedure pack,\n18. labelled sterile (y/n) (meaning that the system or procedure pack in its\nentirety is labelled as sterile),\n19. need for sterilisation before use (y/n)",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "URL for additional information, such as electronic instructions for use",
+      "content": "22. URL for additional information, such as electronic instructions for use\n(optional),\n23. if applicable, critical warnings or contra-indications\n1\nPlease note that format and definition of all UDI data elements are provided at\nhttps://ec.europa.eu/docsroom/documents/28669\n2\nApplicability of this data element to systems and procedure packs is to be determined at the time of\ndesignation of the future EU nomenclature for medical devices (foreseen end of 2018/beginning 2019).\nMedical Devices\nMedical Devices Coordination Group Document MDCG 2018-4\nPage 3 of 3\n24. status of the system or procedure pack (on the market, no longer placed\non the market, recalled, field safety corrective action initiated).\nWhenever a label is referred to, the label of the entire system/procedure pack shall\nbe meant, in accordance with Article 22(5) of Regulation 745/2017.\n,",
+      "parent_section": null
+    }
+  ]
+}

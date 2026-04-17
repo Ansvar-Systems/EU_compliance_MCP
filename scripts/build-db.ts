@@ -440,6 +440,63 @@ function buildDatabase() {
         console.log(`  Loaded ${requirements.length} evidence requirements`);
       }
     }
+
+    // Load guidance documents + sections
+    const guidanceDir = join(SEED_DIR, 'guidance');
+    if (existsSync(guidanceDir)) {
+      const guidanceFiles = readdirSync(guidanceDir).filter((f: string) =>
+        f.endsWith('.json'),
+      );
+
+      const insertGuidanceDoc = db.prepare(`
+        INSERT INTO guidance_documents
+        (id, title, issuing_body, document_reference, date_published, related_regulation, url, pdf_url, status, metadata)
+        VALUES (@id, @title, @issuing_body, @document_reference, @date_published, @related_regulation, @url, @pdf_url, @status, @metadata)
+      `);
+      const insertGuidanceSection = db.prepare(`
+        INSERT INTO guidance_sections
+        (document_id, section_number, title, content, parent_section)
+        VALUES (@document_id, @section_number, @title, @content, @parent_section)
+      `);
+
+      let totalGuidanceDocs = 0;
+      let totalGuidanceSections = 0;
+
+      for (const file of guidanceFiles) {
+        const content = readFileSync(join(guidanceDir, file), 'utf-8');
+        const seed = JSON.parse(content);
+
+        insertGuidanceDoc.run({
+          id: seed.id,
+          title: seed.title,
+          issuing_body: seed.issuing_body,
+          document_reference: seed.document_reference ?? null,
+          date_published: seed.date_published ?? null,
+          related_regulation: seed.related_regulation ?? null,
+          url: seed.url ?? null,
+          pdf_url: seed.pdf_url ?? null,
+          status: seed.status ?? 'current',
+          metadata: seed.metadata ? JSON.stringify(seed.metadata) : null,
+        });
+        totalGuidanceDocs++;
+
+        for (const sec of seed.sections || []) {
+          insertGuidanceSection.run({
+            document_id: seed.id,
+            section_number: sec.section_number,
+            title: sec.title,
+            content: sec.content,
+            parent_section: sec.parent_section ?? null,
+          });
+          totalGuidanceSections++;
+        }
+      }
+
+      console.log(
+        `Loaded ${totalGuidanceDocs} guidance documents ` +
+          `with ${totalGuidanceSections} sections`,
+      );
+    }
   } else {
     console.log('No seed directory found. Database created with empty tables.');
     console.log(`Create seed files in: ${SEED_DIR}`);

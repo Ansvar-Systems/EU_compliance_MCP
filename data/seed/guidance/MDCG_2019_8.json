@@ -1,0 +1,68 @@
+{
+  "id": "MDCG_2019_8",
+  "title": "MDCG 2019-8 v2",
+  "issuing_body": "MDCG",
+  "document_reference": "MDCG 2019-8",
+  "date_published": "2019-01-01",
+  "related_regulation": "both",
+  "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+  "pdf_url": "https://health.ec.europa.eu/document/download/e86b9fc4-9785-4c1a-934d-ba11085ff6aa_en?filename=md_mdcg_2019_8_implant_guidance_card_en.pdf",
+  "status": "current",
+  "metadata": null,
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Name of the patient or patient ID. To be filled by the healthcare institution/provider.",
+      "content": "1. Name of the patient or patient ID. To be filled by the healthcare institution/provider.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Date of implantation. To be filled by the healthcare institution/provider.",
+      "content": "2. Date of implantation. To be filled by the healthcare institution/provider.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Name and address of the healthcare institution/provider. To be filled by the healthcare",
+      "content": "3. Name and address of the healthcare institution/provider. To be filled by the healthcare\ninstitution/provider.",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Manufacturer’s information website.",
+      "content": "4. Manufacturer’s information website.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Device type in required language.",
+      "content": "5. Device type in required language.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Language requirements on specific fields",
+      "content": "6. Language requirements on specific fields\nDespite the nearly complete list of symbols for fields on the IC, there is currently no symbol\navailable for the required field “Device Type”.\nThe lack of a symbol and the purpose of this field makes it necessary that the information on\nthe device type must be provided in the language accepted/required by the concerned\nMember State.\nThere are several possibilities available to provide this information in the necessary languages,\ne.g. the information is already printed on the IC in the different languages or stickers are\nprovided with the IC and the healthcare professional selects the right one etc.",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "UDI-DI Code (HRI).",
+      "content": "7. UDI-DI Code (HRI).",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "UDI code (AIDC format).",
+      "content": "8. UDI code (AIDC format).",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Name and address of the",
+      "content": "10. Name and address of the\nmanufacturer of the implanted\nmedical device.\nNOTE: Fields 4-10 might be filled\nwith stickers (though this is not the\npreferred solution)\nStickers (to be detached and placed on the right place at the IC according to the numbers)\n5, 6\n9\n8\n7\n2 081019001 002 4\n10\n4\nBack\nExplanation/ translation of symbols\nPatient Name or patient ID, Име на пациента, Jméno pacienta, Patientens navn,\nPatientenname, Όνομα ασθενούς, Nombre del paciente, Patsiendi nimi, Potilaan nimi,\nNom du patient, Ime i prezime bolesnika, Imię i nazwisko pacjenta, A beteg neve,\nNome del paziente, Paciento vardas ir pavardė, Pacienta vārds, uzvārds, Naam patiënt\nPasientens navn, A beteg neve, Nome do doente, Nume pacient,\nMeno pacienta, Ime bolnika, Patientens namn\nName and Address of the implanting healthcare institution/provider , établissement\nsanitaire, centro de salud, struttura sanitaria, Gesundheitseinrichtung,\ngezondheidszorginstelling, placówka służby zdrowia, здравно заведение, veselības\naprūpes iestāde, εγκατάσταση για την υγεία\nDate of Implantation , Дата на имплантиране, Datum implantace, Implanteringsdato,\nImplantationsdatum, Ημερομηνία εμφύτευσης,\nFecha de implantación, Implanteerimiskuupäev, Implantointipäivämäärä, Date\nd’implantation, Datum implantacije,\nBeültetés dátuma, Data dell'impianto, Implantavimo data, Implantēšanas datums,\nImplantatiedatum, Data wszczepienia, Data do implante, Data implantării, Dátum\nimplantácie, Datum vsaditve\nDevice Name, Nazwa urządzenia medy\ncznego, Název zdravotnických prostředků, Medicinsk enhed, Name des\nMedizinprodukts, Nombre del dispositivo médico, Nom du dispositif médical, Orvosi\neszköz neve, Namn på medicinsk enhet, Ime medicinske naprave Nome do dispositivo\nmédico\nκατασκευαστής, Producent, Fabrikant, Produttore, Fabricante, Fabricant, manufacturer,\nHersteller\nInformation website for patients , Webová stránka s informacemi pro pacienta,\nInformationswebsite for patienten, Webseite mit Informationen für Patienten, Sitio web\ncon información para el paciente, Site d'informations pour le patient, Információs\nhonlap betegek számára, Sito web con le informazioni per i pazienti,\nWebsite met informatie voor patiënten, Strona internetowa z informacjami dla pacjenta\nTranslation of serial number in required languages.\nTranslation of LOT number in required languages.\nExplanation of unique device identifier (UDI) in required languages.\nPlace to attach the\nImplant card",
+      "parent_section": null
+    }
+  ]
+}
