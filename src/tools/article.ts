@@ -1,5 +1,6 @@
 import type { DatabaseAdapter } from '../database/types.js';
 import { buildCitation } from '../utils/citation.js';
+import { buildArticleSourceUrl } from '../utils/eur-lex-url.js';
 
 /**
  * Normalize user input for the `article` parameter of get_article.
@@ -56,15 +57,17 @@ export async function getArticle(
 
   const sql = `
     SELECT
-      regulation,
-      article_number,
-      title,
-      text,
-      chapter,
-      recitals,
-      cross_references
-    FROM articles
-    WHERE regulation = $1 AND article_number = $2
+      a.regulation,
+      a.article_number,
+      a.title,
+      a.text,
+      a.chapter,
+      a.recitals,
+      a.cross_references,
+      r.celex_id
+    FROM articles a
+    LEFT JOIN regulations r ON r.id = a.regulation
+    WHERE a.regulation = $1 AND a.article_number = $2
   `;
 
   const result = await db.query(sql, [regulation, article]);
@@ -81,6 +84,7 @@ export async function getArticle(
     chapter: string | null;
     recitals: string | null;
     cross_references: string | null;
+    celex_id: string | null;
   };
 
   // Token management: Truncate very large articles to prevent context overflow
@@ -115,6 +119,7 @@ export async function getArticle(
       displayText,
       'get_article',
       { regulation, article },
+      buildArticleSourceUrl(row.celex_id, row.article_number),
     ),
   };
 }
