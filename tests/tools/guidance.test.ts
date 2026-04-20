@@ -76,6 +76,23 @@ describe('searchGuidance', () => {
 
     expect(results).toHaveLength(0);
   });
+
+  // ── Missing / wrong-type query guard (2026-04-20 audit) ──────────────
+  // escapeFts5Query(query) calls query.replace(); pre-fix this crashed
+  // with "Cannot read properties of undefined (reading 'replace')" when
+  // query was omitted or passed as a non-string. Same class of bug as
+  // get_definitions — schema marks query required, SDK doesn't enforce.
+  it('throws a clear error when query is missing', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await expect(searchGuidance(db, {} as any)).rejects.toThrow(/query is required/i);
+  });
+
+  it('throws a clear error when query is not a string', async () => {
+    await expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      searchGuidance(db, { query: 42 as any }),
+    ).rejects.toThrow(/query is required/i);
+  });
 });
 
 describe('getGuidanceSection', () => {
