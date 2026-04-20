@@ -78,6 +78,16 @@ export async function searchGuidance(
   const { query, document_id, issuing_body, related_regulation } = input;
   const limit = input.limit ?? 15;
 
+  // Schema marks query required; SDK doesn't validate. Pre-fix
+  // escapeFts5Query(query) → query.replace() crashed with
+  // "Cannot read properties of undefined (reading 'replace')"
+  // on missing or non-string query (2026-04-20 handler audit).
+  if (typeof query !== 'string') {
+    throw new Error(
+      'query is required: pass a string to search guidance documents for (e.g. "software classification")',
+    );
+  }
+
   const escapedQuery = escapeFts5Query(query);
   if (!escapedQuery) return [];
 

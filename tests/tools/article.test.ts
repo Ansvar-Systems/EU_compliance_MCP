@@ -92,6 +92,32 @@ describe('getArticle', () => {
     );
   });
 
+  // ── Missing / wrong-type arg guards (2026-04-20 audit) ────────────────
+  // normalizeArticleNumber(input.article) calls input.replace(); pre-fix
+  // this crashed with "input.replace is not a function" when article was
+  // a number. Same class as get_definitions — schema marks required, SDK
+  // doesn't enforce, handler must guard.
+  it('throws a clear error when article is missing', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await expect(getArticle(db, { regulation: 'GDPR' } as any)).rejects.toThrow(
+      /article is required/i,
+    );
+  });
+
+  it('throws a clear error when article is not a string', async () => {
+    await expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      getArticle(db, { regulation: 'GDPR', article: 42 as any }),
+    ).rejects.toThrow(/article is required/i);
+  });
+
+  it('throws a clear error when regulation is missing', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await expect(getArticle(db, { article: '32' } as any)).rejects.toThrow(
+      /regulation is required/i,
+    );
+  });
+
   it('falls back to the regulation-level URL for Annex references', async () => {
     // Annex anchoring isn't universally published on EUR-Lex ELI pages, so
     // the builder emits the regulation-level URL (no anchor) for non-numeric

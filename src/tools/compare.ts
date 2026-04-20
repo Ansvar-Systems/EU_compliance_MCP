@@ -145,6 +145,21 @@ export async function compareRequirements(
 ): Promise<CompareResult> {
   const { topic, regulations } = input;
 
+  // Schema marks both topic and regulations required; SDK doesn't
+  // validate. Pre-fix getSynonyms(topic) → topic.toLowerCase() crashed
+  // with "Cannot read properties of undefined (reading 'toLowerCase')"
+  // (2026-04-20 handler audit). Same class of bug as get_definitions.
+  if (typeof topic !== 'string') {
+    throw new Error(
+      'topic is required: pass a string describing what to compare (e.g. "incident reporting")',
+    );
+  }
+  if (!Array.isArray(regulations) || regulations.length === 0) {
+    throw new Error(
+      'regulations is required: pass a non-empty array of regulation ids (e.g. ["DORA", "NIS2"])',
+    );
+  }
+
   // Get synonym terms for expanded search
   const synonyms = getSynonyms(topic);
   const searchTerms = [topic, ...synonyms];

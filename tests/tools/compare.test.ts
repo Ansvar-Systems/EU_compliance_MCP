@@ -62,4 +62,30 @@ describe('compareRequirements', () => {
     expect(nis2).toBeDefined();
     // Timeline extraction is optional enhancement
   });
+
+  // ── Missing / wrong-type arg guards (2026-04-20 audit) ────────────────
+  // getSynonyms(topic) calls topic.toLowerCase(); pre-fix this crashed with
+  // "Cannot read properties of undefined (reading 'toLowerCase')" for any
+  // call omitting topic. Schema marks topic required but the SDK doesn't
+  // enforce the schema, so the handler must guard the contract itself.
+  it('throws a clear error when topic is missing', async () => {
+    await expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      compareRequirements(db, { regulations: ['GDPR'] } as any),
+    ).rejects.toThrow(/topic is required/i);
+  });
+
+  it('throws a clear error when topic is not a string', async () => {
+    await expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      compareRequirements(db, { topic: 42 as any, regulations: ['GDPR'] }),
+    ).rejects.toThrow(/topic is required/i);
+  });
+
+  it('throws a clear error when regulations is missing', async () => {
+    await expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      compareRequirements(db, { topic: 'incident' } as any),
+    ).rejects.toThrow(/regulations is required/i);
+  });
 });
