@@ -65,4 +65,23 @@ describe('getRecital', () => {
     // related_articles may be null in test data, that's okay
     expect(result).toHaveProperty('related_articles');
   });
+
+  it('exposes a recital-specific ELI URL as _citation.source_url', async () => {
+    // Mirror of the get_article fix for recitals — the builder appends a
+    // #rct_N anchor so a gateway consumer clicking the citation chip lands
+    // on the recital rather than the top of the regulation.
+    const result = await getRecital(db, { regulation: 'GDPR', recital_number: 83 });
+    expect(result).not.toBeNull();
+    expect(result!._citation?.source_url).toBe(
+      'https://eur-lex.europa.eu/eli/reg/2016/679/oj#rct_83',
+    );
+  });
+
+  it('maps directives to their ELI type (dir) for the recital URL', async () => {
+    const result = await getRecital(db, { regulation: 'NIS2', recital_number: 1 });
+    expect(result).not.toBeNull();
+    expect(result!._citation?.source_url).toBe(
+      'https://eur-lex.europa.eu/eli/dir/2022/2555/oj#rct_1',
+    );
+  });
 });

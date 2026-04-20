@@ -67,6 +67,55 @@ describe('getArticle', () => {
     expect(article).toHaveProperty('cross_references');
   });
 
+  it('exposes a provision-specific ELI URL as _citation.source_url', async () => {
+    // Closes the gateway validate_citation gap where citation.source_url came
+    // back blank even on valid hits (2026-04-20 post-merge probe). Per the
+    // law-mcp-golden-standard.md §4.9b contract, source_url is the URL for
+    // the specific provision — computed server-side from CELEX id + article
+    // number, so no ingestion backfill is needed (per the 2026-04-18 DPIA
+    // audit finding).
+    const article = await getArticle(db, { regulation: 'GDPR', article: '32' });
+    expect(article).not.toBeNull();
+    expect(article!._citation?.source_url).toBe(
+      'https://eur-lex.europa.eu/eli/reg/2016/679/oj#art_32',
+    );
+  });
+
+  it('maps directives to their ELI type (dir) for the article URL', async () => {
+    // NIS2 is a directive (CELEX 32022L2555); the ELI base should use
+    // "dir" rather than "reg". Catches a regression if the CELEX→ELI
+    // type map drifts and silently defaults to one sector letter.
+    const article = await getArticle(db, { regulation: 'NIS2', article: '23' });
+    expect(article).not.toBeNull();
+    expect(article!._citation?.source_url).toBe(
+      'https://eur-lex.europa.eu/eli/dir/2022/2555/oj#art_23',
+    );
+  });
+
+  it('falls back to the regulation-level URL for Annex references', async () => {
+    // Annex anchoring isn't universally published on EUR-Lex ELI pages, so
+    // the builder emits the regulation-level URL (no anchor) for non-numeric
+    // article_number values. Still a working link — just not a deep link.
+    // Guarded here against someone "improving" the Annex path to emit a
+    // guessed anchor like ``#anx_I`` that doesn't resolve on every act.
+    // Fixture does not currently seed Annex rows, so we exercise this by
+    // looking up a known-Annex row if one exists in the DB; otherwise the
+    // unit test in tests/utils/eur-lex-url.test.ts covers the branch.
+    const annexCheck = await db.query(
+      "SELECT 1 FROM articles WHERE article_number LIKE 'Annex %' LIMIT 1",
+      [],
+    );
+    if (annexCheck.rows.length === 0) return; // unit test in eur-lex-url.test.ts covers it
+    const row = (await db.query(
+      "SELECT regulation, article_number FROM articles WHERE article_number LIKE 'Annex %' LIMIT 1",
+      [],
+    )).rows[0] as { regulation: string; article_number: string };
+    const annex = await getArticle(db, { regulation: row.regulation, article: row.article_number });
+    expect(annex).not.toBeNull();
+    expect(annex!._citation?.source_url).not.toContain('#art_');
+    expect(annex!._citation?.source_url).not.toContain('#anx_');
+  });
+
   it('resolves underscored annex form to the canonical row', async () => {
     // NB: this assumes a pre-populated test DB has a row with article_number='Annex I'
     // for AI_ACT. Skipped until the annex extraction task runs; guard with a check.
