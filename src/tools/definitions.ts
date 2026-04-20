@@ -20,6 +20,24 @@ export async function getDefinitions(
   input: DefinitionsInput
 ): Promise<Definition[]> {
   const { term, regulation } = input;
+
+  // Schema marks ``term`` as required but the MCP SDK hands arguments to
+  // the handler without validating against the schema. Pre-fix, a call
+  // omitting ``term`` (the prod ``get_definitions(GDPR)`` report on
+  // 2026-04-20) surfaced as "Cannot read properties of undefined
+  // (reading 'replace')" from inside the LIKE-wildcard escape.
+  //
+  // Empty strings are intentionally NOT rejected here — an existing
+  // edge-case test (``tests/comprehensive/edge-cases.test.ts``) asserts
+  // that empty/odd-shape terms return an array without crashing.
+  // Empty-string falls through to a ``%%`` LIKE pattern; the ``limit``
+  // cap (500) keeps that bounded.
+  if (typeof term !== 'string') {
+    throw new Error(
+      'term is required: pass a string to search for (e.g. "personal data")',
+    );
+  }
+
   let limit = input.limit ?? 50;
   if (!Number.isFinite(limit) || limit < 0) limit = 50;
   limit = Math.min(Math.floor(limit), 500);
