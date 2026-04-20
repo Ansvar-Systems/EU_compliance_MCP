@@ -1,5 +1,6 @@
 import type { DatabaseAdapter } from '../database/types.js';
 import { buildCitation } from '../utils/citation.js';
+import { buildRecitalSourceUrl } from '../utils/eur-lex-url.js';
 
 export interface GetRecitalInput {
   regulation: string;
@@ -32,12 +33,14 @@ export async function getRecital(
 
   const sql = `
     SELECT
-      regulation,
-      recital_number,
-      text,
-      related_articles
-    FROM recitals
-    WHERE regulation = $1 AND recital_number = $2
+      rc.regulation,
+      rc.recital_number,
+      rc.text,
+      rc.related_articles,
+      r.celex_id
+    FROM recitals rc
+    LEFT JOIN regulations r ON r.id = rc.regulation
+    WHERE rc.regulation = $1 AND rc.recital_number = $2
   `;
 
   const result = await db.query(sql, [regulation, recital_number]);
@@ -51,6 +54,7 @@ export async function getRecital(
     recital_number: number;
     text: string;
     related_articles: string | null;
+    celex_id: string | null;
   };
 
   return {
@@ -63,6 +67,7 @@ export async function getRecital(
       `${row.regulation} Recital ${row.recital_number}`,
       'get_recital',
       { regulation, recital_number: String(recital_number) },
+      buildRecitalSourceUrl(row.celex_id, row.recital_number),
     ),
   };
 }
