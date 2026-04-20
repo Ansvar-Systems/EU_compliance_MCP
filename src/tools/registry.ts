@@ -612,16 +612,20 @@ export function registerTools(server: Server, db: DatabaseAdapter, context?: Abo
     try {
       const result = await tool.handler(db, args || {});
 
-      // Extract _citation from tool result (if present) for protocol-level exposure
+      // ``_citation`` is dual-emitted: once inside the ``content[0].text`` JSON
+      // (so downstream consumers that only inspect the parsed content see it —
+      // e.g. the MCP Gateway's fanout reads ``content``, not CallToolResult
+      // ``_meta``) and once at the protocol-level ``_meta`` (so the Watchdog
+      // and grounding-enforcement systems that read ``CallToolResult._meta``
+      // see it too; that's the path introduced in commit 0ff2dd4). Stripping
+      // from content broke the gateway — the 2026-04-20 validate_citation
+      // probe against gateway.ansvar.eu showed ``citation.source_url == ""``
+      // because the gateway could never read the ``_citation`` envelope.
       let _citation: Record<string, unknown> | undefined;
-      let resultForText = result;
       if (result && typeof result === 'object' && !Array.isArray(result) && result._citation) {
-        const { _citation: cit, ...rest } = result;
-        _citation = cit;
-        resultForText = rest;
+        _citation = result._citation;
       }
 
-      // Protocol-level _meta (MCP spec: CallToolResult._meta)
       const _meta: Record<string, unknown> = {
         disclaimer:
           'Content is derived from EUR-Lex official texts and is not an official legal publication. ' +
@@ -633,15 +637,14 @@ export function registerTools(server: Server, db: DatabaseAdapter, context?: Abo
         ..._citation ? { _citation } : {},
       };
 
-      // Text content: the tool result data without _citation (already in _meta)
       const textPayload =
-        typeof resultForText === 'string'
-          ? resultForText
-          : Array.isArray(resultForText)
-          ? { data: resultForText }
-          : resultForText && typeof resultForText === 'object'
-          ? resultForText
-          : { data: resultForText };
+        typeof result === 'string'
+          ? result
+          : Array.isArray(result)
+          ? { data: result }
+          : result && typeof result === 'object'
+          ? result
+          : { data: result };
 
       return {
         _meta,

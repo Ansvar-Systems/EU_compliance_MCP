@@ -112,4 +112,22 @@ describe('searchRegulations', () => {
     // All results should have a type field
     expect(results.every(r => r.type === 'article' || r.type === 'recital')).toBe(true);
   });
+
+  // ── Missing / wrong-type query guard (2026-04-20 audit) ──────────────
+  // The MCP schema marks query required, but the MCP SDK doesn't validate
+  // before handing args to the handler. The existing empty-string guard
+  // (`!query || query.trim()`) assumes query is a string — pass a number
+  // and `.trim()` crashes with "query.trim is not a function". Reject
+  // non-string inputs with a clear error so the contract surfaces.
+  it('throws a clear error when query is missing', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await expect(searchRegulations(db, {} as any)).rejects.toThrow(/query is required/i);
+  });
+
+  it('throws a clear error when query is not a string', async () => {
+    await expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      searchRegulations(db, { query: 42 as any }),
+    ).rejects.toThrow(/query is required/i);
+  });
 });

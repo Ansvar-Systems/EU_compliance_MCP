@@ -53,6 +53,22 @@ export async function getArticle(
   input: GetArticleInput
 ): Promise<Article | null> {
   const { regulation } = input;
+
+  // Schema marks both regulation and article required; SDK doesn't
+  // validate. Pre-fix, a non-string ``article`` crashed
+  // normalizeArticleNumber with "input.replace is not a function"
+  // (2026-04-20 handler audit). Same class of bug as get_definitions.
+  if (typeof regulation !== 'string') {
+    throw new Error(
+      'regulation is required: pass a regulation id (e.g. "GDPR", "NIS2", "DORA")',
+    );
+  }
+  if (typeof input.article !== 'string') {
+    throw new Error(
+      'article is required: pass an article number or Annex reference (e.g. "32", "5a", "Annex I")',
+    );
+  }
+
   const article = normalizeArticleNumber(input.article);
 
   const sql = `

@@ -69,4 +69,28 @@ describe('getDefinitions', () => {
     // Should find "personal data"
     expect(result.length).toBeGreaterThan(0);
   });
+
+  it('throws a clear error when term is missing', async () => {
+    // Reproduces the crash observed in production on 2026-04-20:
+    // get_definitions({regulation: "GDPR"}) (term omitted) surfaced as
+    // "Cannot read properties of undefined (reading 'replace')" — a stack
+    // trace from inside the LIKE-wildcard escape. The schema marks term
+    // required, but the MCP SDK passes the args through unvalidated, so
+    // the handler must guard the contract itself.
+    await expect(getDefinitions(db, {} as { term: string })).rejects.toThrow(
+      /term is required/i,
+    );
+  });
+
+  it('throws a clear error when term is not a string', async () => {
+    // Defensive: guards against callers that pass a number, null, or
+    // object through MCP arguments — the LIKE-escape would have crashed
+    // on any non-string that lacks ``.replace()``.
+    await expect(
+      getDefinitions(db, { term: 42 as unknown as string }),
+    ).rejects.toThrow(/term is required/i);
+    await expect(
+      getDefinitions(db, { term: null as unknown as string }),
+    ).rejects.toThrow(/term is required/i);
+  });
 });

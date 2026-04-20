@@ -250,12 +250,21 @@ export async function searchRegulations(
 ): Promise<SearchResult[]> {
   let { query, regulations, limit = 10 } = input;
 
+  // Schema marks query required; SDK doesn't validate before handler.
+  // Pre-fix the next line crashed with "query.trim is not a function"
+  // when query was a number, per the 2026-04-20 handler audit.
+  if (typeof query !== 'string') {
+    throw new Error(
+      'query is required: pass a string to search for (e.g. "personal data breach")',
+    );
+  }
+
   if (!Number.isFinite(limit) || limit < 0) {
     limit = 10;
   }
   limit = Math.min(Math.floor(limit), 1000);
 
-  if (!query || query.trim().length === 0) {
+  if (query.trim().length === 0) {
     return [];
   }
 
