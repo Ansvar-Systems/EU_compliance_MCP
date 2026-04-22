@@ -50,3 +50,11 @@ healthcheck:
 readOnlyRootFilesystem: false
 runAsUser: 1001
 fsGroup: 1001
+
+agentgateway:
+  enabled: true
+  # Gateway lives in agentgateway-system; HTTPRoute + AgentgatewayBackend go in this release's namespace
+  namespace: agentgateway-system
+  gatewayName: agentgateway-proxy
+  # URL path segment: mcp.ansvar.eu/{pathBase}/mcp — defaults to the Helm release name (= repo name)
+  pathBase: ""
