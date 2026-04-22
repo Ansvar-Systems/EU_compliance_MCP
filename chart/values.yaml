@@ -1,0 +1,52 @@
+image:
+  repository: ghcr.io/ansvar-systems/eu-regulations-mcp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Set to true for private GHCR repos: adds imagePullSecrets to the pod and renders
+# a kubernetes.io/dockerconfigjson Secret. Requires dockerConfigJson to be set.
+private: false
+imagePullSecretName: ghcr-pull-secret
+dockerConfigJson: ""
+
+replicaCount: 1
+
+service:
+  port: 3000
+  type: ClusterIP
+
+ingress:
+  enabled: false
+  className: traefik
+  host: ""
+  annotations: {}
+  tls:
+    enabled: false
+    secretName: ""
+
+resources:
+  limits:
+    memory: 256Mi
+    cpu: 500m
+  requests:
+    memory: 128Mi
+    cpu: 100m
+
+env:
+  - name: NODE_ENV
+    value: production
+  - name: PORT
+    value: "3000"
+
+healthcheck:
+  enabled: true
+  path: /health
+  initialDelaySeconds: 30
+  periodSeconds: 30
+  timeoutSeconds: 10
+  failureThreshold: 3
+
+# SQLite WAL files need write access to /app/data — keep false
+readOnlyRootFilesystem: false
+runAsUser: 1001
+fsGroup: 1001

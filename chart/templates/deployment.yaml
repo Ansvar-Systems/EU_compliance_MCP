@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "eu-regulations-mcp.fullname" . }}
+  labels:
+    {{- include "eu-regulations-mcp.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "eu-regulations-mcp.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "eu-regulations-mcp.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: {{ .Values.runAsUser }}
+        fsGroup: {{ .Values.fsGroup }}
+        seccompProfile:
+          type: RuntimeDefault
+      {{- if .Values.private }}
+      imagePullSecrets:
+        - name: {{ .Values.imagePullSecretName }}
+      {{- end }}
+      containers:
+        - name: eu-regulations-mcp
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          {{- with .Values.env }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.healthcheck.enabled }}
+          {{- $hc := .Values.healthcheck }}
+          livenessProbe:
+            httpGet:
+              path: {{ $hc.path }}
+              port: http
+            initialDelaySeconds: {{ $hc.initialDelaySeconds }}
+            periodSeconds: {{ $hc.periodSeconds }}
+            timeoutSeconds: {{ $hc.timeoutSeconds }}
+            failureThreshold: {{ $hc.failureThreshold }}
+          readinessProbe:
+            httpGet:
+              path: {{ $hc.path }}
+              port: http
+            initialDelaySeconds: {{ $hc.initialDelaySeconds }}
+            periodSeconds: {{ $hc.periodSeconds }}
+            timeoutSeconds: {{ $hc.timeoutSeconds }}
+            failureThreshold: {{ $hc.failureThreshold }}
+          {{- end }}
+          securityContext:
+            readOnlyRootFilesystem: {{ .Values.readOnlyRootFilesystem }}
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          {{- if .Values.readOnlyRootFilesystem }}
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir: {}
+          {{- end }}

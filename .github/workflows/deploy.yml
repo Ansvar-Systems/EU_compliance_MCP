@@ -1,0 +1,81 @@
+name: Deploy to Cluster
+
+on:
+  workflow_run:
+    workflows: ["Build and Push to GHCR"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Check out deploy repo
+        uses: actions/checkout@v4
+        with:
+          repository: Ansvar-Systems/deploy
+          ref: main
+          path: deploy-repo
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Compute image tag
+        id: tag
+        run: |
+          SHORT=$(echo "${{ github.event.workflow_run.head_sha }}" | cut -c1-7)
+          echo "tag=sha-${SHORT}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+
+      - name: Render Helm chart (public)
+        if: ${{ vars.DEPLOY_PRIVATE != 'true' }}
+        run: |
+          mkdir -p deploy-repo/service/eu-regulations-mcp
+          helm template eu-regulations-mcp chart/ \
+            --set image.tag=${{ steps.tag.outputs.tag }} \
+            --namespace ansvar \
+            > deploy-repo/service/eu-regulations-mcp/deploy.yaml
+
+      - name: Render Helm chart (private)
+        if: ${{ vars.DEPLOY_PRIVATE == 'true' }}
+        run: |
+          mkdir -p deploy-repo/service/eu-regulations-mcp
+          # Write the docker config to a temp file to avoid shell quoting issues with base64 padding
+          printf 'dockerConfigJson: "%s"\n' "${{ secrets.GHCR_DOCKER_CONFIG }}" > /tmp/private-values.yaml
+          helm template eu-regulations-mcp chart/ \
+            --set image.tag=${{ steps.tag.outputs.tag }} \
+            --set private=true \
+            -f /tmp/private-values.yaml \
+            --namespace ansvar \
+            > deploy-repo/service/eu-regulations-mcp/deploy.yaml
+          rm /tmp/private-values.yaml
+
+      - name: Commit and push
+        env:
+          CI_COMMIT_MESSAGE: "chore: update eu-regulations-mcp to ${{ steps.tag.outputs.tag }}"
+        run: |
+          cd deploy-repo
+          git config user.name "Continuous Integration"
+          git config user.email "ci@ansvar.eu"
+          git add service/eu-regulations-mcp/deploy.yaml
+          git diff --staged --quiet || git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push
+
+      - name: Send Slack notification
+        if: always()
+        uses: slackapi/slack-github-action@v1.26.0
+        with:
+          payload: |
+            {"text": "eu-regulations-mcp deployed ${{ steps.tag.outputs.tag }} — ${{ job.status }}"}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
