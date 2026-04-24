@@ -189,4 +189,17 @@ describe('normalizeArticleNumber', () => {
   it('leaves non-annex non-numeric input alone (trimmed)', () => {
     expect(normalizeArticleNumber('  7b  ')).toBe('7b');
   });
+
+  it('strips "Article" prefix in all common forms', () => {
+    expect(normalizeArticleNumber('Article 5')).toBe('5');
+    expect(normalizeArticleNumber('article 5')).toBe('5');
+    expect(normalizeArticleNumber('Art. 5')).toBe('5');
+    expect(normalizeArticleNumber('Art 5')).toBe('5');
+    expect(normalizeArticleNumber('ARTICLE 17')).toBe('17');
+  });
+
+  it('preserves compound article references after stripping prefix', () => {
+    expect(normalizeArticleNumber('Article 5(1)(a)')).toBe('5(1)(a)');
+    expect(normalizeArticleNumber('Art. 5a')).toBe('5a');
+  });
 });

@@ -39,6 +39,24 @@ function buildPostgresQuery(query: string): string {
   }
 }
 
+async function expandRegulationFamily(
+  db: DatabaseAdapter,
+  regulations: string[],
+): Promise<{ expanded: string[]; cores: Set<string> }> {
+  const cores = new Set(regulations);
+  const expanded = new Set(regulations);
+
+  const prefixClauses = regulations.map(() => 'id LIKE ? || \'_%\'').join(' OR ');
+  const result = await db.query(
+    `SELECT id FROM regulations WHERE ${prefixClauses}`,
+    regulations,
+  );
+  for (const row of result.rows as Array<{ id: string }>) {
+    expanded.add(row.id);
+  }
+  return { expanded: [...expanded], cores };
+}
+
 async function searchSqlite(
   db: DatabaseAdapter,
   query: string,
@@ -53,10 +71,13 @@ async function searchSqlite(
   const params: (string | number)[] = [escapedQuery];
 
   let regulationFilter = '';
+  let coreRegulations: Set<string> | null = null;
   if (regulations && regulations.length > 0) {
-    const placeholders = regulations.map(() => '?').join(', ');
+    const { expanded, cores } = await expandRegulationFamily(db, regulations);
+    coreRegulations = cores;
+    const placeholders = expanded.map(() => '?').join(', ');
     regulationFilter = ` AND regulation IN (${placeholders})`;
-    params.push(...regulations);
+    params.push(...expanded);
   }
 
   const articlesQuery = `
@@ -122,11 +143,15 @@ async function searchSqlite(
     type: 'article' | 'recital';
   }>;
 
+  const CORE_BOOST = 1.25;
   const combined = [...articleRows, ...recitalRows]
-    .map(row => ({
-      ...row,
-      relevance: Math.abs(row.relevance),
-    }))
+    .map(row => {
+      let relevance = Math.abs(row.relevance);
+      if (coreRegulations && coreRegulations.has(row.regulation)) {
+        relevance *= CORE_BOOST;
+      }
+      return { ...row, relevance };
+    })
     .sort((a, b) => {
       if (Math.abs(a.relevance - b.relevance) > 0.01) {
         return b.relevance - a.relevance;
@@ -154,10 +179,13 @@ async function searchPostgres(
   const params: (string | number)[] = [postgresQuery];
 
   let regulationFilter = '';
+  let coreRegulations: Set<string> | null = null;
   if (regulations && regulations.length > 0) {
-    const placeholders = regulations.map((_, i) => `$${i + 2}`).join(', ');
+    const { expanded, cores } = await expandRegulationFamily(db, regulations);
+    coreRegulations = cores;
+    const placeholders = expanded.map((_, i) => `$${i + 2}`).join(', ');
     regulationFilter = ` AND a.regulation IN (${placeholders})`;
-    params.push(...regulations);
+    params.push(...expanded);
   }
 
   const articlesQuery = `
@@ -226,11 +254,15 @@ async function searchPostgres(
     type: 'article' | 'recital';
   }>;
 
+  const CORE_BOOST = 1.25;
   const combined = [...articleRows, ...recitalRows]
-    .map(row => ({
-      ...row,
-      relevance: Math.abs(row.relevance),
-    }))
+    .map(row => {
+      let relevance = Math.abs(row.relevance);
+      if (coreRegulations && coreRegulations.has(row.regulation)) {
+        relevance *= CORE_BOOST;
+      }
+      return { ...row, relevance };
+    })
     .sort((a, b) => {
       if (Math.abs(a.relevance - b.relevance) > 0.01) {
         return b.relevance - a.relevance;

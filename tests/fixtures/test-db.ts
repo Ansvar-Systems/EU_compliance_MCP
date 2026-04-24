@@ -200,7 +200,9 @@ const SAMPLE_DATA = `
 INSERT INTO regulations (id, full_name, celex_id, effective_date) VALUES
   ('GDPR', 'General Data Protection Regulation', '32016R0679', '2018-05-25'),
   ('NIS2', 'Network and Information Security Directive 2', '32022L2555', '2024-10-17'),
-  ('DORA', 'Digital Operational Resilience Act', '32022R2554', '2025-01-17');
+  ('DORA', 'Digital Operational Resilience Act', '32022R2554', '2025-01-17'),
+  ('DORA_RTS_ICT_RISK', 'Commission Delegated Regulation (EU) 2024/1774 - ICT Risk Management', '32024R1774', '2025-01-17'),
+  ('DORA_RTS_TLPT', 'Commission Delegated Regulation (EU) 2025/1190 - Threat-Led Penetration Testing', '32025R1190', '2025-07-14');
 
 -- Sample GDPR articles
 INSERT INTO articles (regulation, article_number, title, text, chapter) VALUES
@@ -223,7 +225,10 @@ INSERT INTO articles (regulation, article_number, title, text, chapter) VALUES
   ('DORA', '1', 'Subject matter', 'This Regulation lays down uniform requirements concerning the security of network and information systems supporting the business processes of financial entities.', 'I'),
   ('DORA', '17', 'ICT-related incident management process', 'Financial entities shall define, establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents. Financial entities shall record all ICT-related incidents and significant cyber threats.', 'III'),
   ('DORA', '19', 'Reporting of major ICT-related incidents', 'Financial entities shall report major ICT-related incidents to the relevant competent authority. The initial notification shall be made without undue delay and in any event within 4 hours from the moment the financial entity classifies the incident as major.', 'III'),
-  ('DORA', '28', 'General principles', 'Financial entities shall manage ICT third-party risk as an integral component of ICT risk within their ICT risk management framework. Financial entities shall adopt and regularly review a strategy on ICT third-party risk.', 'V');
+  ('DORA', '28', 'General principles', 'Financial entities shall manage ICT third-party risk as an integral component of ICT risk within their ICT risk management framework. Financial entities shall adopt and regularly review a strategy on ICT third-party risk.', 'V'),
+  ('DORA_RTS_ICT_RISK', '1', 'ICT risk management tools', 'Financial entities shall use ICT risk management tools, methods, processes and policies that are comprehensive, proportionate and up to date. The ICT risk management framework shall include strategies, policies, procedures, ICT protocols and tools necessary to protect ICT assets adequately.', 'I'),
+  ('DORA_RTS_ICT_RISK', '2', 'ICT asset management', 'Financial entities shall identify, classify and document all ICT assets. ICT risk management processes and procedures shall be proportionate to the size and overall risk profile of the financial entity.', 'I'),
+  ('DORA_RTS_TLPT', '1', 'Scope of TLPT', 'This Regulation specifies threat-led penetration testing requirements for financial entities. TLPT shall be carried out in accordance with the TIBER-EU framework or equivalent national frameworks.', 'I');
 
 -- Sample recitals
 INSERT INTO recitals (regulation, recital_number, text, related_articles) VALUES
@@ -270,7 +275,9 @@ INSERT INTO applicability_rules (regulation, sector, subsector, applies, confide
 INSERT INTO source_registry (regulation, celex_id, eur_lex_version, last_fetched, articles_expected, articles_parsed, quality_status) VALUES
   ('GDPR', '32016R0679', '2016-05-04', '2026-02-14T06:00:00Z', 6, 6, 'complete'),
   ('NIS2', '32022L2555', '2022-12-27', '2026-02-14T06:00:00Z', 4, 4, 'complete'),
-  ('DORA', '32022R2554', '2022-12-27', '2026-02-14T06:00:00Z', 4, 4, 'complete');
+  ('DORA', '32022R2554', '2022-12-27', '2026-02-14T06:00:00Z', 4, 4, 'complete'),
+  ('DORA_RTS_ICT_RISK', '32024R1774', '2024-06-25', '2026-02-14T06:00:00Z', 2, 2, 'complete'),
+  ('DORA_RTS_TLPT', '32025R1190', '2025-07-14', '2026-02-14T06:00:00Z', 1, 1, 'complete');
 
 -- Sample article version history (premium tier)
 INSERT INTO article_versions (article_id, body_text, effective_date, superseded_date, scraped_at, change_summary, diff_from_previous, source_url) VALUES
