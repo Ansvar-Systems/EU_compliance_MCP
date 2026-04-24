@@ -43,7 +43,7 @@ jobs:
           mkdir -p deploy-repo/service/eu-regulations-mcp
           helm template eu-regulations-mcp chart/ \
             --set image.tag=${{ steps.tag.outputs.tag }} \
-            --namespace ansvar \
+            --namespace eu-compliance-mcp \
             > deploy-repo/service/eu-regulations-mcp/deploy.yaml
 
       - name: Render Helm chart (private)
@@ -56,7 +56,7 @@ jobs:
             --set image.tag=${{ steps.tag.outputs.tag }} \
             --set private=true \
             -f /tmp/private-values.yaml \
-            --namespace ansvar \
+            --namespace eu-compliance-mcp \
             > deploy-repo/service/eu-regulations-mcp/deploy.yaml
           rm /tmp/private-values.yaml
 
