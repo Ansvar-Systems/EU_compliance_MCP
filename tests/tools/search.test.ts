@@ -113,6 +113,41 @@ describe('searchRegulations', () => {
     expect(results.every(r => r.type === 'article' || r.type === 'recital')).toBe(true);
   });
 
+  it('expands regulation family when filtering (DORA includes RTS variants)', async () => {
+    const results = await searchRegulations(db, {
+      query: 'ICT risk management',
+      regulations: ['DORA'],
+      limit: 20,
+    });
+
+    const regs = new Set(results.map(r => r.regulation));
+    expect(regs.has('DORA')).toBe(true);
+    expect(regs.has('DORA_RTS_ICT_RISK')).toBe(true);
+  });
+
+  it('boosts core regulation over variants at similar relevance', async () => {
+    const results = await searchRegulations(db, {
+      query: 'ICT risk management',
+      regulations: ['DORA'],
+      limit: 20,
+    });
+
+    const coreIdx = results.findIndex(r => r.regulation === 'DORA');
+    const variantIdx = results.findIndex(r => r.regulation === 'DORA_RTS_ICT_RISK');
+    if (coreIdx >= 0 && variantIdx >= 0) {
+      expect(coreIdx).toBeLessThan(variantIdx);
+    }
+  });
+
+  it('does not expand when regulation has no variants', async () => {
+    const results = await searchRegulations(db, {
+      query: 'personal data',
+      regulations: ['GDPR'],
+    });
+
+    expect(results.every(r => r.regulation === 'GDPR')).toBe(true);
+  });
+
   // ── Missing / wrong-type query guard (2026-04-20 audit) ──────────────
   // The MCP schema marks query required, but the MCP SDK doesn't validate
   // before handing args to the handler. The existing empty-string guard

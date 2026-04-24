@@ -35,8 +35,8 @@ describe('getAbout', () => {
   it('returns correct dataset counts from DB', async () => {
     const result = await getAbout(db, testContext);
 
-    expect(result.dataset.counts.regulations).toBe(3);
-    expect(result.dataset.counts.articles).toBe(14);
+    expect(result.dataset.counts.regulations).toBe(5);
+    expect(result.dataset.counts.articles).toBe(17);
     expect(result.dataset.counts.recitals).toBe(4);
     expect(result.dataset.counts.definitions).toBe(4);
     expect(result.dataset.counts.control_mappings).toBe(10);
@@ -54,7 +54,7 @@ describe('getAbout', () => {
   it('returns freshness info from source_registry', async () => {
     const result = await getAbout(db, testContext);
 
-    expect(result.dataset.freshness.source_registry_entries).toBe(3);
+    expect(result.dataset.freshness.source_registry_entries).toBe(5);
     expect(result.dataset.freshness.last_checked).toBe('2026-02-14T06:00:00Z');
     expect(result.dataset.freshness.check_method).toContain('EUR-Lex');
   });

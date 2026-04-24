@@ -25,6 +25,12 @@ export function normalizeArticleNumber(input: string): string {
     return `Annex ${annexMatch[1].toUpperCase()}`;
   }
 
+  // Strip "Article"/"Art."/"Art" prefix — DB stores bare numbers.
+  const articleMatch = collapsed.match(/^art(?:icle)?\.?\s+(.+)$/i);
+  if (articleMatch) {
+    return articleMatch[1];
+  }
+
   return collapsed;
 }
 
