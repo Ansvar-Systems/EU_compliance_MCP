@@ -41,7 +41,7 @@ describe('Security & Input Validation', () => {
         // Verify tables still exist and data intact (test DB has 14 articles, 4 recitals)
         const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
         const articlesCount = articlesResult.rows[0] as { count: number };
-        expect(articlesCount.count).toBe(14); // Test DB sample data
+        expect(articlesCount.count).toBe(17); // Test DB sample data
 
         const recitalsResult = await db.query('SELECT COUNT(*) as count FROM recitals');
         const recitalsCount = recitalsResult.rows[0] as { count: number };
@@ -65,7 +65,7 @@ describe('Security & Input Validation', () => {
         // Verify data integrity (test DB has 14 articles)
         const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
         const articlesCount = articlesResult.rows[0] as { count: number };
-        expect(articlesCount.count).toBe(14);
+        expect(articlesCount.count).toBe(17);
       }
     });
 
@@ -263,7 +263,7 @@ describe('Security & Input Validation', () => {
       // Verify table still exists
       const countResult = await db.query('SELECT COUNT(*) as count FROM articles');
       const count = countResult.rows[0] as { count: number };
-      expect(count.count).toBe(14);
+      expect(count.count).toBe(17);
     });
 
     it('prepared statements prevent injection', async () => {
@@ -277,7 +277,7 @@ describe('Security & Input Validation', () => {
       // Verify articles table still exists (test DB has 14 articles)
       const articlesResult = await db.query('SELECT COUNT(*) as count FROM articles');
         const articlesCount = articlesResult.rows[0] as { count: number };
-      expect(articlesCount.count).toBe(14);
+      expect(articlesCount.count).toBe(17);
     });
   });
 

@@ -17,7 +17,7 @@ describe('listRegulations', () => {
   it('lists all available regulations', async () => {
     const result = await listRegulations(db, {});
 
-    expect(result.regulations).toHaveLength(3);
+    expect(result.regulations).toHaveLength(5);
     expect(result.regulations.map(r => r.id)).toContain('GDPR');
     expect(result.regulations.map(r => r.id)).toContain('NIS2');
     expect(result.regulations.map(r => r.id)).toContain('DORA');
