@@ -22,6 +22,7 @@ import { readFileSync, statSync } from 'fs';
 
 import { registerTools } from './tools/registry.js';
 import { createSqliteAdapter } from './database/sqlite-adapter.js';
+import { ensureReadableDb } from './database/ensure-readable-db.js';
 import type { DatabaseAdapter } from './database/types.js';
 import type { AboutContext } from './tools/about.js';
 
@@ -43,7 +44,8 @@ let db: DatabaseAdapter;
 function getDatabase(): DatabaseAdapter {
   if (!db) {
     try {
-      const sqliteDb = new Database(DB_PATH, { readonly: true });
+      const readablePath = ensureReadableDb(DB_PATH);
+      const sqliteDb = new Database(readablePath, { readonly: true });
       db = createSqliteAdapter(sqliteDb);
     } catch (error) {
       throw new Error(`Failed to open database at ${DB_PATH}: ${error}`);
