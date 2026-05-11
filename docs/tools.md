@@ -1,7 +1,7 @@
 # Available Tools
 
 ## `search_regulations`
-Full-text search across all regulations. Returns **smart snippets** (32 tokens each, safe for context).
+Full-text search across all regulations. Returns **smart snippets** (64 tokens each, safe for context).
 
 ```
 "Search for incident reporting requirements across all regulations"

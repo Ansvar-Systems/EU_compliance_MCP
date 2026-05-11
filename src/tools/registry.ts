@@ -78,7 +78,7 @@ function annotateTools(tools: ToolDefinition[]): ToolDefinition[] {
 export const TOOLS: ToolDefinition[] = [
   {
     name: 'search_regulations',
-    description: 'Search across all EU regulations for articles matching a query. Returns relevant articles with snippets highlighting matches. Token-efficient: returns 32-token snippets per match (safe for context).',
+    description: 'Search across all EU regulations for articles matching a query. Returns relevant articles with snippets highlighting matches. Token-efficient: returns 64-token snippets per match (safe for context).',
     inputSchema: {
       type: 'object',
       properties: {
