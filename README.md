@@ -154,7 +154,7 @@ Once connected, just ask naturally:
 - **Note:** HTML-to-text conversion normalizes whitespace/formatting, but preserves content
 
 **Smart Context Management:**
-- Search returns **32-token snippets** with highlighted matches (safe for context)
+- Search returns **64-token snippets** with highlighted matches (safe for context)
 - Article retrieval warns about token usage (some articles = 70k tokens)
 - Cross-references help navigate without loading everything at once
 
