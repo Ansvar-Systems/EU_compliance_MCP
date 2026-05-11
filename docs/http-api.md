@@ -124,7 +124,7 @@ Execute a tool by name with parameters.
 
 | Tool | Description |
 |------|-------------|
-| `search_regulations` | Search across all regulations (FTS5, 32-token snippets) |
+| `search_regulations` | Search across all regulations (FTS5, 64-token snippets) |
 | `get_article` | Get full text of specific article (500-70K tokens, truncated at 50K chars) |
 | `get_recital` | Get full text of specific recital (context for articles) |
 | `list_regulations` | List all regulations or get structure of one regulation |
