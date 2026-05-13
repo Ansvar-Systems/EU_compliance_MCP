@@ -25,6 +25,7 @@ import { createSqliteAdapter } from './database/sqlite-adapter.js';
 import { ensureReadableDb } from './database/ensure-readable-db.js';
 import type { DatabaseAdapter } from './database/types.js';
 import type { AboutContext } from './tools/about.js';
+import { checkHealth, healthHttpStatus } from './health.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -106,10 +107,12 @@ async function main() {
   const httpServer = createServer(async (req, res) => {
     const url = new URL(req.url || '/', `http://localhost:${PORT}`);
 
-    // Health check endpoint
+    // Health check endpoint — runs SELECT 1 against the live DB so the
+    // healthcheck fails fast on SQL-layer regressions, not just TCP liveness.
     if (url.pathname === '/health') {
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ status: 'ok', server: 'eu-regulations-mcp' }));
+      const result = await checkHealth(getDatabase);
+      res.writeHead(healthHttpStatus(result), { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(result));
       return;
     }
 
