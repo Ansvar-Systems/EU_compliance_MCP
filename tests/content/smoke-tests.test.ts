@@ -193,7 +193,7 @@ describe('Content Smoke Tests (Critical Articles)', () => {
       .prepare('SELECT COUNT(*) as count FROM regulations')
       .get() as { count: number };
 
-    expect(regulationCount.count).toBe(97);
+    expect(regulationCount.count).toBe(98);
   });
 
   it('validates sampled articles represent diverse characteristics', () => {
@@ -201,8 +201,9 @@ describe('Content Smoke Tests (Critical Articles)', () => {
       .prepare('SELECT COUNT(*) as count FROM articles')
       .get() as { count: number };
 
-    // Production DB should have 4,054 articles (after financial regulations expansion)
+    // Production DB should have 5,008 articles after Charter ingestion
+    // (4,954 EU regulation articles + 54 Charter articles).
     expect(articleCount.count).toBeGreaterThan(3500);
-    expect(articleCount.count).toBeLessThan(5000);
+    expect(articleCount.count).toBeLessThan(6000);
   });
 });
