@@ -233,6 +233,50 @@ describe('Content Smoke Tests (Critical Articles)', () => {
       expect(doc!.related_regulation).toBe('GDPR');
       expect(doc!.document_reference).toBe('WP248 rev.01');
     });
+
+    it('WP251 rev.01 — Article 22 general prohibition (IV.intro)', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.intro');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('general prohibition');
+      expect(sec!.content).toContain('Article 22(1)');
+    });
+
+    it('WP251 rev.01 — Solely automated test (IV.A) rejects token human review', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.A');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('based solely');
+      expect(sec!.content).toContain('meaningful');
+      expect(sec!.content).toContain('authority and competence');
+    });
+
+    it('WP251 rev.01 — Article 22(2) exceptions list (IV.C)', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.C');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('performance of or entering into a contract');
+      expect(sec!.content).toContain('Union or Member State law');
+      expect(sec!.content).toContain('explicit consent');
+    });
+
+    it('WP251 rev.01 — Article 22(3) safeguards (IV.F)', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.F');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('human intervention');
+      expect(sec!.content).toContain('contest the decision');
+      expect(sec!.content).toContain('explanation of the decision');
+    });
+
+    it('WP251 rev.01 — document is related to GDPR', () => {
+      const doc = db
+        .prepare(
+          'SELECT related_regulation, document_reference FROM guidance_documents WHERE id = ?',
+        )
+        .get('EDPB_WP251_REV01') as
+        | { related_regulation: string; document_reference: string }
+        | undefined;
+      expect(doc).toBeDefined();
+      expect(doc!.related_regulation).toBe('GDPR');
+      expect(doc!.document_reference).toBe('WP251 rev.01');
+    });
   });
 
   // Meta-test: Ensure we're actually testing against production DB
