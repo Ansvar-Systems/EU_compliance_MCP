@@ -1,0 +1,85 @@
+{
+  "id": "EDPB_WP248_REV01",
+  "title": "Guidelines on Data Protection Impact Assessment (DPIA) and determining whether processing is \"likely to result in a high risk\" for the purposes of Regulation 2016/679",
+  "issuing_body": "Article 29 Working Party (endorsed by EDPB on 25 May 2018)",
+  "document_reference": "WP248 rev.01",
+  "date_published": "2017-10-04",
+  "related_regulation": "GDPR",
+  "url": "https://ec.europa.eu/newsroom/article29/items/611236",
+  "pdf_url": "https://ec.europa.eu/newsroom/just/document.cfm?doc_id=47711",
+  "status": "published",
+  "metadata": {
+    "endorsed_by_edpb": "2018-05-25",
+    "scope": "Foundational EU-level guidance on when GDPR Art. 35 DPIA is mandatory and on the 9-criteria framework used to assess 'likely to result in a high risk'. Cited by every DPIA workflow in this MCP and routinely referenced by national DPAs when constructing their Art. 35(4) mandatory-list determinations.",
+    "license": "EUR-Lex-Decision-2011-833",
+    "section_naming": "Section numbers follow the document's own hierarchical numbering. III refers to chapter III ('Application of the Guidelines'); III.B is subsection B of that chapter ('When does processing operations \"likely to result in a high risk\"?')."
+  },
+  "sections": [
+    {
+      "section_number": "III.B.intro",
+      "title": "The nine criteria framework — introduction",
+      "parent_section": null,
+      "content": "As the words \"in particular\" in the introductory sentence of Article 35(3) GDPR indicate, this is meant as a non-exhaustive list. There may be \"high risk\" processing operations that are not captured by this list, but yet pose similarly high risks. Those processing operations should also be subject to DPIAs. For this reason, the criteria developed below sometimes go beyond a simple explanation of what should be understood by the three examples given in Article 35(3) GDPR.\n\nIn order to provide a more concrete set of processing operations that require a DPIA due to their inherent high risk, taking into account the particular elements of Articles 35(1) and 35(3)(a) to (c), the list to be adopted at the national level under article 35(4) and recitals 71, 75 and 91, and other GDPR references to \"likely to result in a high risk\" processing operations, the following nine criteria should be considered."
+    },
+    {
+      "section_number": "III.B.1",
+      "title": "Criterion 1 — Evaluation or scoring",
+      "parent_section": "III.B.intro",
+      "content": "Evaluation or scoring, including profiling and predicting, especially from \"aspects concerning the data subject's performance at work, economic situation, health, personal preferences or interests, reliability or behavior, location or movements\" (recitals 71 and 91). Examples of this could include a financial institution that screens its customers against a credit reference database or against an anti-money laundering and counter-terrorist financing (AML/CTF) or fraud database, or a biotechnology company offering genetic tests directly to consumers in order to assess and predict the disease/health risks, or a company building behavioural or marketing profiles based on usage or navigation on its website."
+    },
+    {
+      "section_number": "III.B.2",
+      "title": "Criterion 2 — Automated-decision making with legal or similar significant effect",
+      "parent_section": "III.B.intro",
+      "content": "Automated-decision making with legal or similar significant effect: processing that aims at taking decisions on data subjects producing \"legal effects concerning the natural person\" or which \"similarly significantly affects the natural person\" (Article 35(3)(a)). For example, the processing may lead to the exclusion or discrimination against individuals. Processing with little or no effect on individuals does not match this specific criterion. Further explanations on these notions will be provided in the upcoming WP29 Guidelines on Profiling."
+    },
+    {
+      "section_number": "III.B.3",
+      "title": "Criterion 3 — Systematic monitoring",
+      "parent_section": "III.B.intro",
+      "content": "Systematic monitoring: processing used to observe, monitor or control data subjects, including data collected through networks or \"a systematic monitoring of a publicly accessible area\" (Article 35(3)(c)). This type of monitoring is a criterion because the personal data may be collected in circumstances where data subjects may not be aware of who is collecting their data and how they will be used. Additionally, it may be impossible for individuals to avoid being subject to such processing in public (or publicly accessible) space(s).\n\nThe WP29 interprets \"systematic\" as meaning one or more of the following (see the WP29 Guidelines on Data Protection Officer 16/EN WP 243): occurring according to a system; pre-arranged, organised or methodical; taking place as part of a general plan for data collection; carried out as part of a strategy. The WP29 interprets \"publicly accessible area\" as being any place open to any member of the public, for example a piazza, a shopping centre, a street, a market place, a train station or a public library."
+    },
+    {
+      "section_number": "III.B.4",
+      "title": "Criterion 4 — Sensitive data or data of a highly personal nature",
+      "parent_section": "III.B.intro",
+      "content": "Sensitive data or data of a highly personal nature: this includes special categories of personal data as defined in Article 9 (for example information about individuals' political opinions), as well as personal data relating to criminal convictions or offences as defined in Article 10. An example would be a general hospital keeping patients' medical records or a private investigator keeping offenders' details. Beyond these provisions of the GDPR, some categories of data can be considered as increasing the possible risk to the rights and freedoms of individuals. These personal data are considered as sensitive (as this term is commonly understood) because they are linked to household and private activities (such as electronic communications whose confidentiality should be protected), or because they impact the exercise of a fundamental right (such as location data whose collection questions the freedom of movement) or because their violation clearly involves serious impacts in the data subject's daily life (such as financial data that might be used for payment fraud). In this regard, whether the data has already been made publicly available by the data subject or by third parties may be relevant. The fact that personal data is publicly available may be considered as a factor in the assessment if the data was expected to be further used for certain purposes. This criterion may also include data such as personal documents, emails, diaries, notes from e-readers equipped with note-taking features, and very personal information contained in life-logging applications."
+    },
+    {
+      "section_number": "III.B.5",
+      "title": "Criterion 5 — Data processed on a large scale",
+      "parent_section": "III.B.intro",
+      "content": "Data processed on a large scale: the GDPR does not define what constitutes large-scale, though recital 91 provides some guidance. In any event, the WP29 recommends that the following factors, in particular, be considered when determining whether the processing is carried out on a large scale (see the WP29 Guidelines on Data Protection Officer 16/EN WP 243):\n\na. the number of data subjects concerned, either as a specific number or as a proportion of the relevant population;\nb. the volume of data and/or the range of different data items being processed;\nc. the duration, or permanence, of the data processing activity;\nd. the geographical extent of the processing activity."
+    },
+    {
+      "section_number": "III.B.6",
+      "title": "Criterion 6 — Matching or combining datasets",
+      "parent_section": "III.B.intro",
+      "content": "Matching or combining datasets, for example originating from two or more data processing operations performed for different purposes and/or by different data controllers in a way that would exceed the reasonable expectations of the data subject (see explanation in the WP29 Opinion on Purpose limitation 13/EN WP 203, p.24)."
+    },
+    {
+      "section_number": "III.B.7",
+      "title": "Criterion 7 — Data concerning vulnerable data subjects",
+      "parent_section": "III.B.intro",
+      "content": "Data concerning vulnerable data subjects (recital 75): the processing of this type of data is a criterion because of the increased power imbalance between the data subjects and the data controller, meaning the individuals may be unable to easily consent to, or oppose, the processing of their data, or exercise their rights. Vulnerable data subjects may include children (they can be considered as not able to knowingly and thoughtfully oppose or consent to the processing of their data), employees, more vulnerable segments of the population requiring special protection (mentally ill persons, asylum seekers, or the elderly, patients, etc.), and in any case where an imbalance in the relationship between the position of the data subject and the controller can be identified."
+    },
+    {
+      "section_number": "III.B.8",
+      "title": "Criterion 8 — Innovative use of new technologies",
+      "parent_section": "III.B.intro",
+      "content": "Innovative use or applying new technological or organisational solutions, like combining use of finger print and face recognition for improved physical access control, etc. The GDPR makes it clear (Article 35(1) and recitals 89 and 91) that the use of a new technology, defined in \"accordance with the achieved state of technological knowledge\" (recital 91), can trigger the need to carry out a DPIA. This is because the use of such technology can involve novel forms of data collection and usage, possibly with a high risk to individuals' rights and freedoms. Indeed, the personal and social consequences of the deployment of a new technology may be unknown. A DPIA will help the data controller to understand and to treat such risks. For example, certain \"Internet of Things\" applications could have a significant impact on individuals' daily lives and privacy; and therefore require a DPIA."
+    },
+    {
+      "section_number": "III.B.9",
+      "title": "Criterion 9 — When processing prevents data subjects from exercising a right or using a service or a contract",
+      "parent_section": "III.B.intro",
+      "content": "When the processing in itself \"prevents data subjects from exercising a right or using a service or a contract\" (Article 22 and recital 91). This includes processing operations that aims at allowing, modifying or refusing data subjects' access to a service or entry into a contract. An example of this is where a bank screens its customers against a credit reference database in order to decide whether to offer them a loan."
+    },
+    {
+      "section_number": "III.B.rule_of_thumb",
+      "title": "Rule of thumb — how many criteria trigger a DPIA",
+      "parent_section": "III.B.intro",
+      "content": "In most cases, a data controller can consider that a processing meeting two criteria would require a DPIA to be carried out. In general, the WP29 considers that the more criteria are met by the processing, the more likely it is to present a high risk to the rights and freedoms of data subjects, and therefore to require a DPIA, regardless of the measures which the controller envisages to adopt.\n\nHowever, in some cases, a data controller can consider that a processing meeting only one of these criteria requires a DPIA."
+    }
+  ]
+}

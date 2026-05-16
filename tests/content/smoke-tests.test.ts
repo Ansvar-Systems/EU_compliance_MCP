@@ -187,6 +187,54 @@ describe('Content Smoke Tests (Critical Articles)', () => {
     });
   });
 
+  // Guidance smoke tests — ensures EDPB / WP29 guidance ingestion succeeded
+  // and the 9-criteria framework cited by every DPIA workflow is reachable.
+  describe('EDPB / WP29 Guidance', () => {
+    const getGuidanceSection = (documentId: string, sectionNumber: string) =>
+      db
+        .prepare(
+          'SELECT title, content FROM guidance_sections WHERE document_id = ? AND section_number = ?',
+        )
+        .get(documentId, sectionNumber) as
+        | { title: string; content: string }
+        | undefined;
+
+    it('WP248 rev.01 — Criterion 1 (Evaluation or scoring)', () => {
+      const sec = getGuidanceSection('EDPB_WP248_REV01', 'III.B.1');
+      expect(sec).toBeDefined();
+      expect(sec!.title).toContain('Evaluation or scoring');
+      expect(sec!.content).toContain('profiling and predicting');
+      expect(sec!.content).toContain('recitals 71 and 91');
+    });
+
+    it('WP248 rev.01 — Criterion 7 (Vulnerable data subjects, recital 75)', () => {
+      const sec = getGuidanceSection('EDPB_WP248_REV01', 'III.B.7');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('vulnerable data subjects');
+      expect(sec!.content).toContain('recital 75');
+    });
+
+    it('WP248 rev.01 — Rule of thumb (two-criteria heuristic)', () => {
+      const sec = getGuidanceSection('EDPB_WP248_REV01', 'III.B.rule_of_thumb');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('two criteria');
+      expect(sec!.content).toContain('WP29');
+    });
+
+    it('WP248 rev.01 — document is related to GDPR', () => {
+      const doc = db
+        .prepare(
+          'SELECT related_regulation, document_reference FROM guidance_documents WHERE id = ?',
+        )
+        .get('EDPB_WP248_REV01') as
+        | { related_regulation: string; document_reference: string }
+        | undefined;
+      expect(doc).toBeDefined();
+      expect(doc!.related_regulation).toBe('GDPR');
+      expect(doc!.document_reference).toBe('WP248 rev.01');
+    });
+  });
+
   // Meta-test: Ensure we're actually testing against production DB
   it('validates test is using production database with all regulations', () => {
     const regulationCount = db
