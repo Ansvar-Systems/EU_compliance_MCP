@@ -122,7 +122,8 @@ export async function getArticle(
       a.chapter,
       a.recitals,
       a.cross_references,
-      r.celex_id
+      r.celex_id,
+      r.effective_date
     FROM articles a
     LEFT JOIN regulations r ON r.id = a.regulation
     WHERE a.regulation = $1 AND a.article_number = $2
@@ -143,6 +144,7 @@ export async function getArticle(
     recitals: string | null;
     cross_references: string | null;
     celex_id: string | null;
+    effective_date: string | null;
   };
 
   // Token management: Truncate very large articles to prevent context overflow
@@ -178,6 +180,8 @@ export async function getArticle(
       'get_article',
       { regulation, article },
       buildArticleSourceUrl(row.celex_id, row.article_number),
+      undefined,
+      row.effective_date,
     ),
   };
 }
@@ -204,7 +208,8 @@ async function getArticleAsRecital(
       rc.recital_number,
       rc.text,
       rc.related_articles,
-      r.celex_id
+      r.celex_id,
+      r.effective_date
     FROM recitals rc
     LEFT JOIN regulations r ON r.id = rc.regulation
     WHERE rc.regulation = $1 AND rc.recital_number = $2
@@ -222,6 +227,7 @@ async function getArticleAsRecital(
     text: string;
     related_articles: string | null;
     celex_id: string | null;
+    effective_date: string | null;
   };
 
   const articleLabel = `Recital ${row.recital_number}`;
@@ -241,6 +247,8 @@ async function getArticleAsRecital(
       'get_article',
       { regulation, article: articleLabel },
       buildRecitalSourceUrl(row.celex_id, row.recital_number),
+      undefined,
+      row.effective_date,
     ),
   };
 }

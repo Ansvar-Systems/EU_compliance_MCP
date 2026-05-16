@@ -37,7 +37,8 @@ export async function getRecital(
       rc.recital_number,
       rc.text,
       rc.related_articles,
-      r.celex_id
+      r.celex_id,
+      r.effective_date
     FROM recitals rc
     LEFT JOIN regulations r ON r.id = rc.regulation
     WHERE rc.regulation = $1 AND rc.recital_number = $2
@@ -55,6 +56,7 @@ export async function getRecital(
     text: string;
     related_articles: string | null;
     celex_id: string | null;
+    effective_date: string | null;
   };
 
   return {
@@ -68,6 +70,8 @@ export async function getRecital(
       'get_recital',
       { regulation, recital_number: String(recital_number) },
       buildRecitalSourceUrl(row.celex_id, row.recital_number),
+      undefined,
+      row.effective_date,
     ),
   };
 }

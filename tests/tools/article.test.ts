@@ -92,6 +92,23 @@ describe('getArticle', () => {
     );
   });
 
+  it('exposes the regulation effective_date on _citation', async () => {
+    // Closes issue #35 (2026-04-18 DPIA audit): get_provision returned an
+    // empty effective_date alongside an empty source_url. source_url was
+    // fixed in PR #36; effective_date was never emitted by the citation
+    // envelope at all. The regulations table already carries this column
+    // (seeded from data/seed/*.json), so the fix is a SELECT + plumb-through
+    // — no re-ingest. Asserted against GDPR (a regulation) and NIS2 (a
+    // directive) to confirm both paths emit it.
+    const gdpr = await getArticle(db, { regulation: 'GDPR', article: '32' });
+    expect(gdpr).not.toBeNull();
+    expect(gdpr!._citation?.effective_date).toBe('2018-05-25');
+
+    const nis2 = await getArticle(db, { regulation: 'NIS2', article: '23' });
+    expect(nis2).not.toBeNull();
+    expect(nis2!._citation?.effective_date).toBe('2024-10-17');
+  });
+
   // ── Missing / wrong-type arg guards (2026-04-20 audit) ────────────────
   // normalizeArticleNumber(input.article) calls input.replace(); pre-fix
   // this crashed with "input.replace is not a function" when article was
