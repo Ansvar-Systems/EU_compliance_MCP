@@ -357,11 +357,11 @@ export const TOOLS: ToolDefinition[] = [
       return getRegulationGuide(input);
     },
   },
-  // --- Premium tools: version tracking ---
+  // --- Version tracking tools ---
   {
     name: 'get_article_history',
     description:
-      'Get the full version timeline for a specific article, showing all amendments with dates and change summaries. Premium feature — requires Ansvar Intelligence Portal.',
+      'Get the full version timeline for a specific article, showing all amendments with dates and change summaries.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -384,7 +384,7 @@ export const TOOLS: ToolDefinition[] = [
   {
     name: 'diff_article',
     description:
-      'Show what changed in a specific article between two dates, including a unified diff and AI-generated change summary. Premium feature — requires Ansvar Intelligence Portal.',
+      'Show what changed in a specific article between two dates, including a unified diff and AI-generated change summary.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -415,7 +415,7 @@ export const TOOLS: ToolDefinition[] = [
   {
     name: 'get_recent_changes',
     description:
-      'List all articles that changed since a given date, with change summaries. Optionally filter to a specific regulation. Premium feature — requires Ansvar Intelligence Portal.',
+      'List all articles that changed since a given date, with change summaries. Optionally filter to a specific regulation.',
     inputSchema: {
       type: 'object',
       properties: {
