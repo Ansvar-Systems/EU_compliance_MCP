@@ -1,8 +1,54 @@
 # EU Regulations MCP Server
 
+<!-- ANSVAR-CTA-BEGIN -->
+> ### ▶ Try this MCP instantly via Ansvar Gateway
+> **50 free queries/day · no card required · OAuth signup at [ansvar.eu/gateway](https://ansvar.eu/gateway)**
+>
+> One endpoint, one OAuth signup, access from any MCP-compatible client.
+
+### Connect
+
+**Claude Code** (one line):
+
+```bash
+claude mcp add ansvar --transport http https://gateway.ansvar.eu/mcp
+```
+
+**Claude Desktop / Cursor** — add to `claude_desktop_config.json` (or `mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "ansvar": {
+      "type": "url",
+      "url": "https://gateway.ansvar.eu/mcp"
+    }
+  }
+}
+```
+
+**Claude.ai** — Settings → Connectors → Add custom connector → paste `https://gateway.ansvar.eu/mcp`
+
+First request opens an OAuth flow at [ansvar.eu/gateway](https://ansvar.eu/gateway). After signup, your client is bound to your account; tier (free / premium / team / company) determines fan-out, quota, and which downstream MCPs are reachable.
+
+---
+
+## Self-host this MCP
+
+You can also clone this repo and build the corpus yourself. The schema,
+fetcher, and tool implementations all live here. What is not in the repo is
+the pre-built database — TDM and standards-licensing constraints on the
+upstream sources mean we host the corpus on Ansvar infrastructure rather
+than redistribute it as a public artifact.
+
+Build your own: run this repo's ingestion script (entry-point varies per
+repo — typically `scripts/ingest.sh`, `npm run ingest`, or `make ingest`;
+check the repo root).
+<!-- ANSVAR-CTA-END -->
+
+
 MCP server providing structured access to full-text EU regulations via Claude, Cursor, and other MCP-compatible clients.
 
-[![npm version](https://badge.fury.io/js/@ansvar%2Feu-regulations-mcp.svg)](https://www.npmjs.com/package/@ansvar/eu-regulations-mcp)
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/EU_compliance_MCP?style=social)](https://github.com/Ansvar-Systems/EU_compliance_MCP)
@@ -31,82 +77,6 @@ EU compliance is scattered across EUR-Lex PDFs, official journals, and regulator
 This MCP server makes EU regulations **searchable, cross-referenceable, and AI-readable**.
 
 ---
-
-## Quick Start
-
-### Use Remotely (No Install Needed)
-
-> Connect directly to the hosted version — zero dependencies, nothing to install.
-
-**Endpoint:** `https://mcp.ansvar.eu/eu-regulations/mcp`
-
-| Client | How to Connect |
-|--------|---------------|
-| **Claude.ai** | Settings > Connectors > Add Integration > paste URL |
-| **Claude Code** | `claude mcp add eu-regulations --transport http https://mcp.ansvar.eu/eu-regulations/mcp` |
-| **Claude Desktop** | Add to config (see below) |
-| **GitHub Copilot** | Add to VS Code settings (see below) |
-
-**Claude Desktop** — add to `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "eu-regulations": {
-      "type": "url",
-      "url": "https://mcp.ansvar.eu/eu-regulations/mcp"
-    }
-  }
-}
-```
-
-**GitHub Copilot** — add to VS Code `settings.json`:
-
-```json
-{
-  "github.copilot.chat.mcp.servers": {
-    "eu-regulations": {
-      "type": "http",
-      "url": "https://mcp.ansvar.eu/eu-regulations/mcp"
-    }
-  }
-}
-```
-
-### Use Locally (npm)
-
-```bash
-npx @ansvar/eu-regulations-mcp
-```
-
-**Claude Desktop** — add to `claude_desktop_config.json`:
-
-**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "eu-regulations": {
-      "command": "npx",
-      "args": ["-y", "@ansvar/eu-regulations-mcp"]
-    }
-  }
-}
-```
-
-**Cursor / VS Code:**
-
-```json
-{
-  "mcp.servers": {
-    "eu-regulations": {
-      "command": "npx",
-      "args": ["-y", "@ansvar/eu-regulations-mcp"]
-    }
-  }
-}
-```
 
 ## Example Queries
 
@@ -238,82 +208,9 @@ If you deploy a remote authenticated endpoint, use OAuth 2.0 over TLS with certi
 
 ---
 
-## Related Projects: Complete Compliance Suite
+## More Ansvar MCPs
 
-This server is part of **Ansvar's Compliance Suite** - three MCP servers that work together for end-to-end compliance coverage:
-
-### 🇪🇺 EU Regulations MCP (This Project)
-**Query 61 EU regulations directly from Claude**
-- GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 41 more
-- Full regulatory text with article-level search
-- Cross-regulation reference and comparison
-- **Install:** `npx @ansvar/eu-regulations-mcp`
-
-### 🇺🇸 [US Regulations MCP](https://github.com/Ansvar-Systems/US_Compliance_MCP)
-**Query US federal and state compliance laws directly from Claude**
-- HIPAA, CCPA, SOX, GLBA, FERPA, COPPA, FDA 21 CFR Part 11, and 8 more
-- Federal and state privacy law comparison
-- Breach notification timeline mapping
-- **Install:** `npm install @ansvar/us-regulations-mcp`
-
-### 🔐 [Security Controls MCP](https://github.com/Ansvar-Systems/security-controls-mcp)
-**Query 1,451 security controls across 28 frameworks**
-- ISO 27001, NIST CSF, DORA, PCI DSS, SOC 2, CMMC, FedRAMP, and 21 more
-- Bidirectional framework mapping and gap analysis
-- Import your purchased standards for official text
-- **Install:** `pipx install security-controls-mcp`
-
-### How They Work Together
-
-**Regulations → Controls Implementation Workflow:**
-
-```
-1. "What are DORA's ICT risk management requirements?"
-   → EU Regulations MCP returns Article 6 full text
-
-2. "What security controls satisfy DORA Article 6?"
-   → Security Controls MCP maps to ISO 27001, NIST CSF, and SCF controls
-
-3. "Show me ISO 27001 A.8.1 implementation details"
-   → Security Controls MCP returns control requirements and framework mappings
-```
-
-**Complete compliance in one chat:**
-- **EU/US Regulations MCPs** tell you WHAT compliance requirements you must meet
-- **Security Controls MCP** tells you HOW to implement controls that satisfy those requirements
-
-### Specialized: OT/ICS Security
-
-### 🏭 [OT Security MCP](https://github.com/Ansvar-Systems/ot-security-mcp)
-**Query IEC 62443, NIST 800-82/53, and MITRE ATT&CK for ICS**
-- Specialized for OT/ICS environments (manufacturing, energy, critical infrastructure)
-- Security levels, Purdue Model, zone/conduit architecture
-- MITRE ATT&CK for ICS threat intelligence
-- **Install:** `npx @ansvar/ot-security-mcp`
-- **Use case:** NIS2-compliant OT operators, industrial manufacturers, critical infrastructure
-
-### Specialized: Automotive Cybersecurity
-
-### 🚗 [Automotive Cybersecurity MCP](https://github.com/Ansvar-Systems/Automotive-MCP)
-**Query UNECE R155/R156 and ISO 21434**
-- Complete R155/R156 Revision 2 with all articles and annexes
-- ISO 21434 clause guidance and work products
-- R155 ↔ ISO 21434 cross-references
-- **Install:** `npx @ansvar/automotive-cybersecurity-mcp`
-- **Use case:** OEMs, Tier 1/2 suppliers, type approval preparation
-
-### Specialized: Sanctions Screening
-
-### 🚨 [Sanctions MCP](https://github.com/Ansvar-Systems/Sanctions-MCP)
-**Offline-capable sanctions screening for third-party risk**
-- OFAC, EU, UN sanctions lists via OpenSanctions (30+ lists)
-- Fuzzy name matching with confidence scoring
-- PEP (Politically Exposed Person) checks
-- **Install:** `pip install ansvar-sanctions-mcp`
-- **Use case:** DORA Article 28 ICT third-party risk, AML/KYC compliance
-
----
-
+Full fleet at [ansvar.eu/gateway](https://ansvar.eu/gateway).
 ## About Ansvar Systems
 
 We build AI-accelerated threat modeling and compliance tools for automotive, financial services, and healthcare. This MCP server started as our internal reference tool — turns out everyone building for EU markets has the same EUR-Lex frustrations.
