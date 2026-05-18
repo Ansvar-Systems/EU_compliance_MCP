@@ -1,0 +1,150 @@
+# Skill manifest — EU compliance research, served on Bindu.
+#
+# Bindu reads this file at startup and exposes the metadata under the
+# agent's /.well-known/agent.json card. Anything you declare here is
+# what *other* agents and clients use to decide whether to call you.
+
+# Basic Metadata
+id: eu-compliance-research-v1
+name: eu-compliance-research
+version: 1.0.0
+author: bindu.builder@getbindu.com
+
+# Description shown in the agent card
+description: |
+  Verified, citation-grounded research over EU regulations, delivered
+  by a Bindu agent. Answers questions about GDPR, NIS2, DORA, the EU
+  AI Act, the Cyber Resilience Act, eIDAS, DSA / DMA, the Data Act,
+  the Medical Device Regulation, MiFID II, PSD2, and 50+ other
+  instruments — backed by the Ansvar eu-regulations-mcp server.
+
+  Every legal claim is grounded in a verbatim quote from EUR-Lex
+  with an ELI-style citation. The agent reaches the corpus through
+  19 MCP tools — search_regulations, get_article, get_recital,
+  compare_requirements, check_applicability, map_controls,
+  get_evidence_requirements, version-tracking tools, and Commission
+  guidance lookup — and returns Bindu-signed artifacts so downstream
+  agents can verify origin cryptographically.
+
+  Out of scope: national transpositions and implementing legislation
+  (use a national-law MCP), CJEU and national court decisions, and
+  any matter that requires legal advice (the agent will redirect the
+  user to qualified counsel).
+
+tags:
+  - bindu
+  - compliance
+  - eu-regulations
+  - gdpr
+  - nis2
+  - dora
+  - eu-ai-act
+  - cyber-resilience-act
+  - eidas
+  - dsa
+  - dma
+  - data-act
+  - mdr
+  - mifid2
+  - psd2
+  - eur-lex
+
+input_modes:
+  - text/plain
+
+output_modes:
+  - text/plain
+  - text/markdown
+
+examples:
+  - "What are the risk management requirements under NIS2 Article 21?"
+  - "How long do I have to report a security incident under DORA?"
+  - "Compare GDPR breach notification with NIS2 incident reporting."
+  - "Does the EU AI Act apply to my recruitment screening tool?"
+  - "What are the essential cybersecurity requirements under the Cyber Resilience Act?"
+  - "Map DORA ICT risk management to ISO 27001 controls."
+  - "What is an EU Digital Identity Wallet under eIDAS 2.0?"
+  - "What evidence do I need to demonstrate compliance with GDPR Article 32?"
+  - "Show recent amendments to MiFID II investor-protection rules."
+  - "Quote recital 27 of the EU AI Act verbatim."
+
+capabilities_detail:
+  regulation_search:
+    supported: true
+    backed_by_tool: search_regulations
+  article_retrieval:
+    supported: true
+    backed_by_tool: get_article
+  recital_retrieval:
+    supported: true
+    backed_by_tool: get_recital
+  regulation_catalogue:
+    supported: true
+    backed_by_tool: list_regulations
+  cross_regulation_comparison:
+    supported: true
+    backed_by_tool: compare_requirements
+  controls_mapping:
+    supported: true
+    backed_by_tool: map_controls
+    use_cases:
+      - Map ISO 27001 / SOC 2 controls to DORA, NIS2, or GDPR
+      - Bridge generic security frameworks to regulatory obligations
+  applicability_check:
+    supported: true
+    backed_by_tool: check_applicability
+    use_cases:
+      - Determine in-scope status against a regulation's material and
+        territorial scope
+  defined_terms:
+    supported: true
+    backed_by_tool: get_definitions
+  evidence_requirements:
+    supported: true
+    backed_by_tool: get_evidence_requirements
+  practical_guides:
+    supported: true
+    backed_by_tool: get_regulation_guide
+  versioning:
+    supported: true
+    backed_by_tools:
+      - get_article_history
+      - diff_article
+      - get_recent_changes
+  guidance_lookup:
+    supported: true
+    backed_by_tools:
+      - search_guidance
+      - get_guidance_section
+      - list_guidance
+    use_cases:
+      - EDPB guidelines, EBA / ESMA / EIOPA technical standards,
+        Commission notices, ENISA guidance
+  provenance:
+    supported: true
+    backed_by_tools:
+      - list_sources
+      - check_data_freshness
+      - about
+
+out_of_scope:
+  - National transpositions and implementing legislation (use a
+    dedicated national-law MCP)
+  - CJEU and national court decisions
+  - Legal advice (research only — agent will redirect to qualified counsel)
+  - Member-state secondary legislation not adopted via EU instrument
+
+data_sources:
+  - name: EUR-Lex
+    role: primary corpus (regulations, directives, decisions)
+    authority: Publications Office of the European Union
+  - name: European Commission
+    role: guidance documents, notices, delegated acts
+  - name: EDPB / EBA / ESMA / EIOPA / ENISA
+    role: supervisory guidelines and technical standards
+
+disclaimer: |
+  This is a research tool, NOT legal or compliance advice. Always
+  verify critical citations against EUR-Lex
+  (https://eur-lex.europa.eu) before relying on them in professional
+  compliance work.

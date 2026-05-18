@@ -31,6 +31,14 @@ claude mcp add ansvar --transport http https://gateway.ansvar.eu/mcp
 
 First request opens an OAuth flow at [ansvar.eu/gateway](https://ansvar.eu/gateway). After signup, your client is bound to your account; tier (free / premium / team / company) determines fan-out, quota, and which downstream MCPs are reachable.
 
+**Bindu agent** — wrap this MCP into a fully networked, DID-identified
+agent that speaks the A2A protocol over HTTP and signs every artifact
+it returns. See [`examples/bindu-agent/`](examples/bindu-agent/) for a
+complete walk-through, including curl probes against the running
+agent. [Bindu](https://github.com/getbindu/Bindu) is a decentralized
+agent framework that adds identity, discoverability, and verifiable
+provenance on top of plain MCP.
+
 ---
 
 ## Self-host this MCP
