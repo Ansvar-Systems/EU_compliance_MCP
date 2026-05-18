@@ -338,6 +338,96 @@ artifact if it has been tampered with in transit.
 
 ---
 
+## Try it out — verified sample requests and responses
+
+Two pairs captured from a real run against this example. Both prove
+the agent reached the MCP corpus (rather than answering from the
+model's training data): the dataset fingerprint changes every build,
+and the regulation order is dictated by the SQLite query in
+`list_regulations`.
+
+### Sample 1 — `about` (the corpus identifies itself)
+
+**Request**
+
+```bash
+MID=$(uuidgen | tr A-Z a-z); CID=$(uuidgen | tr A-Z a-z); TID=$(uuidgen | tr A-Z a-z)
+
+curl -s -X POST http://localhost:3773/ \
+  -H 'Content-Type: application/json' \
+  -d @- <<JSON
+{
+  "jsonrpc": "2.0",
+  "id": "$MID",
+  "method": "message/send",
+  "params": {
+    "configuration": { "accepted_output_modes": ["text/plain"] },
+    "message": {
+      "message_id": "$MID",
+      "context_id": "$CID",
+      "task_id":    "$TID",
+      "kind": "message",
+      "role": "user",
+      "parts": [
+        { "kind": "text",
+          "text": "Call the 'about' tool right now. Then quote me the EXACT dataset fingerprint (12 hex chars) and built timestamp it returns. Output them verbatim - no other text." }
+      ]
+    }
+  }
+}
+JSON
+```
+
+**Response** (text part of the artifact, with Bindu signature)
+
+```text
+- Dataset Fingerprint: `6e39d0bd364f`
+- Built Timestamp: `2026-05-18T21:42:12.370Z`
+
+[Bindu Ed25519 signature: 2kiYdDTgH19iegtSKbxyY8RJmmXq7JJbn7mtoe6rn752qAKEzgK9j8QaiZCq…]
+```
+
+The fingerprint (`6e39d0bd364f`) is a SHA-256 of the SQLite corpus
+computed at MCP boot and is different every build, so this answer
+can only come from a live tool call to the `about` MCP — not from
+the model's prior knowledge.
+
+### Sample 2 — `list_regulations` (corpus order is reproducible)
+
+**Request**
+
+Same envelope as above, with the `text` part replaced by:
+
+```text
+Call list_regulations with limit=3. Show me ONLY the celex_number and short_title of each result, verbatim.
+```
+
+**Response** (text part of the artifact)
+
+```text
+Here are three regulations with their `celex_number` and `short_title`:
+
+1. `32011L0061` - Alternative Investment Fund Managers Directive
+2. `32024R1689` - Artificial Intelligence Act
+3. `32023R0956` - Carbon Border Adjustment Mechanism Regulation
+```
+
+These three CELEX numbers and their order match exactly what
+`list_regulations` returns when called directly against
+`dist/index.js` — the alphabetical-by-short-title order is dictated
+by the SQLite query in the MCP, not invented by the model.
+
+### Latency
+
+On a 2024-era laptop with `openai/gpt-4o` via OpenRouter:
+
+| Request | End-to-end latency | Notes |
+| --- | --- | --- |
+| First request after agent start | ~9 seconds | Includes the node `dist/index.js` cold-start and the initial MCPTools handshake. |
+| Subsequent requests | ~3–5 seconds | The MCP connection is held open for the agent's lifetime, so only the model round-trip and a single tool call add latency. |
+
+---
+
 ## More sample queries
 
 Below are five more questions, each chosen to exercise a different
