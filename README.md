@@ -2,8 +2,7 @@
 
 MCP server providing structured access to full-text EU regulations via Claude, Cursor, and other MCP-compatible clients.
 
-[![npm version](https://badge.fury.io/js/@ansvar%2Feu-regulations-mcp.svg)](https://www.npmjs.com/package/@ansvar/eu-regulations-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/eu.ansvar/eu-regulations-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/v0/servers?search=eu.ansvar/eu-regulations-mcp)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/EU_compliance_MCP?style=social)](https://github.com/Ansvar-Systems/EU_compliance_MCP)
 [![Daily EUR-Lex Check](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/EU_compliance_MCP/actions/workflows/check-updates.yml)
@@ -32,81 +31,49 @@ This MCP server makes EU regulations **searchable, cross-referenceable, and AI-r
 
 ---
 
-## Quick Start
+<!-- ANSVAR-CTA-BEGIN -->
+> ### ▶ Try this MCP instantly via Ansvar Gateway
+> **50 free queries/day · no card required · OAuth signup at [ansvar.eu/gateway](https://ansvar.eu/gateway)**
+>
+> One endpoint, one OAuth signup, access from any MCP-compatible client.
 
-### Use Remotely (No Install Needed)
+### Connect
 
-> Connect directly to the hosted version — zero dependencies, nothing to install.
-
-**Endpoint:** `https://mcp.ansvar.eu/eu-regulations/mcp`
-
-| Client | How to Connect |
-|--------|---------------|
-| **Claude.ai** | Settings > Connectors > Add Integration > paste URL |
-| **Claude Code** | `claude mcp add eu-regulations --transport http https://mcp.ansvar.eu/eu-regulations/mcp` |
-| **Claude Desktop** | Add to config (see below) |
-| **GitHub Copilot** | Add to VS Code settings (see below) |
-
-**Claude Desktop** — add to `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "eu-regulations": {
-      "type": "url",
-      "url": "https://mcp.ansvar.eu/eu-regulations/mcp"
-    }
-  }
-}
-```
-
-**GitHub Copilot** — add to VS Code `settings.json`:
-
-```json
-{
-  "github.copilot.chat.mcp.servers": {
-    "eu-regulations": {
-      "type": "http",
-      "url": "https://mcp.ansvar.eu/eu-regulations/mcp"
-    }
-  }
-}
-```
-
-### Use Locally (npm)
+**Claude Code** (one line):
 
 ```bash
-npx @ansvar/eu-regulations-mcp
+claude mcp add ansvar --transport http https://gateway.ansvar.eu/mcp
 ```
 
-**Claude Desktop** — add to `claude_desktop_config.json`:
-
-**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+**Claude Desktop / Cursor** — add to `claude_desktop_config.json` (or `mcp.json`):
 
 ```json
 {
   "mcpServers": {
-    "eu-regulations": {
-      "command": "npx",
-      "args": ["-y", "@ansvar/eu-regulations-mcp"]
+    "ansvar": {
+      "type": "url",
+      "url": "https://gateway.ansvar.eu/mcp"
     }
   }
 }
 ```
 
-**Cursor / VS Code:**
+**Claude.ai** — Settings → Connectors → Add custom connector → paste `https://gateway.ansvar.eu/mcp`
 
-```json
-{
-  "mcp.servers": {
-    "eu-regulations": {
-      "command": "npx",
-      "args": ["-y", "@ansvar/eu-regulations-mcp"]
-    }
-  }
-}
-```
+First request opens an OAuth flow at [ansvar.eu/gateway](https://ansvar.eu/gateway). After signup, your client is bound to your account; tier (free / premium / team / company) determines fan-out, quota, and which downstream MCPs are reachable.
+
+---
+
+## Self-host this MCP
+
+You can also clone this repo and build the corpus yourself. The schema,
+fetcher, and tool implementations all live here, and EUR-Lex content
+permits redistribution under its standard reuse terms.
+
+Build your own: `pnpm install && pnpm run build:db`.
+<!-- ANSVAR-CTA-END -->
+
+## Example Queries
 
 ## Example Queries
 
@@ -247,14 +214,14 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 - GDPR, AI Act, DORA, NIS2, MiFID II, PSD2, eIDAS, MDR, and 41 more
 - Full regulatory text with article-level search
 - Cross-regulation reference and comparison
-- **Install:** `npx @ansvar/eu-regulations-mcp`
+- **Access:** via [Ansvar Gateway](https://ansvar.eu/gateway)
 
 ### 🇺🇸 [US Regulations MCP](https://github.com/Ansvar-Systems/US_Compliance_MCP)
 **Query US federal and state compliance laws directly from Claude**
 - HIPAA, CCPA, SOX, GLBA, FERPA, COPPA, FDA 21 CFR Part 11, and 8 more
 - Federal and state privacy law comparison
 - Breach notification timeline mapping
-- **Install:** `npm install @ansvar/us-regulations-mcp`
+- **Access:** via [Ansvar Gateway](https://ansvar.eu/gateway)
 
 ### 🔐 [Security Controls MCP](https://github.com/Ansvar-Systems/security-controls-mcp)
 **Query 1,451 security controls across 28 frameworks**
@@ -289,7 +256,7 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 - Specialized for OT/ICS environments (manufacturing, energy, critical infrastructure)
 - Security levels, Purdue Model, zone/conduit architecture
 - MITRE ATT&CK for ICS threat intelligence
-- **Install:** `npx @ansvar/ot-security-mcp`
+- **Access:** via [Ansvar Gateway](https://ansvar.eu/gateway)
 - **Use case:** NIS2-compliant OT operators, industrial manufacturers, critical infrastructure
 
 ### Specialized: Automotive Cybersecurity
@@ -299,7 +266,7 @@ This server is part of **Ansvar's Compliance Suite** - three MCP servers that wo
 - Complete R155/R156 Revision 2 with all articles and annexes
 - ISO 21434 clause guidance and work products
 - R155 ↔ ISO 21434 cross-references
-- **Install:** `npx @ansvar/automotive-cybersecurity-mcp`
+- **Access:** via [Ansvar Gateway](https://ansvar.eu/gateway)
 - **Use case:** OEMs, Tier 1/2 suppliers, type approval preparation
 
 ### Specialized: Sanctions Screening
