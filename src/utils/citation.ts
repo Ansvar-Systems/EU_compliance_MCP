@@ -17,6 +17,7 @@ export interface CitationMetadata {
   display_text: string;
   aliases?: string[];
   source_url?: string;
+  effective_date?: string;
   lookup: {
     tool: string;
     args: Record<string, string>;
@@ -34,6 +35,7 @@ export interface CitationMetadata {
  * @param toolArgs      The tool arguments for verification lookup
  * @param sourceUrl     Official portal URL (optional)
  * @param aliases       Alternative names the LLM might use (optional)
+ * @param effectiveDate ISO-8601 date the cited act entered into force (optional)
  */
 export function buildCitation(
   canonicalRef: string,
@@ -42,12 +44,14 @@ export function buildCitation(
   toolArgs: Record<string, string>,
   sourceUrl?: string | null,
   aliases?: string[],
+  effectiveDate?: string | null,
 ): CitationMetadata {
   return {
     canonical_ref: canonicalRef,
     display_text: displayText,
     ...(aliases && aliases.length > 0 && { aliases }),
     ...(sourceUrl && { source_url: sourceUrl }),
+    ...(effectiveDate && { effective_date: effectiveDate }),
     lookup: {
       tool: toolName,
       args: toolArgs,

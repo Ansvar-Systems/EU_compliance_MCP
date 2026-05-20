@@ -85,7 +85,7 @@ async function searchSqlite(
       articles_fts.regulation,
       articles_fts.article_number as article,
       articles_fts.title,
-      snippet(articles_fts, 3, '>>>', '<<<', '...', 32) as snippet,
+      snippet(articles_fts, 3, '>>>', '<<<', '...', 64) as snippet,
       bm25(articles_fts) as relevance,
       'article' as type
     FROM articles_fts
@@ -100,7 +100,7 @@ async function searchSqlite(
       recitals_fts.regulation,
       CAST(recitals_fts.recital_number AS TEXT) as article,
       'Recital ' || recitals_fts.recital_number as title,
-      snippet(recitals_fts, 2, '>>>', '<<<', '...', 32) as snippet,
+      snippet(recitals_fts, 2, '>>>', '<<<', '...', 64) as snippet,
       bm25(recitals_fts) as relevance,
       'recital' as type
     FROM recitals_fts
@@ -194,7 +194,7 @@ async function searchPostgres(
       a.article_number as article,
       a.title,
       ts_headline('english', a.text, plainto_tsquery('english', $1),
-        'StartSel=>>>, StopSel=<<<, MaxWords=32, MinWords=16') as snippet,
+        'StartSel=>>>, StopSel=<<<, MaxWords=64, MinWords=32') as snippet,
       ts_rank(to_tsvector('english', COALESCE(a.title, '') || ' ' || a.text),
               plainto_tsquery('english', $1)) as relevance,
       'article' as type
@@ -211,7 +211,7 @@ async function searchPostgres(
       r.recital_number::TEXT as article,
       'Recital ' || r.recital_number as title,
       ts_headline('english', r.text, plainto_tsquery('english', $1),
-        'StartSel=>>>, StopSel=<<<, MaxWords=32, MinWords=16') as snippet,
+        'StartSel=>>>, StopSel=<<<, MaxWords=64, MinWords=32') as snippet,
       ts_rank(to_tsvector('english', r.text), plainto_tsquery('english', $1)) as relevance,
       'recital' as type
     FROM recitals r

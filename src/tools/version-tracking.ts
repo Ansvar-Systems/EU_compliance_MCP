@@ -1,8 +1,5 @@
 import type { DatabaseAdapter } from '../database/types.js';
 
-const PREMIUM_UPGRADE_MESSAGE =
-  'Version tracking is available in the Ansvar Intelligence Portal. Contact hello@ansvar.ai for access.';
-
 // --- Types ---
 
 export interface GetArticleHistoryInput {
@@ -54,12 +51,6 @@ interface RecentChange {
   source_url: string | null;
 }
 
-// --- Premium gate ---
-
-function isPremiumEnabled(): boolean {
-  return process.env.PREMIUM_ENABLED === 'true';
-}
-
 async function hasVersionsTable(db: DatabaseAdapter): Promise<boolean> {
   const result = await db.query<{ name: string }>(
     "SELECT name FROM sqlite_master WHERE type='table' AND name='article_versions'",
@@ -72,11 +63,7 @@ async function hasVersionsTable(db: DatabaseAdapter): Promise<boolean> {
 export async function getArticleHistory(
   db: DatabaseAdapter,
   input: GetArticleHistoryInput,
-): Promise<ArticleHistory | { premium: false; message: string }> {
-  if (!isPremiumEnabled()) {
-    return { premium: false, message: PREMIUM_UPGRADE_MESSAGE };
-  }
-
+): Promise<ArticleHistory> {
   if (!(await hasVersionsTable(db))) {
     throw new Error('Version tracking data not available in this database build.');
   }
@@ -124,11 +111,7 @@ export async function getArticleHistory(
 export async function diffArticle(
   db: DatabaseAdapter,
   input: DiffArticleInput,
-): Promise<ArticleDiff | { premium: false; message: string }> {
-  if (!isPremiumEnabled()) {
-    return { premium: false, message: PREMIUM_UPGRADE_MESSAGE };
-  }
-
+): Promise<ArticleDiff> {
   if (!(await hasVersionsTable(db))) {
     throw new Error('Version tracking data not available in this database build.');
   }
@@ -188,11 +171,7 @@ export async function diffArticle(
 export async function getRecentChanges(
   db: DatabaseAdapter,
   input: GetRecentChangesInput,
-): Promise<{ since: string; changes: RecentChange[]; total: number } | { premium: false; message: string }> {
-  if (!isPremiumEnabled()) {
-    return { premium: false, message: PREMIUM_UPGRADE_MESSAGE };
-  }
-
+): Promise<{ since: string; changes: RecentChange[]; total: number }> {
   if (!(await hasVersionsTable(db))) {
     throw new Error('Version tracking data not available in this database build.');
   }

@@ -180,6 +180,9 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32022L2555': { id: 'NIS2', full_name: 'Directive on measures for a high common level of cybersecurity across the Union', effective_date: '2024-10-17' },
   '32022R2554': { id: 'DORA', full_name: 'Digital Operational Resilience Act', effective_date: '2025-01-17' },
   '32024R1689': { id: 'AI_ACT', full_name: 'Artificial Intelligence Act', effective_date: '2024-08-01' },
+  // Charter of Fundamental Rights of the European Union — primary law, OJ C 326.
+  // Routing key 'CFR' is used by FRIA's fundamental_rights_mapping stage.
+  '12012P/TXT': { id: 'CFR', full_name: 'Charter of Fundamental Rights of the European Union', effective_date: '2009-12-01' },
   '32024R2847': { id: 'CRA', full_name: 'Cyber Resilience Act', effective_date: '2024-12-10' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },

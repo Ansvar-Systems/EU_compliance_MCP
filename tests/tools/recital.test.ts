@@ -84,4 +84,13 @@ describe('getRecital', () => {
       'https://eur-lex.europa.eu/eli/dir/2022/2555/oj#rct_1',
     );
   });
+
+  it('exposes the regulation effective_date on _citation', async () => {
+    // Companion to the get_article fix for issue #35 (empty effective_date
+    // in get_provision citations). Plumbing-only — value comes from the
+    // regulations.effective_date column already populated by the seed.
+    const result = await getRecital(db, { regulation: 'GDPR', recital_number: 83 });
+    expect(result).not.toBeNull();
+    expect(result!._citation?.effective_date).toBe('2018-05-25');
+  });
 });

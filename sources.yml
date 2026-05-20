@@ -12,7 +12,7 @@ sources:
       - articles
       - recitals
       - definitions
-    regulations_covered: 47
+    regulations_covered: 48
     ingestion_method: Puppeteer browser automation (EUR-Lex WAF bypass)
     ingestion_scripts:
       - scripts/ingest-eurlex.ts
@@ -20,7 +20,10 @@ sources:
       - scripts/ingest-recitals.ts
     update_mechanism: Daily GitHub Actions workflow (check-updates.yml)
     update_frequency: daily
-    last_full_ingestion: "2026-02-16"
+    last_full_ingestion: "2026-05-14"
+    # 2026-05-14: Charter of Fundamental Rights (CELEX 12012P/TXT, id='CFR')
+    # added to back FRIA's fundamental_rights_mapping stage. 54 articles,
+    # primary EU law published in OJ C 326, public-domain text.
 
   - name: UNECE
     url: https://unece.org/transport/documents

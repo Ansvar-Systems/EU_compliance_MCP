@@ -1,0 +1,9 @@
+apiVersion: v2
+name: eu-regulations-mcp
+description: EU Regulations MCP HTTP server — 61+ EU regulations (GDPR, AI Act, DORA, …)
+type: application
+version: 0.1.0
+appVersion: "1.1.2"
+maintainers:
+  - name: Ansvar Platform Team
+    email: platform@ansvar.eu
