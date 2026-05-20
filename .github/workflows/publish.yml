@@ -1,78 +1,39 @@
-name: Publish to npm & MCP Registry
+name: Publish to MCP Registry
 
 on:
   push:
     tags:
-      - 'v*'  # Triggers on v0.1.0, v1.0.0, etc.
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
+    timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
-
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 10
-
-      - name: Get version from tag
-        id: version
+      - name: Install mcp-publisher
         run: |
-          VERSION=${GITHUB_REF#refs/tags/v}
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-          echo "📦 Version: $VERSION"
+          set -euo pipefail
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
+          ./mcp-publisher --version
 
-      - name: Update server.json version
-        run: |
-          sed -i 's/"version": "[^"]*"/"version": "${{ steps.version.outputs.VERSION }}"/' server.json
-          echo "✅ Updated server.json to version ${{ steps.version.outputs.VERSION }}"
-
-      - run: pnpm install --frozen-lockfile
-
-      - run: pnpm run build
-      - run: pnpm run build:db
-
-      - name: Publish to npm
-        run: pnpm publish --access public --provenance --no-git-checks
+      - name: Authenticate via DNS (ansvar.eu namespace)
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          MCP_PRIVATE_KEY: ${{ secrets.MCP_PRIVATE_KEY }}
+        run: ./mcp-publisher login dns --domain ansvar.eu --private-key "$MCP_PRIVATE_KEY"
 
-      - name: Install MCP Publisher
+      - name: Sync server.json version with tag
+        if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          curl -L -o mcp-publisher.tar.gz \
-            https://github.com/modelcontextprotocol/registry/releases/download/v1.4.0/mcp-publisher_linux_amd64.tar.gz
-          tar -xzf mcp-publisher.tar.gz
-          chmod +x mcp-publisher
-          sudo mv mcp-publisher /usr/local/bin/
-          mcp-publisher --version
-
-      - name: Authenticate with MCP Registry
-        env:
-          PRIVATE_KEY: ${{ secrets.MCP_PUBLISHER_PRIVATE_KEY }}
-        run: |
-          mcp-publisher login dns --domain ansvar.eu --private-key "$PRIVATE_KEY"
-          echo "✅ Authenticated with MCP registry"
+          VERSION="${GITHUB_REF#refs/tags/v}"
+          jq --arg v "$VERSION" '.version = $v' server.json > server.tmp && mv server.tmp server.json
+          echo "server.json version set to ${VERSION}"
 
       - name: Publish to MCP Registry
-        run: |
-          mcp-publisher publish
-          echo "✅ Published to MCP registry"
-
-      - name: Deployment Summary
-        run: |
-          echo "## 🎉 Publication Complete!" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Version:** \`${{ steps.version.outputs.VERSION }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 📦 Published To:" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ npm: https://www.npmjs.com/package/@ansvar/eu-regulations-mcp/v/${{ steps.version.outputs.VERSION }}" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ MCP Registry: https://registry.modelcontextprotocol.io" >> $GITHUB_STEP_SUMMARY
-          echo "- ⏳ PulseMCP: Will auto-sync within 1-7 days" >> $GITHUB_STEP_SUMMARY
+        run: ./mcp-publisher publish
