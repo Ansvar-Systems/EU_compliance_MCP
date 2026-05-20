@@ -2,13 +2,13 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "eu.ansvar/eu-regulations-mcp",
   "title": "EU Regulations",
-  "description": "Query 61 EU regulations (GDPR, NIS2, DORA, AI Act, CRA, MDR, MiCA, eIDAS, MiFID II) via Ansvar Gateway. Full-text search across 4,054 articles. 50 free queries/day at ansvar.eu/gateway.",
+  "description": "61 EU regulations (GDPR, NIS2, DORA, AI Act +57) via Ansvar Gateway. 50 free queries/day.",
   "repository": {
     "url": "https://github.com/Ansvar-Systems/EU_compliance_MCP",
     "source": "github"
   },
   "websiteUrl": "https://ansvar.eu/gateway",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "Apache-2.0",
   "keywords": [
     "compliance",
