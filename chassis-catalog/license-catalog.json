@@ -1,0 +1,744 @@
+{
+  "codes": [
+    {
+      "authority_kind": "license",
+      "code": "AGPL-3.0-only",
+      "commercial_ok": true,
+      "url": "https://www.gnu.org/licenses/agpl-3.0.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "AT-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001848&Paragraf=7"
+    },
+    {
+      "authority_kind": "license",
+      "code": "Ansvar-Synthesis",
+      "commercial_ok": true
+    },
+    {
+      "authority_kind": "license",
+      "code": "Apache-2.0",
+      "commercial_ok": true,
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "BE-Federal-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.ejustice.just.fgov.be/cgi_loi/loi.pl"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "BG-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://lex.bg/laws/ldoc/2133094401"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "BH-Statutory-PD-Art-4",
+      "commercial_ok": true,
+      "url": "https://www.lloc.gov.bh/PDF/L2206.pdf"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "BR-Statutory-PD-Art-8",
+      "commercial_ok": true,
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm"
+    },
+    {
+      "authority_kind": "license",
+      "code": "BSD-2-Clause",
+      "commercial_ok": true,
+      "url": "https://opensource.org/licenses/BSD-2-Clause"
+    },
+    {
+      "authority_kind": "license",
+      "code": "BSD-3-Clause",
+      "commercial_ok": true,
+      "url": "https://opensource.org/licenses/BSD-3-Clause"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "Bloomberg-Law-TOS",
+      "commercial_ok": false,
+      "url": "https://www.bloomberglaw.com/product/blaw/page/terms_of_service"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-3.0",
+      "commercial_ok": true,
+      "url": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-4.0",
+      "commercial_ok": true,
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-NC-4.0",
+      "commercial_ok": false,
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-NC-ND-4.0",
+      "commercial_ok": false,
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-NC-SA-4.0",
+      "commercial_ok": false,
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-ND-4.0",
+      "commercial_ok": true,
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC-BY-SA-4.0",
+      "commercial_ok": true,
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "CC0-1.0",
+      "commercial_ok": true,
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "CO-Statutory-PD-Art-41",
+      "commercial_ok": true,
+      "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=3431"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "CR-Statutory-PD-Art-75",
+      "commercial_ok": true,
+      "url": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=3396"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Crown-Copyright",
+      "commercial_ok": true,
+      "url": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "Custom-AFM-attribution",
+      "commercial_ok": false,
+      "url": "https://www.afm.nl/nl-nl/over-de-afm/over-deze-website"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "Custom-Vendor",
+      "commercial_ok": false
+    },
+    {
+      "authority_kind": "terms",
+      "code": "Cyprus-PSI",
+      "commercial_ok": true,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L1024"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Czech-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.e-sbirka.cz/eli/cz/sb/2000/121/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "DJ-Statutory-PD-Art-8",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/470519"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "DK-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.retsinformation.dk/eli/lta/2014/1144"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "DL-DE-BY-2.0",
+      "commercial_ok": true,
+      "url": "https://www.govdata.de/dl-de/by-2-0"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "DL-DE-Zero-2.0",
+      "commercial_ok": true,
+      "url": "https://www.govdata.de/dl-de/zero-2-0"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Dutch-Auteurswet-Art-11",
+      "commercial_ok": true,
+      "url": "https://wetten.overheid.nl/BWBR0001886/Artikel11"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "EDPB-Reuse-Notice",
+      "commercial_ok": true,
+      "url": "https://www.edpb.europa.eu/concernant-le-cepd/mentions-legales/copyright_en"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "EE-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.riigiteataja.ee"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "ENISA-CC-BY-4",
+      "commercial_ok": true,
+      "url": "https://www.enisa.europa.eu/about-enisa/legal-notice"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "ESMA-Reuse-Notice",
+      "commercial_ok": true,
+      "url": "https://www.esma.europa.eu/legal-notice"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "EU-Database-Directive",
+      "commercial_ok": false,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31996L0009"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "EU-Decision-2011-833",
+      "commercial_ok": true,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "EU-Decision-2011-833-Commission-Only",
+      "commercial_ok": true,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833"
+    },
+    {
+      "authority_kind": "license",
+      "code": "EUPL-1.2",
+      "commercial_ok": true,
+      "url": "https://eupl.eu/1.2/en/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "EUR-Lex-Decision-2011-833",
+      "commercial_ok": true,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0833"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "Etalab-2.0",
+      "commercial_ok": true,
+      "url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "FI-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.finlex.fi/fi/laki/ajantasa/1961/19610404"
+    },
+    {
+      "authority_kind": "license",
+      "code": "FR-Etalab-2.0",
+      "commercial_ok": true,
+      "url": "https://github.com/etalab/licence-ouverte/blob/master/LO.md"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "Flanders-MGH-1.0",
+      "commercial_ok": true,
+      "url": "https://data.vlaanderen.be/doc/licentie/modellicentie-gratis-hergebruik/v1.0"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "French-CPI-L122-5",
+      "commercial_ok": true,
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037388886/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "GE-Statutory-PD-Art-8",
+      "commercial_ok": true,
+      "url": "https://matsne.gov.ge/en/document/view/16198"
+    },
+    {
+      "authority_kind": "license",
+      "code": "GPL-2.0-only",
+      "commercial_ok": true,
+      "url": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+    },
+    {
+      "authority_kind": "license",
+      "code": "GPL-3.0-only",
+      "commercial_ok": true,
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "GT-Statutory-PD-Art-68",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/126260"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "German-UrhG-Section-5",
+      "commercial_ok": true,
+      "url": "https://www.gesetze-im-internet.de/urhg/__5.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Greek-N-2121-1993-Art-2-5",
+      "commercial_ok": true,
+      "url": "https://www.opi.gr/vivliothiki/nomos-2121-1993/"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "HK-DataGov-TOS",
+      "commercial_ok": true,
+      "url": "https://data.gov.hk/en/terms-and-conditions"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "HR-Statutory-PD-Conditional",
+      "commercial_ok": true,
+      "url": "https://www.zakon.hr/z/106/Zakon-o-autorskom-pravu-i-srodnim-pravima"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "HT-Statutory-PD-Art-5",
+      "commercial_ok": true,
+      "url": "https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Haiti"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "HeinOnline-TOS",
+      "commercial_ok": false,
+      "url": "https://heinonline.org/HOL/SubscriberAgreement"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Hungarian-Szjt-Section-1-4",
+      "commercial_ok": true,
+      "url": "https://njt.jog.gov.hu/jogszabaly/1999-76-00-00"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "IN-Section-52-1-q",
+      "commercial_ok": true,
+      "url": "https://copyright.gov.in/documents/CopyrightRules1957.pdf"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "IODL-2.0",
+      "commercial_ok": true,
+      "url": "https://www.dati.gov.it/iodl/2.0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "ISC",
+      "commercial_ok": true,
+      "url": "https://opensource.org/licenses/ISC"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Icelandic-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.althingi.is/lagas/nuna/1972073.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Irish-CDSM-Art-4-TDM-PSI",
+      "commercial_ok": true,
+      "url": "https://psi.gov.ie"
+    },
+    {
+      "authority_kind": "license",
+      "code": "Irish-PSI-Licence",
+      "commercial_ok": true,
+      "url": "https://psi.gov.ie/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Italian-LDA-Art-5",
+      "commercial_ok": true,
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Italian-LDA-Article-5",
+      "commercial_ok": true,
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633!vig="
+    },
+    {
+      "authority_kind": "regime",
+      "code": "JP-Statutory-PD-Art-13",
+      "commercial_ok": true,
+      "url": "https://elaws.e-gov.go.jp/document?lawid=345AC0000000048"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "Justia-TOS",
+      "commercial_ok": false,
+      "url": "https://www.justia.com/terms-of-service/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "KH-Statutory-PD-Art-10",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/178435"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "KOGL-Type-1",
+      "commercial_ok": true,
+      "url": "https://www.kogl.or.kr/info/license.do"
+    },
+    {
+      "authority_kind": "license",
+      "code": "LGPL-2.1-only",
+      "commercial_ok": true,
+      "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+    },
+    {
+      "authority_kind": "license",
+      "code": "LGPL-3.0-only",
+      "commercial_ok": true,
+      "url": "https://www.gnu.org/licenses/lgpl-3.0.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "LI-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://wipolex-res.wipo.int/edocs/lexdocs/laws/de/li/li037de.html"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "LO-OL-Luxembourg",
+      "commercial_ok": true,
+      "url": "https://data.public.lu/fr/pages/donnees-ouvertes/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "LT-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/edocs/lexdocs/laws/lt/lt/lt121lt_1.pdf"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "LV-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://likumi.lv/ta/id/5138-autortiesibu-likums"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "LexisNexis-TOS",
+      "commercial_ok": false,
+      "url": "https://www.lexisnexis.com/en-us/terms/general/default.page"
+    },
+    {
+      "authority_kind": "license",
+      "code": "License-Unverified",
+      "commercial_ok": false
+    },
+    {
+      "authority_kind": "terms",
+      "code": "LicenseRef-AT-IWG-publicsector",
+      "commercial_ok": true,
+      "url": "https://www.ris.bka.gv.at/Dokumente/Erv/ERV_2005_0090/ERV_2005_0090.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "LicenseRef-AT-UrhG-§40h-decision",
+      "commercial_ok": true,
+      "url": "https://www.ris.bka.gv.at/Dokumente/Bundesnormen/NOR40195297/NOR40195297.html"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "LicenseRef-AT-UrhG-§7-no-copyright",
+      "commercial_ok": true,
+      "url": "https://www.ris.bka.gv.at/Dokumente/Bundesnormen/NOR12018039/NOR12018039.html"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "LicenseRef-OeNB-Copyright-Reserved",
+      "commercial_ok": false,
+      "url": "https://www.oenb.at"
+    },
+    {
+      "authority_kind": "license",
+      "code": "Luxembourgish-Loi-2001-Art-10-Permitted-Acts",
+      "commercial_ok": false,
+      "url": "https://legilux.public.lu/eli/etat/leg/loi/2001/04/18/n2/jo"
+    },
+    {
+      "authority_kind": "license",
+      "code": "MIT",
+      "commercial_ok": true,
+      "url": "https://opensource.org/license/mit/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "MPL-2.0",
+      "commercial_ok": true,
+      "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "MT-CDSM-Art-4-TDM-PSI",
+      "commercial_ok": true,
+      "url": "https://opendata.gov.mt"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "MT-MFSA-Attribution",
+      "commercial_ok": true,
+      "url": "https://www.mfsa.mt/disclaimer/"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "NLOD-2.0",
+      "commercial_ok": true,
+      "url": "https://data.norge.no/nlod/en/2.0/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Norwegian-Court-Publication",
+      "commercial_ok": true,
+      "url": "https://www.domstol.no/no/hoyesterett/VERKTOY/avidentifisering/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Norwegian-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/legislation/details/18687"
+    },
+    {
+      "authority_kind": "license",
+      "code": "ODC-By-1.0",
+      "commercial_ok": true,
+      "url": "https://opendatacommons.org/licenses/by/1-0/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "ODbL-1.0",
+      "commercial_ok": true,
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "OGL-3.0",
+      "commercial_ok": true,
+      "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "OGL-Canada-2.0",
+      "commercial_ok": true,
+      "url": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "OGL-ROU-1.0",
+      "commercial_ok": true,
+      "url": "https://data.gov.ro/base/images/logoinst/OGL-ROU-1.0.pdf"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "OGL-UK-2.0",
+      "commercial_ok": true,
+      "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "Open-Parliament-Licence-v3.0",
+      "commercial_ok": true,
+      "url": "https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
+    },
+    {
+      "authority_kind": "license",
+      "code": "PDDL-1.0",
+      "commercial_ok": true,
+      "url": "https://opendatacommons.org/licenses/pddl/1-0/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "PE-Statutory-PD-Art-9",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/127194"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "PL-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19940240083/U/D19940083Lj.pdf"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "PY-Statutory-PD-Art-8",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/126204"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Portuguese-CDADC-Art-7-and-8",
+      "commercial_ok": true,
+      "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=484&tabela=leis"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "Practical-Law-TOS",
+      "commercial_ok": false,
+      "url": "https://uk.practicallaw.thomsonreuters.com/Browse/Home/About/AboutPracticalLaw"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Public-Domain",
+      "commercial_ok": true
+    },
+    {
+      "authority_kind": "regime",
+      "code": "QA-Statutory-PD-Art-4",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/237344"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "RS-Statutory-PD-Art-6",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/187761"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Romanian-Legea-8-1996-Art-9",
+      "commercial_ok": true,
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/7816"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "SE-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1960729-om-upphovsratt-till-litterara-och_sfs-1960-729/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "SI-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2007-01-0717?sop=2007-01-0717"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "SK-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.zakonypreludi.sk/zz/2015-185"
+    },
+    {
+      "authority_kind": "terms",
+      "code": "Singapore-OGL-1.0",
+      "commercial_ok": true,
+      "url": "https://data.gov.sg/open-data-licence"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Spanish-LPI-Article-13",
+      "commercial_ok": true,
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Spanish-TRLPI-Art-13",
+      "commercial_ok": true,
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Swiss-Statutory-PD",
+      "commercial_ok": true,
+      "url": "https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "TDM-Art-4-NL",
+      "commercial_ok": true,
+      "url": "https://wetten.overheid.nl/jci1.3:c:BWBR0001886&artikel=15o"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "TT-Section-7-1-b",
+      "commercial_ok": true,
+      "url": "https://www.wipo.int/wipolex/en/text/430283"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "TW-Statutory-PD-Art-9",
+      "commercial_ok": true,
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?Pcode=J0070017&FLNO=9"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "UA-Statutory-PD-Art-8",
+      "commercial_ok": true,
+      "url": "https://zakon.rada.gov.ua/laws/show/2811-20#Text"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "US-Federal-Government",
+      "commercial_ok": true,
+      "url": "https://www.copyright.gov/title17/92chap1.html#105"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "US-Federal-PD",
+      "commercial_ok": true,
+      "url": "https://www.law.cornell.edu/uscode/text/17/105"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "UY-Statutory-PD-Art-45",
+      "commercial_ok": true,
+      "url": "https://www.impo.com.uy/bases/leyes/9739-1937"
+    },
+    {
+      "authority_kind": "license",
+      "code": "Unlicense",
+      "commercial_ok": true,
+      "url": "https://unlicense.org/"
+    },
+    {
+      "authority_kind": "regime",
+      "code": "Unverified-Who-applies",
+      "commercial_ok": true,
+      "url": "https://wetten.overheid.nl/jci1.3:c:BWBR0034421"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "Westlaw-TOS",
+      "commercial_ok": false,
+      "url": "https://legal.thomsonreuters.com/en/policies/online-terms-of-use"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "WoltersKluwer-TOS",
+      "commercial_ok": false,
+      "url": "https://www.wolterskluwer.com/en/solutions/cheetah/terms-conditions"
+    },
+    {
+      "authority_kind": "vendor_template",
+      "code": "vLex-TOS",
+      "commercial_ok": false,
+      "url": "https://vlex.com/legal-notice"
+    }
+  ]
+}
