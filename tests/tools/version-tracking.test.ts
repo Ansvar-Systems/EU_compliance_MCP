@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, afterAll, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createTestDatabase, closeTestDatabase } from '../fixtures/test-db.js';
 import {
   getArticleHistory,
@@ -7,7 +7,7 @@ import {
 } from '../../src/tools/version-tracking.js';
 import type { DatabaseAdapter } from '../../src/database/types.js';
 
-describe('Version Tracking Tools (Premium)', () => {
+describe('Version Tracking Tools', () => {
   let db: DatabaseAdapter;
 
   beforeAll(() => {
@@ -18,70 +18,7 @@ describe('Version Tracking Tools (Premium)', () => {
     await closeTestDatabase(db);
   });
 
-  // --- Premium Gate Tests ---
-
-  describe('premium gating', () => {
-    const originalEnv = process.env.PREMIUM_ENABLED;
-
-    afterEach(() => {
-      // Restore original env
-      if (originalEnv === undefined) {
-        delete process.env.PREMIUM_ENABLED;
-      } else {
-        process.env.PREMIUM_ENABLED = originalEnv;
-      }
-    });
-
-    it('get_article_history returns upgrade message when PREMIUM_ENABLED is not set', async () => {
-      delete process.env.PREMIUM_ENABLED;
-      const result = await getArticleHistory(db, { regulation: 'GDPR', article: '1' });
-      expect(result).toHaveProperty('premium', false);
-      expect(result).toHaveProperty('message');
-      expect((result as any).message).toContain('Intelligence Portal');
-    });
-
-    it('diff_article returns upgrade message when PREMIUM_ENABLED is not set', async () => {
-      delete process.env.PREMIUM_ENABLED;
-      const result = await diffArticle(db, {
-        regulation: 'GDPR',
-        article: '1',
-        from_date: '2016-01-01',
-      });
-      expect(result).toHaveProperty('premium', false);
-      expect((result as any).message).toContain('hello@ansvar.ai');
-    });
-
-    it('get_recent_changes returns upgrade message when PREMIUM_ENABLED is not set', async () => {
-      delete process.env.PREMIUM_ENABLED;
-      const result = await getRecentChanges(db, { since: '2024-01-01' });
-      expect(result).toHaveProperty('premium', false);
-    });
-
-    it('get_article_history returns upgrade message when PREMIUM_ENABLED is "false"', async () => {
-      process.env.PREMIUM_ENABLED = 'false';
-      const result = await getArticleHistory(db, { regulation: 'GDPR', article: '1' });
-      expect(result).toHaveProperty('premium', false);
-    });
-
-    it('get_article_history returns real data when PREMIUM_ENABLED is "true"', async () => {
-      process.env.PREMIUM_ENABLED = 'true';
-      const result = await getArticleHistory(db, { regulation: 'GDPR', article: '1' });
-      expect(result).not.toHaveProperty('premium');
-      expect(result).toHaveProperty('versions');
-    });
-  });
-
-  // --- Functional Tests (with PREMIUM_ENABLED) ---
-
   describe('getArticleHistory', () => {
-    beforeEach(() => {
-      process.env.PREMIUM_ENABLED = 'true';
-    });
-
-    afterEach(() => {
-      delete process.env.PREMIUM_ENABLED;
-    });
-
     it('returns full version timeline for GDPR Article 1', async () => {
       const result = await getArticleHistory(db, { regulation: 'GDPR', article: '1' });
 
@@ -150,14 +87,6 @@ describe('Version Tracking Tools (Premium)', () => {
   });
 
   describe('diffArticle', () => {
-    beforeEach(() => {
-      process.env.PREMIUM_ENABLED = 'true';
-    });
-
-    afterEach(() => {
-      delete process.env.PREMIUM_ENABLED;
-    });
-
     it('returns diff for GDPR Article 1 between 2016 and 2025', async () => {
       const result = await diffArticle(db, {
         regulation: 'GDPR',
@@ -215,14 +144,6 @@ describe('Version Tracking Tools (Premium)', () => {
   });
 
   describe('getRecentChanges', () => {
-    beforeEach(() => {
-      process.env.PREMIUM_ENABLED = 'true';
-    });
-
-    afterEach(() => {
-      delete process.env.PREMIUM_ENABLED;
-    });
-
     it('returns all changes since a given date', async () => {
       const result = await getRecentChanges(db, { since: '2020-01-01' });
 

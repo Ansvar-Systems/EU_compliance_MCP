@@ -187,13 +187,171 @@ describe('Content Smoke Tests (Critical Articles)', () => {
     });
   });
 
+  // Guidance smoke tests — ensures EDPB / WP29 guidance ingestion succeeded
+  // and the 9-criteria framework cited by every DPIA workflow is reachable.
+  describe('EDPB / WP29 Guidance', () => {
+    const getGuidanceSection = (documentId: string, sectionNumber: string) =>
+      db
+        .prepare(
+          'SELECT title, content FROM guidance_sections WHERE document_id = ? AND section_number = ?',
+        )
+        .get(documentId, sectionNumber) as
+        | { title: string; content: string }
+        | undefined;
+
+    it('WP248 rev.01 — Criterion 1 (Evaluation or scoring)', () => {
+      const sec = getGuidanceSection('EDPB_WP248_REV01', 'III.B.1');
+      expect(sec).toBeDefined();
+      expect(sec!.title).toContain('Evaluation or scoring');
+      expect(sec!.content).toContain('profiling and predicting');
+      expect(sec!.content).toContain('recitals 71 and 91');
+    });
+
+    it('WP248 rev.01 — Criterion 7 (Vulnerable data subjects, recital 75)', () => {
+      const sec = getGuidanceSection('EDPB_WP248_REV01', 'III.B.7');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('vulnerable data subjects');
+      expect(sec!.content).toContain('recital 75');
+    });
+
+    it('WP248 rev.01 — Rule of thumb (two-criteria heuristic)', () => {
+      const sec = getGuidanceSection('EDPB_WP248_REV01', 'III.B.rule_of_thumb');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('two criteria');
+      expect(sec!.content).toContain('WP29');
+    });
+
+    it('WP248 rev.01 — document is related to GDPR', () => {
+      const doc = db
+        .prepare(
+          'SELECT related_regulation, document_reference FROM guidance_documents WHERE id = ?',
+        )
+        .get('EDPB_WP248_REV01') as
+        | { related_regulation: string; document_reference: string }
+        | undefined;
+      expect(doc).toBeDefined();
+      expect(doc!.related_regulation).toBe('GDPR');
+      expect(doc!.document_reference).toBe('WP248 rev.01');
+    });
+
+    it('WP251 rev.01 — Article 22 general prohibition (IV.intro)', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.intro');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('general prohibition');
+      expect(sec!.content).toContain('Article 22(1)');
+    });
+
+    it('WP251 rev.01 — Solely automated test (IV.A) rejects token human review', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.A');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('based solely');
+      expect(sec!.content).toContain('meaningful');
+      expect(sec!.content).toContain('authority and competence');
+    });
+
+    it('WP251 rev.01 — Article 22(2) exceptions list (IV.C)', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.C');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('performance of or entering into a contract');
+      expect(sec!.content).toContain('Union or Member State law');
+      expect(sec!.content).toContain('explicit consent');
+    });
+
+    it('WP251 rev.01 — Article 22(3) safeguards (IV.F)', () => {
+      const sec = getGuidanceSection('EDPB_WP251_REV01', 'IV.F');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('human intervention');
+      expect(sec!.content).toContain('contest the decision');
+      expect(sec!.content).toContain('explanation of the decision');
+    });
+
+    it('WP251 rev.01 — document is related to GDPR', () => {
+      const doc = db
+        .prepare(
+          'SELECT related_regulation, document_reference FROM guidance_documents WHERE id = ?',
+        )
+        .get('EDPB_WP251_REV01') as
+        | { related_regulation: string; document_reference: string }
+        | undefined;
+      expect(doc).toBeDefined();
+      expect(doc!.related_regulation).toBe('GDPR');
+      expect(doc!.document_reference).toBe('WP251 rev.01');
+    });
+
+    it('Guidelines 07/2020 — controller definition (I.2)', () => {
+      const sec = getGuidanceSection('EDPB_GUIDELINES_072020', 'I.2');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('Article 4(7)');
+      expect(sec!.content).toContain('five main building blocks');
+      expect(sec!.content).toContain('purposes and means');
+    });
+
+    it('Guidelines 07/2020 — joint controller converging-decisions test (I.3.2)', () => {
+      const sec = getGuidanceSection('EDPB_GUIDELINES_072020', 'I.3.2');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('converging decisions');
+      expect(sec!.content).toContain('inextricably linked');
+    });
+
+    it('Guidelines 07/2020 — eight Art. 28(3) contract obligations (II.1.3)', () => {
+      const sec = getGuidanceSection('EDPB_GUIDELINES_072020', 'II.1.3');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('documented instructions');
+      expect(sec!.content).toContain('Art. 28(3)(a)');
+      expect(sec!.content).toContain('Art. 28(3)(h)');
+    });
+
+    it('Guidelines 4/2019 — Article 25(1) DPbD (2.1)', () => {
+      const sec = getGuidanceSection('EDPB_GUIDELINES_042019', '2.1');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('appropriate technical and organisational measures');
+      expect(sec!.content).toContain('necessary safeguards');
+    });
+
+    it('Guidelines 4/2019 — state-of-the-art element', () => {
+      const sec = getGuidanceSection(
+        'EDPB_GUIDELINES_042019',
+        '2.1.3.state_of_the_art',
+      );
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('state of the art');
+      expect(sec!.content).toContain('dynamic concept');
+    });
+
+    it('Guidelines 4/2019 — DPbDefault dimensions (2.2)', () => {
+      const sec = getGuidanceSection('EDPB_GUIDELINES_042019', '2.2');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('amount of personal data collected');
+      expect(sec!.content).toContain('period of their storage');
+      expect(sec!.content).toContain('accessibility');
+    });
+
+    it('Guidelines 4/2019 — nine DP principles overview (3.intro)', () => {
+      const sec = getGuidanceSection('EDPB_GUIDELINES_042019', '3.intro');
+      expect(sec).toBeDefined();
+      expect(sec!.content).toContain('transparency');
+      expect(sec!.content).toContain('purpose limitation');
+      expect(sec!.content).toContain('accountability');
+    });
+
+    it('both EDPB batch-2 docs related to GDPR', () => {
+      const rows = db
+        .prepare(
+          "SELECT id, related_regulation FROM guidance_documents WHERE id IN ('EDPB_GUIDELINES_072020', 'EDPB_GUIDELINES_042019') ORDER BY id",
+        )
+        .all() as { id: string; related_regulation: string }[];
+      expect(rows).toHaveLength(2);
+      expect(rows.every((r) => r.related_regulation === 'GDPR')).toBe(true);
+    });
+  });
+
   // Meta-test: Ensure we're actually testing against production DB
   it('validates test is using production database with all regulations', () => {
     const regulationCount = db
       .prepare('SELECT COUNT(*) as count FROM regulations')
       .get() as { count: number };
 
-    expect(regulationCount.count).toBe(97);
+    expect(regulationCount.count).toBe(98);
   });
 
   it('validates sampled articles represent diverse characteristics', () => {
@@ -201,8 +359,9 @@ describe('Content Smoke Tests (Critical Articles)', () => {
       .prepare('SELECT COUNT(*) as count FROM articles')
       .get() as { count: number };
 
-    // Production DB should have 4,054 articles (after financial regulations expansion)
+    // Production DB should have 5,008 articles after Charter ingestion
+    // (4,954 EU regulation articles + 54 Charter articles).
     expect(articleCount.count).toBeGreaterThan(3500);
-    expect(articleCount.count).toBeLessThan(5000);
+    expect(articleCount.count).toBeLessThan(6000);
   });
 });

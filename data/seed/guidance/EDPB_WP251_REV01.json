@@ -1,0 +1,86 @@
+{
+  "id": "EDPB_WP251_REV01",
+  "title": "Guidelines on Automated individual decision-making and Profiling for the purposes of Regulation 2016/679",
+  "issuing_body": "Article 29 Working Party (endorsed by EDPB on 25 May 2018)",
+  "document_reference": "WP251 rev.01",
+  "date_published": "2018-02-06",
+  "related_regulation": "GDPR",
+  "url": "https://ec.europa.eu/newsroom/article29/items/612053",
+  "pdf_url": "https://ec.europa.eu/newsroom/article29/redirection/document/49826",
+  "status": "published",
+  "metadata": {
+    "endorsed_by_edpb": "2018-05-25",
+    "revised": "2018-02-06",
+    "scope": "Foundational EU-level guidance on GDPR Article 22 (solely automated decision-making with legal or similarly significant effect) and on profiling under Articles 4(4), 13(2)(f), 14(2)(g), 15(1)(h), and 22. Companion to WP248 (DPIA) — when WP248 Criterion 2 fires (automated decision-making), this is the doctrinal-depth follow-up.",
+    "license": "EUR-Lex-Decision-2011-833",
+    "section_naming": "Section numbers follow the document's own hierarchical numbering. Chapter IV ('Specific provisions on solely automated decision-making as defined in Article 22') is the highest-leverage chapter and is fully ingested here. Chapter V ('Children and profiling') is included because every health/education/social-services DPIA touches it."
+  },
+  "sections": [
+    {
+      "section_number": "IV.intro",
+      "title": "Specific provisions on solely automated decision-making — Article 22 as a general prohibition",
+      "parent_section": null,
+      "content": "Article 22(1) says:\n\nThe data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.\n\nThe term \"right\" in the provision does not mean that Article 22(1) applies only when actively invoked by the data subject. Article 22(1) establishes a general prohibition for decision-making based solely on automated processing. This prohibition applies whether or not the data subject takes an action regarding the processing of their personal data.\n\nIn summary, Article 22 provides that:\n\n(i) as a rule, there is a general prohibition on fully automated individual decision-making, including profiling that has a legal or similarly significant effect;\n(ii) there are exceptions to the rule;\n(iii) where one of these exceptions applies, there must be measures in place to safeguard the data subject's rights and freedoms and legitimate interests.\n\nThis implies that processing under Article 22(1) is not allowed generally. However the Article 22(1) prohibition only applies in specific circumstances when a decision based solely on automated processing, including profiling, has a legal effect on or similarly significantly affects someone, as explained further in the guidelines. Even in these cases there are defined exceptions which allow such processing to take place.\n\nAny processing likely to result in a high risk to data subjects requires the controller to carry out a Data Protection Impact Assessment (DPIA). As well as addressing any other risks connected with the processing, a DPIA can be particularly useful for controllers who are unsure whether their proposed activities will fall within the Article 22(1) definition, and, if allowed by an identified exception, what safeguarding measures must be applied."
+    },
+    {
+      "section_number": "IV.A",
+      "title": "\"Decision based solely on automated processing\"",
+      "parent_section": "IV.intro",
+      "content": "Article 22(1) refers to decisions \"based solely\" on automated processing. This means that there is no human involvement in the decision process.\n\nExample: An automated process produces what is in effect a recommendation concerning a data subject. If a human being reviews and takes account of other factors in making the final decision, that decision would not be \"based solely\" on automated processing.\n\nThe controller cannot avoid the Article 22 provisions by fabricating human involvement. For example, if someone routinely applies automatically generated profiles to individuals without any actual influence on the result, this would still be a decision based solely on automated processing.\n\nTo qualify as human involvement, the controller must ensure that any oversight of the decision is meaningful, rather than just a token gesture. It should be carried out by someone who has the authority and competence to change the decision. As part of the analysis, they should consider all the relevant data.\n\nAs part of their DPIA, the controller should identify and record the degree of any human involvement in the decision-making process and at what stage this takes place."
+    },
+    {
+      "section_number": "IV.B.legal_effects",
+      "title": "\"Legal\" effects — Decision producing legal effects",
+      "parent_section": "IV.intro",
+      "content": "The GDPR recognises that automated decision-making, including profiling can have serious consequences for individuals. The GDPR does not define \"legal\" or \"similarly significant\" however the wording makes it clear that only serious impactful effects will be covered by Article 22.\n\nA legal effect requires that the decision, which is based on solely automated processing, affects someone's legal rights, such as the freedom to associate with others, vote in an election, or take legal action. A legal effect may also be something that affects a person's legal status or their rights under a contract. Examples of this type of effect include automated decisions about an individual that result in:\n\n- cancellation of a contract;\n- entitlement to or denial of a particular social benefit granted by law, such as child or housing benefit;\n- refused admission to a country or denial of citizenship."
+    },
+    {
+      "section_number": "IV.B.similarly_significant",
+      "title": "\"Similarly significantly affects him or her\"",
+      "parent_section": "IV.intro",
+      "content": "Even if a decision-making process does not have an effect on people's legal rights it could still fall within the scope of Article 22 if it produces an effect that is equivalent or similarly significant in its impact.\n\nIn other words, even where there is no change in their legal rights or obligations, the data subject could still be impacted sufficiently to require the protections under this provision. The GDPR introduces the word \"similarly\" (not present in Article 15 of Directive 95/46/EC) to the phrase \"significantly affects\". Therefore the threshold for significance must be similar to that of a decision producing a legal effect. Recital 71 provides the following typical examples: \"automatic refusal of an online credit application\" or \"e-recruiting practices without any human intervention\".\n\nFor data processing to significantly affect someone the effects of the processing must be sufficiently great or important to be worthy of attention. In other words, the decision must have the potential to:\n\n- significantly affect the circumstances, behaviour or choices of the individuals concerned;\n- have a prolonged or permanent impact on the data subject; or\n- at its most extreme, lead to the exclusion or discrimination of individuals.\n\nIt is difficult to be precise about what would be considered sufficiently significant to meet the threshold, although the following decisions could fall into this category:\n\n- decisions that affect someone's financial circumstances, such as their eligibility to credit;\n- decisions that affect someone's access to health services;\n- decisions that deny someone an employment opportunity or put them at a serious disadvantage;\n- decisions that affect someone's access to education, for example university admissions.\n\nProcessing that might have little impact on individuals generally may in fact have a significant effect for certain groups of society, such as minority groups or vulnerable adults."
+    },
+    {
+      "section_number": "IV.C",
+      "title": "Exceptions from the prohibition — Article 22(2)",
+      "parent_section": "IV.intro",
+      "content": "Article 22(1) sets out a general prohibition on solely automated individual decision-making with legal or similarly significant effects, as described above.\n\nThis means that the controller should not undertake the processing described in Article 22(1) unless one of the following Article 22(2) exceptions applies — where the decision is:\n\n(a) necessary for the performance of or entering into a contract;\n(b) authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests; or\n(c) based on the data subject's explicit consent.\n\nWhere the decision-making involves special categories of data defined in Article 9(1) the controller must also ensure that they can meet the requirements of Article 22(4)."
+    },
+    {
+      "section_number": "IV.C.1",
+      "title": "Exception (a) — Performance of a contract",
+      "parent_section": "IV.C",
+      "content": "Controllers may wish to use solely automated decision-making processes for contractual purposes because they believe it is the most appropriate way to achieve the objective. Routine human involvement can sometimes be impractical or impossible due to the sheer quantity of data being processed.\n\nThe controller must be able to show that this type of processing is necessary, taking into account whether a less privacy-intrusive method could be adopted. If other effective and less intrusive means to achieve the same goal exist, then it would not be \"necessary\".\n\nAutomated decision-making described in Article 22(1) may also be necessary for pre-contractual processing.\n\nExample: A business advertises an open position. As working for the business in question is popular, the business receives tens of thousands of applications. Due to the exceptionally high volume of applications, the business may find that it is not practically possible to identify fitting candidates without first using fully automated means to sift out irrelevant applications. In this case, automated decision-making may be necessary in order to make a short list of possible candidates, with the intention of entering into a contract with a data subject."
+    },
+    {
+      "section_number": "IV.C.2",
+      "title": "Exception (b) — Authorised by Union or Member State law",
+      "parent_section": "IV.C",
+      "content": "Automated decision-making including profiling could potentially take place under 22(2)(b) if Union or Member State law authorised its use. The relevant law must also lay down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests.\n\nRecital 71 says that this could include the use of automated decision-making defined in Article 22(1) for monitoring and preventing fraud and tax-evasion, or to ensure the security and reliability of a service provided by the controller."
+    },
+    {
+      "section_number": "IV.C.3",
+      "title": "Exception (c) — Explicit consent",
+      "parent_section": "IV.C",
+      "content": "Article 22 requires explicit consent. Processing that falls within the definition of Article 22(1) poses significant data protection risks and a high level of individual control over personal data is therefore deemed appropriate.\n\n\"Explicit consent\" is not defined in the GDPR. The WP29 guidelines on consent (WP259) provide guidance on how this should be interpreted."
+    },
+    {
+      "section_number": "IV.D",
+      "title": "Special categories of personal data — Article 22(4)",
+      "parent_section": "IV.intro",
+      "content": "Automated decision-making (described in Article 22(1)) that involves special categories of personal data is only allowed under the following cumulative conditions (Article 22(4)):\n\n- there is an applicable Article 22(2) exemption; and\n- point (a) or (g) of Article 9(2) applies.\n\n9(2)(a) — the explicit consent of the data subject; or\n\n9(2)(g) — processing necessary for reasons of substantial public interest, on the basis of Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and interests of the data subject.\n\nIn both of the above cases, the controller must put in place suitable measures to safeguard the data subject's rights and freedoms and legitimate interests."
+    },
+    {
+      "section_number": "IV.F",
+      "title": "Establishing appropriate safeguards — Article 22(3)",
+      "parent_section": "IV.intro",
+      "content": "If the basis for processing is 22(2)(a) or 22(2)(c), Article 22(3) requires controllers to implement suitable measures to safeguard data subjects' rights, freedoms and legitimate interests. Under Article 22(2)(b) the Member or Union State law that authorises the processing must also incorporate appropriate safeguarding measures.\n\nSuch measures should include as a minimum a way for the data subject to obtain human intervention, express their point of view, and contest the decision.\n\nHuman intervention is a key element. Any review must be carried out by someone who has the appropriate authority and capability to change the decision. The reviewer should undertake a thorough assessment of all the relevant data, including any additional information provided by the data subject.\n\nRecital 71 highlights that in any case suitable safeguards should also include: specific information to the data subject and the right to obtain an explanation of the decision reached after such assessment and to challenge the decision.\n\nThe controller must provide a simple way for the data subject to exercise these rights.\n\nThis emphasises the need for transparency about the processing. The data subject will only be able to challenge a decision or express their view if they fully understand how it has been made and on what basis.\n\nErrors or bias in collected or shared data or an error or bias in the automated decision-making process can result in: incorrect classifications; and assessments based on imprecise projections; that impact negatively on individuals.\n\nControllers should carry out frequent assessments on the data sets they process to check for any bias, and develop ways to address any prejudicial elements, including any over-reliance on correlations. Systems that audit algorithms and regular reviews of the accuracy and relevance of automated decision-making including profiling are other useful measures.\n\nControllers should introduce appropriate procedures and measures to prevent errors, inaccuracies or discrimination on the basis of special category data. These measures should be used on a cyclical basis; not only at the design stage, but also continuously, as the profiling is applied to individuals. The outcome of such testing should feed back into the system design."
+    },
+    {
+      "section_number": "V",
+      "title": "Children and profiling",
+      "parent_section": null,
+      "content": "The GDPR creates additional obligations for data controllers when they are processing children's personal data.\n\nArticle 22 itself makes no distinction as to whether the processing concerns adults or children. However, recital 71 says that solely automated decision-making, including profiling, with legal or similarly significant effects should not apply to children. Given that this wording is not reflected in the Article itself, WP29 does not consider that this represents an absolute prohibition on this type of processing in relation to children. However, in the light of this recital, WP29 recommends that, as a rule, controllers should not rely upon the exceptions in Article 22(2) to justify it.\n\nThere may nevertheless be some circumstances in which it is necessary for controllers to carry out solely automated decision-making, including profiling, with legal or similarly significant effects in relation to children, for example to protect their welfare. If so, the processing may be carried out on the basis of the exceptions in Article 22(2)(a), (b) or (c) as appropriate.\n\nIn those cases there must be suitable safeguards in place, as required by Article 22(2)(b) and 22(3), and they must therefore be appropriate for children. The controller must ensure that these safeguards are effective in protecting the rights, freedoms and legitimate interests of the children whose data they are processing.\n\nThe need for particular protection for children is reflected in recital 38, which says: Children merit specific protection with regard to their personal data, as they may be less aware of the risks, consequences and safeguards concerned and their rights in relation to the processing of personal data. Such specific protection should, in particular, apply to the use of personal data of children for the purposes of marketing or creating personality or user profiles and the collection of personal data with regard to children when using services offered directly to a child."
+    }
+  ]
+}

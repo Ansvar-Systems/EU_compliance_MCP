@@ -92,6 +92,23 @@ describe('getArticle', () => {
     );
   });
 
+  it('exposes the regulation effective_date on _citation', async () => {
+    // Closes issue #35 (2026-04-18 DPIA audit): get_provision returned an
+    // empty effective_date alongside an empty source_url. source_url was
+    // fixed in PR #36; effective_date was never emitted by the citation
+    // envelope at all. The regulations table already carries this column
+    // (seeded from data/seed/*.json), so the fix is a SELECT + plumb-through
+    // — no re-ingest. Asserted against GDPR (a regulation) and NIS2 (a
+    // directive) to confirm both paths emit it.
+    const gdpr = await getArticle(db, { regulation: 'GDPR', article: '32' });
+    expect(gdpr).not.toBeNull();
+    expect(gdpr!._citation?.effective_date).toBe('2018-05-25');
+
+    const nis2 = await getArticle(db, { regulation: 'NIS2', article: '23' });
+    expect(nis2).not.toBeNull();
+    expect(nis2!._citation?.effective_date).toBe('2024-10-17');
+  });
+
   // ── Missing / wrong-type arg guards (2026-04-20 audit) ────────────────
   // normalizeArticleNumber(input.article) calls input.replace(); pre-fix
   // this crashed with "input.replace is not a function" when article was
@@ -161,6 +178,83 @@ describe('getArticle', () => {
     expect(byUnderscore?.text).toBe(byCanonical?.text);
     expect(byLowercase?.text).toBe(byCanonical?.text);
   });
+
+  // ── Recital lookups via get_provision/get_article (D5 fix) ────────────
+  // The gateway's get_provision tool maps directly to get_article with
+  // (regulation, article) → (law, article). Workflow prompts (e.g. the
+  // DPIA scoping.screening step) instruct agents to fetch recitals via
+  // article='Recital N' on the same tool. Pre-fix every call returned
+  // null because the recitals table was unreachable via get_article.
+  // Routes 'Recital N' (case-insensitive) to the recitals table and
+  // returns the recital text in the Article envelope. Recital citations
+  // are stamped 'GDPR Recital N' so the gateway's citation chip lands
+  // on the correct anchor.
+  it('routes "Recital N" article form to the recitals table', async () => {
+    const result = await getArticle(db, {
+      regulation: 'GDPR',
+      article: 'Recital 83',
+    });
+
+    expect(result).not.toBeNull();
+    expect(result!.regulation).toBe('GDPR');
+    expect(result!.article_number).toBe('Recital 83');
+    expect(result!.text).toContain('security');
+    expect(result!._citation?.source_url).toBe(
+      'https://eur-lex.europa.eu/eli/reg/2016/679/oj#rct_83',
+    );
+  });
+
+  it('accepts case-insensitive "recital N" article form', async () => {
+    const lowercase = await getArticle(db, {
+      regulation: 'GDPR',
+      article: 'recital 83',
+    });
+    const titlecase = await getArticle(db, {
+      regulation: 'GDPR',
+      article: 'Recital 83',
+    });
+
+    expect(lowercase).not.toBeNull();
+    expect(titlecase).not.toBeNull();
+    expect(lowercase!.text).toBe(titlecase!.text);
+  });
+
+  it('accepts the abbreviated "Rct N" recital form', async () => {
+    // EUR-Lex anchors recitals as #rct_N; the abbreviated form is the
+    // citation idiom many MCP clients adopt when copying anchors back
+    // into a follow-up get_provision call.
+    const result = await getArticle(db, {
+      regulation: 'GDPR',
+      article: 'Rct 1',
+    });
+
+    expect(result).not.toBeNull();
+    expect(result!.article_number).toBe('Recital 1');
+    expect(result!.text).toContain('protection');
+  });
+
+  it('returns null for an out-of-range recital number', async () => {
+    const result = await getArticle(db, {
+      regulation: 'GDPR',
+      article: 'Recital 9999',
+    });
+
+    expect(result).toBeNull();
+  });
+
+  it('does not affect regular article lookups', async () => {
+    // Regression guard: the recital branch must not interfere with the
+    // numeric article path. GDPR Article 32 is the DPIA security article
+    // and is one of the most-cited provisions in compliance workflows.
+    const result = await getArticle(db, {
+      regulation: 'GDPR',
+      article: '32',
+    });
+
+    expect(result).not.toBeNull();
+    expect(result!.article_number).toBe('32');
+    expect(result!.title).toBe('Security of processing');
+  });
 });
 
 describe('normalizeArticleNumber', () => {
@@ -201,5 +295,16 @@ describe('normalizeArticleNumber', () => {
   it('preserves compound article references after stripping prefix', () => {
     expect(normalizeArticleNumber('Article 5(1)(a)')).toBe('5(1)(a)');
     expect(normalizeArticleNumber('Art. 5a')).toBe('5a');
+  });
+
+  it('normalizes recital references to canonical "Recital N" form', () => {
+    expect(normalizeArticleNumber('Recital 75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('recital 75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('RECITAL 75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('Recital_75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('recital  75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('Rct 75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('rct 75')).toBe('Recital 75');
+    expect(normalizeArticleNumber('Rct. 75')).toBe('Recital 75');
   });
 });
