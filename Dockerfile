@@ -9,11 +9,18 @@
 #   - License-catalog signature + digest live in chassis-catalog/, verified
 #     by Gate 3 at startup
 #
+# Phase 5.B addition (this build): 5 EU-local tools reintroduced via the
+# chassis extensionHandlers API (mcp-base v0.1.26+). These tools query
+# EU-local tables preserved during the Phase 5.A schema migration. A
+# multi-stage build compiles src/chassis-bootstrap.ts + src/extension-handlers/
+# to JS, the chassis ENTRYPOINT is overridden to run the bootstrap which
+# dynamic-imports chassis serve() and registers the extensionHandlers Map.
+#
 # Drop-in compose compatibility (Phase 5.A finishing fixup):
 # This MCP is a standalone repo (not part of ansvar-mcp-fleet). The prod
 # compose entry was authored for the legacy image (container port 3000,
 # DB baked-in, no volume mount). To let Watchtower swap legacy → chassis
-# transparently, this Dockerfile baked the DB into the image and uses port
+# transparently, this Dockerfile bakes the DB into the image and uses port
 # 3000 for the combined health + MCP transport. The fleet monorepo's
 # bind-mount pattern is intentionally NOT adopted here.
 #
@@ -23,9 +30,38 @@
 # Build: docker build -t eu-regulations-mcp .
 # Run:   docker run -p 8300:3000 eu-regulations-mcp
 
+# ────────────────────────────────────────────────────────────────────────────
+# Stage 1: builder — compile bootstrap + extension handlers
+# ────────────────────────────────────────────────────────────────────────────
+# Pinned to match chassis Node version (v20.20.x at v0.1.28). Newer Node would
+# produce JS the chassis runtime might not parse — match major version.
+FROM node:20-alpine AS builder
+
+WORKDIR /build
+
+# Bootstrap + extension handlers have ZERO external runtime deps (Node stdlib
+# only + a local types module mirroring chassis types). Install ONLY
+# typescript + @types/node — avoids the repo's package-lock drift (pg,
+# wrangler, pdfjs-dist, etc. — all Phase 5.B cleanup targets).
+RUN echo '{"name":"phase-5b-bootstrap-build","version":"0.0.0","private":true}' > package.json \
+  && npm install typescript@5.3.3 @types/node@20.10.5 --no-audit --no-fund
+
+# Source needed for compile. tsconfig.bootstrap.json (added in this PR)
+# narrows tsc to ONLY src/chassis-bootstrap.ts + src/extension-handlers/**
+# so we don't drag in legacy src/database/, src/tools/, src/http-server.ts
+# etc. that still reference modules deferred to Phase 5.B cleanup.
+COPY tsconfig.bootstrap.json ./tsconfig.json
+COPY src/chassis-bootstrap.ts src/
+COPY src/extension-handlers/ src/extension-handlers/
+
+RUN ./node_modules/.bin/tsc -p tsconfig.json
+
+# ────────────────────────────────────────────────────────────────────────────
+# Stage 2: chassis runtime
+# ────────────────────────────────────────────────────────────────────────────
 # Requires mcp-base v0.1.28+ — earlier releases reject the four chassis
 # opt-in flags at Gate 0 (schema validation) even though the chassis runtime
-# supports them. See mcp-base PR #39.
+# supports them. See mcp-base PR #39. v0.1.26+ for extensionHandlers API.
 FROM ghcr.io/ansvar-systems/mcp-base:v0.1.28-alpine
 
 WORKDIR /app
@@ -40,6 +76,16 @@ COPY --chown=ansvar:ansvar chassis-catalog/license-catalog.json chassis-catalog/
 # prod compose. The chassis verifies the DB at startup (Gate 5 / Gate 9);
 # if the DB is missing or the wrong shape, the container fails fast.
 COPY --chown=ansvar:ansvar data/regulations.db /app/data/regulations.db
+
+# Regulation analysis guides (filesystem-based, used by get_regulation_guide
+# extension handler). Read at request time from /app/data/guides/{REG}.json.
+COPY --chown=ansvar:ansvar data/guides/ /app/data/guides/
+
+# Phase 5.B: built bootstrap + extension handlers from builder stage. The
+# chassis ENTRYPOINT (`node ./dist/cli.js --serve`) is overridden below to
+# run our bootstrap which dynamic-imports chassis serve() with the
+# extensionHandlers Map registered.
+COPY --from=builder --chown=ansvar:ansvar /build/extension-build/ /app/extension-build/
 
 # Catalog SHA in env. The chassis license-catalog gate (Gate 3b) expects
 # this with the explicit "sha256:" prefix to match its internal digest
@@ -60,11 +106,7 @@ EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
   CMD wget -q -O- http://127.0.0.1:3000/health || exit 1
 
-# Chassis ENTRYPOINT (inherited from FROM mcp-base) runs `node ./dist/cli.js --serve`.
-# No per-MCP entrypoint override needed for Phase 5 — all customer-facing
-# tools are chassis-standard (search_legislation, get_provision, get_recital,
-# search_guidance, get_definition, etc.). The 5 EU-local tools
-# (compare_requirements / map_controls / get_evidence_requirements /
-# regulation_guide / check_applicability) are deferred to Phase 5.B, where
-# they ride the extensionHandlers API (mcp-base v0.1.26 Phase 4d) via a
-# custom entrypoint script.
+# Phase 5.B ENTRYPOINT override: run the bootstrap which dynamic-imports
+# chassis serve() and passes the extensionHandlers Map. tini stays as PID 1
+# for proper signal handling (chassis pattern).
+ENTRYPOINT ["/sbin/tini", "--", "node", "/app/extension-build/chassis-bootstrap.js"]
