@@ -2,6 +2,25 @@
 
 /**
  * Build the regulations.db SQLite database from seed JSON files.
+ *
+ * As of Phase 5 of the chassis migration (2026-05-26), this produces a
+ * chassis-conformant SQLite DB that the @ansvar/mcp-base@>=0.1.27 chassis
+ * serves directly. Schema reference:
+ *   - Chassis core: provisions + content + content_fts + db_metadata
+ *   - Chassis EU: eu_basis (table required because jurisdiction=EU triggers
+ *     the chassis's auto-registration of get_eu_basis; populated empty for
+ *     the EU MCP since EU primary law has no "implementing" EU basis)
+ *   - Chassis opt-ins (manifest flags): recitals + recitals_fts (single-
+ *     column over text per mcp-base v0.1.23+ contract), definitions
+ *     (term/source/definition shape), guidance_documents + guidance_sections
+ *     + guidance_sections_fts, provision_versions
+ *   - EU-local extension tables (served by extensionHandlers):
+ *     applicability_rules, control_mappings, evidence_requirements
+ *
+ * Canonical_ref convention: "{regulation_id}:art_{article_number}" for
+ * articles, "{regulation_id}:annex_{annex_ref}" for annexes. The chassis
+ * `search` and `get_provision` tools dispatch on this prefix.
+ *
  * Run with: npm run build:db
  */
 
@@ -17,180 +36,173 @@ const DATA_DIR = join(__dirname, '..', 'data');
 const SEED_DIR = join(DATA_DIR, 'seed');
 const DB_PATH = join(DATA_DIR, 'regulations.db');
 
-const SCHEMA = `
--- Core regulation metadata
-CREATE TABLE IF NOT EXISTS regulations (
-  id TEXT PRIMARY KEY,
-  full_name TEXT NOT NULL,
-  celex_id TEXT NOT NULL,
-  effective_date TEXT,
-  last_amended TEXT,
-  eur_lex_url TEXT
-);
-
--- Articles table
-CREATE TABLE IF NOT EXISTS articles (
-  rowid INTEGER PRIMARY KEY,
-  regulation TEXT NOT NULL REFERENCES regulations(id),
-  article_number TEXT NOT NULL,
-  title TEXT,
-  text TEXT NOT NULL,
-  chapter TEXT,
-  recitals TEXT,
-  cross_references TEXT,
-  UNIQUE(regulation, article_number)
-);
-
--- FTS5 virtual table for full-text search
-CREATE VIRTUAL TABLE IF NOT EXISTS articles_fts USING fts5(
-  regulation,
-  article_number,
-  title,
-  text,
-  content='articles',
-  content_rowid='rowid'
-);
-
--- FTS5 triggers
-CREATE TRIGGER IF NOT EXISTS articles_ai AFTER INSERT ON articles BEGIN
-  INSERT INTO articles_fts(rowid, regulation, article_number, title, text)
-  VALUES (new.rowid, new.regulation, new.article_number, new.title, new.text);
-END;
-
-CREATE TRIGGER IF NOT EXISTS articles_ad AFTER DELETE ON articles BEGIN
-  INSERT INTO articles_fts(articles_fts, rowid, regulation, article_number, title, text)
-  VALUES('delete', old.rowid, old.regulation, old.article_number, old.title, old.text);
-END;
-
-CREATE TRIGGER IF NOT EXISTS articles_au AFTER UPDATE ON articles BEGIN
-  INSERT INTO articles_fts(articles_fts, rowid, regulation, article_number, title, text)
-  VALUES('delete', old.rowid, old.regulation, old.article_number, old.title, old.text);
-  INSERT INTO articles_fts(rowid, regulation, article_number, title, text)
-  VALUES (new.rowid, new.regulation, new.article_number, new.title, new.text);
-END;
-
--- Definitions
-CREATE TABLE IF NOT EXISTS definitions (
-  id INTEGER PRIMARY KEY,
-  regulation TEXT NOT NULL REFERENCES regulations(id),
-  term TEXT NOT NULL,
-  definition TEXT NOT NULL,
-  article TEXT NOT NULL,
-  UNIQUE(regulation, term)
-);
-
--- Control mappings
-CREATE TABLE IF NOT EXISTS control_mappings (
-  id INTEGER PRIMARY KEY,
-  framework TEXT NOT NULL DEFAULT 'ISO27001',
-  control_id TEXT NOT NULL,
-  control_name TEXT NOT NULL,
-  regulation TEXT NOT NULL REFERENCES regulations(id),
-  articles TEXT NOT NULL,
-  coverage TEXT CHECK(coverage IN ('full', 'partial', 'related')),
-  notes TEXT
-);
-
--- Applicability rules
-CREATE TABLE IF NOT EXISTS applicability_rules (
-  id INTEGER PRIMARY KEY,
-  regulation TEXT NOT NULL REFERENCES regulations(id),
-  sector TEXT NOT NULL,
-  subsector TEXT,
-  applies INTEGER NOT NULL,
-  confidence TEXT CHECK(confidence IN ('definite', 'likely', 'possible')),
-  basis_article TEXT,
-  notes TEXT
-);
-
--- Source registry for tracking data quality
-CREATE TABLE IF NOT EXISTS source_registry (
-  regulation TEXT PRIMARY KEY REFERENCES regulations(id),
-  celex_id TEXT NOT NULL,
-  eur_lex_version TEXT,
-  last_fetched TEXT,
-  articles_expected INTEGER,
-  articles_parsed INTEGER,
-  quality_status TEXT CHECK(quality_status IN ('complete', 'review', 'incomplete')),
-  notes TEXT
-);
-
--- Recitals table
-CREATE TABLE IF NOT EXISTS recitals (
-  id INTEGER PRIMARY KEY,
-  regulation TEXT NOT NULL REFERENCES regulations(id),
-  recital_number INTEGER NOT NULL,
-  text TEXT NOT NULL,
-  related_articles TEXT,
-  UNIQUE(regulation, recital_number)
-);
-
--- FTS5 virtual table for recital search
-CREATE VIRTUAL TABLE IF NOT EXISTS recitals_fts USING fts5(
-  regulation,
-  recital_number,
-  text,
-  content='recitals',
-  content_rowid='id'
-);
-
--- FTS5 triggers for recitals
-CREATE TRIGGER IF NOT EXISTS recitals_ai AFTER INSERT ON recitals BEGIN
-  INSERT INTO recitals_fts(rowid, regulation, recital_number, text)
-  VALUES (new.id, new.regulation, new.recital_number, new.text);
-END;
-
-CREATE TRIGGER IF NOT EXISTS recitals_ad AFTER DELETE ON recitals BEGIN
-  INSERT INTO recitals_fts(recitals_fts, rowid, regulation, recital_number, text)
-  VALUES('delete', old.id, old.regulation, old.recital_number, old.text);
-END;
-
-CREATE TRIGGER IF NOT EXISTS recitals_au AFTER UPDATE ON recitals BEGIN
-  INSERT INTO recitals_fts(recitals_fts, rowid, regulation, recital_number, text)
-  VALUES('delete', old.id, old.regulation, old.recital_number, old.text);
-  INSERT INTO recitals_fts(rowid, regulation, recital_number, text)
-  VALUES (new.id, new.regulation, new.recital_number, new.text);
-END;
-
--- Database metadata (self-describing)
-CREATE TABLE IF NOT EXISTS db_metadata (
-  key TEXT PRIMARY KEY,
-  value TEXT NOT NULL
-);
-
--- Premium tier: article version tracking
-CREATE TABLE IF NOT EXISTS article_versions (
-  id INTEGER PRIMARY KEY,
-  article_id INTEGER NOT NULL,
-  body_text TEXT NOT NULL,
-  effective_date TEXT,
-  superseded_date TEXT,
-  scraped_at TEXT NOT NULL,
-  change_summary TEXT,
-  diff_from_previous TEXT,
-  source_url TEXT,
-  FOREIGN KEY (article_id) REFERENCES articles(rowid)
-);
-
-CREATE INDEX IF NOT EXISTS idx_av_article ON article_versions(article_id);
-CREATE INDEX IF NOT EXISTS idx_av_effective ON article_versions(effective_date);
-
--- Evidence requirements table
-CREATE TABLE IF NOT EXISTS evidence_requirements (
-  id INTEGER PRIMARY KEY,
-  regulation TEXT NOT NULL REFERENCES regulations(id),
-  article TEXT NOT NULL,
-  requirement_summary TEXT NOT NULL,
-  evidence_type TEXT NOT NULL CHECK(evidence_type IN ('document', 'log', 'test_result', 'certification', 'policy', 'procedure')),
-  artifact_name TEXT NOT NULL,
-  artifact_example TEXT,
-  description TEXT,
-  retention_period TEXT,
-  auditor_questions TEXT,
-  maturity_levels TEXT,
-  cross_references TEXT
-);
-`;
+const SCHEMA_STATEMENTS: string[] = [
+  // Chassis core (per mcps/_shared/translator-base.ts CHASSIS_CORE_SCHEMA)
+  `CREATE TABLE provisions (
+    id             INTEGER PRIMARY KEY,
+    canonical_ref  TEXT NOT NULL,
+    body           TEXT NOT NULL,
+    is_substantive INTEGER DEFAULT 1,
+    source_url     TEXT
+  )`,
+  `CREATE UNIQUE INDEX idx_provisions_canonical ON provisions(canonical_ref)`,
+  `CREATE TABLE content (
+    id           INTEGER PRIMARY KEY,
+    source_url   TEXT NOT NULL,
+    license_code TEXT
+  )`,
+  `CREATE VIRTUAL TABLE content_fts USING fts5(
+    body,
+    content='provisions',
+    content_rowid='id',
+    tokenize='unicode61 remove_diacritics 2'
+  )`,
+  `CREATE TABLE db_metadata (
+    key   TEXT PRIMARY KEY,
+    value TEXT NOT NULL
+  )`,
+  // Chassis EU (required because jurisdiction=EU triggers auto-register)
+  `CREATE TABLE eu_basis (
+    id               INTEGER PRIMARY KEY,
+    provision_id     INTEGER NOT NULL,
+    celex            TEXT NOT NULL,
+    reference_type   TEXT,
+    alignment_status TEXT,
+    in_force_from    TEXT,
+    in_force_to      TEXT,
+    FOREIGN KEY (provision_id) REFERENCES provisions(id)
+  )`,
+  `CREATE INDEX idx_eu_basis_provision ON eu_basis(provision_id)`,
+  `CREATE INDEX idx_eu_basis_celex ON eu_basis(celex)`,
+  // Chassis opt-in: recitals (mcp-base v0.1.23+). Single-column recitals_fts
+  // over text per mcp-base v0.1.27 contract.
+  `CREATE TABLE recitals (
+    id               INTEGER PRIMARY KEY,
+    regulation       TEXT NOT NULL,
+    recital_number   INTEGER NOT NULL,
+    text             TEXT NOT NULL,
+    related_articles TEXT,
+    UNIQUE(regulation, recital_number)
+  )`,
+  `CREATE VIRTUAL TABLE recitals_fts USING fts5(
+    text,
+    content='recitals',
+    content_rowid='id',
+    tokenize='unicode61 remove_diacritics 2'
+  )`,
+  // Chassis opt-in: definitions (mcp-base v0.1.19+).
+  `CREATE TABLE definitions (
+    id          INTEGER PRIMARY KEY,
+    term        TEXT NOT NULL,
+    source      TEXT NOT NULL,
+    definition  TEXT NOT NULL,
+    article     TEXT,
+    UNIQUE(source, term)
+  )`,
+  `CREATE INDEX idx_definitions_source ON definitions(source)`,
+  // Chassis opt-in: guidance (mcp-base v0.1.17+).
+  `CREATE TABLE guidance_documents (
+    id                  TEXT PRIMARY KEY,
+    title               TEXT NOT NULL,
+    issuing_body        TEXT NOT NULL,
+    document_reference  TEXT,
+    date_published      TEXT,
+    date_revised        TEXT,
+    related_regulation  TEXT,
+    url                 TEXT,
+    pdf_url             TEXT,
+    status              TEXT DEFAULT 'current',
+    metadata            TEXT
+  )`,
+  `CREATE TABLE guidance_sections (
+    id              INTEGER PRIMARY KEY,
+    document_id     TEXT NOT NULL REFERENCES guidance_documents(id),
+    section_number  TEXT NOT NULL,
+    title           TEXT NOT NULL,
+    content         TEXT NOT NULL,
+    parent_section  TEXT,
+    metadata        TEXT,
+    UNIQUE(document_id, section_number)
+  )`,
+  `CREATE VIRTUAL TABLE guidance_sections_fts USING fts5(
+    document_id,
+    section_number,
+    title,
+    content,
+    content='guidance_sections',
+    content_rowid='id',
+    tokenize='porter unicode61'
+  )`,
+  `CREATE TRIGGER guidance_sections_ai AFTER INSERT ON guidance_sections BEGIN
+    INSERT INTO guidance_sections_fts(rowid, document_id, section_number, title, content)
+    VALUES (new.id, new.document_id, new.section_number, new.title, new.content);
+  END`,
+  `CREATE INDEX idx_gd_date ON guidance_documents(date_published DESC)`,
+  // Chassis opt-in: provision_versions (mcp-base v0.1.18+).
+  `CREATE TABLE provision_versions (
+    id                  INTEGER PRIMARY KEY,
+    canonical_ref       TEXT NOT NULL,
+    effective_date      TEXT,
+    superseded_date     TEXT,
+    body_text           TEXT,
+    change_summary      TEXT,
+    diff_from_previous  TEXT,
+    source_url          TEXT,
+    scraped_at          TEXT,
+    metadata            TEXT
+  )`,
+  `CREATE INDEX idx_pv_canonical ON provision_versions(canonical_ref)`,
+  `CREATE INDEX idx_pv_effective ON provision_versions(effective_date)`,
+  // EU-local: tables consumed by the ExtensionHandlers.
+  `CREATE TABLE applicability_rules (
+    id            INTEGER PRIMARY KEY,
+    regulation    TEXT NOT NULL,
+    sector        TEXT NOT NULL,
+    subsector     TEXT,
+    applies       INTEGER NOT NULL,
+    confidence    TEXT CHECK(confidence IN ('definite', 'likely', 'possible')),
+    basis_article TEXT,
+    notes         TEXT
+  )`,
+  `CREATE INDEX idx_applicability_sector ON applicability_rules(sector)`,
+  `CREATE TABLE control_mappings (
+    id            INTEGER PRIMARY KEY,
+    framework     TEXT NOT NULL DEFAULT 'ISO27001',
+    control_id    TEXT NOT NULL,
+    control_name  TEXT NOT NULL,
+    regulation    TEXT NOT NULL,
+    articles      TEXT NOT NULL,
+    coverage      TEXT CHECK(coverage IN ('full', 'partial', 'related')),
+    notes         TEXT
+  )`,
+  `CREATE INDEX idx_mappings_regulation ON control_mappings(regulation)`,
+  `CREATE INDEX idx_mappings_framework ON control_mappings(framework)`,
+  `CREATE TABLE evidence_requirements (
+    id                  INTEGER PRIMARY KEY,
+    regulation          TEXT NOT NULL,
+    article             TEXT NOT NULL,
+    requirement_summary TEXT NOT NULL,
+    evidence_type       TEXT NOT NULL CHECK(evidence_type IN ('document', 'log', 'test_result', 'certification', 'policy', 'procedure')),
+    artifact_name       TEXT NOT NULL,
+    artifact_example    TEXT,
+    description         TEXT,
+    retention_period    TEXT,
+    auditor_questions   TEXT,
+    maturity_levels     TEXT,
+    cross_references    TEXT
+  )`,
+  `CREATE INDEX idx_evidence_regulation ON evidence_requirements(regulation)`,
+  `CREATE TABLE source_registry (
+    regulation         TEXT PRIMARY KEY,
+    celex_id           TEXT NOT NULL,
+    eur_lex_version    TEXT,
+    last_fetched       TEXT,
+    articles_expected  INTEGER,
+    articles_parsed    INTEGER,
+    quality_status     TEXT CHECK(quality_status IN ('complete', 'review', 'incomplete')),
+    notes              TEXT
+  )`,
+];
 
 interface RegulationSeed {
   id: string;
@@ -206,6 +218,11 @@ interface RegulationSeed {
     recitals?: string[];
     cross_references?: string[];
   }>;
+  annexes?: Array<{
+    number: string;
+    title: string;
+    text: string;
+  }>;
   definitions?: Array<{
     term: string;
     definition: string;
@@ -214,258 +231,284 @@ interface RegulationSeed {
   recitals?: Array<{
     recital_number: number;
     text: string;
-    related_articles?: string;
+    related_articles?: string[] | number[];
   }>;
 }
 
-function buildDatabase() {
-  console.log('Building regulations database...');
+const ELI_BASE = 'https://eur-lex.europa.eu/eli';
+const CELEX_TO_ELI_TYPE: Record<string, string> = { R: 'reg', L: 'dir', D: 'dec' };
 
-  // Ensure data directory exists
-  if (!existsSync(DATA_DIR)) {
-    mkdirSync(DATA_DIR, { recursive: true });
+function celexToEliBase(celexId: string | null | undefined): string | null {
+  if (!celexId) return null;
+  const match = celexId.match(/^3(\d{4})([A-Z])(\d+)$/);
+  if (!match) return null;
+  const [, year, type, num] = match;
+  const eliType = CELEX_TO_ELI_TYPE[type];
+  if (!eliType) return null;
+  const numClean = String(parseInt(num, 10));
+  return `${ELI_BASE}/${eliType}/${year}/${numClean}/oj`;
+}
+
+function buildProvisionSourceUrl(
+  celexId: string,
+  fallbackUrl: string,
+  ref: string,
+): string {
+  const eli = celexToEliBase(celexId);
+  if (!eli) return fallbackUrl;
+  if (ref.startsWith('art_')) {
+    return `${eli}#${ref}`;
   }
+  if (ref.startsWith('annex_')) {
+    return `${eli}#anx_${ref.slice('annex_'.length)}`;
+  }
+  return eli;
+}
 
-  // Delete existing database
+function buildDatabase() {
+  console.log('Building EU regulations chassis-shape database...');
+
+  if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true });
   if (existsSync(DB_PATH)) {
     console.log('Removing existing database...');
     unlinkSync(DB_PATH);
   }
 
-  // Create new database
   const db = new Database(DB_PATH);
-  db.pragma('foreign_keys = ON');
+  db.pragma('journal_mode = DELETE');
+  db.pragma('foreign_keys = OFF');
 
-  // Create schema
-  console.log('Creating schema...');
-  db.exec(SCHEMA);
+  console.log('Creating chassis schema...');
+  for (const stmt of SCHEMA_STATEMENTS) {
+    db.prepare(stmt).run();
+  }
 
-  // Apply guidance schema (from add-guidance-tables.sql). Kept as a separate file
-  // so ingestion scripts can also apply it idempotently on pre-existing DBs.
-  const GUIDANCE_SCHEMA = readFileSync(
-    join(__dirname, 'add-guidance-tables.sql'),
-    'utf-8',
+  let nextProvisionId = 1;
+  const insertContent = db.prepare(
+    'INSERT INTO content (id, source_url, license_code) VALUES (?, ?, ?)',
   );
-  db.exec(GUIDANCE_SCHEMA);
+  const insertProvision = db.prepare(
+    'INSERT INTO provisions (id, canonical_ref, body, is_substantive, source_url) VALUES (?, ?, ?, ?, ?)',
+  );
+  const insertFts = db.prepare('INSERT INTO content_fts (rowid, body) VALUES (?, ?)');
+  const insertRecital = db.prepare(
+    'INSERT OR IGNORE INTO recitals (regulation, recital_number, text, related_articles) VALUES (?, ?, ?, ?)',
+  );
+  const insertDefinition = db.prepare(
+    'INSERT OR IGNORE INTO definitions (term, source, definition, article) VALUES (?, ?, ?, ?)',
+  );
+  const insertSourceRegistry = db.prepare(`
+    INSERT INTO source_registry (regulation, celex_id, eur_lex_version, last_fetched, articles_expected, articles_parsed, quality_status)
+    VALUES (?, ?, ?, ?, ?, ?, 'complete')
+  `);
 
-  // Load and insert seed files
-  if (existsSync(SEED_DIR)) {
-    const seedFiles = readdirSync(SEED_DIR).filter((f: string) => f.endsWith('.json'));
+  const stats = {
+    regulations: 0,
+    provisions: 0,
+    recitals: 0,
+    definitions: 0,
+    annexes: 0,
+  };
 
+  if (!existsSync(SEED_DIR)) {
+    console.log('No seed directory found. Database created with empty tables.');
+    console.log(`Create seed files in: ${SEED_DIR}`);
+    db.close();
+    return;
+  }
+
+  const seedFiles = readdirSync(SEED_DIR)
+    .filter((f: string) => f.endsWith('.json'))
+    .filter((f) => !f.startsWith('mappings'));
+
+  const tx = db.transaction(() => {
     for (const file of seedFiles) {
-      if (file.startsWith('mappings')) continue;
+      const raw = readFileSync(join(SEED_DIR, file), 'utf-8');
+      const reg: RegulationSeed = JSON.parse(raw);
+      stats.regulations++;
+      const baseUrl = reg.eur_lex_url ?? '';
 
-      console.log(`Loading ${file}...`);
-      const content = readFileSync(join(SEED_DIR, file), 'utf-8');
-      const regulation: RegulationSeed = JSON.parse(content);
+      // Articles -> provisions.
+      for (const article of reg.articles) {
+        const ref = `${reg.id}:art_${article.number}`;
+        const body = article.title ? `${article.title}\n\n${article.text}` : article.text;
+        const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `art_${article.number}`);
+        const id = nextProvisionId++;
+        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0');
+        insertProvision.run(id, ref, body, 1, provisionSourceUrl);
+        insertFts.run(id, body);
+        stats.provisions++;
+      }
 
-      // Insert regulation
-      db.prepare(`
-        INSERT INTO regulations (id, full_name, celex_id, effective_date, eur_lex_url)
-        VALUES (?, ?, ?, ?, ?)
-      `).run(
-        regulation.id,
-        regulation.full_name,
-        regulation.celex_id,
-        regulation.effective_date || null,
-        regulation.eur_lex_url || null
+      // Annexes -> provisions.
+      for (const annex of reg.annexes ?? []) {
+        const annexNum = annex.number.replace(/^Annex\s+/i, '').replace(/\s+/g, '_');
+        const ref = `${reg.id}:annex_${annexNum}`;
+        const body = `${annex.title}\n\n${annex.text}`;
+        const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `annex_${annexNum}`);
+        const id = nextProvisionId++;
+        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0');
+        insertProvision.run(id, ref, body, 1, provisionSourceUrl);
+        insertFts.run(id, body);
+        stats.provisions++;
+        stats.annexes++;
+      }
+
+      // Recitals.
+      for (const r of reg.recitals ?? []) {
+        insertRecital.run(
+          reg.id,
+          r.recital_number,
+          r.text,
+          r.related_articles ? JSON.stringify(r.related_articles) : null,
+        );
+        stats.recitals++;
+      }
+
+      // Definitions.
+      for (const def of reg.definitions ?? []) {
+        insertDefinition.run(def.term, reg.id, def.definition, def.article);
+        stats.definitions++;
+      }
+
+      const now = new Date().toISOString();
+      const eurLexVersion = reg.effective_date ?? now.split('T')[0];
+      insertSourceRegistry.run(
+        reg.id,
+        reg.celex_id,
+        eurLexVersion,
+        now,
+        reg.articles.length,
+        reg.articles.length,
       );
 
-      // Insert articles
-      const insertArticle = db.prepare(`
-        INSERT INTO articles (regulation, article_number, title, text, chapter, recitals, cross_references)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-      `);
-
-      for (const article of regulation.articles) {
-        insertArticle.run(
-          regulation.id,
-          article.number,
-          article.title || null,
-          article.text,
-          article.chapter || null,
-          article.recitals ? JSON.stringify(article.recitals) : null,
-          article.cross_references ? JSON.stringify(article.cross_references) : null
-        );
-      }
-
-      // Insert definitions
-      if (regulation.definitions) {
-        const insertDefinition = db.prepare(`
-          INSERT OR IGNORE INTO definitions (regulation, term, definition, article)
-          VALUES (?, ?, ?, ?)
-        `);
-
-        for (const def of regulation.definitions) {
-          insertDefinition.run(regulation.id, def.term, def.definition, def.article);
-        }
-      }
-
-      // Insert recitals
-      if (regulation.recitals) {
-        const insertRecital = db.prepare(`
-          INSERT OR IGNORE INTO recitals (regulation, recital_number, text, related_articles)
-          VALUES (?, ?, ?, ?)
-        `);
-
-        for (const recital of regulation.recitals) {
-          insertRecital.run(
-            regulation.id,
-            recital.recital_number,
-            recital.text,
-            recital.related_articles ? JSON.stringify(recital.related_articles) : null
-          );
-        }
-      }
-
-      // Update source registry with timestamps
-      const now = new Date().toISOString();
-      const eurLexVersion = regulation.effective_date || now.split('T')[0];
-      db.prepare(`
-        INSERT INTO source_registry (regulation, celex_id, eur_lex_version, last_fetched, articles_expected, articles_parsed, quality_status)
-        VALUES (?, ?, ?, ?, ?, ?, 'complete')
-      `).run(regulation.id, regulation.celex_id, eurLexVersion, now, regulation.articles.length, regulation.articles.length);
-
-      console.log(`  Loaded ${regulation.articles.length} articles, ${regulation.definitions?.length || 0} definitions`);
-      if (regulation.recitals && regulation.recitals.length > 0) {
-        console.log(`  Loaded ${regulation.recitals.length} recitals`);
-      }
+      console.log(
+        `  ${reg.id}: ${reg.articles.length} articles, ${(reg.annexes ?? []).length} annexes, ` +
+          `${(reg.recitals ?? []).length} recitals, ${(reg.definitions ?? []).length} definitions`,
+      );
     }
+  });
+  tx();
 
-    // Load mappings
-    const mappingsDir = join(SEED_DIR, 'mappings');
-    if (existsSync(mappingsDir)) {
-      const mappingFiles = readdirSync(mappingsDir).filter((f: string) => f.endsWith('.json'));
-
-      for (const file of mappingFiles) {
-        console.log(`Loading mappings from ${file}...`);
-        const content = readFileSync(join(mappingsDir, file), 'utf-8');
-        const mappings = JSON.parse(content);
-
-        // Detect framework from filename
-        let framework = 'ISO27001';
-        if (file.startsWith('nist-csf-')) {
-          framework = 'NIST_CSF';
-        } else if (file.startsWith('iso27001-')) {
-          framework = 'ISO27001';
-        }
-
-        const insertMapping = db.prepare(`
-          INSERT INTO control_mappings (framework, control_id, control_name, regulation, articles, coverage, notes)
-          VALUES (?, ?, ?, ?, ?, ?, ?)
-        `);
-
-        for (const mapping of mappings) {
+  // Control mappings.
+  const mappingsDir = join(SEED_DIR, 'mappings');
+  if (existsSync(mappingsDir)) {
+    const insertMapping = db.prepare(`
+      INSERT INTO control_mappings (framework, control_id, control_name, regulation, articles, coverage, notes)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `);
+    let total = 0;
+    const mappingTx = db.transaction(() => {
+      for (const file of readdirSync(mappingsDir).filter((f) => f.endsWith('.json'))) {
+        const raw = readFileSync(join(mappingsDir, file), 'utf-8');
+        const mappings = JSON.parse(raw);
+        const framework = file.startsWith('nist-csf-') ? 'NIST_CSF' : 'ISO27001';
+        for (const m of mappings) {
           insertMapping.run(
             framework,
-            mapping.control_id,
-            mapping.control_name,
-            mapping.regulation,
-            JSON.stringify(mapping.articles),
-            mapping.coverage,
-            mapping.notes || null
+            m.control_id,
+            m.control_name,
+            m.regulation,
+            JSON.stringify(m.articles),
+            m.coverage,
+            m.notes ?? null,
           );
+          total++;
         }
-
-        console.log(`  Loaded ${mappings.length} ${framework} control mappings`);
       }
-    }
+    });
+    mappingTx();
+    console.log(`  Loaded ${total} control mappings`);
+  }
 
-    // Load applicability rules
-    const applicabilityDir = join(SEED_DIR, 'applicability');
-    if (existsSync(applicabilityDir)) {
-      const applicabilityFiles = readdirSync(applicabilityDir).filter((f: string) => f.endsWith('.json'));
-
-      const insertApplicability = db.prepare(`
-        INSERT INTO applicability_rules (regulation, sector, subsector, applies, confidence, basis_article, notes)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-      `);
-
-      for (const file of applicabilityFiles) {
-        console.log(`Loading applicability rules from ${file}...`);
-        const content = readFileSync(join(applicabilityDir, file), 'utf-8');
-        const rules = JSON.parse(content);
-
-        for (const rule of rules) {
-          insertApplicability.run(
-            rule.regulation,
-            rule.sector,
-            rule.subsector || null,
-            rule.applies ? 1 : 0,
-            rule.confidence,
-            rule.basis_article || null,
-            rule.notes || null
+  // Applicability rules.
+  const applicabilityDir = join(SEED_DIR, 'applicability');
+  if (existsSync(applicabilityDir)) {
+    const insertApp = db.prepare(`
+      INSERT INTO applicability_rules (regulation, sector, subsector, applies, confidence, basis_article, notes)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `);
+    let total = 0;
+    const appTx = db.transaction(() => {
+      for (const file of readdirSync(applicabilityDir).filter((f) => f.endsWith('.json'))) {
+        const raw = readFileSync(join(applicabilityDir, file), 'utf-8');
+        const rules = JSON.parse(raw);
+        for (const r of rules) {
+          insertApp.run(
+            r.regulation,
+            r.sector,
+            r.subsector ?? null,
+            r.applies ? 1 : 0,
+            r.confidence,
+            r.basis_article ?? null,
+            r.notes ?? null,
           );
+          total++;
         }
-
-        console.log(`  Loaded ${rules.length} applicability rules`);
       }
-    }
+    });
+    appTx();
+    console.log(`  Loaded ${total} applicability rules`);
+  }
 
-    // Load evidence requirements
-    const evidenceDir = join(SEED_DIR, 'evidence');
-    if (existsSync(evidenceDir)) {
-      const evidenceFiles = readdirSync(evidenceDir).filter((f: string) => f.endsWith('.json'));
-
-      const insertEvidence = db.prepare(`
-        INSERT INTO evidence_requirements (
-          regulation, article, requirement_summary, evidence_type,
-          artifact_name, artifact_example, description, retention_period,
-          auditor_questions, maturity_levels, cross_references
-        )
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      `);
-
-      for (const file of evidenceFiles) {
-        console.log(`Loading evidence requirements from ${file}...`);
-        const content = readFileSync(join(evidenceDir, file), 'utf-8');
-        const requirements = JSON.parse(content);
-
-        for (const req of requirements) {
+  // Evidence requirements.
+  const evidenceDir = join(SEED_DIR, 'evidence');
+  if (existsSync(evidenceDir)) {
+    const insertEvidence = db.prepare(`
+      INSERT INTO evidence_requirements
+        (regulation, article, requirement_summary, evidence_type, artifact_name,
+         artifact_example, description, retention_period, auditor_questions,
+         maturity_levels, cross_references)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `);
+    let total = 0;
+    const evidenceTx = db.transaction(() => {
+      for (const file of readdirSync(evidenceDir).filter((f) => f.endsWith('.json'))) {
+        const raw = readFileSync(join(evidenceDir, file), 'utf-8');
+        const reqs = JSON.parse(raw);
+        for (const req of reqs) {
           insertEvidence.run(
             req.regulation,
             req.article,
             req.requirement_summary,
             req.evidence_type,
             req.artifact_name,
-            req.artifact_example || null,
-            req.description || null,
-            req.retention_period || null,
+            req.artifact_example ?? null,
+            req.description ?? null,
+            req.retention_period ?? null,
             req.auditor_questions ? JSON.stringify(req.auditor_questions) : null,
             req.maturity_levels ? JSON.stringify(req.maturity_levels) : null,
-            req.cross_references ? JSON.stringify(req.cross_references) : null
+            req.cross_references ? JSON.stringify(req.cross_references) : null,
           );
+          total++;
         }
-
-        console.log(`  Loaded ${requirements.length} evidence requirements`);
       }
-    }
+    });
+    evidenceTx();
+    console.log(`  Loaded ${total} evidence requirements`);
+  }
 
-    // Load guidance documents + sections
-    const guidanceDir = join(SEED_DIR, 'guidance');
-    if (existsSync(guidanceDir)) {
-      const guidanceFiles = readdirSync(guidanceDir).filter((f: string) =>
-        f.endsWith('.json'),
-      );
-
-      const insertGuidanceDoc = db.prepare(`
-        INSERT INTO guidance_documents
-        (id, title, issuing_body, document_reference, date_published, related_regulation, url, pdf_url, status, metadata)
-        VALUES (@id, @title, @issuing_body, @document_reference, @date_published, @related_regulation, @url, @pdf_url, @status, @metadata)
-      `);
-      const insertGuidanceSection = db.prepare(`
-        INSERT INTO guidance_sections
+  // Guidance documents + sections.
+  const guidanceDir = join(SEED_DIR, 'guidance');
+  if (existsSync(guidanceDir)) {
+    const insertGuidanceDoc = db.prepare(`
+      INSERT INTO guidance_documents
+        (id, title, issuing_body, document_reference, date_published,
+         related_regulation, url, pdf_url, status, metadata)
+      VALUES (@id, @title, @issuing_body, @document_reference, @date_published,
+              @related_regulation, @url, @pdf_url, @status, @metadata)
+    `);
+    const insertGuidanceSection = db.prepare(`
+      INSERT INTO guidance_sections
         (document_id, section_number, title, content, parent_section)
-        VALUES (@document_id, @section_number, @title, @content, @parent_section)
-      `);
-
-      let totalGuidanceDocs = 0;
-      let totalGuidanceSections = 0;
-
-      for (const file of guidanceFiles) {
-        const content = readFileSync(join(guidanceDir, file), 'utf-8');
-        const seed = JSON.parse(content);
-
+      VALUES (@document_id, @section_number, @title, @content, @parent_section)
+    `);
+    let totalDocs = 0;
+    let totalSections = 0;
+    const guidanceTx = db.transaction(() => {
+      for (const file of readdirSync(guidanceDir).filter((f) => f.endsWith('.json'))) {
+        const raw = readFileSync(join(guidanceDir, file), 'utf-8');
+        const seed = JSON.parse(raw);
         insertGuidanceDoc.run({
           id: seed.id,
           title: seed.title,
@@ -478,9 +521,8 @@ function buildDatabase() {
           status: seed.status ?? 'current',
           metadata: seed.metadata ? JSON.stringify(seed.metadata) : null,
         });
-        totalGuidanceDocs++;
-
-        for (const sec of seed.sections || []) {
+        totalDocs++;
+        for (const sec of seed.sections ?? []) {
           insertGuidanceSection.run({
             document_id: seed.id,
             section_number: sec.section_number,
@@ -488,50 +530,34 @@ function buildDatabase() {
             content: sec.content,
             parent_section: sec.parent_section ?? null,
           });
-          totalGuidanceSections++;
+          totalSections++;
         }
       }
-
-      console.log(
-        `Loaded ${totalGuidanceDocs} guidance documents ` +
-          `with ${totalGuidanceSections} sections`,
-      );
-    }
-  } else {
-    console.log('No seed directory found. Database created with empty tables.');
-    console.log(`Create seed files in: ${SEED_DIR}`);
+    });
+    guidanceTx();
+    console.log(`  Loaded ${totalDocs} guidance documents with ${totalSections} sections`);
   }
 
-  // Insert db_metadata
-  const now = new Date().toISOString();
+  // db_metadata.
   const insertMeta = db.prepare('INSERT INTO db_metadata (key, value) VALUES (?, ?)');
-  insertMeta.run('schema_version', '2');
+  const now = new Date().toISOString();
+  insertMeta.run('schema_version', '3-chassis');
   insertMeta.run('tier', 'full');
   insertMeta.run('jurisdiction', 'EU');
   insertMeta.run('built_at', now);
-  insertMeta.run('builder', 'build-db.ts');
+  insertMeta.run('builder', 'scripts/build-db.ts (chassis migration Phase 5)');
+  insertMeta.run('chassis_compatible_min_version', '0.1.27');
+  insertMeta.run('regulations_count', String(stats.regulations));
+  insertMeta.run('provisions_count', String(stats.provisions));
+  insertMeta.run('annexes_count', String(stats.annexes));
+  insertMeta.run('recitals_count', String(stats.recitals));
+  insertMeta.run('definitions_count', String(stats.definitions));
 
-  // Count totals for metadata
-  const totalRegulations = (db.prepare('SELECT COUNT(*) as c FROM regulations').get() as any).c;
-  const totalArticles = (db.prepare('SELECT COUNT(*) as c FROM articles').get() as any).c;
-  const totalRecitals = (db.prepare('SELECT COUNT(*) as c FROM recitals').get() as any).c;
-  const totalDefinitions = (db.prepare('SELECT COUNT(*) as c FROM definitions').get() as any).c;
-  const totalMappings = (db.prepare('SELECT COUNT(*) as c FROM control_mappings').get() as any).c;
-  const totalEvidence = (db.prepare('SELECT COUNT(*) as c FROM evidence_requirements').get() as any).c;
-  const totalApplicability = (db.prepare('SELECT COUNT(*) as c FROM applicability_rules').get() as any).c;
-
-  insertMeta.run('regulations_count', String(totalRegulations));
-  insertMeta.run('articles_count', String(totalArticles));
-  insertMeta.run('recitals_count', String(totalRecitals));
-  insertMeta.run('definitions_count', String(totalDefinitions));
-  insertMeta.run('control_mappings_count', String(totalMappings));
-  insertMeta.run('evidence_requirements_count', String(totalEvidence));
-  insertMeta.run('applicability_rules_count', String(totalApplicability));
-
-  console.log(`\ndb_metadata populated: schema_version=2, tier=full, jurisdiction=EU`);
-
-  // Set journal mode to DELETE (required for Vercel serverless — WAL creates sidecar files)
-  db.pragma('journal_mode = DELETE');
+  console.log(`\nChassis DB built — schema_version=3-chassis, jurisdiction=EU`);
+  console.log(
+    `Totals: ${stats.regulations} regulations, ${stats.provisions} provisions ` +
+      `(${stats.annexes} annexes), ${stats.recitals} recitals, ${stats.definitions} definitions`,
+  );
 
   db.close();
   console.log(`\nDatabase created at: ${DB_PATH}`);

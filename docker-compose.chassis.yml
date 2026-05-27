@@ -1,0 +1,33 @@
+# Phase 5 chassis migration — local dev compose for testing the chassis boot
+# end-to-end against the prebuilt regulations.db.
+#
+# Usage:
+#   1. npm run build:db    # produces data/regulations.db in chassis shape
+#   2. docker compose -f docker-compose.chassis.yml up --build
+#   3. curl http://localhost:8300/health    # expects {status: "ok"}
+#   4. (interact via MCP protocol over stdio in a connected MCP client)
+#
+# The legacy docker-compose.yml (PostgreSQL + REST API + custom MCP) is
+# preserved for reference but no longer functional once src/ is purged.
+
+services:
+  eu-regulations-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ansvar-systems/eu-regulations-mcp:chassis-dev
+    container_name: eu-regulations-mcp-chassis
+    volumes:
+      # Volume-mount the chassis-shape DB (built by scripts/build-db.ts).
+      # Read-only because the chassis Dockerfile sets journal_mode=DELETE
+      # which doesn't need write access at runtime.
+      - ./data:/app/data:ro
+    ports:
+      - "8300:8300"
+    environment:
+      NODE_ENV: production
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O-", "http://127.0.0.1:8300/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
