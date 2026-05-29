@@ -62,7 +62,7 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # Requires mcp-base v0.1.28+ — earlier releases reject the four chassis
 # opt-in flags at Gate 0 (schema validation) even though the chassis runtime
 # supports them. See mcp-base PR #39. v0.1.26+ for extensionHandlers API.
-FROM ghcr.io/ansvar-systems/mcp-base:v0.1.28-alpine
+FROM ghcr.io/ansvar-systems/mcp-base:v0.1.36-alpine
 
 WORKDIR /app
 
