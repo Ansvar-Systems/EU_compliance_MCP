@@ -33,8 +33,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const DATA_DIR = join(__dirname, '..', 'data');
-const SEED_DIR = join(DATA_DIR, 'seed');
-const DB_PATH = join(DATA_DIR, 'regulations.db');
+const SEED_DIR = process.env.SEED_DIR ?? join(DATA_DIR, 'seed');
+const DB_PATH = process.env.DB_PATH ?? join(DATA_DIR, 'regulations.db');
 
 const SCHEMA_STATEMENTS: string[] = [
   // Chassis core (per mcps/_shared/translator-base.ts CHASSIS_CORE_SCHEMA)
@@ -352,6 +352,23 @@ function buildDatabase() {
         insertFts.run(id, body);
         stats.provisions++;
         stats.annexes++;
+      }
+
+      // Title :meta row (mcp-base v0.1.36 title-boost): one {id}:meta provision
+      // whose body is the regulation's name, so a query for the regulation by
+      // name ("Cyber Resilience Act", "Digital Operational Resilience Act")
+      // surfaces the regulation itself instead of scattered articles of other
+      // regulations that merely mention the phrase. The `(id)` suffix keeps the
+      // acronym ("DORA") searchable.
+      {
+        const metaRef = `${reg.id}:meta`;
+        const metaBody = `${reg.full_name} (${reg.id})`;
+        const metaUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, 'meta');
+        const mId = nextProvisionId++;
+        insertContent.run(mId, metaUrl, 'CC-BY-4.0');
+        insertProvision.run(mId, metaRef, metaBody, 1, metaUrl);
+        insertFts.run(mId, metaBody);
+        stats.provisions++;
       }
 
       // Recitals.
