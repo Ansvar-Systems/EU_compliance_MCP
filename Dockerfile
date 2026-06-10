@@ -59,14 +59,12 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 2: chassis runtime
 # ────────────────────────────────────────────────────────────────────────────
-# mcp-base v1.1.0 — corpus serve surface is byte-parity with the v0.1.36 image
-# this MCP migrated on (verified by mcp-base's golden characterization test).
-# Consumer-visible deltas picked up with this bump: typed DATA_SOURCE_DEGRADED
-# search errors (v0.2.0, gateway companion already shipped), CitationBuilder
-# content-column enrichment (v1.0.2, additive), and real installed-version
-# reporting for Gate 2 / ansvar_mcp_info (v1.0.3 — the fleet-wide
-# "mcp_base_version=1.0.0" fiction fix).
-FROM ghcr.io/ansvar-systems/mcp-base:v1.1.0-alpine
+# mcp-base v1.1.1 — adds the two consumer-shape probes this corpus needs:
+# get_recital/search_recitals read the per-recital recitals.source_url column
+# (the document-keyed content join can't match our per-provision content
+# table; issue #71), and get_provision_history tolerates schemas without
+# version_label (it errored on every call here pre-1.1.1; issue #70).
+FROM ghcr.io/ansvar-systems/mcp-base:v1.1.1-alpine
 
 WORKDIR /app
 
