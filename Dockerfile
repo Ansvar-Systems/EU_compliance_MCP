@@ -59,12 +59,11 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 2: chassis runtime
 # ────────────────────────────────────────────────────────────────────────────
-# mcp-base v1.1.1 — adds the two consumer-shape probes this corpus needs:
-# get_recital/search_recitals read the per-recital recitals.source_url column
-# (the document-keyed content join can't match our per-provision content
-# table; issue #71), and get_provision_history tolerates schemas without
-# version_label (it errored on every call here pre-1.1.1; issue #70).
-FROM ghcr.io/ansvar-systems/mcp-base:v1.1.1-alpine
+# mcp-base v1.2.0 — adds the dead-FTS-index boot gates (fts_index_built
+# auto-injected for content_fts/recitals_fts/guidance_sections_fts +
+# fts_match_min) that this corpus's silently-dead search_recitals motivated.
+# v1.1.1 deltas retained: per-recital source_url; optional version_label.
+FROM ghcr.io/ansvar-systems/mcp-base:v1.2.0-alpine
 
 WORKDIR /app
 
