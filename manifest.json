@@ -1,6 +1,6 @@
 {
  "manifest_schema_version": "1.0.0",
- "mcp_base_min_version": "1.2.0",
+ "mcp_base_min_version": "1.2.1",
  "identity": {
   "name": "eu-regulations-mcp",
   "display_name": "EU Regulations",
@@ -12,8 +12,8 @@
   "base_tier": "free"
  },
  "data": {
-  "database_sha256": "sha256:f1b6248dfebf2b84dc3b5347aa458d34dc4400946e4302f40c9b483f1ea895ca",
-  "snapshot_id": "sha256:f1b6248dfebf2b84dc3b5347aa458d34dc4400946e4302f40c9b483f1ea895ca",
+  "database_sha256": "sha256:6cd8c7315d3f79615f35dee97c90e254349eed3db005490b253a8a39dd7df612",
+  "snapshot_id": "sha256:6cd8c7315d3f79615f35dee97c90e254349eed3db005490b253a8a39dd7df612",
   "generated_at": "2026-06-10T00:00:00Z",
   "database_path": "/app/data/regulations.db",
   "recitals_enabled": true,
@@ -91,6 +91,13 @@
     "table": "guidance_sections_fts",
     "query": "risk",
     "min": 10
+   },
+   {
+    "name": "content_full_name_complete",
+    "type": "null_count_max",
+    "table": "content",
+    "column": "source_full_name",
+    "max": 0
    }
   ]
  },

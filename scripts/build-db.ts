@@ -46,10 +46,17 @@ const SCHEMA_STATEMENTS: string[] = [
     source_url     TEXT
   )`,
   `CREATE UNIQUE INDEX idx_provisions_canonical ON provisions(canonical_ref)`,
+  // source_full_name + effective_date follow the chassis CitationBuilder
+  // content-column convention (mcp-base v1.0.2+): columns with these exact
+  // names are PRAGMA-probed and emitted as _citation.source_full_name /
+  // .effective_date on every served row — the two fields the gateway cannot
+  // derive from a canonical_ref.
   `CREATE TABLE content (
-    id           INTEGER PRIMARY KEY,
-    source_url   TEXT NOT NULL,
-    license_code TEXT
+    id               INTEGER PRIMARY KEY,
+    source_url       TEXT NOT NULL,
+    license_code     TEXT,
+    source_full_name TEXT,
+    effective_date   TEXT
   )`,
   `CREATE VIRTUAL TABLE content_fts USING fts5(
     body,
@@ -296,7 +303,7 @@ function buildDatabase() {
 
   let nextProvisionId = 1;
   const insertContent = db.prepare(
-    'INSERT INTO content (id, source_url, license_code) VALUES (?, ?, ?)',
+    'INSERT INTO content (id, source_url, license_code, source_full_name, effective_date) VALUES (?, ?, ?, ?, ?)',
   );
   const insertProvision = db.prepare(
     'INSERT INTO provisions (id, canonical_ref, body, is_substantive, source_url) VALUES (?, ?, ?, ?, ?)',
@@ -345,7 +352,7 @@ function buildDatabase() {
         const body = article.title ? `${article.title}\n\n${article.text}` : article.text;
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `art_${article.number}`);
         const id = nextProvisionId++;
-        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0');
+        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0', reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(id, ref, body, 1, provisionSourceUrl);
         insertFts.run(id, body);
         stats.provisions++;
@@ -358,7 +365,7 @@ function buildDatabase() {
         const body = `${annex.title}\n\n${annex.text}`;
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `annex_${annexNum}`);
         const id = nextProvisionId++;
-        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0');
+        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0', reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(id, ref, body, 1, provisionSourceUrl);
         insertFts.run(id, body);
         stats.provisions++;
@@ -376,7 +383,7 @@ function buildDatabase() {
         const metaBody = `${reg.full_name} (${reg.id})`;
         const metaUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, 'meta');
         const mId = nextProvisionId++;
-        insertContent.run(mId, metaUrl, 'CC-BY-4.0');
+        insertContent.run(mId, metaUrl, 'CC-BY-4.0', reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(mId, metaRef, metaBody, 1, metaUrl);
         insertFts.run(mId, metaBody);
         stats.provisions++;

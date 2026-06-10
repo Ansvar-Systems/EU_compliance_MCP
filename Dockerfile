@@ -59,11 +59,12 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 2: chassis runtime
 # ────────────────────────────────────────────────────────────────────────────
-# mcp-base v1.2.0 — adds the dead-FTS-index boot gates (fts_index_built
-# auto-injected for content_fts/recitals_fts/guidance_sections_fts +
-# fts_match_min) that this corpus's silently-dead search_recitals motivated.
-# v1.1.1 deltas retained: per-recital source_url; optional version_label.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.2.0-alpine
+# mcp-base v1.2.1 — get_provision carries the content-column citation
+# enrichment (source_full_name/effective_date — this corpus adopted the
+# convention columns and v1.2.0's get_provision returned them empty).
+# v1.2.0 deltas retained: dead-FTS-index boot gates. v1.1.1: per-recital
+# source_url; optional version_label.
+FROM ghcr.io/ansvar-systems/mcp-base:v1.2.1-alpine
 
 WORKDIR /app
 
