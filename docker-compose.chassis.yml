@@ -23,11 +23,11 @@ services:
       # which doesn't need write access at runtime.
       - ./data:/app/data:ro
     ports:
-      - "8300:8300"
+      - "8300:3000"
     environment:
       NODE_ENV: production
     healthcheck:
-      test: ["CMD", "wget", "-q", "-O-", "http://127.0.0.1:8300/health"]
+      test: ["CMD", "wget", "-q", "-O-", "http://127.0.0.1:3000/health"]
       interval: 30s
       timeout: 5s
       retries: 3

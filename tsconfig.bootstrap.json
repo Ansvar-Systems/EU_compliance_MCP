@@ -23,12 +23,6 @@
     "node_modules",
     "dist",
     "tests",
-    "src/database/**",
-    "src/tools/**",
-    "src/middleware/**",
-    "src/http-server.ts",
-    "src/worker.ts",
-    "src/index.ts",
     "src/utils/**"
   ]
 }

@@ -33,7 +33,7 @@
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 1: builder — compile bootstrap + extension handlers
 # ────────────────────────────────────────────────────────────────────────────
-# Pinned to match chassis Node version (v20.20.x at v0.1.28). Newer Node would
+# Pinned to match chassis Node version (v20.20.x at v1.1.0). Newer Node would
 # produce JS the chassis runtime might not parse — match major version.
 FROM node:20-alpine AS builder
 
@@ -41,15 +41,15 @@ WORKDIR /build
 
 # Bootstrap + extension handlers have ZERO external runtime deps (Node stdlib
 # only + a local types module mirroring chassis types). Install ONLY
-# typescript + @types/node — avoids the repo's package-lock drift (pg,
-# wrangler, pdfjs-dist, etc. — all Phase 5.B cleanup targets).
+# typescript + @types/node — the repo's own package.json deps (pg, pdfjs-dist,
+# cheerio, …) are ingest-script tooling and never reach the image.
 RUN echo '{"name":"phase-5b-bootstrap-build","version":"0.0.0","private":true}' > package.json \
   && npm install typescript@5.3.3 @types/node@20.10.5 --no-audit --no-fund
 
-# Source needed for compile. tsconfig.bootstrap.json (added in this PR)
-# narrows tsc to ONLY src/chassis-bootstrap.ts + src/extension-handlers/**
-# so we don't drag in legacy src/database/, src/tools/, src/http-server.ts
-# etc. that still reference modules deferred to Phase 5.B cleanup.
+# Source needed for compile. tsconfig.bootstrap.json narrows tsc to ONLY
+# src/chassis-bootstrap.ts + src/extension-handlers/** — the only code this
+# image runs. (The legacy pre-chassis runtime was deleted in the Phase 5.C
+# cleanup; src/utils/ remains for ingest scripts but is not compiled here.)
 COPY tsconfig.bootstrap.json ./tsconfig.json
 COPY src/chassis-bootstrap.ts src/
 COPY src/extension-handlers/ src/extension-handlers/
@@ -59,10 +59,14 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 2: chassis runtime
 # ────────────────────────────────────────────────────────────────────────────
-# Requires mcp-base v0.1.28+ — earlier releases reject the four chassis
-# opt-in flags at Gate 0 (schema validation) even though the chassis runtime
-# supports them. See mcp-base PR #39. v0.1.26+ for extensionHandlers API.
-FROM ghcr.io/ansvar-systems/mcp-base:v0.1.36-alpine
+# mcp-base v1.1.0 — corpus serve surface is byte-parity with the v0.1.36 image
+# this MCP migrated on (verified by mcp-base's golden characterization test).
+# Consumer-visible deltas picked up with this bump: typed DATA_SOURCE_DEGRADED
+# search errors (v0.2.0, gateway companion already shipped), CitationBuilder
+# content-column enrichment (v1.0.2, additive), and real installed-version
+# reporting for Gate 2 / ansvar_mcp_info (v1.0.3 — the fleet-wide
+# "mcp_base_version=1.0.0" fiction fix).
+FROM ghcr.io/ansvar-systems/mcp-base:v1.1.0-alpine
 
 WORKDIR /app
 
