@@ -1,39 +1,23 @@
 import { defineConfig } from 'vitest/config';
 
-// Phase 5.A chassis migration (2026-05-26): the legacy in-process MCP handlers
-// in src/tools/, src/database/, src/worker.ts are retired. The customer-facing
-// MCP surface is now served by @ansvar/mcp-base v0.1.28+ chassis (see
-// Dockerfile + manifest.json). The existing tests/ tree exercises the legacy
-// handlers against the legacy regulations.db schema (articles, articles_fts,
-// regulations tables) — that schema no longer exists in the chassis-shape DB,
-// so those tests fail with "no such table: articles".
+// Phase 5.C legacy retirement (2026-06-10): the pre-chassis runtime
+// (src/tools/, src/database/, src/index.ts, src/http-server.ts, src/worker.ts)
+// and its test tree are deleted. The customer-facing MCP surface is served by
+// the @ansvar/mcp-base chassis (Dockerfile FROM-image, v1.1.0) and tested in
+// mcp-base's own suite + the docker e2e drive documented in the PR.
 //
-// Phase 5.B reintroduces the 5 EU-local tools (compare_requirements,
-// map_controls, get_evidence_requirements, regulation_guide,
-// check_applicability) via mcp-base v0.1.26's extensionHandlers API. At that
-// point a new tests/extensions/ tree will exercise those handlers against the
-// chassis-shape DB.
-//
-// Until then, the legacy tests/ tree is excluded from CI runs. The chassis
-// itself is tested in mcp-base's 673-test suite + end-to-end via local docker
-// build + run (validated in PR description).
+// What this repo still tests:
+//   - tests/extensions/  — the 5 EU-local extension handlers (compare_requirements,
+//     map_controls, get_evidence_requirements, get_regulation_guide,
+//     check_applicability) against the real chassis-shape data/regulations.db
+//   - tests/scripts/     — ingest parser units (AI Act annex extraction)
+//   - tests/utils/       — CELEX → ELI URL contract used at ingest time
 export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
     include: ['tests/**/*.test.ts'],
-    exclude: [
-      '**/node_modules/**',
-      'tests/database.test.ts',
-      'tests/health.test.ts',
-      'tests/tools/**',
-      'tests/middleware/**',
-      'tests/integration/**',
-      'tests/content/**',
-      'tests/golden/**',
-      'tests/comprehensive/**',
-      'tests/fixtures/**',
-    ],
+    exclude: ['**/node_modules/**'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],

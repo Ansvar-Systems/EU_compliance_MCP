@@ -5,9 +5,10 @@
 // import in chassis-bootstrap.ts. To compile this consumer's TypeScript we
 // declare a structural subset of the chassis types here.
 //
-// Keep in sync with mcp-base/src/tools/handlers/types.ts +
-// mcp-base/src/transport/server-factory.ts (ExtensionTool).
-// Pinned: mcp-base v0.1.28+ (Phase 4d extensionHandlers API).
+// Keep in sync with mcp-base/src/corpus-sqlite/handler-context.ts +
+// mcp-base/src/core/transport/server-factory.ts (ExtensionTool).
+// Introduced against mcp-base v0.1.28 (extensionHandlers API, v0.1.26+);
+// verified structurally compatible with the v1.1.0 chassis this image runs on.
 
 export interface SqliteStatement {
   all(...params: unknown[]): unknown[];
