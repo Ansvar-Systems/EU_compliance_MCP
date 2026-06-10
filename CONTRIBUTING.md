@@ -77,8 +77,8 @@ cd eu-regulations-mcp
 # Install dependencies
 npm install
 
-# Run in development
-npm run dev
+# Run the server locally (chassis image)
+docker compose -f docker-compose.chassis.yml up --build
 
 # Run tests
 npm test

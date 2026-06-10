@@ -163,7 +163,7 @@ jobs:
           echo "## Docker Security Scan Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Image:** eu-regulations-mcp:scan" >> $GITHUB_STEP_SUMMARY
-          echo "**Platform:** linux/amd64 (Azure Container Apps)" >> $GITHUB_STEP_SUMMARY
+          echo "**Platform:** linux/amd64 (Hetzner)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
           echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
