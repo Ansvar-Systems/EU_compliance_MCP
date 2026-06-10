@@ -88,6 +88,19 @@ describe('regulations.db invariants', () => {
     ).toBeGreaterThan(50);
   });
 
+  it('every content row carries source_full_name (CitationBuilder enrichment, 2026-06-10)', () => {
+    // The chassis emits _citation.source_full_name / .effective_date from
+    // these convention columns — the two fields the gateway cannot derive
+    // from a canonical_ref. effective_date is honestly NULL for proposals
+    // and L2 acts not yet in application, so only the name is floor-checked.
+    expect(
+      one('SELECT COUNT(*) AS n FROM content WHERE source_full_name IS NULL'),
+    ).toBe(0);
+    expect(
+      one('SELECT COUNT(*) AS n FROM content WHERE effective_date IS NOT NULL'),
+    ).toBeGreaterThan(4000);
+  });
+
   it('the Charter of Fundamental Rights corpus is present (was seed-only before the 2026-06-10 rebuild)', () => {
     expect(
       one(`SELECT COUNT(*) AS n FROM provisions WHERE canonical_ref LIKE 'CFR:art_%'`),
