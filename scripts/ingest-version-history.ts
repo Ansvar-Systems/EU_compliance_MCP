@@ -1,41 +1,52 @@
 #!/usr/bin/env npx tsx
 
 /**
- * Diff-aware ingestion for premium version tracking.
+ * Version-history ingestion for the chassis-shape database (provision_versions).
  *
- * Compares current article text in the database against freshly fetched
- * EUR-Lex content. If text has changed, inserts a new version row with
- * unified diff and optionally an AI-generated change summary.
+ * Rewritten 2026-06-10 for the chassis schema (issue #70): the original
+ * targeted the legacy `articles` / `article_versions` tables deleted in the
+ * Phase 5.A→5.C chassis migration. Reads `provisions` (canonical_ref
+ * 'REG:art_N' / 'REG:annex_N'), writes `provision_versions` — the table the
+ * chassis version-tracking tools (get_provision_history,
+ * diff_provision_versions, get_recent_changes) serve from.
+ *
+ * Modes:
+ *   --seed-baseline   One baseline row per provision (no network). Honest
+ *                     semantics: effective_date = the regulation's entry-into-
+ *                     application date (source_registry.eur_lex_version, which
+ *                     build-db.ts populates from the seed's effective_date);
+ *                     body_text = the consolidated text as ingested. Amendment
+ *                     tracking begins at this snapshot — the baseline does NOT
+ *                     claim to reconstruct pre-snapshot amendment history.
+ *   (default)         Diff mode: fetch fresh consolidated text from EUR-Lex,
+ *                     compare against the current provisions body, insert a
+ *                     new version row per changed article with a unified diff.
  *
  * Usage:
- *   npx tsx scripts/ingest-version-history.ts                 # all regulations
+ *   npx tsx scripts/ingest-version-history.ts --seed-baseline
+ *   npx tsx scripts/ingest-version-history.ts                  # diff all
  *   npx tsx scripts/ingest-version-history.ts --regulation NIS2
- *   npx tsx scripts/ingest-version-history.ts --dry-run       # preview only
- *   npx tsx scripts/ingest-version-history.ts --with-summaries # generate AI summaries
- *   npx tsx scripts/ingest-version-history.ts --seed-baseline  # seed initial version rows (no diff)
- *
- * Requires: data/regulations.db with article_versions table
- *   Run: sqlite3 data/regulations.db < scripts/add-article-versions.sql
+ *   npx tsx scripts/ingest-version-history.ts --dry-run
+ *   npx tsx scripts/ingest-version-history.ts --with-summaries # AI summaries
  *
  * For AI summaries, set ANTHROPIC_API_KEY in environment.
  */
 
 import Database from 'better-sqlite3';
-import { existsSync, readFileSync } from 'fs';
+import { existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const DB_PATH = join(__dirname, '..', 'data', 'regulations.db');
+const DB_PATH = process.env.EU_COMPLIANCE_DB_PATH ?? join(__dirname, '..', 'data', 'regulations.db');
 
 // --- Types ---
 
-interface ArticleRow {
-  rowid: number;
-  regulation: string;
-  article_number: string;
-  text: string;
+interface ProvisionRow {
+  canonical_ref: string;
+  body: string;
+  source_url: string | null;
 }
 
 interface SourceRow {
@@ -46,7 +57,7 @@ interface SourceRow {
 
 interface VersionRow {
   id: number;
-  body_text: string;
+  body_text: string | null;
   effective_date: string | null;
 }
 
@@ -84,62 +95,26 @@ function computeUnifiedDiff(oldText: string, newText: string, label: string): st
   const oldLines = oldText.split('\n');
   const newLines = newText.split('\n');
 
-  const header = [
-    `--- a/${label}`,
-    `+++ b/${label}`,
-  ];
+  const header = [`--- a/${label}`, `+++ b/${label}`];
 
-  // Find changed ranges
   const hunks: string[] = [];
   let i = 0;
   let j = 0;
 
   while (i < oldLines.length || j < newLines.length) {
-    // Skip matching lines
     if (i < oldLines.length && j < newLines.length && oldLines[i] === newLines[j]) {
       i++;
       j++;
       continue;
     }
-
-    // Found a difference — collect the hunk
-    const startI = Math.max(0, i - 2);
-    const startJ = Math.max(0, j - 2);
+    const startI = i;
+    const startJ = j;
     const hunkLines: string[] = [];
-
-    // Context before
-    for (let c = startI; c < i; c++) {
-      hunkLines.push(` ${oldLines[c]}`);
-    }
-
-    // Collect differing lines
-    while (i < oldLines.length || j < newLines.length) {
-      if (i < oldLines.length && j < newLines.length && oldLines[i] === newLines[j]) {
-        // Check if we have enough matching context to end the hunk
-        let matchCount = 0;
-        while (
-          i + matchCount < oldLines.length &&
-          j + matchCount < newLines.length &&
-          oldLines[i + matchCount] === newLines[j + matchCount]
-        ) {
-          matchCount++;
-          if (matchCount >= 3) break;
-        }
-
-        if (matchCount >= 3) {
-          // End hunk with context
-          for (let c = 0; c < Math.min(2, matchCount); c++) {
-            hunkLines.push(` ${oldLines[i + c]}`);
-          }
-          i += matchCount;
-          j += matchCount;
-          break;
-        }
-
-        hunkLines.push(` ${oldLines[i]}`);
-        i++;
-        j++;
-      } else if (i < oldLines.length && (j >= newLines.length || oldLines[i] !== newLines[j])) {
+    while (
+      (i < oldLines.length || j < newLines.length) &&
+      !(i < oldLines.length && j < newLines.length && oldLines[i] === newLines[j])
+    ) {
+      if (i < oldLines.length && (j >= newLines.length || oldLines[i] !== newLines[j])) {
         hunkLines.push(`-${oldLines[i]}`);
         i++;
       } else {
@@ -147,12 +122,10 @@ function computeUnifiedDiff(oldText: string, newText: string, label: string): st
         j++;
       }
     }
-
     if (hunkLines.length > 0) {
-      const removals = hunkLines.filter(l => l.startsWith('-')).length;
-      const additions = hunkLines.filter(l => l.startsWith('+')).length;
-      const context = hunkLines.filter(l => l.startsWith(' ')).length;
-      hunks.push(`@@ -${startI + 1},${removals + context} +${startJ + 1},${additions + context} @@`);
+      const removals = hunkLines.filter((l) => l.startsWith('-')).length;
+      const additions = hunkLines.filter((l) => l.startsWith('+')).length;
+      hunks.push(`@@ -${startI + 1},${removals} +${startJ + 1},${additions} @@`);
       hunks.push(...hunkLines);
     }
   }
@@ -206,11 +179,9 @@ async function generateChangeSummary(
   }
 }
 
-// --- EUR-Lex fetching ---
+// --- EUR-Lex fetching (diff mode) ---
 
-async function fetchArticleTexts(
-  celexId: string,
-): Promise<Map<string, string>> {
+async function fetchArticleTexts(celexId: string): Promise<Map<string, string>> {
   const url = `https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:${celexId}`;
   console.log(`  Fetching: ${url}`);
 
@@ -239,40 +210,25 @@ async function parseArticlesFromHtml(html: string): Promise<Map<string, string>>
   const allText = doc.body?.textContent || '';
   const lines = allText
     .split('\n')
-    .map((l: string) => l.trim())
-    .filter((l: string) => l);
+    .map((l) => l.trim())
+    .filter((l) => l.length > 0);
 
   let currentNumber: string | null = null;
   let currentLines: string[] = [];
-  let hasTitle = false;
 
   for (const line of lines) {
-    const articleStart = line.match(/^Article\s+(\d+[a-z]?)$/i);
-    if (articleStart) {
-      if (currentNumber && currentLines.length > 0) {
+    const match = line.match(/^Article\s+(\d+[a-z]?)\s*$/i);
+    if (match) {
+      if (currentNumber !== null && currentLines.length > 0) {
         articles.set(currentNumber, currentLines.join('\n\n'));
       }
-      currentNumber = articleStart[1];
+      currentNumber = match[1];
       currentLines = [];
-      hasTitle = false;
-      continue;
-    }
-
-    if (currentNumber) {
-      if (
-        !hasTitle &&
-        currentLines.length === 0 &&
-        line.length < 100 &&
-        !line.endsWith('.')
-      ) {
-        hasTitle = true;
-      } else if (line.length > 0) {
-        currentLines.push(line);
-      }
+    } else if (currentNumber !== null) {
+      currentLines.push(line);
     }
   }
-
-  if (currentNumber && currentLines.length > 0) {
+  if (currentNumber !== null && currentLines.length > 0) {
     articles.set(currentNumber, currentLines.join('\n\n'));
   }
 
@@ -292,36 +248,28 @@ async function main(): Promise<void> {
   const db = new Database(DB_PATH);
   db.pragma('foreign_keys = ON');
 
-  // Ensure article_versions table exists
+  // The chassis-shape build-db.ts creates provision_versions; fail loudly if
+  // this is a pre-chassis or foreign DB rather than silently creating a
+  // divergent table (No Silent Fallbacks).
   const hasTable = db
     .prepare(
-      "SELECT name FROM sqlite_master WHERE type='table' AND name='article_versions'",
+      "SELECT name FROM sqlite_master WHERE type='table' AND name='provision_versions'",
     )
     .get();
-
   if (!hasTable) {
-    console.log('Creating article_versions table...');
-    const schemaPath = join(__dirname, 'add-article-versions.sql');
-    if (!existsSync(schemaPath)) {
-      console.error('Schema file not found: scripts/add-article-versions.sql');
-      process.exit(1);
-    }
-    db.exec(readFileSync(schemaPath, 'utf-8'));
-    console.log('Table created.\n');
+    console.error(
+      'provision_versions table not found — this DB predates the chassis schema. Run `npm run build:db` first.',
+    );
+    process.exit(1);
   }
 
-  // Get regulations to process
   let sourceQuery = 'SELECT regulation, celex_id, eur_lex_version FROM source_registry';
   const params: string[] = [];
-
   if (options.regulation) {
     sourceQuery += ' WHERE regulation = ?';
     params.push(options.regulation);
   }
-
-  const sources = db
-    .prepare(sourceQuery)
-    .all(...params) as SourceRow[];
+  const sources = db.prepare(sourceQuery).all(...params) as SourceRow[];
 
   if (sources.length === 0) {
     console.log('No regulations found in source_registry.');
@@ -334,22 +282,32 @@ async function main(): Promise<void> {
   );
 
   const insertVersion = db.prepare(`
-    INSERT INTO article_versions (article_id, body_text, effective_date, superseded_date, scraped_at, change_summary, diff_from_previous, source_url)
-    VALUES (?, ?, ?, NULL, ?, ?, ?, ?)
+    INSERT INTO provision_versions
+      (canonical_ref, version_label, effective_date, superseded_date, body_text, change_summary, diff_from_previous, source_url, scraped_at)
+    VALUES (?, ?, ?, NULL, ?, ?, ?, ?, ?)
   `);
 
   const updateSuperseded = db.prepare(`
-    UPDATE article_versions
+    UPDATE provision_versions
     SET superseded_date = ?
-    WHERE article_id = ? AND superseded_date IS NULL AND id != ?
+    WHERE canonical_ref = ? AND superseded_date IS NULL AND id != ?
   `);
 
   const getLatestVersion = db.prepare(`
     SELECT id, body_text, effective_date
-    FROM article_versions
-    WHERE article_id = ?
+    FROM provision_versions
+    WHERE canonical_ref = ?
     ORDER BY scraped_at DESC
     LIMIT 1
+  `);
+
+  // All non-meta provisions of one regulation (articles + annexes). The
+  // {REG}:meta title-boost rows are search aids, not legal text — they get
+  // no version history.
+  const getProvisions = db.prepare(`
+    SELECT canonical_ref, body, source_url
+    FROM provisions
+    WHERE canonical_ref LIKE ? AND canonical_ref != ?
   `);
 
   let totalInserted = 0;
@@ -357,111 +315,111 @@ async function main(): Promise<void> {
   let totalErrors = 0;
 
   for (const source of sources) {
-    console.log(`\n--- ${source.regulation} (${source.celex_id}) ---`);
+    const provisions = getProvisions.all(
+      `${source.regulation}:%`,
+      `${source.regulation}:meta`,
+    ) as ProvisionRow[];
 
-    const articles = db
-      .prepare(
-        'SELECT rowid, regulation, article_number, text FROM articles WHERE regulation = ?',
-      )
-      .all(source.regulation) as ArticleRow[];
-
-    console.log(`  ${articles.length} articles in database`);
-
-    if (options.seedBaseline) {
-      const now = new Date().toISOString();
-      let seeded = 0;
-
-      for (const article of articles) {
-        const existing = getLatestVersion.get(article.rowid) as VersionRow | undefined;
-        if (existing) continue;
-
-        if (!options.dryRun) {
-          const eurLexUrl = `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${source.celex_id}`;
-          insertVersion.run(
-            article.rowid,
-            article.text,
-            source.eur_lex_version || now.slice(0, 10),
-            now,
-            null,
-            null,
-            eurLexUrl,
-          );
-        }
-        seeded++;
-      }
-
-      console.log(
-        `  Seeded ${seeded} baseline version(s)${options.dryRun ? ' (dry run)' : ''}`,
-      );
-      totalInserted += seeded;
+    if (provisions.length === 0) {
+      console.log(`--- ${source.regulation}: no provisions, skipping`);
       continue;
     }
 
-    // Fetch fresh from EUR-Lex
+    if (options.seedBaseline) {
+      // Baseline: one row per provision, effective from the regulation's
+      // entry-into-application date. Idempotent — provisions that already
+      // have any version row are skipped.
+      const now = new Date().toISOString();
+      let seeded = 0;
+      let skipped = 0;
+      const tx = db.transaction(() => {
+        for (const p of provisions) {
+          const existing = getLatestVersion.get(p.canonical_ref) as VersionRow | undefined;
+          if (existing) {
+            skipped++;
+            continue;
+          }
+          if (!options.dryRun) {
+            insertVersion.run(
+              p.canonical_ref,
+              'baseline',
+              source.eur_lex_version,
+              p.body,
+              'Corpus baseline — consolidated text as ingested. Amendment tracking begins at this snapshot.',
+              null,
+              p.source_url,
+              now,
+            );
+          }
+          seeded++;
+        }
+      });
+      tx();
+      totalInserted += seeded;
+      console.log(
+        `--- ${source.regulation}: baseline ${seeded} provisions (effective ${source.eur_lex_version ?? 'unknown'})${skipped > 0 ? `, ${skipped} already versioned` : ''}`,
+      );
+      continue;
+    }
+
+    // Diff mode: fetch fresh consolidated text from EUR-Lex, compare.
+    console.log(`\n--- ${source.regulation} (${source.celex_id}) ---`);
     let freshTexts: Map<string, string>;
     try {
       freshTexts = await fetchArticleTexts(source.celex_id);
       console.log(`  ${freshTexts.size} articles fetched from EUR-Lex`);
     } catch (error) {
-      console.error(
-        `  ERROR fetching ${source.celex_id}: ${(error as Error).message}`,
-      );
+      console.error(`  ERROR fetching ${source.celex_id}: ${(error as Error).message}`);
       totalErrors++;
       continue;
     }
 
     const now = new Date().toISOString();
+    const today = now.slice(0, 10);
     let changed = 0;
     let unchanged = 0;
 
-    for (const article of articles) {
-      const freshText = freshTexts.get(article.article_number);
+    for (const provision of provisions) {
+      const artMatch = provision.canonical_ref.match(/:art_(\d+[a-z]?)$/);
+      if (!artMatch) continue; // annexes: the EUR-Lex HTML parse covers articles only
+      const articleNumber = artMatch[1];
+      const freshText = freshTexts.get(articleNumber);
       if (!freshText) continue;
 
-      // Normalize for comparison
-      const normalizedCurrent = article.text.replace(/\s+/g, ' ').trim();
+      const normalizedCurrent = provision.body.replace(/\s+/g, ' ').trim();
       const normalizedFresh = freshText.replace(/\s+/g, ' ').trim();
-
       if (normalizedCurrent === normalizedFresh) {
         unchanged++;
         continue;
       }
 
-      const label = `${source.regulation}_Article_${article.article_number}`;
-      const diff = computeUnifiedDiff(article.text, freshText, label);
+      const diff = computeUnifiedDiff(provision.body, freshText, provision.canonical_ref);
 
       let summary: string | null = null;
       if (options.withSummaries) {
-        summary = await generateChangeSummary(
-          source.regulation,
-          article.article_number,
-          diff,
-        );
-        if (summary) {
-          console.log(`    Art ${article.article_number}: ${summary}`);
-        }
+        summary = await generateChangeSummary(source.regulation, articleNumber, diff);
+        if (summary) console.log(`    ${provision.canonical_ref}: ${summary}`);
       }
 
       if (!options.dryRun) {
-        const eurLexUrl = `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${source.celex_id}`;
         const result = insertVersion.run(
-          article.rowid,
+          provision.canonical_ref,
+          today,
+          today,
           freshText,
-          now.slice(0, 10),
-          now,
-          summary,
+          summary ?? 'Text change detected against the EUR-Lex consolidated version.',
           diff,
-          eurLexUrl,
+          provision.source_url,
+          now,
         );
-
-        updateSuperseded.run(now.slice(0, 10), article.rowid, result.lastInsertRowid);
+        updateSuperseded.run(today, provision.canonical_ref, Number(result.lastInsertRowid));
       }
 
       changed++;
       const addedLines = diff.split('\n').filter((l) => l.startsWith('+')).length - 1;
       const removedLines = diff.split('\n').filter((l) => l.startsWith('-')).length - 1;
       console.log(
-        `    Art ${article.article_number}: CHANGED (+${addedLines}/-${removedLines} lines)`,
+        `    ${provision.canonical_ref}: CHANGED (+${addedLines}/-${removedLines} lines)`,
       );
     }
 
@@ -478,7 +436,7 @@ async function main(): Promise<void> {
   console.log('Summary');
   console.log('='.repeat(60));
   console.log(`  New versions inserted: ${totalInserted}`);
-  console.log(`  Articles unchanged: ${totalUnchanged}`);
+  console.log(`  Provisions unchanged: ${totalUnchanged}`);
   console.log(`  Errors: ${totalErrors}`);
   if (options.dryRun) console.log('  (DRY RUN - no changes written)');
 }

@@ -75,13 +75,17 @@ const SCHEMA_STATEMENTS: string[] = [
   `CREATE INDEX idx_eu_basis_provision ON eu_basis(provision_id)`,
   `CREATE INDEX idx_eu_basis_celex ON eu_basis(celex)`,
   // Chassis opt-in: recitals (mcp-base v0.1.23+). Single-column recitals_fts
-  // over text per mcp-base v0.1.27 contract.
+  // over text per mcp-base v0.1.27 contract. source_url is the per-recital
+  // ELI URL with #rct_N anchor (mcp-base v1.1.1 reads the column directly —
+  // the chassis's document-keyed content join can't work against our
+  // per-provision content table; issue #71).
   `CREATE TABLE recitals (
     id               INTEGER PRIMARY KEY,
     regulation       TEXT NOT NULL,
     recital_number   INTEGER NOT NULL,
     text             TEXT NOT NULL,
     related_articles TEXT,
+    source_url       TEXT,
     UNIQUE(regulation, recital_number)
   )`,
   `CREATE VIRTUAL TABLE recitals_fts USING fts5(
@@ -138,10 +142,14 @@ const SCHEMA_STATEMENTS: string[] = [
     VALUES (new.id, new.document_id, new.section_number, new.title, new.content);
   END`,
   `CREATE INDEX idx_gd_date ON guidance_documents(date_published DESC)`,
-  // Chassis opt-in: provision_versions (mcp-base v0.1.18+).
+  // Chassis opt-in: provision_versions (mcp-base v0.1.18+). version_label
+  // matches the chassis canonical schema (get_provision_history surfaces it;
+  // older builds without the column made that tool error on every call —
+  // issue #70, tolerated since mcp-base v1.1.1 but kept for parity).
   `CREATE TABLE provision_versions (
     id                  INTEGER PRIMARY KEY,
     canonical_ref       TEXT NOT NULL,
+    version_label       TEXT,
     effective_date      TEXT,
     superseded_date     TEXT,
     body_text           TEXT,
@@ -262,6 +270,9 @@ function buildProvisionSourceUrl(
   if (ref.startsWith('annex_')) {
     return `${eli}#anx_${ref.slice('annex_'.length)}`;
   }
+  if (ref.startsWith('rct_')) {
+    return `${eli}#${ref}`;
+  }
   return eli;
 }
 
@@ -292,7 +303,7 @@ function buildDatabase() {
   );
   const insertFts = db.prepare('INSERT INTO content_fts (rowid, body) VALUES (?, ?)');
   const insertRecital = db.prepare(
-    'INSERT OR IGNORE INTO recitals (regulation, recital_number, text, related_articles) VALUES (?, ?, ?, ?)',
+    'INSERT OR IGNORE INTO recitals (regulation, recital_number, text, related_articles, source_url) VALUES (?, ?, ?, ?, ?)',
   );
   const insertDefinition = db.prepare(
     'INSERT OR IGNORE INTO definitions (term, source, definition, article) VALUES (?, ?, ?, ?)',
@@ -371,13 +382,15 @@ function buildDatabase() {
         stats.provisions++;
       }
 
-      // Recitals.
+      // Recitals. source_url = ELI base + #rct_N anchor; falls back to the
+      // regulation page URL for CELEX schemes without an ELI mapping.
       for (const r of reg.recitals ?? []) {
         insertRecital.run(
           reg.id,
           r.recital_number,
           r.text,
           r.related_articles ? JSON.stringify(r.related_articles) : null,
+          buildProvisionSourceUrl(reg.celex_id, baseUrl, `rct_${r.recital_number}`) || null,
         );
         stats.recitals++;
       }
@@ -406,6 +419,24 @@ function buildDatabase() {
     }
   });
   tx();
+
+  // Build the recitals_fts inverted index. recitals_fts is an EXTERNAL-CONTENT
+  // FTS5 table (content='recitals'): row reads proxy the recitals table, so
+  // SELECT/COUNT look populated even when the index was never built — but
+  // MATCH silently returns nothing. That exact trap shipped in the 5.A
+  // migration and left search_recitals dead in prod until 2026-06-10. The
+  // 'rebuild' special command re-derives the whole index from the content
+  // table. (content_fts and guidance_sections_fts are unaffected: content_fts
+  // rows are inserted explicitly per provision; guidance has an AFTER INSERT
+  // trigger.)
+  db.prepare(`INSERT INTO recitals_fts(recitals_fts) VALUES('rebuild')`).run();
+  const recitalMatches = db
+    .prepare(`SELECT COUNT(*) AS n FROM recitals_fts WHERE recitals_fts MATCH 'regulation'`)
+    .get() as { n: number };
+  if (stats.recitals > 0 && recitalMatches.n === 0) {
+    throw new Error('recitals_fts rebuild produced an empty index — refusing to ship a dead search_recitals');
+  }
+  console.log(`  recitals_fts index rebuilt (${recitalMatches.n} matches for smoke term)`);
 
   // Control mappings.
   const mappingsDir = join(SEED_DIR, 'mappings');

@@ -1,79 +1,92 @@
 {
-  "manifest_schema_version": "1.0.0",
-  "mcp_base_min_version": "1.1.0",
-  "identity": {
-    "name": "eu-regulations-mcp",
-    "display_name": "EU Regulations",
-    "jurisdiction": "EU",
-    "category": "law",
-    "language": "en"
-  },
-  "tier": {
-    "base_tier": "free"
-  },
-  "data": {
-    "database_sha256": "sha256:58eef319d4df79359e865967e8489920be5b153ed4eae03378e03aac4a5ac004",
-    "snapshot_id": "sha256:446a3b4b24ac4d73dbcc02be5278f06d844593baef7b9cc63977c0b5168fa1f6",
-    "generated_at": "2026-05-26T00:00:00Z",
-    "database_path": "/app/data/regulations.db",
-    "recitals_enabled": true,
-    "guidance_enabled": true,
-    "version_tracking_enabled": true,
-    "definitions_enabled": true,
-    "integrity_checks": [
-      {
-        "name": "provisions_nonempty",
-        "type": "row_count_min",
-        "table": "provisions",
-        "min": 1000
-      },
-      {
-        "name": "content_matches_provisions",
-        "type": "row_count_min",
-        "table": "content",
-        "min": 1000
-      },
-      {
-        "name": "recitals_populated",
-        "type": "row_count_min",
-        "table": "recitals",
-        "min": 500
-      },
-      {
-        "name": "guidance_documents_populated",
-        "type": "row_count_min",
-        "table": "guidance_documents",
-        "min": 10
-      },
-      {
-        "name": "definitions_populated",
-        "type": "row_count_min",
-        "table": "definitions",
-        "min": 100
-      },
-      {
-        "name": "provisions_source_url_complete",
-        "type": "null_count_max",
-        "table": "provisions",
-        "column": "source_url",
-        "max": 0
-      }
-    ]
-  },
-  "attribution": {
-    "publisher": "Publications Office of the European Union",
-    "source_url": "https://eur-lex.europa.eu/",
-    "retrieved_at_min": "2026-05-26"
-  },
-  "licensing": {
-    "license_code": "EUR-Lex-Decision-2011-833",
-    "license_url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
-    "authority_kind": "official_publisher",
-    "recovery_stage": "verified",
-    "at_risk": false
-  },
-  "endpoints": {
-    "health_port": 8300,
-    "service_name": "ansvar-eu-regulations-mcp"
-  }
+ "manifest_schema_version": "1.0.0",
+ "mcp_base_min_version": "1.1.1",
+ "identity": {
+  "name": "eu-regulations-mcp",
+  "display_name": "EU Regulations",
+  "jurisdiction": "EU",
+  "category": "law",
+  "language": "en"
+ },
+ "tier": {
+  "base_tier": "free"
+ },
+ "data": {
+  "database_sha256": "sha256:f1b6248dfebf2b84dc3b5347aa458d34dc4400946e4302f40c9b483f1ea895ca",
+  "snapshot_id": "sha256:f1b6248dfebf2b84dc3b5347aa458d34dc4400946e4302f40c9b483f1ea895ca",
+  "generated_at": "2026-06-10T00:00:00Z",
+  "database_path": "/app/data/regulations.db",
+  "recitals_enabled": true,
+  "guidance_enabled": true,
+  "version_tracking_enabled": true,
+  "definitions_enabled": true,
+  "integrity_checks": [
+   {
+    "name": "provisions_nonempty",
+    "type": "row_count_min",
+    "table": "provisions",
+    "min": 1000
+   },
+   {
+    "name": "content_matches_provisions",
+    "type": "row_count_min",
+    "table": "content",
+    "min": 1000
+   },
+   {
+    "name": "recitals_populated",
+    "type": "row_count_min",
+    "table": "recitals",
+    "min": 500
+   },
+   {
+    "name": "guidance_documents_populated",
+    "type": "row_count_min",
+    "table": "guidance_documents",
+    "min": 10
+   },
+   {
+    "name": "definitions_populated",
+    "type": "row_count_min",
+    "table": "definitions",
+    "min": 100
+   },
+   {
+    "name": "provisions_source_url_complete",
+    "type": "null_count_max",
+    "table": "provisions",
+    "column": "source_url",
+    "max": 0
+   },
+   {
+    "name": "provision_versions_populated",
+    "type": "row_count_min",
+    "table": "provision_versions",
+    "min": 4000
+   },
+   {
+    "name": "recitals_source_url_complete",
+    "type": "null_count_max",
+    "table": "recitals",
+    "column": "source_url",
+    "max": 0
+   }
+  ]
+ },
+ "attribution": {
+  "publisher": "Publications Office of the European Union",
+  "source_url": "https://eur-lex.europa.eu/",
+  "retrieved_at_min": "2026-05-26"
+ },
+ "licensing": {
+  "license_code": "EUR-Lex-Decision-2011-833",
+  "license_url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+  "authority_kind": "official_publisher",
+  "recovery_stage": "verified",
+  "at_risk": false
+ },
+ "endpoints": {
+  "health_port": 8300,
+  "service_name": "ansvar-eu-regulations-mcp"
+ }
 }
