@@ -62,6 +62,11 @@ const DORA_RTS_ITS_METADATA: Record<string, RegulationMetadata> = {
     full_name: 'Commission Delegated Regulation (EU) 2025/1190 - Threat-Led Penetration Testing (TLPT)',
     effective_date: '2025-01-17',
   },
+  '32025R0532': {
+    id: 'DORA_RTS_SUBCONTRACTING',
+    full_name: 'Commission Delegated Regulation (EU) 2025/532 - RTS on Subcontracting ICT Services Supporting Critical or Important Functions',
+    effective_date: '2025-07-22',
+  },
 };
 
 const FILE_MAPPING: Record<string, string> = {
@@ -75,6 +80,7 @@ const FILE_MAPPING: Record<string, string> = {
   '32025R0301': 'data/seed/dora-rts-incident-reporting.json',
   '32025R0302': 'data/seed/dora-its-incident-forms.json',
   '32025R1190': 'data/seed/dora-rts-tlpt.json',
+  '32025R0532': 'data/seed/dora-rts-subcontracting.json',
 };
 
 function updateRegulationMetadata(celex: string, filePath: string): void {
