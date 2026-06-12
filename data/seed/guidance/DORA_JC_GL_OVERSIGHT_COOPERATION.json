@@ -1,0 +1,223 @@
+{
+  "id": "DORA_JC_GL_OVERSIGHT_COOPERATION",
+  "title": "Joint Guidelines on the oversight cooperation and information exchange between the ESAs and the competent authorities",
+  "issuing_body": "ESAs Joint Committee (EBA, ESMA, EIOPA)",
+  "document_reference": "JC/GL/2024/36",
+  "date_published": "2024-11-06",
+  "related_regulation": "DORA",
+  "url": "https://www.esma.europa.eu/document/joint-guidelines-oversight-cooperation-and-information-exchange-between-esas-and-competent",
+  "pdf_url": "https://www.esma.europa.eu/sites/default/files/2024-11/JC-GL-2024-36_Guidelines_on_DORA_oversight_cooperation.pdf",
+  "status": "published",
+  "metadata": {
+    "license": "ESMA-Reuse-Notice",
+    "scope": "ESA Joint Guidelines establishing the framework for cooperation and information exchange between the ESAs and competent authorities in the oversight of critical ICT third-party service providers.",
+    "source_url": "https://www.esma.europa.eu/sites/default/files/2024-11/JC-GL-2024-36_Guidelines_on_DORA_oversight_cooperation.pdf",
+    "source_kind": "pdf"
+  },
+  "sections": [
+    {
+      "section_number": "1.1",
+      "title": "For cooperation and information exchange purposes, the ESAs and competent authorities should",
+      "content": "communicate in English, unless agreed otherwise.",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.2",
+      "title": "The ESAs and competent authorities should make available the information referred to in these",
+      "content": "Guidelines by electronic means, unless agreed otherwise.",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.3",
+      "title": "The ESAs and competent authorities should establish single points of contact in the form of a",
+      "content": "dedicated institutional/functional email address for information exchanges between the ESAs and\ncompetent authorities.",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.4",
+      "title": "The single point of contact should only be used for exchanging non-confidential information. The",
+      "content": "ESAs and competent authorities may agree on a bilateral and/or multilateral basis on any\napplicable requirements concerning the secure transmission of information via the single point of\ncontact (e.g. a requirement on electronic signatures of authorised persons).",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.5",
+      "title": "The information on the contact points should be made available to the competent authorities by",
+      "content": "the ESAs. The competent authorities should make available and update the information about the\ncontact points without undue delay according to the operational instructions defined by the ESAs.",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.6",
+      "title": "The ESAs and competent authorities should use a dedicated secure online tool to share",
+      "content": "information amongst each other on a confidential and secure basis. The online tool should present\ntechnical   information security   measures to   guarantee   the   confidentiality of data against\nunauthorised access by third-parties.",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.7",
+      "title": "The information to be exchanged via the dedicated secure online tool should be limited to the",
+      "content": "information to be submitted according to points 5 to 12 and any additional information necessary\nfor the Lead Overseer and competent authorities to carry out their respective duties under DORA.\n5",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "1.8",
+      "title": "The ESAs and competent authorities should ensure that communication and information",
+      "content": "exchange between the ESAs and competent authorities are accessible to, and inclusive for all\nparties involved, including those who may have language barriers or accessibility needs. In that\ncontext,   the   ESAs   and   competent   authorities   may   use   translation   services   or   accessible\ncommunication tools, such as video conferencing software with closed captioning, provided data\nis protected from unauthorised use of third parties.\nGuideline 2: Timelines",
+      "parent_section": "1"
+    },
+    {
+      "section_number": "2.1",
+      "title": "In the event of specific circumstances that require prompt action or additional time to complete",
+      "content": "the relevant task, the Lead Overseer may, in consultation with relevant competent authorities,\nreduce or extend the timelines described in points 5 to 12. The Lead Overseer should document\nthe changes and the reasons for such changes.\nGuideline 3: Difference of opinions between ESAs and competent\nauthorities",
+      "parent_section": "2"
+    },
+    {
+      "section_number": "3.1",
+      "title": "In case of divergent views regarding the oversight cooperation and information exchange, the",
+      "content": "ESAs and competent authorities should strive to reach a mutually agreed solution. In cases where\nno such solution can be reached, the Lead Overseer should, in consultation with the Joint\nOversight Network, present the difference of opinions to the Oversight Forum, which will present\nits views to find a mutually agreed solution.\nGuideline 4: Information exchange between ESAs and competent\nauthorities in the context of their respective cooperation with\ncompetent authorities designated or established in accordance with\nNIS2 (NIS2 authorities)",
+      "parent_section": "3"
+    },
+    {
+      "section_number": "4.1",
+      "title": "Where possible, competent authorities and the Lead Overseer should make available to each",
+      "content": "other relevant information stemming from their dialogue with NIS2 authorities responsible for the\nsupervision of essential or important entities subject to that Directive, which have been\ndesignated as a critical ICT third-party service provider.\nSection 2: Designation of critical ICT third-party service providers\nGuideline 5: Information for the criticality assessment to be\nsubmitted by competent authorities to the ESAs\n6",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "5.1",
+      "title": "For the purposes of designating the ICT third-party service providers that are critical for financial",
+      "content": "entities in accordance with Article 31(1)(a) of the DORA, without undue delay following the receipt\nof the register of information referred to in Article 28(3) of the DORA ,   competent authorities\nshould make available the full register of information to the ESAs in accordance with the formats\nand procedures specified by the ESAs.\n3",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.2",
+      "title": "Competent authorities should also make available to the ESAs any relevant quantitative or",
+      "content": "qualitative information at their disposal to facilitate the criticality assessment envisaged in Article\n31(2) of the DORA, taking into account the delegated act referred to in Article 31(6) of the DORA.",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "5.3",
+      "title": "Upon request, competent authorities should make available to the ESAs additional available",
+      "content": "information acquired in their supervisory activities, in order to facilitate the criticality assessment.\nGuideline 6: Information related to the designation of critical ICT\nthird-party service providers to be submitted by the Lead Overseer\nor ESAs to competent authorities",
+      "parent_section": "5"
+    },
+    {
+      "section_number": "6.1",
+      "title": "Within 10 working days following the receipt from the ICT third-party service provider, the ESAs",
+      "content": "should make available to the competent authorities of the financial entities using the ICT services\nprovided by a ICT third-party service provider, the legal name, identification code\n4\n, country of the\nregistered office of the ICT third-party service provider and, if it belongs to a group, of the parent\ngroup that submitted a request to be designated as critical according to Article 31(11) of the\nDORA.",
+      "parent_section": "6"
+    },
+    {
+      "section_number": "6.2",
+      "title": "The Lead Overseer should share with the competent authorities of the financial entities using the",
+      "content": "ICT services provided by a critical ICT third-party service provider:\na)   Within 10 working days following the receipt from the critical ICT third-party service provider,\nthe notification of the critical ICT third-party service provider about any changes to the\nstructure of the management of the subsidiary established in the Union according to Article\n31(13) of the DORA;\nb)   Within 10 working days after the submission of the notification of a decision to designate the\nICT third party-party service provider as critical to the ICT third-party service provider, the\nlegal name, identification code ⁷ , country of the registered office of the ICT third-party service\nprovider and, if it belongs to a group, of the parent group that has been designated as critical\n3\nThe ESAs will make use of Article 35(2) of the founding regulations of the ESAs to request the full register of information.\n4\n“Identification code” refers to the identification code requested for ICT third-party service providers as established by the\nImplementing Technical Standards on the standard templates for the purposes of the register of information in relation to\nall contractual arrangements on the use of ICT services provided by ICT third-party service providers under Article 28(9) of\nRegulation (EU) 2022/2554\n7\naccording to Article 31(5) and (11) of the DORA and the starting date as from which they will\neffectively be subject to oversight activities as referred to in Article 31(5) of the DORA.\nSection 3: Core oversight activities\nGuideline 7: Oversight plans",
+      "parent_section": "6"
+    },
+    {
+      "section_number": "7.1",
+      "title": "Prior to the finalisation of the annual oversight plan referred to in Article 33(4) of the DORA, the",
+      "content": "Lead Overseer should make available the draft annual oversight plan to the competent\nauthorities of the financial entities using the ICT services provided by a critical ICT third-party\nservice provider.",
+      "parent_section": "7"
+    },
+    {
+      "section_number": "7.2",
+      "title": "The draft annual oversight plan should include the following information on the envisaged",
+      "content": "general investigations or inspections:\na)   type of oversight activity (general investigation or inspection);\nb)   high-level scope and objectives;\nc)   approximate timeframe.",
+      "parent_section": "7"
+    },
+    {
+      "section_number": "7.3",
+      "title": "Competent authorities may provide comments on the draft annual oversight plan within 30",
+      "content": "working days following the receipt thereof.",
+      "parent_section": "7"
+    },
+    {
+      "section_number": "7.4",
+      "title": "Within 10 working days following the adoption, the Lead Overseer should make available to the",
+      "content": "competent authorities, the annual oversight plan and the multi-annual oversight plan\n5\n.",
+      "parent_section": "7"
+    },
+    {
+      "section_number": "7.5",
+      "title": "The Lead Overseer should make available any material updates to the annual oversight plan and",
+      "content": "the multi-annual oversight plan to the competent authorities without undue delay following the\nadoption of the updates. Competent authorities may provide comments on the material updates\nto the annual oversight plan within 30 working days following the receipt.\nGuideline 8: General investigations and inspections",
+      "parent_section": "7"
+    },
+    {
+      "section_number": "8.1",
+      "title": "At least 3 weeks before the start of the general investigation or inspection according to Articles",
+      "content": "38(5), 39(3) and 36(1) of the DORA, or with the shortest possible delay in case of an urgent\ninvestigation or inspection, the Lead Overseer should inform the competent authorities of the\nfinancial entities using the ICT services provided by a critical ICT third-party service provider, the\nidentity of the authorised persons for the general investigation or inspection.",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "8.2",
+      "title": "The authorised persons include:",
+      "content": "5\nSee Recital 3 of draft Regulatory Technical Standards on the conduct of oversight activities in relation to the joint\nexamination teams under DORA\n8\n-   relevant staff members of the Lead Overseer; and\n-   the staff members of the Joint Examination Team as referred to in Article 40(2) of the DORA,\nappointed to carry out the general investigation or inspection.",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "8.3",
+      "title": "The Lead Overseer should inform competent authorities of the financial entities using the ICT",
+      "content": "services provided by that critical ICT third-party service provider where the authorised persons\nfind that a critical ICT third-party service provider opposes the inspection, including imposing any\nunjustified conditions to the inspection.\nGuideline 9: Additional information exchanges between the Lead\nOverseer and competent authorities in relation to oversight activities",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "9.1",
+      "title": "Within 10 working days following the adoption of the request for information to the critical ICT",
+      "content": "third-party service provider, the Lead Overseer should make available to the Joint Oversight\nNetwork and the competent authorities of the financial entities using ICT services provided by a\ncritical ICT third-party service provider, the relevant scope of the request for information\nsubmitted to the critical ICT third-party service provider according to Articles 36(1)\n6\nand 37(1) of\nthe DORA.",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "9.2",
+      "title": "The Lead Overseer should inform competent authorities of the financial entities using ICT services",
+      "content": "provided by a critical ICT third-party service provider of any:\n-   major incidents with direct or indirect impact on financial entities within the Union when\nreported by the critical ICT third-party service provider, including relevant details to determine\nthe significance of the incident on financial entities and assess possible cross-border impacts;\n7\n-   relevant changes in the strategy of the critical ICT third-party service provider on ICT third-party\nrisk;\n-   events that could represent an important risk to the continuity and sustainability of the\nprovision of ICT services;\n-   reasoned statement that may be submitted by the critical ICT third-party service provider\nevidencing the expected impact of the draft oversight plan on customers which are entities\nfalling outside of the scope of DORA and where appropriate, formulating solutions to mitigate\nrisks referred to in Article 33(4) of the DORA.",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "9.3",
+      "title": "If a critical ICT third-party service provider liaises with the competent authorities for the purposes",
+      "content": "of all matters related to the oversight, the competent authorities should make available those\ncommunications to the Lead Overseer and remind the critical ICT third-party service provider that\n7\nSee Article 3(2), letter l of Draft regulatory technical standards on the harmonisation of conditions enabling the conduct of\nthe oversight activities under Article 41(1) points (a), b) and (d) of Regulation (EU) 2022/2554\n9\nthe Lead Overseer is its primary point of contact for the purposes of all matters related to the\noversight.\nSection 4: Follow-up of the recommendations\nGuideline 10: General principles for follow-up",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "10.1",
+      "title": "The following general principles should apply to the follow-up of the recommendations issued",
+      "content": "by the Lead Overseer:\n-   The competent authorities are the primary point of contact for financial entities under their\nsupervision. The competent authorities are responsible for the follow-up concerning the risks\nidentified in the recommendations concerning financial entities making use of the services of\nthe critical ICT third-party service providers;\n-   The Lead Overseer is the primary point of contact for critical ICT third-party service providers\nfor the purposes of all matters related to the oversight. The Lead Overseer is responsible for\nthe follow-up of the recommendations addressed to the critical ICT third-party service\nprovider.\nGuideline 11: Information exchanges between the Lead Overseer and\ncompetent authorities to ensure the follow-up of recommendations",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "11.1",
+      "title": "The Lead Overseer should make available to the competent authorities of the financial entities",
+      "content": "using the ICT services provided by a critical ICT third-party service provider, the following\ninformation:\na.   Within 10 working days following the receipt by the Lead Overseer:\n-   the   notification   of   the   critical   ICT   third-party   service   provider   to   follow   the\nrecommendations issued by the Lead Overseer and the remediation plan prepared by the\ncritical ICT third-party service provider;\n-   the reasoned explanation of the critical ICT third-party service provider for not following\nthe recommendations;\n-   the reports specifying the actions that have been taken or the remedies that have been\nimplemented by the critical ICT third-party service provider according to Article 35(1)(c)\nof the DORA.\nb.   Within 10 working days after the expiration of the 60 calendar days according to Article 42(1)\nof the DORA:\n10\n-   the fact that the critical ICT third-party service provider failed to send the notification\nwithin 60 calendar days after the issuance of recommendations to the critical ICT third-\nparty service provider according to Article 35(1)(d) of the DORA.\nc.   Within 10 working days after the adoption by the Lead Overseer:\n-   the assessment as to whether the critical ICT third-party service provider’s explanation\nfor not following the Lead Overseer’s recommendations is deemed sufficient and, if it is\ndeemed   sufficient,   the   Lead   Overseer’s   decision   concerning   amendment   of\nrecommendations\n8\n;\n-   the assessment of the reports specifying the actions that have been taken or the\nremedies that have been implemented by the critical ICT third-party service provider\naccording to Articles 35(1)(c) of the DORA. In case the critical ICT third-party service\nprovider has not adequately implemented the recommendations, the assessment should\nat least cover the criteria a) to d) of Article 42(8) of the DORA;\n-   the decision imposing a periodic penalty payment on the critical ICT third-party service\nprovider according to Article 35(6) of the DORA. If the Lead Overseer opted not to disclose\nthe periodic penalty payment to the public as per Article 35(10) of the DORA, the\ncompetent authorities receiving the information should not disclose it to the public;\n-   assessment as to whether the refusal of a critical ICT-third-party service provider to\nendorse recommendations, based on a divergent approach from the one advised by the\nLead Overseer, could adversely impact a large number of financial entities, or a significant\npart of the financial sector.",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "11.2",
+      "title": "In accordance with Article 42(10) of the DORA, the competent authorities should make available",
+      "content": "to the Lead Overseer the following information where critical ICT third party service providers\nhave not endorsed in part or entirely recommendations addressed to them by the Lead\nOverseer:\na.   Within 10 working days following the adoption by the competent authority:\n-   notification to the financial entity of the possibility of a decision being taken where a\ncompetent authority deems that a financial entity fails to take into account or to\nsufficiently address within its management of ICT third-party risk the specific risks\nidentified in the recommendations issued by the Lead Overseer according to Article 42(4)\nof the DORA;\n-   individual warnings issued by competent authorities according to Article 42(7) of the\nDORA and relevant information which allows the Lead Overseer to assess whether such\n8\nThe Lead Overseer and the Joint Examination Team assess the critical ICT third party service provider’s reasoned explanation\nfor not following the recommendations. If the Lead Overseer decides that the explanation is deemed sufficient, the Lead\nOverseer may amend the respective recommendations.\n11\nwarnings have resulted in consistent approaches mitigating the potential risk to financial\nstability.\nb.   Within 10 working days following the consultation:\n-   outcome of the consultation with NIS2 authorities   prior to taking a decision, as referred\nto in Article 42(5) of the DORA , where possible.\nc.   Within 10 working days   following the receipt of the information from financial entities:\n-   the material changes to existing contractual arrangements of financial entities with\ncritical ICT third-party service providers which were made to address the risks identified\nin the recommendations issued by the Lead Overseer;\n-   the start of executing exit strategies and transition plans of the financial entities as\nreferred to in Article 28(8) of the DORA.",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "11.3",
+      "title": "The ESAs, in consultation with competent authorities, should develop a template to facilitate",
+      "content": "the transmission of the information as defined in point 11.2.\nGuideline 12: Decision requiring financial entities to temporarily\nsuspend the use or deployment of a service provided by the critical\nICT third-party service provider or terminate the relevant contractual\narrangements concluded with the critical ICT third-party service\nprovider",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "12.1",
+      "title": "The competent authorities should inform the Lead Overseer of their intention to notify a",
+      "content": "financial entity of the possibility of a decision being taken if the financial entity does not adopt\nappropriate   contractual   arrangements   to   address   the   specific   risks   identified   in   the\nrecommendations, as referred to in Article 42(4) of the DORA . For the purpose of application\nof point 12.2, the competent authorities should make available to the Lead Overseer all relevant\ninformation regarding the possible decision and highlight if they intend to adopt an urgent\ndecision.",
+      "parent_section": "12"
+    },
+    {
+      "section_number": "12.2",
+      "title": "After the receipt of the information, the Lead Overseer should assess the potential impact such",
+      "content": "decision might have for the critical ICT third-party service provider whose service would be\ntemporarily suspended or terminated. Within 10 working days from the receipt of the\ninformation or with the shortest possible delay in case the competent authorities intend to\nadopt an urgent decision, the Lead Overseer should make that assessment available to the\ncompetent authorities concerned. Competent authorities should consider that non-binding\nassessment when deciding whether or not to issue the notification referred to in point 12.1.",
+      "parent_section": "12"
+    },
+    {
+      "section_number": "12.3",
+      "title": "Where two or more competent authorities plan to take or have taken decisions regarding",
+      "content": "financial entities making use of ICT services provided by the same critical ICT third-party service\n12\nprovider,   the   Lead   Overseer   should   inform   them about   any   inconsistent or   divergent\nsupervisory approaches that could lead to an unlevel playing field where financial entities are\nusing the ICT services provided by a critical ICT third-party service provider across Member\nStates.\nSection 5: Final provisions\nThese Guidelines apply from 17 January 2025.\nThese Guidelines will be subject to a review by the ESAs.\n13\nAnnex: Table summarising information exchanges\nThe following table summarises the information exchanges between the LO/ESAs (marked grey) and\nCAs (marked green) as indicated by these Guidelines. The table is not intended to introduce any new\nguidance, but to reflect the guidance included in the Guidelines. If there are any differences between\nthe Guidelines and this table, the information included in the Guidelines prevails.\n9\nArticle 28(3): As part of their ICT risk management framework, financial entities shall maintain and update at entity level,\nand at sub-consolidated and consolidated levels, a register of information in relation to all contractual arrangements on the\nuse of ICT services provided by ICT third-party service providers…\n10\nArticle 31(1)(a): The ESAs, through the Joint Committee and upon recommendation from the Oversight Forum established\npursuant to Article 32(1), shall designate the ICT third-party service providers that are critical for financial entities, following\nan assessment that takes into account the criteria specified in paragraph 2.\n11\nArticle 31(6): The Commission is empowered to adopt a delegated act in accordance with Article 57 to supplement this\nRegulation by specifying further the criteria referred to in paragraph 2 of this Article, by 17 July 2024.\n12\nArticle 31(10): For the purposes of paragraph 1, point (a), competent authorities shall, on a yearly and aggregated basis,\ntransmit the reports referred to in Article 28(3), third subparagraph, to the Oversight Forum established pursuant to Article\n32....\n13\nArticle 35(2) of the ESAs’ founding regulation: The Authority may also request information to be provided at recurring\nintervals and in specified formats. Such requests shall, where possible, be made using common reporting formats.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nSection 1: General considerations\nLO, in consultation with relevant CAs, reduce or\nextend the timelines\n-   -   2.1\nLO, in consultation with the JON, to present to the\nOF difference of opinions regarding the oversight\ncooperation and information exchanges\n-   -   3.1\nWhere possible, CAs and LO to make available to\neach other, relevant information from their\ndialogue with NIS2 authorities\n-   4.1\nSection 2: Designation of CTPPs\nCAs to make available the full register of\ninformation to the ESAs\nWithout undue\ndelay following the\nreceipt of the\nregister of\ninformation\n28(3)\n9\n31(1)(a)\n10\n, (2), (6)\n11\nand (10)\n12\nArticle 35(2) of the\nESAs’ founding\nregulation\n13\n5.1\nCAs to make available to the ESAs any relevant\n-   5.2\n14\n14\nArticle 31(5): … After designating an ICT third-party service provider as critical, the ESAs, through the Joint Committee,\nshall notify the ICT third-party service provider of such designation and the starting date as from which they will effectively\nbe subject to oversight activities.\n15\nArticle 31(11): The ICT third-party service providers that are not included in the list referred to in paragraph 9 may request\nto be designated as critical in accordance with paragraph 1, point (a).\n16\nArticle 31(13): The critical ICT third-party service provider referred to in paragraph 12 shall notify the Lead Overseer of any\nchanges to the structure of the management of the subsidiary established in the Union.\n17\nArticle 33(4): Based on the assessment referred to in paragraph 2, and in coordination with the Joint Oversight Network\nreferred to in Article 34(1), the Lead Overseer shall adopt a clear, detailed and reasoned individual oversight plan describing\nthe annual oversight objectives and the main oversight actions planned for each critical ICT third-party service provider. That\nplan shall be communicated yearly to the critical ICT third-party service provider.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nquantitative or qualitative information at their\ndisposal to facilitate the criticality assessment\nUpon request, CAs to make available additional\navailable information acquired in their supervisory\nactivities\n-   5.3\nESAs to make available to CAs information about\nthe TPP that submitted a request to be designated\nas critical\nWithin 10 working\ndays following the\nreceipt from the TPP\n31(5)\n14\n, (11)\n15\nand\n(13)\n16\n6.1\nLO to share with CAs notification of the CTPP about\nany changes to the structure of the management of\nthe subsidiary established in the Union\nWithin 10 working\ndays following the\nreceipt from the\nCTPP\n6.2\n(a)\nLO to share with CAs   information about the TPP\nthat has been designated as critical and the starting\ndate of designation\nWithin 10 working\ndays after the\nsubmission of the\nnotification\n6.2\n(b)\nSection 3: Core oversight activities\nLO to make available to CAs the draft annual\noversight plan\nPrior to the\nfinalisation of the\nannual oversight\nplan\n33(4)\n17\nRecital 3 of draft\nRegulatory\nTechnical\nStandards on the\nconduct of\noversight activities\n7.1\nCAs   may provide comments on the draft annual\noversight plan\nWithin 30 working\ndays following the\nreceipt\n7.3\n15\n18\nArticle 38(5): In good time before the start of the investigation, the Lead Overseer shall inform competent authorities of\nthe financial entities using the ICT services of that critical ICT third-party service provider of the envisaged investigation and\nof the identity of the authorised persons.\n19\nArticle 39(3): In good time before the start of the inspection, the Lead Overseer shall inform the competent authorities of\nthe financial entities using that ICT third-party service provider.\n20\nArticle 39(7): Where the officials and other persons authorised by the Lead Overseer find that a critical ICT third-party\nservice provider opposes an inspection ordered pursuant to this Article, the Lead Overseer shall inform the critical ICT third-\nparty service provider of the consequences of such opposition, including the possibility for competent authorities of the\nrelevant financial entities to require financial entities to terminate the contractual arrangements concluded with that critical\nICT third-party service provider.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nLO to make available to CAs, the annual oversight\nplan and the multi-annual oversight plan.\nWithin 10 working\ndays following the\nadoption\nin relation to the\njoint examination\nteams under DORA\n7.4\nLO to make available to CAs any material updates to\nthe annual oversight plan and the multi-annual\noversight plan\nWithout undue\ndelay following the\nadoption of the\nupdates\n7.5\nCAs may provide comments on the material\nupdates to the annual oversight plan\nWithin 30 working\ndays following the\nreceipt\n7.5\nLO to confirm to the CAs of the identity of the\nauthorised persons for the investigation or\ninspection\nAt least 3 weeks\nbefore the start of\nthe investigation or\ninspection\nOr\nWith the shortest\npossible delay in\ncase of an urgent\ninvestigation or\ninspection\n36(1), 38(5)\n18\nand\n39(3)\n19\n8.1\nLO to inform CAs where the authorised persons find\nthat a CTPP opposes an inspection, including\nimposing any unjustified conditions to the\ninspection\n-   39(7)\n20\n8.3\n16\n21\nArticle 36(1): When oversight objectives cannot be attained by means of interacting with the subsidiary set up for the\npurpose of Article 31(12), or by exercising oversight activities on premises located in the Union, the Lead Overseer may\nexercise the powers, referred to in the following provisions, on any premises located in a third-country which is owned, or\nused in any way, for the purposes of providing services to Union financial entities, by a critical ICT third party service provider,\nin connection with its business operations, functions or services, including any administrative, business or operational offices,\npremises, lands, buildings or other properties…\n22\nArticle 37(1): The Lead Overseer may, by simple request or by decision, require critical ICT third-party service providers to\nprovide all information that is necessary for the Lead Overseer to carry out its duties under this Regulation, including all\nrelevant business or operational documents, contracts, policies, documentation, ICT security audit reports, ICT-related\nincident reports, as well as any information relating to parties to whom the critical ICT third-party service provider has\noutsourced operational functions or activities.\n23\nThe Lead Overseer shall, without delay, transmit a copy of the decision to supply information to the competent authorities\nof the financial entities using the services of the relevant critical ICT third-party service providers and to the JON.\n24\nArticle 33(4), third subparagraph: Upon receipt of the draft oversight plan, the critical ICT third-party service provider may\nsubmit a reasoned statement within 15 calendar days evidencing the expected impact on customers which are entities falling\noutside of the scope of this Regulation and where appropriate, formulating solutions to mitigate risks.\n25\nArticle 33(1): The Lead Overseer shall conduct the oversight of the assigned critical ICT third party service providers and\nshall be, for the purposes of all matters related to the oversight, the primary point of contact for those critical ICT third party\nservice providers.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nLO to make available to the JON and the CAs,\nrelevant scope of the request for information\nsubmitted to the CTPP\nWithin 10 working\ndays following the\nadoption of the\nrequest for\ninformation to the\nCTPP\n36(1)\n21\n,37(1)\n22\nand\n37(5)\n23\n9.1\nLO to make available to CAs of:\n•   major incidents with direct/indirect impact on\nFEs when reported by the CTPP (upon request\nby LO);\n•   relevant changes in the strategy of the CTPP on\nICT third-party risk;\n•   events that could represent important risk to\nthe provision of ICT services;\n•   reasoned statement from the CTPP evidencing\nthe expected impact of the draft oversight plan.\n-\n33(4)\n24\nArticle 3(2), letter l\nof Draft regulatory\ntechnical\nstandards on the\nharmonisation of\nconditions\nenabling the\nconduct of the\noversight activities\nunder Article 41(1)\npoints (a), b) and\n(d) of Regulation\n(EU) 2022/2554\n9.2\nCAs to make available to the LO, communications of\nthe CTPP with the CAs for the purposes of all\n-   33(1)\n25\n9.3\n17\n26\nArticle 35(1)(c): The Lead Overseer has the power to request, after the completion of the oversight activities, reports\nspecifying the actions that have been taken or the remedies that have been implemented by the critical ICT third party service\nprovider in relation to the recommendations issued.\n27\nArticle 42(1): Within 60 calendar days of the receipt of the recommendations issued by the Lead Overseer, critical ICT third\nparty service providers shall either notify the Lead Overseer of their intention to follow the recommendations or provide a\nreasoned explanation for not following such recommendations.\n28\nArticle 35(6): In the event of whole or partial non-compliance with the measures required to be taken pursuant to the\nexercise of the powers under paragraph 1, points (a), (b) and (c), and after the expiry of a period of at least 30 calendar days\nfrom the date on which the critical ICT third-party service provider received notification of the respective measures, the Lead\nOverseer shall adopt a decision imposing a periodic penalty payment to compel the critical ICT third-party service provider\nto comply with those measures.\n29\nArticle 35(10): The Lead Overseer shall disclose to the public every periodic penalty payment that has been imposed, unless\nsuch disclosure would seriously jeopardise the financial markets or cause disproportionate damage to the parties involved.\n30\nArticle 42(8): Upon receiving the reports referred to in Article 35(1), point (c), competent authorities, when taking a\ndecision as referred to in paragraph 6 of this Article, shall take into account the type and magnitude of risk that is not\naddressed by the critical ICT third-party service provider, as well as the seriousness of the non-compliance, having regard to\nthe following criteria:\n(a) the gravity and the duration of the non-compliance;\n(b) whether the non-compliance has revealed serious weaknesses in the critical ICT third-party service provider’s procedures,\nmanagement systems, risk management and internal controls;\n(c) whether a financial crime was facilitated, occasioned or is otherwise attributable to the non-compliance;\n(d) whether the non-compliance has been intentional or negligent.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nmatters related to the oversight\nSection 4: Follow-up of the recommendations\nLO to make available to CAs:\n•   notification of CTPP to follow recommendations;\n•   the CTPP’s remediation plan;\n•   the reasoned explanation of the CTPP for not\nfollowing the recommendations; and\n•   the report specifying the actions taken or\nremedies implemented by the CTPP\nWithin 10 working\ndays following the\nreceipt by the LO\n35(1)(c)\n26\nand\n42(1)\n27\n11.1\na)\nLO to make available to CAs, the fact that the CTPP\nfailed to send the notification within 60 calendar\ndays after the issuance of recommendations to the\nCTPP\nWithin 10 working\ndays after the\nexpiration of the 60\ncalendar days\n11.1\nb)\nLO to make available to CAs:\n•   assessment as to whether the CTPP’s\nexplanation for not following the LO’s\nWithin 10 working\ndays following the\nadoption by the LO\n35(1)(c), 35(6)\n28\n,\n35(10)\n29\n, 42(1),\n42(8)(a-d)\n30\n11.1\nc)\n18\n31\nArticle 42(4): Where a competent authority deems that a financial entity fails to take into account or to sufficiently address\nwithin its management of ICT third-party risk the specific risks identified in the recommendations, it shall notify the financial\nentity of the possibility of a decision being taken, within 60 calendar days of the receipt of such notification, pursuant to\nparagraph 6, in the absence of appropriate contractual arrangements aiming to address such risks.\n32\nArticle 42(7): Where a critical ICT third-party service provider refuses to endorse recommendations, based on a divergent\napproach from the one advised by the Lead Overseer, and such a divergent approach may adversely impact a large number\nof financial entities, or a significant part of the financial sector, and individual warnings issued by competent authorities have\nnot resulted in consistent approaches mitigating the potential risk to financial stability, the Lead Overseer may, after\nconsulting the Oversight Forum, issue non-binding and non-public opinions to competent authorities, in order to promote\nconsistent and convergent supervisory follow-up measures, as appropriate.\n33\nArticle 42(10): Competent authorities shall regularly inform the Lead Overseer on the approaches and measures taken in\ntheir supervisory tasks in relation to financial entities as well as on the contractual arrangements concluded by financial\nentities where critical ICT third party service providers have not endorsed in part or entirely recommendations addressed to\nthem by the Lead Overseer.\n34\nArticle 42(5): Upon receiving the reports referred to in Article 35(1), point (c), and prior to taking a decision as referred to\nin paragraph 6 of this Article, competent authorities may, on a voluntary basis, consult the competent authorities designated\nor established in accordance with Directive (EU) 2022/2555 responsible for the supervision of an essential or important entity\nsubject to that Directive, which has been designated as a critical ICT third-party service provider.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nrecommendations is deemed sufficient and, if\nso, the LO’s decision concerning amendment of\nrecommendations;\n•   assessment of the reports specifying the actions\ntaken or remedies implemented by the CTPP;\n•   decision imposing a periodic penalty payment\non the CTPP;\n•   assessment as to whether the refusal of a CTPP\nto endorse recommendations could adversely\nimpact a large number of financial entities, or a\nsignificant part of the financial sector\nCAs to make available to LO:\n•   notification to the financial entity of the\npossibility of a decision being taken;\n•   individual warnings issued by CAs and relevant\ninformation which allows the LO to assess\nwhether such warnings have resulted in\nconsistent approaches mitigating the potential\nrisk to financial stability\nWithin 10 working\ndays following the\nadoption by the CA\n42(4)\n31\n, (7)\n32\nand\n(10)\n33\n11.2\na)\nWhere possible, CAs to make available to LO,\noutcome of the consultation with NIS2 authorities\nprior to taking a decision.\nWithin 10 working\ndays following the\nconsultation\n42(5)\n34\n11.2\nb)\n19\n35\nArticle 42(10): Competent authorities shall regularly inform the Lead Overseer on the approaches and measures taken in\ntheir supervisory tasks in relation to financial entities as well as on the contractual arrangements concluded by financial\nentities where critical ICT third-party service providers have not endorsed in part or entirely recommendations addressed to\nthem by the Lead Overseer.\nInformation exchange   Timeline\nRelated Article\nin the Level 1\ntext\nGL\nCAs to make available to LO:\n•   the material changes to existing contractual\narrangements of financial entities with CTPPs\nmade to address the risks identified in the\nrecommendations;\n•   the start of executing exit strategies and\ntransition plans of the financial entities\nWithin 10 working\ndays following the\nreceipt of the\ninformation from\nfinancial entities\n28 and 42(10)\n35\n11.2\nc)\nCAs to inform LO of:\n•   intention to notify a financial entity of the\npossibility of a decision being taken if the\nfinancial entity does not adopt appropriate\ncontractual arrangements to address the\nspecific risks identified in the recommendations;\n•   all relevant information regarding the decision;\n•   whether they intend to carry out an urgent\ndecision\n-\n42(4) and (10)\n12.1\nLO to make available to CAs, non-binding\nassessment of potential impact the decision might\nhave for the CTPP whose service would be\ntemporarily suspended or terminated\nWithin 10 working\ndays from the\nreceipt of the\ninformation referred\nto in GL 12.1\nor\nWith the shortest\npossible delay in\ncase of an urgent\ndecision\n12.2",
+      "parent_section": "12"
+    }
+  ]
+}

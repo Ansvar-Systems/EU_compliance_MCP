@@ -107,3 +107,62 @@ describe('regulations.db invariants', () => {
     ).toBeGreaterThan(50);
   });
 });
+
+describe('guidance corpus invariants', () => {
+  // The per-document license+url convention is enforced over the wave-1
+  // guidance corpus (CRA / NIS2 / DORA). Pre-existing MDCG and AI_ACT
+  // guidance predates that convention and carries no metadata.license —
+  // backfilling those ~100 docs is a separate, out-of-scope task, so this
+  // invariant is honestly scoped to the related_regulation set wave-1
+  // introduced rather than weakened to pass over untruthful data.
+  const WAVE1 = `d.related_regulation IN ('CRA', 'NIS2', 'DORA')`;
+
+  it('every wave-1 guidance document has a license and a URL', () => {
+    const rows = db
+      .prepare(
+        `SELECT id, url, json_extract(metadata, '$.license') AS license
+         FROM guidance_documents d
+         WHERE ${WAVE1}`,
+      )
+      .all() as Array<{ id: string; url: string | null; license: string | null }>;
+    const bad = rows.filter((r) => !r.license || !r.url);
+    expect(bad.map((r) => r.id)).toEqual([]);
+  });
+
+  it('every published guidance document has at least one non-empty section', () => {
+    const bad = db
+      .prepare(
+        `SELECT d.id FROM guidance_documents d
+         WHERE d.status = 'published'
+           AND NOT EXISTS (
+             SELECT 1 FROM guidance_sections s
+             WHERE s.document_id = d.id AND length(trim(s.content)) > 0
+           )`,
+      )
+      .all() as Array<{ id: string }>;
+    expect(bad.map((r) => r.id)).toEqual([]);
+  });
+
+  it('guidance FTS index row count matches guidance_sections', () => {
+    const a = (db.prepare('SELECT COUNT(*) AS n FROM guidance_sections').get() as { n: number }).n;
+    const b = (
+      db.prepare('SELECT COUNT(*) AS n FROM guidance_sections_fts').get() as { n: number }
+    ).n;
+    expect(b).toBe(a);
+  });
+
+  it('every related_regulation resolves to an ingested regulation', () => {
+    // 'both' is the historical MDCG value meaning MDR+IVDR. Regulation ids
+    // live in source_registry.regulation (there is no `regulations` table in
+    // the chassis schema).
+    const bad = db
+      .prepare(
+        `SELECT DISTINCT d.related_regulation AS r FROM guidance_documents d
+         WHERE d.related_regulation IS NOT NULL
+           AND d.related_regulation != 'both'
+           AND d.related_regulation NOT IN (SELECT regulation FROM source_registry)`,
+      )
+      .all() as Array<{ r: string }>;
+    expect(bad.map((x) => x.r)).toEqual([]);
+  });
+});
