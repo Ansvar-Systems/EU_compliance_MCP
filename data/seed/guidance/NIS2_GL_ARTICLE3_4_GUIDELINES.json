@@ -1,0 +1,61 @@
+{
+  "id": "NIS2_GL_ARTICLE3_4_GUIDELINES",
+  "title": "Commission Guidelines on the application of Article 3(4) of Directive (EU) 2022/2555 (NIS 2 Directive)",
+  "issuing_body": "European Commission (DG CONNECT)",
+  "document_reference": "C(2023) 6070",
+  "date_published": "2023-09-14",
+  "related_regulation": "NIS2",
+  "url": "https://digital-strategy.ec.europa.eu/en/library/commission-guidelines-application-article-34-directive-eu-20222555-nis-2-directive",
+  "pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/98319",
+  "status": "published",
+  "metadata": {
+    "license": "EU-Decision-2011-833",
+    "scope": "Commission Communication on the registration of certain entity types under Article 3(4) in the NIS2 cooperation database.",
+    "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/98319",
+    "source_kind": "pdf"
+  },
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Sector of activity under Directive (EU) 2022/2555",
+      "content": "Annex I – sectors of high criticality\no   Energy\n▪   Electricity\n•   Electricity undertaking\n•   Distribution system operator\n•   Transmission system operator\n•   Producers\n•   Nominated electricity market operators\n•   Market participants providing aggregation, demand response or\nenergy storage services\n•   Operators of a recharging point that are responsible for the\nmanagement   and   operation   of   a   recharging   point,   which\nprovides a recharging service to end users, including in the\nname and on behalf of a mobility service provider\n▪   Operators of district heating and cooling\n▪   Oil\n•   Operators of transmission pipelines\n•   Operators of oil production, refining and treatment facilities,\nstorage and transmission\n•   Central stockholding entities\n▪   Gas\n•   Supply undertakings\n•   Distribution system operators\n•   Transmission system operators\n•   Storage system operators\n•   LNG system operators\n•   Natural gas undertakings\n•   Operators of natural gas refining and treatment facilities\n▪   Operators of hydrogen production, storage and transmission\no   Transport\n▪   Air\n•   Air carriers\n•   Airport managing bodies\n•   Traffic   management   control   operators   providing   air   traffic\ncontrol (ATC) services\n▪   Rail\n•   Infrastructure managers\n•   Railway undertakings, including operators of service facilities\n▪   Water\n4\n•   Inland, sea and coastal passenger and freight water transport\ncompanies,   not   including   the   vessels   operated   by   those\ncompanies\n•   Managing bodies including their port facilities and entities\noperating works and equipment contained within ports\n•   Operators of vessel traffic services (VTS)\n▪   Road\n•   Road authorities responsible for traffic management control,\nexcluding public entities for which traffic management or the\noperation of intelligent transport systems is a non-essential part\nof their general activity\n•   Operators of intelligent transport systems\no   Health\n▪   Healthcare providers\n▪   EU reference laboratories\n▪   Entities carrying out research and development activities of medicinal\nproducts\n▪   Entities   manufacturing   basic   pharmaceutical   products   and\npharmaceutical preparations referred to in section C division 21 of\nNACE Rev. 2\n▪   Entities manufacturing medical devices considered to be critical during\na public health emergency (public health emergency critical devices\nlist)\no   Drinking water - Suppliers and distributors of water intended for human\nconsumption excluding distributors for which distribution of water for human\nconsumption is a non-essential part of their general activity of distributing\nother commodities and goods\no   Waste water - Undertakings collecting, disposing of or treating urban waste\nwater, domestic waste water or industrial waste water, excluding undertakings\nfor which collecting, disposing of or treating urban waste water, domestic\nwaste water or industrial waste water is a non-essential part of their general\nactivity\no   Digital infrastructure\n▪   Internet Exchange Point Providers\n▪   DNS service providers\n▪   TLD name registries\n▪   Cloud computing service providers\n▪   Data centres service providers\n▪   Content delivery network providers\n▪   Trust service providers\n▪   Providers of public electronic communications networks\n▪   Providers of publicly available electronic communications services\no   ICT service management (business-to-business)\n▪   Managed service providers\n▪   Managed security service providers\no   Public administration\n5\n▪   Public administration entities of central governments\n▪   Public administration entities at regional level\no   Space   -   Operators   of   ground-based   infrastructure,   owned,   managed   and\noperated by Member States or by private parties, that support the provision of\nspace-based   services,   excluding   providers   of   public   electronic\ncommunications network.\nAnnex II – other critical sectors\no   Postal and courier services\no   Waste management - Undertakings carrying out waste management, excluding\nundertakings for whom waste management is not their principal economic\nactivity\no   Manufacture, production and distribution of chemicals – undertakings carrying\nout   the   manufacture   of   substances   and   undertakings   carrying   out   the\nproduction of articles from substances or mixtures\no   Production, processing and distribution of food – food businesses which are\nengaged in wholesale distribution and industrial production and processing\no   Manufacturing\n▪   Manufacture   of   medical   devices   and   in   vitro   diagnostic   medical\ndevices\n▪   Manufacture of computer, electronic and optical products\n▪   Manufacture of electrical equipment\n▪   Manufacture of machinery and equipment n.e.c.\n▪   Manufacture of motor vehicles, trailers and semi-trailers\n▪   Manufacture of other transport equipment\no   Digital providers\n▪   Providers of online marketplaces\n▪   Providers of online search engines\n▪   Providers of social networking services platforms\no   Research organisations\nEntities not included in the Annexes\no   Entities providing domain name registration services\no   Other entities identified as critical entities under Directive (EU) 2022/2557\no   Entities   identified   as   operators   of   essential   services   in   accordance   with\nnational law",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Name   of the entity",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "In case the entity is referred to in Article 27 (1) of Directive (EU) 2022/2555   (DNS",
+      "content": "service provider, TLD name registry, entity providing domain name registration\nservices, cloud computing service provider, data centre service provider, content\ndelivery network provider, managed service provider, managed security service\nprovider, as well as a provider of online marketplaces, of online search engines\nand of social networking services platforms) , does the entity have its main EU\n6\nestablishment in this Member State or in case of no legal establishment in the EU, its\nrepresentative in this Member State?",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Address   of the entity’s establishment in this Member State. If the entity is referred to",
+      "content": "in Article 27(1) of Directive (EU) 2022/2555, the address of the entity’s   main\nestablishment , if it is located in this Member State, as well as its   other legal\nestablishments   in the EU. In case there is no establishment, the address of the\nrepresentative in the EU, designated in accordance with Article 26(3) of Directive\n(EU) 2022/2555, if the representative is located in this Member State.",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Up to date contact details   including email addresses and telephone numbers in this",
+      "content": "Member State.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "IP ranges   of the entity for this Member State",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "If the entity is referred to in Article 27(1) of Directive (EU) 2022/2555, a list of",
+      "content": "Member States where the entity provides   services   in scope of that Directive.",
+      "parent_section": null
+    }
+  ]
+}

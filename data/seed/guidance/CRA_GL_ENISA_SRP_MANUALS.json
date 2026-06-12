@@ -1,0 +1,26 @@
+{
+  "id": "CRA_GL_ENISA_SRP_MANUALS",
+  "title": "ENISA Single Reporting Platform (SRP) manuals and reporting instructions",
+  "issuing_body": "ENISA",
+  "document_reference": null,
+  "date_published": null,
+  "related_regulation": "CRA",
+  "url": "https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp",
+  "pdf_url": null,
+  "status": "planned",
+  "metadata": {
+    "license": "ENISA-CC-BY-4",
+    "freshness_note": "ENISA's SRP supports mandatory Article 14 reporting from 2026-09-11. ENISA announced SRP manuals/instructions \"in the course of June 2026\" per the CRA search results. The SRP topic landing page exists; no manual document URL confirmed at verification time. Revisit once ENISA publishes the manuals. License provisionally `ENISA-CC-BY-4` on the host whitelist (enisa.europa.eu); since this is status: planned with no fetchable PDF yet, license_evidence_url points at the ENISA website notice — the per-document inside-cover CC BY 4.0 notice MUST be confirmed at ingestion before the row flips to published (ENISA-agency PDFs carry it, but the website notice alone is acknowledgement-only).",
+    "target_articles": [
+      "14"
+    ]
+  },
+  "sections": [
+    {
+      "section_number": "0",
+      "title": "Status note",
+      "content": "ENISA's SRP supports mandatory Article 14 reporting from 2026-09-11. ENISA announced SRP manuals/instructions \"in the course of June 2026\" per the CRA search results. The SRP topic landing page exists; no manual document URL confirmed at verification time. Revisit once ENISA publishes the manuals. License provisionally `ENISA-CC-BY-4` on the host whitelist (enisa.europa.eu); since this is status: planned with no fetchable PDF yet, license_evidence_url points at the ENISA website notice — the per-document inside-cover CC BY 4.0 notice MUST be confirmed at ingestion before the row flips to published (ENISA-agency PDFs carry it, but the website notice alone is acknowledgement-only).",
+      "parent_section": null
+    }
+  ]
+}

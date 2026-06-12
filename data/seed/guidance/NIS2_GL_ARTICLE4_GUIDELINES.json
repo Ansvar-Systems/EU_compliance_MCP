@@ -1,0 +1,241 @@
+{
+  "id": "NIS2_GL_ARTICLE4_GUIDELINES",
+  "title": "Commission Guidelines on the application of Article 4 (1) and (2) of Directive (EU) 2022/2555 (NIS 2 Directive)",
+  "issuing_body": "European Commission (DG CONNECT)",
+  "document_reference": "C(2023) 6068",
+  "date_published": "2023-09-14",
+  "related_regulation": "NIS2",
+  "url": "https://digital-strategy.ec.europa.eu/en/library/commission-guidelines-application-article-4-1-and-2-directive-eu-20222555-nis-2-directive",
+  "pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/98286",
+  "status": "published",
+  "metadata": {
+    "license": "EU-Decision-2011-833",
+    "scope": "Commission Communication giving the lex-specialis equivalence test for when sector-specific Union acts displace NIS2 obligations (concludes DORA is the only equivalent-in-effect act).",
+    "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/98286",
+    "source_kind": "pdf"
+  },
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Article 1(2) of the Regulation (EU) 2022/2554 (Digital Operational Resilience Act,",
+      "content": "DORA) provides that, in relation to financial entities covered by Directive (EU)\n2022/2555 and its corresponding national transposition rules, Regulation (EU) 2022/2554\nshall be considered a sector-specific Union legal act for the purposes of Article 4 of\nDirective (EU) 2022/2555. This statement is mirrored in recital (28) of the preamble to\nDirective (EU) 2022/2555, which says that DORA should be considered a sector-specific\nUnion legal act in relation to Directive (EU) 2022/2555 with regard to financial entities.\nConsequently, the provisions of Regulation (EU) 2022/2554 relating to information and\ncommunication technology (ICT) risk management (Article 6 et seq.), management of\nICT-related incidents and, in particular, major ICT-related incident reporting (Article 17\net seq.), as well as on digital operational resilience testing, (Art 24 et seq.) information-\nsharing arrangements (Article 25) and ICT third-party risk (Article 28 et seq.) shall apply\ninstead of those provided for in Directive (EU) 2022/2555. Member States should\ntherefore not apply the provisions of Directive (EU) 2022/2555 on cybersecurity risk-\nmanagement and reporting obligations, and supervision and enforcement, to financial\nentities covered by Regulation (EU) 2022/2554.",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "In this regard, financial entities are considered entities referred to in Article 2(1)(a) to (t)",
+      "content": "of Regulation (EU) 2022/2554. The types of entities that fall within the scope of\nRegulation (EU) 2022/2554 as financial entities, as well as within the scope of Directive\n(EU) 2022/2555 as essential or important entities, include credit institutions, trading\nvenues and central counterparties. Since it is important to maintain a strong relationship\nand   the   exchange   of   information   with   the   financial   sector   under   Directive   (EU)\n2022/2555, the European Supervisory Authorities and the competent authorities under\nRegulation (EU) 2022/2554 may request to participate in the activities of the Cooperation\nGroup\n2\n, and exchange information and cooperate with the SPOCs, as well as with the\nCSIRTs and the competent authorities under Directive (EU) 2022/2555\n3\n. The competent\nauthorities under Regulation (EU) 2022/2554 should also transmit details of major ICT-\nrelated incidents and, where relevant, significant cyber threats to the CSIRTs, the\ncompetent authorities, or the SPOCs under Directive (EU) 2022/2555. This may be\nachieved by providing immediate access to incident notifications and forwarding them\neither directly or through a single entry point. CSIRTs should be in a position to cover the\nfinancial sector in their activities\n4\n. Member States should continue to include the financial\nsector   in   their   cybersecurity   strategies.   The   provisions   on   national   cyber   crisis\nmanagement frameworks (Article 9 of Directive (EU) 2022/2555), as well as on EU-\n1\nRegulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on\ndigital operational resilience for the financial sector and amending Regulations (EC) No 1060/2009, (EU) No\n648/2012, (EU) No 600/2014, (EU) No 909/2014 and (EU) 2016/1011, OJ L 333, 27.12.2022, p. 1.\n2\nArticle 14(3) of   Directive (EU) 2022/2555   and Article 47(1) of   Regulation (EU) 2022/2554 .\n3\nSee Recital 28 of   Directive (EU) 2022/2555 .\n4\nIbid .\n11\nCyCLONe (Article 16 of Directive (EU) 2022/2555), should continue to apply to entities\nfalling within the scope of Regulation (EU) 2022/2554.",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "In   application   of   Article   4(3),   third   sentence,   of   Directive   (EU)   2022/2555,   the",
+      "content": "Commission took account of the observations of the NIS Cooperation Group and the\nEuropean Union Agency for Cybersecurity (ENISA) prior to the adoption of the present\nGuidelines.",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "The present Guidelines are without prejudice to the interpretation of Union law by the",
+      "content": "Court of Justice of the European Union.\nII.   Equivalence of cybersecurity requirements of sector-specific Union legal acts",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Article 4(1) of Directive (EU) 2022/2555 provides that, where sector-specific Union legal",
+      "content": "acts require essential or important entities to adopt cybersecurity risk-management\nmeasures or to notify significant incidents and where those requirements are at least\nequivalent in effect to the obligations laid down in that Directive, the relevant provisions\nof Directive (EU) 2022/2555, including the provisions on supervision and enforcement\nlaid down in Chapter VII of that Directive, shall not apply to such entities. That provision\nfurther provides that where sector-specific Union legal acts do not cover all entities in a\nspecific sector falling within the scope of Directive (EU) 2022/2555, the relevant\nprovisions of that Directive shall continue to apply to the entities not covered by those\nsector-specific Union legal acts.\nII.1.   Cybersecurity risk-management requirements",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Article 4(2)(a) of Directive (EU) 2022/2555 provides that cybersecurity risk-management",
+      "content": "measures that essential or important entities are required to adopt under sector-specific\nUnion legal acts shall be considered to be equivalent in effect to the obligations laid down\nin Directive (EU) 2022/2555 where those measure are at least equivalent in effect to those\nlaid down in Article 21(1) and (2) of that Directive. When assessing whether the\nrequirements in a sector-specific Union legal act on cybersecurity risk-management\n1\nOJ L 333, 27.12.2022, p. 80.\n2\nmeasures are at least equivalent in effect to those laid down in Article 21(1) and (2) of\nDirective (EU) 2022/2555, the requirements in that sector-specific Union legal act should,\nat a minimum, correspond to the requirements of those provisions or go beyond them,\nmeaning that the sector-specific provisions may be more granular on substance compared\nto the corresponding provisions of Directive (EU) 2022/2555.",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Pursuant to Article 21(1), first subparagraph, of Directive (EU) 2022/2555, Member",
+      "content": "States shall ensure that essential and important entities take appropriate and proportionate\ntechnical, operational and organisational measures to manage the risks posed to the\nsecurity of network and information systems which those entities use for their operations\nor for the provision of their services. Those measures should be risk-based and should be\nable to prevent or minimise the impact of incidents. Article 21(1), second subparagraph,\nof Directive (EU) 2022/2555 specifies how the proportionality of such measures should\nbe assessed\n2\n. The obligation laid down in Article 21(1) of Directive (EU) 2022/2555\nrequiring   essential   and   important   entities   to   take   appropriate   and   proportionate\ncybersecurity risk-management measures refers to all   operations and services of the entity\nconcerned, not only to specific information technology (‘IT’) assets or critical services\nthat the entity provides.",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "When assessing the equivalence of a sector-specific Union legal act with the relevant",
+      "content": "provisions on cyber risk-management of Directive (EU) 2022/2555, particular importance\nshould be given in that assessment to the question whether the security obligations in that\nlegal act comprise measures aiming to ensure the security of network and information\nsystems. The definition of ‘security of networks and information systems’ laid down in\nArticle 6, point (2) of Directive (EU) 2022/2555 refers to the ability of information\nsystems to resist, at a given level of confidence, any event that could compromise the\navailability, authenticity, integrity or confidentiality of stored, transmitted or processed\ndata, or of services offered by, or accessible via, those network and information systems.\nThe use of the terms ‘availability’, ‘authenticity’, ‘integrity’ and ‘confidentiality’ in that\ndefinition refers to all four protection goals related to the security of network and\ninformation systems. The term ‘network and information systems’, as defined in Article\n6, point (1) of Directive (EU) 2022/2555, encompasses electronic communication\nnetworks\n3\n; any device or group of interconnected or related devices, one or more of which,\npursuant to a programme, carry out automatic processing of digital data; and digital data\nstored, processed, retrieved or transmitted by such electronic communication networks or\ndevices for the purposes of their operation use, protection or maintenance. Consequently,\nthe security measures required by a sector-specific Union legal act should also cover\nhardware, firmware, and software used in the activities of an entity.",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Another important consideration when assessing the equivalence of a sector-specific",
+      "content": "Union legal act with the requirements of Article 21(1) and (2) of Directive (EU)\n2\nSee also recitals 78, 81 and 82 of the preamble to Directive (EU) 2022/2555.\n3\nArticle 2(1) of Directive (EU) 2018/1972 of the European Parliament and of the Council of 11 December\n2018 establishing the European Electronic Communications Code (OJ L 321, 17.12.2018, p. 36).\n3\n2022/2555 is that the cybersecurity risk-management measures required by that act should\nbe based on an ‘all-hazard approach’ .   Since threats to the security of network and\ninformation systems could have different origins, any type of event can have a negative\nimpact on the network information systems of the entity and potentially lead to an\nincident. Therefore, the cybersecurity risk-management measures taken by the entity\nshould protect not only the entity’s network and information systems, but also the physical\nenvironment of those systems from any event such as sabotage, theft, fire, flood,\ntelecommunication or power failures, or unauthorised physical access that are capable of\ncompromising   the   availability,   authenticity,   integrity   or   confidentiality   of   stored,\ntransmitted or processed data or of the services offered by, or accessible via, network and\ninformation   systems.   Consequently,   the   cybersecurity   risk-management   measures\nrequired by a sector-specific Union legal act should specifically address the physical and\nenvironmental security of network and information systems from systems failure, human\nerror, malicious acts, or natural phenomena.\n4",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Article 21(2) of Directive (EU) 2022/2555 further requires the cybersecurity risk-",
+      "content": "management measures to include the specific security requirements listed in lit (a) to (j)\nof paragraph 2 of that provision. Those requirements cover measures such as policy on\nrisk-analysis and information system security, incident handling, business continuity,\ncrisis-management, supply chain security, policies and procedure regarding the use of\ncryptography, and where appropriate, encryption. Pursuant to Article 21(5), second\nsubparagraph, of Directive (EU) 2022/2555, the Commission is empowered to adopt\nimplementing acts laying down the technical and methodological requirements, as well as\nsectorial requirements, as necessary, of the security measures referred to in Article 21(2)\nof that Directive. With regard to Domain Name System (‘DNS’) service providers, top-\nlevel Domain (‘TLD’) name registries, cloud computing service providers, data centre\nservice providers, content   delivery network providers, managed service providers,\nmanaged security service providers, providers of online market places, of online search\nengines and of social networking services platforms, and trust service providers, the\nCommission shall adopt, by 17 October 2024, implementing acts on the technical and\nmethodological requirements of the security measures referred to in Article 21(2) of\nDirective (EU) 2022/2555. Implementing acts specify in further detail the main conditions\nand criteria for implementation as laid down in the basic act, without affecting the\nsubstance of that act\n5\n.\nII.2.   Reporting requirements",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "Article 4(2)(b) of Directive (EU) 2022/2555   provides   that   reporting   requirements",
+      "content": "concerning the notification of significant incidents shall be considered to be equivalent in\neffect to the obligations of that Directive where a sector-specific Union legal act provides\n4\nSee Recital 79 of the preamble to Directive (EU) 2022/2555.\n5\nSee Chapter D Additional Rules Implementing the Basic Act, Non-Binding Criteria for the application\nof Articles 290 and 291 of the Treaty on the Functioning of the European Union — 18 June 2019 (2019/C 223/01),\nC 223/1 of 3 .7.2019.\n4\nfor immediate access, where appropriate automatic and direct, to the incident notifications\nby the computer security incident response teams (‘CSIRTs’), the competent authorities,\nor the single points of contact (‘SPOCs’), and where requirements to notify significant\nincidents are at least equivalent in effect to those laid down in Article 23(1) to (6) of\nDirective (EU) 2022/2555.",
+      "parent_section": null
+    },
+    {
+      "section_number": "12",
+      "title": "Since the requirements of a sector-specific Union legal act to notify significant incidents",
+      "content": "must be at least equivalent in effect to those laid down in Article 23(1) to (6) of Directive\n(EU) 2022/2555 for that act to apply instead of the reporting obligations of that Directive,\nthe requirements laid down in Article 23(1) to (6) of the Directive are of particular\nimportance for the assessment of equivalence. Article 23(1) to (6) of Directive (EU)\n2022/2555 prescribe in more detail what kind of incidents must be reported to whom, in\nwhat timeframe, and with what information content. This is explained in more detail in\nthe following subsections:\nII.2.1.   Notification   of   significant   incidents   to   CSIRTs,   competent\nauthorities and recipients",
+      "parent_section": null
+    },
+    {
+      "section_number": "13",
+      "title": "The first sentence of Article 23(1), first subparagraph, of Directive (EU) 2022/2555",
+      "content": "requires essential and important entities to notify, without undue delay, its CSIRT or,\nwhere applicable, its competent authority, of any significant incident. The second sentence\nof Article 23(1), first subparagraph, of Directive (EU) 2022/2555 requires essential and\nimportant entities to notify, where appropriate, without undue delay, the recipients of their\nservices of significant incidents that are likely to adversely affect the provision of those\nservices.",
+      "parent_section": null
+    },
+    {
+      "section_number": "14",
+      "title": "While Article 6, point (6), of Directive (EU) 2022/2555 defines ‘incidents’ very broadly,",
+      "content": "as any event compromising the availability, authenticity, integrity or confidentiality of\nstored, transmitted or processed data or of the services offered by, or accessible via,\nnetwork and information systems, Article 23(1) of that Directive only subjects significant\nincidents to a reporting obligation. An incident is significant if it has caused or is capable\nof causing severe operational disruption of the services or financial loss for the entity\nconcerned (Article 23(3)(a)) or if it has affected or is capable of affecting other natural or\nlegal persons by causing considerable material or non-material damage (Article 23(3)(b)).",
+      "parent_section": null
+    },
+    {
+      "section_number": "15",
+      "title": "Recital (101) of the preamble to Directive (EU) 2022/2555 clarifies that the reporting of",
+      "content": "incidents should be based on an initial assessment carried out by the entity concerned.\nSuch   an   initial   assessment   should   consider,   inter   alia,   the   affected   network   and\ninformation systems, in particular their importance in the provision of the entity’s\nservices, the severity and technical characteristics of a cyber threat, and any underlying\nvulnerabilities that are being exploited, as well as the entity’s experience with similar\nincidents. Indicators such as the extent to which the functioning of the service is affected,\nthe duration of an incident, or the number of affected recipients of services may play an\nimportant role in identifying whether the operational disruption of the service is severe.\n5",
+      "parent_section": null
+    },
+    {
+      "section_number": "16",
+      "title": "Pursuant to Article 23(11), second subparagraph, of Directive (EU) 2022/2555, the",
+      "content": "Commission is empowered to adopt implementing acts further specifying the cases in\nwhich an incident shall be considered significant. With regard to DNS service providers,\nTLD name registries, cloud computing service providers, data centre service providers,\ncontent delivery network providers, managed service providers, managed security service\nproviders, providers of online marketplaces, of online search engines and of social\nnetworking services platforms, the Commission shall adopt, by 17 October 2024, such\nimplementing acts. Implementing acts specify in further detail the main conditions and\ncriteria for implementation as laid down in the basic act, without affecting the substance\nof that act\n6\n.\nII.2.2.   Multiple-stage approach to and time frame for reporting significant\nincidents",
+      "parent_section": null
+    },
+    {
+      "section_number": "17",
+      "title": "Directive (EU) 2022/2555 lays down a multiple-stage approach to the reporting of",
+      "content": "significant incidents which entails an early warning, an incident notification, and a final\nreport. These three elements may possibly be supplemented by intermediate reports and a\nprogress report.",
+      "parent_section": null
+    },
+    {
+      "section_number": "18",
+      "title": "The multiple-stage approach aims at striking the right balance between, on one hand, swift",
+      "content": "reporting that helps mitigate the potential spread of significant incidents and allows\nessential and important entities to seek assistance, and, on the other, in-depth reporting\nthat draws valuable lessons from individual incidents and improves over time the cyber\nresilience of individual entities and entire sectors.\n7",
+      "parent_section": null
+    },
+    {
+      "section_number": "19",
+      "title": "According to the multiple-stage approach, essential and important entities must first",
+      "content": "submit an early warning, without undue delay and in any event within 24 hours of\nbecoming aware of the significant incident, to the competent CSIRT or authority.\nSubsequently, those entities must submit an incident notification, without undue delay and\nin any event within 72 hours of becoming aware of the significant incident. Thereafter, an\nintermediate report may be requested by a competent CSIRT or authority. Finally, a final\nreport must be provided to the competent CSIRT or authority not later than one month\nafter the submission of the incident notification, unless the incident is still ongoing at that\ntime, in which case a progress report must be provided and the final report within one\nmonth of the handling of the incident.",
+      "parent_section": null
+    },
+    {
+      "section_number": "20",
+      "title": "A different timeframe applies for the incident notification laid down in Article 23(4),",
+      "content": "second subparagraph, of Directive (EU) 2022/2555 in relation to trust service providers.\nThose providers must notify significant incidents on the provision of their trust services\n6\nSee Chapter D Additional Rules Implementing the Basic Act, Non-Binding Criteria for the application\nof Articles 290 and 291 of the Treaty on the Functioning of the European Union — 18 June 2019 (2019/C 223/01),\nC 223/1 of 3.7.2019.\n7\nSee Recital 101 of the preamble to Directive (EU) 2022/2555.\n6\nwithout undue delay and in any event within 24 hours of becoming aware of the significant\nincident.\nII.2.3.   Content of reporting obligation of significant incidents to CSIRTs\nor competent authorities",
+      "parent_section": null
+    },
+    {
+      "section_number": "21",
+      "title": "As a general rule, the third sentence of Article 23(1), first subparagraph, of Directive (EU)",
+      "content": "2022/2555 requires Member States to ensure that essential and important entities report,\ninter alia, any information enabling the competent CSIRT or, where applicable, the\ncompetent   authority   to   determine   any   cross-border   impact   of   the   incident.   This\nrequirement concerning the content of the reporting obligation is further specified in\nArticle 23(4) of Directive (EU) 2022/2555, which lays down the multiple-stage approach.",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "According to Article 23(4)(a), the early warning must include, where applicable, an",
+      "content": "indication whether the significant incident is suspected of being caused by unlawful or\nmalicious acts or if it could have (in terms of whether it is likely to have) a cross-border\nimpact. According to recital (102) of the preamble to Directive (EU) 2022/2555, the early\nwarning should only include the information necessary to make the competent CSIRT or\nauthority aware of the significant incident and to allow the entity concerned to seek\nassistance, if required.",
+      "parent_section": null
+    },
+    {
+      "section_number": "23",
+      "title": "The incident notification must include, where applicable, updates to the information",
+      "content": "submitted as part of the early warning. Moreover, it must include an initial assessment of\nthe significant incident, including its severity and impact, as well as, where available, the\nindicators of compromise.",
+      "parent_section": null
+    },
+    {
+      "section_number": "24",
+      "title": "In case an intermediate report is requested, it must include relevant status updates. The",
+      "content": "final report must include a detailed description of the incident, including its severity and\nimpact, the type of threat or root cause that is likely to have triggered the incident, the\napplied and ongoing mitigation measures, and, where applicable, the cross-border impact\nof the incident.\nII.2.4.   Immediate access to incident notifications",
+      "parent_section": null
+    },
+    {
+      "section_number": "25",
+      "title": "Article 4(2)(b) of Directive (EU) 2022/2555 provides that a sector-specific Union legal",
+      "content": "act, to be applicable with regard to the notification requirements instead of that Directive,\nneeds to provide the CSIRTs, the competent authorities, or the SPOCs under Directive\n(EU) 2022/2555 with immediate access to the incident notifications submitted in\naccordance with the sector-specific Union legal act. In accordance with Recital (24) of the\npreamble to Directive (EU) 2022/2555, such immediate access can be ensured, in\nparticular, if incident notifications are being forwarded without undue delay to the CSIRT,\nthe competent authority, or the SPOC.",
+      "parent_section": null
+    },
+    {
+      "section_number": "26",
+      "title": "Immediate access may be provided through automatic and direct means which Member",
+      "content": "States should put in place, where appropriate. Automatic and direct reporting mechanisms\nensure systematic and immediate sharing of information with the CSIRTs, the competent\nauthorities, or the SPOCs concerning the handling of incident notifications. Member\n7\nStates may also use a single entry point which needs to comply with the sector-specific\nUnion legal act, to simplify reporting and to implement the automatic and direct reporting\nmechanism.",
+      "parent_section": null
+    },
+    {
+      "section_number": "27",
+      "title": "When assessing whether the requirements in a sector-specific Union legal act to notify",
+      "content": "significant incidents are at least equivalent in effect to those laid down in Article 23(1) to\n(6) of Directive (EU) 2022/2555, the requirements in that sector-specific Union legal act\nshould, at a minimum, correspond to the requirements of Article 23(1) to (6) or provide\nfor greater detail than those provisions. The requirements should relate to the kind of\nincidents that need to be reported according to Directive (EU) 2022/2555, taking into\naccount in particular the recipients, the content, and the applicable time frames.\nIII.   Consequences of equivalence\nIII.1.   Supervision and enforcement",
+      "parent_section": null
+    },
+    {
+      "section_number": "28",
+      "title": "Where sector-specific Union legal acts are at least equivalent in effect to the obligations",
+      "content": "laid down in Directive (EU) 2022/2555, it is not only the relevant provisions of that\nDirective concerning the obligation to adopt cybersecurity risk-management measures or\nto notify significant incidents that do not apply, but also the provisions on supervision and\nenforcement laid down in Chapter VII of Directive (EU) 2022/2555.",
+      "parent_section": null
+    },
+    {
+      "section_number": "29",
+      "title": "Recital (25) of the preamble to Directive (EU) 2022/2555 explains that sector-specific",
+      "content": "Union legal acts that are at least equivalent in effect could provide that the competent\nauthorities under those acts exercise their supervisory and enforcement powers in relation\nto cybersecurity risk-management or notification obligations with the assistance of the\ncompetent   authorities under   Directive (EU) 2022/2555. The competent   authorities\nconcerned   could   establish   cooperation   arrangements   for   that   purpose,   including\nprocedures   concerning   the   coordination   of   supervisory   activities,   procedures   on\ninvestigations and on-site inspections in accordance with national law, and a mechanism\nfor the exchange of relevant information on supervision and enforcement between the\ncompetent authorities. Such a mechanism for the exchange of relevant information could\nentail the access to cyber-related information requested by the competent authorities under\nDirective (EU) 2022/2555.\nIII.2.   National cybersecurity strategy",
+      "parent_section": null
+    },
+    {
+      "section_number": "30",
+      "title": "Each Member State is required to adopt a national cybersecurity strategy pursuant to",
+      "content": "Article 7(1) of Directive (EU) 2022/2555. A national cybersecurity strategy is a coherent\nframework of a Member State providing strategic objectives and priorities in the area of\ncybersecurity and the governance to achieve those objectives and priorities in that\nMember State (see Article 6, point (4), of Directive (EU) 2022/2555). The cybersecurity\nstrategy must include inter alia objectives and priorities covering in particular the sectors\nreferred to in Annexes I and II to Directive (EU) 2022/2555. In addition, that strategy\nmust entail a governance framework to achieve those objectives and priorities, including\nthe policies referred to in Article 7(2) of Directive (EU) 2022/2555.\n8",
+      "parent_section": null
+    },
+    {
+      "section_number": "31",
+      "title": "Moreover, Article 7(1)(c) of Directive (EU) 2022/2555 provides that the national",
+      "content": "cybersecurity strategy must include a governance framework clarifying the roles and\nresponsibilities of relevant stakeholders at national level, underpinning the cooperation\nand coordination at the national level between the competent authorities, the SPOCs and\nthe CSIRTs under Directive (EU) 2022/2555, as well as coordination and cooperation\nbetween those bodies and competent authorities under sector-specific Union legal acts.",
+      "parent_section": null
+    },
+    {
+      "section_number": "32",
+      "title": "Hence, the requirement for adopting a cybersecurity strategy pursuant to Article 7 of",
+      "content": "Directive (EU) 2022/2555 neither concerns the cybersecurity requirements imposed on\nessential and important entities pursuant to Articles 21 and 23 of that Directive, nor the\nprovisions related to their supervision and enforcement laid down in Chapter VII as\nrequired by Article 4(1) and (2) of the Directive. The relevant provision of Article 7 should\ncontinue to apply with respect to sectors, subsectors and types of entities for which sector-\nspecific Union legal acts within the meaning of Article 4 of Directive (EU) 2022/2555\nexist.\nIII.3.   Designation of CSIRTs",
+      "parent_section": null
+    },
+    {
+      "section_number": "33",
+      "title": "According to Article 10(1) of Directive (EU) 2022/2555, Member States must designate",
+      "content": "or establish one or more CSIRTs which shall cover at least the sectors, subsectors and\ntypes of entity referred to in Annexes I and II of the Directive, thus including the sectors,\nsubsectors and types of entities for which sector-specific Union legal acts exist. CSIRTs\nwill normally also carry out their tasks as laid down in Article 11(3) of Directive (EU)\n2022/2555 in that regard, unless particular tasks are specified in the sector-specific Union\nlegal acts.\nIII.4.   National cyber crisis management frameworks and EU-CyCLONe",
+      "parent_section": null
+    },
+    {
+      "section_number": "34",
+      "title": "Pursuant to Article 9(1) of Directive (EU) 2022/2555, the Member States must designate",
+      "content": "or establish one or more cyber crisis management authorities who are responsible for the\nmanagement of large-scale cybersecurity incidents and crises. According to Article 6,\npoint (7), of that Directive, a large-scale cybersecurity incident is an incident which causes\na level of disruption that exceeds a Member State’s capacity to respond to it or which has\na significant impact on at least two Member States. Article 9(4) of Directive (EU)\n2022/2555 requires the Member States to also adopt a national large-scale cybersecurity\nincident and crisis response plan where the objectives of and arrangements for the\nmanagement of large-scale cybersecurity incidents and crises are set out. This plan should\nlay down, inter alia, the cyber crisis management procedures, including their integration\ninto the general national crisis management framework and information exchange\nchannels, and the relevant public and private stakeholders and infrastructure involved.\nSuch cyber crisis management procedures and relevant public and private stakeholders\nand infrastructure might involve sector-specific procedures and stakeholders.",
+      "parent_section": null
+    },
+    {
+      "section_number": "35",
+      "title": "Article 16 of Directive (EU) 2022/2555 establishes the European cyber crisis liaison",
+      "content": "organization network (EU-CyCLONe), whose purpose is to support the coordinated\nmanagement of large-scale cybersecurity incidents and crisis at operational level and to\n9\nensure the regular exchange of relevant information among Member States and Union\ninstitutions, bodies and agencies.",
+      "parent_section": null
+    },
+    {
+      "section_number": "36",
+      "title": "Since Article 9 on cyber crisis management frameworks and Article 16 on EU-CyCLONe",
+      "content": "do not concern the cybersecurity requirements imposed on entities pursuant to Article 21\nand 23 of Directive (EU) 2022/2555 or the supervision and enforcement laid down in\nChapter VII as required by Article 4(1) and (2) of that Directive, Article 9 and 16 should\napply in their entirety for sectors, despite the existence of sector-specific Union legal acts\nwithin the meaning of Article 4. As a result, Member States must designate or establish\none or more cyber crisis management authorities responsible for the management of large-\nscale cybersecurity incidents and crises occurring in the sectors covered by sector-specific\nUnion legal acts. Furthermore, sectors covered by sector-specific Union legal acts should\nnot be disregarded when adopting the national large-scale cybersecurity incident and crisis\nresponse plan. Finally, EU-CyCLONe should carry out its tasks enshrined in Article 16\nof Directive (EU) 2022/2555 with regard to sectors where entities are subject to sector-\nspecific Union legal acts.\nIII.5.   Exclusion of the application of Articles 3 (3) and (4), 20 and 27 (2) and (3)",
+      "parent_section": null
+    },
+    {
+      "section_number": "37",
+      "title": "Pursuant to Article 3(3) of Directive (EU) 2022/2555, Member States are required to",
+      "content": "establish a list of essential and important entities as well as entities providing domain\nname registration services falling under the scope of the Directive. Pursuant to Article 27\n(2), Member States shall require entities referred to in Article 27 (1) of that Directive to\nsubmit certain information to the competent authorities. Since the purpose of these\nprovisions is to ensure a clear overview of the entities falling within the scope of Directive\n(EU) 2022/2555 to support the supervision of essential and important entities falling under\nits scope, it follows that these provisions should not apply to entities for which a sector-\nspecific Union legal act applies with respect to cybersecurity risk-management and\nreporting requirements. This does not preclude Member States from including such\nentities in the list.\nPursuant to Article 20(1) of Directive (EU) 2022/2555, management bodies of essential\nand important entities are required to approve the cybersecurity risk-measures taken by\nthose entities in order to comply with Article 21, oversee its implementation, and can be\nheld liable for infringements by the entities of that Article. Pursuant to Article 20(2) of\nthat Directive, Member States shall ensure that the members of the management bodies of\nessential and important entities are required to follow training, and shall encourage\nessential and important entities to offer similar training to their employees on a regular\nbasis, in order that they gain sufficient knowledge and skills to enable them to identify\nrisks and assess cybersecurity risk-management practices and their impact on the services\nprovided by the entity. Since the obligations stemming from Article 20 of Directive (EU)\n2022/2555 are intrinsically linked to the requirements of Article 21 of that Directive, it\nfollows that Article 20 should not apply in the case of sector-specific Union legal acts\nwithin the meaning of Article 4 of that Directive applying with respect to cybersecurity\nrisk-management requirements.\n10\nAPPENDIX: Sector-specific Union legal acts\nRegulation (EU) 2022/2554 (Digital Operational Resilience Act)\n1",
+      "parent_section": null
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "id": "NIS2_NISCG_SECURITY_MEASURES",
+  "title": "Reference document on security measures for entities under NIS2",
+  "issuing_body": "NIS Cooperation Group",
+  "document_reference": null,
+  "date_published": null,
+  "related_regulation": "NIS2",
+  "url": "https://digital-strategy.ec.europa.eu/en/policies/nis-cooperation-group",
+  "pdf_url": null,
+  "status": "published",
+  "metadata": {
+    "license": "EU-Decision-2011-833",
+    "scope": "NIS Cooperation Group entity-facing reference document on the cybersecurity risk-management measures entities under NIS2 are expected to implement.",
+    "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/129560",
+    "source_kind": "docx",
+    "date_note": "date_published null: the NIS Cooperation Group policy hub is a document listing, not a per-document landing page, and carries no fetchable publication date for this item (not recorded from memory). Source served as .docx, not PDF."
+  },
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "Introduction",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "Background",
+      "content": "The NIS Directive served as the cornerstone of the European Union’s cybersecurity regulatory framework, establishing obligations for the protection of critical infrastructure and essential services across Member States.\nOn 16 January 2023, the Directive (EU) 2022/2555 entered into force replacing Directive (EU) 2016/1148. This brings a number of changes in particular with regard to the:\nclear distinction between two categories of in-scope entities—essential and important—based on their criticality to societal and economic functions, thereby enabling a more risk-based and proportionate regulatory approach; and\ncyber security risk management measures that entities in scope have to adopt in order to manage the risks posed to the security of their network and information systems which those entities use for their operations or to provide their services.\nMember States are individually responsible for the transposition of these provisions into national law, and may adopt or maintain provisions with a view to achieving a higher level of security of network and information systems, according to the principle of minimum harmonisation set in the NIS2 Directive. For specific categories of entities, cybersecurity risk-management measures are addressed by Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024.\nThis document replaces the previous reference document (Cooperation Group publication 1/2018) and addresses the changes introduced by NIS2 on “cybersecurity risk-management measures”. More specifically, the document provides updates on the issues below.\nThe directive introduces cybersecurity risk-management measures applicable to entities; this document refers to high-level security objectives for entities subject to NIS2 and links to national provisions on security measures.\nThe directive extends its scope and covers more sectors and more types of entities compared to NIS1 which were considered in the previous reference document.\nThe directive defines cybersecurity risk-management measures, which are applicable to network and information systems which entities subject to NIS2 use for their operations or for the provision of their services’. The updated document addresses this change, by no longer referring Critical Information Systems (CIS).",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Purpose & audience",
+      "content": "The primary aim of this document is to define a comprehensive and adaptable framework of overarching cybersecurity objectives that can guide the development, implementation, and assessment of security measures for NIS2 entities across the EU. These objectives are deliberately broad to ensure relevance across different technological and operational environments while remaining sufficiently actionable to inform policy-making, risk management, and technical implementation.\nThe document presents a set of high-level cybersecurity objectives that are applicable to, and aligned with, the Member States’ approaches to the cybersecurity risk-management measures laid down by the Directive (EU) 2022/2555 (NIS2), Article 21.\nTo support practical adoption, this document provides structured mappings between these high-level cybersecurity objectives and national implementations of NIS2 from the EU Member States. In addition, it offers cross-references to international standards.\nDifferent national cybersecurity frameworks may describe the cybersecurity risk-management measures of Article 21 in varying levels of detail. Even when specific cybersecurity objectives are not explicitly listed in some of the national frameworks, entities are still expected to follow a risk-based approach and implement measures appropriate to the identified risks. As a result, some cybersecurity objectives, even if not directly mentioned in a national framework, may still be relevant based on the entity’s particular risk profile.\nThis document is not legally binding and is of a purely recommendatory nature. The reference document does not aim to establish a new standard or duplicate existing ones (e.g., ISO, IEC, CEN). The practices are written in a technology-neutral and standards-neutral way.\nThe document is addressed to entities in the EU seeking to identify the national frameworks, especially entities operating across borders. The document is also intended for non-EU organisations that are interested in understanding the European approach to cybersecurity measures. This reference document provides guidance on security practices that may be useful for other public or private actors aiming to strengthen their cybersecurity posture.\nThe entities that fall within the scope of Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024, and are described in NIS2 article 21(5), must comply with the provisions of the implementing regulation. This document is considered complimentary guidance.\nIt is noted that the Group, in possible collaboration with other expert groups with an interest on the subject, may update this document and/or issue more detailed guidance whenever this is considered appropriate by its members, in order to keep pace with the fast-evolving cyber threat landscape and developments in the area of cybersecurity.",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "Principles",
+      "content": "The document has been created with the following principles in mind and it is aligned with the article 21 NIS2 provisions.",
+      "parent_section": null
+    },
+    {
+      "section_number": "4.1",
+      "title": "Risk-based approach",
+      "content": "Entities subject to the NIS2 directive should follow a risk based approach. This means they should “… take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services”. Due to the fact that the security measures cover a large number of entities with different characteristics, the entities should take security measures proportionate to the “degree of the entity’s exposure to risks, the entity’s size and the likelihood of occurrence of incidents and their severity, including their societal and economic impact”.When managing risks, entities should consider all types of network and information systems including both ICT and OT and their supply chains.\nFinally, entities subject to the NIS2 directive should, as part of their risk-based approach, take into account any additional guidance or measures arising from the national assessment of risks, where available.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.2",
+      "title": "All hazards approach",
+      "content": "Security measures should be based on an all-hazards approach,which aims to protect network and information systems, as well as their physical environment, from events such as theft, fire, flood, natural phenomena, telecommunications or power failures, or unauthorized physical access, damage to, or interference. Such events could compromise the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data, or the services offered by, or accessible via, these systems.\nSecurity measures should therefore also address the physical and environmental security of these systems by protecting them against system failures, human error, malicious acts or natural phenomena, in line with European and international standards. In that regard, entities subject to the NIS2 Directive should also address human resources security and have in place appropriate access control policies and consider the security measures stemming from the Directive (EU) 2022/2557 on the resilience of critical entities (CER Directive).",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.3",
+      "title": "One size does not fit all",
+      "content": "The scope of NIS2 is broad, ranging from large to medium enterprises, and under certain criteria small enterprises. Developing a corporate approach to cybersecurity requires balancing security and compliance requirements with business needs.\nAn Information Security Management System (ISMS, e.g., ISO/IEC 27001) and a cybersecurity framework are independent but the two approaches can be related. Cybersecurity frameworks can support ISMS implementation by structuring cybersecurity activities improving communication and ensuring continuous improvement. When used together, they enable effective organisation and implementation of security measures. Reference to a cybersecurity framework in this document does not exempt:\nentities that implement or plan to implement an ISMS, or\nMember States that already require, or may require, ISMS adoption in national regulation.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "4.4",
+      "title": "Alignment with standards and good practices",
+      "content": "The measures should take into account the state-of-the-art and, where applicable, relevant European and international standards as well as the cost of implementation.\nThe high-level cybersecurity objectives have been developed with reference to European and international cybersecurity standards and good practices. When relevant, Annex B maps these objectives to international standards.\nThis document sets out horizontal objectives applicable to all entities subject to the NIS2 Directive in different sectors. Sector-specific standards may include additional requirements beyond those in this document, and national standards may also apply. To support implementation, simple and consistent language has been used, drawing on terminology from recognised standards and reference documents.",
+      "parent_section": "4"
+    },
+    {
+      "section_number": "5",
+      "title": "Structure",
+      "content": "The document is structured into 14 thematic areas (Sections 2.1 to 2.14 ) that entities subject to the NIS2 Directive entities should focus on in order to address the requirements of Art. 20 and 21. The mapping of these thematic areas to relevant paragraphs of the NIS2 is presented in the following table.\nTable 1: Thematic areas and high-level cybersecurity objectives for entities subject to the NIS2 directive\nEach thematic area is explained by one or more high-level cybersecurity objectives with the following structure.\nTable 2: Structure of cybersecurity objectives\nAnnex A provides references to Member States’ national frameworks, while Annex B refers to the international standards. The mapping of objectives to requirements in national frameworks and in international standards is provided in the Excel file accompanying this document.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Security measures",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Top management commitment and accountability",
+      "content": "Objective: The management bodies of the entities should approve, oversee, and be accountable for the implementation of the security of network and information systems.",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "measures ON THE SECURITY OF NETWORK AND INFORMATION SYSTEMS",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "8.1",
+      "title": "Policy on the security of network and information systems",
+      "content": "Objective: Entities should establish, formally approve and maintain a policy on the security of network and information systems, complemented by specific policies addressing key cybersecurity topics.",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "8.2",
+      "title": "Roles, responsibilities and authorities",
+      "content": "Objective: Entities should define and assign network and information security responsibilities and authorities to appropriate roles.",
+      "parent_section": "8"
+    },
+    {
+      "section_number": "9",
+      "title": "Risk management policy",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "9.1",
+      "title": "Risk management framework",
+      "content": "Objective: Entities should establish and maintain a risk management framework to identify and address risks to network and information system security. They should perform and document risk assessments, implement and monitor risk treatment plans. Adequate reporting should also be provided to management bodies.",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "9.2",
+      "title": "Compliance monitoring",
+      "content": "Objective: Entities should periodically review compliance with their network and information security policy, topic-specific policies, risk management measures, and applicable cybersecurity requirements and standards.",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "9.3",
+      "title": "Independent review of information and network security",
+      "content": "Objective: Entities should independently review their approach to managing network and information security, including its implementation through policies, people, processes, and technologies.",
+      "parent_section": "9"
+    },
+    {
+      "section_number": "10",
+      "title": "Incident handling",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "10.1",
+      "title": "Incident handling policy",
+      "content": "Objective: Entities should define roles, responsibilities, and procedures to detect, analyse, contain, respond to, recover from, document, report and learn from incidents in a timely manner.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "10.2",
+      "title": "Monitoring and logging",
+      "content": "Objective: Entities should establish procedures and use tools to monitor and log activities on their network and information systems. This is to detect events that could be considered incidents and respond accordingly to mitigate their impact.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "10.3",
+      "title": "Reporting of suspicious events",
+      "content": "Objective: Entities should put in place a simple and user-friendly mechanism allowing their personnel, direct suppliers and direct service providers, and customers to report suspicious events.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "10.4",
+      "title": "Event assessment and classification",
+      "content": "Objective: Entities should evaluate suspicious events to determine if they qualify as security incidents and, if so, classify their nature and assess their severity.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "10.5",
+      "title": "Incident response",
+      "content": "Objective: Entities should respond promptly to incidents following documented responsibilities and procedures.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "10.6",
+      "title": "Post-incident reviews",
+      "content": "Objective: Entities should conduct post-incident reviews after recovery, where appropriate. These reviews should identify the root cause, where possible, and document lessons learned to minimise future incidents and their consequences.",
+      "parent_section": "10"
+    },
+    {
+      "section_number": "11",
+      "title": "Business continuity and crisis management",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "11.1",
+      "title": "Business continuity and disaster recovery plan",
+      "content": "Objective: Entities should define and maintain business continuity and disaster recovery plans to apply in the event of incidents to meet business continuity goals.",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "11.2",
+      "title": "Backup and redundancy management",
+      "content": "Objective: Entities should maintain and periodically test backup copies of data and ensure sufficient resources, for example facilities, networks, information systems and staff, to provide an appropriate level of redundancy.",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "11.3",
+      "title": "Crisis management",
+      "content": "Objective: Entities should establish crisis management processes.",
+      "parent_section": "11"
+    },
+    {
+      "section_number": "12",
+      "title": "Supply chain security",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "12.1",
+      "title": "Supply chain security policy",
+      "content": "Objective: Entities should establish and apply a policy to govern relationships with direct suppliers and direct service providers that may affect the security of its network and information systems, and to mitigate identified relevant supply chain risks. The policy should identify the entity’s role in the supply chain and state network and information security requirements accordingly to direct suppliers and direct service providers.",
+      "parent_section": "12"
+    },
+    {
+      "section_number": "12.2",
+      "title": "Directory of suppliers and service providers",
+      "content": "Objective: Entities should identify and maintain an up-to-date registry of their direct suppliers and direct service providers.",
+      "parent_section": "12"
+    },
+    {
+      "section_number": "13",
+      "title": "Security in network and information systems acquisition, development and maintenance",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "13.1",
+      "title": "Security in acquisition of ICT and OT services, systems and products",
+      "content": "Objective: Entities should implement processes to manage risks from acquiring ICT and OT services, systems  and  products from suppliers and service providers throughout the life cycle of the services, systems and products.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.2",
+      "title": "Secure development life cycle",
+      "content": "Objective: Entities should establish and apply rules for the secure development of network and information systems, including software, whether developed in-house or outsourced. These rules should cover all phases: specification, design, development, implementation and testing.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.3",
+      "title": "Configuration management",
+      "content": "Objective: Entities should establish, document, implement and monitor configurations, including security configurations of hardware, software, services and networks.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.4",
+      "title": "Change management, repairs and maintenance",
+      "content": "Objective: Entities should apply change management procedures to control changes, repairs and maintenance of network and information systems.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.5",
+      "title": "Security testing",
+      "content": "Objective: Entities should establish and apply a policy and procedures for security testing.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.6",
+      "title": "Security patch management",
+      "content": "Objective: Entities should specify and apply patch management procedures.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.7",
+      "title": "Network security",
+      "content": "Objective: Entities should take appropriate measures to protect their network(s) from cyber threats.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.8",
+      "title": "Network segmentation",
+      "content": "Objective: Entities should segment network and information systems into networks or zones based on business needs and the result of the risk assessments.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.9",
+      "title": "Protection against malicious and unauthorized software",
+      "content": "Objective: Entities should protect their network and information systems against malicious and unauthorised software.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "13.10",
+      "title": "Vulnerability handling and disclosure",
+      "content": "Objective: Entities should obtain information on technical vulnerabilities in their network and information systems, assess their exposure, and take appropriate measures to manage these vulnerabilities.",
+      "parent_section": "13"
+    },
+    {
+      "section_number": "14",
+      "title": "Policies and procedures to assess the effectiveness of security measures",
+      "content": "Objective: Entities should assess whether their security measures meet requirements and are effectively implemented and maintained.",
+      "parent_section": null
+    },
+    {
+      "section_number": "15",
+      "title": "Basic cyber hygiene practices and Security training",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "15.1",
+      "title": "Awareness raising and basic cyber hygiene practices",
+      "content": "Objective: Entities should ensure that employees, including members of management bodies, and, where applicable, direct suppliers and direct service providers, understand the importance of cybersecurity, are aware of security risks, and apply cyber hygiene practices.",
+      "parent_section": "15"
+    },
+    {
+      "section_number": "15.2",
+      "title": "Security training",
+      "content": "Objective: Entities should identify employees whose roles require security expertise and ensure they receive regular training in network and information system security.",
+      "parent_section": "15"
+    },
+    {
+      "section_number": "16",
+      "title": "Cryptography",
+      "content": "Objective: Entities should establish and apply a policy and procedures on cryptography, in line with asset classification and risk assessments.",
+      "parent_section": null
+    },
+    {
+      "section_number": "17",
+      "title": "Human resources security",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "17.1",
+      "title": "Human resources understanding of security",
+      "content": "Objective: Entities should ensure that employees and, where applicable, direct suppliers and direct service providers understand, demonstrate and commit to their security responsibilities.",
+      "parent_section": "17"
+    },
+    {
+      "section_number": "17.2",
+      "title": "Verification of background",
+      "content": "Objective: Entities should verify the background of employees and, where applicable, direct suppliers and direct service providers, where roles require it.",
+      "parent_section": "17"
+    },
+    {
+      "section_number": "17.3",
+      "title": "Termination or change of employment procedures",
+      "content": "Objective: Entities should ensure that network and information security responsibilities and duties that remain after termination or change of employment are defined, communicated and enforced.",
+      "parent_section": "17"
+    },
+    {
+      "section_number": "17.4",
+      "title": "Disciplinary process",
+      "content": "Objective: Entities should establish, communicate and maintain a disciplinary process for handling violations of network and information security policies.",
+      "parent_section": "17"
+    },
+    {
+      "section_number": "18",
+      "title": "Access control",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "18.1",
+      "title": "Access control policy",
+      "content": "Objective: Entities should establish and implement logical and physical access control policies to prevent unauthorised access to systems and information by persons or processes.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "18.2",
+      "title": "Management of access rights",
+      "content": "Objective: Entities should provision, modify, remove and document access rights to network and information systems in line with their access control policy.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "18.3",
+      "title": "Privileged accounts and system administration accounts",
+      "content": "Objective: Entities should maintain a policy for management of privileged and system administration accounts.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "18.4",
+      "title": "Administration systems",
+      "content": "Objective: Entities should restrict and control the use of administration systems.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "18.5",
+      "title": "Identification",
+      "content": "Objective: Entities should manage the full life cycle of identities of network and information systems and their users.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "18.6",
+      "title": "Authentication",
+      "content": "Objective: Entities should implement secure authentication procedures and techologies, based on access restrictions and the access control policy.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "18.7",
+      "title": "Multi-factor authentication",
+      "content": "Objective: Entities should use multi-factor or continuous authentication where appropriate.",
+      "parent_section": "18"
+    },
+    {
+      "section_number": "19",
+      "title": "Asset management",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "19.1",
+      "title": "Asset classification",
+      "content": "Objective: Entities should define classification levels for all their assets, including information, to ensure the required level of protection.",
+      "parent_section": "19"
+    },
+    {
+      "section_number": "19.2",
+      "title": "Handling of assets",
+      "content": "Objective: Entities should establish, document and communicate a policy for the proper handling of assets, including information, covering their full life cycle.",
+      "parent_section": "19"
+    },
+    {
+      "section_number": "19.3",
+      "title": "Removable media policy",
+      "content": "Objective: Entities should protect and restrict the use of removable media according to a policy.",
+      "parent_section": "19"
+    },
+    {
+      "section_number": "19.4",
+      "title": "Asset inventory",
+      "content": "Objective: Entities should develop and maintain a complete, accurate, up-to-date and consistent inventory of their assets, and record changes in a traceable manner.",
+      "parent_section": "19"
+    },
+    {
+      "section_number": "19.5",
+      "title": "Deposit, return or deletion of assets upon termination of employment",
+      "content": "Objective: Entities should ensure assets are returned, irrevocably deleted, or disabled when the employment or contractual relationship ends.",
+      "parent_section": "19"
+    },
+    {
+      "section_number": "20",
+      "title": "Environmental and physical security",
+      "content": "",
+      "parent_section": null
+    },
+    {
+      "section_number": "20.1",
+      "title": "Supporting utilities",
+      "content": "Objective: Entities should prevent loss, damage or compromise of network and information systems, or interruption of their operations, caused by the failure or disruption of supporting utilities.",
+      "parent_section": "20"
+    },
+    {
+      "section_number": "20.2",
+      "title": "Protection against physical and environmental threats",
+      "content": "Objective: Entities should prevent or reduce the consequences of suspicious events and incidents originating from physical and environmental threats.",
+      "parent_section": "20"
+    },
+    {
+      "section_number": "20.3",
+      "title": "Perimeter and physical access control",
+      "content": "Objective: Entities should prevent and monitor unauthorised physical access, damage and interference to their network and information systems.",
+      "parent_section": "20"
+    },
+    {
+      "section_number": "21",
+      "title": "Annex A national frameworks",
+      "content": "Short description per national framework with references to any legal text and relevant guidance. To view the mapping of high-level cybersecurity objectives to national provisions, consult the [excel file].\nBelgium\nThe CyberFundamentals Framework (CyFun®), developed by the Centre for Cybersecurity Belgium (CCB), is a practical set of cybersecurity measures designed to strengthen organizational resilience against common cyber threats. It offers three assurance levels – Basic, Important, and Essential – allowing organizations to scale their security posture according to risk and maturity.\nCyFun® was not specifically created for NIS2 compliance; however, it is widely used as a reference framework to demonstrate robust cybersecurity practices. In Belgium, adopting CyFun® measures can lead to a presumption of conformity with the national NIS2 legislation when these measures are verified or certified by an accredited conformity assessment body (CAB) that is authorised by the CCB to operate in a Belgian NIS2 context. Such verification/certification provides formal evidence of compliance during audits and supervisory checks.\nBeyond Belgium, the framework is gaining traction across the EU: several countries have adopted it, others are in the process of adoption, and some are working toward mutual recognition agreements. This growing acceptance underscores CyFun®’s role as a harmonized, practical approach to cybersecurity and regulatory alignment within Europe. (CyFun®, www.cyfun.eu).\nFinland\nTraficom (the Finnish Transport and Communications Agency) has issued a national recommendation on cybersecurity risk-management measures for supervisory authorities. The Cybermeter/Kybermittari is a maturity model developed by the National Cyber Security Centre (NCSC-FI) and based on the Cybersecurity Capability Maturity Model and the NIST cybersecurity framework. They are the two instrumental documents for the national regulatory framework.\nThe recommended cybersecurity risk-management measures are mapped to the Cybermeter/Kybermittari’s objectives and practices that enable organisations to self-assess their cybersecurity capabilities and optimise their security investments. Voluntarily sharing quantitative self-assessment data to NCSC-FI enables the creation of benchmarking data and improves situational awareness of NCSC-FI.\nGermany\nIn Germany, there is an advisory on what requirements should be seen as state of the art. The document is available at https://www.bsi.bund.de/dok/408936.\nFor information on BSI standards and certification, see https://www.bsi.bund.de/dok/it-grundschutz-en.\nGreece\nGreece has incorporated the NIS2 Directive into national legislation with Law 5160/2024. Furthermore, regarding cybersecurity measures, the Greek national framework consists of the following:\nministerial decision 1689/2025 ‘National framework of cybersecurity requirements for essential and important entities’;\nthe Cybersecurity Handbook, available at https://cyber.gov.gr/wp-content/uploads/2025/04/Cybersecurity-Handbook-English-version-1.pdf;\nthe self-assessment tool, available at https://cyber.gov.gr/wp-content/uploads/2025/03/Cybersecurity-Self-Assessment-Tool-English-version-1.zip.\nThe Cybersecurity Handbook and the self-assessment tool are based on globally accepted international standards and guidelines (Center for Internet Security Controls, ISO 27002, NIST 800-53, Open Worldwide Application Security Project, etc.) and will be dynamically modified to follow changes in standards, the current threat landscape and the legal and regulatory framework.\nSpain\nThe ENS is a collective, multidisciplinary, and long-term national effort that has been in place for 15 years. As a Royal Decree–based framework, it has been updated several times to align with national and European regulations, address emerging cybersecurity needs and trends, and enable adoption across specific sectors, with mandatory compliance by all entities in the Spanish public sector, by private sector entities, domestic or foreign, that use their own information systems to provide services to the public sector, and also by entities in the supply chain of the latter, to the extent determined by a prior risk analysis, making it the most widespread legal model in Europe.\nSupported by successive National Cybersecurity Strategies and the transposition of the NIS Directive, the ENS stands out for its solid foundation and long-established track record.\nThe ENS has proven to be a highly successful framework thanks to its strong linkage between the security requirements, certified solutions, and procurement processes. This connection ensures that security measures are fully embedded into procurement, significantly strengthening the overall security posture of organizations.\nThrough the ENS link to the Catalogue of Information and Communication Technology Security Products and Services (CPSTIC), the ENS is well positioned for current European certification schemes and future ones arising from Regulation (EU) 2019/881, supported by its extensive experience and mandate in certifying products and services.\nThanks to its flexibility, principle of proportionality, maturity, extensive experience in auditing, certification, and monitoring, along with a comprehensive set of guidelines, tools, and sector-specific compliance profiles for the various NIS2 domains—and with more than 3,100 public and private entities already certified, including cloud service providers—the ENS is widely regarded as a robust framework that can serve as a European reference and a model for adoption by other Member States.\nThe full text of the framework is available at https://ens.ccn.cni.es/es/docman/documentos-publicos/39-boe-a-2022-7191-national-security-framework-ens/file.\nItaly\nItaly has incorporated the NIS2 Directive into national legislation with d.lgs. n. 138/ 2024, so called “NIS Decree”. For the purposes of Articles 21 (Cybersecurity risk-management measures) of the NIS Directive, Articles 31 and 40 of the NIS Decree establishes that security measures for important and essential entities (known as NIS entities) are established by the National Cybersecurity Agency through a determination issued by the Director General.\nIn accordance with the principles of proportionality and gradualism set out in Article 31, Article 42 of the NIS Decree stipulates that, in first implementing phase, basic security measures are defined.\nBasic security measures are intended to set a horizontal baseline in preparation of the adoption of more advanced and, where appropriate sectoral, obligations in a perspective of gradual and proportionate implementation of the Directive.\nSuch basic security measures for essential entities have been identified in Annex 2 to the determination of the Director General of ACN No. 164179 of April 14, 2025 (at  https://www.acn.gov.it/portale/documents/d/guest/detacn_nis_specifiche_2025_164179_signedLaw 5160/2024).\nThe basic security measures have been developed in accordance with the National Framework for Cybersecurity and Data Protection (at https://www.cybersecurityframework.it/)  – based on the NIST Cybersecurity Framework and its so-called “Framework Core” – and are organized into functions, categories, subcategories, and requirements.\nEach security measure consists of an identifier, a description, and one or more requirements. The identifier and the description refer to the National Cybersecurity Framework. The requirements indicate what is specifically required for implementing the measure.\nIn order to support entities in understanding and interpreting basic safety measures, a guide to reading these measures has also been published (https://www.acn.gov.it/portale/documents/d/guest/guida-alla-lettura-specifiche-di-base-2).\nLithuania\nLithuania transposed the NIS2 Directive into national law by adopting the Law on Cybersecurity (CSL) (in Lithuanian, link:  https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/f6958c2085dd11e495dc9901227533ee/asr ).\nCybersecurity requirements corresponding to the Article 21 of the NIS2 Directive are set out in Article 14 of the Law on Cybersecurity and extensively described in the Cybersecurity Requirements (CSR) and National Cyber Incident Management Plan (CIMP), approved by Governmental Resolution No. 818 of 13 August 2018 \"On the Implementation of Cyber Security Law\" (in Lithuanian, link: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/94365031a53411e8aa33fe8f0fea665f/asr ). The Cybersecurity Requirements consist of two parts – organisational requirements and technical requirements. Technical requirements may differ for essential and important entities. The requirements laid down in this act were developed taking into account requirements from ISO 27000 series' standards.\nEntities are supported by providing them with consultations and methodological documents. Key guidance documents and activities:\n•\tTemplates for the cybersecurity policy documents are available to entities via the NCSC platform.\n•\tCybersecurity risk assessment methodology with related templates for assets criticality analysis, risk assessment process, risk assessment report and risk management plan are available to entities via the NCSC platform.\n•\tNCSC training platform for entity managers, CISO’s and users.\nThe Netherlands\nThe Netherlands has implemented the security measures in article 21 of the Cyberbeveiligingswet (Cbw). The security measures have been further elaborated in lower legislation, in article 5 – 20 of the Cyberbeveiligingsbesluit (Cbb).\nWhen it comes to the security measures, the Dutch legislation does not make a distinction between essential entities and important entities. The security measures – as referred to in article 21 of the NIS2-directive – are equally the same for all the entities.\nAlthough the security measures are equally the same for all the entities, we believe that a one size fits all mentality with regard to these measures is not possible given the diversity of the entities. Therefore we combine both a risk based an rule based approach: the question of how the security measures should be implemented by the entity depends on the risk analysis. This analysis determines which implementation of the security measures is appropriate and proportionate for the entity in question. The results of the risk analysis, and thus the implementation of the measures taken, will therefore differ per entity due to the specific and unique characteristics of each entity. It is important that each entity gets acquainted and gains maturity with regard to the implementation of the security measures. Various articles on security measures in the Cbb stipulate that essential entities and important entities must have established policy on the subjects mentioned in those articles in writing and must demonstrably apply it.\nBesides the security measures mentioned in article 21.2, a) to j) of the NIS2-directive, the Dutch legislation also has a separate article on notifications, security advisories and threat information (article 17 Cbb) and an article to exclude certain products and services from suppliers (article 18 Cbb). The latter is an extension and further elaboration of the supply chain security.\nNext to the already established lower legislation (the Cbb), there is also the possibility for the relevant ministers to further elaborate the security measures in so called ‘ministeriële regelingen’ (lower legislation). This offers the possibility to make a distinction between sectors, subsectors, types of entities and entities. Each Ministry is currently drafting these lower legislations, which come in to force simultaneously with the Cbw and the Cbb.\nRegarding to this Reference document on security measures for essential entities it is good to mention that the Cbw and the Cbb do not explicitly mention certain objectives, such as security patch management, network security and removable media policy. However, this does not mean that the entities should not take these measures: as mentioned before, the results of the risk analysis will indicate which measures should be taken bij the entity. This corresponds with the open formulated security measures as stated in article 21 of the NIS2 directive.\nCroatia\nCybersecurity Act. On 15 February 2024 the Cybersecurity Act entered into force (Official Gazette No 14/24.) transposing into national law the EU NIS2 Directive (Directive (EU) 2022/2555 on measures for a high common level of cybersecurity across the Union). The Cybersecurity Act introduced a new, more comprehensive framework for the management of cybersecurity in the Republic of Croatia. The Act stipulates the procedures for categorisation of essential and important entities, regulates the obligations of essential and important entities in the implementation of cybersecurity requirements, defines the framework for carrying out cybersecurity audits and self-assessments, regulates all issues relevant for carrying out expert supervision of the implementation of cybersecurity requirements, and ultimately prescribes sanctions for non-compliance with prescribed obligations.\nThe Act establishes a new cybersecurity governance system, defines who the competent authorities are in the field of cybersecurity and what their tasks and powers are, while introducing a new functionality in the field of cybersecurity - the central government authority for cybersecurity. The tasks of the central government authority for cybersecurity will be performed by the National Cyber Security Centre (NCSC-HR) established within the Security and Intelligence Agency (SOA).\nThe Act introduces and elaborates voluntary cyber protection mechanisms for wider use, i.e. entities that are not classified as essential and important entities. One of the voluntary cyber protection mechanisms is the national system for detecting cyber threats and protecting cyberspace. The national system aims to enhance overall cybersecurity capabilities and resilience. The Act also provides a framework for coordinated vulnerability detection, where any natural and legal person can anonymously report vulnerability to the CSIRT vulnerability detection coordinator. Also, the Cybersecurity Act establishes a strategic planning and decision-making framework in the field of cybersecurity and sets out national frameworks for the management of large-scale cyber incidents and cyber crises.\nRegulation on Cybersecurity. Pursuant to Article 24 of the Cybersecurity Act (Official Gazette No. 14/24.), at its meeting held on 21 November 2024, the Government of the Republic of Croatia adopted the Regulation on Cybersecurity (Official Gazette No. 135/24.). The Regulation regulates criteria for classifying entities based on specific criteria for implementing categorisation of entities, measures to manage and implement cybersecurity risks, conducting cybersecurity self-assessments, criteria for identifying significant cyber incidents, notification of incidents, as well as other issues relevant to raising the level of cybersecurity.\nFour annexes are also an integral part of the Regulation. Annex I contains lists of sectors and activities. Annex II defines measures to manage and implement cybersecurity risks. Each measure contains the objective, subsets of measures, applicability of the measure in the context of IT and OT systems, and a tabulation of the distribution of subsets of measures. Annex III lists specific physical security measures for entities in the digital infrastructure sector. Annex IV contains template for the declaration of conformity.\n(link: https://ncsc.hr/en/nis2-transposition)",
+      "parent_section": null
+    },
+    {
+      "section_number": "22",
+      "title": "Annex B Mapping to standards",
+      "content": "The high-level cybersecurity objectives are mapped to relevant requirements of the following standards. To view this mapping, consult the [excel file].\nISO/IEC 27001:2022, Information security, cybersecurity and privacy protection — Information security management systems — Requirements.\nISO/IEC 27002:2022, Information security, cybersecurity and privacy protection — Information security controls.\nInternational series of standards IEC 62443, and especially:\nIEC 62443-2-1 Industrial communications networks – Network and system security – Part 2-1: Establishing an industrial automation and control system security program\nIEC 62443-3-3, Industrial communications networks – Network and system security – Part 3-3 System security requirements and security levels\nNIST Cybersecurity Framework, Version 2.0, National Institute of Standards and Technology, February 26, 2024.",
+      "parent_section": null
+    },
+    {
+      "section_number": "23",
+      "title": "Annex C Definitions",
+      "content": "To facilitate a common understanding, an effort has been made to align the terminology of this document as much as possible with that of NIS2.\nAsset means anything that is of value to the entity, including information. Overall, the assets of a network and information system are personnel, processes, information, software and hardware.\nCyber hygiene practices for entities are a common baseline set of network and information security practices, which are already covered by cybersecurity risk-management measures in this document. Cyber hygiene practices relating to users are a set of routine, proactive practices and behaviours that the entity’s users follow to maintain the network and information security of the entity’s systems. These practices are explicitly mentioned section 2.9.1.\nCyber threat means any potential circumstance, event or action that could damage, disrupt or otherwise adversely impact network and information systems, the users of such systems and other persons.\nCybersecurity means the activities necessary to protect network and information systems, the users of such systems, and other persons affected by cyber threats.\nCybersecurity framework means a basic set of concepts used to organize and communicate cybersecurity activities.\nEntity means a natural or legal person created and recognized as such under the national law of its place of establishment, which may, acting under its own name, exercise rights and be subject to obligations of the NIS2 directive.\nICT product means an element or a group of elements of a network or information system.\nICT service means a service consisting fully or mainly in the transmission, storing, retrieving or processing of information by means of network and information systems.\nICT process means a set of activities performed to design, develop, deliver or maintain an ICT product or ICT service.\nIncident means an event compromising the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems.\nManagement bodies are the highest-level leadership within entities as in the context of Article 20 of the NIS2 Directive.\nNetwork and information system means:\n(a) an ‘electronic communications network’ means transmission systems, whether or not based on a permanent infrastructure or centralised administration capacity, and, where applicable, switching or routing equipment and other resources, including network elements which are not active, which permit the conveyance of signals by wire, radio, optical or other electromagnetic means, including satellite networks, fixed (circuit- and packet-switched, including internet) and mobile networks, electricity cable systems, to the extent that they are used for the purpose of transmitting signals, networks used for radio and television broadcasting, and cable television networks, irrespective of the type of information conveyed;\n(b) any device or group of interconnected or related devices, one or more of which, pursuant to a programme, carry out automatic processing of digital data; or\n(c) digital data stored, processed, retrieved or transmitted by elements covered under points (a) and (b) for the purposes of their operation, use, protection and maintenance.\nNote: the definition covers all types of network and information systems including both ICT and OT.\nPolicy refers to intentions and direction of an entity, as formally expressed by its management bodies.\nRisk means the potential for loss or disruption caused by an incident and is to be expressed as a combination of the magnitude of such loss or disruption and the likelihood of occurrence of the incident.\nSecurity of network and information systems means the ability of network and information systems to resist, at a given level of confidence, any event that may compromise the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, those network and information systems.\nSecurity objective is a statement describing what is to be achieved as a result of implementing security measures.\nSecurity measures means technical, operational and organisational as well as physical measures to manage the risks posed to the security of network and information systems which the entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services. These are referred to as “cybersecurity risk-management measures” in the NIS2 directive. We will refer to these measures as ‘security measures’ throughout the document.\nVulnerability means a weakness, susceptibility or flaw of ICT products or ICT services that can be exploited by a cyber threat.",
+      "parent_section": null
+    }
+  ]
+}
