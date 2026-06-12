@@ -9,6 +9,7 @@
   "pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118340",
   "status": "published",
   "metadata": {
+    "license": "EU-Decision-2011-833",
     "scope": "Scope of GPAI model definition, training compute threshold interpretation (>10^23 FLOP presumption), practical compliance for Art. 53 and Art. 55",
     "target_articles": [
       "3",

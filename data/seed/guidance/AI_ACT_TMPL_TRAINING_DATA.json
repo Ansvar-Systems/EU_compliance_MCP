@@ -9,6 +9,7 @@
   "pdf_url": "https://ec.europa.eu/newsroom/dae/redirection/document/118480",
   "status": "published",
   "metadata": {
+    "license": "EU-Decision-2011-833",
     "scope": "Structured template implementing Art. 53(1)(d) training data summary obligation",
     "target_articles": [
       "53"
