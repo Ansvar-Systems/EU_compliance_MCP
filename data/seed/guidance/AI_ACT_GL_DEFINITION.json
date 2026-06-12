@@ -9,6 +9,7 @@
   "pdf_url": "https://ai-act-service-desk.ec.europa.eu/sites/default/files/2025-08/commission_guidelines_on_the_definition_of_an_artificial_intelligence_system_established_by_regulation_eu_20241689_ai_actenglish_nf2skcqfrtjdfggjavcodopcwz4_112455.PDF",
   "status": "published",
   "metadata": {
+    "license": "EU-Decision-2011-833",
     "scope": "Threshold question: what qualifies as an AI system under the Act",
     "target_articles": [
       "3"
