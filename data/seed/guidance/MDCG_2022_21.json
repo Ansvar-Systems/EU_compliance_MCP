@@ -8,7 +8,9 @@
   "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
   "pdf_url": "https://health.ec.europa.eu/document/download/a7df24c3-d4a3-4218-a8e0-726febfa01c2_en?filename=mdcg_2022-21_en.pdf",
   "status": "current",
-  "metadata": null,
+  "metadata": {
+    "license": "EU-Decision-2011-833"
+  },
   "sections": [
     {
       "section_number": "1.1",

@@ -8,7 +8,9 @@
   "url": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
   "pdf_url": "https://health.ec.europa.eu/document/download/575a0f79-e3a0-4a96-9ce0-930576c12aa2_en?filename=md_mdcg_2020_5_guidance_clinical_evaluation_equivalence_en.pdf",
   "status": "current",
-  "metadata": null,
+  "metadata": {
+    "license": "EU-Decision-2011-833"
+  },
   "sections": [
     {
       "section_number": "1",

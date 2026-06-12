@@ -109,20 +109,18 @@ describe('regulations.db invariants', () => {
 });
 
 describe('guidance corpus invariants', () => {
-  // The per-document license+url convention is enforced over the wave-1
-  // guidance corpus (CRA / NIS2 / DORA). Pre-existing MDCG and AI_ACT
-  // guidance predates that convention and carries no metadata.license —
-  // backfilling those ~100 docs is a separate, out-of-scope task, so this
-  // invariant is honestly scoped to the related_regulation set wave-1
-  // introduced rather than weakened to pass over untruthful data.
-  const WAVE1 = `d.related_regulation IN ('CRA', 'NIS2', 'DORA')`;
-
-  it('every wave-1 guidance document has a license and a URL', () => {
+  // The per-document license+url convention is enforced table-wide over the
+  // whole guidance corpus. The legacy MDCG and AI_ACT documents that predated
+  // the convention were backfilled with metadata.license = EU-Decision-2011-833
+  // (Commission Decision 2011/833/EU; both families are Commission-published)
+  // by the issue #79 backfill — closed by this PR — so this invariant no longer
+  // needs the wave-1 (CRA/NIS2/DORA) scoping it carried while those ~100 docs
+  // lacked a license.
+  it('every guidance document has a license and a URL', () => {
     const rows = db
       .prepare(
         `SELECT id, url, json_extract(metadata, '$.license') AS license
-         FROM guidance_documents d
-         WHERE ${WAVE1}`,
+         FROM guidance_documents d`,
       )
       .all() as Array<{ id: string; url: string | null; license: string | null }>;
     const bad = rows.filter((r) => !r.license || !r.url);
