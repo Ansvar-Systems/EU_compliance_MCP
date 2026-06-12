@@ -68,7 +68,9 @@ export function parseAnnexes(html: string): Annex[] {
     // Match a numbered annex marker ("ANNEX I" … "ANNEX XIII") or a single
     // unnumbered "ANNEX" (used by acts with exactly one annex, e.g. Commission
     // Implementing Regulation (EU) 2024/2690). An unnumbered annex is treated
-    // as "Annex I" so it lands at canonical ref {id}:annex_I in build-db.
+    // as "Annex I". Annexes are merged into the articles array below (number
+    // "Annex I"), so build-db lands this at canonical ref {id}:art_Annex I,
+    // matching the corpus-wide annex convention.
     const match = line.match(/^ANNEX(?:\s+([IVXLCDM]+))?$/);
     if (match) {
       flush();

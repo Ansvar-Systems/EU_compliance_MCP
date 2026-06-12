@@ -110,3 +110,67 @@ describe('validateAiActAnnexes', () => {
     expect(() => validateAiActAnnexes(goodAnnexes, polluted)).toThrow(/ANNEX markers/);
   });
 });
+
+// Bare unnumbered `ANNEX` support (PR #82): acts with exactly one annex
+// (e.g. Commission Implementing Regulation (EU) 2024/2690) write a bare
+// `ANNEX` marker with no Roman numeral. The parser defaults these to
+// "Annex I". Annexes are merged into the articles array at ingest, so this
+// lands at canonical ref {id}:art_Annex I in build-db.
+const wrapBody = (body: string) => `<html><body>${body}</body></html>`;
+
+describe('parseAnnexes — bare unnumbered ANNEX', () => {
+  it('a single unnumbered ANNEX yields exactly one annex labeled "Annex I"', () => {
+    const html = wrapBody(
+      [
+        'ANNEX',
+        'TECHNICAL AND METHODOLOGICAL REQUIREMENTS',
+        'This annex sets out the technical and methodological requirements ' +
+          'referred to in Article 21(5) of Directive (EU) 2022/2555.',
+        '1. Policy on the security of network and information systems.',
+        '2. Risk management framework and supporting procedures.',
+      ].join('\n'),
+    );
+
+    const annexes = parseAnnexes(html);
+
+    expect(annexes).toHaveLength(1);
+    expect(annexes[0].number).toBe('Annex I');
+    expect(annexes[0].title).toBe('TECHNICAL AND METHODOLOGICAL REQUIREMENTS');
+    expect(annexes[0].text).toContain('technical and methodological requirements');
+  });
+
+  it('mixed: numbered annexes plus a trailing bare ANNEX — documents actual behavior', () => {
+    const html = wrapBody(
+      [
+        'ANNEX I',
+        'First numbered annex title',
+        'Body content of the first numbered annex.',
+        'ANNEX II',
+        'Second numbered annex title',
+        'Body content of the second numbered annex.',
+        'ANNEX',
+        'Trailing bare annex title',
+        'Body content of the trailing bare annex.',
+      ].join('\n'),
+    );
+
+    const annexes = parseAnnexes(html);
+
+    // QUIRK: the bare ANNEX defaults to "Annex I" UNCONDITIONALLY — the parser
+    // does not detect that a numbered "Annex I" already exists, nor does it
+    // renumber to the next free slot. In a document that mixes numbered and
+    // bare markers (not a real EUR-Lex shape — bare ANNEX is only used by
+    // single-annex acts), the result therefore carries a DUPLICATE "Annex I":
+    // the genuine first annex and the bare one collide on number/canonical
+    // ref. This test pins that behavior so a future change is a conscious one.
+    expect(annexes).toHaveLength(3);
+    expect(annexes.map((a) => a.number)).toEqual(['Annex I', 'Annex II', 'Annex I']);
+
+    // The two "Annex I" entries are distinct annexes by title/body — only the
+    // number (and thus the {id}:art_Annex I canonical ref) collides.
+    const annexOnes = annexes.filter((a) => a.number === 'Annex I');
+    expect(annexOnes).toHaveLength(2);
+    expect(annexOnes[0].title).toBe('First numbered annex title');
+    expect(annexOnes[1].title).toBe('Trailing bare annex title');
+  });
+});

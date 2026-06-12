@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+**Adopt mcp-base v1.5.0 — guidance citation enrichment (closes EU_compliance_MCP #80)**
+- Dockerfile base pin `v1.3.1-alpine` → `v1.5.0-alpine`; manifest `mcp_base_min_version` `1.2.1` → `1.5.0`.
+- v1.5.0 wires the guidance tool family (`search_guidance` / `get_guidance_section` / `list_guidance`) through the shared `CitationBuilder`, so guidance hits now carry real `source_url` / `publisher` (per-document `issuing_body`) / `license` instead of empty strings and a bare section number. `search_guidance` is fail-closed: a document with no resolvable `source_url` (`url` → `pdf_url`) is dropped and counted in `skipped_incomplete`.
+- Migration verified for this corpus: `SELECT COUNT(*) FROM guidance_documents WHERE url IS NULL AND pdf_url IS NULL` = 0 (all 129 guidance documents resolve a `source_url`; none are dropped by the fail-closed change).
+- Added test coverage for the bare unnumbered `ANNEX` parser path (PR #82) in `tests/scripts/parse-annexes.test.ts`: a single bare `ANNEX` → exactly one "Annex I"; a mixed numbered+bare case pins the documented quirk that a trailing bare `ANNEX` defaults to "Annex I" unconditionally (colliding with a pre-existing numbered "Annex I").
+
 ### Added
 
 **2 Binding Implementing/Delegated Regulations (NIS2 + DORA Level 2)**

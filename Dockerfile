@@ -59,14 +59,25 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 2: chassis runtime
 # ────────────────────────────────────────────────────────────────────────────
-# mcp-base v1.3.1 — get_recent_changes honours the gateway's
-# regulation/framework filter and carries per-row _citation envelopes
-# (2026-06-11 audit: NIS2 and GDPR get_changes returned byte-identical
-# MACHINERY rows with 0% attribution — this corpus was the live repro).
-# v1.2.1 deltas retained: get_provision content-column citation
-# enrichment. v1.2.0: dead-FTS-index boot gates. v1.1.1: per-recital
-# source_url; optional version_label.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.3.1-alpine
+# mcp-base v1.5.0 — guidance tool family (search_guidance /
+# get_guidance_section / list_guidance) emits per-item _citation
+# enrichment via the shared CitationBuilder; previously guidance hits
+# reached the gateway with empty source_url/publisher/license and a bare
+# section number in `text` (EU_compliance_MCP #80; live repro: a DORA
+# search_guidance hit rendered {"text":"11","_citation":{"source_url":""…}}).
+# search_guidance is now fail-closed — a doc with no resolvable source_url
+# (url → pdf_url) is dropped and counted in skipped_incomplete (never an
+# empty citation). Migration verified for this corpus: SELECT COUNT(*) FROM
+# guidance_documents WHERE url IS NULL AND pdf_url IS NULL = 0 (all 129 docs
+# resolve a source_url, so none are dropped).
+# v1.4.0: controls_catalog get_provision (not this corpus). v1.3.1 retained:
+# get_recent_changes honours the gateway's regulation/framework filter and
+# carries per-row _citation envelopes (2026-06-11 audit: NIS2 and GDPR
+# get_changes returned byte-identical MACHINERY rows with 0% attribution —
+# this corpus was the live repro). v1.2.1 deltas retained: get_provision
+# content-column citation enrichment. v1.2.0: dead-FTS-index boot gates.
+# v1.1.1: per-recital source_url; optional version_label.
+FROM ghcr.io/ansvar-systems/mcp-base:v1.5.0-alpine
 
 WORKDIR /app
 
