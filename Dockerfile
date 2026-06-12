@@ -59,12 +59,14 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # ────────────────────────────────────────────────────────────────────────────
 # Stage 2: chassis runtime
 # ────────────────────────────────────────────────────────────────────────────
-# mcp-base v1.2.1 — get_provision carries the content-column citation
-# enrichment (source_full_name/effective_date — this corpus adopted the
-# convention columns and v1.2.0's get_provision returned them empty).
-# v1.2.0 deltas retained: dead-FTS-index boot gates. v1.1.1: per-recital
+# mcp-base v1.3.1 — get_recent_changes honours the gateway's
+# regulation/framework filter and carries per-row _citation envelopes
+# (2026-06-11 audit: NIS2 and GDPR get_changes returned byte-identical
+# MACHINERY rows with 0% attribution — this corpus was the live repro).
+# v1.2.1 deltas retained: get_provision content-column citation
+# enrichment. v1.2.0: dead-FTS-index boot gates. v1.1.1: per-recital
 # source_url; optional version_label.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.2.1-alpine
+FROM ghcr.io/ansvar-systems/mcp-base:v1.3.1-alpine
 
 WORKDIR /app
 
