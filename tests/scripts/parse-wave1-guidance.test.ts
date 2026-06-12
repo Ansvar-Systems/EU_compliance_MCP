@@ -126,6 +126,36 @@ describe('parseNumberedSections', () => {
     expect(last.content).toContain('5.4.4 require w');
   });
 
+  it('accepts a bare top-level heading whose subsections were already accepted (ToC-pumped state)', () => {
+    // ENISA TIG shape: the ToC's multi-level entries ('2.1 …') raise
+    // maxTopLevel past a top-level whose bare ToC line never matched the
+    // heading regex (wrapped/merged by PDF line reconstruction). The genuine
+    // body heading '2. Requirements' must NOT be treated as phantom quoted
+    // text — its accepted subsection ('2.1') proves top-level 2 is part of
+    // the document's real tree. Regression: NIS2_ENISA_TECH_IMPL_GUIDANCE
+    // lost top-level sections 10–13 this way.
+    const text = [
+      '1. Scope   5', // ToC: bare top-level 1
+      '1.1 Definitions   5', // ToC: multi-level
+      '2.1 Requirements detail   8', // ToC: multi-level for 2; bare '2.' ToC line missing
+      '1. Scope',
+      'Scope body.',
+      '1.1 Definitions',
+      'Definitions body.',
+      '2. Requirements',
+      'Requirements intro.',
+      '2.1 Requirements detail',
+      'Detail body.',
+    ].join('\n');
+    const sections = parseNumberedSections(text, 'TEST_DOC');
+    // Dedup keeps first-occurrence insertion order: '2.1' was first created by
+    // its ToC line, so it precedes the body-created '2'.
+    expect(sections.map((s) => s.sectionNumber)).toEqual(['1', '1.1', '2.1', '2']);
+    const two = sections.find((s) => s.sectionNumber === '2')!;
+    expect(two.title).toBe('Requirements');
+    expect(two.content).toContain('Requirements intro');
+  });
+
   it('collapses duplicate section numbers (last-write-wins)', () => {
     const text = [
       '1. First',

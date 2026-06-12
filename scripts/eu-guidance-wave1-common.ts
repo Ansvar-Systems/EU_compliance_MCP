@@ -36,9 +36,11 @@ export function parseNumberedSections(text: string, docId: string): ParsedSectio
   // out-of-sequence candidate would be measured against the junk).
   let maxTopLevel = 0; // highest top-level component accepted so far
   let sawMultiLevel = false; // any 'a.b…' (deeper) heading accepted yet?
+  let lastAcceptedTopLevel = 0; // top-level component of the last ACCEPTED heading
   // Single-level top-level numbers actually opened as headings (e.g. a real
   // '1.'/'2.'). A late single-level candidate is only legitimate if its own
-  // top-level was opened, OR no deeper section has been seen yet.
+  // top-level was opened, OR it is the immediately-next top-level relative to
+  // the CURRENT section, OR no deeper section has been seen yet.
   const openedTopLevels = new Set<number>();
 
   const flush = () => {
@@ -83,18 +85,25 @@ export function parseNumberedSections(text: string, docId: string): ParsedSectio
         continue;
       }
 
-      // (3) Phantom single-level guard: a BACKWARDS single-level heading (its
-      // top-level <= the highest accepted top-level) appearing after deeper
-      // ('a.b') sections exist, whose own top-level was never opened as a bare
-      // single-level heading, is quoted/foreign text (e.g. CRA article '1.'/'2.'
-      // pasted into a late answer) — the doc's real structure opened no bare
-      // top-levels there. A forward single-level (== maxTopLevel + 1, already
-      // permitted by guard 2) is a genuine new top-level and is exempt.
+      // (3) Phantom single-level guard: a single-level heading appearing after
+      // deeper ('a.b') sections exist, whose own top-level was never opened as
+      // a bare single-level heading AND which is not the immediately-next
+      // top-level relative to the CURRENT section, is quoted/foreign text
+      // (e.g. CRA article '1.'/'2.' pasted into a late 4.6.1 answer) — the
+      // doc's real structure opened no bare top-levels there. The
+      // next-after-current exemption (topLevel === lastAcceptedTopLevel + 1)
+      // is deliberately current-relative, NOT maxTopLevel-relative: a ToC
+      // whose multi-level entries match ('10.1 …') while its bare entries are
+      // mangled by PDF line reconstruction pumps maxTopLevel past the body's
+      // real bare headings, and a max-relative rule then swallows them (the
+      // NIS2 TIG lost genuine top-levels 10–13 this way — body '10.' arrives
+      // while the current section is '9', which is exactly the in-sequence
+      // signature quoted junk lacks).
       if (
         !isMultiLevel &&
         sawMultiLevel &&
-        topLevel <= maxTopLevel &&
-        !openedTopLevels.has(topLevel)
+        !openedTopLevels.has(topLevel) &&
+        topLevel !== lastAcceptedTopLevel + 1
       ) {
         if (current) buf.push(line);
         continue;
@@ -104,6 +113,7 @@ export function parseNumberedSections(text: string, docId: string): ParsedSectio
       const parent = num.includes('.') ? num.split('.').slice(0, -1).join('.') : null;
       current = { sectionNumber: num, title: m[2].trim(), content: '', parentSection: parent };
       if (topLevel > maxTopLevel) maxTopLevel = topLevel;
+      lastAcceptedTopLevel = topLevel;
       if (isMultiLevel) sawMultiLevel = true;
       else openedTopLevels.add(topLevel);
     } else if (current && line) {
