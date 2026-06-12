@@ -65,6 +65,67 @@ describe('parseNumberedSections', () => {
     expect(sections[0].content).toContain('CC BY 4.0');
   });
 
+  it('rejects 4-digit single-level numbers as year artifacts', () => {
+    // "…by 30 October\n2026. The vertical standards…" — the year is not a heading.
+    const text = [
+      '1. Scope',
+      'The obligations apply by 30 October',
+      '2026. The vertical standards under development cover the categories.',
+      '1.1 Details',
+      'Subsection body.',
+    ].join('\n');
+    const sections = parseNumberedSections(text, 'TEST_DOC');
+    expect(sections.map((s) => s.sectionNumber)).not.toContain('2026');
+    expect(sections.map((s) => s.sectionNumber)).toEqual(['1', '1.1']);
+    // The year line folds into the preceding section's content.
+    expect(sections[0].content).toContain('2026. The vertical standards');
+  });
+
+  it('rejects quoted-article single-level headings appearing late among deeper sections', () => {
+    // Real structure is 4.6 → 4.6.1 (no top-level "1"/"2" ever opened). Quoted
+    // CRA article text "1. Notwithstanding…" / "2. For the purposes…" must NOT
+    // become sections — they stay inside 4.6.1's content.
+    const text = [
+      '4.6 Other obligations',
+      'Intro to other obligations.',
+      '4.6.1 Can a third-country manufacturer directly place products on the Union market?',
+      'No. A third-country manufacturer must designate an importer established in the Union.',
+      '1. Notwithstanding any obligations of x.',
+      '2. For the purposes of this Article y.',
+    ].join('\n');
+    const sections = parseNumberedSections(text, 'TEST_DOC');
+    const nums = sections.map((s) => s.sectionNumber);
+    expect(nums).not.toContain('1');
+    expect(nums).not.toContain('2');
+    expect(nums).toEqual(['4.6', '4.6.1']);
+    const answer = sections.find((s) => s.sectionNumber === '4.6.1')!;
+    expect(answer.content).toContain('third-country manufacturer must designate');
+    expect(answer.content).toContain('Notwithstanding any obligations');
+    expect(answer.content).toContain('For the purposes of this Article');
+  });
+
+  it('rejects backwards-jumping multi-level headings (ETSI clause refs)', () => {
+    // Real ordered 3.1 → 3.2; then ETSI clause refs "5.8.2 ensure" / "5.4.4
+    // require" jump to a top-level (5) that was never opened. Neither becomes a
+    // section; both lines stay in 3.2's content.
+    const text = [
+      '3.1 Security requirements',
+      'Requirement body.',
+      '3.2 Vulnerability handling requirements',
+      'Handling body.',
+      '5.8.2 ensure z',
+      '5.4.4 require w',
+    ].join('\n');
+    const sections = parseNumberedSections(text, 'TEST_DOC');
+    const nums = sections.map((s) => s.sectionNumber);
+    expect(nums).not.toContain('5.8.2');
+    expect(nums).not.toContain('5.4.4');
+    expect(nums).toEqual(['3.1', '3.2']);
+    const last = sections.find((s) => s.sectionNumber === '3.2')!;
+    expect(last.content).toContain('5.8.2 ensure z');
+    expect(last.content).toContain('5.4.4 require w');
+  });
+
   it('collapses duplicate section numbers (last-write-wins)', () => {
     const text = [
       '1. First',

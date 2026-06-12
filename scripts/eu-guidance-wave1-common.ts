@@ -31,6 +31,16 @@ export function parseNumberedSections(text: string, docId: string): ParsedSectio
   let current: ParsedSection | null = null;
   let buf: string[] = [];
 
+  // Sequence-tracking state, updated ONLY on accepted headings (a rejected
+  // candidate must not pollute the established numbering flow, or the next
+  // out-of-sequence candidate would be measured against the junk).
+  let maxTopLevel = 0; // highest top-level component accepted so far
+  let sawMultiLevel = false; // any 'a.b…' (deeper) heading accepted yet?
+  // Single-level top-level numbers actually opened as headings (e.g. a real
+  // '1.'/'2.'). A late single-level candidate is only legitimate if its own
+  // top-level was opened, OR no deeper section has been seen yet.
+  const openedTopLevels = new Set<number>();
+
   const flush = () => {
     if (current) {
       current.content = buf.join('\n').trim();
@@ -51,9 +61,51 @@ export function parseNumberedSections(text: string, docId: string): ParsedSectio
         if (current) buf.push(line);
         continue;
       }
+      const components = num.split('.').map((c) => Number(c));
+      const topLevel = components[0];
+      const isMultiLevel = components.length > 1;
+
+      // (1) Year guard: a single-level 4-digit number ('2026') is a year
+      // artifact from wrapped prose ('…by 30 October\n2026.'), never a heading.
+      if (!isMultiLevel && /^\d{4}$/.test(num)) {
+        if (current) buf.push(line);
+        continue;
+      }
+
+      // (2) Top-level jump guard (single- AND multi-level): real numbering
+      // never skips a whole top-level. A candidate whose top-level component is
+      // more than one past the highest accepted top-level is out of sequence
+      // (kills the backwards/forward ETSI clause refs '5.8.2'/'5.4.4' that jump
+      // to top-level 5 in a doc whose real tree is rooted at 3). The very first
+      // heading (maxTopLevel === 0) establishes the baseline and is exempt.
+      if (maxTopLevel > 0 && topLevel > maxTopLevel + 1) {
+        if (current) buf.push(line);
+        continue;
+      }
+
+      // (3) Phantom single-level guard: a BACKWARDS single-level heading (its
+      // top-level <= the highest accepted top-level) appearing after deeper
+      // ('a.b') sections exist, whose own top-level was never opened as a bare
+      // single-level heading, is quoted/foreign text (e.g. CRA article '1.'/'2.'
+      // pasted into a late answer) — the doc's real structure opened no bare
+      // top-levels there. A forward single-level (== maxTopLevel + 1, already
+      // permitted by guard 2) is a genuine new top-level and is exempt.
+      if (
+        !isMultiLevel &&
+        sawMultiLevel &&
+        topLevel <= maxTopLevel &&
+        !openedTopLevels.has(topLevel)
+      ) {
+        if (current) buf.push(line);
+        continue;
+      }
+
       flush();
       const parent = num.includes('.') ? num.split('.').slice(0, -1).join('.') : null;
       current = { sectionNumber: num, title: m[2].trim(), content: '', parentSection: parent };
+      if (topLevel > maxTopLevel) maxTopLevel = topLevel;
+      if (isMultiLevel) sawMultiLevel = true;
+      else openedTopLevels.add(topLevel);
     } else if (current && line) {
       buf.push(line);
     }
