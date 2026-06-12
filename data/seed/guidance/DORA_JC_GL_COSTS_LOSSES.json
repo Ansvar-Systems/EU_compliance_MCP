@@ -1,0 +1,85 @@
+{
+  "id": "DORA_JC_GL_COSTS_LOSSES",
+  "title": "Joint Guidelines on the estimation of aggregated annual costs and losses caused by major ICT-related incidents",
+  "issuing_body": "ESAs Joint Committee (EBA, ESMA, EIOPA)",
+  "document_reference": "JC 2024 34",
+  "date_published": "2025-03-18",
+  "related_regulation": "DORA",
+  "url": "https://www.esma.europa.eu/document/joint-guidelines-estimation-aggregated-annual-costs-and-losses-caused-major-ict-related",
+  "pdf_url": "https://www.esma.europa.eu/sites/default/files/2025-03/JC_2024_34_Guidelines_on_the_estimation_of_aggregated_annual_costs_and_losses_caused_by_major_ICT-related_incidents.pdf",
+  "status": "published",
+  "metadata": {
+    "license": "ESMA-Reuse-Notice",
+    "scope": "ESA Joint Guidelines under DORA Article 11(11) harmonising how financial entities (other than microenterprises) estimate aggregated annual gross costs and losses from major ICT-related incidents, with a common submission template.",
+    "source_url": "https://www.esma.europa.eu/sites/default/files/2025-03/JC_2024_34_Guidelines_on_the_estimation_of_aggregated_annual_costs_and_losses_caused_by_major_ICT-related_incidents.pdf",
+    "source_kind": "pdf"
+  },
+  "sections": [
+    {
+      "section_number": "1",
+      "title": "These guidelines are aimed at fulfilling the mandate given to the ESAs under Article 11(11) of",
+      "content": "Regulation (EU) 2022/2554\n4\n, to develop common guidelines on the estimation of aggregated\nannual costs and losses of major ICT-related incidents referred to Article 11(10) of that Regulation.\nThese guidelines also specify a common template for the submission of the aggregated annual\ncosts and losses.\nAddressees",
+      "parent_section": null
+    },
+    {
+      "section_number": "2",
+      "title": "These guidelines are addressed to competent authorities as defined in Article 46 of Regulation",
+      "content": "2022/2554 and to financial institutions as defined in Article 4(1) of Regulation (EU) 1093/2010,\nArticle 4(1) of Regulation (EU) 1094/2010 and Article 4(1) of Regulation (EU) 1095/2010 .\nDefinitions",
+      "parent_section": null
+    },
+    {
+      "section_number": "3",
+      "title": "Terms used and defined in Regulation (EU) 2022/2554 have the same meaning in these guidelines.",
+      "content": "Title II- Implementation\nDate of application",
+      "parent_section": null
+    },
+    {
+      "section_number": "4",
+      "title": "These Guidelines apply from 19.05.2025.",
+      "content": "4\nRegulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational\nresilience for the financial sector and amending Regulations (EC) No 1060/2009, (EU) No 648/2012, (EU) No 600/2014, (EU)\nNo 909/2014 and (EU) 2016/1011, ( OJ L 333, 27.12.2022, p. 1 – 79)\nJOINT COMMITTEE GUIDELINES ON AGGREGATED ANNUAL COSTS AND LOSSES OF MAJOR ICT-RELATED INCIDENTS\n4\nTitle III- Provisions on the estimation of aggregated annual costs and\nlosses of major ICT-related incidents",
+      "parent_section": null
+    },
+    {
+      "section_number": "5",
+      "title": "Financial entities should estimate the aggregate annual costs and losses of major ICT-related",
+      "content": "incidents by aggregating the costs and losses for major ICT-related incidents that fall within the\nreference year for which the competent authority requested the estimation. The financial entity\nmay choose whether the reference year should correspond to either the completed calendar year,\nor to the completed accounting year of the financial entity for which the financial entity has\nfinalised its financial statements. Once a financial entity has decided whether it will provide the\nestimation based on the calendar year or its accounting year, such a decision should be applied to\nfuture estimations of aggregated annual costs and losses. The financial entity may change that\ndecision by notifying the competent authority, and provided that the competent authority does\nnot object within two months of receiving the notification. Financial entities should not include\ncosts and losses related to those incidents that fall before or after that reference year.",
+      "parent_section": null
+    },
+    {
+      "section_number": "6",
+      "title": "Financial entities should include in the estimation all ICT-related incidents that, irrespective of the",
+      "content": "reason, were classified as major in accordance with Commission Delegated Regulation [OJ L,\n2024/1772, 25.6.2024]\n5\non incident classification and\n(a)   for which the financial entity has submitted a final report in accordance with Article 19(4)(c)\nRegulation (EU) 2022/2554 in the relevant reference year, or\n(b)   any incident for which the financial entity submitted in previous reference years a final report\nin accordance with Article 19(4)(c) of Regulation (EU) 2022/2554 that had a quantifiable\nfinancial impact on the financial entity in the relevant reference year.",
+      "parent_section": null
+    },
+    {
+      "section_number": "7",
+      "title": "Financial entities should estimate the aggregated annual costs and losses by applying the follow",
+      "content": "sequential steps:\n(a)   estimate the costs and losses of each major ICT-related incident as referred to in paragraph 6\nindividually. Those estimations should produce the gross costs and losses taking into account\nthe types of costs and losses as set out in Article 7(1) and (2) of the Commission Delegated\nRegulation [OJ L, 2024/1772, 25.6.2024];\n(b)   for each major ICT-related incident, financial entities should also estimate the financial\nrecoveries as specified in Annex II to Commission Implementing Regulation [OJ L, 2025/302,\n20.2.2025]\n6\n;\n5\nCommission Delegated Regulation (EU) 2024/1772 of 13 March 2024 supplementing Regulation (EU) 2022/2554 of the\nEuropean Parliament and of the Council with regard to regulatory technical standards specifying the criteria for the\nclassification of ICT-related incidents and cyber threats, setting out materiality thresholds and specifying the details of reports\nof major incidents [ OJ L, 2024/1772, 25.6.2024, ELI: http://data.europa.eu/eli/reg_del/2024/1772/oj ]\n6\nCommission Implementing Regulation (EU) 2025/302 of 23 October 2024 laying down implementing technical standards for\nthe application of Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to the standard\nforms, templates, and procedures for financial entities to report a major ICT-related incident and to notify a significant cyber\nthreat [ OJ L, 2025/302, 20.2.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/302/oj ]\nJOINT COMMITTEE GUIDELINES ON AGGREGATED ANNUAL COSTS AND LOSSES OF MAJOR ICT-RELATED INCIDENTS\n5\n(c)   financial entities should aggregate the gross costs and losses and the financial recoveries across\nmajor ICT-related incidents.",
+      "parent_section": null
+    },
+    {
+      "section_number": "8",
+      "title": "As basis for the estimations, financial entities should refer to the costs, losses and financial",
+      "content": "recoveries that are reflected in their financial statements such as the profit and loss account, or\nwhere applicable in their supervisory reporting, of the relevant reference year. In their estimation,\nfinancial entities should also include accounting provisions that are reflected in their financial\nstatements such as the profit and loss account of the relevant reference year. Where accurate data\nis not available, financial entities should base their estimation on other available data and\ninformation to the extent possible.",
+      "parent_section": null
+    },
+    {
+      "section_number": "9",
+      "title": "Financial entities should include adjustments on the costs and losses of an estimation that it",
+      "content": "submitted for a previous year in the estimation of the relevant reference year in which the\nadjustments are made.",
+      "parent_section": null
+    },
+    {
+      "section_number": "10",
+      "title": "Financial entities should include in the report of their estimation of the aggregated annual costs",
+      "content": "and losses also the breakdown of gross costs and losses and of financial recoveries for each major\nICT-related incident that were included in the aggregation.",
+      "parent_section": null
+    },
+    {
+      "section_number": "11",
+      "title": "Financial entities should use the template in the Annex to submit to the competent authority the",
+      "content": "estimation of their aggregated annual costs and losses for the reference year. For each item under\nparagraph 6 and 9 that is included in the estimation of the reference year, financial entities should\nuse the same incident reference codes provided by the financial entity as the ones used in the final\nreport in accordance with Article 19(4)(c) of Regulation (EU) 2022/2554.\nJOINT COMMITTEE GUIDELINES ON AGGREGATED ANNUAL COSTS AND LOSSES OF MAJOR ICT-RELATED INCIDENTS\n6\nAnnex: Reporting template for gross costs and losses and financial\nrecoveries in a reference year\nName of the financial entity\nLegal Entity Identifier\nStart and end date of the reference year of the\nfinancial entity\nCurrency\nNumber of\nincident\nDate of the\nsubmission of the\nfinal incident report\nIncident\nreference\nnumber\nGross costs and losses\nof the incident in the\nreference year (1000s of\nunits)\nRecoveries of the\nincident in the\nreference year\n(1000s of units)\n1\n2\n…\nTotal for\nreference\nyear\n-----------   -----------",
+      "parent_section": null
+    }
+  ]
+}
