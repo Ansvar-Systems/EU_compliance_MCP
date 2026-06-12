@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+**2 Binding Implementing/Delegated Regulations (NIS2 + DORA Level 2)**
+- `NIS2_IR_TECHNICAL_REQUIREMENTS` — Commission Implementing Regulation (EU) 2024/2690, technical and methodological requirements for cybersecurity risk-management measures under NIS2 Art. 21(5) (DNS/TLD/cloud/data-centre/CDN/MSP/MSSP/online-marketplace/search/social/trust-service entities). 16 articles + Annex (64 KB technical-requirements table), 43 recitals.
+- `DORA_RTS_SUBCONTRACTING` — Commission Delegated Regulation (EU) 2025/532, RTS on subcontracting ICT services supporting critical or important functions under DORA Art. 30(5). 7 articles, 13 recitals.
+- Both ingested as first-class regulations via `ingest-eurlex.ts`; canonical refs `{id}:art_{n}`. Annex parser now also recognises a single unnumbered `ANNEX` (lands at `art_Annex I`, matching the corpus-wide annex convention).
+
 **12 New Regulation Guides (4 → 16)**
 - Tier A: CRA, MDR, MiCA, DSA, DATA_ACT, PLD
 - Tier B: CYBERSECURITY_ACT, EUCC, CER, EIDAS2, EHDS, DMA

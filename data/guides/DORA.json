@@ -167,7 +167,7 @@
       "id": "subcontracting_rts",
       "severity": "medium",
       "article": "30(5)",
-      "description": "Art. 30(5) delegates to RTS for further specifying subcontracting assessment criteria for critical/important functions. Check DORA_RTS_ICT_SERVICES for the detailed requirements.",
+      "description": "Art. 30(5) delegates to RTS for further specifying subcontracting assessment criteria for critical/important functions. Check DORA_RTS_SUBCONTRACTING (Commission Delegated Regulation (EU) 2025/532) for the detailed requirements.",
       "detail_level": "full"
     },
     {

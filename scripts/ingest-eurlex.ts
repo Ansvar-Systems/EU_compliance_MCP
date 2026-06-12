@@ -65,10 +65,14 @@ export function parseAnnexes(html: string): Annex[] {
       flush();
       break;
     }
-    const match = line.match(/^ANNEX\s+([IVXLCDM]+)$/);
+    // Match a numbered annex marker ("ANNEX I" … "ANNEX XIII") or a single
+    // unnumbered "ANNEX" (used by acts with exactly one annex, e.g. Commission
+    // Implementing Regulation (EU) 2024/2690). An unnumbered annex is treated
+    // as "Annex I" so it lands at canonical ref {id}:annex_I in build-db.
+    const match = line.match(/^ANNEX(?:\s+([IVXLCDM]+))?$/);
     if (match) {
       flush();
-      current = { roman: match[1], titleLines: [], bodyLines: [] };
+      current = { roman: match[1] ?? 'I', titleLines: [], bodyLines: [] };
       seenTitle = false;
       continue;
     }
@@ -178,7 +182,14 @@ interface RegulationData {
 const REGULATION_METADATA: Record<string, { id: string; full_name: string; effective_date?: string }> = {
   '32016R0679': { id: 'GDPR', full_name: 'General Data Protection Regulation', effective_date: '2018-05-25' },
   '32022L2555': { id: 'NIS2', full_name: 'Directive on measures for a high common level of cybersecurity across the Union', effective_date: '2024-10-17' },
+  // NIS2 Implementing Regulation under Art. 21(5) — technical and methodological
+  // requirements for DNS/TLD/cloud/data-centre/CDN/managed-service/MSSP/online-
+  // marketplace/search-engine/social-network/trust-service entities.
+  '32024R2690': { id: 'NIS2_IR_TECHNICAL_REQUIREMENTS', full_name: 'Commission Implementing Regulation (EU) 2024/2690 - Technical and Methodological Requirements for Cybersecurity Risk-Management Measures (NIS2 Art. 21)', effective_date: '2024-11-07' },
   '32022R2554': { id: 'DORA', full_name: 'Digital Operational Resilience Act', effective_date: '2025-01-17' },
+  // DORA RTS under Art. 30(5) — subcontracting of ICT services supporting
+  // critical or important functions. OJ-published 2025-07-02.
+  '32025R0532': { id: 'DORA_RTS_SUBCONTRACTING', full_name: 'Commission Delegated Regulation (EU) 2025/532 - RTS on Subcontracting ICT Services Supporting Critical or Important Functions', effective_date: '2025-07-22' },
   '32024R1689': { id: 'AI_ACT', full_name: 'Artificial Intelligence Act', effective_date: '2024-08-01' },
   // Charter of Fundamental Rights of the European Union — primary law, OJ C 326.
   // Routing key 'CFR' is used by FRIA's fundamental_rights_mapping stage.
