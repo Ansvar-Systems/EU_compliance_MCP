@@ -1,0 +1,24 @@
+{
+  "id": "CRA_GL_DRAFT_GUIDANCE_COMMUNICATION",
+  "title": "Draft Commission guidance on the Cyber Resilience Act",
+  "issuing_body": "European Commission (DG CONNECT)",
+  "document_reference": null,
+  "date_published": "2026-03-03",
+  "related_regulation": "CRA",
+  "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-feedback-draft-guidance-assist-companies-applying-cyber-resilience-act",
+  "pdf_url": null,
+  "status": "planned",
+  "metadata": {
+    "license": "EU-Decision-2011-833",
+    "freshness_note": "A draft Communication interpreting CRA provisions, published for feedback 2026-03-03, consultation closed 2026-03-31. Hosted on the \"Have Your Say\" feedback portal (https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en, HTTP 200). No stable final PDF on an EU page yet; final version expected later. Ingest once the final Communication lands. The Ares reference (Ares(2026)2319816) comes from law-firm summaries, not a fetched EU page — treat as provisional.",
+    "target_articles": []
+  },
+  "sections": [
+    {
+      "section_number": "0",
+      "title": "Status note",
+      "content": "A draft Communication interpreting CRA provisions, published for feedback 2026-03-03, consultation closed 2026-03-31. Hosted on the \"Have Your Say\" feedback portal (https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en, HTTP 200). No stable final PDF on an EU page yet; final version expected later. Ingest once the final Communication lands. The Ares reference (Ares(2026)2319816) comes from law-firm summaries, not a fetched EU page — treat as provisional.",
+      "parent_section": null
+    }
+  ]
+}
