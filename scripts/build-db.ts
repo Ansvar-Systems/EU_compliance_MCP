@@ -36,6 +36,23 @@ const DATA_DIR = join(__dirname, '..', 'data');
 const SEED_DIR = process.env.SEED_DIR ?? join(DATA_DIR, 'seed');
 const DB_PATH = process.env.DB_PATH ?? join(DATA_DIR, 'regulations.db');
 
+// Legislation content rows are stamped with the corpus's declared license,
+// read from manifest.json (licensing.license_code) — the single source of
+// truth that the runtime + fleet manifests already agree on. Since mcp-base
+// v1.5.1 the per-row content.license_code wins over the manifest default, so
+// stamping anything else here (this used to be a hard-coded 'CC-BY-4.0') makes
+// the chassis serve a license the corpus's own allowed_licenses doesn't list.
+// tests/data/db-invariants.test.ts pins these two ends together.
+const MANIFEST_PATH = join(__dirname, '..', 'manifest.json');
+const LEGISLATION_LICENSE_CODE: string = (() => {
+  const manifest = JSON.parse(readFileSync(MANIFEST_PATH, 'utf-8'));
+  const code = manifest?.licensing?.license_code;
+  if (typeof code !== 'string' || code.length === 0) {
+    throw new Error(`manifest.json licensing.license_code missing or not a string (${MANIFEST_PATH})`);
+  }
+  return code;
+})();
+
 const SCHEMA_STATEMENTS: string[] = [
   // Chassis core (per mcps/_shared/translator-base.ts CHASSIS_CORE_SCHEMA)
   `CREATE TABLE provisions (
@@ -352,7 +369,7 @@ function buildDatabase() {
         const body = article.title ? `${article.title}\n\n${article.text}` : article.text;
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `art_${article.number}`);
         const id = nextProvisionId++;
-        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0', reg.full_name ?? null, reg.effective_date ?? null);
+        insertContent.run(id, provisionSourceUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(id, ref, body, 1, provisionSourceUrl);
         insertFts.run(id, body);
         stats.provisions++;
@@ -365,7 +382,7 @@ function buildDatabase() {
         const body = `${annex.title}\n\n${annex.text}`;
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `annex_${annexNum}`);
         const id = nextProvisionId++;
-        insertContent.run(id, provisionSourceUrl, 'CC-BY-4.0', reg.full_name ?? null, reg.effective_date ?? null);
+        insertContent.run(id, provisionSourceUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(id, ref, body, 1, provisionSourceUrl);
         insertFts.run(id, body);
         stats.provisions++;
@@ -383,7 +400,7 @@ function buildDatabase() {
         const metaBody = `${reg.full_name} (${reg.id})`;
         const metaUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, 'meta');
         const mId = nextProvisionId++;
-        insertContent.run(mId, metaUrl, 'CC-BY-4.0', reg.full_name ?? null, reg.effective_date ?? null);
+        insertContent.run(mId, metaUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(mId, metaRef, metaBody, 1, metaUrl);
         insertFts.run(mId, metaBody);
         stats.provisions++;
