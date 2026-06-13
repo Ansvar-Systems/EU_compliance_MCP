@@ -81,7 +81,9 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # (EU_compliance_MCP #77). This corpus is the live repro — DORA guidance
 # (metadata.license = ESMA-Reuse-Notice) and the 4 ENISA docs (ENISA-CC-BY-4)
 # were served the manifest EUR-Lex-Decision-2011-833 default; now item-level.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.5.1-alpine
+# v1.5.3: get_recent_changes window bounded at [since, until] (default today) —
+# not-yet-in-force provisions no longer leak into "recent changes" (prod QA 2026-06-13).
+FROM ghcr.io/ansvar-systems/mcp-base:v1.5.3-alpine
 
 WORKDIR /app
 
