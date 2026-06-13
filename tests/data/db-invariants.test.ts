@@ -8,12 +8,14 @@
 //     until this rebuild because the committed DB predated the build-db change)
 //   - meta rows get no version history (they are search aids, not legal text)
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Database from 'better-sqlite3';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DB_PATH = join(__dirname, '..', '..', 'data', 'regulations.db');
+const MANIFEST_PATH = join(__dirname, '..', '..', 'manifest.json');
 
 let db: Database.Database;
 beforeAll(() => {
@@ -105,6 +107,21 @@ describe('regulations.db invariants', () => {
     expect(
       one(`SELECT COUNT(*) AS n FROM provisions WHERE canonical_ref LIKE 'CFR:art_%'`),
     ).toBeGreaterThan(50);
+  });
+
+  it('every legislation content row carries the manifest-declared license_code (not a stale literal)', () => {
+    // mcp-base v1.5.1 made the per-row content.license_code win over the
+    // manifest default. build-db must therefore stamp content rows with the
+    // SAME license the manifest declares (licensing.license_code), or the
+    // chassis serves a license the corpus's own allowed_licenses doesn't even
+    // list. Reading the manifest here keeps the two ends from drifting again.
+    const declared = JSON.parse(readFileSync(MANIFEST_PATH, 'utf-8')).licensing
+      .license_code as string;
+    expect(declared).toBe('EUR-Lex-Decision-2011-833'); // guards an accidental manifest flip
+    const distinct = db
+      .prepare('SELECT DISTINCT license_code FROM content ORDER BY license_code')
+      .all() as Array<{ license_code: string | null }>;
+    expect(distinct.map((r) => r.license_code)).toEqual([declared]);
   });
 });
 
