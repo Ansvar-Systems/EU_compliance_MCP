@@ -77,7 +77,11 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # this corpus was the live repro). v1.2.1 deltas retained: get_provision
 # content-column citation enrichment. v1.2.0: dead-FTS-index boot gates.
 # v1.1.1: per-recital source_url; optional version_label.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.5.0-alpine
+# v1.5.1: per-document metadata.license wins over the manifest default
+# (EU_compliance_MCP #77). This corpus is the live repro — DORA guidance
+# (metadata.license = ESMA-Reuse-Notice) and the 4 ENISA docs (ENISA-CC-BY-4)
+# were served the manifest EUR-Lex-Decision-2011-833 default; now item-level.
+FROM ghcr.io/ansvar-systems/mcp-base:v1.5.1-alpine
 
 WORKDIR /app
 
