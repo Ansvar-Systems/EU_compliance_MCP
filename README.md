@@ -2,7 +2,7 @@
 
 <!-- ANSVAR-CTA-BEGIN -->
 > ### ▶ Try this MCP instantly via Ansvar Gateway
-> **50 free queries/day · no card required · OAuth signup at [ansvar.eu/gateway](https://ansvar.eu/gateway)**
+> **100 free queries/day · no card required · OAuth signup at [ansvar.eu/gateway](https://ansvar.eu/gateway)**
 >
 > One endpoint, one OAuth signup, access from any MCP-compatible client.
 
