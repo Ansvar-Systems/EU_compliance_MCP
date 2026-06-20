@@ -20,13 +20,22 @@ jobs:
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
 
+      - name: Mint a short-lived token for the deploy repo (GitHub App)
+        id: deploy-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1  # v3
+        with:
+          app-id: ${{ secrets.DEPLOY_APP_ID }}
+          private-key: ${{ secrets.DEPLOY_APP_PRIVATE_KEY }}
+          owner: Ansvar-Systems
+          repositories: deploy
+
       - name: Check out deploy repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
         with:
           repository: Ansvar-Systems/deploy
           ref: main
           path: deploy-repo
-          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          token: ${{ steps.deploy-token.outputs.token }}
 
       - name: Compute image tag
         id: tag
