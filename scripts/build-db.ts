@@ -55,10 +55,20 @@ const LEGISLATION_LICENSE_CODE: string = (() => {
 
 const SCHEMA_STATEMENTS: string[] = [
   // Chassis core (per mcps/_shared/translator-base.ts CHASSIS_CORE_SCHEMA)
+  // title carries the article/annex caption (incl. the chapter/section heading
+  // MOVED off the body per the WS2 heading-bleed fix). It is a REAL base-table
+  // column — not just an FTS column — because content_fts is an EXTERNAL-CONTENT
+  // FTS5 table (content='provisions'): snippet()/highlight() reconstruct every
+  // declared FTS column's text from this base table at query time, so a content_fts
+  // `title` column with no provisions.title would make snippet() raise "SQL logic
+  // error". This mirrors the guidance_sections / guidance_sections_fts pair. The
+  // CitationBuilder column convention only acts on the exact names
+  // source_full_name / effective_date, so adding `title` is inert to it.
   `CREATE TABLE provisions (
     id             INTEGER PRIMARY KEY,
     canonical_ref  TEXT NOT NULL,
     body           TEXT NOT NULL,
+    title          TEXT,
     is_substantive INTEGER DEFAULT 1,
     source_url     TEXT
   )`,
@@ -324,7 +334,7 @@ function buildDatabase() {
     'INSERT INTO content (id, source_url, license_code, source_full_name, effective_date) VALUES (?, ?, ?, ?, ?)',
   );
   const insertProvision = db.prepare(
-    'INSERT INTO provisions (id, canonical_ref, body, is_substantive, source_url) VALUES (?, ?, ?, ?, ?)',
+    'INSERT INTO provisions (id, canonical_ref, body, title, is_substantive, source_url) VALUES (?, ?, ?, ?, ?, ?)',
   );
   const insertFts = db.prepare('INSERT INTO content_fts (rowid, body, title) VALUES (?, ?, ?)');
   const insertRecital = db.prepare(
@@ -371,7 +381,7 @@ function buildDatabase() {
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `art_${article.number}`);
         const id = nextProvisionId++;
         insertContent.run(id, provisionSourceUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
-        insertProvision.run(id, ref, body, 1, provisionSourceUrl);
+        insertProvision.run(id, ref, body, article.title ?? null, 1, provisionSourceUrl);
         insertFts.run(id, body, article.title ?? '');
         stats.provisions++;
       }
@@ -384,7 +394,7 @@ function buildDatabase() {
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `annex_${annexNum}`);
         const id = nextProvisionId++;
         insertContent.run(id, provisionSourceUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
-        insertProvision.run(id, ref, body, 1, provisionSourceUrl);
+        insertProvision.run(id, ref, body, annex.title ?? null, 1, provisionSourceUrl);
         insertFts.run(id, body, annex.title ?? '');
         stats.provisions++;
         stats.annexes++;
@@ -402,7 +412,7 @@ function buildDatabase() {
         const metaUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, 'meta');
         const mId = nextProvisionId++;
         insertContent.run(mId, metaUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
-        insertProvision.run(mId, metaRef, metaBody, 1, metaUrl);
+        insertProvision.run(mId, metaRef, metaBody, reg.full_name ?? null, 1, metaUrl);
         insertFts.run(mId, metaBody, reg.full_name ?? '');
         stats.provisions++;
       }

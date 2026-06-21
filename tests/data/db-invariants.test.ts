@@ -9,6 +9,7 @@
 //   - meta rows get no version history (they are search aids, not legal text)
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { readFileSync } from 'fs';
+import { createHash } from 'crypto';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Database from 'better-sqlite3';
@@ -179,5 +180,35 @@ describe('guidance corpus invariants', () => {
       )
       .all() as Array<{ r: string }>;
     expect(bad.map((x) => x.r)).toEqual([]);
+  });
+});
+
+describe('committed regulations.db matches manifest + has the new FTS shape', () => {
+  it('manifest data.database_sha256 equals the committed file sha256', () => {
+    const buf = readFileSync(DB_PATH);
+    const hex = createHash('sha256').update(buf).digest('hex');
+    const manifest = JSON.parse(readFileSync(MANIFEST_PATH, 'utf-8'));
+    expect(manifest.data.database_sha256).toBe(`sha256:${hex}`);
+    expect(manifest.data.snapshot_id).toBe(`sha256:${hex}`);
+  });
+  it('content_fts in the committed DB has a title column and porter tokenizer', () => {
+    const cols = db.prepare('PRAGMA table_info(content_fts)').all().map((c: any) => c.name);
+    expect(cols).toContain('title');
+    const sql = (db.prepare("SELECT sql FROM sqlite_master WHERE name='content_fts'").get() as { sql: string }).sql;
+    expect(sql).toContain("tokenize='porter unicode61'");
+  });
+  it('content_fts title column is populated for legislation rows', () => {
+    // content_fts is an EXTERNAL-CONTENT FTS5 table (content='provisions'); the
+    // provisions base table has no `title` column, so a bare `WHERE title <> ''`
+    // resolves against the content table and errors ("no such column: T.title").
+    // The honest "title populated + searchable" check is a column-scoped MATCH:
+    // count rows whose TITLE (not body) contains any of several common article-
+    // caption tokens. This both proves the column is populated and that the
+    // porter index over it is queryable.
+    const populated = one(
+      `SELECT COUNT(*) AS n FROM content_fts WHERE content_fts MATCH
+       'title:requirement OR title:obligation OR title:definition OR title:scope OR title:provision OR title:article OR title:right'`,
+    );
+    expect(populated).toBeGreaterThan(500);
   });
 });

@@ -39,14 +39,33 @@ export function headingLike(s: string): boolean {
   return false;
 }
 
-/** A short caption line that may trail a structural heading (e.g. a SECTION
- * marker's own title-case caption "Classification of AI systems as high-risk").
- * Not a full sentence, not long. Used only to peel the caption that accompanies
- * a heading — never on its own (the strip commits only up to a heading block). */
+/** A caption line that may trail a structural heading — a SECTION/CHAPTER
+ * marker's own caption ("Classification of AI systems as high-risk",
+ * "Supervision, investigation, enforcement and monitoring in respect of
+ * providers of general-purpose AI models"). A caption is a single title phrase,
+ * NOT a sentence. The discriminators vs real body prose:
+ *   - bounded length (a caption is a heading, not a paragraph),
+ *   - no terminal sentence punctuation — checked AFTER stripping trailing quotes
+ *     / brackets, so a real sentence ending in `."` or `.)` is NOT mistaken for a
+ *     caption (this is the CRR:art_50d over-strip guard),
+ *   - no INTERNAL sentence boundary (". " followed by a letter, or ";"/":" that
+ *     mark prose / table rows) — a caption is one clause, a paragraph/table row
+ *     is not (the CRR:art_324 event-type-table over-strip guard).
+ * Used only to peel a caption that accompanies a heading — never on its own (the
+ * strip commits only up to a heading block). */
 function captionLike(s: string): boolean {
   s = (s || '').trim();
   if (!s) return false;
-  return s.length <= 100 && !/[.!?]$/.test(s) && s.split(/\s+/).length <= 12;
+  if (s.length > 180) return false;
+  // Strip trailing closing quotes/brackets before the terminal-punctuation test,
+  // so `…497(3) of Regulation (EU) No 575/2013."` reads as a sentence, not a caption.
+  const tail = s.replace(/["”»’'）)\]]+$/u, '');
+  if (/[.!?:;]$/.test(tail)) return false;
+  // Internal sentence boundary or list/clause punctuation => prose / table row,
+  // not a single-phrase caption.
+  if (/[.!?]\s+\p{Lu}/u.test(s)) return false;
+  if (/[;:]/.test(s)) return false;
+  return true;
 }
 
 /** A long all-caps chapter title that the canonical headingLike misses because
@@ -82,12 +101,20 @@ function isHeadingBlock(s: string): boolean {
  * Remove the trailing structural-heading tail from a body; return cleaned text
  * + the first (topmost) moved heading.
  *
- * The bled tail is a maximal run of trailing blocks that are either headingLike
- * (e.g. "HIGH-RISK AI SYSTEMS", "SECTION 1") or a short caption that accompanies
- * a heading (e.g. "Classification of AI systems as high-risk"). We accumulate
- * trailing heading/caption blocks but only COMMIT the cut up to the furthest
- * headingLike block — so a real article body sentence is never stripped, and a
- * lone trailing caption (with no heading) is left untouched.
+ * A bled structural tail is an alternating run of `<heading>` markers and the
+ * single `<caption>` each one introduces — e.g. "… SECTION 5\n\n<caption>" or
+ * "… TITLE IV\n\nOWN FUNDS …\n\nCHAPTER 1\n\nGeneral Provisions". Scanning from
+ * the END we peel:
+ *   - any heading block (CHAPTER/SECTION/TITLE marker or all-caps title), and
+ *   - a caption block ONLY when the block immediately deeper (toward the body)
+ *     is itself a heading — i.e. the caption belongs to a heading that follows
+ *     it in document order. This is the guard against an embedded TABLE whose
+ *     rows are short non-sentence phrases (CRR:art_324 event-type table): two
+ *     consecutive caption rows are NOT a heading+caption pair, so the scan stops
+ *     at the table and only the genuinely-bled heading after it is removed.
+ * We COMMIT the cut only up to the furthest heading block, so a real article
+ * body sentence is never stripped and a lone trailing caption (no heading) is
+ * left untouched.
  */
 export function stripBledHeadings(text: string): { text: string; movedHeading: string | null } {
   const blocks = text.split('\n\n');
@@ -99,13 +126,10 @@ export function stripBledHeadings(text: string): { text: string; movedHeading: s
     if (isHeadingBlock(b)) {
       i = j;
       lastHeadingIdx = j;
-    } else if (lastHeadingIdx !== -1 && captionLike(b)) {
-      // A caption block ABOVE an already-found heading (between body and heading)
-      // — part of the same structural tail (e.g. a section title above its marker).
-      i = j;
-    } else if (captionLike(b)) {
-      // A trailing caption with no heading found yet: candidate, keep scanning,
-      // but do NOT commit unless a heading turns up further back.
+    } else if (captionLike(b) && isHeadingBlock((blocks[j - 1] ?? '').trim())) {
+      // A caption whose next-deeper block is a heading: the caption that this
+      // following heading introduces. Part of the structural tail. (The strip
+      // still commits only up to lastHeadingIdx, set when that heading is hit.)
       i = j;
     } else {
       break;
