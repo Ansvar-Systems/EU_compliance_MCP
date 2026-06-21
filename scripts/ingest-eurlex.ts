@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 import { JSDOM } from 'jsdom';
 import { fetchEurLexWithBrowser } from './ingest-eurlex-browser.js';
 
-interface Article {
+export interface Article {
   number: string;
   title?: string;
   text: string;
@@ -366,7 +366,7 @@ function parseRecitals(html: string): Recital[] {
   return recitals;
 }
 
-function parseArticles(html: string, celexId: string): { articles: Article[]; definitions: Definition[] } {
+export function parseArticles(html: string, celexId: string): { articles: Article[]; definitions: Definition[] } {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
 
