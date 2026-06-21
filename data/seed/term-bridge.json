@@ -6,6 +6,12 @@
     "shared_with": "src/extension-handlers/compare.ts CONCEPT_SYNONYMS serves a different mechanism (cross-regulation concept families for compare_requirements); unifying both onto one controlled-vocabulary source of truth is a WS7 follow-up."
   },
   "bridges": {
-    "retention": ["storage limitation", "kept", "no longer than is necessary"]
+    "retention": ["storage limitation", "kept", "no longer than is necessary"],
+    "minimization": ["minimisation"],
+    "pseudonymization": ["pseudonymisation"],
+    "organization": ["organisation"],
+    "deletion": ["erasure"],
+    "delete": ["erasure"],
+    "dpo": ["data protection officer"]
   }
 }
