@@ -77,9 +77,10 @@ const SCHEMA_STATEMENTS: string[] = [
   )`,
   `CREATE VIRTUAL TABLE content_fts USING fts5(
     body,
+    title,
     content='provisions',
     content_rowid='id',
-    tokenize='unicode61 remove_diacritics 2'
+    tokenize='porter unicode61'
   )`,
   `CREATE TABLE db_metadata (
     key   TEXT PRIMARY KEY,
@@ -325,7 +326,7 @@ function buildDatabase() {
   const insertProvision = db.prepare(
     'INSERT INTO provisions (id, canonical_ref, body, is_substantive, source_url) VALUES (?, ?, ?, ?, ?)',
   );
-  const insertFts = db.prepare('INSERT INTO content_fts (rowid, body) VALUES (?, ?)');
+  const insertFts = db.prepare('INSERT INTO content_fts (rowid, body, title) VALUES (?, ?, ?)');
   const insertRecital = db.prepare(
     'INSERT OR IGNORE INTO recitals (regulation, recital_number, text, related_articles, source_url) VALUES (?, ?, ?, ?, ?)',
   );
@@ -371,7 +372,7 @@ function buildDatabase() {
         const id = nextProvisionId++;
         insertContent.run(id, provisionSourceUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(id, ref, body, 1, provisionSourceUrl);
-        insertFts.run(id, body);
+        insertFts.run(id, body, article.title ?? '');
         stats.provisions++;
       }
 
@@ -384,7 +385,7 @@ function buildDatabase() {
         const id = nextProvisionId++;
         insertContent.run(id, provisionSourceUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(id, ref, body, 1, provisionSourceUrl);
-        insertFts.run(id, body);
+        insertFts.run(id, body, annex.title ?? '');
         stats.provisions++;
         stats.annexes++;
       }
@@ -402,7 +403,7 @@ function buildDatabase() {
         const mId = nextProvisionId++;
         insertContent.run(mId, metaUrl, LEGISLATION_LICENSE_CODE, reg.full_name ?? null, reg.effective_date ?? null);
         insertProvision.run(mId, metaRef, metaBody, 1, metaUrl);
-        insertFts.run(mId, metaBody);
+        insertFts.run(mId, metaBody, reg.full_name ?? '');
         stats.provisions++;
       }
 
