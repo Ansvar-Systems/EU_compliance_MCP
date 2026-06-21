@@ -100,6 +100,32 @@ describe('compare_requirements', () => {
     }
   });
 
+  it('reaches GDPR breach-notification articles for incident reporting (regression: synonym set is not truncated past the GDPR-native term)', async () => {
+    const result = await call('compare_requirements', {
+      topic: 'incident reporting',
+      regulations: ['DORA', 'NIS2', 'GDPR'],
+    });
+    expect(result.isError).toBeUndefined();
+    const payload = parsePayload(result);
+    // GDPR's controlled vocabulary is "personal data breach" (not "incident");
+    // it lives in the sibling concept family and MUST survive expansion.
+    expect(payload.expanded_terms as string[]).toContain('personal data breach');
+    const regs = payload.regulations as Array<{
+      regulation: string;
+      articles: string[];
+      requirements: string[];
+    }>;
+    const gdpr = regs.find((r) => r.regulation === 'GDPR');
+    expect(gdpr, 'GDPR entry present').toBeDefined();
+    // art_33 (breach notification to the supervisory authority) / art_34 are the
+    // canonical answers — empty here was the original Signal-2 defect.
+    expect(gdpr!.articles.length).toBeGreaterThan(0);
+    expect(
+      gdpr!.articles.some((a) => a === 'art_33' || a === 'art_34'),
+      `GDPR articles ${JSON.stringify(gdpr!.articles)} include art_33/art_34`,
+    ).toBe(true);
+  });
+
   it('rejects a missing topic and a missing regulations array', async () => {
     const noTopic = await call('compare_requirements', { regulations: ['DORA'] });
     expect(noTopic.isError).toBe(true);
