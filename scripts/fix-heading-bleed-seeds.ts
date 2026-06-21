@@ -42,11 +42,40 @@ export function headingLike(s: string): boolean {
 /** A short caption line that may trail a structural heading (e.g. a SECTION
  * marker's own title-case caption "Classification of AI systems as high-risk").
  * Not a full sentence, not long. Used only to peel the caption that accompanies
- * a heading — never on its own (the strip commits only up to a headingLike block). */
+ * a heading — never on its own (the strip commits only up to a heading block). */
 function captionLike(s: string): boolean {
   s = (s || '').trim();
   if (!s) return false;
   return s.length <= 100 && !/[.!?]$/.test(s) && s.split(/\s+/).length <= 12;
+}
+
+/** A long all-caps chapter title that the canonical headingLike misses because
+ * of its <=70-char / <=8-word ceiling (e.g. AI Act CHAPTER IV
+ * "TRANSPARENCY OBLIGATIONS FOR PROVIDERS AND DEPLOYERS OF CERTAIN AI SYSTEMS",
+ * or DORA RTS chapter captions that run 20+ all-caps words). headingLike stays
+ * verbatim (shared with the bleed gate); this complement only widens what
+ * stripBledHeadings will peel, never what the gate flags. The discriminator is
+ * "mostly-uppercase, multi-word, no terminal punctuation": a real body sentence
+ * is mixed-case and/or ends in .!? and is excluded. The strip commits a cut only
+ * up to such a block AND only when it is preceded by real body content, so a long
+ * word count cannot eat prose. */
+function allCapsTitleLike(s: string): boolean {
+  s = (s || '').trim();
+  if (!s) return false;
+  if (/[.!?]$/.test(s)) return false;
+  if (s.length > 250) return false;
+  const words = s.split(/\s+/).length;
+  if (words < 2) return false;
+  const alpha = [...s].filter((ch) => /\p{L}/u.test(ch));
+  if (alpha.length < 6) return false;
+  const up = alpha.filter((ch) => ch.toUpperCase() === ch && ch.toLowerCase() !== ch).length;
+  return up / alpha.length >= 0.85;
+}
+
+/** True for any block the strip treats as a structural heading (the canonical
+ * headingLike OR a long all-caps chapter title it misses). */
+function isHeadingBlock(s: string): boolean {
+  return headingLike(s) || allCapsTitleLike(s);
 }
 
 /**
@@ -64,10 +93,10 @@ export function stripBledHeadings(text: string): { text: string; movedHeading: s
   const blocks = text.split('\n\n');
   // i = index of the first block belonging to the trailing structural tail.
   let i = blocks.length;
-  let lastHeadingIdx = -1; // furthest-back headingLike block within the tail
+  let lastHeadingIdx = -1; // furthest-back heading block within the tail
   for (let j = blocks.length - 1; j > 0; j--) {
     const b = blocks[j].trim();
-    if (headingLike(b)) {
+    if (isHeadingBlock(b)) {
       i = j;
       lastHeadingIdx = j;
     } else if (lastHeadingIdx !== -1 && captionLike(b)) {

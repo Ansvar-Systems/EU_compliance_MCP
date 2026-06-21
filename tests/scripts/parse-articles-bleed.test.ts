@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { parseArticles, type Article } from '../../scripts/ingest-eurlex.js';
@@ -45,6 +45,37 @@ describe('parseArticles does not bleed chapter/section headings into the precedi
     for (const a of articles) {
       const lastLine = a.text.split('\n').map((l) => l.trim()).filter(Boolean).at(-1) ?? '';
       expect(HEADING_TAILS).not.toContain(lastLine);
+    }
+  });
+});
+
+describe('committed seed JSON carries no bled trailing headings', () => {
+  const SEED_DIR = join(__dirname, '..', '..', 'data', 'seed');
+  const files = readdirSync(SEED_DIR).filter((f) => f.endsWith('.json') && !f.startsWith('mappings'));
+
+  it('AI_ACT art_4 / art_5 do not end with a structural heading', () => {
+    const aiAct = JSON.parse(readFileSync(join(SEED_DIR, 'ai-act.json'), 'utf-8'));
+    const byNum = (n: string) => aiAct.articles.find((a: { number: string }) => a.number === n);
+    expect(byNum('4').text.trimEnd()).not.toMatch(/PROHIBITED AI PRACTICES$/);
+    expect(byNum('5').text.trimEnd()).not.toMatch(/(HIGH-RISK AI SYSTEMS|SECTION\s*1|Classification of AI systems as high-risk)$/);
+  });
+
+  it('no article body bleeds an all-caps multi-word heading after real content', () => {
+    // WS2 targets the bleed where a CHAPTER/SECTION heading is appended AFTER an
+    // article's real body. A body that is ENTIRELY a single title/heading block
+    // (a pre-existing degenerate stub, e.g. an annex whose only seed content was
+    // a correlation table that the repair removed) is not this bleed class —
+    // build-db indexes that lone title into content_fts.title regardless. Scope
+    // the assertion to bodies that carry real content BEFORE the trailing heading.
+    for (const file of files) {
+      const reg = JSON.parse(readFileSync(join(SEED_DIR, file), 'utf-8'));
+      for (const art of reg.articles ?? []) {
+        const blocks = String(art.text).split('\n\n').map((b: string) => b.trim()).filter(Boolean);
+        if (blocks.length < 2) continue; // single-block title/stub: not a bleed-after-content
+        const last = blocks[blocks.length - 1];
+        const isHeading = /^[A-Z][A-Z\s-]{4,}$/.test(last) && last.split(/\s+/).length >= 2 && !/[.!?]$/.test(last);
+        expect(isHeading, `${reg.id}:art_${art.number} bleeds heading after content: ${last}`).toBe(false);
+      }
     }
   });
 });

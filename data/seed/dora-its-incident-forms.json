@@ -64,7 +64,7 @@
     {
       "number": "Annex III",
       "title": "TEMPLATES FOR NOTIFICATION OF SIGNIFICANT CYBER THREATS",
-      "text": "ANNEX III\n\nTEMPLATES FOR NOTIFICATION OF SIGNIFICANT CYBER THREATS\n\nNumber of field\n\nData field\n\n1\n\nName of the entity submitting the notification\n\n2\n\nIdentification code of the entity submitting the notification\n\n3\n\nType of the financial entity submitting the notification\n\n4\n\nName of the financial entity\n\n5\n\nLEI code of the financial entity\n\n6\n\nPrimary contact person name\n\n7\n\nPrimary contact person email\n\n8\n\nPrimary contact person telephone\n\n9\n\nSecond contact person name\n\n10\n\nSecond contact person email\n\n11\n\nSecond contact person telephone\n\n12\n\nDate and time of detection of the cyber threat\n\n13\n\nDescription of the significant cyber threat\n\n14\n\nInformation about potential impact\n\n15\n\nPotential incident classification criteria\n\n16\n\nStatus of the cyber threat\n\n17\n\nActions taken to prevent materialisation\n\n18\n\nNotification to other stakeholders\n\n19\n\nIndicators of compromise\n\n20\n\nOther relevant information",
+      "text": "ANNEX III",
       "chapter": "Annexes"
     },
     {
