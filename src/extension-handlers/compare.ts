@@ -144,7 +144,12 @@ function getSynonyms(topic: string): string[] {
     }
   }
   synonyms.delete(lowerTopic);
-  return Array.from(synonyms).slice(0, 4);
+  // No truncation: the transitive closure above reaches sibling concept families
+  // (e.g. "incident reporting" → the "breach notification" family carrying GDPR's
+  // controlled term "personal data breach"). A slice(0, 4) dropped those GDPR-native
+  // terms by insertion order, so GDPR returned empty for incident-reporting topics.
+  // The downstream FTS query is OR'd + bm25-ranked + LIMIT 5, which bounds output.
+  return Array.from(synonyms);
 }
 
 function extractTimelines(text: string): string | undefined {
