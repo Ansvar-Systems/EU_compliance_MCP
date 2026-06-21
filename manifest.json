@@ -1,6 +1,6 @@
 {
  "manifest_schema_version": "1.0.0",
- "mcp_base_min_version": "1.5.1",
+ "mcp_base_min_version": "1.9.1",
  "identity": {
   "name": "eu-regulations-mcp",
   "display_name": "EU Regulations",

@@ -81,7 +81,14 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # (EU_compliance_MCP #77). This corpus is the live repro — DORA guidance
 # (metadata.license = ESMA-Reuse-Notice) and the 4 ENISA docs (ENISA-CC-BY-4)
 # were served the manifest EUR-Lex-Decision-2011-833 default; now item-level.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.5.1-alpine
+# v1.9.1 (2026-06-21): 1.5.1→1.9.x catch-up (EU-compliance-highest-standard WS0 §4).
+# Carries v1.6.0 provision-resolver BROADEN (EU art_N sub-provision fallback),
+# v1.7.x citation par-prefix + name-form aliases, v1.8.0 DB-free /health + Node 22,
+# v1.9.0 relaxFtsQuery recall ladder + C3/C4/C6 search-quality, v1.9.1 rank-then-join.
+# Regression-tested against this corpus's committed DB before deploy (11/11):
+# BROADEN works + does not over-certify (allow_broaden:false), recall + C6 ladder,
+# citations complete. Isolated bump — WS3/WS4 mcp-base deltas layer on a later tag.
+FROM ghcr.io/ansvar-systems/mcp-base:v1.9.1-alpine
 
 WORKDIR /app
 
