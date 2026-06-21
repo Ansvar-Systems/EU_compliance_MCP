@@ -366,6 +366,29 @@ function parseRecitals(html: string): Recital[] {
   return recitals;
 }
 
+/**
+ * A bare structural caption (chapter/section title) with no preceding
+ * "CHAPTER N" / "SECTION N" marker line: short, mostly-uppercase, multi-word,
+ * not a full sentence. EUR-Lex textContent sometimes omits the marker before a
+ * chapter title (AI Act art_5 is directly followed by "HIGH-RISK AI SYSTEMS").
+ * This is the all-caps fallback branch of the canonical arch-docs
+ * corpus-quality-scan.js `headingLike` predicate, kept in lockstep with it so
+ * the ingest fix and the bleed gate agree on what a bare heading is.
+ */
+function isBareStructuralHeading(s: string): boolean {
+  s = (s || '').trim();
+  if (!s) return false;
+  if (s.length > 70) return false;
+  const words = s.split(/\s+/).length;
+  const alpha = [...s].filter((ch) => /\p{L}/u.test(ch));
+  const digits = (s.match(/[0-9]/g) || []).length;
+  if (alpha.length >= 6 && words >= 2 && alpha.length >= digits) {
+    const up = alpha.filter((ch) => ch.toUpperCase() === ch && ch.toLowerCase() !== ch).length;
+    if (up / alpha.length >= 0.85 && words <= 8 && !/[.!?]$/.test(s)) return true;
+  }
+  return false;
+}
+
 export function parseArticles(html: string, celexId: string): { articles: Article[]; definitions: Definition[] } {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
@@ -379,6 +402,8 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
   const lines = allText.split('\n').map(l => l.trim()).filter(l => l);
 
   let currentArticle: { number: string; title?: string; lines: string[] } | null = null;
+  let pendingHeading: string | null = null;
+  let expectHeadingLine = false;
 
   for (const line of lines) {
     // Stop at the trailing boilerplate that EUR-Lex appends after the final
@@ -403,20 +428,62 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
           chapter: currentChapter || undefined,
         });
       }
-      currentArticle = { number: articleStart[1], lines: [] };
+      currentArticle = { number: articleStart[1], lines: [], title: pendingHeading ?? undefined };
+      pendingHeading = null;
       continue;
     }
 
+    // Structural markers: CHAPTER / SECTION. The marker line itself sets the
+    // current chapter/section; the NEXT non-empty line is the heading caption
+    // (e.g. "CHAPTER III" then "PROHIBITED AI PRACTICES", "SECTION 1" then
+    // "Classification of AI systems as high-risk"). EUR-Lex emits an NBSP
+    // between the keyword and the numeral ("SECTION 1"), so allow \s
+    // (JS \s includes  ). Without consuming the caption it bled into the
+    // PRECEDING article's body (AI Act art_4/art_5). We MOVE the caption into a
+    // pendingHeading and apply it as the next article's title when that article
+    // has none of its own.
     const chapterStart = line.match(/^CHAPTER\s+([IVXLC]+)/i);
     if (chapterStart) {
       currentChapter = chapterStart[1];
+      expectHeadingLine = true;
+      continue;
+    }
+    const sectionStart = line.match(/^SECTION\s+(\S+)/i);
+    if (sectionStart) {
+      expectHeadingLine = true;
+      continue;
+    }
+    if (expectHeadingLine) {
+      // The single caption line that follows a CHAPTER/SECTION marker. Consume
+      // it (do not push to the current article); remember it for the next
+      // article's title. Guard: a real caption is short and not a full sentence.
+      expectHeadingLine = false;
+      if (line.length <= 100 && !line.endsWith('.')) {
+        pendingHeading = line;
+        continue;
+      }
+      // Not a caption (unexpected): fall through to normal handling below.
+    }
+
+    // Bare structural caption with no preceding CHAPTER/SECTION marker. EUR-Lex
+    // textContent does not always emit the "CHAPTER N" line before a chapter
+    // title (AI Act art_5 is followed directly by "HIGH-RISK AI SYSTEMS"). Such a
+    // line — short, mostly-uppercase, multi-word, not a sentence — is a chapter
+    // heading, not body text. Only treat it as a heading once the current
+    // article already has body content (an article's OWN one-line caption arrives
+    // while lines.length === 0 and is handled below). MOVE it to pendingHeading.
+    if (currentArticle && currentArticle.lines.length > 0 && isBareStructuralHeading(line)) {
+      pendingHeading = line;
       continue;
     }
 
     if (currentArticle) {
-      // Check if this is a title line (short, no period at end)
+      // First, an article's own caption (short, no terminal period). Prefer the
+      // article's own caption; else fall back to a pendingHeading carried from
+      // the chapter/section marker (MOVE target).
       if (!currentArticle.title && currentArticle.lines.length === 0 && line.length < 100 && !line.endsWith('.')) {
         currentArticle.title = line;
+        pendingHeading = null;
       } else if (line.length > 0) {
         currentArticle.lines.push(line);
       }
