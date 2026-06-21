@@ -245,6 +245,19 @@ const SCHEMA_STATEMENTS: string[] = [
     quality_status     TEXT CHECK(quality_status IN ('complete', 'review', 'incomplete')),
     notes              TEXT
   )`,
+  // WS4 controlled-vocabulary term bridge (mcp-base v1.10.0+). The chassis
+  // search_legislation handler reads `SELECT expansion FROM term_bridge WHERE
+  // term = ? COLLATE NOCASE` on a thin scoped result and OR-expands the token
+  // into the corpus's controlled vocabulary. One term → many expansions, so the
+  // uniqueness is on the (term, expansion) PAIR, not term alone. Gated by
+  // manifest data.term_bridge_enabled; Gate 9 requires this table when enabled.
+  `CREATE TABLE term_bridge (
+    id         INTEGER PRIMARY KEY,
+    term       TEXT NOT NULL,
+    expansion  TEXT NOT NULL,
+    UNIQUE(term, expansion)
+  )`,
+  `CREATE INDEX idx_term_bridge_term ON term_bridge(term COLLATE NOCASE)`,
 ];
 
 interface RegulationSeed {
@@ -619,6 +632,32 @@ function buildDatabase() {
     });
     guidanceTx();
     console.log(`  Loaded ${totalDocs} guidance documents with ${totalSections} sections`);
+  }
+
+  // WS4 term bridge — controlled-vocabulary map (data/seed/term-bridge.json).
+  // Flattens { bridges: { term: [expansion, …] } } into term_bridge rows. The
+  // chassis (mcp-base v1.10.0+) reads these on a thin scoped search to OR-expand
+  // a token into the corpus's controlled vocabulary (e.g. retention → storage
+  // limitation). INSERT OR IGNORE so a duplicate (term, expansion) pair is a no-op.
+  const termBridgeFile = join(SEED_DIR, 'term-bridge.json');
+  if (existsSync(termBridgeFile)) {
+    const insertBridge = db.prepare(
+      'INSERT OR IGNORE INTO term_bridge (term, expansion) VALUES (?, ?)',
+    );
+    let total = 0;
+    const bridgeTx = db.transaction(() => {
+      const raw = readFileSync(termBridgeFile, 'utf-8');
+      const parsed = JSON.parse(raw);
+      const bridges: Record<string, string[]> = parsed.bridges ?? {};
+      for (const [term, expansions] of Object.entries(bridges)) {
+        for (const expansion of expansions) {
+          insertBridge.run(term.toLowerCase(), expansion);
+          total++;
+        }
+      }
+    });
+    bridgeTx();
+    console.log(`  Loaded ${total} term-bridge expansions`);
   }
 
   // db_metadata.

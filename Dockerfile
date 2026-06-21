@@ -88,7 +88,13 @@ RUN ./node_modules/.bin/tsc -p tsconfig.json
 # Regression-tested against this corpus's committed DB before deploy (11/11):
 # BROADEN works + does not over-certify (allow_broaden:false), recall + C6 ladder,
 # citations complete. Isolated bump — WS3/WS4 mcp-base deltas layer on a later tag.
-FROM ghcr.io/ansvar-systems/mcp-base:v1.9.1-alpine
+# v1.10.0 (2026-06-21): WS3 framework filter + WS4 term bridge. This corpus opts
+# in via manifest data.framework_filter_enabled + data.term_bridge_enabled, so a
+# framework-scoped search (e.g. frameworks=['GDPR']) scopes to that framework's
+# provisions and bridges query vocabulary to the corpus's controlled vocabulary
+# (retention → storage limitation) — the Signal-1 fix. Gate 9 now requires the
+# term_bridge table (built by scripts/build-db.ts from data/seed/term-bridge.json).
+FROM ghcr.io/ansvar-systems/mcp-base:v1.10.0-alpine
 
 WORKDIR /app
 
