@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "purpose": "WS4 controlled-vocabulary term bridge. Maps a lowercased query-vocabulary token to the EU corpus's controlled vocabulary, so a framework-scoped search surfaces the canonical provision even when the query word never appears in it. The mcp-base search_legislation handler OR-expands each matching token into the FTS5 MATCH (only on a thin scoped result, only if recall improves, reported via query_degraded).",
+    "verified_against": "GDPR Art 5(1)(e) — 'retention' appears in zero GDPR provisions; the storage-limitation principle is the controlled term. Live-validated: search(frameworks=['GDPR'], query='data retention limitation') surfaces GDPR:art_5 via this bridge.",
+    "authoring_rule": "Add only expansions verified to be the corpus's controlled phrasing for the term. Keys are single lowercased tokens; values are corpus phrases (multi-word phrases are matched as FTS5 phrases). Quality over coverage — an unverified expansion can mis-rank.",
+    "shared_with": "src/extension-handlers/compare.ts CONCEPT_SYNONYMS serves a different mechanism (cross-regulation concept families for compare_requirements); unifying both onto one controlled-vocabulary source of truth is a WS7 follow-up."
+  },
+  "bridges": {
+    "retention": ["storage limitation", "kept", "no longer than is necessary"]
+  }
+}

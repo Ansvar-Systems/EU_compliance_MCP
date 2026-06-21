@@ -12,14 +12,16 @@
   "base_tier": "free"
  },
  "data": {
-  "database_sha256": "sha256:4b61098a2ace84a2df67a7dc2542f159bb3057517045a0a3609d59ac2cd11384",
-  "snapshot_id": "sha256:4b61098a2ace84a2df67a7dc2542f159bb3057517045a0a3609d59ac2cd11384",
+  "database_sha256": "sha256:a04190babe0295a93c5ce2fb72b343d3d20dad5eae20b02779378f8afbf9269f",
+  "snapshot_id": "sha256:a04190babe0295a93c5ce2fb72b343d3d20dad5eae20b02779378f8afbf9269f",
   "generated_at": "2026-06-21T00:00:00Z",
   "database_path": "/app/data/regulations.db",
   "recitals_enabled": true,
   "guidance_enabled": true,
   "version_tracking_enabled": true,
   "definitions_enabled": true,
+  "framework_filter_enabled": true,
+  "term_bridge_enabled": true,
   "integrity_checks": [
    {
     "name": "provisions_nonempty",
@@ -50,6 +52,12 @@
     "type": "row_count_min",
     "table": "definitions",
     "min": 100
+   },
+   {
+    "name": "term_bridge_populated",
+    "type": "row_count_min",
+    "table": "term_bridge",
+    "min": 1
    },
    {
     "name": "provisions_source_url_complete",
