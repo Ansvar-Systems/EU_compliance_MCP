@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "MACHINERY",
+  "regulation_name": "Machinery Regulation (EU) 2023/1230",
+  "celex_id": "32023R1230",
+  "effective_date": "2027-01-20",
+  "guide_updated": "2026-06-22",
+  "delegated_acts": [
+    {
+      "id": "MACHINERY_HARMONISED_STANDARDS_DECISION",
+      "celex_id": "32023D1586",
+      "title": "Commission Implementing Decision (EU) 2023/1586 — harmonised standards for machinery",
+      "article_count": 0,
+      "parent_article": "20",
+      "covers": "Lists the harmonised standards (and any restrictions / cessation dates) that confer presumption of conformity. Drafted under Directive 2006/42/EC (OJ L 194, 2.8.2023); amended repeatedly — consolidated text CELEX 02023D1586. Equivalent references under Regulation (EU) 2023/1230 are published in the OJ via Art. 20 as the Regulation applies. Always check the current OJ list; harmonised status is dynamic (standards are added and withdrawn). Per-clause analysis of the machine-safety standards: see the agri-robotics-expertise MCP (sources=['agri-robotics-expertise'])."
+    },
+    {
+      "id": "MACHINERY_ANNEX_I_AMENDMENTS",
+      "celex_id": "pending",
+      "title": "Delegated acts amending Annex I (high-risk categories)",
+      "article_count": 0,
+      "parent_article": "6(2)",
+      "covers": "The Commission may amend the Annex I list of categories of machinery subject to the third-party / notified-body conformity-assessment regime (incl. safety components with self-evolving ML behaviour)."
+    }
+  ],
+  "proportionality": {
+    "description": "Conformity-assessment burden scales with the Annex I high-risk classification of the product. Most machinery uses self-assessment with internal production control; Annex I categories require a notified body unless harmonised standards are fully applied (and even then, for some categories, third-party involvement is mandatory).",
+    "tiers": [
+      {
+        "name": "Standard machinery (not in Annex I)",
+        "applies_to": "Self-assessment — internal production control (Annex VI, Module A). Manufacturer applies the Annex III EHSRs, draws up the technical file (Annex IV), the EU Declaration of Conformity (Annex V) and affixes CE marking.",
+        "note": "Applying a harmonised standard whose reference is in the OJ gives presumption of conformity with the EHSRs it covers (Art. 20)."
+      },
+      {
+        "name": "Annex I machinery — harmonised standards fully applied",
+        "applies_to": "EU-type examination (Module B) + conformity to type (Module C), or full quality assurance (Module H), per Art. 25.",
+        "note": "Full application of the relevant harmonised standards can, for some Annex I categories, permit internal control; for others a notified body is mandatory regardless."
+      },
+      {
+        "name": "Annex I machinery — AI safety components / self-evolving behaviour",
+        "applies_to": "Third-party conformity assessment; interacts with the AI Act high-risk regime (Regulation (EU) 2024/1689).",
+        "note": "A machine-learning safety component is treated under Annex I AND triggers AI Act obligations — both must be discharged."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "50",
+        "applies_to": "Transitional placing on the market",
+        "description": "Machinery that complies with Directive 2006/42/EC and is placed on the market before the Regulation applies (2027-01-20) may continue to be made available; confirm the applicable instrument for products straddling the cut-over date."
+      }
+    ]
+  },
+  "pitfalls": [
+    {
+      "id": "harmonised_list_is_dynamic",
+      "severity": "high",
+      "article": "20",
+      "description": "Presumption of conformity attaches ONLY to harmonised standards (or parts thereof) whose references are currently published in the OJ. The list changes: standards are added and withdrawn with cessation-of-presumption dates, and a standard can be cited with a restriction. Verify the live OJ list (Commission Implementing Decision (EU) 2023/1586, consolidated CELEX 02023D1586) before relying on a standard — e.g. the harmonised status of EN ISO 12100 has itself been the subject of change. Do NOT assume a widely-used EN ISO standard is currently harmonised.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "presumption_is_rebuttable",
+      "severity": "medium",
+      "article": "20",
+      "description": "A harmonised standard gives presumption of conformity only for the EHSRs it covers, and only to the extent applied. It does not exempt the manufacturer from the risk assessment (Annex III §1.1.1) nor from EHSRs the standard does not address. Presumption can be challenged via the safeguard procedure.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "directive_to_regulation_transition",
+      "severity": "high",
+      "article": "50",
+      "description": "Regulation (EU) 2023/1230 applies from 2027-01-20 and repeals Directive 2006/42/EC. The current harmonised-standards references were drafted under the Directive; the Commission re-publishes references under the Regulation via Art. 20 as it applies. During the transition, confirm which instrument a given OJ reference supports.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "substantial_modification",
+      "severity": "medium",
+      "article": "Annex.I",
+      "description": "A substantial modification of a machine already placed on the market makes it new machinery, re-triggering conformity assessment and CE marking. Relevant to field-updated autonomous machinery whose software/AI changes safety behaviour.",
+      "detail_level": "full"
+    }
+  ],
+  "cross_regulation": [
+    {
+      "regulation": "AI_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["Machinery Reg Annex I", "AI Act Art. 6"],
+      "note": "An AI safety component with self-evolving behaviour is an Annex I high-risk category under the Machinery Regulation AND a high-risk AI system under the AI Act (Regulation (EU) 2024/1689). Both regimes apply; conformity must address each."
+    },
+    {
+      "regulation": "CRA",
+      "relationship": "stacking",
+      "key_provisions": ["Machinery Reg Annex III §1.1.9", "CRA Annex I"],
+      "note": "Annex III §1.1.9 (protection against corruption / cybersecurity of safety-related control systems) overlaps the horizontal cybersecurity requirements of the Cyber Resilience Act (Regulation (EU) 2024/2847) for the same product with digital elements."
+    },
+    {
+      "regulation": "PLD",
+      "relationship": "stacking",
+      "key_provisions": ["Directive (EU) 2024/2853"],
+      "note": "The recast Product Liability Directive is the no-fault civil-liability backdrop: a safety defect (incl. software/AI) breaching the EHSRs also exposes the manufacturer to product-liability claims."
+    }
+  ],
+  "key_structures": [
+    {
+      "article": "10",
+      "title": "Manufacturer obligations — meet the Annex III EHSRs",
+      "description": "Before placing machinery on the market the manufacturer must ensure it is designed and constructed in accordance with the essential health and safety requirements in Annex III, carry out the risk assessment, compile the technical documentation (Annex IV) and apply a conformity-assessment procedure."
+    },
+    {
+      "article": "20",
+      "title": "Presumption of conformity via harmonised standards",
+      "description": "A product in conformity with harmonised standards (or parts thereof) whose references are published in the OJ is presumed to conform with the EHSRs covered by those standards. This is the legal hook that makes the EN ISO machine-safety standards operationally load-bearing. Current references: Commission Implementing Decision (EU) 2023/1586 (consolidated CELEX 02023D1586). Machine-safety standard families relevant to autonomous agricultural machinery — Type A: ISO 12100 (general principles, risk assessment & reduction); Type B (control systems): ISO 13849-1/-2 and IEC 62061; agricultural functional safety: ISO 25119 (AgPL); Type C: ISO 3691-4 (driverless industrial trucks), ISO 18497 (highly automated agricultural machines), ISO 4254 (agricultural machinery series). For clause-level identifiers, editions and EHSR cross-references see the agri-robotics-expertise MCP."
+    },
+    {
+      "article": "6",
+      "title": "Annex I categories — third-party conformity assessment",
+      "description": "Machinery and related products in the Annex I categories are subject to specific conformity-assessment procedures (Art. 25), typically involving a notified body. Annex I now includes safety components embedding machine-learning with fully or partially self-evolving behaviour."
+    },
+    {
+      "article": "25",
+      "title": "Conformity assessment procedures",
+      "description": "Selects the applicable module(s): internal production control (Module A) for non-Annex-I machinery; EU-type examination (B) + conformity to type (C) or full quality assurance (H) for Annex I categories, depending on whether harmonised standards are fully applied."
+    },
+    {
+      "article": "31",
+      "title": "Presumption of conformity of notified bodies",
+      "description": "A conformity-assessment body that meets the criteria in the relevant harmonised standards (references in the OJ) is presumed to meet the Art. 30 requirements for notification — the same presumption mechanism applied to the assessors."
+    }
+  ],
+  "key_recitals": [
+    {
+      "number": 33,
+      "clarifies": "Harmonised standards give manufacturers a presumption of conformity and are the primary route to demonstrating the essential health and safety requirements; their references are published in the Official Journal.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 12,
+      "clarifies": "Scope extends to highly automated and autonomous machinery; safety components with self-evolving behaviour are treated as high-risk, reflecting new autonomy and AI risks.",
+      "detail_level": "quick"
+    }
+  ],
+  "national_implementation": {
+    "pattern": "Regulation (EU) 2023/1230 is directly applicable — no transposition. Member States designate market-surveillance authorities, notify conformity-assessment bodies (notified bodies) and lay down penalties for non-compliance. Harmonised-standards references are EU-level (OJ), not national. Search Law MCPs for national market-surveillance and CE-enforcement acts.",
+    "known_examples": [
+      {
+        "country": "SE",
+        "law": "Arbetsmiljöverket (Swedish Work Environment Authority) — market surveillance for machinery",
+        "note": "National competent authority for machinery placed on the Swedish market; agricultural machinery safety also intersects Jordbruksverket guidance."
+      }
+    ]
+  },
+  "evidence_hint": "Call get_evidence_requirements(regulation='MACHINERY') for per-article audit artifacts. Key artifacts: risk assessment & risk-reduction file (Annex III §1.1.1 / ISO 12100), technical documentation (Annex IV), EU Declaration of Conformity (Annex V), instructions for use, conformity-assessment records, and — where harmonised standards are relied upon — the specific OJ-published references applied plus the standard-by-standard justification. For the harmonised-standards list and current presumption-of-conformity status, consult Commission Implementing Decision (EU) 2023/1586 (consolidated CELEX 02023D1586) on EUR-Lex. For clause-level machine-safety / functional-safety detail (ISO 12100, ISO 13849, ISO 25119, ISO 3691-4, ISO 18497) and their EHSR cross-references, query the agri-robotics-expertise MCP (sources=['agri-robotics-expertise']).",
+  "timeline": [
+    {
+      "event": "Entry into force",
+      "date": "2023-07-19",
+      "note": "Regulation (EU) 2023/1230 published in OJ L 165, 29.6.2023"
+    },
+    {
+      "event": "Harmonised standards (Directive) consolidated",
+      "date": "2023-08-02",
+      "note": "Commission Implementing Decision (EU) 2023/1586, OJ L 194 — harmonised standards under Directive 2006/42/EC (amended thereafter)"
+    },
+    {
+      "event": "Application / Directive repealed",
+      "date": "2027-01-20",
+      "note": "Regulation applies and repeals Directive 2006/42/EC; harmonised-standards references re-published under the Regulation via Art. 20"
+    }
+  ],
+  "citation_format": "Cite as: Machinery Regulation (EU) 2023/1230, Art. X(Y). For essential requirements: Annex III, §N. For harmonised standards: name the EN ISO standard and edition AND the OJ reference (Commission Implementing Decision (EU) 2023/1586 as amended) — never assert harmonised status without the current OJ reference.",
+  "harmonised_standards_note": "Non-rendered field for future tooling: presumption of conformity (Art. 20) attaches only to OJ-published references. This guide deliberately does NOT enumerate per-standard harmonised status (it is dynamic and authoritative only in the OJ); it points to Decision (EU) 2023/1586 and to the agri-robotics-expertise MCP for clause-level standard structure."
+}
