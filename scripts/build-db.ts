@@ -378,7 +378,12 @@ function buildDatabase() {
 
   const seedFiles = readdirSync(SEED_DIR)
     .filter((f: string) => f.endsWith('.json'))
-    .filter((f) => !f.startsWith('mappings'));
+    .filter((f) => !f.startsWith('mappings'))
+    // term-bridge.json is a controlled-vocabulary map ({ _meta, bridges }),
+    // not a regulation seed — it has no articles[] and is loaded separately
+    // below into the term_bridge table. Excluding it here keeps the regulation
+    // loop from crashing on `reg.articles` (added in #97/#98).
+    .filter((f) => f !== 'term-bridge.json');
 
   const tx = db.transaction(() => {
     for (const file of seedFiles) {
@@ -388,7 +393,7 @@ function buildDatabase() {
       const baseUrl = reg.eur_lex_url ?? '';
 
       // Articles -> provisions.
-      for (const article of reg.articles) {
+      for (const article of reg.articles ?? []) {
         const ref = `${reg.id}:art_${article.number}`;
         const body = article.title ? `${article.title}\n\n${article.text}` : article.text;
         const provisionSourceUrl = buildProvisionSourceUrl(reg.celex_id, baseUrl, `art_${article.number}`);
