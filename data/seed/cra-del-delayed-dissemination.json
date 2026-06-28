@@ -1,0 +1,88 @@
+{
+  "id": "CRA_DEL_DELAYED_DISSEMINATION",
+  "full_name": "Commission Delegated Regulation (EU) 2026/881 - Terms and Conditions for Delaying the Dissemination of Notifications (CRA)",
+  "celex_id": "32026R0881",
+  "effective_date": "2026-05-10",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R0881",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Subject matter",
+      "text": "This Regulation specifies the terms and conditions for applying the cybersecurity-related grounds referred to in Article 16(2) of Regulation (EU) 2024/2847 that enable the CSIRT designated as coordinator initially receiving a notification in accordance with Article 14(1) and (3) and Article 15(1) and (2) of that Regulation to delay the dissemination of the notification to the CSIRTs designated as coordinators on the territory of which the manufacturer has indicated that the product with digital elements has been made available."
+    },
+    {
+      "number": "2",
+      "title": "Definitions",
+      "text": "For the purposes of this Regulation, the following definitions shall apply:\n\n(1)\n\n‘CSIRT initially receiving the notification’ means the CSIRT designated as coordinator initially receiving the notification in accordance with Article 14(1) and (3) and Article 15(1) and (2) of Regulation (EU) 2024/2847;\n\n(2)\n\n‘relevant CSIRT’ means the CSIRT designated as coordinator on the territory of which the manufacturer has indicated that the product with digital elements has been made available."
+    },
+    {
+      "number": "3",
+      "text": "The CSIRT initially receiving the notification may decide to delay for a period of time limited to that strictly necessary the dissemination of notifications or parts thereof to relevant CSIRTs in cases where, in light of the sensitivity of the notified information, the cybersecurity risks posed by the dissemination outweigh its security benefits and those risks cannot be mitigated by placing restrictions on the handling or further sharing of the notification through appropriate protocols, such as the Traffic Light Protocol (TLP) or the Permissible Actions Protocol (PAP), and where at least one of the following conditions is met:\n\n(a)\n\nthe manufacturer has informed the CSIRT initially receiving the notification that an effective risk mitigation measure, such as a security update or user guidance, is expected to be made available within 72 hours; if an effective risk mitigation measure is not made available within this timeframe, the CSIRT initially receiving the notification shall disseminate the notification to the relevant CSIRTs;\n\n(b)\n\nthe information included in the notification is deemed sufficient, in light of the nature of the notified actively exploited vulnerability, to create an exploitation technique, particularly when the vulnerability can be easily identified and exploited by actors with limited skills and resources; once an effective risk mitigation measure, such as a security update or user guidance, is available, the CSIRT initially receiving the notification shall disseminate the notification to the relevant CSIRTs;\n\n(c)\n\nthe CSIRT initially receiving the notification is able to share with the relevant CSIRTs sufficient information to ensure that the relevant CSIRTs can put in place adequate risk mitigation measures; once an effective risk mitigation measure, such as a security update or user guidance, is available, the CSIRT initially receiving the notification shall disseminate the full notification to the relevant CSIRTs;\n\n(d)\n\nthe CSIRT initially receiving the notification of the actively exploited vulnerability has been made aware of it as part of a coordinated vulnerability disclosure (CVD) for which that CSIRT is acting as a trusted intermediary in accordance with Article 12(1) of Directive (EU) 2022/2555; in such case, and in accordance with Article 16(6) of Regulation (EU) 2024/2847, the CSIRT initially receiving the notification shall disseminate the notification to the relevant CSIRTs when a delay is no longer strictly necessary and consent for disclosure by the parties involved in the CVD is given.",
+      "title": "Terms and conditions for applying cybersecurity-related grounds stemming from the nature of the reported information"
+    },
+    {
+      "number": "4",
+      "title": "Terms and conditions for applying cybersecurity-related grounds in relation to a specific CSIRT",
+      "text": "The CSIRT initially receiving the notification may decide to delay for a period of time that is strictly necessary the dissemination of notifications or parts thereof to a specific relevant CSIRT in cases where:\n\n(a)\n\nthe relevant CSIRT has been affected by a cybersecurity incident casting doubt on its ability to ensure the confidentiality of the notified information;\n\n(b)\n\nit has sufficient reason to believe that the capabilities of the relevant CSIRT are inadequate to ensure the confidentiality of the notified information.\n\nIn cases referred to in point (a) of the first subparagraph, the CSIRT initially receiving the notification may delay the dissemination until the relevant CSIRT has informed the CSIRTs Network referred to in Article 15 of Directive (EU) 2022/2555 that its ability to ensure the confidentiality of notifications has been restored.\n\nIn cases referred to in point (b) of the first subparagraph, the CSIRT initially receiving the notification may delay the dissemination to the relevant CSIRT until that CSIRT has provided evidence that it has addressed the shortcomings identified."
+    },
+    {
+      "number": "5",
+      "text": "The CSIRT initially receiving the notification may decide to delay the dissemination of notifications via the single reporting platform established by Article 16 of Regulation (EU) 2024/2847 where ENISA has informed the CSIRTs Network, in accordance with Article 16(4) of that Regulation, that the single reporting platform has been affected by a cybersecurity incident casting doubt on its ability to ensure the confidentiality of notified information. In such cases, the CSIRT initially receiving the notification may delay the dissemination via the single reporting platform until ENISA has informed the CSIRTs Network that the platform’s ability to ensure the confidentiality of notifications has been restored.",
+      "title": "Terms and conditions for applying cybersecurity-related grounds in relation to the single reporting platform"
+    },
+    {
+      "number": "6",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "csirt initially receiving the notification",
+      "definition": "the CSIRT designated as coordinator initially receiving the notification in accordance with Article 14(1) and (3) and Article 15(1) and (2) of Regulation (EU) 2024/2847;",
+      "article": "2"
+    },
+    {
+      "term": "relevant csirt",
+      "definition": "the CSIRT designated as coordinator on the territory of which the manufacturer has indicated that the product with digital elements has been made available.",
+      "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "In exceptional circumstances, and, in particular, upon request by the manufacturer and in light of the level of sensitivity of the notified information, and on justified cybersecurity-related grounds, the computer security incident response team (CSIRT) designated as coordinator initially receiving notification of an actively exploited vulnerability or a severe incident having an impact on the security of a product with digital elements (‘the CSIRT initially receiving the notification’) may decide to delay for a period of time that is strictly necessary the dissemination of the notification via the single reporting platform to the CSIRTs designated as coordinators on the territory of which the manufacturer submitting the notification has indicated that the product with digital elements has been made available (‘the relevant CSIRTs’). Therefore, it is necessary to set out the terms and conditions for applying such grounds. Where such grounds apply, the CSIRT initially receiving the notification is allowed to delay dissemination to relevant CSIRTs for a period of time that is strictly necessary, but is not required to do so. Under Article 16(2) of Regulation (EU) 2024/2847, where a CSIRT initially receiving the notification decides to invoke such grounds, it should immediately inform the European Union Agency for Cybersecurity (ENISA) of its decision to delay, and its reasons for doing so, and when it intends to further disseminate the notification."
+    },
+    {
+      "recital_number": 2,
+      "text": "In accordance with Article 16(2), second subparagraph of Regulation (EU) 2024/2847, the terms and conditions for applying the cybersecurity-related grounds set out in this Regulation are not to apply to access by ENISA to the information notified. ENISA’s access to the information notified may only be restricted in particularly exceptional circumstances: when the manufacturer indicates in its notification that one of the three conditions referred to in Article 16(2), third subparagraph, points (a), (b) or (c) of Regulation (EU) 2024/2847 is met, and then only in relation to the 72-hour vulnerability notification referred to in Article 14(2), point (b) of Regulation (EU) 2024/2847. In such cases, the only information to be made available simultaneously to ENISA is information that a notification has been made by a manufacturer; general information about the product with digital elements; information on the general nature of the exploit; and the information that security-related grounds have been invoked."
+    },
+    {
+      "recital_number": 3,
+      "text": "Access to the notified information enables CSIRTs to have an overview of the security environment in their territory and to put in place mitigating measures, raising the overall level of cybersecurity in the Union. Therefore, further restrictions on the dissemination of notifications in light of the nature of the information being notified should be possible only in cases where, in light of the sensitivity of the information notified, the cybersecurity risks stemming from further dissemination outweigh the security benefits to the Union, and those risks cannot be adequately mitigated by placing restrictions on the handling and further sharing of the notification through appropriate protocols in use within the CSIRT Network, such as the Traffic Light Protocol (TLP) or the Permissible Actions Protocol (PAP). This may be the case, for example, where a manufacturer has informed the CSIRT initially receiving the notification that it expects to provide a mitigating measure (such as a patch) shortly. It may also be the case, when the CSIRT initially receiving the notification decides to share only parts of a notification, and these parts are nonetheless sufficient for the relevant CSIRTs to ensure that they are able to put in place adequate risk mitigation measures. Furthermore, and in order to encourage cooperation on vulnerability identification and disclosure between manufacturers, CSIRTs and security researchers, this may also be the case when the CSIRT is acting as a trusted intermediary for an ongoing coordinated vulnerability disclosure (CVD) procedure as referred to in Article 12(1) of Directive (EU) 2022/2555 of the European Parliament and of the Council (2). In such case, when the CSIRT decides to delay the dissemination of a notification, and in accordance with Article 16(6) of Regulation (EU) 2024/2847, that CSIRT is to delay it for a period that is no longer than strictly necessary and until consent for disclosure by the parties involved in the CVD is given."
+    },
+    {
+      "recital_number": 4,
+      "text": "The information included in the notification will help CSIRTs fulfil their tasks in the context of risk mitigation and incident handling. In rare cases, however, such information could be sufficient to enable the creation of an exploitation technique without additional research, even by actors with limited skills and resources. If that information were accessed by malicious actors, the cybersecurity of the Union would be heavily impacted, given the ease of the exploitation. This could be the case, for instance, where the vulnerable version of a piece of software differs only marginally from previous, non-vulnerable versions. In such cases, if the CSIRT initially receiving the notification believes that the cybersecurity risks stemming from further dissemination cannot be adequately mitigated by placing restrictions on handling and further sharing, it may decide to delay the dissemination until an effective risk mitigation measure, such as a security update or user guidance, is available."
+    },
+    {
+      "recital_number": 5,
+      "text": "If a relevant CSIRT is not able to protect adequately the notified information, sensitive information could be accessed by malicious actors and exploits be put in place throughout the Single Market. Therefore, where there are serious concerns about a relevant CSIRT’s ability to ensure the confidentiality of the notified information, the CSIRT initially receiving the notification may decide to delay the dissemination of a notification only to that relevant CSIRT until such concerns have been addressed. This may be the case in situations where a relevant CSIRT has been hit by a cybersecurity incident affecting its ability to operate securely, or where there is evidence or information that significant shortcomings in the capabilities of the CSIRT have been detected, such as serious resource constraints compromising its ability to carry out its functions, or reliance on outdated or vulnerable software."
+    },
+    {
+      "recital_number": 6,
+      "text": "In order to prevent malicious actors from accessing sensitive information, where the single reporting platform established under Article 16 of Regulation (EU) 2024/2847 has been compromised by a cybersecurity incident, the CSIRT initially receiving the notification should delay the dissemination via the single reporting platform until the platform’s ability to ensure the confidentiality of notified information has been restored."
+    },
+    {
+      "recital_number": 7,
+      "text": "In accordance with the first subparagraph of Article 16(2) of Regulation (EU) 2024/2847, the CSIRT initially receiving the notification need not disseminate a notification to any other relevant CSIRT if the manufacturer indicates that the product with digital elements is only made available on the market of the Member State of the CSIRT initially receiving the notification."
+    },
+    {
+      "recital_number": 8,
+      "text": "The Commission has consulted and sought the views of relevant stakeholders in preparing the draft delegated act, and has consulted the Expert Group on Cybersecurity of Products with Digital Elements."
+    },
+    {
+      "recital_number": 9,
+      "text": "In accordance with Article 14(9) of Regulation (EU) 2024/2847, the Commission has cooperated closely with the CSIRTs Network established pursuant to Article 15 of Directive (EU) 2022/2555 and with ENISA, in preparing the draft delegated act,"
+    }
+  ]
+}

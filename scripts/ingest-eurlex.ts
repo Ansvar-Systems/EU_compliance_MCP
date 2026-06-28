@@ -197,6 +197,9 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   // Routing key 'CFR' is used by FRIA's fundamental_rights_mapping stage.
   '12012P/TXT': { id: 'CFR', full_name: 'Charter of Fundamental Rights of the European Union', effective_date: '2009-12-01' },
   '32024R2847': { id: 'CRA', full_name: 'Cyber Resilience Act', effective_date: '2024-12-10' },
+  // CRA secondary acts (implementing / delegated)
+  '32025R2392': { id: 'CRA_IMPL_IMPORTANT_CRITICAL_PRODUCTS', full_name: 'Commission Implementing Regulation (EU) 2025/2392 - Technical Description of the Categories of Important and Critical Products with Digital Elements (CRA Art. 7)', effective_date: '2025-12-21' },
+  '32026R0881': { id: 'CRA_DEL_DELAYED_DISSEMINATION', full_name: 'Commission Delegated Regulation (EU) 2026/881 - Terms and Conditions for Delaying the Dissemination of Notifications (CRA)', effective_date: '2026-05-10' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
