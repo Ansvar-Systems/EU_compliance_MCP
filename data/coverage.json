@@ -1,6 +1,6 @@
 {
   "generated": "2026-04-15",
-  "total_regulations": 82,
+  "total_regulations": 80,
   "total_articles": 2825,
   "total_definitions": 1250,
   "total_recitals": 4280,
@@ -12,90 +12,409 @@
   "applicability_rules": 323,
   "categories": {
     "core_data_protection_cybersecurity": [
-      { "id": "GDPR", "name": "General Data Protection Regulation", "articles": 99, "definitions": 26 },
-      { "id": "NIS2", "name": "NIS2 Directive", "articles": 46, "definitions": 41 },
-      { "id": "DORA", "name": "Digital Operational Resilience Act", "articles": 64, "definitions": 65 },
-      { "id": "AI_ACT", "name": "AI Act", "articles": 113, "definitions": 68 },
-      { "id": "CRA", "name": "Cyber Resilience Act", "articles": 71, "definitions": 51 },
-      { "id": "CYBERSECURITY_ACT", "name": "EU Cybersecurity Act", "articles": 69, "definitions": 22 },
-      { "id": "CYBER_SOLIDARITY", "name": "Cyber Solidarity Act", "articles": 26, "definitions": 17 },
-      { "id": "EPRIVACY", "name": "ePrivacy Directive", "articles": 21, "definitions": null },
-      { "id": "LED", "name": "Law Enforcement Directive", "articles": 65, "definitions": 16 },
-      { "id": "EUCC", "name": "EUCC (Cybersecurity Certification)", "articles": 50, "definitions": 15 }
+      {
+        "id": "GDPR",
+        "name": "General Data Protection Regulation",
+        "articles": 99,
+        "definitions": 26
+      },
+      {
+        "id": "NIS2",
+        "name": "NIS2 Directive",
+        "articles": 46,
+        "definitions": 41
+      },
+      {
+        "id": "DORA",
+        "name": "Digital Operational Resilience Act",
+        "articles": 64,
+        "definitions": 65
+      },
+      {
+        "id": "AI_ACT",
+        "name": "AI Act",
+        "articles": 113,
+        "definitions": 68
+      },
+      {
+        "id": "CRA",
+        "name": "Cyber Resilience Act",
+        "articles": 71,
+        "definitions": 51
+      },
+      {
+        "id": "CYBERSECURITY_ACT",
+        "name": "EU Cybersecurity Act",
+        "articles": 69,
+        "definitions": 22
+      },
+      {
+        "id": "CYBER_SOLIDARITY",
+        "name": "Cyber Solidarity Act",
+        "articles": 26,
+        "definitions": 17
+      },
+      {
+        "id": "EPRIVACY",
+        "name": "ePrivacy Directive",
+        "articles": 21,
+        "definitions": null
+      },
+      {
+        "id": "LED",
+        "name": "Law Enforcement Directive",
+        "articles": 65,
+        "definitions": 16
+      },
+      {
+        "id": "EUCC",
+        "name": "EUCC (Cybersecurity Certification)",
+        "articles": 50,
+        "definitions": 15
+      }
     ],
     "digital_services_identity": [
-      { "id": "EIDAS2", "name": "eIDAS 2.0", "articles": 49, "definitions": 57 },
-      { "id": "DATA_ACT", "name": "Data Act", "articles": 50, "definitions": 42 },
-      { "id": "DSA", "name": "Digital Services Act", "articles": 93, "definitions": 24 },
-      { "id": "DMA", "name": "Digital Markets Act", "articles": 54, "definitions": 33 },
-      { "id": "DGA", "name": "Data Governance Act", "articles": 38, "definitions": 21 },
-      { "id": "EECC", "name": "European Electronic Communications Code", "articles": 128, "definitions": 42 }
+      {
+        "id": "EIDAS2",
+        "name": "eIDAS 2.0",
+        "articles": 49,
+        "definitions": 57
+      },
+      {
+        "id": "DATA_ACT",
+        "name": "Data Act",
+        "articles": 50,
+        "definitions": 42
+      },
+      {
+        "id": "DSA",
+        "name": "Digital Services Act",
+        "articles": 93,
+        "definitions": 24
+      },
+      {
+        "id": "DMA",
+        "name": "Digital Markets Act",
+        "articles": 54,
+        "definitions": 33
+      },
+      {
+        "id": "DGA",
+        "name": "Data Governance Act",
+        "articles": 38,
+        "definitions": 21
+      },
+      {
+        "id": "EECC",
+        "name": "European Electronic Communications Code",
+        "articles": 128,
+        "definitions": 42
+      }
     ],
     "healthcare_medical": [
-      { "id": "EHDS", "name": "European Health Data Space", "articles": 105, "definitions": null },
-      { "id": "MDR", "name": "Medical Devices Regulation", "articles": 123, "definitions": 64 },
-      { "id": "IVDR", "name": "In Vitro Diagnostic Regulation", "articles": 113, "definitions": 70 }
+      {
+        "id": "EHDS",
+        "name": "European Health Data Space",
+        "articles": 105,
+        "definitions": null
+      },
+      {
+        "id": "MDR",
+        "name": "Medical Devices Regulation",
+        "articles": 123,
+        "definitions": 64
+      },
+      {
+        "id": "IVDR",
+        "name": "In Vitro Diagnostic Regulation",
+        "articles": 113,
+        "definitions": 70
+      }
     ],
     "financial_services": [
-      { "id": "MICA", "name": "Markets in Crypto-Assets Regulation", "articles": 149, "definitions": 51 },
-      { "id": "PSD2", "name": "Payment Services Directive 2", "articles": 117, "definitions": 48 },
-      { "id": "MIFID2", "name": "MiFID II", "articles": 97, "definitions": 63 },
-      { "id": "MIFIR", "name": "MiFIR", "articles": 55, "definitions": 47 },
-      { "id": "AIFMD", "name": "Alternative Investment Fund Managers Directive", "articles": 71, "definitions": null },
-      { "id": "SFDR", "name": "Sustainable Finance Disclosure Regulation", "articles": 20, "definitions": 24 },
-      { "id": "EU_TAXONOMY", "name": "EU Taxonomy Regulation", "articles": 27, "definitions": 23 }
+      {
+        "id": "MICA",
+        "name": "Markets in Crypto-Assets Regulation",
+        "articles": 149,
+        "definitions": 51
+      },
+      {
+        "id": "PSD2",
+        "name": "Payment Services Directive 2",
+        "articles": 117,
+        "definitions": 48
+      },
+      {
+        "id": "MIFID2",
+        "name": "MiFID II",
+        "articles": 97,
+        "definitions": 63
+      },
+      {
+        "id": "MIFIR",
+        "name": "MiFIR",
+        "articles": 55,
+        "definitions": 47
+      },
+      {
+        "id": "AIFMD",
+        "name": "Alternative Investment Fund Managers Directive",
+        "articles": 71,
+        "definitions": null
+      },
+      {
+        "id": "SFDR",
+        "name": "Sustainable Finance Disclosure Regulation",
+        "articles": 20,
+        "definitions": 24
+      },
+      {
+        "id": "EU_TAXONOMY",
+        "name": "EU Taxonomy Regulation",
+        "articles": 27,
+        "definitions": 23
+      }
     ],
     "product_safety_sustainability": [
-      { "id": "CHIPS_ACT", "name": "European Chips Act", "articles": 41, "definitions": 24 },
-      { "id": "CRMA", "name": "Critical Raw Materials Act", "articles": 49, "definitions": 64 },
-      { "id": "GPSR", "name": "General Product Safety Regulation", "articles": 52, "definitions": 28 },
-      { "id": "MACHINERY", "name": "Machinery Regulation", "articles": 54, "definitions": 36 },
-      { "id": "PLD", "name": "Product Liability Directive", "articles": 24, "definitions": 18 },
-      { "id": "RED", "name": "Radio Equipment Directive", "articles": 52, "definitions": 26 },
-      { "id": "CSRD", "name": "Corporate Sustainability Reporting Directive", "articles": 8, "definitions": null },
-      { "id": "CSDDD", "name": "Corporate Sustainability Due Diligence Directive", "articles": 39, "definitions": null },
-      { "id": "CBAM", "name": "Carbon Border Adjustment Mechanism", "articles": 36, "definitions": 34 },
-      { "id": "EUDR", "name": "EU Deforestation Regulation", "articles": 38, "definitions": 40 },
-      { "id": "CER", "name": "Critical Entities Resilience Directive", "articles": 29, "definitions": 10 }
-    ],
-    "automotive": [
-      { "id": "UN_R155", "name": "UN Regulation No. 155 (Vehicle Cybersecurity)", "articles": 17, "definitions": 13 },
-      { "id": "UN_R156", "name": "UN Regulation No. 156 (Software Updates)", "articles": 16, "definitions": 11 }
+      {
+        "id": "CHIPS_ACT",
+        "name": "European Chips Act",
+        "articles": 41,
+        "definitions": 24
+      },
+      {
+        "id": "CRMA",
+        "name": "Critical Raw Materials Act",
+        "articles": 49,
+        "definitions": 64
+      },
+      {
+        "id": "GPSR",
+        "name": "General Product Safety Regulation",
+        "articles": 52,
+        "definitions": 28
+      },
+      {
+        "id": "MACHINERY",
+        "name": "Machinery Regulation",
+        "articles": 54,
+        "definitions": 36
+      },
+      {
+        "id": "PLD",
+        "name": "Product Liability Directive",
+        "articles": 24,
+        "definitions": 18
+      },
+      {
+        "id": "RED",
+        "name": "Radio Equipment Directive",
+        "articles": 52,
+        "definitions": 26
+      },
+      {
+        "id": "CSRD",
+        "name": "Corporate Sustainability Reporting Directive",
+        "articles": 8,
+        "definitions": null
+      },
+      {
+        "id": "CSDDD",
+        "name": "Corporate Sustainability Due Diligence Directive",
+        "articles": 39,
+        "definitions": null
+      },
+      {
+        "id": "CBAM",
+        "name": "Carbon Border Adjustment Mechanism",
+        "articles": 36,
+        "definitions": 34
+      },
+      {
+        "id": "EUDR",
+        "name": "EU Deforestation Regulation",
+        "articles": 38,
+        "definitions": 40
+      },
+      {
+        "id": "CER",
+        "name": "Critical Entities Resilience Directive",
+        "articles": 29,
+        "definitions": 10
+      }
     ],
     "mica_level_2_rts_its": [
-      { "id": "MICA_RTS_COOP_THIRD_COUNTRY", "name": "RTS — Cooperation arrangement templates with third-country supervisors (2025/292)", "articles": 3 },
-      { "id": "MICA_RTS_COMPLAINTS_ART", "name": "RTS — Complaint handling for ART issuers (2025/293)", "articles": 7 },
-      { "id": "MICA_RTS_COMPLAINTS_CASP", "name": "RTS — Complaint handling for CASPs (2025/294)", "articles": 8 },
-      { "id": "MICA_RTS_WHITE_PAPER_CREDIT_INST", "name": "RTS — White-paper approval for credit-institution-issued ARTs (2025/296)", "articles": 10 },
-      { "id": "MICA_RTS_SUPERVISORY_COLLEGES", "name": "RTS — Supervisory colleges for significant ART/EMT issuers (2025/297)", "articles": 11 },
-      { "id": "MICA_RTS_TRANSACTION_ESTIMATION", "name": "RTS — Methodology to estimate transaction numbers/values (2025/298)", "articles": 6, "definitions": 3 },
-      { "id": "MICA_RTS_CONTINUITY", "name": "RTS — Continuity and regularity in crypto-asset services (2025/299)", "articles": 7 },
-      { "id": "MICA_RTS_INFO_EXCHANGE", "name": "RTS — Information exchange between competent authorities (2025/300)", "articles": 7 },
-      { "id": "MICA_RTS_FINANCIAL_ENTITY_NOTIFY", "name": "RTS — Notification by financial entities providing crypto services (2025/303)", "articles": 12 },
-      { "id": "MICA_RTS_CASP_AUTH_INFO", "name": "RTS — Information for CASP authorisation (2025/305)", "articles": 18 },
-      { "id": "MICA_RTS_QUALIFYING_HOLDING_ART", "name": "RTS — Qualifying holding acquisition (ART issuers) (2025/413)", "articles": 13 },
-      { "id": "MICA_RTS_QUALIFYING_HOLDING_CASP", "name": "RTS — Qualifying holding acquisition (CASPs) (2025/414)", "articles": 13 },
-      { "id": "MICA_RTS_OWN_FUNDS_STRESS", "name": "RTS — Own-funds adjustment and stress testing (2025/415)", "articles": 11 },
-      { "id": "MICA_RTS_ORDER_BOOK", "name": "RTS — Order-book record content/format (2025/416)", "articles": 16 },
-      { "id": "MICA_RTS_TRANSPARENCY", "name": "RTS — Transparency data presentation (2025/417)", "articles": 8 },
-      { "id": "MICA_RTS_GOVERNANCE_REMUN", "name": "RTS — Governance/remuneration for significant ART/EMT issuers (2025/418)", "articles": 7, "definitions": 9 },
-      { "id": "MICA_RTS_OWN_FUNDS_ADJUST", "name": "RTS — Procedure to adjust own-funds amounts (2025/419)", "articles": 3 },
-      { "id": "MICA_RTS_WHITE_PAPER_MACHINE_READ", "name": "RTS — White-paper classification/machine-readability (2025/421)", "articles": 4 },
-      { "id": "MICA_RTS_SUSTAINABILITY", "name": "RTS — Sustainability indicators (climate/environment) (2025/422)", "articles": 7 },
-      { "id": "MICA_RTS_MARKET_ABUSE", "name": "RTS — Market abuse detection and prevention (2025/885)", "articles": 9, "definitions": 3 },
-      { "id": "MICA_RTS_ART_AUTH_INFO", "name": "RTS — Information for ART authorisation (2025/1125)", "articles": 9 },
-      { "id": "MICA_RTS_RECORDS_RETENTION", "name": "RTS — Records retention for crypto-asset services (2025/1140)", "articles": 18, "definitions": 3 },
-      { "id": "MICA_RTS_CONFLICTS_ART", "name": "RTS — Conflicts of interest (ART issuers) (2025/1141)", "articles": 9 },
-      { "id": "MICA_RTS_CONFLICTS_CASP", "name": "RTS — Conflicts of interest (CASPs) (2025/1142)", "articles": 9, "definitions": 3 },
-      { "id": "MICA_RTS_LIQUIDITY", "name": "RTS — Liquidity management (ART/EMT) (2025/1264)", "articles": 6 },
-      { "id": "MICA_ITS_COOP_ESAS", "name": "ITS — Competent authority cooperation with ESMA/EBA (2024/2494)", "articles": 15, "definitions": 3 },
-      { "id": "MICA_ITS_COOP_CAS", "name": "ITS — Competent authority cooperation/info exchange (2024/2545)", "articles": 16 },
-      { "id": "MICA_ITS_INSIDE_INFO", "name": "ITS — Inside information disclosure / delayed disclosure (2024/2861)", "articles": 4 },
-      { "id": "MICA_ITS_ART_EMT_REPORTING", "name": "ITS — Reporting for ARTs and non-EU-currency EMTs (2024/2902)", "articles": 11 },
-      { "id": "MICA_ITS_WHITE_PAPER_FORMS", "name": "ITS — White-paper forms/formats/templates (2024/2984)", "articles": 4 },
-      { "id": "MICA_ITS_FINANCIAL_ENTITY_FORMS", "name": "ITS — Forms for crypto-service notifications by financial entities (2025/304)", "articles": 5 },
-      { "id": "MICA_ITS_CASP_AUTH_FORMS", "name": "ITS — Forms for CASP authorisation (2025/306)", "articles": 6 },
-      { "id": "MICA_ITS_ART_AUTH_FORMS", "name": "ITS — Forms for ART authorisation (2025/1126)", "articles": 5 }
+      {
+        "id": "MICA_RTS_COOP_THIRD_COUNTRY",
+        "name": "RTS — Cooperation arrangement templates with third-country supervisors (2025/292)",
+        "articles": 3
+      },
+      {
+        "id": "MICA_RTS_COMPLAINTS_ART",
+        "name": "RTS — Complaint handling for ART issuers (2025/293)",
+        "articles": 7
+      },
+      {
+        "id": "MICA_RTS_COMPLAINTS_CASP",
+        "name": "RTS — Complaint handling for CASPs (2025/294)",
+        "articles": 8
+      },
+      {
+        "id": "MICA_RTS_WHITE_PAPER_CREDIT_INST",
+        "name": "RTS — White-paper approval for credit-institution-issued ARTs (2025/296)",
+        "articles": 10
+      },
+      {
+        "id": "MICA_RTS_SUPERVISORY_COLLEGES",
+        "name": "RTS — Supervisory colleges for significant ART/EMT issuers (2025/297)",
+        "articles": 11
+      },
+      {
+        "id": "MICA_RTS_TRANSACTION_ESTIMATION",
+        "name": "RTS — Methodology to estimate transaction numbers/values (2025/298)",
+        "articles": 6,
+        "definitions": 3
+      },
+      {
+        "id": "MICA_RTS_CONTINUITY",
+        "name": "RTS — Continuity and regularity in crypto-asset services (2025/299)",
+        "articles": 7
+      },
+      {
+        "id": "MICA_RTS_INFO_EXCHANGE",
+        "name": "RTS — Information exchange between competent authorities (2025/300)",
+        "articles": 7
+      },
+      {
+        "id": "MICA_RTS_FINANCIAL_ENTITY_NOTIFY",
+        "name": "RTS — Notification by financial entities providing crypto services (2025/303)",
+        "articles": 12
+      },
+      {
+        "id": "MICA_RTS_CASP_AUTH_INFO",
+        "name": "RTS — Information for CASP authorisation (2025/305)",
+        "articles": 18
+      },
+      {
+        "id": "MICA_RTS_QUALIFYING_HOLDING_ART",
+        "name": "RTS — Qualifying holding acquisition (ART issuers) (2025/413)",
+        "articles": 13
+      },
+      {
+        "id": "MICA_RTS_QUALIFYING_HOLDING_CASP",
+        "name": "RTS — Qualifying holding acquisition (CASPs) (2025/414)",
+        "articles": 13
+      },
+      {
+        "id": "MICA_RTS_OWN_FUNDS_STRESS",
+        "name": "RTS — Own-funds adjustment and stress testing (2025/415)",
+        "articles": 11
+      },
+      {
+        "id": "MICA_RTS_ORDER_BOOK",
+        "name": "RTS — Order-book record content/format (2025/416)",
+        "articles": 16
+      },
+      {
+        "id": "MICA_RTS_TRANSPARENCY",
+        "name": "RTS — Transparency data presentation (2025/417)",
+        "articles": 8
+      },
+      {
+        "id": "MICA_RTS_GOVERNANCE_REMUN",
+        "name": "RTS — Governance/remuneration for significant ART/EMT issuers (2025/418)",
+        "articles": 7,
+        "definitions": 9
+      },
+      {
+        "id": "MICA_RTS_OWN_FUNDS_ADJUST",
+        "name": "RTS — Procedure to adjust own-funds amounts (2025/419)",
+        "articles": 3
+      },
+      {
+        "id": "MICA_RTS_WHITE_PAPER_MACHINE_READ",
+        "name": "RTS — White-paper classification/machine-readability (2025/421)",
+        "articles": 4
+      },
+      {
+        "id": "MICA_RTS_SUSTAINABILITY",
+        "name": "RTS — Sustainability indicators (climate/environment) (2025/422)",
+        "articles": 7
+      },
+      {
+        "id": "MICA_RTS_MARKET_ABUSE",
+        "name": "RTS — Market abuse detection and prevention (2025/885)",
+        "articles": 9,
+        "definitions": 3
+      },
+      {
+        "id": "MICA_RTS_ART_AUTH_INFO",
+        "name": "RTS — Information for ART authorisation (2025/1125)",
+        "articles": 9
+      },
+      {
+        "id": "MICA_RTS_RECORDS_RETENTION",
+        "name": "RTS — Records retention for crypto-asset services (2025/1140)",
+        "articles": 18,
+        "definitions": 3
+      },
+      {
+        "id": "MICA_RTS_CONFLICTS_ART",
+        "name": "RTS — Conflicts of interest (ART issuers) (2025/1141)",
+        "articles": 9
+      },
+      {
+        "id": "MICA_RTS_CONFLICTS_CASP",
+        "name": "RTS — Conflicts of interest (CASPs) (2025/1142)",
+        "articles": 9,
+        "definitions": 3
+      },
+      {
+        "id": "MICA_RTS_LIQUIDITY",
+        "name": "RTS — Liquidity management (ART/EMT) (2025/1264)",
+        "articles": 6
+      },
+      {
+        "id": "MICA_ITS_COOP_ESAS",
+        "name": "ITS — Competent authority cooperation with ESMA/EBA (2024/2494)",
+        "articles": 15,
+        "definitions": 3
+      },
+      {
+        "id": "MICA_ITS_COOP_CAS",
+        "name": "ITS — Competent authority cooperation/info exchange (2024/2545)",
+        "articles": 16
+      },
+      {
+        "id": "MICA_ITS_INSIDE_INFO",
+        "name": "ITS — Inside information disclosure / delayed disclosure (2024/2861)",
+        "articles": 4
+      },
+      {
+        "id": "MICA_ITS_ART_EMT_REPORTING",
+        "name": "ITS — Reporting for ARTs and non-EU-currency EMTs (2024/2902)",
+        "articles": 11
+      },
+      {
+        "id": "MICA_ITS_WHITE_PAPER_FORMS",
+        "name": "ITS — White-paper forms/formats/templates (2024/2984)",
+        "articles": 4
+      },
+      {
+        "id": "MICA_ITS_FINANCIAL_ENTITY_FORMS",
+        "name": "ITS — Forms for crypto-service notifications by financial entities (2025/304)",
+        "articles": 5
+      },
+      {
+        "id": "MICA_ITS_CASP_AUTH_FORMS",
+        "name": "ITS — Forms for CASP authorisation (2025/306)",
+        "articles": 6
+      },
+      {
+        "id": "MICA_ITS_ART_AUTH_FORMS",
+        "name": "ITS — Forms for ART authorisation (2025/1126)",
+        "articles": 5
+      }
     ]
   },
   "data_sources": [
