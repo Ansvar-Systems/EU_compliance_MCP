@@ -86,6 +86,14 @@
       "article_count": 17,
       "parent_article": "26(11)",
       "covers": "TLPT scope, methodology, testers, and mutual recognition (TIBER-EU aligned)"
+    },
+    {
+      "id": "DORA_RTS_SUBCONTRACTING",
+      "celex_id": "32025R0532",
+      "title": "Subcontracting of ICT Services Supporting Critical or Important Functions",
+      "article_count": 7,
+      "parent_article": "30(5)",
+      "covers": "Conditions and criteria for subcontracting ICT services that support critical or important functions"
     }
   ],
 

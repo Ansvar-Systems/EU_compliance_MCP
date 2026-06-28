@@ -8,6 +8,7 @@
   "delegated_acts": [
     {
       "id": "MACHINERY_HARMONISED_STANDARDS_DECISION",
+      "ingested": false,
       "celex_id": "32023D1586",
       "title": "Commission Implementing Decision (EU) 2023/1586 — harmonised standards for machinery",
       "article_count": 0,
@@ -16,6 +17,7 @@
     },
     {
       "id": "MACHINERY_ANNEX_I_AMENDMENTS",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Delegated acts amending Annex I (high-risk categories)",
       "article_count": 0,

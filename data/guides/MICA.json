@@ -9,6 +9,7 @@
   "delegated_acts": [
     {
       "id": "MICA_RTS_AUTHORISATION",
+      "ingested": false,
       "celex_id": "various",
       "title": "RTS on authorisation requirements for CASPs",
       "article_count": 0,
@@ -17,6 +18,7 @@
     },
     {
       "id": "MICA_RTS_WHITEPAPER",
+      "ingested": false,
       "celex_id": "various",
       "title": "RTS on crypto-asset white paper content and format",
       "article_count": 0,
@@ -25,6 +27,7 @@
     },
     {
       "id": "MICA_RTS_ART_RESERVES",
+      "ingested": false,
       "celex_id": "various",
       "title": "RTS on reserve of assets for ARTs",
       "article_count": 0,

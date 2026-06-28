@@ -12,6 +12,12 @@ interface DelegatedAct {
   article_count: number;
   parent_article: string;
   covers: string;
+  // Whether the act's text is in the corpus and resolvable as a `search`
+  // framework scope. Defaults to true. When false, the renderer lists the act
+  // as reference-only (NOT under "search these as separate regulation IDs"),
+  // so the guide never tells a caller to query an id that errors. Enforced by
+  // tests/extensions/guide-delegated-acts-resolve.test.ts against source_registry.
+  ingested?: boolean;
 }
 interface ProportionalityTier {
   name: string;
@@ -88,8 +94,22 @@ interface GuideData {
 
 function formatDelegatedActs(acts: DelegatedAct[]): string {
   if (acts.length === 0) return '';
-  const rows = acts.map((a) => `| ${a.id} | ${a.celex_id} | ${a.covers} |`).join('\n');
-  return `### Delegated Acts (search these as separate regulation IDs)\n| ID | CELEX | Covers |\n|---|---|---|\n${rows}\n`;
+  const searchable = acts.filter((a) => a.ingested !== false);
+  const referenceOnly = acts.filter((a) => a.ingested === false);
+  let out = '';
+  if (searchable.length > 0) {
+    const rows = searchable
+      .map((a) => `| ${a.id} | ${a.celex_id} | ${a.covers} |`)
+      .join('\n');
+    out += `### Delegated Acts (search these as separate regulation IDs)\n| ID | CELEX | Covers |\n|---|---|---|\n${rows}\n`;
+  }
+  if (referenceOnly.length > 0) {
+    const rows = referenceOnly
+      .map((a) => `- **${a.id}** (${a.celex_id}) — ${a.covers}`)
+      .join('\n');
+    out += `${searchable.length > 0 ? '\n' : ''}### Related secondary acts (reference only — text not yet in the corpus, not searchable)\n${rows}\n`;
+  }
+  return out;
 }
 
 function formatProportionality(prop: GuideData['proportionality']): string {

@@ -8,7 +8,7 @@
 
   "delegated_acts": [
     {
-      "id": "CRA_IR_PRODUCT_CATEGORIES",
+      "id": "CRA_IMPL_IMPORTANT_CRITICAL_PRODUCTS",
       "celex_id": "32025R2392",
       "title": "Technical Descriptions of Product Categories (Annex III and IV)",
       "article_count": 5,
@@ -17,6 +17,7 @@
     },
     {
       "id": "CRA_DA_VEHICLE_EXCLUSION",
+      "ingested": false,
       "celex_id": "32025R1535",
       "title": "Exclusion of Motor Vehicles from CRA Scope",
       "article_count": 3,
@@ -24,10 +25,10 @@
       "covers": "Specifies that motor vehicles type-approved under UN R155/R156 are excluded from CRA where sectoral rules achieve equivalent cybersecurity level"
     },
     {
-      "id": "CRA_DA_CSIRT_DELAY",
-      "celex_id": "32025XXXX",
+      "id": "CRA_DEL_DELAYED_DISSEMINATION",
+      "celex_id": "32026R0881",
       "title": "Conditions for Delaying Vulnerability Notification to CSIRTs",
-      "article_count": 4,
+      "article_count": 6,
       "parent_article": "14(4)",
       "covers": "Circumstances under which manufacturer notification to CSIRT of actively exploited vulnerability may be delayed — security-sensitive disclosure"
     }

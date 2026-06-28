@@ -9,6 +9,7 @@
   "delegated_acts": [
     {
       "id": "DMA_DA_QUANTITATIVE_THRESHOLDS",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Methodology for Quantitative Thresholds",
       "article_count": 0,
@@ -17,6 +18,7 @@
     },
     {
       "id": "DMA_DA_ANNEX_METHODOLOGY",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Amendment of Annex Methodology and Indicators",
       "article_count": 0,
