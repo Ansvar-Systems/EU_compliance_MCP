@@ -9,6 +9,7 @@
   "delegated_acts": [
     {
       "id": "AI_ACT_DA_ANNEX_III_UPDATE",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Update to Annex III High-Risk AI Systems List",
       "article_count": 0,
@@ -17,6 +18,7 @@
     },
     {
       "id": "AI_ACT_DA_ANNEX_I_UPDATE",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Update to Annex I Product Safety Legislation List",
       "article_count": 0,

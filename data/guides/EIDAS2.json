@@ -9,6 +9,7 @@
   "delegated_acts": [
     {
       "id": "EIDAS2_IA_WALLET_SPECS",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Implementing Acts on European Digital Identity Wallet Technical Specifications",
       "article_count": 0,
@@ -17,6 +18,7 @@
     },
     {
       "id": "EIDAS2_IA_RELYING_PARTY",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Implementing Acts on Relying Party Registration and Authentication",
       "article_count": 0,
@@ -25,6 +27,7 @@
     },
     {
       "id": "EIDAS2_IA_WALLET_CERTIFICATION",
+      "ingested": false,
       "celex_id": "pending",
       "title": "Implementing Acts on Wallet Certification",
       "article_count": 0,

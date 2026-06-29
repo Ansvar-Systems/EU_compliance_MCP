@@ -9,6 +9,7 @@
   "delegated_acts": [
     {
       "id": "EUCC_ANNEX_I_SOTA",
+      "ingested": false,
       "celex_id": "32024R0482_ANNEX_I",
       "title": "State-of-the-Art Documents and Technical Domains",
       "article_count": 0,
@@ -17,6 +18,7 @@
     },
     {
       "id": "EUCC_ANNEX_II_PP",
+      "ingested": false,
       "celex_id": "32024R0482_ANNEX_II",
       "title": "Certified Protection Profiles",
       "article_count": 0,
