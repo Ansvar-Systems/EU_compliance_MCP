@@ -1,5 +1,10 @@
 import type { ExtensionTool, ToolHandler } from './types.js';
 import { textResult, errorResult } from './types.js';
+import {
+  buildProvisionCitation,
+  type CitationEnvelope,
+  type CitationManifest,
+} from './citation.js';
 
 // Concept synonym families for cross-regulation terminology matching.
 // Copied verbatim from legacy src/tools/compare.ts to preserve behavior.
@@ -152,26 +157,66 @@ function getSynonyms(topic: string): string[] {
   return Array.from(synonyms);
 }
 
-function extractTimelines(text: string): string | undefined {
-  const patterns: RegExp[] = [
-    /(\d+)\s*hours?/gi,
-    /(\d+)\s*days?/gi,
-    /without\s+undue\s+delay/gi,
-    /immediately/gi,
-  ];
-  const matches: string[] = [];
-  for (const pattern of patterns) {
-    const found = text.match(pattern);
-    if (found) matches.push(...found);
-  }
-  return matches.length > 0 ? matches.join(', ') : undefined;
+// A timeline obligation extracted from a provision's text, bound to the row
+// (article) it was found in. Replaces the legacy flat per-regulation string,
+// which concatenated every regulation's bodies and lost the article binding.
+export interface Timeline {
+  /** The matched phrase, verbatim ("72 hours", "without undue delay"). */
+  text: string;
+  /** Coarse classification for downstream filtering/sorting. */
+  kind: 'hours' | 'days' | 'qualitative';
+  /** Numeric magnitude for `hours`/`days`; omitted for qualitative phrases. */
+  value?: number;
+}
+
+// Per-provision timeline extraction. Operates on ONE provision's body so each
+// timeline is attributable to the article it came from (rows carry their own
+// `timelines`). Deduplicates by phrase within the provision.
+function extractTimelines(text: string): Timeline[] {
+  const out: Timeline[] = [];
+  const seen = new Set<string>();
+  const push = (raw: string, kind: Timeline['kind'], value?: number) => {
+    // Normalise internal whitespace (EUR-Lex text uses non-breaking spaces, so
+    // "72 hours" and "72 hours" are the same obligation) before dedup.
+    const phrase = raw.replace(/\s+/g, ' ').trim();
+    const key = phrase.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push(value === undefined ? { text: phrase, kind } : { text: phrase, kind, value });
+  };
+  // Trailing \b on every pattern: avoids partial-matching inside longer words
+  // ("30 daystar" must not yield "30 days") and keeps all four patterns anchored
+  // consistently.
+  for (const m of text.matchAll(/(\d+)\s*hours?\b/gi)) push(m[0], 'hours', Number(m[1]));
+  for (const m of text.matchAll(/(\d+)\s*days?\b/gi)) push(m[0], 'days', Number(m[1]));
+  for (const m of text.matchAll(/without\s+undue\s+delay/gi)) push(m[0], 'qualitative');
+  for (const m of text.matchAll(/\bimmediately\b/gi)) push(m[0], 'qualitative');
+  return out;
 }
 
 interface ProvisionRow {
   canonical_ref: string;
   body: string;
+  title: string | null;
   snippet?: string;
   bm25?: number;
+  source_url: string | null;
+  license_code: string | null;
+  source_full_name: string | null;
+  effective_date: string | null;
+}
+
+// One matched provision, on the standard envelope shape: a comparison is the
+// set of rows grouped by `regulation` (the gateway / agent groups). Each row is
+// fully cited and carries its own article-bound timelines.
+interface ComparisonRow {
+  regulation: string;
+  canonical_ref: string;
+  article: string;
+  title: string | null;
+  snippet: string;
+  timelines: Timeline[];
+  _citation: CitationEnvelope;
 }
 
 const handler: ToolHandler = async (args, ctx) => {
@@ -191,6 +236,10 @@ const handler: ToolHandler = async (args, ctx) => {
     );
   }
 
+  // Publisher comes from the manifest (single-publisher corpus); per-row
+  // license + source_url come from the joined content table.
+  const manifest = (ctx.manifest ?? {}) as CitationManifest;
+
   const synonyms = getSynonyms(topic);
   const searchTerms = [topic, ...synonyms];
 
@@ -198,12 +247,10 @@ const handler: ToolHandler = async (args, ctx) => {
   // we filter provisions by the leading "REG:" prefix.
   const ftsQuery = searchTerms.map((t) => `"${t.replace(/"/g, '""')}"`).join(' OR ');
 
-  const comparisons: Array<{
-    regulation: string;
-    requirements: string[];
-    articles: string[];
-    timelines?: string;
-  }> = [];
+  const results: ComparisonRow[] = [];
+  const coverage: Array<{ regulation: string; matched: number }> = [];
+  const regulationsWithoutMatches: string[] = [];
+  let citationIncomplete = 0;
 
   try {
     for (const regulation of regulations) {
@@ -212,8 +259,13 @@ const handler: ToolHandler = async (args, ctx) => {
         SELECT
           provisions.canonical_ref AS canonical_ref,
           provisions.body AS body,
+          provisions.title AS title,
           snippet(content_fts, 0, '>>>', '<<<', '…', 24) AS snippet,
-          bm25(content_fts) AS bm25
+          bm25(content_fts) AS bm25,
+          content.source_url AS source_url,
+          content.license_code AS license_code,
+          content.source_full_name AS source_full_name,
+          content.effective_date AS effective_date
         FROM content_fts
         JOIN content ON content_fts.rowid = content.id
         JOIN provisions ON provisions.id = content.id
@@ -224,21 +276,93 @@ const handler: ToolHandler = async (args, ctx) => {
       `;
       const rows = ctx.db.prepare(sql).all(ftsQuery, refPrefix) as ProvisionRow[];
 
-      const requirements: string[] = [];
-      const articles: string[] = [];
-      let combinedText = '';
+      let matched = 0;
       for (const row of rows) {
         // canonical_ref shape: "REG:art_N" → extract the "art_N" part
-        const articlePart = row.canonical_ref.split(':').slice(1).join(':');
-        articles.push(articlePart);
-        requirements.push((row.snippet ?? '').replace(/>>>/g, '').replace(/<<</g, ''));
-        combinedText += ' ' + row.body;
+        const article = row.canonical_ref.split(':').slice(1).join(':');
+        const snippet = (row.snippet ?? '').replace(/>>>/g, '').replace(/<<</g, '');
+        const displayText = row.title
+          ? `${regulation} ${article} — ${row.title}`
+          : `${regulation} ${article}`;
+
+        const cite = buildProvisionCitation(
+          {
+            canonical_ref: row.canonical_ref,
+            display_text: displayText,
+            source_url: row.source_url,
+            license_code: row.license_code,
+            source_full_name: row.source_full_name,
+            effective_date: row.effective_date,
+            // `article` is intentionally NOT passed: the reference-grade
+            // search/get_provision _citation for eu-regulations omits it (the
+            // content table has no article column), so the compare _citation
+            // field-set matches them. The article is still on the row's
+            // top-level `article` field and in canonical_ref/source_url.
+          },
+          manifest,
+        );
+        // No-fabrication: never emit a row whose citation triple is incomplete
+        // (conformance I5). Skip it and surface the omission in meta.message.
+        if (!cite.ok) {
+          citationIncomplete += 1;
+          continue;
+        }
+
+        results.push({
+          regulation,
+          canonical_ref: row.canonical_ref,
+          article,
+          title: row.title,
+          snippet,
+          timelines: extractTimelines(row.body),
+          _citation: cite.citation,
+        });
+        matched += 1;
       }
-      const timelines = extractTimelines(combinedText);
-      comparisons.push({ regulation, requirements, articles, timelines });
+      coverage.push({ regulation, matched });
+      if (matched === 0) regulationsWithoutMatches.push(regulation);
     }
 
-    return textResult({ topic, expanded_terms: synonyms, regulations: comparisons });
+    // Honest signal (conformance I1/I2): an empty or partial-coverage
+    // comparison must never read as a clean zero. `partial` stays false — a
+    // regulation with no matching provisions is a true zero-match, not a
+    // downstream-availability failure — and the gap is named explicitly.
+    const messageParts: string[] = [];
+    if (results.length === 0) {
+      if (citationIncomplete > 0) {
+        // Provisions matched but every one was dropped for an incomplete
+        // citation triple — distinct from a genuine zero-match.
+        messageParts.push(
+          `All ${citationIncomplete} matched provision(s) were omitted (incomplete source attribution); no citable results.`,
+        );
+      } else {
+        messageParts.push(
+          `No provisions matched "${topic}" in ${regulations.join(', ')} after concept-synonym expansion. ` +
+            'Try a broader topic or confirm the regulation ids.',
+        );
+      }
+    } else {
+      if (regulationsWithoutMatches.length > 0) {
+        messageParts.push(`No provisions matched in: ${regulationsWithoutMatches.join(', ')}.`);
+      }
+      if (citationIncomplete > 0) {
+        messageParts.push(
+          `${citationIncomplete} matched provision(s) omitted (incomplete source attribution).`,
+        );
+      }
+    }
+
+    const meta = {
+      topic,
+      regulations_compared: regulations,
+      expanded_terms: synonyms,
+      coverage,
+      regulations_without_matches: regulationsWithoutMatches,
+      partial: false,
+      message: messageParts.join(' '),
+    };
+
+    return textResult({ results, meta });
   } catch (e) {
     return errorResult(`compare_requirements: ${e instanceof Error ? e.message : String(e)}`);
   }
@@ -248,7 +372,7 @@ export const compareRequirementsTool: ExtensionTool = {
   definition: {
     name: 'compare_requirements',
     description:
-      'Compare how 2+ EU regulations treat the same compliance topic. Uses concept-synonym expansion (incident reporting → breach notification, ICT risk → risk management, etc.) and FTS5 search over chassis content. Returns per-regulation snippets, article numbers, and extracted timelines.',
+      'Compare how 2+ EU regulations treat the same compliance topic. Uses concept-synonym expansion (incident reporting → breach notification, ICT risk → risk management, etc.) and FTS5 search over chassis content. Returns a {results, meta} envelope: one cited row per matched provision (article number + snippet + per-article structured timelines + a source_url/publisher/license _citation), with meta.coverage and an explicit note for any regulation with no matches.',
     inputSchema: {
       type: 'object',
       properties: {
