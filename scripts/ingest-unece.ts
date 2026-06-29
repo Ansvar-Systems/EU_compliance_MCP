@@ -105,12 +105,27 @@ function parseUnRegulation(html: string, celexId: string): { articles: Article[]
   const dom = new JSDOM(html);
   const doc = dom.window.document;
 
+  // Resolve per-regulation metadata in this scope. Previously `metadata` was
+  // referenced here (getSectionTitle(..., metadata?.id ...)) but only declared
+  // in the outer ingestUnRegulation(), so any run that reached a section header
+  // threw ReferenceError — the committed seed predates that regression.
+  const metadata = UN_REGULATION_METADATA[celexId];
+
   const articles: Article[] = [];
   const definitions: Definition[] = [];
 
-  // Strategy: Get all text elements (p, span, td) and process sequentially
-  // UN regulations use numbered sections with content in tables/spans
-  const allElements = Array.from(doc.querySelectorAll('p, span, td'));
+  // Strategy: collect text elements in document order, then process sequentially.
+  // EUR-Lex wraps each cell's text in a <td> AND an inner <p>/<span>, so selecting
+  // all of p/span/td counts every cell's text TWICE (parent <td> + child) — the
+  // source of the systematic provision-body doubling (2026-06-29 QA: every
+  // segment appeared twice). Keep only LEAF elements (no selected descendant):
+  // each text appears once, and section headers — bare <p class="oj-ti-grseq-1">
+  // with no child element — keep their class so the header detection below is
+  // unaffected. Nested list tables collapse to their leaf <p>/<span> cells
+  // (clean rows), eliminating the raw whitespace-laden parent blob too.
+  const allElements = Array.from(doc.querySelectorAll('p, span, td')).filter(
+    (el) => el.querySelector('p, span, td') === null,
+  );
 
   let currentSection: { number: string; title: string; lines: string[] } | null = null;
   let currentAnnex: { number: string; title: string; lines: string[] } | null = null;

@@ -12,6 +12,10 @@ dist/
 # Database now committed (shipped with package)
 # data/regulations.db
 
+# Raw EUR-Lex HTML dumps written next to seeds by ingest-unece.ts (crawl
+# artifacts; the parsed JSON seed is the committed source of truth)
+data/seed/*.html
+
 # Environment
 .env
 .env.local
