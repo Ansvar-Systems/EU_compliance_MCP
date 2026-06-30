@@ -12,8 +12,8 @@
   "base_tier": "free"
  },
  "data": {
-  "database_sha256": "sha256:bae84b3ff2627f62cd09effaafa536a1d4e0178fcb88ce530f3b2d1987ba11d0",
-  "snapshot_id": "sha256:bae84b3ff2627f62cd09effaafa536a1d4e0178fcb88ce530f3b2d1987ba11d0",
+  "database_sha256": "sha256:6ea7c339badd138869c99ccec242a12bed986cb078139d266869c2bcd045adf2",
+  "snapshot_id": "sha256:6ea7c339badd138869c99ccec242a12bed986cb078139d266869c2bcd045adf2",
   "generated_at": "2026-06-21T00:00:00Z",
   "database_path": "/app/data/regulations.db",
   "recitals_enabled": true,

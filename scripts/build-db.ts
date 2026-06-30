@@ -172,7 +172,15 @@ const SCHEMA_STATEMENTS: string[] = [
     content_rowid='id',
     tokenize='porter unicode61'
   )`,
-  `CREATE TRIGGER guidance_sections_ai AFTER INSERT ON guidance_sections BEGIN
+  // WHEN guard: keep empty-content (heading/TOC-only) sections OUT of the search
+  // index. A guidance section with no body — e.g. an MDCG "2.5 General Product
+  // Safety Regulation (EU) 2023/988" structural heading with content='' —
+  // otherwise surfaces in search_agency_guidance as a title-only hit with no
+  // usable text and empty source/article (2026-06-29 QA: degenerate hits like
+  // "...risk management process and safety: 10"). The row stays in
+  // guidance_sections (parent_section hierarchy intact); it is just not searchable.
+  `CREATE TRIGGER guidance_sections_ai AFTER INSERT ON guidance_sections
+   WHEN length(trim(new.content)) > 0 BEGIN
     INSERT INTO guidance_sections_fts(rowid, document_id, section_number, title, content)
     VALUES (new.id, new.document_id, new.section_number, new.title, new.content);
   END`,
