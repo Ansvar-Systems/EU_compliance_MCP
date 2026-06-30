@@ -163,9 +163,16 @@ const SCHEMA_STATEMENTS: string[] = [
     metadata        TEXT,
     UNIQUE(document_id, section_number)
   )`,
+  // FTS columns MUST be (title, content) — the chassis convention mcp-base's
+  // search_guidance handler assumes: it calls snippet(guidance_sections_fts, 1, ...)
+  // expecting column index 1 = content. A prior 4-column shape
+  // (document_id, section_number, title, content) shifted content to index 3, so
+  // the handler snippeted the SECTION NUMBER instead — rendering hits as
+  // "<title>: <section_number>" (2026-06-30 QA: "safety (full text): safety",
+  // "...risk management process and safety: 10"). Two columns also stop MATCH from
+  // spuriously hitting a section_number value like "safety". Provenance
+  // (document_id/section_number) is read from the JOINed guidance tables, not the FTS.
   `CREATE VIRTUAL TABLE guidance_sections_fts USING fts5(
-    document_id,
-    section_number,
     title,
     content,
     content='guidance_sections',
@@ -181,8 +188,8 @@ const SCHEMA_STATEMENTS: string[] = [
   // guidance_sections (parent_section hierarchy intact); it is just not searchable.
   `CREATE TRIGGER guidance_sections_ai AFTER INSERT ON guidance_sections
    WHEN length(trim(new.content)) > 0 BEGIN
-    INSERT INTO guidance_sections_fts(rowid, document_id, section_number, title, content)
-    VALUES (new.id, new.document_id, new.section_number, new.title, new.content);
+    INSERT INTO guidance_sections_fts(rowid, title, content)
+    VALUES (new.id, new.title, new.content);
   END`,
   `CREATE INDEX idx_gd_date ON guidance_documents(date_published DESC)`,
   // Chassis opt-in: provision_versions (mcp-base v0.1.18+). version_label
