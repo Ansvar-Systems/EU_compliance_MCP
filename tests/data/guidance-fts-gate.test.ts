@@ -27,6 +27,17 @@ describe('guidance FTS excludes empty-content heading sections', () => {
     expect(row!.sql).toMatch(/WHEN\s+length\(trim\(new\.content\)\)\s*>\s*0/);
   });
 
+  it('guidance_sections_fts columns are (title, content) so snippet(...,1,...) = content', () => {
+    // mcp-base search_guidance calls snippet(guidance_sections_fts, 1, ...) expecting
+    // column index 1 = content. A wider FTS shape (e.g. document_id, section_number,
+    // title, content) shifts content out of index 1 and renders hits as
+    // "<title>: <section_number>" (2026-06-30 QA: "safety (full text): safety").
+    const cols = (
+      db.prepare('PRAGMA table_info(guidance_sections_fts)').all() as Array<{ name: string }>
+    ).map((r) => r.name);
+    expect(cols).toEqual(['title', 'content']);
+  });
+
   it('heading-only sections exist but none is reachable via FTS by its own title', () => {
     const empty = db
       .prepare("SELECT id, title FROM guidance_sections WHERE length(trim(content)) = 0")
