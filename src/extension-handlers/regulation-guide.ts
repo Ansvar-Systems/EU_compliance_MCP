@@ -1,9 +1,19 @@
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { ExtensionTool, ToolHandler } from './types.js';
-import { markdownResult } from './types.js';
+import { textResult, errorResult } from './types.js';
+import type { CitationEnvelope, CitationManifest } from './citation.js';
+import { createCitationResolver, type CitationResolver } from './instrument-citation.js';
 
 const GUIDES_DIR = process.env.EU_COMPLIANCE_GUIDES_DIR || '/app/data/guides';
+
+// Guide prose is Ansvar-authored analysis navigation (synthesized), NOT quoted
+// EUR-Lex text. Each row says so via this marker; the row's _citation
+// identifies the underlying EUR-Lex instrument the section navigates (built
+// from the corpus content table), not the author of the prose. Mirrors
+// compare_requirements' handling of computed fields: derived content rides on
+// a row cited to the underlying instrument.
+const GUIDE_PROVENANCE = 'ansvar-synthesis';
 
 interface DelegatedAct {
   id: string;
@@ -13,9 +23,9 @@ interface DelegatedAct {
   parent_article: string;
   covers: string;
   // Whether the act's text is in the corpus and resolvable as a `search`
-  // framework scope. Defaults to true. When false, the renderer lists the act
-  // as reference-only (NOT under "search these as separate regulation IDs"),
-  // so the guide never tells a caller to query an id that errors. Enforced by
+  // framework scope. Defaults to true. When false, the act is listed in the
+  // reference-only row (NOT as a searchable delegated-act row), so the guide
+  // never tells a caller to query an id that errors. Enforced by
   // tests/extensions/guide-delegated-acts-resolve.test.ts against source_registry.
   ingested?: boolean;
 }
@@ -92,24 +102,11 @@ interface GuideData {
   citation_format: string;
 }
 
-function formatDelegatedActs(acts: DelegatedAct[]): string {
-  if (acts.length === 0) return '';
-  const searchable = acts.filter((a) => a.ingested !== false);
-  const referenceOnly = acts.filter((a) => a.ingested === false);
-  let out = '';
-  if (searchable.length > 0) {
-    const rows = searchable
-      .map((a) => `| ${a.id} | ${a.celex_id} | ${a.covers} |`)
-      .join('\n');
-    out += `### Delegated Acts (search these as separate regulation IDs)\n| ID | CELEX | Covers |\n|---|---|---|\n${rows}\n`;
-  }
-  if (referenceOnly.length > 0) {
-    const rows = referenceOnly
-      .map((a) => `- **${a.id}** (${a.celex_id}) — ${a.covers}`)
-      .join('\n');
-    out += `${searchable.length > 0 ? '\n' : ''}### Related secondary acts (reference only — text not yet in the corpus, not searchable)\n${rows}\n`;
-  }
-  return out;
+function formatReferenceOnlyActs(acts: DelegatedAct[]): string {
+  const rows = acts
+    .map((a) => `- **${a.id}** (${a.celex_id}) — ${a.covers}`)
+    .join('\n');
+  return `### Related secondary acts (reference only — text not yet in the corpus, not searchable)\n${rows}\n`;
 }
 
 function formatProportionality(prop: GuideData['proportionality']): string {
@@ -175,63 +172,163 @@ function formatTimeline(entries?: TimelineEntry[]): string {
   return `### Timeline\n| Date | Event | Note |\n|---|---|---|\n${rows}\n`;
 }
 
-function formatQuickGuide(guide: GuideData): string {
-  const header = `## Analysis Guide: ${guide.regulation_id} (${guide.regulation_name})\n\n**Effective:** ${guide.effective_date} | **CELEX:** ${guide.celex_id} | **Guide updated:** ${guide.guide_updated}\n`;
-  return [
-    header,
-    formatDelegatedActs(guide.delegated_acts),
-    formatProportionality(guide.proportionality),
-    formatPitfalls(guide.pitfalls, 'quick'),
-    formatCrossRegulation(guide.cross_regulation),
-  ]
-    .filter(Boolean)
-    .join('\n');
+// One guide section (or delegated act), on the standard envelope shape.
+interface GuideRow {
+  section: string;
+  provenance: typeof GUIDE_PROVENANCE;
+  _citation: CitationEnvelope;
+  content_markdown?: string;
+  [key: string]: unknown;
 }
 
-function formatFullGuide(guide: GuideData): string {
-  const header = `## Analysis Guide: ${guide.regulation_id} (${guide.regulation_name})\n\n**Effective:** ${guide.effective_date} | **CELEX:** ${guide.celex_id} | **Guide updated:** ${guide.guide_updated}\n`;
-  return [
-    header,
-    formatDelegatedActs(guide.delegated_acts),
-    formatProportionality(guide.proportionality),
-    formatPitfalls(guide.pitfalls, 'full'),
-    formatCrossRegulation(guide.cross_regulation),
-    formatKeyStructures(guide.key_structures),
-    formatKeyRecitals(guide.key_recitals),
-    `### Evidence\n${guide.evidence_hint}\n`,
-    formatNationalImplementation(guide.national_implementation),
-    formatTimeline(guide.timeline),
-    `### Citation Format\n${guide.citation_format}\n`,
-  ]
-    .filter(Boolean)
-    .join('\n');
-}
-
-const handler: ToolHandler = async (args) => {
+const handler: ToolHandler = async (args, ctx) => {
   const regulation = typeof args.regulation === 'string' ? args.regulation : undefined;
   const detail_level =
     typeof args.detail_level === 'string' && args.detail_level === 'full' ? 'full' : 'quick';
 
   if (!regulation) {
-    return markdownResult(
+    return errorResult(
       'get_regulation_guide: regulation is required (e.g. "DORA", "GDPR", "AI_ACT").',
     );
   }
 
   const guidePath = join(GUIDES_DIR, `${regulation}.json`);
   if (!existsSync(guidePath)) {
-    return markdownResult(
-      `No analysis guide available for ${regulation}. Use list_sources to discover available regulations, check_applicability for scope, and compare_requirements for cross-regulation analysis.`,
-    );
+    // Honest empty (conformance I1): an unknown guide is a true zero, named
+    // explicitly — not an error, not a silent empty.
+    return textResult({
+      results: [],
+      meta: {
+        regulation,
+        detail_level,
+        partial: false,
+        message:
+          `No analysis guide available for ${regulation}. Use list_sources to discover available regulations, ` +
+          'check_applicability for scope, and compare_requirements for cross-regulation analysis.',
+      },
+    });
   }
 
   try {
     const guide: GuideData = JSON.parse(readFileSync(guidePath, 'utf-8'));
-    const text = detail_level === 'full' ? formatFullGuide(guide) : formatQuickGuide(guide);
-    return markdownResult(text);
+    const resolver: CitationResolver = createCitationResolver(
+      ctx.db,
+      (ctx.manifest ?? {}) as CitationManifest,
+    );
+
+    // The parent instrument's citation anchors every synthesized section row.
+    const parent = resolver.resolve(guide.regulation_id);
+    const results: GuideRow[] = [];
+    const omitted: string[] = [];
+
+    // Delegated / implementing acts the corpus actually serves: one row per
+    // act, cited to the ACT's own instrument (its :meta row in the corpus).
+    // The #101 reconciliation's `ingested` flags gate which acts qualify.
+    const searchableActs = guide.delegated_acts.filter((a) => a.ingested !== false);
+    const referenceOnlyActs = guide.delegated_acts.filter((a) => a.ingested === false);
+    for (const act of searchableActs) {
+      const cite = resolver.resolve(act.id);
+      if (!cite) {
+        omitted.push(act.id);
+        continue;
+      }
+      results.push({
+        section: 'delegated_act',
+        id: act.id,
+        celex_id: act.celex_id,
+        title: act.title,
+        article_count: act.article_count,
+        parent_article: act.parent_article,
+        covers: act.covers,
+        searchable: true,
+        provenance: GUIDE_PROVENANCE,
+        _citation: cite.citation,
+      });
+    }
+
+    // Synthesized sections, each cited to the parent instrument. Reference-only
+    // acts are one aggregate row: their celex ids are curated placeholders in
+    // several guides ("pending", "various"), so no per-act URL can be built
+    // without fabrication — the row cites the parent whose secondary-act
+    // landscape it describes, and the acts stay listed in the content.
+    const sections: Array<{ section: string; content: string; extra?: Record<string, unknown> }> =
+      [];
+    if (referenceOnlyActs.length > 0) {
+      sections.push({
+        section: 'related_secondary_acts',
+        content: formatReferenceOnlyActs(referenceOnlyActs),
+        extra: {
+          acts: referenceOnlyActs.map((a) => ({
+            id: a.id,
+            celex_id: a.celex_id,
+            covers: a.covers,
+          })),
+          searchable: false,
+        },
+      });
+    }
+    sections.push(
+      { section: 'proportionality', content: formatProportionality(guide.proportionality) },
+      { section: 'pitfalls', content: formatPitfalls(guide.pitfalls, detail_level) },
+      { section: 'cross_regulation', content: formatCrossRegulation(guide.cross_regulation) },
+    );
+    if (detail_level === 'full') {
+      sections.push(
+        { section: 'key_structures', content: formatKeyStructures(guide.key_structures) },
+        { section: 'key_recitals', content: formatKeyRecitals(guide.key_recitals) },
+        { section: 'evidence', content: `### Evidence\n${guide.evidence_hint}\n` },
+        {
+          section: 'national_implementation',
+          content: formatNationalImplementation(guide.national_implementation),
+        },
+        { section: 'timeline', content: formatTimeline(guide.timeline) },
+        { section: 'citation_format', content: `### Citation Format\n${guide.citation_format}\n` },
+      );
+    }
+    for (const s of sections) {
+      if (!s.content) continue; // an empty section is omitted, not emitted blank
+      if (!parent) {
+        omitted.push(`${guide.regulation_id}/${s.section}`);
+        continue;
+      }
+      results.push({
+        section: s.section,
+        content_markdown: s.content,
+        ...(s.extra ?? {}),
+        provenance: GUIDE_PROVENANCE,
+        _citation: parent.citation,
+      });
+    }
+
+    const messageParts: string[] = [];
+    if (omitted.length > 0) {
+      messageParts.push(
+        `${omitted.length} guide row(s) omitted (incomplete source attribution): ${omitted.join(', ')}.`,
+      );
+    }
+    if (results.length === 0) {
+      messageParts.push(`The ${regulation} guide produced no citable sections.`);
+    }
+
+    return textResult({
+      results,
+      meta: {
+        regulation: guide.regulation_id,
+        regulation_name: guide.regulation_name,
+        celex_id: guide.celex_id,
+        effective_date: guide.effective_date,
+        guide_updated: guide.guide_updated,
+        detail_level,
+        content_provenance:
+          'Guide prose is Ansvar-authored analysis navigation (synthesized), not quoted EUR-Lex text; ' +
+          "each row's _citation identifies the underlying EUR-Lex instrument, not the prose author.",
+        partial: false,
+        message: messageParts.join(' '),
+      },
+    });
   } catch (e) {
-    return markdownResult(
-      `Error reading guide for ${regulation}: ${e instanceof Error ? e.message : String(e)}`,
+    return errorResult(
+      `get_regulation_guide: error reading guide for ${regulation}: ${e instanceof Error ? e.message : String(e)}`,
     );
   }
 };
@@ -240,7 +337,7 @@ export const getRegulationGuideTool: ExtensionTool = {
   definition: {
     name: 'get_regulation_guide',
     description:
-      'Get an analysis guide for an EU regulation: delegated acts, proportionality tiers, top pitfalls, cross-regulation links, key structures, recitals, national implementation patterns, and timelines. detail_level=quick (default) shows the essentials; full adds key structures, recitals, evidence hints, national examples, and citation format.',
+      'Get an analysis guide for an EU regulation: delegated acts, proportionality tiers, top pitfalls, cross-regulation links, key structures, recitals, national implementation patterns, and timelines. Returns a {results, meta} envelope: one cited row per corpus-served delegated act (cited to the act\'s own EUR-Lex instrument) and per guide section (markdown content, cited to the parent instrument; prose is Ansvar-authored analysis, marked provenance=ansvar-synthesis). detail_level=quick (default) shows the essentials; full adds key structures, recitals, evidence hints, national examples, and citation format.',
     inputSchema: {
       type: 'object',
       properties: {

@@ -130,6 +130,49 @@ function parseCompare(result: CallToolResult): CompareEnvelope {
   return parsePayload(result) as unknown as CompareEnvelope;
 }
 
+// Generic {results, meta} envelope — the shape ALL five extension tools now
+// share (Batch B brought compare_requirements on; the 2026-07-02 change brings
+// the remaining four on).
+interface GenericRow extends Record<string, unknown> {
+  _citation: Citation;
+}
+interface GenericEnvelope {
+  results: GenericRow[];
+  meta: Record<string, unknown> & { partial: boolean; message: string };
+}
+
+function parseEnvelope(result: CallToolResult): GenericEnvelope {
+  return parsePayload(result) as unknown as GenericEnvelope;
+}
+
+// The conformance invariants every extension tool must satisfy (mirrors the
+// gateway's src/conformance.py I0/I1/I2/I5 over the {results, meta} envelope).
+function assertEnvelopeConformant(env: GenericEnvelope): void {
+  // I0 — standard envelope.
+  expect(Array.isArray(env.results), 'I0: results is an array').toBe(true);
+  expect(typeof env.meta, 'I0: meta is an object').toBe('object');
+  // I1 — empty results carry an explanatory signal (never a silent zero).
+  if (env.results.length === 0) {
+    expect(env.meta.message.length > 0 || env.meta.partial, 'I1: empty set is signposted').toBe(true);
+  }
+  // I2 — these tools never report partial: a zero-match against local tables /
+  // guide files is a true zero, not a downstream-availability degradation.
+  expect(env.meta.partial, 'extension tools never report partial').toBe(false);
+  // I5 — every served row carries the full citation triple + round-trip lookup.
+  for (const row of env.results) {
+    const ref = String(row.canonical_ref ?? row.section ?? row.regulation ?? '?');
+    expect(row._citation, `I5: row ${ref} has _citation`).toBeDefined();
+    expect(row._citation.source_url.length, `I5: ${ref} source_url`).toBeGreaterThan(0);
+    expect(row._citation.publisher.length, `I5: ${ref} publisher`).toBeGreaterThan(0);
+    expect(row._citation.license.length, `I5: ${ref} license`).toBeGreaterThan(0);
+    expect(row._citation.source_url, `${ref} cites EUR-Lex`).toMatch(/^https:\/\/eur-lex\.europa\.eu\//);
+    expect(row._citation.publisher).toBe(EU_PUBLISHER);
+    expect(row._citation.license).toBe(EU_LICENSE);
+    expect(row._citation.lookup.tool).toBe('get_provision');
+    expect(typeof row._citation.lookup.args.canonical_ref).toBe('string');
+  }
+}
+
 // The conformance invariants compare_requirements must satisfy (mirrors the
 // gateway's src/conformance.py I0/I1/I2/I5 over the {results, meta} envelope).
 function assertConformant(env: CompareEnvelope): void {
@@ -308,35 +351,57 @@ describe('compare_requirements', () => {
 });
 
 describe('map_controls', () => {
-  it('maps ISO27001 controls to regulations, grouped by control', async () => {
+  it('returns a conformant envelope of cited control→regulation mapping rows', async () => {
     const result = await call('map_controls', { framework: 'ISO27001' });
     expect(result.isError).toBeUndefined();
-    const payload = parsePayload(result);
-    expect(payload.framework).toBe('ISO27001');
-    expect(payload.count as number).toBeGreaterThan(0);
-    const controls = payload.controls as Array<{
-      control_id: string;
-      mappings: Array<{ regulation: string; articles: string[]; coverage: string }>;
-    }>;
-    const first = controls[0];
-    expect(first.mappings.length).toBeGreaterThan(0);
-    expect(['full', 'partial', 'related']).toContain(first.mappings[0].coverage);
-    expect(Array.isArray(first.mappings[0].articles)).toBe(true);
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.meta.framework).toBe('ISO27001');
+    expect(env.meta.count).toBe(env.results.length);
+    expect(env.results.length).toBeGreaterThan(0);
+    expect(env.meta.controls_matched as number).toBeGreaterThan(0);
+    for (const row of env.results) {
+      expect((row.control_id as string).length).toBeGreaterThan(0);
+      expect((row.control_name as string).length).toBeGreaterThan(0);
+      expect(['full', 'partial', 'related']).toContain(row.coverage);
+      expect(Array.isArray(row.articles)).toBe(true);
+    }
   });
 
-  it('filters by regulation and rejects unknown frameworks', async () => {
+  it('anchors single-article mappings to the article and multi-article mappings to the instrument', async () => {
+    const result = await call('map_controls', { framework: 'ISO27001' });
+    const env = parseEnvelope(result);
+    const single = env.results.find((r) => (r.articles as string[]).length === 1);
+    const multi = env.results.find((r) => (r.articles as string[]).length > 1);
+    expect(single, 'a single-article mapping exists').toBeDefined();
+    expect(multi, 'a multi-article mapping exists').toBeDefined();
+    // single-article: article-level provision citation with the #art_N anchor
+    const art = (single!.articles as string[])[0];
+    expect(single!._citation.canonical_ref).toBe(`${single!.regulation}:art_${art}`);
+    expect(single!._citation.source_url).toContain('#art_');
+    // multi-article: the instrument's :meta row — never an arbitrary anchor
+    expect(multi!._citation.canonical_ref).toBe(`${multi!.regulation}:meta`);
+    expect(multi!._citation.source_url).not.toContain('#art_');
+  });
+
+  it('filters by regulation, signposts an empty match, and rejects unknown frameworks', async () => {
     const filtered = await call('map_controls', {
       framework: 'NIST_CSF',
       regulation: 'DORA',
     });
     expect(filtered.isError).toBeUndefined();
-    const payload = parsePayload(filtered);
-    const controls = payload.controls as Array<{
-      mappings: Array<{ regulation: string }>;
-    }>;
-    for (const c of controls) {
-      for (const m of c.mappings) expect(m.regulation).toBe('DORA');
-    }
+    const env = parseEnvelope(filtered);
+    assertEnvelopeConformant(env);
+    for (const row of env.results) expect(row.regulation).toBe('DORA');
+
+    const empty = await call('map_controls', {
+      framework: 'ISO27001',
+      control: 'A.99.99',
+    });
+    const emptyEnv = parseEnvelope(empty);
+    assertEnvelopeConformant(emptyEnv);
+    expect(emptyEnv.results.length).toBe(0);
+    expect(emptyEnv.meta.message).toContain('A.99.99'); // I1: not a silent zero
 
     const bad = await call('map_controls', { framework: 'COBIT' });
     expect(bad.isError).toBe(true);
@@ -344,44 +409,87 @@ describe('map_controls', () => {
 });
 
 describe('get_evidence_requirements', () => {
-  it('returns audit-evidence artifacts for AI_ACT with parsed JSON fields', async () => {
+  it('returns a conformant envelope of cited AI_ACT requirements with parsed JSON fields', async () => {
     const result = await call('get_evidence_requirements', { regulation: 'AI_ACT' });
     expect(result.isError).toBeUndefined();
-    const payload = parsePayload(result);
-    expect(payload.count as number).toBeGreaterThan(0);
-    const rows = payload.results as Array<{
-      regulation: string;
-      artifact_name: string;
-      auditor_questions: unknown[];
-      cross_references: unknown[];
-    }>;
-    for (const row of rows) {
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.meta.count).toBe(env.results.length);
+    expect(env.results.length).toBeGreaterThan(0);
+    for (const row of env.results) {
       expect(row.regulation).toBe('AI_ACT');
-      expect(row.artifact_name.length).toBeGreaterThan(0);
+      expect((row.artifact_name as string).length).toBeGreaterThan(0);
       expect(Array.isArray(row.auditor_questions)).toBe(true);
       expect(Array.isArray(row.cross_references)).toBe(true);
+      // article-addressable requirement → cited at article granularity
+      expect(row._citation.canonical_ref).toBe(`AI_ACT:art_${row.article}`);
+      expect(row._citation.source_url).toContain('#art_');
     }
   });
 
-  it('returns an empty result set (not an error) for an unknown regulation', async () => {
+  it('falls back to the instrument citation for sub-paragraph refs that are not provision-addressable', async () => {
+    // UN_R155's evidence rows reference sub-paragraphs ("7.2") — no art_7.2
+    // provision exists, and truncating to art_7 would mis-cite. The row must
+    // stay served, cited at instrument level.
+    const result = await call('get_evidence_requirements', { regulation: 'UN_R155' });
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.results.length).toBeGreaterThan(0);
+    const subPara = env.results.find((r) => (r.article as string).includes('.'));
+    expect(subPara, 'a sub-paragraph row exists').toBeDefined();
+    expect(subPara!._citation.canonical_ref).toBe('UN_R155:meta');
+  });
+
+  it('returns an honest empty envelope (not an error, not a silent zero) for an unknown regulation', async () => {
     const result = await call('get_evidence_requirements', {
       regulation: 'NOT_A_REGULATION',
     });
     expect(result.isError).toBeUndefined();
-    const payload = parsePayload(result);
-    expect(payload.count).toBe(0);
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.results.length).toBe(0);
+    expect(env.meta.count).toBe(0);
+    expect(env.meta.message).toContain('NOT_A_REGULATION'); // I1
   });
 });
 
 describe('check_applicability', () => {
-  it('returns regulations applicable to the financial sector', async () => {
+  it('returns a conformant envelope of cited regulations for the financial sector', async () => {
     const result = await call('check_applicability', { sector: 'financial' });
     expect(result.isError).toBeUndefined();
-    const payload = parsePayload(result);
-    const text = JSON.stringify(payload);
-    // DORA is the canonical financial-sector regulation; the applicability
-    // table has 63 financial rows — DORA must be among them.
-    expect(text).toContain('DORA');
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.meta.total_count).toBe(env.results.length);
+    // DORA is the canonical financial-sector regulation — must be among the rows.
+    const dora = env.results.find((r) => r.regulation === 'DORA');
+    expect(dora, 'DORA applies to financial').toBeDefined();
+    expect(['definite', 'likely', 'possible']).toContain(dora!.confidence);
+    // DORA's basis article is provision-addressable → article-level citation
+    expect(dora!._citation.canonical_ref).toBe(`DORA:art_${dora!.basis}`);
+    const byConf = env.meta.by_confidence as Record<string, number>;
+    expect(byConf.definite + byConf.likely + byConf.possible).toBe(env.results.length);
+  });
+
+  it('summary detail level adds next steps to meta over the same cited rows', async () => {
+    const full = parseEnvelope(await call('check_applicability', { sector: 'healthcare' }));
+    const summary = parseEnvelope(
+      await call('check_applicability', { sector: 'healthcare', detail_level: 'summary' }),
+    );
+    assertEnvelopeConformant(full);
+    assertEnvelopeConformant(summary);
+    expect(summary.results.length).toBe(full.results.length);
+    expect(typeof summary.meta.next_steps).toBe('string');
+    expect(full.meta.next_steps).toBeUndefined();
+  });
+
+  it('skips rows it cannot fully cite (no manifest publisher) instead of fabricating attribution', async () => {
+    const tool = handlers.get('check_applicability')!;
+    const noPublisherCtx: ToolHandlerContext = { db: ctx.db, manifest: {}, coverageSummary: 'test' };
+    const result = await tool.handler({ sector: 'financial' }, noPublisherCtx);
+    expect(result.isError).toBeUndefined();
+    const env = parseEnvelope(result);
+    expect(env.results.length).toBe(0);
+    expect(env.meta.message).toMatch(/incomplete source attribution/i);
   });
 
   it('rejects an invalid sector with the valid-sector list', async () => {
@@ -392,33 +500,81 @@ describe('check_applicability', () => {
 });
 
 describe('get_regulation_guide', () => {
-  it('renders the DORA guide as markdown (quick level)', async () => {
+  it('returns a conformant envelope of cited guide sections for DORA (quick level)', async () => {
     const result = await call('get_regulation_guide', { regulation: 'DORA' });
     expect(result.isError).toBeUndefined();
-    const text = result.content[0].text;
-    expect(text).toContain('DORA');
-    expect(text).toMatch(/###/); // markdown sections
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.meta.regulation).toBe('DORA');
+    expect(env.results.length).toBeGreaterThan(0);
+    // synthesized prose is marked, and section rows keep the markdown content
+    for (const row of env.results) {
+      expect(row.provenance).toBe('ansvar-synthesis');
+    }
+    const proportionality = env.results.find((r) => r.section === 'proportionality');
+    expect(proportionality).toBeDefined();
+    expect(proportionality!.content_markdown as string).toMatch(/###/);
+    // section rows cite the parent instrument
+    expect(proportionality!._citation.canonical_ref).toBe('DORA:meta');
+    // meta names the synthesis honestly
+    expect(env.meta.content_provenance as string).toMatch(/Ansvar-authored/);
+  });
+
+  it('cites each corpus-served delegated act to its OWN instrument, not the parent', async () => {
+    const env = parseEnvelope(await call('get_regulation_guide', { regulation: 'DORA' }));
+    const acts = env.results.filter((r) => r.section === 'delegated_act');
+    expect(acts.length).toBeGreaterThan(0);
+    for (const act of acts) {
+      expect(act.searchable).toBe(true);
+      expect(act._citation.canonical_ref).toBe(`${act.id}:meta`);
+      // the act's ELI differs from the parent instrument's
+      const parent = env.results.find((r) => r.section === 'proportionality')!;
+      expect(act._citation.source_url).not.toBe(parent._citation.source_url);
+    }
+  });
+
+  it('keeps reference-only acts visible without fabricating per-act URLs', async () => {
+    // CER has ingested:false acts, some with placeholder celex ids ("pending") —
+    // no per-act URL can be built, so they aggregate into one row cited to the
+    // parent instrument and are explicitly marked not searchable.
+    const env = parseEnvelope(await call('get_regulation_guide', { regulation: 'CER' }));
+    assertEnvelopeConformant(env);
+    const refOnly = env.results.find((r) => r.section === 'related_secondary_acts');
+    expect(refOnly, 'reference-only aggregate row exists').toBeDefined();
+    expect(refOnly!.searchable).toBe(false);
+    expect(refOnly!._citation.canonical_ref).toBe('CER:meta');
+    const acts = refOnly!.acts as Array<{ id: string }>;
+    expect(acts.length).toBeGreaterThan(0);
+    expect(refOnly!.content_markdown as string).toContain('reference only');
   });
 
   it('full detail level is a superset of quick', async () => {
-    const quick = await call('get_regulation_guide', {
-      regulation: 'AI_ACT',
-      detail_level: 'quick',
-    });
-    const full = await call('get_regulation_guide', {
-      regulation: 'AI_ACT',
-      detail_level: 'full',
-    });
-    expect(quick.isError).toBeUndefined();
-    expect(full.isError).toBeUndefined();
-    expect(full.content[0].text.length).toBeGreaterThanOrEqual(
-      quick.content[0].text.length,
+    const quick = parseEnvelope(
+      await call('get_regulation_guide', { regulation: 'AI_ACT', detail_level: 'quick' }),
     );
+    const full = parseEnvelope(
+      await call('get_regulation_guide', { regulation: 'AI_ACT', detail_level: 'full' }),
+    );
+    assertEnvelopeConformant(quick);
+    assertEnvelopeConformant(full);
+    expect(full.results.length).toBeGreaterThanOrEqual(quick.results.length);
+    const quickSections = new Set(quick.results.map((r) => r.section));
+    for (const s of quickSections) {
+      expect(full.results.some((r) => r.section === s), `full includes ${s as string}`).toBe(true);
+    }
   });
 
-  it('reports unknown regulations gracefully without throwing', async () => {
+  it('returns an honest empty envelope (not an error) for an unknown regulation', async () => {
     const result = await call('get_regulation_guide', { regulation: 'NOPE' });
-    const text = result.content[0].text;
-    expect(text.toLowerCase()).toContain('nope');
+    expect(result.isError).toBeUndefined();
+    const env = parseEnvelope(result);
+    assertEnvelopeConformant(env);
+    expect(env.results.length).toBe(0);
+    expect(env.meta.message).toContain('NOPE'); // I1
+  });
+
+  it('rejects a missing regulation argument', async () => {
+    const result = await call('get_regulation_guide', {});
+    expect(result.isError).toBe(true);
   });
 });
