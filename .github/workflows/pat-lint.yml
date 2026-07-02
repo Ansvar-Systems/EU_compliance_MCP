@@ -1,0 +1,39 @@
+name: pat-lint
+
+# Ratchet: long-lived PAT-class secrets are banned in workflows. Use
+# GITHUB_TOKEN where it suffices, or mint a per-run GitHub App installation
+# token (org secrets DEPLOY_APP_ID / DEPLOY_APP_PRIVATE_KEY) downscoped with
+# `repositories:` + `permission-*:`. De-PAT pass 2026-07-02.
+
+on:
+  pull_request:
+  push:
+    branches: [main, dev]
+    paths:
+      - ".github/workflows/**"
+
+permissions:
+  contents: read
+
+jobs:
+  pat-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Fail on PAT-class secret references in workflows
+        run: |
+          set -euo pipefail
+          # Two classes are banned:
+          #   1. any secret whose name contains PAT (PATH/PATTERN excluded)
+          #   2. credentials retired by the 2026-07-02 de-PAT conversion
+          #      (the standing deploy-repo SSH key)
+          # This file is excluded from the grep because it spells the
+          # banned names.
+          banned='secrets\s*\.\s*[A-Za-z0-9_]*PAT(?!H|TERN)[A-Za-z0-9_]*|DEPLOY_SSH_KEY'
+          if hits=$(grep -rInP --include='*.yml' --include='*.yaml' --exclude='pat-lint.yml' "$banned" .github/workflows); then
+            echo "$hits"
+            echo "::error::PAT-class secret reference found in a workflow. Use GITHUB_TOKEN or a per-run GitHub App installation token (DEPLOY_APP_ID / DEPLOY_APP_PRIVATE_KEY, downscoped)."
+            exit 1
+          fi
+          echo "OK: no PAT-class secret references in .github/workflows/."
