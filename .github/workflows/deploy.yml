@@ -20,13 +20,29 @@ jobs:
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
 
+      # Mint a short-lived (1h), repo-scoped token from the org GitHub App
+      # instead of carrying a long-lived deploy SSH key (retired 2026-07-02).
+      # The token is downscoped to contents:write on Ansvar-Systems/deploy
+      # only and expires automatically — a leaked job no longer hands an
+      # attacker standing write access to the GitOps repo.
+      - name: Mint a short-lived token for the deploy repo (GitHub App)
+        id: deploy-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1  # v3
+        with:
+          app-id: ${{ secrets.DEPLOY_APP_ID }}
+          private-key: ${{ secrets.DEPLOY_APP_PRIVATE_KEY }}
+          owner: Ansvar-Systems
+          repositories: deploy
+          permission-contents: write
+
       - name: Check out deploy repo
         uses: actions/checkout@v4
         with:
           repository: Ansvar-Systems/deploy
           ref: main
           path: deploy-repo
-          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          # persist-credentials defaults true → the later `git push` reuses this token
+          token: ${{ steps.deploy-token.outputs.token }}
 
       - name: Compute image tag
         id: tag
@@ -46,6 +62,12 @@ jobs:
             --namespace eu-compliance-mcp \
             > deploy-repo/service/eu-regulations-mcp/deploy.yaml
 
+      # NOTE (2026-07-02 de-PAT pass): GHCR_DOCKER_CONFIG is deliberately NOT
+      # converted to a per-run app token — it is rendered into cluster config
+      # (a committed k8s imagePullSecret) that must outlive any 1h installation
+      # token. The path is also dormant today: vars.DEPLOY_PRIVATE is unset,
+      # the GHCR_DOCKER_CONFIG secret is unset in this repo, and the
+      # eu-regulations-mcp package is public.
       - name: Render Helm chart (private)
         if: ${{ vars.DEPLOY_PRIVATE == 'true' }}
         run: |
