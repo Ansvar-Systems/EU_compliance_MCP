@@ -312,12 +312,26 @@ const CELEX_TO_ELI_TYPE: Record<string, string> = { R: 'reg', L: 'dir', D: 'dec'
 function celexToEliBase(celexId: string | null | undefined): string | null {
   if (!celexId) return null;
   const match = celexId.match(/^3(\d{4})([A-Z])(\d+)$/);
-  if (!match) return null;
-  const [, year, type, num] = match;
-  const eliType = CELEX_TO_ELI_TYPE[type];
-  if (!eliType) return null;
-  const numClean = String(parseInt(num, 10));
-  return `${ELI_BASE}/${eliType}/${year}/${numClean}/oj`;
+  if (match) {
+    const [, year, type, num] = match;
+    const eliType = CELEX_TO_ELI_TYPE[type];
+    if (!eliType) return null;
+    const numClean = String(parseInt(num, 10));
+    return `${ELI_BASE}/${eliType}/${year}/${numClean}/oj`;
+  }
+  // Consolidated version (CELEX sector 0, e.g. 02023R1115-20251226): ELI has a
+  // point-in-time path whose HTML render carries the same #art_N anchors as
+  // the /oj render — and shows the text AS AMENDED, which is what the corpus
+  // serves for these instruments.
+  const cons = celexId.match(/^0(\d{4})([A-Z])(\d+)-(\d{4})(\d{2})(\d{2})$/);
+  if (cons) {
+    const [, year, type, num, y, m, d] = cons;
+    const eliType = CELEX_TO_ELI_TYPE[type];
+    if (!eliType) return null;
+    const numClean = String(parseInt(num, 10));
+    return `${ELI_BASE}/${eliType}/${year}/${numClean}/${y}-${m}-${d}`;
+  }
+  return null;
 }
 
 function buildProvisionSourceUrl(

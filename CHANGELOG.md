@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+**EUDR + CSRD refreshed to the in-force amended text (accuracy fix — both seeds served repealed law)**
+- `eudr.json` re-ingested from consolidated `02023R1115-20251226` (base act as amended by Reg (EU) 2024/3234 and Reg (EU) 2025/2650): application dates now 30 Dec 2026 / 30 Jun 2027 (the seed served the repealed 30 Dec 2024 / 30 Jun 2025), Art 4(8)-(10) deleted, new Art 4a simplified regime + Annex III, Art 5 recast (downstream-operator category; traders submit no due-diligence statement), 1 %/3 %/9 % minimum check rates, 4 % Union-wide-turnover penalty floor, Annex I "printed books" line removed. Base-act recitals preserved (consolidations omit the preamble).
+- `csrd.json` re-ingested from consolidated `02022L2464-20260318` (as amended by Dir (EU) 2025/794 "stop-the-clock" and Dir (EU) 2026/470 Omnibus I): Art 5(2) now carries the wave-1 FY2024-FY2026 time limit and the >1 000-employee + EUR 450m net-turnover scope from FY2027.
+- Applicability rules: CSRD listed-SME rule flipped to not-applicable (Omnibus I removed listed SMEs from mandatory scope; voluntary VSME reporting per Recommendation (EU) 2025/1710); CSRD sector notes updated to the new thresholds; EUDR trader note reflects the 2025/2650 no-DDS trader regime.
+- `ingest-eurlex.ts` consolidated-version support: strips EUR-Lex consolidation markers, preserves base-act recitals when the consolidation omits the preamble, re-attaches CSRD's quote-inserted articles into Articles 1/3 (so `art_40a` cannot resolve to a 2013/34/EU insertion mis-addressed as a CSRD provision), and truncates the final article at the closing formula (annex/footnote/page-script bleed).
+- `build-db.ts` `celexToEliBase`: consolidated CELEX now maps to the ELI point-in-time URL (e.g. `eli/reg/2023/1115/2025-12-26#art_4a`, anchors verified live) so provision citations point at the amended text; also upgrades eIDAS2 citation URLs from the un-anchored TXT fallback.
+- Deliberately NOT applied (not yet law): the draft delegated act amending EUDR Annex I product scope (feedback closed 2026-06-01, no CELEX yet — recheck ~2026-08-01) and the revised-ESRS delegated act (Commission-adopted 2026-07-03, still in EP/Council scrutiny, no OJ publication).
+
 **Adopt mcp-base v1.5.0 — guidance citation enrichment (closes EU_compliance_MCP #80)**
 - Dockerfile base pin `v1.3.1-alpine` → `v1.5.0-alpine`; manifest `mcp_base_min_version` `1.2.1` → `1.5.0`.
 - v1.5.0 wires the guidance tool family (`search_guidance` / `get_guidance_section` / `list_guidance`) through the shared `CitationBuilder`, so guidance hits now carry real `source_url` / `publisher` (per-document `issuing_body`) / `license` instead of empty strings and a bare section number. `search_guidance` is fail-closed: a document with no resolvable `source_url` (`url` → `pdf_url`) is dropped and counted in `skipped_incomplete`.
