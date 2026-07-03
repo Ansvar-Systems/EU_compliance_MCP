@@ -8,7 +8,7 @@
  * Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser
  */
 
-import { writeFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { JSDOM } from 'jsdom';
 import { fetchEurLexWithBrowser } from './ingest-eurlex-browser.js';
@@ -24,6 +24,34 @@ export interface Annex {
   number: string; // canonical form: "Annex I" through "Annex XIII"
   title: string;
   text: string;
+}
+
+/**
+ * Strip EUR-Lex consolidation markers from consolidated-version text.
+ *
+ * Consolidated documents (CELEX sector 0, e.g. 02023R1115-20251226) interleave
+ * provenance markers with the provision text: `▼B` (base-act block), `▼M1`/`▼M2`
+ * (amending-act blocks), `►M2 … ◄` (inline insertions) and `▼M2 —————`
+ * (deleted-text placeholders). These are display metadata, not law. Base-act
+ * documents contain none of them, so this is a no-op for non-consolidated
+ * ingests.
+ *
+ * Exported for unit testing.
+ */
+export function stripConsolidationMarkers(text: string): string {
+  return text
+    // marker-only lines, incl. deleted-text placeholders ("▼M2 —————")
+    .replace(/^[\s ]*[▼►][BMC]?\d*[\s ]*—*[\s ]*$/gmu, '')
+    // inline insertion-start markers ("►M2 ", "►C1 ")
+    .replace(/►[BMC]?\d*[\s ]?/gu, '')
+    // inline insertion-end markers
+    .replace(/[\s ]?◄/gu, '')
+    // any leftover marker glyphs
+    .replace(/[▼►◄]/gu, '')
+    // EUR-Lex page-script artifact occasionally captured at document end
+    .replace(/^\/{4,}.*$/gm, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 /**
@@ -210,6 +238,13 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   // Product & Supply Chain regulations
   '32023R1781': { id: 'CHIPS_ACT', full_name: 'European Chips Act', effective_date: '2023-09-18' },
   '32024R1252': { id: 'CRMA', full_name: 'Critical Raw Materials Act', effective_date: '2024-05-23' },
+  // EUDR — consolidated version (base act 32023R1115 as amended by 32024R3234
+  // and 32025R2650). Recitals are not part of an EUR-Lex consolidation; the
+  // base-act recitals in the existing seed are preserved on re-ingest.
+  '02023R1115-20251226': { id: 'EUDR', full_name: 'EU Deforestation Regulation', effective_date: '2023-06-29' },
+  // CSRD — consolidated version (base act 32022L2464 as amended by 32025L0794
+  // "stop-the-clock" and 32026L0470 Omnibus I).
+  '02022L2464-20260318': { id: 'CSRD', full_name: 'Corporate Sustainability Reporting Directive', effective_date: '2023-01-05' },
   // UN Regulations (adopted by EU)
   '42021X0387': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system', effective_date: '2021-01-22' },
   '42025X0005': { id: 'UN_R155', full_name: 'UN Regulation No. 155 - Cyber security and cyber security management system (Supplement 3)', effective_date: '2025-01-10' },
@@ -586,6 +621,42 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
   const annexes = parseAnnexes(html);
   console.log(`Parsed ${annexes.length} annexes`);
 
+  // Consolidated CSRD: the rendering splits the articles that CSRD Art. 1 and
+  // Art. 3 quote-insert into Directive 2013/34/EU / Directive 2006/43/EC out
+  // as top-level Article blocks (the numeric sort then files them after
+  // Article 8). Re-attach each to the amending article it is quoted in, so the
+  // seed keeps serving CSRD's own Articles 1-8 (the base-act seed shape) and a
+  // lookup like art_40a cannot return a 2013/34/EU insertion as if it were a
+  // CSRD provision (those quotes are the text as ENACTED by CSRD — later
+  // direct amendments of 2013/34/EU, e.g. Omnibus I, do not update them).
+  if (metadata?.id === 'CSRD') {
+    const own = new Set(['1', '2', '3', '4', '5', '6', '7', '8']);
+    const frags = articles.filter((a) => !own.has(a.number));
+    for (const f of frags) {
+      const hostNumber = f.number.startsWith('25') ? '3' : '1';
+      const host = articles.find((a) => a.number === hostNumber);
+      if (!host) throw new Error(`CSRD: host Article ${hostNumber} missing for quoted Article ${f.number}`);
+      host.text += `\n\nArticle ${f.number}${f.title ? `\n\n${f.title}` : ''}\n\n${f.text}`;
+      articles.splice(articles.indexOf(f), 1);
+    }
+    if (frags.length > 0) {
+      console.log(`CSRD: re-attached ${frags.length} quote-inserted articles into Articles 1/3`);
+    }
+  }
+
+  // The final article absorbs everything that follows it in the document body
+  // (annex bodies, the footnote-definitions block, EUR-Lex page scripts). Cut
+  // it at the standard closing formula — the last sentence of every EU act.
+  const CLOSING_FORMULA =
+    /This\s+(?:Regulation|Directive)\s+(?:shall\s+be\s+binding\s+in\s+its\s+entirety[\s\S]{0,200}?applicable\s+in\s+(?:all\s+)?(?:the\s+)?Member\s+States\.|is\s+addressed\s+to\s+the\s+Member\s+States\.)/u;
+  const lastArticle = articles[articles.length - 1];
+  if (lastArticle) {
+    const m = lastArticle.text.match(CLOSING_FORMULA);
+    if (m && m.index !== undefined && m.index + m[0].length < lastArticle.text.length) {
+      lastArticle.text = lastArticle.text.slice(0, m.index + m[0].length).trim();
+    }
+  }
+
   // For AI Act specifically: rewrite Article 113 to contain only the transitional
   // provisions (paragraphs 1-4) and validate the annex extraction. The stray
   // ANNEX text that the article parser captured as part of Article 113 ends at
@@ -619,6 +690,33 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
     return;
   }
 
+  // Consolidated versions (CELEX sector 0) interleave provenance markers in
+  // the body text and omit the preamble entirely. Strip the markers from every
+  // parsed text field (no-op for base acts, which contain none), and when
+  // re-ingesting over an existing seed carry the base-act recitals forward —
+  // they remain the act's authentic preamble, which the consolidation does
+  // not reproduce.
+  for (const a of articles) {
+    a.text = stripConsolidationMarkers(a.text);
+    if (a.title) a.title = stripConsolidationMarkers(a.title);
+  }
+  for (const d of definitions) {
+    d.term = stripConsolidationMarkers(d.term);
+    d.definition = stripConsolidationMarkers(d.definition);
+  }
+  let outRecitals = recitals.map((r) => ({ ...r, text: stripConsolidationMarkers(r.text) }));
+  if (outRecitals.length === 0 && existsSync(outputPath)) {
+    try {
+      const prev = JSON.parse(readFileSync(outputPath, 'utf-8'));
+      if (Array.isArray(prev.recitals) && prev.recitals.length > 0) {
+        outRecitals = prev.recitals;
+        console.log(`Preserved ${outRecitals.length} base-act recitals from existing seed`);
+      }
+    } catch {
+      // unreadable previous seed — proceed without recitals
+    }
+  }
+
   const regulation: RegulationData = {
     id: metadata?.id || celexId,
     full_name: metadata?.full_name || `Regulation ${celexId}`,
@@ -627,14 +725,14 @@ async function ingestRegulation(celexId: string, outputPath: string, useBrowser 
     eur_lex_url: `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${celexId}`,
     articles,
     definitions,
-    recitals,
+    recitals: outRecitals,
   };
 
   writeFileSync(outputPath, JSON.stringify(regulation, null, 2));
   console.log(`\nSaved to: ${outputPath}`);
   console.log(`Articles: ${articles.length}`);
   console.log(`Definitions: ${definitions.length}`);
-  console.log(`Recitals: ${recitals.length}`);
+  console.log(`Recitals: ${outRecitals.length}`);
 }
 
 // Main — only runs when executed directly, not when imported as a module

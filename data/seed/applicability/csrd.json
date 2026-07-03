@@ -6,7 +6,7 @@
     "applies": true,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Large financial undertakings must report under CSRD"
+    "notes": "Large financial undertakings report under CSRD — in mandatory scope from FY2027 only above 1000 employees and EUR 450m net turnover (Omnibus I, Dir (EU) 2026/470); wave-1 public-interest entities >500 employees report FY2024-FY2026"
   },
   {
     "regulation": "CSRD",
@@ -15,7 +15,7 @@
     "applies": true,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Large manufacturing companies must provide sustainability reports"
+    "notes": "Large manufacturing companies report under CSRD — in mandatory scope from FY2027 only above 1000 employees and EUR 450m net turnover (Omnibus I, Dir (EU) 2026/470); wave-1 public-interest entities >500 employees report FY2024-FY2026"
   },
   {
     "regulation": "CSRD",
@@ -24,7 +24,7 @@
     "applies": true,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Large energy companies must provide sustainability reports"
+    "notes": "Large energy companies report under CSRD — in mandatory scope from FY2027 only above 1000 employees and EUR 450m net turnover (Omnibus I, Dir (EU) 2026/470); wave-1 public-interest entities >500 employees report FY2024-FY2026"
   },
   {
     "regulation": "CSRD",
@@ -33,7 +33,7 @@
     "applies": true,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Large transport companies must provide sustainability reports"
+    "notes": "Large transport companies report under CSRD — in mandatory scope from FY2027 only above 1000 employees and EUR 450m net turnover (Omnibus I, Dir (EU) 2026/470); wave-1 public-interest entities >500 employees report FY2024-FY2026"
   },
   {
     "regulation": "CSRD",
@@ -42,7 +42,7 @@
     "applies": true,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Large healthcare companies must provide sustainability reports"
+    "notes": "Large healthcare companies report under CSRD — in mandatory scope from FY2027 only above 1000 employees and EUR 450m net turnover (Omnibus I, Dir (EU) 2026/470); wave-1 public-interest entities >500 employees report FY2024-FY2026"
   },
   {
     "regulation": "CSRD",
@@ -51,7 +51,7 @@
     "applies": true,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Large digital companies must provide sustainability reports"
+    "notes": "Large digital companies report under CSRD — in mandatory scope from FY2027 only above 1000 employees and EUR 450m net turnover (Omnibus I, Dir (EU) 2026/470); wave-1 public-interest entities >500 employees report FY2024-FY2026"
   },
   {
     "regulation": "CSRD",
@@ -66,9 +66,9 @@
     "regulation": "CSRD",
     "sector": "other",
     "subsector": "listed_smes",
-    "applies": true,
+    "applies": false,
     "confidence": "definite",
     "basis_article": "1",
-    "notes": "Listed SMEs (except micro) must report with simplified standards"
+    "notes": "Listed SMEs removed from mandatory scope by Omnibus I (Dir (EU) 2026/470); voluntary VSME-based reporting per Recommendation (EU) 2025/1710"
   }
 ]
