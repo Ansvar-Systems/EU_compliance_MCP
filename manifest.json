@@ -1,128 +1,128 @@
 {
- "manifest_schema_version": "1.0.0",
- "mcp_base_min_version": "1.9.1",
- "identity": {
-  "name": "eu-regulations-mcp",
-  "display_name": "EU Regulations",
-  "jurisdiction": "EU",
-  "category": "law",
-  "language": "en"
- },
- "tier": {
-  "base_tier": "free"
- },
- "data": {
-  "database_sha256": "sha256:7e4a5d846de5b7ee4e9c972caec5d844332df6c164c28f4d73c84b2d76ed3bd3",
-  "snapshot_id": "sha256:7e4a5d846de5b7ee4e9c972caec5d844332df6c164c28f4d73c84b2d76ed3bd3",
-  "generated_at": "2026-06-21T00:00:00Z",
-  "database_path": "/app/data/regulations.db",
-  "recitals_enabled": true,
-  "guidance_enabled": true,
-  "version_tracking_enabled": true,
-  "definitions_enabled": true,
-  "framework_filter_enabled": true,
-  "term_bridge_enabled": true,
-  "integrity_checks": [
-   {
-    "name": "provisions_nonempty",
-    "type": "row_count_min",
-    "table": "provisions",
-    "min": 1000
-   },
-   {
-    "name": "content_matches_provisions",
-    "type": "row_count_min",
-    "table": "content",
-    "min": 1000
-   },
-   {
-    "name": "recitals_populated",
-    "type": "row_count_min",
-    "table": "recitals",
-    "min": 500
-   },
-   {
-    "name": "guidance_documents_populated",
-    "type": "row_count_min",
-    "table": "guidance_documents",
-    "min": 10
-   },
-   {
-    "name": "definitions_populated",
-    "type": "row_count_min",
-    "table": "definitions",
-    "min": 100
-   },
-   {
-    "name": "term_bridge_populated",
-    "type": "row_count_min",
-    "table": "term_bridge",
-    "min": 1
-   },
-   {
-    "name": "provisions_source_url_complete",
-    "type": "null_count_max",
-    "table": "provisions",
-    "column": "source_url",
-    "max": 0
-   },
-   {
-    "name": "provision_versions_populated",
-    "type": "row_count_min",
-    "table": "provision_versions",
-    "min": 4000
-   },
-   {
-    "name": "recitals_source_url_complete",
-    "type": "null_count_max",
-    "table": "recitals",
-    "column": "source_url",
-    "max": 0
-   },
-   {
-    "name": "content_fts_matches",
-    "type": "fts_match_min",
-    "table": "content_fts",
-    "query": "regulation",
-    "min": 100
-   },
-   {
-    "name": "recitals_fts_matches",
-    "type": "fts_match_min",
-    "table": "recitals_fts",
-    "query": "regulation",
-    "min": 100
-   },
-   {
-    "name": "guidance_fts_matches",
-    "type": "fts_match_min",
-    "table": "guidance_sections_fts",
-    "query": "risk",
-    "min": 10
-   },
-   {
-    "name": "content_full_name_complete",
-    "type": "null_count_max",
-    "table": "content",
-    "column": "source_full_name",
-    "max": 0
-   }
-  ]
- },
- "attribution": {
-  "publisher": "Publications Office of the European Union",
-  "source_url": "https://eur-lex.europa.eu/",
-  "retrieved_at_min": "2026-05-26"
- },
- "licensing": {
-  "license_code": "EUR-Lex-Decision-2011-833",
-  "license_url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
-  "authority_kind": "official_publisher",
-  "recovery_stage": "verified",
-  "at_risk": false
- },
- "endpoints": {
-  "health_port": 8300,
-  "service_name": "ansvar-eu-regulations-mcp"
- }
+  "manifest_schema_version": "1.0.0",
+  "mcp_base_min_version": "1.9.1",
+  "identity": {
+    "name": "eu-regulations-mcp",
+    "display_name": "EU Regulations",
+    "jurisdiction": "EU",
+    "category": "law",
+    "language": "en"
+  },
+  "tier": {
+    "base_tier": "free"
+  },
+  "data": {
+    "database_sha256": "sha256:5b30b1983c1bc59ebf19d22ff836478e983ec5be6ceb247c7feb25763bf68353",
+    "snapshot_id": "sha256:5b30b1983c1bc59ebf19d22ff836478e983ec5be6ceb247c7feb25763bf68353",
+    "generated_at": "2026-06-21T00:00:00Z",
+    "database_path": "/app/data/regulations.db",
+    "recitals_enabled": true,
+    "guidance_enabled": true,
+    "version_tracking_enabled": true,
+    "definitions_enabled": true,
+    "framework_filter_enabled": true,
+    "term_bridge_enabled": true,
+    "integrity_checks": [
+      {
+        "name": "provisions_nonempty",
+        "type": "row_count_min",
+        "table": "provisions",
+        "min": 1000
+      },
+      {
+        "name": "content_matches_provisions",
+        "type": "row_count_min",
+        "table": "content",
+        "min": 1000
+      },
+      {
+        "name": "recitals_populated",
+        "type": "row_count_min",
+        "table": "recitals",
+        "min": 500
+      },
+      {
+        "name": "guidance_documents_populated",
+        "type": "row_count_min",
+        "table": "guidance_documents",
+        "min": 10
+      },
+      {
+        "name": "definitions_populated",
+        "type": "row_count_min",
+        "table": "definitions",
+        "min": 100
+      },
+      {
+        "name": "term_bridge_populated",
+        "type": "row_count_min",
+        "table": "term_bridge",
+        "min": 1
+      },
+      {
+        "name": "provisions_source_url_complete",
+        "type": "null_count_max",
+        "table": "provisions",
+        "column": "source_url",
+        "max": 0
+      },
+      {
+        "name": "provision_versions_populated",
+        "type": "row_count_min",
+        "table": "provision_versions",
+        "min": 4000
+      },
+      {
+        "name": "recitals_source_url_complete",
+        "type": "null_count_max",
+        "table": "recitals",
+        "column": "source_url",
+        "max": 0
+      },
+      {
+        "name": "content_fts_matches",
+        "type": "fts_match_min",
+        "table": "content_fts",
+        "query": "regulation",
+        "min": 100
+      },
+      {
+        "name": "recitals_fts_matches",
+        "type": "fts_match_min",
+        "table": "recitals_fts",
+        "query": "regulation",
+        "min": 100
+      },
+      {
+        "name": "guidance_fts_matches",
+        "type": "fts_match_min",
+        "table": "guidance_sections_fts",
+        "query": "risk",
+        "min": 10
+      },
+      {
+        "name": "content_full_name_complete",
+        "type": "null_count_max",
+        "table": "content",
+        "column": "source_full_name",
+        "max": 0
+      }
+    ]
+  },
+  "attribution": {
+    "publisher": "Publications Office of the European Union",
+    "source_url": "https://eur-lex.europa.eu/",
+    "retrieved_at_min": "2026-05-26"
+  },
+  "licensing": {
+    "license_code": "EUR-Lex-Decision-2011-833",
+    "license_url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+    "authority_kind": "official_publisher",
+    "recovery_stage": "verified",
+    "at_risk": false
+  },
+  "endpoints": {
+    "health_port": 8300,
+    "service_name": "ansvar-eu-regulations-mcp"
+  }
 }

@@ -1,0 +1,443 @@
+{
+  "id": "LVD",
+  "full_name": "Low Voltage Directive 2014/35/EU",
+  "celex_id": "32014L0035",
+  "effective_date": "2016-04-20",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0035",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Subject matter and scope",
+      "text": "The purpose of this Directive is to ensure that electrical equipment on the market fulfils the requirements providing for a high level of protection of health and safety of persons, and of domestic animals and property, while guaranteeing the functioning of the internal market.\n\nThis Directive shall apply to electrical equipment designed for use with a voltage rating of between 50 and 1 000 V for alternating current and between 75 and 1 500 V for direct current, other than the equipment and phenomena listed in Annex II.",
+      "chapter": "1"
+    },
+    {
+      "number": "2",
+      "title": "Definitions",
+      "text": "For the purposes of this Directive, the following definitions shall apply:\n\n(1)\n\n‘making available on the market’ means any supply of electrical equipment for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge;\n\n(2)\n\n‘placing on the market’ means the first making available of electrical equipment on the Union market;\n\n(3)\n\n‘manufacturer’ means any natural or legal person who manufactures electrical equipment or has electrical equipment designed or manufactured, and markets that equipment under his name or trade mark;\n\n(4)\n\n‘authorised representative’ means any natural or legal person established within the Union who has received a written mandate from a manufacturer to act on his behalf in relation to specified tasks;\n\n(5)\n\n‘importer’ means any natural or legal person established within the Union who places electrical equipment from a third country on the Union market;\n\n(6)\n\n‘distributor’ means any natural or legal person in the supply chain, other than the manufacturer or the importer, who makes electrical equipment available on the market;\n\n(7)\n\n‘economic operators’ means the manufacturer, the authorised representative, the importer and the distributor;\n\n(8)\n\n‘technical specification’ means a document that prescribes technical requirements to be fulfilled by an electrical equipment;\n\n(9)\n\n‘harmonised standard’ means harmonised standard as defined in point (c) of point 1 of Article 2 of Regulation (EU) No 1025/2012;\n\n(10)\n\n‘conformity assessment’ means the process demonstrating whether the safety objectives referred to in Article 3 and set out in Annex I relating to electrical equipment have been fulfilled;\n\n(11)\n\n‘recall’ means any measure aimed at achieving the return of electrical equipment that has already been made available to the end-user;\n\n(12)\n\n‘withdrawal’ means any measure aimed at preventing electrical equipment in the supply chain from being made available on the market;\n\n(13)\n\n‘Union harmonisation legislation’ means any Union legislation harmonising the conditions for the marketing of products;\n\n(14)\n\n‘CE marking’ means a marking by which the manufacturer indicates that the electrical equipment is in conformity with the applicable requirements set out in Union harmonisation legislation providing for its affixing.",
+      "chapter": "1"
+    },
+    {
+      "number": "3",
+      "title": "Making available on the market and safety objectives",
+      "text": "Electrical equipment may be made available on the Union market only if, having been constructed in accordance with good engineering practice in safety matters in force in the Union, it does not endanger the health and safety of persons and domestic animals, or property, when properly installed and maintained and used in applications for which it was made.\n\nThe principal elements of the safety objectives are listed in Annex I.",
+      "chapter": "1"
+    },
+    {
+      "number": "4",
+      "title": "Free movement",
+      "text": "The Member States shall not impede, for the aspects covered by this Directive, the making available on the market of electrical equipment which complies with this Directive.",
+      "chapter": "1"
+    },
+    {
+      "number": "5",
+      "title": "Supply of electricity",
+      "text": "In relation to electrical equipment, the Member States shall ensure that stricter safety requirements than the safety objectives referred to in Article 3 and set out in Annex I are not imposed by electricity supply bodies for connection to the grid, or for the supply of electricity to users of electrical equipment.",
+      "chapter": "2"
+    },
+    {
+      "number": "6",
+      "title": "Obligations of manufacturers",
+      "text": "1.   When placing their electrical equipment on the market, manufacturers shall ensure that it has been designed and manufactured in accordance with the safety objectives referred to in Article 3 and set out in Annex I.\n\n2.   Manufacturers shall draw up the technical documentation referred to in Annex III and carry out the conformity assessment procedure referred to in Annex III or have it carried out.\n\nWhere compliance of electrical equipment with the safety objectives referred to in Article 3 and set out in Annex I has been demonstrated by the conformity assessment procedure referred to in the first subparagraph, manufacturers shall draw up an EU declaration of conformity and affix the CE marking.\n\n3.   Manufacturers shall keep the technical documentation referred to in Annex III and the EU declaration of conformity for 10 years after the electrical equipment has been placed on the market.\n\n4.   Manufacturers shall ensure that procedures are in place for series production to remain in conformity with this Directive. Changes in product design or characteristics and changes in the harmonised standards referred to in Article 12, the international or national standards referred to in Articles 13 and 14, or in other technical specifications by reference to which conformity of electrical equipment is declared shall be adequately taken into account.\n\nWhen deemed appropriate with regard to the risks presented by electrical equipment, manufacturers shall, to protect the health and safety of consumers, carry out sample testing of electrical equipment made available on the market, investigate, and, if necessary, keep a register of complaints, of non-conforming electrical equipment and electrical equipment recalls, and shall keep distributors informed of any such monitoring.\n\n5.   Manufacturers shall ensure that electrical equipment which they have placed on the market bears a type, batch or serial number or other element allowing its identification, or, where the size or nature of the electrical equipment does not allow it, that the required information is provided on its packaging or in a document accompanying the electrical equipment.\n\n6.   Manufacturers shall indicate on the electrical equipment their name, registered trade name or registered trade mark and the postal address at which they can be contacted or, where that is not possible, on its packaging or in a document accompanying the electrical equipment. The address shall indicate a single point at which the manufacturer can be contacted. The contact details shall be in a language easily understood by end-users and market surveillance authorities.\n\n7.   Manufacturers shall ensure that the electrical equipment is accompanied by instructions and safety information in a language which can be easily understood by consumers and other end-users, as determined by the Member State concerned. Such instructions and safety information, as well as any labelling, shall be clear, understandable and intelligible.\n\n8.   Manufacturers who consider or have reason to believe that electrical equipment which they have placed on the market is not in conformity with this Directive shall immediately take the corrective measures necessary to bring that electrical equipment into conformity, to withdraw it or recall it, if appropriate. Furthermore, where the electrical equipment presents a risk, manufacturers shall immediately inform the competent national authorities of the Member States in which they made the electrical equipment available on the market to that effect, giving details, in particular, of the non-compliance and of any corrective measures taken.\n\n9.   Manufacturers shall, further to a reasoned request from a competent national authority, provide it with all the information and documentation in paper or electronic form necessary to demonstrate the conformity of the electrical equipment with this Directive, in a language which can be easily understood by that authority. They shall cooperate with that authority, at its request, on any action taken to eliminate the risks posed by electrical equipment which they have placed on the market.",
+      "chapter": "2"
+    },
+    {
+      "number": "7",
+      "title": "Authorised representatives",
+      "text": "1.   A manufacturer may, by a written mandate, appoint an authorised representative.\n\nThe obligations laid down in Article 6(1) and the obligation to draw up technical documentation referred to in Article 6(2) shall not form part of the authorised representative’s mandate.\n\n2.   An authorised representative shall perform the tasks specified in the mandate received from the manufacturer. The mandate shall allow the authorised representative to do at least the following:\n\n(a)\n\nkeep the EU declaration of conformity and the technical documentation at the disposal of national market surveillance authorities for 10 years after the electrical equipment has been placed on the market;\n\n(b)\n\nfurther to a reasoned request from a competent national authority, provide that authority with all the information and documentation necessary to demonstrate the conformity of electrical equipment;\n\n(c)\n\ncooperate with the competent national authorities, at their request, on any action taken to eliminate the risks posed by electrical equipment covered by the authorised representative’s mandate.",
+      "chapter": "2"
+    },
+    {
+      "number": "8",
+      "title": "Obligations of importers",
+      "text": "1.   Importers shall place only compliant electrical equipment on the market.\n\n2.   Before placing electrical equipment on the market importers shall ensure that the appropriate conformity assessment procedure has been carried out by the manufacturer. They shall ensure that the manufacturer has drawn up the technical documentation, that the electrical equipment bears the CE marking and is accompanied by the required documents, and that the manufacturer has complied with the requirements set out in Article 6(5) and (6).\n\nWhere an importer considers or has reason to believe that electrical equipment is not in conformity with the safety objectives referred to in Article 3 and set out in Annex I, he shall not place the electrical equipment on the market until it has been brought into conformity. Furthermore, where the electrical equipment presents a risk, the importer shall inform the manufacturer and the market surveillance authorities to that effect.\n\n3.   Importers shall indicate on the electrical equipment their name, registered trade name or registered trade mark and the postal address at which they can be contacted or, where that is not possible, on its packaging or in a document accompanying the electrical equipment. The contact details shall be in a language easily understood by end-users and market surveillance authorities.\n\n4.   Importers shall ensure that the electrical equipment is accompanied by instructions and safety information in a language which can be easily understood by consumers and other end-users, as determined by the Member State concerned.\n\n5.   Importers shall ensure that, while electrical equipment is under their responsibility, its storage or transport conditions do not jeopardise its compliance with the safety objectives referred to in Article 3 and set out in Annex I.\n\n6.   When deemed appropriate with regard to the risks presented by electrical equipment, importers shall, to protect the health and safety of consumers, carry out sample testing of electrical equipment made available on the market, investigate and, if necessary, keep a register of complaints, of non-conforming electrical equipment and electrical equipment recalls, and shall keep distributors informed of any such monitoring.\n\n7.   Importers who consider or have reason to believe that electrical equipment which they have placed on the market is not in conformity with this Directive shall immediately take the corrective measures necessary to bring that electrical equipment into conformity, to withdraw it or recall it, if appropriate. Furthermore, where the electrical equipment presents a risk, importers shall immediately inform the competent national authorities of the Member States in which they made the electrical equipment available on the market to that effect, giving details, in particular, of the non-compliance and of any corrective measures taken.\n\n8.   Importers shall, for 10 years after the electrical equipment has been placed on the market, keep a copy of the EU declaration of conformity at the disposal of the market surveillance authorities and ensure that the technical documentation can be made available to those authorities, upon request.\n\n9.   Importers shall, further to a reasoned request from a competent national authority, provide it with all the information and documentation in paper or electronic form necessary to demonstrate the conformity of electrical equipment in a language which can be easily understood by that authority. They shall cooperate with that authority, at its request, on any action taken to eliminate the risks posed by electrical equipment which they have placed on the market.",
+      "chapter": "2"
+    },
+    {
+      "number": "9",
+      "title": "Obligations of distributors",
+      "text": "1.   When making electrical equipment available on the market distributors shall act with due care in relation to the requirements of this Directive.\n\n2.   Before making electrical equipment available on the market distributors shall verify that the electrical equipment bears the CE marking, that it is accompanied by the required documents and by instructions and safety information in a language which can be easily understood by consumers and other end-users in the Member State in which the electrical equipment is to be made available on the market, and that the manufacturer and the importer have complied with the requirements set out in Article 6(5) and (6) and Article 8(3) respectively.\n\nWhere a distributor considers or has reason to believe that electrical equipment is not in conformity with the safety objectives referred to in Article 3 and set out in Annex I, he shall not make the electrical equipment available on the market until it has been brought into conformity. Furthermore, where the electrical equipment presents a risk, the distributor shall inform the manufacturer or the importer to that effect as well as the market surveillance authorities.\n\n3.   Distributors shall ensure that, while electrical equipment is under their responsibility, its storage or transport conditions do not jeopardise its compliance with the safety objectives referred to in Article 3 and set out in Annex I.\n\n4.   Distributors who consider or have reason to believe that electrical equipment which they have made available on the market is not in conformity with this Directive shall make sure that the corrective measures necessary to bring that equipment into conformity, to withdraw it or recall it, if appropriate, are taken. Furthermore, where the electrical equipment presents a risk, distributors shall immediately inform the competent national authorities of the Member States in which they made the electrical equipment available on the market to that effect, giving details, in particular, of the non-compliance and of any corrective measures taken.\n\n5.   Distributors shall, further to a reasoned request from a competent national authority, provide it with all the information and documentation in paper or electronic form necessary to demonstrate the conformity of electrical equipment. They shall cooperate with that authority, at its request, on any action taken to eliminate the risks posed by electrical equipment which they have made available on the market.",
+      "chapter": "2"
+    },
+    {
+      "number": "10",
+      "title": "Cases in which obligations of manufacturers apply to importers and distributors",
+      "text": "An importer or distributor shall be considered a manufacturer for the purposes of this Directive and he shall be subject to the obligations of the manufacturer under Article 6, where he places electrical equipment on the market under his name or trade mark or modifies electrical equipment already placed on the market in such a way that compliance with this Directive may be affected.",
+      "chapter": "2"
+    },
+    {
+      "number": "11",
+      "title": "Identification of economic operators",
+      "text": "Economic operators shall, on request, identify the following to the market surveillance authorities:\n\n(a)\n\nany economic operator who has supplied them with electrical equipment;\n\n(b)\n\nany economic operator to whom they have supplied electrical equipment.\n\nEconomic operators shall be able to present the information referred to in the first paragraph for 10 years after they have been supplied with the electrical equipment and for 10 years after they have supplied the electrical equipment.",
+      "chapter": "3"
+    },
+    {
+      "number": "12",
+      "title": "Presumption of conformity on the basis of harmonised standards",
+      "text": "Electrical equipment which is in conformity with harmonised standards or parts thereof the references of which have been published in the Official Journal of the European Union shall be presumed to be in conformity with the safety objectives referred to in Article 3 and set out in Annex I covered by those standards or parts thereof.",
+      "chapter": "3"
+    },
+    {
+      "number": "13",
+      "title": "Presumption of conformity on the basis of international standards",
+      "text": "1.   Where harmonised standards referred to in Article 12 have not been drawn up and published, the Member States shall take all appropriate measures to ensure that, for the purposes of making available on the market or free movement as referred to in Articles 3 and 4 respectively, their competent authorities shall also regard as complying with the safety objectives referred to in Article 3 and set out in Annex I electrical equipment which complies with the safety provisions of the international standards set out by the International Electrotechnical Commission (IEC) in respect of which the publication procedure laid down in paragraphs 2 and 3 of this Article has been applied.\n\n2.   The safety provisions referred to in paragraph 1 shall be notified to the Member States by the Commission. The Commission, after consulting the Member States, shall state the safety provisions and in particular the variants thereof which it recommends to be published.\n\n3.   The Member States shall inform the Commission within a period of three months of any objections they may have to the safety provisions notified in accordance with paragraph 2, stating the safety grounds on account of which the provisions should not be recognised.\n\nFor purposes of information the references of the safety provisions against which no objection has been raised shall be published in the Official Journal of the European Union.",
+      "chapter": "3"
+    },
+    {
+      "number": "14",
+      "title": "Presumption of conformity on the basis of national standards",
+      "text": "Where harmonised standards referred to in Article 12 have not been drawn up and published and international standards referred to in Article 13 have not been published, the Member States shall take all appropriate measures to ensure that, for the purpose of making available on the market or free movement as referred to in Articles 3 and 4 respectively, their competent authorities shall also regard as complying with the safety objectives referred to in Article 3 and set out in Annex I electrical equipment manufactured in accordance with the safety provisions of the standards in force in the Member State of manufacture, if it ensures a safety level equivalent to that required in their own territory.",
+      "chapter": "3"
+    },
+    {
+      "number": "15",
+      "title": "EU declaration of conformity",
+      "text": "1.   The EU declaration of conformity shall state that the fulfilment of the safety objectives referred to in Article 3 and set out in Annex I has been demonstrated.\n\n2.   The EU declaration of conformity shall have the model structure set out in Annex IV, shall contain the elements specified in Module A as set out in Annex III and shall be continuously updated. It shall be translated into the language or languages required by the Member State in which the electrical equipment is placed or made available on the market.\n\n3.   Where electrical equipment is subject to more than one Union act requiring an EU declaration of conformity, a single EU declaration of conformity shall be drawn up in respect of all such Union acts. That declaration shall contain the identification of the Union acts concerned including their publication references.\n\n4.   By drawing up the EU declaration of conformity, the manufacturer shall assume responsibility for the compliance of the electrical equipment with the requirements laid down in this Directive.",
+      "chapter": "3"
+    },
+    {
+      "number": "16",
+      "title": "General principles of the CE marking",
+      "text": "The CE marking shall be subject to the general principles set out in Article 30 of Regulation (EC) No 765/2008.",
+      "chapter": "3"
+    },
+    {
+      "number": "17",
+      "title": "Rules and conditions for affixing the CE marking",
+      "text": "1.   The CE marking shall be affixed visibly, legibly and indelibly to the electrical equipment or to its data plate. Where that is not possible or not warranted on account of the nature of the electrical equipment, it shall be affixed to the packaging and to the accompanying documents.\n\n2.   The CE marking shall be affixed before the electrical equipment is placed on the market.\n\n3.   Member States shall build upon existing mechanisms to ensure correct application of the regime governing the CE marking and shall take appropriate action in the event of improper use of that marking.",
+      "chapter": "4"
+    },
+    {
+      "number": "18",
+      "title": "Union market surveillance and control of electrical equipment entering the Union market",
+      "text": "Article 15(3) and Articles 16 to 29 of Regulation (EC) No 765/2008 shall apply to electrical equipment.",
+      "chapter": "4"
+    },
+    {
+      "number": "19",
+      "title": "Procedure for dealing with electrical equipment presenting a risk at national level",
+      "text": "1.   Where the market surveillance authorities of one Member State have sufficient reason to believe that electrical equipment covered by this Directive presents a risk to the health or safety of persons or domestic animals, or to property, they shall carry out an evaluation in relation to the electrical equipment concerned covering all relevant requirements laid down in this Directive. The relevant economic operators shall cooperate as necessary with the market surveillance authorities for that purpose.\n\nWhere, in the course of the evaluation referred to in the first subparagraph, the market surveillance authorities find that the electrical equipment does not comply with the requirements laid down in this Directive, they shall without delay require the relevant economic operator to take all appropriate corrective actions to bring the electrical equipment into compliance with those requirements, to withdraw the electrical equipment from the market, or to recall it within a reasonable period, commensurate with the nature of the risk, as they may prescribe.\n\nArticle 21 of Regulation (EC) No 765/2008 shall apply to the measures referred to in the second subparagraph of this paragraph.\n\n2.   Where the market surveillance authorities consider that non-compliance is not restricted to their national territory, they shall inform the Commission and the other Member States of the results of the evaluation and of the actions which they have required the economic operator to take.\n\n3.   The economic operator shall ensure that all appropriate corrective action is taken in respect of electrical equipment concerned that it has made available on the market throughout the Union.\n\n4.   Where the relevant economic operator does not take adequate corrective action within the period referred to in the second subparagraph of paragraph 1, the market surveillance authorities shall take all appropriate provisional measures to prohibit or restrict the electrical equipment’s being made available on their national market, to withdraw the electrical equipment from that market or to recall it.\n\nThe market surveillance authorities shall inform the Commission and the other Member States, without delay, of those measures.\n\n5.   The information referred to in the second subparagraph of paragraph 4 shall include all available details, in particular the data necessary for the identification of the non-compliant electrical equipment, the origin of the electrical equipment, the nature of the non-compliance alleged and the risk involved, the nature and duration of the national measures taken and the arguments put forward by the relevant economic operator. In particular, the market surveillance authorities shall indicate whether the non-compliance is due to either of the following:\n\n(a)\n\nfailure of the electrical equipment to meet the safety objectives referred to in Article 3 and set out in Annex I relating to the health or safety of persons or domestic animals, or to property; or\n\n(b)\n\nshortcomings in the harmonised standards referred to in Article 12 or in the international or national standards referred to in Articles 13 and 14 conferring a presumption of conformity.\n\n6.   Member States other than the Member State initiating the procedure under this Article shall without delay inform the Commission and the other Member States of any measures adopted and of any additional information at their disposal relating to the non-compliance of the electrical equipment concerned, and, in the event of disagreement with the adopted national measure, of their objections.\n\n7.   Where, within three months of receipt of the information referred to in the second subparagraph of paragraph 4, no objection has been raised by either a Member State or the Commission in respect of a provisional measure taken by a Member State, that measure shall be deemed justified.\n\n8.   Member States shall ensure that appropriate restrictive measures are taken in respect of the electrical equipment concerned such as withdrawal of the electrical equipment from the market, without delay.",
+      "chapter": "4"
+    },
+    {
+      "number": "20",
+      "title": "Union safeguard procedure",
+      "text": "1.   Where, on completion of the procedure set out in Article 19(3) and (4), objections are raised against a measure taken by a Member State, or where the Commission considers a national measure to be contrary to Union legislation, the Commission shall without delay enter into consultation with the Member States and the relevant economic operator or operators and shall evaluate the national measure. On the basis of the results of that evaluation, the Commission shall adopt an implementing act determining whether the national measure is justified or not.\n\nThe Commission shall address its decision to all Member States and shall immediately communicate it to them and the relevant economic operator or operators.\n\n2.   If the national measure is considered justified, all Member States shall take the necessary measures to ensure that the non-compliant electrical equipment is withdrawn from their market, and shall inform the Commission accordingly. If the national measure is considered unjustified, the Member State concerned shall withdraw that measure.\n\n3.   Where the national measure is considered justified and the non-compliance of the electrical equipment is attributed to shortcomings in the harmonised standards referred to in point (b) of Article 19(5) of this Directive, the Commission shall apply the procedure provided for in Article 11 of Regulation (EU) No 1025/2012.",
+      "chapter": "4"
+    },
+    {
+      "number": "21",
+      "title": "Compliant electrical equipment which presents a risk",
+      "text": "1.   Where, having carried out an evaluation under Article 19(1), a Member State finds that although electrical equipment is in compliance with this Directive, it presents a risk to the health or safety of persons, or to domestic animals or to property it shall require the relevant economic operator to take all appropriate measures to ensure that the electrical equipment concerned, when placed on the market, no longer presents that risk, to withdraw the electrical equipment from the market or to recall it within a reasonable period, commensurate with the nature of the risk, as it may prescribe.\n\n2.   The economic operator shall ensure that corrective action is taken in respect of all electrical equipment concerned that he has made available on the market throughout the Union.\n\n3.   The Member State shall immediately inform the Commission and the other Member States. That information shall include all available details, in particular the data necessary for the identification of the electrical equipment concerned, the origin and the supply chain of the electrical equipment, the nature of the risk involved and the nature and duration of the national measures taken.\n\n4.   The Commission shall without delay enter into consultation with the Member States and the relevant economic operator or operators and shall evaluate the national measures taken. On the basis of the results of that evaluation, the Commission shall decide by means of implementing acts whether the national measure is justified or not, and where necessary, propose appropriate measures.\n\nThe implementing acts referred to in the first subparagraph of this paragraph shall be adopted in accordance with the examination procedure referred to in Article 23(2).\n\nOn duly justified imperative grounds of urgency relating to the protection of health and safety of persons, or of domestic animals or of property, the Commission shall adopt immediately applicable implementing acts in accordance with the procedure referred to in Article 23(3).\n\n5.   The Commission shall address its decision to all Member States and shall immediately communicate it to them and the relevant economic operator or operators.",
+      "chapter": "4"
+    },
+    {
+      "number": "22",
+      "title": "Formal non-compliance",
+      "text": "1.   Without prejudice to Article 19, where a Member State makes one of the following findings, it shall require the relevant economic operator to put an end to the non-compliance concerned:\n\n(a)\n\nthe CE marking has been affixed in violation of Article 30 of Regulation (EC) No 765/2008 or of Article 17 of this Directive;\n\n(b)\n\nthe CE marking has not been affixed;\n\n(c)\n\nthe EU declaration of conformity has not been drawn up;\n\n(d)\n\nthe EU declaration of conformity has not been drawn up correctly;\n\n(e)\n\ntechnical documentation is either not available or not complete;\n\n(f)\n\nthe information referred to in Article 6(6) or Article 8(3) is absent, false or incomplete;\n\n(g)\n\nany other administrative requirement provided for in Article 6 or Article 8 is not fulfilled.\n\n2.   Where the non-compliance referred to in paragraph 1 persists, the Member State concerned shall take all appropriate measures to restrict or prohibit the electrical equipment being made available on the market or ensure that it is recalled or withdrawn from the market.",
+      "chapter": "5"
+    },
+    {
+      "number": "23",
+      "title": "Committee procedure",
+      "text": "1.   The Commission shall be assisted by the Committee on Electrical Equipment. That committee shall be a committee within the meaning of Regulation (EU) No 182/2011.\n\n2.   Where reference is made to this paragraph, Article 5 of Regulation (EU) No 182/2011 shall apply.\n\n3.   Where reference is made to this paragraph, Article 8 of Regulation (EU) No 182/2011, in conjunction with Article 5 thereof, shall apply.\n\n4.   The committee shall be consulted by the Commission on any matter for which consultation of sectoral experts is required by Regulation (EU) No 1025/2012 or by any other Union legislation.\n\nThe committee may furthermore examine any other matter concerning the application of this Directive raised either by its chair or by a representative of a Member State in accordance with its rules of procedure.",
+      "chapter": "5"
+    },
+    {
+      "number": "24",
+      "title": "Penalties",
+      "text": "Member States shall lay down rules on penalties, applicable to infringements by economic operators of the provisions of national law adopted pursuant to this Directive and shall take all measures necessary to ensure that they are enforced. Such rules may include criminal penalties for serious infringements.\n\nThe penalties provided for shall be effective, proportionate and dissuasive.",
+      "chapter": "5"
+    },
+    {
+      "number": "25",
+      "title": "Transitional provisions",
+      "text": "Member States shall not impede the making available on the market of electrical equipment covered by Directive 2006/95/EC which is in conformity with that Directive and which was placed on the market before 20 April 2016.",
+      "chapter": "5"
+    },
+    {
+      "number": "26",
+      "title": "Transposition",
+      "text": "1.   Member States shall adopt and publish, by 19 April 2016, the laws, regulations and administrative provisions necessary to comply with Article 2, the first paragraph of Article 3, Article 4, Articles 6 to 12, Article 13(1), Articles 14 to 25 and Annexes II, III and IV. They shall forthwith communicate the text of those measures to the Commission.\n\nThey shall apply those measures from 20 April 2016.\n\nWhen Member States adopt those measures, they shall contain a reference to this Directive or be accompanied by such a reference on the occasion of their official publication. They shall also include a statement that references in existing laws, regulations and administrative provisions to the Directive repealed by this Directive shall be construed as references to this Directive. Member States shall determine how such reference is to be made and how that statement is to be formulated.\n\n2.   Member States shall communicate to the Commission the texts of the main provisions of national law which they adopt in the field covered by this Directive.",
+      "chapter": "5"
+    },
+    {
+      "number": "27",
+      "title": "Repeal",
+      "text": "Directive 2006/95/EC is repealed with effect from 20 April 2016, without prejudice to the obligations of the Member States relating to the time-limits for transposition into national law and the dates of application of the Directives set out in Annex V.\n\nReferences to the repealed Directive shall be construed as references to this Directive and shall be read in accordance with the correlation table in Annex VI.",
+      "chapter": "5"
+    },
+    {
+      "number": "28",
+      "title": "Entry into force",
+      "text": "This Directive shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nArticle 1, the second paragraph of Article 3, Article 5, Article 13(2) and (3) and Annexes I, V and VI shall apply from 20 April 2016.",
+      "chapter": "5"
+    },
+    {
+      "number": "29",
+      "title": "Addressees",
+      "text": "This Directive is addressed to the Member States.",
+      "chapter": "5"
+    },
+    {
+      "number": "Annex I",
+      "title": "PRINCIPAL ELEMENTS OF THE SAFETY OBJECTIVES FOR ELECTRICAL EQUIPMENT DESIGNED FOR USE WITHIN CERTAIN VOLTAGE LIMITS",
+      "text": "1.   General conditions\n(a)\nthe essential characteristics, the recognition and observance of which will ensure that electrical equipment will be used safely and in applications for which it was made, shall be marked on the electrical equipment, or, if this is not possible, on an accompanying document;\n(b)\nthe electrical equipment, together with its component parts, shall be made in such a way as to ensure that it can be safely and properly assembled and connected;\n(c)\nthe electrical equipment shall be so designed and manufactured as to ensure that protection against the hazards set out in points 2 and 3 is assured, providing that the equipment is used in applications for which it was made and is adequately maintained.\n2.   Protection against hazards arising from the electrical equipment\nMeasures of a technical nature shall be laid down in accordance with point 1, in order to ensure that:\n(a)\npersons and domestic animals are adequately protected against the danger of physical injury or other harm which might be caused by direct or indirect contact;\n(b)\ntemperatures, arcs or radiation which would cause a danger, are not produced;\n(c)\npersons, domestic animals and property are adequately protected against non-electrical dangers caused by the electrical equipment which are revealed by experience;\n(d)\nthe insulation is suitable for foreseeable conditions.\n3.   Protection against hazards which may be caused by external influences on the electrical equipment\nTechnical measures shall be laid down in accordance with point 1, in order to ensure that the electrical equipment:\n(a)\nmeets the expected mechanical requirements in such a way that persons, domestic animals and property are not endangered;\n(b)\nis resistant to non-mechanical influences in expected environmental conditions, in such a way that persons, domestic animals and property are not endangered;\n(c)\ndoes not endanger persons, domestic animals and property in foreseeable conditions of overload."
+    },
+    {
+      "number": "Annex II",
+      "title": "EQUIPMENT AND PHENOMENA OUTSIDE THE SCOPE OF THIS DIRECTIVE",
+      "text": "Electrical equipment for use in an explosive atmosphere\nElectrical equipment for radiology and medical purposes\nElectrical parts for goods and passenger lifts\nElectricity meters\nPlugs and socket outlets for domestic use\nElectric fence controllers\nRadio-electrical interference\nSpecialised electrical equipment, for use on ships, aircraft or railways, which complies with the safety provisions drawn up by international bodies in which the Member States participate.\nCustom built evaluation kits destined for professionals to be used solely at research and development facilities for such purposes."
+    },
+    {
+      "number": "Annex III",
+      "title": "MODULE A",
+      "text": "Internal production control\n1.   Internal production control is the conformity assessment procedure whereby the manufacturer fulfils the obligations laid down in points 2, 3 and 4, and ensures and declares on his sole responsibility that the electrical equipment concerned satisfy the requirements of this Directive that apply to it.\n2.   Technical documentation\nThe manufacturer shall establish the technical documentation. The documentation shall make it possible to assess the electrical equipment’s conformity to the relevant requirements, and shall include an adequate analysis and assessment of the risk(s). The technical documentation shall specify the applicable requirements and cover, as far as relevant for the assessment, the design, manufacture and operation of the electrical equipment. The technical documentation shall, where applicable, contain at least the following elements:\n(a)\na general description of the electrical equipment;\n(b)\nconceptual design and manufacturing drawings and schemes of components, sub-assemblies, circuits, etc.;\n(c)\ndescriptions and explanations necessary for the understanding of those drawings and schemes and the operation of the electrical equipment;\n(d)\na list of the harmonised standards applied in full or in part the references of which have been published in the Official Journal of the European Union or international or national standards referred to in Articles 13 and 14 and, where those harmonised standards or international or national standards have not been applied, descriptions of the solutions adopted to meet the safety objectives of this Directive, including a list of other relevant technical specifications applied. In the event of partly applied harmonised standards or international or national standards referred to in Articles 13 and 14, the technical documentation shall specify the parts which have been applied;\n(e)\nresults of design calculations made, examinations carried out, etc.; and\n(f)\ntest reports.\n3.   Manufacturing\nThe manufacturer shall take all measures necessary so that the manufacturing process and its monitoring ensure compliance of the manufactured electrical equipment with the technical documentation referred to in point 2 and with the requirements of this Directive that apply to it.\n4.   CE marking and EU declaration of conformity\n4.1.\nThe manufacturer shall affix the CE marking to each individual electrical equipment that satisfies the applicable requirements of this Directive.\n4.2.\nThe manufacturer shall draw up a written EU declaration of conformity for a product model and keep it together with the technical documentation at the disposal of the national market surveillance authorities for 10 years after the electrical equipment has been placed on the market. The EU declaration of conformity shall identify the electrical equipment for which it has been drawn up.\nA copy of the EU declaration of conformity shall be made available to the relevant market surveillance authorities upon request.\n5.   Authorised representative\nThe manufacturer’s obligations set out in point 4 may be fulfilled by his authorised representative, on his behalf and under his responsibility, provided that they are specified in the mandate."
+    },
+    {
+      "number": "Annex IV",
+      "title": "EU DECLARATION OF CONFORMITY (No XXXX) (1)",
+      "text": "1.\nProduct model/product (product, type, batch or serial number):\n2.\nName and address of the manufacturer or his authorised representative:\n3.\nThis declaration of conformity is issued under the sole responsibility of the manufacturer.\n4.\nObject of the declaration (identification of electrical equipment allowing traceability; it may include a colour image of sufficient clarity where necessary for the identification of the electrical equipment):\n5.\nThe object of the declaration described above is in conformity with the relevant Union harmonisation legislation:\n6.\nReferences to the relevant harmonised standards used or references to the other technical specifications in relation to which conformity is declared:\n7.\nAdditional information:\nSigned for and on behalf of:\n(place and date of issue):\n(name, function) (signature):\n(1)  It is optional for the manufacturer to assign a number to the declaration of conformity."
+    },
+    {
+      "number": "Annex V",
+      "title": "Time-limits for transposition into national law and dates of application of the Directives set out in Part B of Annex V to Directive 2006/95/EC",
+      "text": "(referred to in Article 27)\nDirective\nTime-limit for transposition\nDate of application\n73/23/EEC\n21 August 1974 (1)\n—\n93/68/EEC\n1 July 1994\n1 January 1995 (2)\n(1)  In the case of Denmark the time-limit was extended to five years, i.e. 21 February 1978. See Article 13(1) of Directive 73/23/EEC.\n(2)  Until 1 January 1997 Member States had to allow the placing on the market and the bringing into service of products which complied with the marking arrangements in force before 1 January 1995. See Article 14(2) of Directive 93/68/EEC."
+    },
+    {
+      "number": "Annex VI",
+      "title": "CORRELATION TABLE",
+      "text": "Directive 2006/95/EC\nThis Directive\nArticle 1\nSecond paragraph of Article 1\nArticle 2\nArticle 3\nArticle 3\nArticle 4\nArticle 4\nArticle 5\nArticle 5\nArticle 12\nArticle 6\nArticle 13\nArticle 7\nArticle 14\nArticle 8(1)\nArticles 16 and 17\nArticle 8(2)\n—\nArticle 8(3)\n—\nArticle 9\nArticles 18 to 20\nArticle 10\nArticles 16 and 17\nArticle 11\n—\nArticle 12\n—\nArticle 13\nArticle 26(2)\nArticle 14\nArticle 27\nArticle 15\nArticle 28\nAnnex I\nAnnex I\nAnnex II\nAnnex II\nAnnex III\nArticles 15 and 16 and Annex IV\nAnnex IV\nAnnex III\nAnnex V\nAnnex V\nSTATEMENT OF THE EUROPEAN PARLIAMENT\nThe European Parliament considers that only when and in so far as implementing acts in the sense of Regulation (EU) No 182/2011 are discussed in meetings of committees, can the latter be considered as ‘comitology committees’ within the meaning of Annex I to the Framework Agreement on the relations between the European Parliament and the European Commission. Meetings of committees thus fall within the scope of point 15 of the Framework Agreement when and insofar as other issues are discussed."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "making available on the market",
+      "definition": "any supply of electrical equipment for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge;",
+      "article": "2"
+    },
+    {
+      "term": "placing on the market",
+      "definition": "the first making available of electrical equipment on the Union market;",
+      "article": "2"
+    },
+    {
+      "term": "manufacturer",
+      "definition": "any natural or legal person who manufactures electrical equipment or has electrical equipment designed or manufactured, and markets that equipment under his name or trade mark;",
+      "article": "2"
+    },
+    {
+      "term": "authorised representative",
+      "definition": "any natural or legal person established within the Union who has received a written mandate from a manufacturer to act on his behalf in relation to specified tasks;",
+      "article": "2"
+    },
+    {
+      "term": "importer",
+      "definition": "any natural or legal person established within the Union who places electrical equipment from a third country on the Union market;",
+      "article": "2"
+    },
+    {
+      "term": "distributor",
+      "definition": "any natural or legal person in the supply chain, other than the manufacturer or the importer, who makes electrical equipment available on the market;",
+      "article": "2"
+    },
+    {
+      "term": "economic operators",
+      "definition": "the manufacturer, the authorised representative, the importer and the distributor;",
+      "article": "2"
+    },
+    {
+      "term": "technical specification",
+      "definition": "a document that prescribes technical requirements to be fulfilled by an electrical equipment;",
+      "article": "2"
+    },
+    {
+      "term": "harmonised standard",
+      "definition": "harmonised standard as defined in point (c) of point 1 of Article 2 of Regulation (EU) No 1025/2012;",
+      "article": "2"
+    },
+    {
+      "term": "conformity assessment",
+      "definition": "the process demonstrating whether the safety objectives referred to in Article 3 and set out in Annex I relating to electrical equipment have been fulfilled;",
+      "article": "2"
+    },
+    {
+      "term": "recall",
+      "definition": "any measure aimed at achieving the return of electrical equipment that has already been made available to the end-user;",
+      "article": "2"
+    },
+    {
+      "term": "withdrawal",
+      "definition": "any measure aimed at preventing electrical equipment in the supply chain from being made available on the market;",
+      "article": "2"
+    },
+    {
+      "term": "union harmonisation legislation",
+      "definition": "any Union legislation harmonising the conditions for the marketing of products;",
+      "article": "2"
+    },
+    {
+      "term": "ce marking",
+      "definition": "a marking by which the manufacturer indicates that the electrical equipment is in conformity with the applicable requirements set out in Union harmonisation legislation providing for its affixing.",
+      "article": "2"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "A number of amendments are to be made to Directive 2006/95/EC of the European Parliament and of the Council of 12 December 2006 on the harmonisation of the laws of Member States relating to electrical equipment designed for use within certain voltage limits (3). In the interests of clarity, that Directive should be recast."
+    },
+    {
+      "recital_number": 2,
+      "text": "Regulation (EC) No 765/2008 of the European Parliament and of the Council of 9 July 2008 setting out the requirements for accreditation and market surveillance relating to the marketing of products (4) lays down rules on the accreditation of conformity assessment bodies, provides a framework for the market surveillance of products and for controls on products from third countries, and lays down the general principles of the CE marking."
+    },
+    {
+      "recital_number": 3,
+      "text": "Decision No 768/2008/EC of the European Parliament and of the Council of 9 July 2008 on a common framework for the marketing of products (5) lays down common principles and reference provisions intended to apply across sectoral legislation in order to provide a coherent basis for revision or recasts of that legislation. Directive 2006/95/EC should therefore be adapted to that Decision."
+    },
+    {
+      "recital_number": 4,
+      "text": "This Directive covers electrical equipment designed for use within certain voltage limits which is new to the Union market when it is placed on the market; that is to say it is either new electrical equipment made by a manufacturer established in the Union or electrical equipment, whether new or second-hand, imported from a third country."
+    },
+    {
+      "recital_number": 5,
+      "text": "This Directive should apply to all forms of supply, including distance selling."
+    },
+    {
+      "recital_number": 6,
+      "text": "Economic operators should be responsible for the compliance of electrical equipment with this Directive, in relation to their respective roles in the supply chain, so as to ensure a high level of protection of public interests, such as health and safety of persons, of domestic animals and property, and to guarantee fair competition on the Union market."
+    },
+    {
+      "recital_number": 7,
+      "text": "All economic operators intervening in the supply and distribution chain should take appropriate measures to ensure that they only make available on the market electrical equipment which is in conformity with this Directive. It is necessary to provide for a clear and proportionate distribution of obligations which correspond to the role of each economic operator in the supply and distribution chain."
+    },
+    {
+      "recital_number": 8,
+      "text": "In order to facilitate communication between economic operators, market surveillance authorities and consumers, Member States should encourage economic operators to include a website address in addition to the postal address."
+    },
+    {
+      "recital_number": 9,
+      "text": "The manufacturer, having detailed knowledge of the design and production process, is best placed to carry out the conformity assessment procedure. Conformity assessment should therefore remain solely the obligation of the manufacturer. There is no conformity assessment procedure in this Directive which requires the intervention of a notified body."
+    },
+    {
+      "recital_number": 10,
+      "text": "It is necessary to ensure that electrical equipment from third countries entering the Union market comply with this Directive, and in particular that appropriate conformity assessment procedures have been carried out by manufacturers with regard to that electrical equipment. Provision should therefore be made for importers to make sure that electrical equipment they place on the market comply with the requirements of this Directive and that they do not place on the market electrical equipment which does not comply with such requirements or present a risk. Provision should also be made for importers to make sure that conformity assessment procedures have been carried out and that marking of electrical equipment and documentation drawn up by manufacturers are available for inspection by the competent national authorities."
+    },
+    {
+      "recital_number": 11,
+      "text": "When placing electrical equipment on the market, every importer should indicate on the electrical equipment his name, registered trade name or registered trade mark and the postal address at which he can be contacted. Exceptions should be provided for in cases where the size or nature of the electrical equipment does not allow it. This includes cases where the importer would have to open the packaging to put his name and address on the electrical equipment."
+    },
+    {
+      "recital_number": 12,
+      "text": "The distributor makes electrical equipment available on the market after it has been placed on the market by the manufacturer or the importer and should act with due care to ensure that its handling of electrical equipment does not adversely affect the compliance of the electrical equipment."
+    },
+    {
+      "recital_number": 13,
+      "text": "Any economic operator that either places electrical equipment on the market under his own name or trade mark or modifies electrical equipment in such a way that compliance with this Directive may be affected should be considered to be the manufacturer and should assume the obligations of the manufacturer."
+    },
+    {
+      "recital_number": 14,
+      "text": "Distributors and importers, being close to the market place, should be involved in market surveillance tasks carried out by the competent national authorities, and should be prepared to participate actively, providing those authorities with all necessary information relating to the electrical equipment concerned."
+    },
+    {
+      "recital_number": 15,
+      "text": "Ensuring traceability of electrical equipment throughout the whole supply chain helps to make market surveillance simpler and more efficient. An efficient traceability system facilitates market surveillance authorities’ task of tracing economic operators who made non-compliant electrical equipment available on the market. When keeping the information required under this Directive for the identification of other economic operators, economic operators should not be required to update such information in respect of other economic operators who have either supplied them with electrical equipment or to whom they have supplied electrical equipment."
+    },
+    {
+      "recital_number": 16,
+      "text": "This Directive should be limited to the expression of the safety objectives. In order to facilitate conformity assessment with those objectives it is necessary to provide for a presumption of conformity for electrical equipment which is in conformity with harmonised standards that are adopted in accordance with Regulation (EU) No 1025/2012 of the European Parliament and of the Council of 25 October 2012 on European Standardisation (6) for the purpose of expressing detailed technical specifications of those objectives."
+    },
+    {
+      "recital_number": 17,
+      "text": "Regulation (EU) No 1025/2012 provides for a procedure for objections to harmonised standards where those standards do not entirely satisfy the safety objectives set out in this Directive."
+    },
+    {
+      "recital_number": 18,
+      "text": "The harmonised standards relevant to this Directive should also take into account the United Nations Convention on the Rights of Persons with Disabilities (7)."
+    },
+    {
+      "recital_number": 19,
+      "text": "The free movement of electrical equipment for which harmonised standards do not exist should be achieved by applying the safety provisions of the international standards laid down by the International Electrotechnical Commission or by applying national standards."
+    },
+    {
+      "recital_number": 20,
+      "text": "In order to enable economic operators to demonstrate and the competent authorities to ensure that electrical equipment made available on the market is in conformity with the safety objectives it is necessary to provide for conformity assessment procedures. Decision No 768/2008/EC establishes modules for conformity assessment procedures, which include procedures from the least to the most stringent, in proportion to the level of risk involved and the level of safety required. In order to ensure inter-sectoral coherence and to avoid ad-hoc variants, conformity assessment procedures should be chosen from among those modules."
+    },
+    {
+      "recital_number": 21,
+      "text": "Manufacturers should draw up an EU declaration of conformity to provide information required under this Directive on the conformity of electrical equipment with this Directive and of other relevant Union harmonisation legislation."
+    },
+    {
+      "recital_number": 22,
+      "text": "To ensure effective access to information for market surveillance purposes, the information required to identify all applicable Union acts should be available in a single EU declaration of conformity. In order to reduce the administrative burden on economic operators, that single EU declaration of conformity may be a dossier made up of relevant individual declarations of conformity."
+    },
+    {
+      "recital_number": 23,
+      "text": "The CE marking, indicating the conformity of electrical equipment, is the visible consequence of a whole process comprising conformity assessment in a broad sense. General principles governing the CE marking are set out in Regulation (EC) No 765/2008. Rules governing the affixing of the CE marking should be laid down in this Directive."
+    },
+    {
+      "recital_number": 24,
+      "text": "In order to ensure legal certainty, it is necessary to clarify that rules on Union market surveillance and control of products entering the Union market provided for in Regulation (EC) No 765/2008 apply to electrical equipment. This Directive should not prevent Member States from choosing the competent authorities to carry out those tasks."
+    },
+    {
+      "recital_number": 25,
+      "text": "Member States should take all appropriate measures to ensure that electrical equipment may be placed on the market only if, when properly stored and used for its intended purpose, or under conditions of use which can be reasonably foreseen, it does not endanger the health and safety of persons. Electrical equipment should be considered as non-compliant with the safety objectives laid down in this Directive only under conditions of use which can be reasonably foreseen, that is when such use could result from lawful and readily predictable human behaviour."
+    },
+    {
+      "recital_number": 26,
+      "text": "Directive 2006/95/EC already provides for a safeguard procedure which applies only in the event of disagreement between Member States over measures taken by a Member State. In order to increase transparency and to reduce processing time, it is necessary to improve the existing safeguard procedure, with a view to making it more efficient and drawing on the expertise available in Member States."
+    },
+    {
+      "recital_number": 27,
+      "text": "The existing system should be supplemented by a procedure under which interested parties are informed of measures intended to be taken with regard to electrical equipment presenting a risk to the health or safety of persons or domestic animals, or to property. It should also allow market surveillance authorities, in cooperation with the relevant economic operators, to act at an earlier stage in respect of such electrical equipment."
+    },
+    {
+      "recital_number": 28,
+      "text": "Where the Member States and the Commission agree as to the justification of a measure taken by a Member State, no further involvement of the Commission should be required, except where non-compliance can be attributed to shortcomings of a harmonised standard."
+    },
+    {
+      "recital_number": 29,
+      "text": "In order to ensure uniform conditions for the implementation of this Directive, implementing powers should be conferred on the Commission. Those powers should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council of 16 February 2011 laying down the rules and general principles concerning mechanisms for control by Member States of the Commission’s exercise of implementing powers (8)."
+    },
+    {
+      "recital_number": 30,
+      "text": "The examination procedure should be used for the adoption of implementing acts with respect to compliant electrical equipment which presents a risk to the health or safety of persons or to other aspects of public interest protection."
+    },
+    {
+      "recital_number": 31,
+      "text": "The Commission should adopt immediately applicable implementing acts where, in duly justified cases relating to compliant electrical equipment which presents a risk to the health or safety of persons, or to domestic animals or to property, imperative grounds of urgency so require."
+    },
+    {
+      "recital_number": 32,
+      "text": "In line with established practice, the committee set up by this Directive can play a useful role in examining matters concerning the application of this Directive raised either by its chair or by a representative of a Member State in accordance with its rules of procedure."
+    },
+    {
+      "recital_number": 33,
+      "text": "When matters relating to this Directive, other than its implementation or infringements, are being examined, i.e. in a Commission expert group, the European Parliament should in line with existing practice receive full information and documentation and, where appropriate, an invitation to attend such meetings."
+    },
+    {
+      "recital_number": 34,
+      "text": "The Commission should, by means of implementing acts and, given their special nature, acting without the application of Regulation (EU) No 182/2011, determine whether measures taken by Member States in respect of non-compliant electrical equipment are justified or not."
+    },
+    {
+      "recital_number": 35,
+      "text": "Member States should lay down rules on penalties applicable to infringements of provisions of national law adopted pursuant to this Directive and ensure that those rules are enforced. The penalties provided for should be effective, proportionate and dissuasive."
+    },
+    {
+      "recital_number": 36,
+      "text": "It is necessary to provide for reasonable transitional arrangements that allow the making available on the market, without the need to comply with further product requirements, of electrical equipment which has already been placed on the market in accordance with Directive 2006/95/EC before the date of application of national measures transposing this Directive. Distributors should therefore be able to supply electrical equipment that has been placed on the market, namely stock that is already in the distribution chain, before the date of application of national measures transposing this Directive."
+    },
+    {
+      "recital_number": 37,
+      "text": "Since the objective of this Directive, namely to ensure that electrical equipment on the market fulfils the safety objectives providing for a high level of protection of health and safety of persons, and of domestic animals and property, while guaranteeing the functioning of the internal, market cannot be sufficiently achieved by the Member States but can rather, by reason of its scale and effects, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Directive does not go beyond what is necessary in order to achieve that objective."
+    },
+    {
+      "recital_number": 38,
+      "text": "The obligation to transpose this Directive into national law should be confined to those provisions which represent a substantive amendment as compared to the earlier Directive. The obligation to transpose the provisions which are unchanged arises under the earlier Directive."
+    },
+    {
+      "recital_number": 39,
+      "text": "This Directive should be without prejudice to the obligations of the Member States relating to the time-limits for transposition into national law and the dates of application of the Directives set out in Annex V,"
+    }
+  ]
+}

@@ -228,6 +228,39 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   // CRA secondary acts (implementing / delegated)
   '32025R2392': { id: 'CRA_IMPL_IMPORTANT_CRITICAL_PRODUCTS', full_name: 'Commission Implementing Regulation (EU) 2025/2392 - Technical Description of the Categories of Important and Critical Products with Digital Elements (CRA Art. 7)', effective_date: '2025-12-21' },
   '32026R0881': { id: 'CRA_DEL_DELAYED_DISSEMINATION', full_name: 'Commission Delegated Regulation (EU) 2026/881 - Terms and Conditions for Delaying the Dissemination of Notifications (CRA)', effective_date: '2026-05-10' },
+  // CE-marking / machinery-safety directives — the New Approach product law that
+  // industrial robots, cobots and their integrators conform to alongside the
+  // Machinery Regulation (EU) 2023/1230 (id MACHINERY, applies from 2027-01-20).
+  // 2006/42/EC is the machinery law in force until then; EMC/LVD/ATEX are the
+  // co-applicable CE directives; 2022/30 turns on the RED cyber requirements for
+  // connected radio equipment; 1025/2012 is the harmonised-standards basis that
+  // grants presumption of conformity across all of them.
+  '32006L0042': { id: 'MACHINERY_DIR', full_name: 'Machinery Directive 2006/42/EC', effective_date: '2009-12-29' },
+  '32022R0030': { id: 'RED_DEL_CYBER', full_name: 'Commission Delegated Regulation (EU) 2022/30 - Radio Equipment Directive cybersecurity requirements (Art. 3(3)(d)(e)(f))', effective_date: '2025-08-01' },
+  '32014L0030': { id: 'EMC', full_name: 'Electromagnetic Compatibility Directive 2014/30/EU', effective_date: '2016-04-20' },
+  '32014L0035': { id: 'LVD', full_name: 'Low Voltage Directive 2014/35/EU', effective_date: '2016-04-20' },
+  '32014L0034': { id: 'ATEX', full_name: 'ATEX Directive 2014/34/EU - Equipment for Potentially Explosive Atmospheres', effective_date: '2016-04-20' },
+  '32012R1025': { id: 'STANDARDISATION_REG', full_name: 'Regulation (EU) No 1025/2012 on European Standardisation', effective_date: '2013-01-01' },
+  // Market-surveillance / accreditation — the enforcement backbone that the CE
+  // directives above are policed under (Reg 765/2008 is cited directly by EMC/
+  // LVD/ATEX; Reg 2019/1020 governs compliance of products placed on the market).
+  '32019R1020': { id: 'MARKET_SURVEILLANCE_REG', full_name: 'Regulation (EU) 2019/1020 on Market Surveillance and Compliance of Products', effective_date: '2021-07-16' },
+  '32008R0765': { id: 'ACCREDITATION_REG', full_name: 'Regulation (EC) No 765/2008 on Accreditation and Market Surveillance', effective_date: '2010-01-01' },
+  // Occupational-safety layer — the employer-duty side of deploying robots and
+  // machinery in the workplace (robot-cell integration, operator protection).
+  // Consolidated version — the 1989 base act renders in the pre-2000 EUR-Lex
+  // layout that textContent collapses to unsegmentable blocks; the consolidated
+  // form uses the modern per-provision markup the line parser needs.
+  '01989L0391-20081211': { id: 'OSH_FRAMEWORK_DIR', full_name: 'Directive 89/391/EEC — Occupational Safety and Health Framework Directive', effective_date: '1989-06-12' },
+  '32009L0104': { id: 'WORK_EQUIPMENT_DIR', full_name: 'Directive 2009/104/EC on the Use of Work Equipment by Workers at Work', effective_date: '2010-02-03' },
+  // Substance restriction applicable to robots as electrical/electronic equipment.
+  '32011L0065': { id: 'ROHS_DIR', full_name: 'Directive 2011/65/EU (RoHS) on Restriction of Hazardous Substances in EEE', effective_date: '2013-01-02' },
+  // Battery obligations for mobile/autonomous robots (AMRs, drones, service robots).
+  '32023R1542': { id: 'BATTERIES_REG', full_name: 'Regulation (EU) 2023/1542 on Batteries and Waste Batteries', effective_date: '2024-02-18' },
+  // Product-lifecycle bookends for robots as products: eco-design / digital
+  // product passport at the design phase, and WEEE take-back at end of life.
+  '32024R1781': { id: 'ESPR', full_name: 'Regulation (EU) 2024/1781 — Ecodesign for Sustainable Products Regulation', effective_date: '2024-07-18' },
+  '32012L0019': { id: 'WEEE_DIR', full_name: 'Directive 2012/19/EU on Waste Electrical and Electronic Equipment (WEEE)', effective_date: '2012-08-13' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
@@ -439,7 +472,7 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
   const allText = doc.body?.textContent || '';
   const lines = allText.split('\n').map(l => l.trim()).filter(l => l);
 
-  let currentArticle: { number: string; title?: string; lines: string[] } | null = null;
+  let currentArticle: { number: string; title?: string; chapterCaption?: string; lines: string[] } | null = null;
   let pendingHeading: string | null = null;
   let expectHeadingLine = false;
 
@@ -461,12 +494,18 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
       if (currentArticle && currentArticle.lines.length > 0) {
         articles.push({
           number: currentArticle.number,
-          title: currentArticle.title,
+          // Prefer the article's OWN caption; the chapter caption carried from a
+          // CHAPTER/SECTION marker is only a fallback for a title-less article.
+          // Applying it as the title up front (the old behaviour) forced the
+          // article's real caption into the body — where build-db prepends the
+          // title, so a chapter-opening article bled "GENERAL PROVISIONS" etc.
+          // into its body (heading-bleed-inv gate).
+          title: currentArticle.title ?? currentArticle.chapterCaption,
           text: currentArticle.lines.join('\n\n'),
           chapter: currentChapter || undefined,
         });
       }
-      currentArticle = { number: articleStart[1], lines: [], title: pendingHeading ?? undefined };
+      currentArticle = { number: articleStart[1], lines: [], chapterCaption: pendingHeading ?? undefined };
       pendingHeading = null;
       continue;
     }
@@ -480,7 +519,11 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
     // PRECEDING article's body (AI Act art_4/art_5). We MOVE the caption into a
     // pendingHeading and apply it as the next article's title when that article
     // has none of its own.
-    const chapterStart = line.match(/^CHAPTER\s+([IVXLC]+)/i);
+    // Accept both roman ("CHAPTER III", older directives) and arabic
+    // ("CHAPTER 5", the 2014 New Approach directives — EMC/LVD/ATEX) numerals.
+    // Missing the arabic form left the chapter title unconsumed, bleeding it
+    // into the preceding article's body (EMC art_36 → CHAPTER 5 caption).
+    const chapterStart = line.match(/^CHAPTER\s+([IVXLC]+|\d+)/i);
     if (chapterStart) {
       currentChapter = chapterStart[1];
       expectHeadingLine = true;
@@ -496,7 +539,13 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
       // it (do not push to the current article); remember it for the next
       // article's title. Guard: a real caption is short and not a full sentence.
       expectHeadingLine = false;
-      if (line.length <= 100 && !line.endsWith('.')) {
+      // A caption directly following an explicit CHAPTER/SECTION marker is a
+      // heading regardless of length — the "not a sentence" guard (no terminal
+      // period) is the real discriminant. EU chapter titles run long
+      // ("UNION MARKET SURVEILLANCE AND CONTROL OF APPARATUS ENTERING THE UNION
+      // MARKET AND UNION SAFEGUARD PROCEDURE" = 104 chars, EMC ch. 5), so the
+      // old 100-char cap dropped them back into the preceding article's body.
+      if (line.length <= 200 && !line.endsWith('.')) {
         pendingHeading = line;
         continue;
       }
@@ -532,7 +581,7 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
   if (currentArticle && currentArticle.lines.length > 0) {
     articles.push({
       number: currentArticle.number,
-      title: currentArticle.title,
+      title: currentArticle.title ?? currentArticle.chapterCaption,
       text: currentArticle.lines.join('\n\n'),
       chapter: currentChapter || undefined,
     });

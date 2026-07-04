@@ -1,0 +1,690 @@
+{
+  "id": "EMC",
+  "full_name": "Electromagnetic Compatibility Directive 2014/30/EU",
+  "celex_id": "32014L0030",
+  "effective_date": "2016-04-20",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0030",
+  "articles": [
+    {
+      "number": "1",
+      "title": "Subject matter",
+      "text": "This Directive regulates the electromagnetic compatibility of equipment. It aims to ensure the functioning of the internal market by requiring equipment to comply with an adequate level of electromagnetic compatibility.",
+      "chapter": "1"
+    },
+    {
+      "number": "2",
+      "title": "Scope",
+      "text": "1.   This Directive shall apply to equipment as defined in Article 3.\n\n2.   This Directive shall not apply to:\n\n(a)\n\nequipment covered by Directive 1999/5/EC;\n\n(b)\n\naeronautical products, parts and appliances as referred to in Regulation (EC) No 216/2008 of the European Parliament and of the Council of 20 February 2008 on common rules in the field of civil aviation and establishing a European Aviation Safety Agency, and repealing Council Directive 91/670/EEC, Regulation (EC) No 1592/2002 and Directive 2004/36/EC (9);\n\n(c)\n\nradio equipment used by radio amateurs within the meaning of the Radio Regulations adopted in the framework of the Constitution of the International Telecommunication Union and the Convention of the International Telecommunication Union (10), unless the equipment is made available on the market;\n\n(d)\n\nequipment the inherent nature of the physical characteristics of which is such that:\n\n(i)\n\nit is incapable of generating or contributing to electromagnetic emissions which exceed a level allowing radio and telecommunication equipment and other equipment to operate as intended; and\n\n(ii)\n\nit operates without unacceptable degradation in the presence of the electromagnetic disturbance normally consequent upon its intended use;\n\n(e)\n\ncustom built evaluation kits destined for professionals to be used solely at research and development facilities for such purposes.\n\nFor the purposes of point (c) of the first subparagraph, kits of components to be assembled by radio amateurs and equipment made available on the market and modified by and for the use of radio amateurs are not regarded as equipment made available on the market.\n\n3.   Where, for the equipment referred to in paragraph 1, the essential requirements set out in Annex I are wholly or partly laid down more specifically by other Union legislation, this Directive shall not apply, or shall cease to apply, to that equipment in respect of such requirements from the date of implementation of that Union legislation.\n\n4.   This Directive shall not affect the application of Union or national legislation regulating the safety of equipment.",
+      "chapter": "1"
+    },
+    {
+      "number": "3",
+      "title": "Definitions",
+      "text": "1.   For the purposes of this Directive, the following definitions shall apply:\n\n(1)\n\n‘equipment’ means any apparatus or fixed installation;\n\n(2)\n\n‘apparatus’ means any finished appliance or combination thereof made available on the market as a single functional unit, intended for the end-user and liable to generate electromagnetic disturbance, or the performance of which is liable to be affected by such disturbance;\n\n(3)\n\n‘fixed installation’ means a particular combination of several types of apparatus and, where applicable, other devices, which are assembled, installed and intended to be used permanently at a predefined location;\n\n(4)\n\n‘electromagnetic compatibility’ means the ability of equipment to function satisfactorily in its electromagnetic environment without introducing intolerable electromagnetic disturbances to other equipment in that environment;\n\n(5)\n\n‘electromagnetic disturbance’ means any electromagnetic phenomenon which may degrade the performance of equipment; an electromagnetic disturbance may be electromagnetic noise, an unwanted signal or a change in the propagation medium itself;\n\n(6)\n\n‘immunity’ means the ability of equipment to perform as intended without degradation in the presence of an electromagnetic disturbance;\n\n(7)\n\n‘safety purposes’ means the purposes of safeguarding human life or property;\n\n(8)\n\n‘electromagnetic environment’ means all electromagnetic phenomena observable in a given location;\n\n(9)\n\n‘making available on the market’ means any supply of apparatus for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge;\n\n(10)\n\n‘placing on the market’ means the first making available of apparatus on the Union market;\n\n(11)\n\n‘manufacturer’ means any natural or legal person who manufactures apparatus or has apparatus designed or manufactured, and markets that apparatus under his name or trade mark;\n\n(12)\n\n‘authorised representative’ means any natural or legal person established within the Union who has received a written mandate from a manufacturer to act on his behalf in relation to specified tasks;\n\n(13)\n\n‘importer’ means any natural or legal person established within the Union who places apparatus from a third country on the Union market;\n\n(14)\n\n‘distributor’ means any natural or legal person in the supply chain, other than the manufacturer or the importer, who makes apparatus available on the market;\n\n(15)\n\n‘economic operators’ means the manufacturer, the authorised representative, the importer and the distributor;\n\n(16)\n\n‘technical specification’ means a document that prescribes technical requirements to be fulfilled by the equipment;\n\n(17)\n\n‘harmonised standard’ means harmonised standard as defined in point (c) of point 1 of Article 2 of Regulation (EU) No 1025/2012;\n\n(18)\n\n‘accreditation’ means accreditation as defined in point 10 of Article 2 of Regulation (EC) No 765/2008;\n\n(19)\n\n‘national accreditation body’ means national accreditation body as defined in point 11 of Article 2 of Regulation (EC) No 765/2008;\n\n(20)\n\n‘conformity assessment’ means the process demonstrating whether the essential requirements of this Directive relating to an apparatus have been fulfilled;\n\n(21)\n\n‘conformity assessment body’ means a body that performs conformity assessment activities including calibration, testing, certification and inspection;\n\n(22)\n\n‘recall’ means any measure aimed at achieving the return of apparatus that has already been made available to the end-user;\n\n(23)\n\n‘withdrawal’ means any measure aimed at preventing apparatus in the supply chain from being made available on the market;\n\n(24)\n\n‘Union harmonisation legislation’ means any Union legislation harmonising the conditions for the marketing of products;\n\n(25)\n\n‘CE marking’ means a marking by which the manufacturer indicates that the apparatus is in conformity with the applicable requirements set out in Union harmonisation legislation providing for its affixing.\n\n2.   For the purposes of this Directive, the following shall be considered as apparatus:\n\n(1)\n\n‘components’ or ‘sub-assemblies’ intended for incorporation into an apparatus by the end-user, which are liable to generate electromagnetic disturbance, or the performance of which is liable to be affected by such disturbance;\n\n(2)\n\n‘mobile installations’ defined as a combination of apparatus and, where applicable, other devices, intended to be moved and operated in a range of locations.",
+      "chapter": "1"
+    },
+    {
+      "number": "4",
+      "title": "Making available on the market and/or putting into service",
+      "text": "Member States shall take all appropriate measures to ensure that equipment is made available on the market and/or put into service only if it complies with this Directive when properly installed, maintained and used for its intended purpose.",
+      "chapter": "1"
+    },
+    {
+      "number": "5",
+      "title": "Free movement of equipment",
+      "text": "1.   Member States shall not impede, for reasons relating to electromagnetic compatibility, the making available on the market and/or the putting into service in their territory of equipment which complies with this Directive.\n\n2.   The requirements of this Directive shall not prevent the application in any Member State of the following special measures concerning the putting into service or use of equipment:\n\n(a)\n\nmeasures to overcome an existing or predicted electromagnetic compatibility problem at a specific site;\n\n(b)\n\nmeasures taken for safety reasons to protect public telecommunications networks or receiving or transmitting stations when used for safety purposes in well-defined spectrum situations.\n\nWithout prejudice to Directive 98/34/EC of the European Parliament and of the Council of 22 June 1998 laying down a procedure for the provision of information in the field of technical standards and regulations (11), Member States shall notify those special measures to the Commission and to the other Member States.\n\nThe special measures which have been accepted shall be published by the Commission in the Official Journal of the European Union.\n\n3.   Member States shall not create any obstacles to the display and/or demonstration at trade fairs, exhibitions or similar events of equipment which does not comply with this Directive, provided that a visible sign clearly indicates that such equipment may not be made available on the market and/or put into service until it has been brought into conformity with this Directive. Demonstration may only take place provided that adequate measures have been taken to avoid electromagnetic disturbances.",
+      "chapter": "1"
+    },
+    {
+      "number": "6",
+      "title": "Essential requirements",
+      "text": "The equipment shall meet the essential requirements set out in Annex I.",
+      "chapter": "2"
+    },
+    {
+      "number": "7",
+      "title": "Obligations of manufacturers",
+      "text": "1.   When placing their apparatus on the market, manufacturers shall ensure that they have been designed and manufactured in accordance with the essential requirements set out in Annex I.\n\n2.   Manufacturers shall draw up the technical documentation referred to in Annex II or Annex III and carry out the relevant conformity assessment procedure referred to in Article 14 or have it carried out.\n\nWhere compliance of apparatus with the applicable requirements has been demonstrated by that procedure, manufacturers shall draw up an EU declaration of conformity and affix the CE marking.\n\n3.   Manufacturers shall keep the technical documentation and the EU declaration of conformity for 10 years after the apparatus has been placed on the market.\n\n4.   Manufacturers shall ensure that procedures are in place for series production to remain in conformity with this Directive. Changes in apparatus design or characteristics and changes in the harmonised standards or in other technical specifications by reference to which conformity of apparatus is declared shall be adequately taken into account.\n\n5.   Manufacturers shall ensure that apparatus which they have placed on the market bear a type, batch or serial number or other element allowing their identification, or, where the size or nature of the apparatus does not allow it, that the required information is provided on the packaging or in a document accompanying the apparatus.\n\n6.   Manufacturers shall indicate, on the apparatus, their name, registered trade name or registered trade mark and the postal address at which they can be contacted or, where that is not possible, on its packaging or in a document accompanying the apparatus. The address shall indicate a single point at which the manufacturer can be contacted. The contact details shall be in a language easily understood by end-users and market surveillance authorities.\n\n7.   Manufacturers shall ensure that the apparatus is accompanied by instructions and the information referred to in Article 18 in a language which can be easily understood by consumers and other end-users, as determined by the Member State concerned. Such instructions and information, as well as any labelling, shall be clear, understandable and intelligible.\n\n8.   Manufacturers who consider or have reason to believe that an apparatus which they have placed on the market is not in conformity with this Directive shall immediately take the corrective measures necessary to bring that apparatus into conformity, to withdraw it or recall it, if appropriate. Furthermore, where the apparatus presents a risk, manufacturers shall immediately inform the competent national authorities of the Member States in which they made the apparatus available on the market to that effect, giving details, in particular, of the non-compliance and of any corrective measures taken.\n\n9.   Manufacturers shall, further to a reasoned request from a competent national authority, provide it with all the information and documentation in paper or electronic form necessary to demonstrate the conformity of the apparatus with this Directive, in a language which can be easily understood by that authority. They shall cooperate with that authority, at its request, on any action taken to eliminate the risks posed by apparatus which they have placed on the market.",
+      "chapter": "2"
+    },
+    {
+      "number": "8",
+      "title": "Authorised representatives",
+      "text": "1.   A manufacturer may, by a written mandate, appoint an authorised representative.\n\nThe obligations laid down in Article 7(1) and the obligation to draw up technical documentation referred to in Article 7(2) shall not form part of the authorised representative’s mandate.\n\n2.   An authorised representative shall perform the tasks specified in the mandate received from the manufacturer. The mandate shall allow the authorised representative to do at least the following:\n\n(a)\n\nkeep the EU declaration of conformity and the technical documentation at the disposal of national market surveillance authorities for 10 years after the apparatus has been placed on the market;\n\n(b)\n\nfurther to a reasoned request from a competent national authority, provide that authority with all the information and documentation necessary to demonstrate the conformity of the apparatus;\n\n(c)\n\ncooperate with the competent national authorities, at their request, on any action taken to eliminate the risks posed by the apparatus covered by the authorised representative’s mandate.",
+      "chapter": "2"
+    },
+    {
+      "number": "9",
+      "title": "Obligations of importers",
+      "text": "1.   Importers shall place only compliant apparatus on the market.\n\n2.   Before placing apparatus on the market importers shall ensure that the appropriate conformity assessment procedure referred to in Article 14 has been carried out by the manufacturer. They shall ensure that the manufacturer has drawn up the technical documentation, that the apparatus bears the CE marking and is accompanied by the required documents, and that the manufacturer has complied with the requirements set out in Article 7(5) and (6).\n\nWhere an importer considers or has reason to believe that apparatus is not in conformity with the essential requirements set out in Annex I, he shall not place the apparatus on the market until it has been brought into conformity. Furthermore, where the apparatus presents a risk, the importer shall inform the manufacturer and the market surveillance authorities to that effect.\n\n3.   Importers shall indicate on the apparatus their name, registered trade name or registered trade mark and the postal address at which they can be contacted or, where that is not possible, on its packaging or in a document accompanying the apparatus. The contact details shall be in a language easily understood by end-users and market surveillance authorities.\n\n4.   Importers shall ensure that the apparatus is accompanied by instructions and the information referred to in Article 18 in a language which can be easily understood by consumers and other end-users, as determined by the Member State concerned.\n\n5.   Importers shall ensure that, while an apparatus is under their responsibility, its storage or transport conditions do not jeopardise its compliance with the essential requirements set out in Annex I.\n\n6.   Importers who consider or have reason to believe that an apparatus which they have placed on the market is not in conformity with this Directive shall immediately take the corrective measures necessary to bring that apparatus into conformity, to withdraw it or recall it, if appropriate. Furthermore, where the apparatus presents a risk, importers shall immediately inform the competent national authorities of the Member States in which they made the apparatus available on the market to that effect, giving details, in particular, of the non-compliance and of any corrective measures taken.\n\n7.   Importers shall, for 10 years after the apparatus has been placed on the market, keep a copy of the EU declaration of conformity at the disposal of the market surveillance authorities and ensure that the technical documentation can be made available to those authorities, upon request.\n\n8.   Importers shall, further to a reasoned request from a competent national authority, provide it with all the information and documentation in paper or electronic form, necessary to demonstrate the conformity of apparatus in a language which can be easily understood by that authority. They shall cooperate with that authority, at its request, on any action taken to eliminate the risks posed by apparatus which they have placed on the market.",
+      "chapter": "2"
+    },
+    {
+      "number": "10",
+      "title": "Obligations of distributors",
+      "text": "1.   When making apparatus available on the market distributors shall act with due care in relation to the requirements of this Directive.\n\n2.   Before making apparatus available on the market distributors shall verify that the apparatus bears the CE marking, that it is accompanied by the required documents and by instructions and the information referred to in Article 18 in a language which can be easily understood by consumers and other end-users in the Member State in which the apparatus is to be made available on the market and that the manufacturer and the importer have complied with the requirements set out in Article 7(5) and (6) and Article 9(3) respectively.\n\nWhere a distributor considers or has reason to believe that apparatus is not in conformity with the essential requirements set out in Annex I, he shall not make the apparatus available on the market until it has been brought into conformity. Furthermore, where the apparatus presents a risk, the distributor shall inform the manufacturer or the importer to that effect as well as the market surveillance authorities.\n\n3.   Distributors shall ensure that, while apparatus is under their responsibility, its storage or transport conditions do not jeopardise its compliance with the essential requirements set out in Annex I.\n\n4.   Distributors who consider or have reason to believe that apparatus which they have made available on the market is not in conformity with this Directive shall make sure that the corrective measures necessary to bring that apparatus into conformity, to withdraw it or recall it, if appropriate, are taken. Furthermore, where the apparatus presents a risk, distributors shall immediately inform the competent national authorities of the Member States in which they made the apparatus available on the market to that effect, giving details, in particular, of the non-compliance and of any corrective measures taken.\n\n5.   Distributors shall, further to a reasoned request from a competent national authority, provide it with all the information and documentation in paper or electronic form, necessary to demonstrate the conformity of the apparatus. They shall cooperate with that authority, at its request, on any action taken to eliminate the risks posed by apparatus which they have made available on the market.",
+      "chapter": "2"
+    },
+    {
+      "number": "11",
+      "title": "Cases in which obligations of manufacturers apply to importers and distributors",
+      "text": "An importer or distributor shall be considered a manufacturer for the purposes of this Directive and he shall be subject to the obligations of the manufacturer under Article 7, where he places apparatus on the market under his name or trade mark or modifies apparatus already placed on the market in such a way that compliance with this Directive may be affected.",
+      "chapter": "2"
+    },
+    {
+      "number": "12",
+      "title": "Identification of economic operators",
+      "text": "Economic operators shall, on request, identify the following to the market surveillance authorities:\n\n(a)\n\nany economic operator who has supplied them with apparatus;\n\n(b)\n\nany economic operator to whom they have supplied apparatus.\n\nEconomic operators shall be able to present the information referred to in the first paragraph for 10 years after they have been supplied with the apparatus and for 10 years after they have supplied the apparatus.",
+      "chapter": "3"
+    },
+    {
+      "number": "13",
+      "title": "Presumption of conformity of equipment",
+      "text": "Equipment which is in conformity with harmonised standards or parts thereof the references of which have been published in the Official Journal of the European Union shall be presumed to be in conformity with the essential requirements set out in Annex I covered by those standards or parts thereof.",
+      "chapter": "3"
+    },
+    {
+      "number": "14",
+      "title": "Conformity assessment procedures for apparatus",
+      "text": "Compliance of apparatus with the essential requirements set out in Annex I shall be demonstrated by means of either of the following conformity assessment procedures:\n\n(a)\n\ninternal production control set out in Annex II;\n\n(b)\n\nEU type examination that is followed by Conformity to type based on internal production control set out in Annex III.\n\nThe manufacturer may choose to restrict the application of the procedure referred to in point (b) of the first paragraph to some aspects of the essential requirements, provided that for the other aspects of the essential requirements the procedure referred to in point (a) of the first paragraph is applied.",
+      "chapter": "3"
+    },
+    {
+      "number": "15",
+      "title": "EU declaration of conformity",
+      "text": "1.   The EU declaration of conformity shall state that the fulfilment of the essential requirements set out in Annex I has been demonstrated.\n\n2.   The EU declaration of conformity shall have the model structure set out in Annex IV, shall contain the elements specified in the relevant modules set out in Annexes II and III and shall be continuously updated. It shall be translated into the language or languages required by the Member State in which the apparatus is placed or made available on the market.\n\n3.   Where apparatus is subject to more than one Union act requiring an EU declaration of conformity, a single EU declaration of conformity shall be drawn up in respect of all such Union acts. That declaration shall contain the identification of the Union acts concerned including their publication references.\n\n4.   By drawing up the EU declaration of conformity, the manufacturer shall assume responsibility for the compliance of the apparatus with the requirements laid down in this Directive.",
+      "chapter": "3"
+    },
+    {
+      "number": "16",
+      "title": "General principles of the CE marking",
+      "text": "The CE marking shall be subject to the general principles set out in Article 30 of Regulation (EC) No 765/2008.",
+      "chapter": "3"
+    },
+    {
+      "number": "17",
+      "title": "Rules and conditions for affixing the CE marking",
+      "text": "1.   The CE marking shall be affixed visibly, legibly and indelibly to the apparatus or to its data plate. Where that is not possible or not warranted on account of the nature of the apparatus, it shall be affixed to the packaging and to the accompanying documents.\n\n2.   The CE marking shall be affixed before the apparatus is placed on the market.\n\n3.   Member States shall build upon existing mechanisms to ensure correct application of the regime governing the CE marking and shall take appropriate action in the event of improper use of that marking.",
+      "chapter": "3"
+    },
+    {
+      "number": "18",
+      "title": "Information concerning the use of apparatus",
+      "text": "1.   Apparatus shall be accompanied by information on any specific precautions that must be taken when the apparatus is assembled, installed, maintained or used, in order to ensure that, when put into service, the apparatus is in conformity with the essential requirements set out in point 1 of Annex I.\n\n2.   Apparatus for which compliance with the essential requirements set out in point 1 of Annex I is not ensured in residential areas shall be accompanied by a clear indication of such restriction of use, where appropriate also on the packaging.\n\n3.   The information required to enable apparatus to be used in accordance with the intended purpose of the apparatus shall be included in the instructions accompanying the apparatus.",
+      "chapter": "3"
+    },
+    {
+      "number": "19",
+      "title": "Fixed installations",
+      "text": "1.   Apparatus which has been made available on the market and which may be incorporated into a fixed installation shall be subject to all relevant provisions for apparatus set out in this Directive.\n\nHowever, the requirements of Articles 6 to 12 and Articles 14 to 18 shall not be compulsory in the case of apparatus which is intended for incorporation into a particular fixed installation and is otherwise not made available on the market.\n\nIn such cases, the accompanying documentation shall identify the fixed installation and its electromagnetic compatibility characteristics and shall indicate the precautions to be taken for the incorporation of the apparatus into the fixed installation in order not to compromise the conformity of that installation. It shall also include the information referred to in Article 7(5) and (6) and Article 9(3).\n\nThe good engineering practices referred to in point 2 of Annex I shall be documented and the documentation shall be held by the person or persons responsible at the disposal of the relevant national authorities for inspection for as long as the fixed installation is in operation.\n\n2.   Where there are indications of non-compliance of the fixed installation, in particular, where there are complaints about disturbances being generated by the installation, the competent authorities of the Member State concerned may request evidence of compliance of the fixed installation, and, when appropriate, initiate an evaluation.\n\nWhere non-compliance is established, the competent authorities shall impose appropriate measures to bring the fixed installation into compliance with the essential requirements set out in Annex I.\n\n3.   Member States shall set out the necessary provisions for identifying the person or persons responsible for the establishment of compliance of a fixed installation with the relevant essential requirements.",
+      "chapter": "4"
+    },
+    {
+      "number": "20",
+      "title": "Notification",
+      "text": "Member States shall notify the Commission and the other Member States of bodies authorised to carry out third-party conformity assessment tasks under this Directive.",
+      "chapter": "4"
+    },
+    {
+      "number": "21",
+      "title": "Notifying authorities",
+      "text": "1.   Member States shall designate a notifying authority that shall be responsible for setting up and carrying out the necessary procedures for the assessment and notification of conformity assessment bodies and the monitoring of notified bodies, including compliance with Article 26.\n\n2.   Member States may decide that the assessment and monitoring referred to in paragraph 1 shall be carried out by a national accreditation body within the meaning of and in accordance with Regulation (EC) No 765/2008.\n\n3.   Where the notifying authority delegates or otherwise entrusts the assessment, notification or monitoring referred to in paragraph 1 to a body which is not a governmental entity, that body shall be a legal entity and shall comply mutatis mutandis with the requirements laid down in Article 22. In addition it shall have arrangements to cover liabilities arising out of its activities.\n\n4.   The notifying authority shall take full responsibility for the tasks performed by the body referred to in paragraph 3.",
+      "chapter": "4"
+    },
+    {
+      "number": "22",
+      "title": "Requirements relating to notifying authorities",
+      "text": "1.   A notifying authority shall be established in such a way that no conflict of interest with conformity assessment bodies occurs.\n\n2.   A notifying authority shall be organised and operated so as to safeguard the objectivity and impartiality of its activities.\n\n3.   A notifying authority shall be organised in such a way that each decision relating to notification of a conformity assessment body is taken by competent persons different from those who carried out the assessment.\n\n4.   A notifying authority shall not offer or provide any activities that conformity assessment bodies perform or consultancy services on a commercial or competitive basis.\n\n5.   A notifying authority shall safeguard the confidentiality of the information it obtains.\n\n6.   A notifying authority shall have a sufficient number of competent personnel at its disposal for the proper performance of its tasks.",
+      "chapter": "4"
+    },
+    {
+      "number": "23",
+      "title": "Information obligation on notifying authorities",
+      "text": "Member States shall inform the Commission of their procedures for the assessment and notification of conformity assessment bodies and the monitoring of notified bodies, and of any changes thereto.\n\nThe Commission shall make that information publicly available.",
+      "chapter": "4"
+    },
+    {
+      "number": "24",
+      "title": "Requirements relating to notified bodies",
+      "text": "1.   For the purposes of notification, a conformity assessment body shall meet the requirements laid down in paragraphs 2 to 11.\n\n2.   A conformity assessment body shall be established under national law of a Member State and have legal personality.\n\n3.   A conformity assessment body shall be a third-party body independent of the organisation or the apparatus it assesses.\n\nA body belonging to a business association or professional federation representing undertakings involved in the design, manufacturing, provision, assembly, use or maintenance of apparatus which it assesses, may, on condition that its independence and the absence of any conflict of interest are demonstrated, be considered such a body.\n\n4.   A conformity assessment body, its top level management and the personnel responsible for carrying out the conformity assessment tasks shall not be the designer, manufacturer, supplier, installer, purchaser, owner, user or maintainer of the apparatus which they assess, nor the representative of any of those parties. This shall not preclude the use of assessed apparatus that are necessary for the operations of the conformity assessment body or the use of such apparatus for personal purposes.\n\nA conformity assessment body, its top level management and the personnel responsible for carrying out the conformity assessment tasks shall not be directly involved in the design, manufacture or construction, the marketing, installation, use or maintenance of those apparatus, or represent the parties engaged in those activities. They shall not engage in any activity that may conflict with their independence of judgement or integrity in relation to conformity assessment activities for which they are notified. This shall in particular apply to consultancy services.\n\nConformity assessment bodies shall ensure that the activities of their subsidiaries or subcontractors do not affect the confidentiality, objectivity or impartiality of their conformity assessment activities.\n\n5.   Conformity assessment bodies and their personnel shall carry out the conformity assessment activities with the highest degree of professional integrity and the requisite technical competence in the specific field and shall be free from all pressures and inducements, particularly financial, which might influence their judgement or the results of their conformity assessment activities, especially as regards persons or groups of persons with an interest in the results of those activities.\n\n6.   A conformity assessment body shall be capable of carrying out all the conformity assessment tasks assigned to it by Annex III and in relation to which it has been notified, whether those tasks are carried out by the conformity assessment body itself or on its behalf and under its responsibility.\n\nAt all times and for each conformity assessment procedure and each kind or category of apparatus in relation to which it has been notified, a conformity assessment body shall have at its disposal the necessary:\n\n(a)\n\npersonnel with technical knowledge and sufficient and appropriate experience to perform the conformity assessment tasks;\n\n(b)\n\ndescriptions of procedures in accordance with which conformity assessment is carried out, ensuring the transparency and the ability of reproduction of those procedures. It shall have appropriate policies and procedures in place that distinguish between tasks it carries out as a notified body and other activities;\n\n(c)\n\nprocedures for the performance of activities which take due account of the size of an undertaking, the sector in which it operates, its structure, the degree of complexity of the apparatus technology in question and the mass or serial nature of the production process.\n\nA conformity assessment body shall have the means necessary to perform the technical and administrative tasks connected with the conformity assessment activities in an appropriate manner and shall have access to all necessary equipment or facilities.\n\n7.   The personnel responsible for carrying out conformity assessment tasks shall have the following:\n\n(a)\n\nsound technical and vocational training covering all the conformity assessment activities in relation to which the conformity assessment body has been notified;\n\n(b)\n\nsatisfactory knowledge of the requirements of the assessments they carry out and adequate authority to carry out those assessments;\n\n(c)\n\nappropriate knowledge and understanding of the essential requirements set out in Annex I, of the applicable harmonised standards and of the relevant provisions of Union harmonisation legislation and of national legislation;\n\n(d)\n\nthe ability to draw up certificates, records and reports demonstrating that assessments have been carried out.\n\n8.   The impartiality of the conformity assessment bodies, their top level management and of the personnel responsible for carrying out the conformity assessment tasks shall be guaranteed.\n\nThe remuneration of the top level management and personnel responsible for carrying out the conformity assessment tasks of a conformity assessment body shall not depend on the number of assessments carried out or on the results of those assessments.\n\n9.   Conformity assessment bodies shall take out liability insurance unless liability is assumed by the State in accordance with national law, or the Member State itself is directly responsible for the conformity assessment.\n\n10.   The personnel of a conformity assessment body shall observe professional secrecy with regard to all information obtained in carrying out their tasks under Annex III or any provision of national law giving effect to it, except in relation to the competent authorities of the Member State in which its activities are carried out. Proprietary rights shall be protected.\n\n11.   Conformity assessment bodies shall participate in, or ensure that their personnel responsible for carrying out the conformity assessment tasks are informed of, the relevant standardisation activities and the activities of the notified body coordination group established under the relevant Union harmonisation legislation and shall apply as general guidance the administrative decisions and documents produced as a result of the work of that group.",
+      "chapter": "4"
+    },
+    {
+      "number": "25",
+      "title": "Presumption of conformity of notified bodies",
+      "text": "Where a conformity assessment body demonstrates its conformity with the criteria laid down in the relevant harmonised standards or parts thereof the references of which have been published in the Official Journal of the European Union it shall be presumed to comply with the requirements set out in Article 24 in so far as the applicable harmonised standards cover those requirements.",
+      "chapter": "4"
+    },
+    {
+      "number": "26",
+      "title": "Subsidiaries of and subcontracting by notified bodies",
+      "text": "1.   Where a notified body subcontracts specific tasks connected with conformity assessment or has recourse to a subsidiary, it shall ensure that the subcontractor or the subsidiary meets the requirements set out in Article 24 and shall inform the notifying authority accordingly.\n\n2.   Notified bodies shall take full responsibility for the tasks performed by subcontractors or subsidiaries wherever these are established.\n\n3.   Activities may be subcontracted or carried out by a subsidiary only with the agreement of the client.\n\n4.   Notified bodies shall keep at the disposal of the notifying authority the relevant documents concerning the assessment of the qualifications of the subcontractor or the subsidiary and the work carried out by them under Annex III.",
+      "chapter": "4"
+    },
+    {
+      "number": "27",
+      "title": "Application for notification",
+      "text": "1.   A conformity assessment body shall submit an application for notification to the notifying authority of the Member State in which it is established.\n\n2.   The application for notification shall be accompanied by a description of the conformity assessment activities, the conformity assessment module or modules and the apparatus for which that body claims to be competent, as well as by an accreditation certificate, where one exists, issued by a national accreditation body attesting that the conformity assessment body fulfils the requirements laid down in Article 24.\n\n3.   Where the conformity assessment body concerned cannot provide an accreditation certificate, it shall provide the notifying authority with all the documentary evidence necessary for the verification, recognition and regular monitoring of its compliance with the requirements laid down in Article 24.",
+      "chapter": "4"
+    },
+    {
+      "number": "28",
+      "title": "Notification procedure",
+      "text": "1.   Notifying authorities may notify only conformity assessment bodies which have satisfied the requirements laid down in Article 24.\n\n2.   They shall notify the Commission and the other Member States using the electronic notification tool developed and managed by the Commission.\n\n3.   The notification shall include full details of the conformity assessment activities, the conformity assessment module or modules and apparatus concerned and the relevant attestation of competence.\n\n4.   Where a notification is not based on an accreditation certificate as referred to in Article 27(2), the notifying authority shall provide the Commission and the other Member States with documentary evidence which attests to the conformity assessment body’s competence and the arrangements in place to ensure that that body will be monitored regularly and will continue to satisfy the requirements laid down in Article 24.\n\n5.   The body concerned may perform the activities of a notified body only where no objections are raised by the Commission or the other Member States within two weeks of a notification where an accreditation certificate is used or within two months of a notification where accreditation is not used.\n\nOnly such a body shall be considered a notified body for the purposes of this Directive.\n\n6.   The notifying authority shall notify the Commission and the other Member States of any subsequent relevant changes to the notification.",
+      "chapter": "4"
+    },
+    {
+      "number": "29",
+      "title": "Identification numbers and lists of notified bodies",
+      "text": "1.   The Commission shall assign an identification number to a notified body.\n\nIt shall assign a single such number even where the body is notified under several Union acts.\n\n2.   The Commission shall make publicly available the list of the bodies notified under this Directive, including the identification numbers that have been assigned to them and the activities for which they have been notified.\n\nThe Commission shall ensure that the list is kept up to date.",
+      "chapter": "4"
+    },
+    {
+      "number": "30",
+      "title": "Changes to notifications",
+      "text": "1.   Where a notifying authority has ascertained or has been informed that a notified body no longer meets the requirements laid down in Article 24, or that it is failing to fulfil its obligations, the notifying authority shall restrict, suspend or withdraw notification as appropriate, depending on the seriousness of the failure to meet those requirements or fulfil those obligations. It shall immediately inform the Commission and the other Member States accordingly.\n\n2.   In the event of restriction, suspension or withdrawal of notification, or where the notified body has ceased its activity, the notifying Member State shall take appropriate steps to ensure that the files of that body are either processed by another notified body or kept available for the responsible notifying and market surveillance authorities at their request.",
+      "chapter": "4"
+    },
+    {
+      "number": "31",
+      "title": "Challenge of the competence of notified bodies",
+      "text": "1.   The Commission shall investigate all cases where it doubts, or doubt is brought to its attention regarding, the competence of a notified body or the continued fulfilment by a notified body of the requirements and responsibilities to which it is subject.\n\n2.   The notifying Member State shall provide the Commission, on request, with all information relating to the basis for the notification or the maintenance of the competence of the notified body concerned.\n\n3.   The Commission shall ensure that all sensitive information obtained in the course of its investigations is treated confidentially.\n\n4.   Where the Commission ascertains that a notified body does not meet or no longer meets the requirements for its notification, it shall adopt an implementing act requesting the notifying Member State to take the necessary corrective measures, including withdrawal of notification if necessary.\n\nThat implementing act shall be adopted in accordance with the advisory procedure referred to in Article 41(2).",
+      "chapter": "4"
+    },
+    {
+      "number": "32",
+      "title": "Operational obligations of notified bodies",
+      "text": "1.   Notified bodies shall carry out conformity assessments in accordance with the conformity assessment procedures provided for in Annex III.\n\n2.   Conformity assessments shall be carried out in a proportionate manner, avoiding unnecessary burdens for economic operators.\n\nConformity assessment bodies shall perform their activities taking due account of the size of an undertaking, the sector in which it operates, its structure, the degree of complexity of the apparatus technology in question and the mass or serial nature of the production process.\n\nIn so doing they shall nevertheless respect the degree of rigour and the level of protection required for the compliance of the apparatus with this Directive.\n\n3.   Where a notified body finds that the essential requirements set out in Annex I or corresponding harmonised standards or other technical specifications have not been met by a manufacturer, it shall require that manufacturer to take appropriate corrective measures and shall not issue a certificate.\n\n4.   Where, in the course of the monitoring of conformity following the issue of a certificate, a notified body finds that an apparatus no longer complies, it shall require the manufacturer to take appropriate corrective measures and shall suspend or withdraw the certificate if necessary.\n\n5.   Where corrective measures are not taken or do not have the required effect, the notified body shall restrict, suspend or withdraw any certificates, as appropriate.",
+      "chapter": "4"
+    },
+    {
+      "number": "33",
+      "title": "Appeal against decisions of notified bodies",
+      "text": "Member States shall ensure that an appeal procedure against decisions of the notified bodies is available.",
+      "chapter": "4"
+    },
+    {
+      "number": "34",
+      "title": "Information obligation on notified bodies",
+      "text": "1.   Notified bodies shall inform the notifying authority of the following:\n\n(a)\n\nany refusal, restriction, suspension or withdrawal of a certificate;\n\n(b)\n\nany circumstances affecting the scope of or conditions for notification;\n\n(c)\n\nany request for information which they have received from market surveillance authorities regarding conformity assessment activities;\n\n(d)\n\non request, conformity assessment activities performed within the scope of their notification and any other activity performed, including cross-border activities and subcontracting.\n\n2.   Notified bodies shall provide the other bodies notified under this Directive carrying out similar conformity assessment activities covering the same apparatus with relevant information on issues relating to negative and, on request, positive conformity assessment results.",
+      "chapter": "4"
+    },
+    {
+      "number": "35",
+      "title": "Exchange of experience",
+      "text": "The Commission shall provide for the organisation of exchange of experience between the Member States’ national authorities responsible for notification policy.",
+      "chapter": "4"
+    },
+    {
+      "number": "36",
+      "title": "Coordination of notified bodies",
+      "text": "The Commission shall ensure that appropriate coordination and cooperation between bodies notified under this Directive are put in place and properly operated in the form of a sectoral group of notified bodies.\n\nMember States shall ensure that the bodies notified by them participate in the work of that group, directly or by means of designated representatives.",
+      "chapter": "5"
+    },
+    {
+      "number": "37",
+      "title": "Union market surveillance and control of apparatus entering the Union market",
+      "text": "Article 15(3) and Articles 16 to 29 of Regulation (EC) No 765/2008 shall apply to apparatus.",
+      "chapter": "5"
+    },
+    {
+      "number": "38",
+      "title": "Procedure for dealing with apparatus presenting a risk at national level",
+      "text": "1.   Where the market surveillance authorities of one Member State have sufficient reason to believe that an apparatus covered by this Directive presents a risk to aspects of public interest protection covered by this Directive, they shall carry out an evaluation in relation to the apparatus concerned covering all relevant requirements laid down in this Directive. The relevant economic operators shall cooperate as necessary with the market surveillance authorities for that purpose.\n\nWhere, in the course of the evaluation referred to in the first subparagraph, the market surveillance authorities find that the apparatus does not comply with the requirements laid down in this Directive, they shall without delay require the relevant economic operator to take all appropriate corrective actions to bring the apparatus into compliance with those requirements, to withdraw the apparatus from the market, or to recall it within a reasonable period, commensurate with the nature of the risk, as they may prescribe.\n\nThe market surveillance authorities shall inform the relevant notified body accordingly.\n\nArticle 21 of Regulation (EC) No 765/2008 shall apply to the measures referred to in the second subparagraph of this paragraph.\n\n2.   Where the market surveillance authorities consider that non-compliance is not restricted to their national territory, they shall inform the Commission and the other Member States of the results of the evaluation, and of the actions which they have required the economic operator to take.\n\n3.   The economic operator shall ensure that all appropriate corrective action is taken in respect of all the apparatus concerned that it has made available on the market throughout the Union.\n\n4.   Where the relevant economic operator does not take adequate corrective action within the period referred to in the second subparagraph of paragraph 1, the market surveillance authorities shall take all appropriate provisional measures to prohibit or restrict the apparatus’s being made available on their national market, to withdraw the apparatus from that market or to recall it.\n\nThe market surveillance authorities shall inform the Commission and the other Member States, without delay, of those measures.\n\n5.   The information referred to in the second subparagraph of paragraph 4 shall include all available details, in particular the data necessary for the identification of the non-compliant apparatus, the origin of the apparatus, the nature of the non-compliance alleged and the risk involved, the nature and duration of the national measures taken and the arguments put forward by the relevant economic operator. In particular, the market surveillance authorities shall indicate whether the non-compliance is due to either of the following:\n\n(a)\n\nfailure of the apparatus to meet the requirements relating to aspects of public interest protection covered by this Directive; or\n\n(b)\n\nshortcomings in the harmonised standards referred to in Article 13 conferring a presumption of conformity.\n\n6.   Member States other than the Member State initiating the procedure under this Article shall without delay inform the Commission and the other Member States of any measures adopted and of any additional information at their disposal relating to the non-compliance of the apparatus concerned, and, in the event of disagreement with the adopted national measure, of their objections.\n\n7.   Where, within three months of receipt of the information referred to in the second subparagraph of paragraph 4, no objection has been raised by either a Member State or the Commission in respect of a provisional measure taken by a Member State, that measure shall be deemed justified.\n\n8.   Member States shall ensure that appropriate restrictive measures, such as withdrawal of the apparatus from the market, are taken in respect of the apparatus concerned without delay.",
+      "chapter": "5"
+    },
+    {
+      "number": "39",
+      "title": "Union safeguard procedure",
+      "text": "1.   Where, on completion of the procedure set out in Article 38(3) and (4), objections are raised against a measure taken by a Member State, or where the Commission considers a national measure to be contrary to Union legislation, the Commission shall without delay enter into consultation with the Member States and the relevant economic operator or operators and shall evaluate the national measure. On the basis of the results of that evaluation, the Commission shall adopt an implementing act determining whether the national measure is justified or not.\n\nThe Commission shall address its decision to all Member States and shall immediately communicate it to them and the relevant economic operator or operators.\n\n2.   If the national measure is considered justified, all Member States shall take the necessary measures to ensure that the non-compliant apparatus is withdrawn from their market, and shall inform the Commission accordingly. If the national measure is considered unjustified, the Member State concerned shall withdraw that measure.\n\n3.   Where the national measure is considered justified and the non-compliance of the apparatus is attributed to shortcomings in the harmonised standards referred to in point (b) of Article 38(5) of this Directive, the Commission shall apply the procedure provided for in Article 11 of Regulation (EU) No 1025/2012.",
+      "chapter": "5"
+    },
+    {
+      "number": "40",
+      "title": "Formal non-compliance",
+      "text": "1.   Without prejudice to Article 38, where a Member State makes one of the following findings, it shall require the relevant economic operator to put an end to the non-compliance concerned:\n\n(a)\n\nthe CE marking has been affixed in violation of Article 30 of Regulation (EC) No 765/2008 or of Article 17 of this Directive;\n\n(b)\n\nthe CE marking has not been affixed;\n\n(c)\n\nthe EU declaration of conformity has not been drawn up;\n\n(d)\n\nthe EU declaration of conformity has not been drawn up correctly;\n\n(e)\n\ntechnical documentation is either not available or not complete;\n\n(f)\n\nthe information referred to in Article 7(6) or Article 9(3) is absent, false or incomplete;\n\n(g)\n\nany other administrative requirement provided for in Article 7 or Article 9 is not fulfilled.\n\n2.   Where the non-compliance referred to in paragraph 1 persists, the Member State concerned shall take all appropriate measures to restrict or prohibit the apparatus being made available on the market or ensure that it is recalled or withdrawn from the market.",
+      "chapter": "6"
+    },
+    {
+      "number": "41",
+      "title": "Committee procedure",
+      "text": "1.   The Commission shall be assisted by the Committee on Electromagnetic Compatibility. That committee shall be a committee within the meaning of Regulation (EU) No 182/2011.\n\n2.   Where reference is made to this paragraph, Article 4 of Regulation (EU) No 182/2011 shall apply.\n\n3.   The committee shall be consulted by the Commission on any matter for which consultation of sectoral experts is required by Regulation (EU) No 1025/2012 or by any other Union legislation.\n\nThe committee may furthermore examine any other matter concerning the application of this Directive raised either by its chair or by a representative of a Member State in accordance with its rules of procedure.",
+      "chapter": "6"
+    },
+    {
+      "number": "42",
+      "title": "Penalties",
+      "text": "Member States shall lay down rules on penalties applicable to infringements by economic operators of the provisions of national law adopted pursuant to this Directive and shall take all measures necessary to ensure that they are enforced. Such rules may include criminal penalties for serious infringements.\n\nThe penalties provided for shall be effective, proportionate and dissuasive.",
+      "chapter": "6"
+    },
+    {
+      "number": "43",
+      "title": "Transitional provisions",
+      "text": "Member States shall not impede the making available on the market and/or the putting into service of equipment covered by Directive 2004/108/EC which is in conformity with that Directive and which was placed on the market before 20 April 2016.",
+      "chapter": "6"
+    },
+    {
+      "number": "44",
+      "title": "Transposition",
+      "text": "1.   Member States shall adopt and publish, by 19 April 2016, the laws, regulations and administrative provisions necessary to comply with Article 2(2), points (9) to (25) of Article 3(1), Article 4, Article 5(1), Articles 7 to 12, Articles 15, 16 and 17, the first subparagraph of Article 19(1), Articles 20 to 43, and Annexes II, III and IV. They shall forthwith communicate the text of those measures to the Commission.\n\nThey shall apply those measures from 20 April 2016.\n\nWhen Member States adopt those measures, they shall contain a reference to this Directive or be accompanied by such a reference on the occasion of their official publication. They shall also include a statement that references in existing laws, regulations and administrative provisions to the Directive repealed by this Directive shall be construed as references to this Directive. Member States shall determine how such reference is to be made and how that statement is to be formulated.\n\n2.   Member States shall communicate to the Commission the texts of the main provisions of national law which they adopt in the field covered by this Directive.",
+      "chapter": "6"
+    },
+    {
+      "number": "45",
+      "title": "Repeal",
+      "text": "Directive 2004/108/EC is repealed with effect from 20 April 2016, without prejudice to the obligations of the Member States relating to the time-limit for transposition into national law and the dates of application of the Directive set out in Annex V.\n\nReferences to the repealed Directive shall be construed as references to this Directive and shall be read in accordance with the correlation table in Annex VI.",
+      "chapter": "6"
+    },
+    {
+      "number": "46",
+      "title": "Entry into force and application",
+      "text": "This Directive shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nArticle 1, Article 2, points (1) to (8) of Article 3(1), Article 3(2), Article 5(2) and (3), Article 6, Article 13, Article 19(3) and Annex I shall apply from 20 April 2016.",
+      "chapter": "6"
+    },
+    {
+      "number": "47",
+      "title": "Addressees",
+      "text": "This Directive is addressed to the Member States.",
+      "chapter": "6"
+    },
+    {
+      "number": "Annex I",
+      "title": "ESSENTIAL REQUIREMENTS",
+      "text": "1.   General requirements\nEquipment shall be so designed and manufactured, having regard to the state of the art, as to ensure that:\n(a)\nthe electromagnetic disturbance generated does not exceed the level above which radio and telecommunications equipment or other equipment cannot operate as intended;\n(b)\nit has a level of immunity to the electromagnetic disturbance to be expected in its intended use which allows it to operate without unacceptable degradation of its intended use.\n2.   Specific requirements for fixed installations\nInstallation and intended use of components\nA fixed installation shall be installed applying good engineering practices and respecting the information on the intended use of its components, with a view to meeting the essential requirements set out in point 1."
+    },
+    {
+      "number": "Annex II",
+      "title": "MODULE A: INTERNAL PRODUCTION CONTROL",
+      "text": "1.   Internal production control is the conformity assessment procedure whereby the manufacturer fulfils the obligations laid down in points 2, 3, 4 and 5 of this Annex, and ensures and declares on his sole responsibility that the apparatus concerned satisfy the requirements of this Directive that apply to it.\n2.   Electromagnetic compatibility assessment\nThe manufacturer shall perform an electromagnetic compatibility assessment of the apparatus, on the basis of the relevant phenomena, with a view to meeting the essential requirements set out in point 1 of Annex I.\nThe electromagnetic compatibility assessment shall take into account all normal intended operating conditions. Where the apparatus is capable of taking different configurations, the electromagnetic compatibility assessment shall confirm whether the apparatus meets the essential requirements set out in point 1 of Annex I in all the possible configurations identified by the manufacturer as representative of its intended use.\n3.   Technical documentation\nThe manufacturer shall establish the technical documentation. The documentation shall make it possible to assess the apparatus conformity to the relevant requirements, and shall include an adequate analysis and assessment of the risk(s).\nThe technical documentation shall specify the applicable requirements and cover, as far as relevant for the assessment, the design, manufacture and operation of the apparatus. The technical documentation shall, wherever applicable, contain at least the following elements:\n(a)\na general description of the apparatus;\n(b)\nconceptual design and manufacturing drawings and schemes of components, sub-assemblies, circuits, etc.;\n(c)\ndescriptions and explanations necessary for the understanding of those drawings and schemes and the operation of the apparatus;\n(d)\na list of the harmonised standards applied in full or in part the references of which have been published in the Official Journal of the European Union and, where those harmonised standards have not been applied, descriptions of the solutions adopted to meet the essential requirements of this Directive, including a list of other relevant technical specifications applied. In the event of partly applied harmonised standards, the technical documentation shall specify the parts which have been applied;\n(e)\nresults of design calculations made, examinations carried out, etc.;\n(f)\ntest reports.\n4.   Manufacturing\nThe manufacturer shall take all measures necessary so that the manufacturing process and its monitoring ensure compliance of the manufactured apparatus with the technical documentation referred to in point 3 of this Annex and with the essential requirements set out in point 1 of Annex I.\n5.   CE marking and EU declaration of conformity\n5.1.\nThe manufacturer shall affix the CE marking to each individual apparatus that satisfies the applicable requirements of this Directive.\n5.2.\nThe manufacturer shall draw up a written EU declaration of conformity for an apparatus model and keep it together with the technical documentation at the disposal of the national authorities for 10 years after the apparatus has been placed on the market. The EU declaration of conformity shall identify the apparatus for which it has been drawn up.\nA copy of the EU declaration of conformity shall be made available to the relevant authorities upon request.\n6.   Authorised representative\nThe manufacturer’s obligations set out in point 5 may be fulfilled by his authorised representative, on his behalf and under his responsibility, provided that they are specified in the mandate."
+    },
+    {
+      "number": "Annex III",
+      "title": "PART A",
+      "text": "Module B: EU-type examination\n1.\nEU-type examination is the part of a conformity assessment procedure in which a notified body examines the technical design of an apparatus and verifies and attests that the technical design of the apparatus meets the essential requirements set out in point 1 of Annex I.\n2.\nEU-type examination shall be carried out by assessment of the adequacy of the technical design of the apparatus through examination of the technical documentation referred to in point 3, without examination of a specimen (design type). It may be restricted to some aspects of the essential requirements as specified by the manufacturer or his authorised representative.\n3.\nThe manufacturer shall lodge an application for EU-type examination with a single notified body of his choice.\nThe application shall specify the aspects of the essential requirements for which examination is requested and shall include:\n(a)\nthe name and address of the manufacturer and, if the application is lodged by the authorised representative, his name and address as well;\n(b)\na written declaration that the same application has not been lodged with any other notified body;\n(c)\nthe technical documentation. The technical documentation shall make it possible to assess the apparatus conformity with the applicable requirements of this Directive and shall include an adequate analysis and assessment of the risk(s). The technical documentation shall specify the applicable requirements and cover, as far as relevant for the assessment, the design, manufacture and operation of the apparatus. The technical documentation shall contain, wherever applicable, at least the following elements:\n(i)\na general description of the apparatus;\n(ii)\nconceptual design and manufacturing drawings and schemes of components, sub-assemblies, circuits, etc.;\n(iii)\ndescriptions and explanations necessary for the understanding of those drawings and schemes and the operation of the apparatus;\n(iv)\na list of the harmonised standards applied in full or in part the references of which have been published in the Official Journal of the European Union, and, where those harmonised standards have not been applied, descriptions of the solutions adopted to meet the essential requirements of this Directive, including a list of other relevant technical specifications applied. In the event of partly applied harmonised standards, the technical documentation shall specify the parts which have been applied;\n(v)\nresults of design calculations made, examinations carried out, etc.;\n(vi)\ntest reports.\n4.\nThe notified body shall examine the technical documentation to assess the adequacy of the technical design of the apparatus in relation to the aspects of the essential requirements for which examination is requested.\n5.\nThe notified body shall draw up an evaluation report that records the activities undertaken in accordance with point 4 and their outcomes. Without prejudice to its obligations vis-à-vis the notifying authorities, the notified body shall release the content of that report, in full or in part, only with the agreement of the manufacturer.\n6.\nWhere the type meets the requirements of this Directive that apply to the apparatus concerned, the notified body shall issue an EU-type examination certificate to the manufacturer. That certificate shall contain the name and address of the manufacturer, the conclusions of the examination, the aspects of the essential requirements covered by the examination, the conditions (if any) for its validity and the necessary data for identification of the approved type. The EU-type examination certificate may have one or more annexes attached.\nThe EU-type examination certificate and its annexes shall contain all relevant information to allow the conformity of manufactured apparatus with the examined type to be evaluated and to allow for in-service control.\nWhere the type does not satisfy the applicable requirements of this Directive, the notified body shall refuse to issue an EU-type examination certificate and shall inform the applicant accordingly, giving detailed reasons for its refusal.\n7.\nThe notified body shall keep itself apprised of any changes in the generally acknowledged state of the art which indicate that the approved type may no longer comply with the applicable requirements of this Directive, and shall determine whether such changes require further investigation. If so, the notified body shall inform the manufacturer accordingly.\nThe manufacturer shall inform the notified body that holds the technical documentation relating to the EU-type examination certificate of all modifications to the approved type that may affect the conformity of the apparatus with the essential requirements of this Directive or the conditions for validity of that certificate. Such modifications shall require additional approval in the form of an addition to the original EU-type examination certificate.\n8.\nEach notified body shall inform its notifying authority concerning the EU-type examination certificates and/or any additions thereto which it has issued or withdrawn, and shall, periodically or upon request, make available to its notifying authority the list of such certificates and/or any additions thereto refused, suspended or otherwise restricted.\nEach notified body shall inform the other notified bodies concerning the EU-type examination certificates and/or any additions thereto which it has refused, withdrawn, suspended or otherwise restricted, and, upon request, concerning such certificates and/or additions thereto which it has issued.\nThe Commission, the Member States and the other notified bodies may, on request, obtain a copy of the EU-type examination certificates and/or additions thereto. On request, the Commission and the Member States may obtain a copy of the technical documentation and the results of the examinations carried out by the notified body. The notified body shall keep a copy of the EU-type examination certificate, its annexes and additions, as well as the technical file including the documentation submitted by the manufacturer, until the expiry of the validity of that certificate.\n9.\nThe manufacturer shall keep a copy of the EU-type examination certificate, its annexes and additions together with the technical documentation at the disposal of the national authorities for 10 years after the apparatus has been placed on the market.\n10.\nThe manufacturer’s authorised representative may lodge the application referred to in point 3 and fulfil the obligations set out in points 7 and 9, provided that they are specified in the mandate.\nPART B\nModule C: conformity to type based on internal production control\n1.   Conformity to type based on internal production control is the part of a conformity assessment procedure whereby the manufacturer fulfils the obligations laid down in points 2 and 3, and ensures and declares that the apparatus concerned are in conformity with the type described in the EU-type examination certificate and satisfy the requirements of this Directive that apply to them.\n2.   Manufacturing\nThe manufacturer shall take all measures necessary so that the manufacturing process and its monitoring ensure conformity of the manufactured apparatus with the approved type described in the EU-type examination certificate and with the requirements of this Directive that apply to them.\n3.   CE marking and EU declaration of conformity\n3.1.\nThe manufacturer shall affix the CE marking to each individual apparatus that is in conformity with the type described in the EU-type examination certificate and satisfies the applicable requirements of this Directive.\n3.2.\nThe manufacturer shall draw up a written EU declaration of conformity for each apparatus model and keep it at the disposal of the national authorities for 10 years after the apparatus has been placed on the market. The EU declaration of conformity shall identify the apparatus model for which it has been drawn up.\nA copy of the EU declaration of conformity shall be made available to the relevant authorities upon request.\n4.   Authorised representative\nThe manufacturer’s obligations set out in point 3 may be fulfilled by his authorised representative, on his behalf and under his responsibility, provided that they are specified in the mandate."
+    },
+    {
+      "number": "Annex IV",
+      "title": "EU declaration of conformity (No Xxxx)",
+      "text": "(1)\n1.\nApparatus model/Product (product, type, batch or serial number):\n2.\nName and address of the manufacturer or his authorised representative:\n3.\nThis declaration of conformity is issued under the sole responsibility of the manufacturer.\n4.\nObject of the declaration (identification of apparatus allowing traceability; it may include a colour image of sufficient clarity where necessary for the identification of the apparatus):\n5.\nThe object of the declaration described above is in conformity with the relevant Union harmonisation legislation:\n6.\nReferences to the relevant harmonised standards used, including the date of the standard, or references to the other technical specifications, including the date of the specification, in relation to which conformity is declared:\n7.\nWhere applicable, the notified body … (name, number) performed … (description of intervention) and issued the certificate:\n8.\nAdditional information:\nSigned for and on behalf of:\n(place and date of issue):\n(name, function) (signature):\n(1)  It is optional for the manufacturer to assign a number to the declaration of conformity."
+    },
+    {
+      "number": "Annex V",
+      "title": "Time-limit for transposition into national law and date of application",
+      "text": "(referred to in Article 45)\nDirective\nTime-limit for transposition\nDate of application\n2004/108/EC\n20 January 2007\n20 July 2007"
+    },
+    {
+      "number": "Annex VI",
+      "title": "Correlation table",
+      "text": "Directive 2004/108/EC\nThis Directive\nArticle 1(1)\nArticle 1 and Article 2(1)\nArticle 1(2)\nArticle 2(2)(a) to (c)\nArticle 1(3)\nArticle 2(2)(d)\nArticle 1(4)\nArticle 2(3)\nArticle 1(5)\nArticle 2(4)\nArticle 2(1)(a)\nArticle 3(1)(1)\nArticle 2(1)(b)\nArticle 3(1)(2)\nArticle 2(1)(c)\nArticle 3(1)(3)\nArticle 2(1)(d)\nArticle 3(1)(4)\nArticle 2(1)(e)\nArticle 3(1)(5)\nArticle 2(1)(f)\nArticle 3(1)(6)\nArticle 2(1)(g)\nArticle 3(1)(7)\nArticle 2(1)(h)\nArticle 3(1)(8)\nArticle 2(2)\nArticle 3(2)\nArticle 3\nArticle 4\nArticle 4\nArticle 5\nArticle 5\nArticle 6\nArticle 6\nArticle 13\nArticle 7\nArticle 14\nArticle 8\nArticles 16 and 17\nArticle 9(1)\nArticle 7(5)\nArticle 9(2)\nArticle 7(6)\nArticle 9(3)\nArticle 18(1)\nArticle 9(4)\nArticle 18(2)\nArticle 9(5)\nArticle 18(3)\nArticles 10 and 11\nArticles 37, 38 and 39\nArticle 12\nChapter 4\nArticle 13\nArticle 19\nArticle 14\nArticle 45\nArticle 15\nArticle 43\nArticle 16\nArticle 44\nArticle 17\nArticle 46\nArticle 18\nArticle 47\nAnnex I\nAnnex I\nAnnex II and point 1 of Annex IV\nAnnex II\nAnnex III\nAnnex III\nPoint 2 of Annex IV\nAnnex IV\nAnnex V\nArticles 16 and 17\nAnnex VI\nArticle 24\nAnnex VII\nAnnex VI\nSTATEMENT OF THE EUROPEAN PARLIAMENT\nThe European Parliament considers that only when and in so far as implementing acts in the sense of Regulation (EU) No 182/2011 are discussed in meetings of committees, can the latter be considered as ‘comitology committees’ within the meaning of Annex I to the Framework Agreement on the relations between the European Parliament and the European Commission. Meetings of committees thus fall within the scope of point 15 of the Framework Agreement when and insofar as other issues are discussed."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "equipment",
+      "definition": "any apparatus or fixed installation;",
+      "article": "3"
+    },
+    {
+      "term": "apparatus",
+      "definition": "any finished appliance or combination thereof made available on the market as a single functional unit, intended for the end-user and liable to generate electromagnetic disturbance, or the performance of which is liable to be affected by such disturbance;",
+      "article": "3"
+    },
+    {
+      "term": "fixed installation",
+      "definition": "a particular combination of several types of apparatus and, where applicable, other devices, which are assembled, installed and intended to be used permanently at a predefined location;",
+      "article": "3"
+    },
+    {
+      "term": "electromagnetic compatibility",
+      "definition": "the ability of equipment to function satisfactorily in its electromagnetic environment without introducing intolerable electromagnetic disturbances to other equipment in that environment;",
+      "article": "3"
+    },
+    {
+      "term": "electromagnetic disturbance",
+      "definition": "any electromagnetic phenomenon which may degrade the performance of equipment; an electromagnetic disturbance may be electromagnetic noise, an unwanted signal or a change in the propagation medium itself;",
+      "article": "3"
+    },
+    {
+      "term": "immunity",
+      "definition": "the ability of equipment to perform as intended without degradation in the presence of an electromagnetic disturbance;",
+      "article": "3"
+    },
+    {
+      "term": "safety purposes",
+      "definition": "the purposes of safeguarding human life or property;",
+      "article": "3"
+    },
+    {
+      "term": "electromagnetic environment",
+      "definition": "all electromagnetic phenomena observable in a given location;",
+      "article": "3"
+    },
+    {
+      "term": "making available on the market",
+      "definition": "any supply of apparatus for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge;",
+      "article": "3"
+    },
+    {
+      "term": "placing on the market",
+      "definition": "the first making available of apparatus on the Union market;",
+      "article": "3"
+    },
+    {
+      "term": "manufacturer",
+      "definition": "any natural or legal person who manufactures apparatus or has apparatus designed or manufactured, and markets that apparatus under his name or trade mark;",
+      "article": "3"
+    },
+    {
+      "term": "authorised representative",
+      "definition": "any natural or legal person established within the Union who has received a written mandate from a manufacturer to act on his behalf in relation to specified tasks;",
+      "article": "3"
+    },
+    {
+      "term": "importer",
+      "definition": "any natural or legal person established within the Union who places apparatus from a third country on the Union market;",
+      "article": "3"
+    },
+    {
+      "term": "distributor",
+      "definition": "any natural or legal person in the supply chain, other than the manufacturer or the importer, who makes apparatus available on the market;",
+      "article": "3"
+    },
+    {
+      "term": "economic operators",
+      "definition": "the manufacturer, the authorised representative, the importer and the distributor;",
+      "article": "3"
+    },
+    {
+      "term": "technical specification",
+      "definition": "a document that prescribes technical requirements to be fulfilled by the equipment;",
+      "article": "3"
+    },
+    {
+      "term": "harmonised standard",
+      "definition": "harmonised standard as defined in point (c) of point 1 of Article 2 of Regulation (EU) No 1025/2012;",
+      "article": "3"
+    },
+    {
+      "term": "accreditation",
+      "definition": "accreditation as defined in point 10 of Article 2 of Regulation (EC) No 765/2008;",
+      "article": "3"
+    },
+    {
+      "term": "national accreditation body",
+      "definition": "national accreditation body as defined in point 11 of Article 2 of Regulation (EC) No 765/2008;",
+      "article": "3"
+    },
+    {
+      "term": "conformity assessment",
+      "definition": "the process demonstrating whether the essential requirements of this Directive relating to an apparatus have been fulfilled;",
+      "article": "3"
+    },
+    {
+      "term": "conformity assessment body",
+      "definition": "a body that performs conformity assessment activities including calibration, testing, certification and inspection;",
+      "article": "3"
+    },
+    {
+      "term": "recall",
+      "definition": "any measure aimed at achieving the return of apparatus that has already been made available to the end-user;",
+      "article": "3"
+    },
+    {
+      "term": "withdrawal",
+      "definition": "any measure aimed at preventing apparatus in the supply chain from being made available on the market;",
+      "article": "3"
+    },
+    {
+      "term": "union harmonisation legislation",
+      "definition": "any Union legislation harmonising the conditions for the marketing of products;",
+      "article": "3"
+    },
+    {
+      "term": "ce marking",
+      "definition": "a marking by which the manufacturer indicates that the apparatus is in conformity with the applicable requirements set out in Union harmonisation legislation providing for its affixing. 2. For the purposes of this Directive, the following shall be considered as apparatus:",
+      "article": "3"
+    }
+  ],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "A number of amendments are to be made to Directive 2004/108/EC of the European Parliament and of the Council of 15 December 2004 on the approximation of the laws of the Member States relating to electromagnetic compatibility and repealing Directive 89/336/EEC (3). In the interests of clarity, that Directive should be recast."
+    },
+    {
+      "recital_number": 2,
+      "text": "Regulation (EC) No 765/2008 of the European Parliament and of the Council of 9 July 2008 setting out the requirements for accreditation and market surveillance relating to the marketing of products (4) lays down rules on the accreditation of conformity assessment bodies, provides a framework for the market surveillance of products and for controls on products from third countries, and lays down the general principles of the CE marking."
+    },
+    {
+      "recital_number": 3,
+      "text": "Decision No 768/2008/EC of the European Parliament and of the Council of 9 July 2008 on a common framework for the marketing of products (5), lays down common principles and reference provisions intended to apply across sectoral legislation in order to provide a coherent basis for revision or recasts of that legislation. Directive 2004/108/EC should be adapted to that Decision."
+    },
+    {
+      "recital_number": 4,
+      "text": "Member States should be responsible for ensuring that radiocommunications, including radio broadcast reception and the amateur radio service operating in accordance with International Telecommunication Union (ITU) radio regulations, electrical supply networks and telecommunications networks, as well as equipment connected thereto, are protected against electromagnetic disturbance."
+    },
+    {
+      "recital_number": 5,
+      "text": "Provisions of national law ensuring protection against electromagnetic disturbance need to be harmonised in order to guarantee the free movement of electrical and electronic apparatus without lowering justified levels of protection in the Member States."
+    },
+    {
+      "recital_number": 6,
+      "text": "This Directive covers products which are new to the Union market when they are placed on the market; that is to say they are either new products made by a manufacturer established in the Union or products, whether new or second-hand, imported from a third country."
+    },
+    {
+      "recital_number": 7,
+      "text": "This Directive should apply to all forms of supply, including distance selling."
+    },
+    {
+      "recital_number": 8,
+      "text": "The equipment covered by this Directive should include both apparatus and fixed installations. However, separate provision should be made for each. This is so because, whereas apparatus as such may move freely within the Union, fixed installations on the other hand are installed for permanent use at a predefined location, as assemblies of various types of apparatus and, where appropriate, other devices. The composition and function of such installations correspond in most cases to the particular needs of their operators."
+    },
+    {
+      "recital_number": 9,
+      "text": "Where this Directive regulates apparatus, it should apply to finished apparatus placed on the market. Certain components or sub-assemblies should, under certain conditions, be considered to be apparatus if they are made available to the end-user."
+    },
+    {
+      "recital_number": 10,
+      "text": "Radio equipment and telecommunications terminal equipment should not be covered by this Directive since they are already regulated by Directive 1999/5/EC of the European Parliament and of the Council of 9 March 1999 on radio equipment and telecommunications terminal equipment and the mutual recognition of their conformity (6). The electromagnetic compatibility requirements in both Directives achieve the same level of protection."
+    },
+    {
+      "recital_number": 11,
+      "text": "Aircraft or equipment intended to be fitted into aircraft should not be covered by this Directive, since they are already subject to special Union or international rules governing electromagnetic compatibility."
+    },
+    {
+      "recital_number": 12,
+      "text": "This Directive should not regulate equipment which is inherently benign in terms of electromagnetic compatibility."
+    },
+    {
+      "recital_number": 13,
+      "text": "This Directive should not deal with the safety of equipment, since that is dealt with by separate Union or national legislation."
+    },
+    {
+      "recital_number": 14,
+      "text": "Manufacturers of equipment intended to be connected to networks should construct such equipment in a way that prevents networks from suffering unacceptable degradation of service when used under normal operating conditions. Network operators should construct their networks in such a way that manufacturers of equipment liable to be connected to networks do not suffer a disproportionate burden in order to prevent networks from suffering an unacceptable degradation of service. The European standardisation organisations should take due account of that objective (including the cumulative effects of the relevant types of electromagnetic phenomena) when developing harmonised standards."
+    },
+    {
+      "recital_number": 15,
+      "text": "Protection against electromagnetic disturbance requires obligations to be imposed on the various economic operators. Those obligations should be applied in a fair and effective way in order to achieve such protection."
+    },
+    {
+      "recital_number": 16,
+      "text": "Economic operators should be responsible for the compliance of apparatus with this Directive, in relation to their respective roles in the supply chain, so as to ensure a high level of protection of public interests covered by this Directive, and to guarantee fair competition on the Union market."
+    },
+    {
+      "recital_number": 17,
+      "text": "All economic operators intervening in the supply and distribution chain should take appropriate measures to ensure that they only make available on the market apparatus which are in conformity with this Directive. It is necessary to provide for a clear and proportionate distribution of obligations which correspond to the role of each economic operator in the supply and distribution chain."
+    },
+    {
+      "recital_number": 18,
+      "text": "In order to facilitate communication between economic operators, market surveillance authorities and consumers, Member States should encourage economic operators to include a website address in addition to the postal address."
+    },
+    {
+      "recital_number": 19,
+      "text": "The manufacturer, having detailed knowledge of the design and production process, is best placed to carry out the conformity assessment procedure. Conformity assessment should therefore remain solely the obligation of the manufacturer."
+    },
+    {
+      "recital_number": 20,
+      "text": "It is necessary to ensure that products from third countries entering the Union market comply with this Directive, and in particular that appropriate conformity assessment procedures have been carried out by manufacturers with regard to those apparatus. Provision should therefore be made for importers to make sure that the apparatus they place on the market comply with the requirements of this Directive and that they do not place on the market apparatus which do not comply with such requirements or present a risk. Provision should also be made for importers to make sure that conformity assessment procedures have been carried out and that marking of apparatus and documentation drawn up by manufacturers are available for inspection by the competent national authorities."
+    },
+    {
+      "recital_number": 21,
+      "text": "When placing apparatus on the market, every importer should indicate on the apparatus his name, registered trade name or registered trade mark and the postal address at which he can be contacted. Exceptions should be provided for in cases where the size or nature of the apparatus does not allow it. This includes cases where the importer would have to open the packaging to put his name and address on the apparatus."
+    },
+    {
+      "recital_number": 22,
+      "text": "The distributor makes apparatus available on the market after it has been placed on the market by the manufacturer or the importer and should act with due care to ensure that its handling of the apparatus does not adversely affect the compliance of the apparatus."
+    },
+    {
+      "recital_number": 23,
+      "text": "Any economic operator that either places apparatus on the market under his own name or trade mark or modifies apparatus in such a way that compliance with this Directive may be affected should be considered to be the manufacturer and should assume the obligations of the manufacturer."
+    },
+    {
+      "recital_number": 24,
+      "text": "Distributors and importers, being close to the market place, should be involved in market surveillance tasks carried out by the competent national authorities, and should be prepared to participate actively, providing those authorities with all necessary information relating to the apparatus concerned."
+    },
+    {
+      "recital_number": 25,
+      "text": "Ensuring traceability of apparatus throughout the whole supply chain helps to make market surveillance simpler and more efficient. An efficient traceability system facilitates market surveillance authorities’ task of tracing economic operators who made non-compliant apparatus available on the market. When keeping the information required under this Directive for the identification of other economic operators, economic operators should not be required to update such information in respect of other economic operators who have either supplied them with apparatus or to whom they have supplied apparatus."
+    },
+    {
+      "recital_number": 26,
+      "text": "Fixed installations, including large machines and networks, may generate electromagnetic disturbance, or be affected by it. There may be an interface between fixed installations and apparatus, and the electromagnetic disturbances produced by fixed installations may affect apparatus, and vice versa. In terms of electromagnetic compatibility, it is irrelevant whether the electromagnetic disturbance is produced by apparatus or by a fixed installation. Accordingly, fixed installations and apparatus should be subject to a coherent and comprehensive regime of essential requirements."
+    },
+    {
+      "recital_number": 27,
+      "text": "This Directive should be limited to the expression of the essential requirements. In order to facilitate conformity assessment with those requirements it is necessary to provide for a presumption of conformity for equipment which is in conformity with harmonised standards that are adopted in accordance with Regulation (EU) No 1025/2012 of the European Parliament and of the Council of 25 October 2012 on European Standardisation (7) for the purpose of expressing detailed technical specifications of those requirements. Harmonised standards reflect the generally acknowledged state of the art as regards electromagnetic compatibility in the Union."
+    },
+    {
+      "recital_number": 28,
+      "text": "Regulation (EU) No 1025/2012 provides for a procedure for objections to harmonised standards where those standards do not entirely satisfy the requirements of this Directive."
+    },
+    {
+      "recital_number": 29,
+      "text": "In order to enable economic operators to demonstrate and the competent authorities to ensure that apparatus made available on the market conform to the essential requirements, it is necessary to provide for conformity assessment procedures. Decision No 768/2008/EC establishes modules for conformity assessment procedures, which include procedures from the least to the most stringent, in proportion to the level of risk involved. In order to ensure inter-sectoral coherence and to avoid ad-hoc variants, conformity assessment procedures should be chosen from among those modules."
+    },
+    {
+      "recital_number": 30,
+      "text": "The conformity assessment obligation should require the manufacturer to perform an electromagnetic compatibility assessment of apparatus, based on relevant phenomena, in order to determine whether or not it meets the essential requirements of this Directive."
+    },
+    {
+      "recital_number": 31,
+      "text": "Where apparatus is capable of taking different configurations, the electromagnetic compatibility assessment should confirm whether the apparatus meets the essential requirements in the configurations foreseeable by the manufacturer as representative of normal use in the intended applications. In such cases it should be sufficient to perform an assessment on the basis of the configuration most likely to cause maximum disturbance and the configuration most susceptible to disturbance."
+    },
+    {
+      "recital_number": 32,
+      "text": "It is not appropriate to carry out the conformity assessment of apparatus placed on the market for incorporation into a given fixed installation, and otherwise not made available on the market, in isolation from the fixed installation into which it is to be incorporated. Such apparatus should therefore be exempted from the conformity assessment procedures normally applicable to apparatus. However, such apparatus should not be permitted to compromise the conformity of the fixed installation into which it is incorporated. Should apparatus be incorporated into more than one identical fixed installation, identifying the electromagnetic compatibility characteristics of these installations should be sufficient to ensure exemption from the conformity assessment procedure."
+    },
+    {
+      "recital_number": 33,
+      "text": "Manufacturers should draw up an EU declaration of conformity to provide information required under this Directive on the conformity of an apparatus with this Directive and with other relevant Union harmonisation legislation."
+    },
+    {
+      "recital_number": 34,
+      "text": "To ensure effective access to information for market surveillance purposes, the information required to identify all applicable Union acts should be available in a single EU declaration of conformity. In order to reduce the administrative burden on economic operators, that single EU declaration of conformity may be a dossier made up of relevant individual declarations of conformity."
+    },
+    {
+      "recital_number": 35,
+      "text": "The CE marking, indicating the conformity of apparatus, is the visible consequence of a whole process comprising conformity assessment in a broad sense. General principles governing the CE marking are set out in Regulation (EC) No 765/2008. Rules governing the affixing of the CE marking should be laid down in this Directive."
+    },
+    {
+      "recital_number": 36,
+      "text": "Due to their specific characteristics, fixed installations need not be subject to the affixing of the CE marking or to the EU declaration of conformity."
+    },
+    {
+      "recital_number": 37,
+      "text": "One of the conformity assessment procedures set out in this Directive requires the intervention of conformity assessment bodies, which are notified by the Member States to the Commission."
+    },
+    {
+      "recital_number": 38,
+      "text": "Experience has shown that the criteria set out in Directive 2004/108/EC that conformity assessment bodies have to fulfil to be notified to the Commission are not sufficient to ensure a uniformly high level of performance of notified bodies throughout the Union. It is, however, essential that all notified bodies perform their functions to the same level and under conditions of fair competition. That requires the setting of obligatory requirements for conformity assessment bodies wishing to be notified in order to provide conformity assessment services."
+    },
+    {
+      "recital_number": 39,
+      "text": "If a conformity assessment body demonstrates conformity with the criteria laid down in harmonised standards, it should be presumed to comply with the corresponding requirements set out in this Directive."
+    },
+    {
+      "recital_number": 40,
+      "text": "In order to ensure a consistent level of conformity assessment quality it is also necessary to set requirements for notifying authorities and other bodies involved in the assessment, notification and monitoring of notified bodies."
+    },
+    {
+      "recital_number": 41,
+      "text": "The system set out in this Directive should be complemented by the accreditation system provided for in Regulation (EC) No 765/2008. Since accreditation is an essential means of verifying the competence of conformity assessment bodies, it should also be used for the purposes of notification."
+    },
+    {
+      "recital_number": 42,
+      "text": "Transparent accreditation as provided for in Regulation (EC) No 765/2008, ensuring the necessary level of confidence in certificates, should be considered by the national public authorities throughout the Union as the preferred means of demonstrating the technical competence of conformity assessment bodies. However, national authorities may consider that they possess the appropriate means of carrying out that evaluation themselves. In such cases, in order to ensure the appropriate level of credibility of evaluations carried out by other national authorities, they should provide the Commission and the other Member States with the necessary documentary evidence demonstrating the compliance of the conformity assessment bodies evaluated with the relevant regulatory requirements."
+    },
+    {
+      "recital_number": 43,
+      "text": "Conformity assessment bodies frequently subcontract parts of their activities linked to the assessment of conformity or have recourse to a subsidiary. In order to safeguard the level of protection required for the apparatus to be placed on the Union market, it is essential that conformity assessment subcontractors and subsidiaries fulfil the same requirements as notified bodies in relation to the performance of conformity assessment tasks. Therefore, it is important that the assessment of the competence and the performance of bodies to be notified and the monitoring of bodies already notified cover also activities carried out by subcontractors and subsidiaries."
+    },
+    {
+      "recital_number": 44,
+      "text": "It is necessary to increase the efficiency and transparency of the notification procedure and, in particular, to adapt it to new technologies so as to enable online notification."
+    },
+    {
+      "recital_number": 45,
+      "text": "Since notified bodies may offer their services throughout the Union, it is appropriate to give the other Member States and the Commission the opportunity to raise objections concerning a notified body. It is therefore important to provide for a period during which any doubts or concerns as to the competence of conformity assessment bodies can be clarified before they start operating as notified bodies."
+    },
+    {
+      "recital_number": 46,
+      "text": "In the interests of competitiveness, it is crucial that notified bodies apply the conformity assessment procedures without creating unnecessary burdens for economic operators. For the same reason, and to ensure equal treatment of economic operators, consistency in the technical application of the conformity assessment procedures needs to be ensured. That can best be achieved through appropriate coordination and cooperation between notified bodies."
+    },
+    {
+      "recital_number": 47,
+      "text": "In order to ensure legal certainty, it is necessary to clarify that rules on Union market surveillance and control of products entering the Union market provided for in Regulation (EC) No 765/2008 apply to apparatus covered by this Directive. This Directive should not prevent Member States from choosing the competent authorities to carry out those tasks."
+    },
+    {
+      "recital_number": 48,
+      "text": "Directive 2004/108/EC already provides for a safeguard procedure. In order to increase transparency and to reduce processing time, it is necessary to improve the existing safeguard procedure, with a view to making it more efficient and drawing on the expertise available in Member States."
+    },
+    {
+      "recital_number": 49,
+      "text": "The existing system should be supplemented by a procedure under which interested parties are informed of measures intended to be taken with regard to apparatus presenting a risk to aspects of public interest protection covered by this Directive. It should also allow market surveillance authorities, in cooperation with the relevant economic operators, to act at an earlier stage in respect of such apparatus."
+    },
+    {
+      "recital_number": 50,
+      "text": "Where the Member States and the Commission agree as to the justification of a measure taken by a Member State, no further involvement of the Commission should be required, except where non-compliance can be attributed to shortcomings of a harmonised standard."
+    },
+    {
+      "recital_number": 51,
+      "text": "In order to ensure uniform conditions for the implementation of this Directive, implementing powers should be conferred on the Commission. Those powers should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council of 16 February 2011 laying down the rules and general principles concerning mechanisms for control by Member States of the Commission’s exercise of implementing powers (8)."
+    },
+    {
+      "recital_number": 52,
+      "text": "The advisory procedure should be used for the adoption of implementing acts requesting the notifying Member State to take the necessary corrective measures in respect of notified bodies that do not meet or no longer meet the requirements for their notification."
+    },
+    {
+      "recital_number": 53,
+      "text": "In line with established practice, the committee set up by this Directive can play a useful role in examining matters concerning the application of this Directive raised either by its chair or by a representative of a Member State in accordance with its rules of procedure"
+    },
+    {
+      "recital_number": 54,
+      "text": "When matters relating to this Directive, other than its implementation or infringements, are being examined, i.e. in a Commission expert group, the European Parliament should in line with existing practice receive full information and documentation and, where appropriate, an invitation to attend such meetings."
+    },
+    {
+      "recital_number": 55,
+      "text": "The Commission should, by means of implementing acts and, given their special nature, acting without the application of Regulation (EU) No 182/2011, determine whether measures taken by Member States in respect of non-compliant apparatus are justified or not."
+    },
+    {
+      "recital_number": 56,
+      "text": "Member States should lay down rules on penalties applicable to infringements of the provisions of national law adopted pursuant to this Directive and ensure that those rules are enforced. The penalties provided for should be effective, proportionate and dissuasive."
+    },
+    {
+      "recital_number": 57,
+      "text": "It is necessary to provide for reasonable transitional arrangements that allow the making available on the market and putting into service, without the need to comply with further product requirements, of apparatus that has already been placed on the market in accordance with Directive 2004/108/EC before the date of application of national measures transposing this Directive. Distributors should therefore be able to supply apparatus that has been placed on the market, namely stock that is already in the distribution chain, before the date of application of national measures transposing this Directive."
+    },
+    {
+      "recital_number": 58,
+      "text": "Since the objective of this Directive, namely to ensure the functioning of the internal market by requiring equipment to comply with an adequate level of electromagnetic compatibility, cannot be sufficiently achieved by the Member States but can rather, by reason of its scale and effects, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality, as set out in that Article, this Directive does not go beyond what is necessary in order to achieve that objective."
+    },
+    {
+      "recital_number": 59,
+      "text": "The obligation to transpose this Directive into national law should be confined to those provisions which represent a substantive amendment as compared to the earlier Directive. The obligation to transpose the provisions which are unchanged arises under the earlier Directive."
+    },
+    {
+      "recital_number": 60,
+      "text": "This Directive should be without prejudice to the obligations of the Member States relating to the time-limits for transposition into national law and the dates of application of the Directive set out in Annex V,"
+    }
+  ]
+}
