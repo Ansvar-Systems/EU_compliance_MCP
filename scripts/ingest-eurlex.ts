@@ -228,6 +228,19 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   // CRA secondary acts (implementing / delegated)
   '32025R2392': { id: 'CRA_IMPL_IMPORTANT_CRITICAL_PRODUCTS', full_name: 'Commission Implementing Regulation (EU) 2025/2392 - Technical Description of the Categories of Important and Critical Products with Digital Elements (CRA Art. 7)', effective_date: '2025-12-21' },
   '32026R0881': { id: 'CRA_DEL_DELAYED_DISSEMINATION', full_name: 'Commission Delegated Regulation (EU) 2026/881 - Terms and Conditions for Delaying the Dissemination of Notifications (CRA)', effective_date: '2026-05-10' },
+  // CE-marking / machinery-safety directives — the New Approach product law that
+  // industrial robots, cobots and their integrators conform to alongside the
+  // Machinery Regulation (EU) 2023/1230 (id MACHINERY, applies from 2027-01-20).
+  // 2006/42/EC is the machinery law in force until then; EMC/LVD/ATEX are the
+  // co-applicable CE directives; 2022/30 turns on the RED cyber requirements for
+  // connected radio equipment; 1025/2012 is the harmonised-standards basis that
+  // grants presumption of conformity across all of them.
+  '32006L0042': { id: 'MACHINERY_DIR', full_name: 'Machinery Directive 2006/42/EC', effective_date: '2009-12-29' },
+  '32022R0030': { id: 'RED_DEL_CYBER', full_name: 'Commission Delegated Regulation (EU) 2022/30 - Radio Equipment Directive cybersecurity requirements (Art. 3(3)(d)(e)(f))', effective_date: '2025-08-01' },
+  '32014L0030': { id: 'EMC', full_name: 'Electromagnetic Compatibility Directive 2014/30/EU', effective_date: '2016-04-20' },
+  '32014L0035': { id: 'LVD', full_name: 'Low Voltage Directive 2014/35/EU', effective_date: '2016-04-20' },
+  '32014L0034': { id: 'ATEX', full_name: 'ATEX Directive 2014/34/EU - Equipment for Potentially Explosive Atmospheres', effective_date: '2016-04-20' },
+  '32012R1025': { id: 'STANDARDISATION_REG', full_name: 'Regulation (EU) No 1025/2012 on European Standardisation', effective_date: '2013-01-01' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
@@ -480,7 +493,11 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
     // PRECEDING article's body (AI Act art_4/art_5). We MOVE the caption into a
     // pendingHeading and apply it as the next article's title when that article
     // has none of its own.
-    const chapterStart = line.match(/^CHAPTER\s+([IVXLC]+)/i);
+    // Accept both roman ("CHAPTER III", older directives) and arabic
+    // ("CHAPTER 5", the 2014 New Approach directives — EMC/LVD/ATEX) numerals.
+    // Missing the arabic form left the chapter title unconsumed, bleeding it
+    // into the preceding article's body (EMC art_36 → CHAPTER 5 caption).
+    const chapterStart = line.match(/^CHAPTER\s+([IVXLC]+|\d+)/i);
     if (chapterStart) {
       currentChapter = chapterStart[1];
       expectHeadingLine = true;
@@ -496,7 +513,13 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
       // it (do not push to the current article); remember it for the next
       // article's title. Guard: a real caption is short and not a full sentence.
       expectHeadingLine = false;
-      if (line.length <= 100 && !line.endsWith('.')) {
+      // A caption directly following an explicit CHAPTER/SECTION marker is a
+      // heading regardless of length — the "not a sentence" guard (no terminal
+      // period) is the real discriminant. EU chapter titles run long
+      // ("UNION MARKET SURVEILLANCE AND CONTROL OF APPARATUS ENTERING THE UNION
+      // MARKET AND UNION SAFEGUARD PROCEDURE" = 104 chars, EMC ch. 5), so the
+      // old 100-char cap dropped them back into the preceding article's body.
+      if (line.length <= 200 && !line.endsWith('.')) {
         pendingHeading = line;
         continue;
       }
