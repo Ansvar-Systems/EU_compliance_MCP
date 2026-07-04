@@ -241,6 +241,20 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32014L0035': { id: 'LVD', full_name: 'Low Voltage Directive 2014/35/EU', effective_date: '2016-04-20' },
   '32014L0034': { id: 'ATEX', full_name: 'ATEX Directive 2014/34/EU - Equipment for Potentially Explosive Atmospheres', effective_date: '2016-04-20' },
   '32012R1025': { id: 'STANDARDISATION_REG', full_name: 'Regulation (EU) No 1025/2012 on European Standardisation', effective_date: '2013-01-01' },
+  // Market-surveillance / accreditation — the enforcement backbone that the CE
+  // directives above are policed under (Reg 765/2008 is cited directly by EMC/
+  // LVD/ATEX; Reg 2019/1020 governs compliance of products placed on the market).
+  '32019R1020': { id: 'MARKET_SURVEILLANCE_REG', full_name: 'Regulation (EU) 2019/1020 on Market Surveillance and Compliance of Products', effective_date: '2021-07-16' },
+  '32008R0765': { id: 'ACCREDITATION_REG', full_name: 'Regulation (EC) No 765/2008 on Accreditation and Market Surveillance', effective_date: '2010-01-01' },
+  // Occupational-safety layer — the employer-duty side of deploying robots and
+  // machinery in the workplace (robot-cell integration, operator protection).
+  // Consolidated version — the 1989 base act renders in the pre-2000 EUR-Lex
+  // layout that textContent collapses to unsegmentable blocks; the consolidated
+  // form uses the modern per-provision markup the line parser needs.
+  '01989L0391-20081211': { id: 'OSH_FRAMEWORK_DIR', full_name: 'Directive 89/391/EEC — Occupational Safety and Health Framework Directive', effective_date: '1989-06-12' },
+  '32009L0104': { id: 'WORK_EQUIPMENT_DIR', full_name: 'Directive 2009/104/EC on the Use of Work Equipment by Workers at Work', effective_date: '2010-02-03' },
+  // Substance restriction applicable to robots as electrical/electronic equipment.
+  '32011L0065': { id: 'ROHS_DIR', full_name: 'Directive 2011/65/EU (RoHS) on Restriction of Hazardous Substances in EEE', effective_date: '2013-01-02' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },

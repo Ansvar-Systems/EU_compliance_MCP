@@ -1,0 +1,478 @@
+{
+  "id": "ACCREDITATION_REG",
+  "full_name": "Regulation (EC) No 765/2008 on Accreditation and Market Surveillance",
+  "celex_id": "32008R0765",
+  "effective_date": "2010-01-01",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765",
+  "articles": [
+    {
+      "number": "1",
+      "title": "GENERAL PROVISIONS",
+      "text": "Subject matter and scope\n\n1.   This Regulation lays down rules on the organisation and operation of accreditation of conformity assessment bodies performing conformity assessment activities.\n\n2.   This Regulation provides a framework for the market surveillance of products to ensure that those products fulfil requirements providing a high level of protection of public interests, such as health and safety in general, health and safety at the workplace, the protection of consumers, protection of the environment and security.\n\n3.   This Regulation provides a framework for controls on products from third countries.\n\n4.   This Regulation lays down the general principles of the CE marking.",
+      "chapter": "I"
+    },
+    {
+      "number": "2",
+      "title": "Definitions",
+      "text": "For the purposes of this Regulation the following definitions shall apply:\n\n1.\n\n‘making available on the market’ shall mean any supply of a product for distribution, consumption or use on the Community market in the course of a commercial activity, whether in return for payment or free of charge;\n\n2.\n\n‘placing on the market’ shall mean the first making available of a product on the Community market;\n\n3.\n\n‘manufacturer’ shall mean any natural or legal person who manufactures a product or has a product designed or manufactured, and markets that product under his name or trademark;\n\n4.\n\n‘authorised representative’ shall mean any natural or legal person established within the Community who has received a written mandate from a manufacturer to act on his behalf in relation to specified tasks with regard to the latter's obligations under the relevant Community legislation;\n\n5.\n\n‘importer’ shall mean any natural or legal person established within the Community who places a product from a third country on the Community market;\n\n6.\n\n‘distributor’ shall mean any natural or legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market;\n\n7.\n\n‘economic operators’ shall mean the manufacturer, the authorised representative, the importer and the distributor;\n\n8.\n\n‘technical specification’ shall mean a document that prescribes technical requirements to be fulfilled by a product, process or service;\n\n9.\n\n‘harmonised standard’ shall mean a standard adopted by one of the European standardisation bodies listed in Annex I to Directive 98/34/EC of the European Parliament and of the Council of 22 June 1998 laying down a procedure for the provision of information in the field of technical standards and regulations and of rules on Information Society services (10) on the basis of a request made by the Commission in accordance with Article 6 of that Directive;\n\n10.\n\n‘accreditation’ shall mean an attestation by a national accreditation body that a conformity assessment body meets the requirements set by harmonised standards and, where applicable, any additional requirements including those set out in relevant sectoral schemes, to carry out a specific conformity assessment activity;\n\n11.\n\n‘national accreditation body’ shall mean the sole body in a Member State that performs accreditation with authority derived from the State;\n\n12.\n\n‘conformity assessment’ shall mean the process demonstrating whether specified requirements relating to a product, process, service, system, person or body have been fulfilled;\n\n13.\n\n‘conformity assessment body’ shall mean a body that performs conformity assessment activities including calibration, testing, certification and inspection;\n\n14.\n\n‘recall’ shall mean any measure aimed at achieving the return of a product that has already been made available to the end user;\n\n15.\n\n‘withdrawal’ shall mean any measure aimed at preventing a product in the supply chain from being made available on the market;\n\n16.\n\n‘peer evaluation’ shall mean a process for the assessment of a national accreditation body by other national accreditation bodies, carried out in accordance with the requirements of this Regulation, and, where applicable, additional sectoral technical specifications;\n\n17.\n\n‘market surveillance’ shall mean the activities carried out and measures taken by public authorities to ensure that products comply with the requirements set out in the relevant Community harmonisation legislation and do not endanger health, safety or any other aspect of public interest protection;\n\n18.\n\n‘market surveillance authority’ shall mean an authority of a Member State responsible for carrying out market surveillance on its territory;\n\n19.\n\n‘release for free circulation’ shall mean the procedure laid down in Article 79 of Council Regulation (EEC) No 2913/92 of 12 October 1992 establishing the Community Customs Code (11);\n\n20.\n\n‘CE marking’ shall mean a marking by which the manufacturer indicates that the product is in conformity with the applicable requirements set out in Community harmonisation legislation providing for its affixing;\n\n21.\n\n‘Community harmonisation legislation’ shall mean any Community legislation harmonising the conditions for the marketing of products.",
+      "chapter": "II"
+    },
+    {
+      "number": "3",
+      "title": "ACCREDITATION",
+      "text": "Scope\n\nThis Chapter shall apply to accreditation, used on a compulsory or voluntary basis, relating to conformity assessment, whether that assessment is compulsory or not, and irrespective of the legal status of the body performing the accreditation.",
+      "chapter": "II"
+    },
+    {
+      "number": "4",
+      "title": "General principles",
+      "text": "1.   Each Member State shall appoint a single national accreditation body.\n\n2.   Where a Member State considers that it is not economically meaningful or sustainable to have a national accreditation body or to provide certain accreditation services, it shall, as far as possible, have recourse to the national accreditation body of another Member State.\n\n3.   A Member State shall inform the Commission and the other Member States where, in accordance with paragraph 2, recourse is had to the national accreditation body of another Member State.\n\n4.   On the basis of the information referred to in paragraph 3 and Article 12, the Commission shall draw up and update a list of national accreditation bodies which it shall make publicly available.\n\n5.   Where accreditation is not operated directly by the public authorities themselves, a Member State shall entrust its national accreditation body with the operation of accreditation as a public authority activity and grant it formal recognition.\n\n6.   The responsibilities and tasks of the national accreditation body shall be clearly distinguished from those of other national authorities.\n\n7.   The national accreditation body shall operate on a not-for-profit basis.\n\n8.   The national accreditation body shall not offer or provide any activities or services that conformity assessment bodies provide, nor shall it provide consultancy services, own shares in or otherwise have a financial or managerial interest in a conformity assessment body.\n\n9.   Each Member State shall ensure that its national accreditation body has the appropriate financial and personnel resources for the proper performance of its tasks, including the fulfilment of special tasks, such as activities for European and international accreditation cooperation and activities that are required to support public policy and which are not self-financing.\n\n10.   The national accreditation body shall be a member of the body recognised under Article 14.\n\n11.   National accreditation bodies shall establish and maintain appropriate structures to ensure the effective and balanced involvement of all interested parties within both their organisations and the body recognised under Article 14.",
+      "chapter": "II"
+    },
+    {
+      "number": "5",
+      "title": "Operation of accreditation",
+      "text": "1.   A national accreditation body shall, when requested by a conformity assessment body, evaluate whether that conformity assessment body is competent to carry out a specific conformity assessment activity. Where it is found to be competent, the national accreditation body shall issue an accreditation certificate to that effect.\n\n2.   When a Member State decides not to use accreditation, it shall provide the Commission and the other Member States with all the documentary evidence necessary for the verification of the competence of the conformity assessment bodies it selects for the implementation of the Community harmonisation legislation in question.\n\n3.   National accreditation bodies shall monitor the conformity assessment bodies to which they have issued an accreditation certificate.\n\n4.   Where a national accreditation body ascertains that a conformity assessment body which has received an accreditation certificate is no longer competent to carry out a specific conformity assessment activity or has committed a serious breach of its obligations, that accreditation body shall take all appropriate measures within a reasonable timeframe to restrict, suspend or withdraw the accreditation certificate.\n\n5.   Member States shall establish procedures for the resolution of appeals, including, where appropriate, legal remedies against accreditation decisions or the absence thereof.",
+      "chapter": "II"
+    },
+    {
+      "number": "6",
+      "title": "Principle of non-competition",
+      "text": "1.   National accreditation bodies shall not compete with conformity assessment bodies.\n\n2.   National accreditation bodies shall not compete with other national accreditation bodies.\n\n3.   National accreditation bodies shall be permitted to operate across national borders, within the territory of another Member State, either at the request of a conformity assessment body in the circumstances set out in Article 7(1), or, if they are asked to do so by a national accreditation body in accordance with Article 7(3), in cooperation with the national accreditation body of that Member State.",
+      "chapter": "II"
+    },
+    {
+      "number": "7",
+      "title": "Cross-border accreditation",
+      "text": "1.   Where a conformity assessment body requests accreditation it shall do so with the national accreditation body of the Member State in which it is established or with the national accreditation body to which that Member State has had recourse in accordance with Article 4(2).\n\nHowever, a conformity assessment body may request accreditation by a national accreditation body other than those referred to in the first subparagraph in any one of the following situations:\n\n(a)\n\nwhere the Member State in which it is established has decided not to establish a national accreditation body and has not had recourse to the national accreditation body of another Member State in accordance with Article 4(2);\n\n(b)\n\nwhere the national accreditation bodies referred to in the first subparagraph do not perform accreditation in respect of the conformity assessment activities for which accreditation is sought;\n\n(c)\n\nwhere the national accreditation bodies referred to in the first subparagraph have not successfully undergone peer evaluation under Article 10 in respect of the conformity assessment activities for which accreditation is sought.\n\n2.   Where a national accreditation body receives a request pursuant to paragraph 1(b) or (c), it shall inform the national accreditation body of the Member State in which the requesting conformity assessment body is established. In such cases, the national accreditation body of the Member State in which the requesting conformity assessment body is established may participate as an observer.\n\n3.   A national accreditation body may request another national accreditation body to carry out part of the assessment activity. In such a case, the accreditation certificate shall be issued by the requesting body.",
+      "chapter": "II"
+    },
+    {
+      "number": "8",
+      "title": "Requirements for national accreditation bodies",
+      "text": "A national accreditation body shall fulfil the following requirements:\n\n1.\n\nit shall be organised in such a manner as to make it independent of the conformity assessment bodies it assesses and of commercial pressures, and to ensure that no conflicts of interest with conformity assessment bodies occur;\n\n2.\n\nit shall be organised and operated so as to safeguard the objectivity and impartiality of its activities;\n\n3.\n\nit shall ensure that each decision relating to the attestation of competence is taken by competent persons different from those who carried out the assessment;\n\n4.\n\nit shall have adequate arrangements to safeguard the confidentiality of the information obtained;\n\n5.\n\nit shall identify the conformity assessment activities for which it is competent to perform accreditation, referring, where appropriate, to relevant Community or national legislation and standards;\n\n6.\n\nit shall set up the procedures necessary to ensure efficient management and appropriate internal controls;\n\n7.\n\nit shall have a number of competent personnel at its disposal sufficient for the proper performance of its tasks;\n\n8.\n\nit shall document the duties, responsibilities and authorities of personnel who could affect the quality of the assessment and of the attestation of competence;\n\n9.\n\nit shall establish, implement and maintain procedures for monitoring the performance and competence of the personnel involved;\n\n10.\n\nit shall verify that conformity assessments are carried out in an appropriate manner, meaning that unnecessary burdens are not imposed on undertakings and that due account is taken of the size of an undertaking, the sector in which it operates, its structure, the degree of complexity of the product technology in question and the mass or serial nature of the production process;\n\n11.\n\nit shall publish audited annual accounts prepared in accordance with generally accepted accounting principles.",
+      "chapter": "II"
+    },
+    {
+      "number": "9",
+      "title": "Compliance with requirements",
+      "text": "1.   Where a national accreditation body does not meet the requirements of this Regulation or fails to fulfil its obligations hereunder, the Member State concerned shall take appropriate corrective action or shall ensure that such corrective action is taken, and shall inform the Commission thereof.\n\n2.   Member States shall monitor their national accreditation bodies at regular intervals in order to ensure that they fulfil the requirements laid down in Article 8 on a continuing basis.\n\n3.   Member States shall take the utmost account of the results of peer evaluation under Article 10 when carrying out the monitoring referred to in paragraph 2 of this Article.\n\n4.   National accreditation bodies shall have in place the necessary procedures to deal with complaints against the conformity assessment bodies they have accredited.",
+      "chapter": "II"
+    },
+    {
+      "number": "10",
+      "title": "Peer evaluation",
+      "text": "1.   National accreditation bodies shall subject themselves to peer evaluation organised by the body recognised under Article 14.\n\n2.   Stakeholders shall have the right to participate in the system set up for the supervision of peer evaluation activities, but not in individual peer evaluation procedures.\n\n3.   Member States shall ensure that their national accreditation bodies regularly undergo peer evaluation as required by paragraph 1.\n\n4.   Peer evaluation shall be operated on the basis of sound and transparent evaluation criteria and procedures, in particular concerning structural, human resource and process requirements, confidentiality and complaints. Appropriate appeal procedures against decisions taken as a result of such evaluation shall be provided for.\n\n5.   Peer evaluation shall ascertain whether the national accreditation bodies meet the requirements laid down in Article 8, taking into account the relevant harmonised standards referred to in Article 11.\n\n6.   The outcome of peer evaluation shall be published and communicated by the body recognised under Article 14 to all Member States and the Commission.\n\n7.   The Commission shall, in cooperation with the Member States, oversee the rules and the proper functioning of the peer evaluation system.",
+      "chapter": "II"
+    },
+    {
+      "number": "11",
+      "title": "Presumption of conformity for national accreditation bodies",
+      "text": "1.   National accreditation bodies that demonstrate conformity with the criteria laid down in the relevant harmonised standard, the reference of which has been published in the Official Journal of the European Union, by having successfully undergone peer evaluation under Article 10 shall be presumed to fulfil the requirements laid down in Article 8.\n\n2.   National authorities shall recognise the equivalence of the services delivered by those accreditation bodies which have successfully undergone peer evaluation under Article 10, and thereby accept, on the basis of the presumption referred to in paragraph 1 of this Article, the accreditation certificates of those bodies and the attestations issued by the conformity assessment bodies accredited by them.",
+      "chapter": "II"
+    },
+    {
+      "number": "12",
+      "title": "Information obligation",
+      "text": "1.   Each national accreditation body shall inform the other national accreditation bodies of the conformity assessment activities in respect of which it operates accreditation and of any changes thereto.\n\n2.   Each Member State shall inform the Commission and the body recognised under Article 14 of the identity of its national accreditation body and of all conformity assessment activities in respect of which that body operates accreditation in support of Community harmonisation legislation, and of any changes thereto.\n\n3.   Each national accreditation body shall regularly make publicly available information concerning the results of its peer evaluation, the conformity assessment activities in respect of which it operates accreditation and any changes thereto.",
+      "chapter": "II"
+    },
+    {
+      "number": "13",
+      "title": "Requests to the body recognised under Article 14",
+      "text": "1.   The Commission may, after consulting the Committee set up by Article 5 of Directive 98/34/EC, request the body recognised under Article 14 to contribute to the development, maintenance and implementation of accreditation in the Community.\n\n2.   The Commission may also, following the procedure laid down in paragraph 1:\n\n(a)\n\nrequest the body recognised under Article 14 to lay down evaluation criteria and procedures for peer evaluation and to develop sectoral accreditation schemes;\n\n(b)\n\naccept any existing scheme that already lays down evaluation criteria and procedures for peer evaluation.\n\n3.   The Commission shall ensure that sectoral schemes identify the technical specifications necessary to meet the level of competence required by Community harmonisation legislation in fields with specific requirements relating to technology, health and safety or environment related requirements or any other aspect of public interest protection.",
+      "chapter": "II"
+    },
+    {
+      "number": "14",
+      "title": "European accreditation infrastructure",
+      "text": "1.   The Commission shall, after consulting the Member States, recognise a body which satisfies the requirements set out in Annex I to this Regulation.\n\n2.   A body which is to be recognised pursuant to paragraph 1 shall conclude an agreement with the Commission. That agreement shall specify, inter alia, the detailed tasks of the body, funding provisions and provisions for its supervision. Both the Commission and the body shall be able to terminate the agreement without cause at the expiry of a reasonable period of notice to be defined therein.\n\n3.   The Commission and the body shall make the agreement public.\n\n4.   The Commission shall communicate the recognition of a body pursuant to paragraph 1 to the Member States and to national accreditation bodies.\n\n5.   The Commission may not recognise more than one body at a time.\n\n6.   The first body recognised under this Regulation shall be the European cooperation for accreditation, provided that it has concluded an agreement as specified in paragraph 2.",
+      "chapter": "III"
+    },
+    {
+      "number": "15",
+      "title": "General provisions",
+      "text": "Scope\n\n1.   Articles 16 to 26 shall apply to products covered by Community harmonisation legislation.\n\n2.   Each of the provisions of Articles 16 to 26 shall apply in so far as there are no specific provisions with the same objective in Community harmonisation legislation.\n\n3.   The application of this Regulation shall not prevent market surveillance authorities from taking more specific measures as provided for in Directive 2001/95/EC.\n\n4.   For the purposes of Articles 16 to 26, a ‘product’ shall mean a substance, preparation or good produced through a manufacturing process other than food, feed, living plants and animals, products of human origin and products of plants and animals relating directly to their future reproduction.\n\n5.   Articles 27, 28 and 29 shall apply to all products covered by Community legislation in so far as other Community legislation does not contain specific provisions relating to the organisation of border controls.",
+      "chapter": "III"
+    },
+    {
+      "number": "16",
+      "title": "General requirements",
+      "text": "1.   Member States shall organise and carry out market surveillance as provided for in this Chapter.\n\n2.   Market surveillance shall ensure that products covered by Community harmonisation legislation which, when used in accordance with their intended purpose or under conditions which can be reasonably foreseen and when properly installed and maintained, are liable to compromise the health or safety of users, or which otherwise do not conform to applicable requirements set out in Community harmonisation legislation are withdrawn or their being made available on the market is prohibited or restricted and that the public, the Commission and the other Member States are informed accordingly.\n\n3.   National market surveillance infrastructures and programmes shall ensure that effective measures can be taken in relation to any product category subject to Community harmonisation legislation.\n\n4.   Market surveillance shall cover products assembled or manufactured for the manufacturer's own use where Community harmonisation legislation provides that its provisions shall apply to such products.",
+      "chapter": "III"
+    },
+    {
+      "number": "17",
+      "title": "Community market surveillance framework",
+      "text": "Information obligations\n\n1.   Member States shall inform the Commission of their market surveillance authorities and their areas of competence. The Commission shall transmit that information to the other Member States.\n\n2.   Member States shall ensure that the public is aware of the existence, responsibilities and identity of national market surveillance authorities, and of how those authorities may be contacted.",
+      "chapter": "III"
+    },
+    {
+      "number": "18",
+      "title": "Obligations of the Member States as regards organisation",
+      "text": "1.   Member States shall establish appropriate communication and coordination mechanisms between their market surveillance authorities.\n\n2.   Member States shall establish adequate procedures in order to:\n\n(a)\n\nfollow up complaints or reports on issues relating to risks arising in connection with products subject to Community harmonisation legislation;\n\n(b)\n\nmonitor accidents and harm to health which are suspected to have been caused by those products;\n\n(c)\n\nverify that corrective action has been taken; and\n\n(d)\n\nfollow up scientific and technical knowledge concerning safety issues.\n\n3.   Member States shall entrust market surveillance authorities with the powers, resources and knowledge necessary for the proper performance of their tasks.\n\n4.   Member States shall ensure that market surveillance authorities exercise their powers in accordance with the principle of proportionality.\n\n5.   Member States shall establish, implement and periodically update their market surveillance programmes. Member States shall draw up either a general market surveillance programme or sector specific programmes, covering the sectors in which they conduct market surveillance, communicate those programmes to the other Member States and the Commission and make them available to the public, by way of electronic communication and, where appropriate, by other means. The first such communication shall be effected by 1 January 2010. Subsequent updates of the programmes shall be made public in the same manner. Member States may cooperate with all relevant stakeholders to those ends.\n\n6.   Member States shall periodically review and assess the functioning of their surveillance activities. Such reviews and assessments shall be carried out at least every fourth year and the results thereof shall be communicated to the other Member States and the Commission and be made available to the public, by way of electronic communication and, where appropriate, by other means.",
+      "chapter": "III"
+    },
+    {
+      "number": "19",
+      "title": "Market surveillance measures",
+      "text": "1.   Market surveillance authorities shall perform appropriate checks on the characteristics of products on an adequate scale, by means of documentary checks and, where appropriate, physical and laboratory checks on the basis of adequate samples. When doing so they shall take account of established principles of risk assessment, complaints and other information.\n\nMarket surveillance authorities may require economic operators to make such documentation and information available as appear to them to be necessary for the purpose of carrying out their activities, and, where it is necessary and justified, enter the premises of economic operators and take the necessary samples of products. They may destroy or otherwise render inoperable products presenting a serious risk where they deem it necessary.\n\nWhere economic operators present test reports or certificates attesting conformity issued by an accredited conformity assessment body, market surveillance authorities shall take due account of such reports or certificates.\n\n2.   Market surveillance authorities shall take appropriate measures to alert users within their territories within an adequate timeframe of hazards they have identified relating to any product so as to reduce the risk of injury or other damage.\n\nThey shall cooperate with economic operators regarding actions which could prevent or reduce risks caused by products made available by those operators.\n\n3.   Where the market surveillance authorities of one Member State decide to withdraw a product manufactured in another Member State, they shall inform the economic operator concerned at the address indicated on the product in question or in the documentation accompanying that product.\n\n4.   Market surveillance authorities shall carry out their duties independently, impartially and without bias.\n\n5.   Market surveillance authorities shall observe confidentiality where necessary in order to protect commercial secrets or to preserve personal data pursuant to national legislation, subject to the requirement that information be made public under this Regulation to the fullest extent necessary in order to protect the interests of users in the Community.",
+      "chapter": "III"
+    },
+    {
+      "number": "20",
+      "title": "Products presenting a serious risk",
+      "text": "1.   Member States shall ensure that products which present a serious risk requiring rapid intervention, including a serious risk the effects of which are not immediate, are recalled, withdrawn or that their being made available on their market is prohibited, and that the Commission is informed without delay thereof, in accordance with Article 22.\n\n2.   The decision whether or not a product represents a serious risk shall be based on an appropriate risk assessment which takes account of the nature of the hazard and the likelihood of its occurrence. The feasibility of obtaining higher levels of safety or the availability of other products presenting a lesser degree of risk shall not constitute grounds for considering that a product presents a serious risk.",
+      "chapter": "III"
+    },
+    {
+      "number": "21",
+      "title": "Restrictive measures",
+      "text": "1.   Member States shall ensure that any measure taken, pursuant to the relevant Community harmonisation legislation, to prohibit or restrict the product's being made available on the market, to withdraw it from the market or to recall it, is proportionate and states the exact grounds on which it is based.\n\n2.   Such measures shall be communicated without delay to the relevant economic operator, which shall at the same time be informed of the remedies available under the law of the Member State concerned and of the time limits to which such remedies are subject.\n\n3.   Prior to the adoption of a measure referred to in paragraph 1, the economic operator concerned shall be given the opportunity to be heard within an appropriate period of not less than 10 days, unless such consultation is not possible because of the urgency of the measure to be taken, as justified by health or safety requirements or other grounds relating to the public interests covered by the relevant Community harmonisation legislation. If action has been taken without the operator's being heard, the operator shall be given the opportunity to be heard as soon as possible and the action taken shall be reviewed promptly thereafter.\n\n4.   Any measure referred to in paragraph 1 shall be promptly withdrawn or amended upon the economic operator's demonstrating that he has taken effective action.",
+      "chapter": "III"
+    },
+    {
+      "number": "22",
+      "title": "Exchange of information — Community Rapid Information System",
+      "text": "1.   Where a Member State takes or intends to take a measure in accordance with Article 20 and considers that the reasons which prompted the measure or the effects of the measure go beyond its territory, it shall immediately notify the Commission of that measure, in accordance with paragraph 4 of this Article. It shall also inform the Commission without delay of the modification or withdrawal of any such measure.\n\n2.   If a product presenting a serious risk has been made available on the market, Member States shall notify the Commission of any voluntary measures taken and communicated by an economic operator.\n\n3.   The information provided in accordance with paragraphs 1 and 2 shall include all available details, in particular the data necessary for the identification of the product, the origin and the supply chain of the product, the related risk, the nature and the duration of the national measure taken and any voluntary measures taken by economic operators.\n\n4.   For the purposes of paragraphs 1, 2 and 3, the market surveillance and information exchange system provided for in Article 12 of Directive 2001/95/EC shall be used. Paragraphs 2, 3 and 4 of Article 12 of that Directive shall apply mutatis mutandis.",
+      "chapter": "III"
+    },
+    {
+      "number": "23",
+      "title": "General information support system",
+      "text": "1.   The Commission shall develop and maintain a general archiving and exchange of information system, using electronic means, on issues relating to market surveillance activities, programmes and related information on non-compliance with Community harmonisation legislation. The system shall appropriately reflect notifications and information provided under Article 22.\n\n2.   For the purposes of paragraph 1, Member States shall provide the Commission with information at their disposal and not already provided under Article 22 on products presenting a risk regarding, in particular, identification of risks, results of testing carried out, provisional restrictive measures taken, contacts with the economic operators concerned and justification for action or inaction.\n\n3.   Without prejudice to Article 19(5) or to national legislation in the area of confidentiality, the safeguarding of confidentiality with regard to the information content shall be ensured. The protection of confidentiality shall not prevent the dissemination to market surveillance authorities of information relevant to ensuring the effectiveness of market surveillance activities.",
+      "chapter": "III"
+    },
+    {
+      "number": "24",
+      "title": "Principles of cooperation between the Member States and the Commission",
+      "text": "1.   Member States shall ensure efficient cooperation and exchange of information between their market surveillance authorities and those of the other Member States and between their own authorities and the Commission and the relevant Community agencies regarding their market surveillance programmes and all issues relating to products presenting risks.\n\n2.   For the purposes of paragraph 1, the market surveillance authorities of one Member State shall give the market surveillance authorities of other Member States assistance on an adequate scale by supplying information or documentation, by carrying out appropriate investigations or any other appropriate measure and by participating in investigations initiated in other Member States.\n\n3.   The Commission shall collect and organise such data on national market surveillance measures as will enable it to fulfil its obligations.\n\n4.   Any information provided by an economic operator under Article 21(3) or otherwise shall be included when the reporting Member State notifies other Member States and the Commission of its findings and actions. Any subsequent information shall be clearly identified as relating to the information already provided.",
+      "chapter": "III"
+    },
+    {
+      "number": "25",
+      "title": "Sharing of resources",
+      "text": "1.   Market surveillance initiatives designed to share resources and expertise between the competent authorities of the Member States may be set up by the Commission or the Member States concerned. Such initiatives shall be coordinated by the Commission.\n\n2.   For the purposes of paragraph 1, the Commission shall, in cooperation with the Member States:\n\n(a)\n\ndevelop and organise training programmes and exchanges of national officials;\n\n(b)\n\ndevelop, organise and set up programmes for the exchange of experience, information and best practice, programmes and actions for common projects, information campaigns, joint visit programmes and the consequent sharing of resources.\n\n3.   Member States shall ensure that their competent authorities participate fully in the activities referred to in paragraph 2, where appropriate.",
+      "chapter": "III"
+    },
+    {
+      "number": "26",
+      "title": "Cooperation with the competent authorities of third countries",
+      "text": "1.   Market surveillance authorities may cooperate with the competent authorities of third countries with a view to exchanging information and technical support, promoting and facilitating access to European systems and promoting activities relating to conformity assessment, market surveillance and accreditation.\n\nThe Commission shall, in cooperation with Member States, develop appropriate programmes for that purpose.\n\n2.   Cooperation with the competent authorities of third countries shall take the form of, inter alia, the activities referred to in Article 25(2). Member States shall ensure that their competent authorities participate fully in those activities.",
+      "chapter": "III"
+    },
+    {
+      "number": "27",
+      "title": "Controls of products entering the Community market",
+      "text": "Controls of products entering the Community market\n\n1.   The authorities of the Member States in charge of the control of products entering the Community market shall have the powers and resources necessary for the proper performance of their tasks. They shall carry out appropriate checks on the characteristics of products on an adequate scale, in accordance with the principles set out in Article 19(1), before those products are released for free circulation.\n\n2.   Where in a Member State more than one authority is responsible for market surveillance or external border controls, those authorities shall cooperate with each other, by sharing information relevant to their functions and otherwise as appropriate.\n\n3.   The authorities in charge of external border controls shall suspend release of a product for free circulation on the Community market when any of the following findings are made in the course of the checks referred to in paragraph 1:\n\n(a)\n\nthe product displays characteristics which give cause to believe that the product, when properly installed, maintained and used, presents a serious risk to health, safety, the environment or any other public interest referred to in Article 1;\n\n(b)\n\nthe product is not accompanied by the written or electronic documentation required by the relevant Community harmonisation legislation or is not marked in accordance with that legislation;\n\n(c)\n\nthe CE marking has been affixed to the product in a false or misleading manner.\n\nThe authorities in charge of external border controls shall immediately notify the market surveillance authorities of any such suspension.\n\n4.   In the case of perishable products, the authorities in charge of external border controls shall, as far as possible, seek to ensure that any requirements they may impose with regard to the storage of products or the parking of vehicles used for transport are not incompatible with the preservation of those products.\n\n5.   For the purposes of this Section, Article 24 shall apply in respect of authorities in charge of external border controls, without prejudice to the application of Community law providing for more specific systems of cooperation between those authorities.",
+      "chapter": "III"
+    },
+    {
+      "number": "28",
+      "title": "Release of products",
+      "text": "1.   A product the release of which has been suspended by the authorities in charge of external border controls pursuant to Article 27 shall be released if, within three working days of the suspension of release, those authorities have not been notified of any action taken by the market surveillance authorities, and provided that all the other requirements and formalities pertaining to such release have been fulfilled.\n\n2.   Where the market surveillance authorities find that the product in question does not present a serious risk to health and safety or cannot be regarded as being in breach of Community harmonisation legislation, that product shall be released, provided that all the other requirements and formalities pertaining to such release have been fulfilled.",
+      "chapter": "III"
+    },
+    {
+      "number": "29",
+      "title": "National measures",
+      "text": "1.   Where the market surveillance authorities find that a product presents a serious risk, they shall take measures to prohibit that product from being placed on the market and shall require the authorities in charge of external border controls to include the following endorsement on the commercial invoice accompanying the product and on any other relevant accompanying document or, where data processing is carried out electronically, in the data-processing system itself:\n\n‘Dangerous product — release for free circulation not authorised — Regulation (EC) No 765/2008’.\n\n2.   Where the market surveillance authorities find that a product does not comply with Community harmonisation legislation, they shall take appropriate action, which may, if necessary, include prohibiting the product's being placed on the market.\n\nWhere placing on the market is prohibited pursuant to the first subparagraph, the market surveillance authorities shall require the authorities in charge of external border controls not to release the product for free circulation and to include the following endorsement on the commercial invoice accompanying the product and on any other relevant accompanying document or, where data processing is carried out electronically, in the data-processing system itself:\n\n‘Product not in conformity — release for free circulation not authorised — Regulation (EC) No 765/2008’.\n\n3.   Where that product is subsequently declared for a customs procedure other than release for free circulation and provided that the market surveillance authorities do not object, the endorsements set out in paragraphs 1 and 2 shall also be included, under the same conditions, on the documents used in connection with that procedure.\n\n4.   Member States' authorities may destroy or otherwise render inoperable products presenting a serious risk where they deem it necessary and proportionate.\n\n5.   Market surveillance authorities shall provide authorities in charge of external border controls with information on product categories in which a serious risk or non-compliance within the meaning of paragraphs 1 and 2 has been identified.",
+      "chapter": "IV"
+    },
+    {
+      "number": "30",
+      "title": "CE MARKING",
+      "text": "General principles of the CE marking\n\n1.   The CE marking shall be affixed only by the manufacturer or his authorised representative.\n\n2.   The CE marking as presented in Annex II shall be affixed only to products to which its affixing is provided for by specific Community harmonisation legislation, and shall not be affixed to any other product.\n\n3.   By affixing or having affixed the CE marking, the manufacturer indicates that he takes responsibility for the conformity of the product with all applicable requirements set out in the relevant Community harmonisation legislation providing for its affixing.\n\n4.   The CE marking shall be the only marking which attests the conformity of the product with the applicable requirements of the relevant Community harmonisation legislation providing for its affixing.\n\n5.   The affixing to a product of markings, signs or inscriptions which are likely to mislead third parties regarding the meaning or form of the CE marking shall be prohibited. Any other marking may be affixed to the product provided that the visibility, legibility and meaning of the CE marking is not thereby impaired.\n\n6.   Without prejudice to Article 41, Member States shall ensure the correct implementation of the regime governing the CE marking and take appropriate action in the event of improper use of the marking. Member States shall also provide for penalties for infringements, which may include criminal sanctions for serious infringements. Those penalties shall be proportionate to the seriousness of the offence and constitute an effective deterrent against improper use.",
+      "chapter": "V"
+    },
+    {
+      "number": "31",
+      "title": "COMMUNITY FINANCING",
+      "text": "Body pursuing an aim of general European interest\n\nThe body recognised under Article 14 shall be considered a body pursuing an aim of general European interest within the meaning of Article 162 of Commission Regulation (EC, Euratom) No 2342/2002 of 23 December 2002 laying down detailed rules for the implementation of Regulation (EC, Euratom) No 1605/2002 (12).",
+      "chapter": "V"
+    },
+    {
+      "number": "32",
+      "title": "Activities eligible for Community financing",
+      "text": "1.   The Community may finance the following activities in connection with the application of this Regulation:\n\n(a)\n\nthe production and revision of sectoral accreditation schemes referred to in Article 13(3);\n\n(b)\n\nthe activities of the secretariat of the body recognised under Article 14, such as the coordination of accreditation activities, the processing of technical work linked to the operation of the peer evaluation system, the provision of interested parties with information and the participation of the body in the activities of international organisations in the field of accreditation;\n\n(c)\n\nthe drawing up and updating of contributions to guidelines in the fields of accreditation, notification to the Commission of conformity assessment bodies, conformity assessment and market surveillance;\n\n(d)\n\ninter-comparison activities linked to the operation of safeguard clauses;\n\n(e)\n\nthe making available to the Commission of technical expertise for the purpose of assisting the Commission in its implementation of market surveillance administrative cooperation, including the financing of administrative cooperation groups, market surveillance decisions and safeguard clause cases;\n\n(f)\n\nthe performance of preliminary or ancillary work in connection with the implementation of the conformity assessment, metrology, accreditation and market surveillance activities linked to the implementation of Community legislation, such as studies, programmes, evaluations, guidelines, comparative analyses, mutual joint visits, research work, the development and maintenance of databases, training activities, laboratory work, proficiency testing, inter-laboratory tests and conformity assessment work, as well as European market surveillance campaigns and similar activities;\n\n(g)\n\nactivities carried out under programmes of technical assistance, cooperation with third countries and the promotion and enhancement of European conformity assessment, market surveillance and accreditation policies and systems among interested parties in the Community and at international level.\n\n2.   The activities referred to in paragraph 1(a) shall be eligible for Community financing only if the Committee set up by Article 5 of Directive 98/34/EC has been consulted on the requests to be submitted to the body recognised under Article 14 of this Regulation.",
+      "chapter": "V"
+    },
+    {
+      "number": "33",
+      "title": "Bodies eligible for Community financing",
+      "text": "Community financing may be granted to the body recognised under Article 14 for the implementation of the activities set out in Article 32.\n\nHowever, Community financing may also be granted to other bodies for the carrying out of the activities set out in Article 32, except those set out in paragraph 1(a) and (b) of that Article.",
+      "chapter": "V"
+    },
+    {
+      "number": "34",
+      "title": "Financing",
+      "text": "The appropriations allocated to the activities referred to in this Regulation shall be determined each year by the budgetary authority within the limits of the financial framework in force.",
+      "chapter": "V"
+    },
+    {
+      "number": "35",
+      "title": "Financing arrangements",
+      "text": "1.   Community financing shall be provided:\n\n(a)\n\nwithout a call for proposals, to the body recognised under Article 14 to carry out those activities referred to in Article 32(1)(a) to (g) for which grants can be awarded in accordance with the Financial Regulation;\n\n(b)\n\nin the form of grants after a call for proposals, or by public procurement procedures, to other bodies to carry out the activities referred to in Article 32(1)(c) to (g).\n\n2.   The activities of the secretariat of the body recognised under Article 14 referred to in Article 32(1)(b) may be financed on the basis of operating grants. In the event of renewal, the operating grants shall not be decreased automatically.\n\n3.   Grant agreements may authorise flat-rate cover of the beneficiary's overheads up to a maximum of 10 % of total eligible direct costs for actions, except where the beneficiary's indirect costs are covered through an operating grant financed from the Community budget.\n\n4.   The common cooperation objectives and the administrative and financial conditions relating to the grants awarded to the body recognised under Article 14 may be defined in a framework partnership agreement signed by the Commission and that body, in accordance with the Financial Regulation and Regulation (EC, Euratom) No 2342/2002. The European Parliament and the Council shall be informed of the conclusion of any such agreement.",
+      "chapter": "V"
+    },
+    {
+      "number": "36",
+      "title": "Management and monitoring",
+      "text": "1.   The appropriations determined by the budgetary authority for the financing of conformity assessment, accreditation and market surveillance activities may also cover administrative expenses relating to preparation, monitoring, inspection, auditing and evaluation which are directly necessary for the achievement of the objectives of this Regulation, and in particular studies, meetings, information and publication activities, expenses relating to informatics networks for the exchange of information and any other expenditure on administrative and technical assistance which the Commission may use for conformity assessment and accreditation activities.\n\n2.   The Commission shall evaluate the relevance of the conformity assessment, accreditation and market surveillance activities that receive Community financing in the light of the requirements of Community policies and legislation, and inform the European Parliament and the Council of the outcome of that evaluation by 1 January 2013 and every five years thereafter.",
+      "chapter": "V"
+    },
+    {
+      "number": "37",
+      "title": "Protection of the Community's financial interests",
+      "text": "1.   The Commission shall ensure that, when the activities financed under this Regulation are implemented, the Community's financial interests are protected by the application of preventive measures against fraud, corruption and other illegal activities, by effective checks and by the recovery of amounts unduly paid and, if irregularities are detected, by effective, proportionate and dissuasive penalties, in accordance with Council Regulation (EC, Euratom) No 2988/95 of 18 December 1995 on the protection of the European Communities financial interests (13), Council Regulation (Euratom, EC) No 2185/96 of 11 November 1996 concerning on-the-spot checks and inspections carried out by the Commission in order to protect the European Communities' financial interests against fraud and other irregularities (14) and Regulation (EC) No 1073/1999 of the European Parliament and of the Council of 25 May 1999 concerning investigations conducted by the European Anti-Fraud Office (OLAF) (15).\n\n2.   For the purposes of the Community activities financed under this Regulation, the notion of irregularity referred to in Article 1(2) of Regulation (EC, Euratom) No 2988/95 shall mean any infringement of a provision of Community law or any breach of a contractual obligation resulting from an act or omission by an economic operator which has, or would have, the effect of prejudicing the general budget of the European Union or budgets managed by it by an unjustified item of expenditure.\n\n3.   Any agreements and contracts resulting from this Regulation shall provide for monitoring and financial control by the Commission or any representative which it authorises and for audits by the Court of Auditors, which may be conducted on the spot if necessary.",
+      "chapter": "VI"
+    },
+    {
+      "number": "38",
+      "title": "FINAL PROVISIONS",
+      "text": "Technical guidelines\n\nIn order to facilitate the implementation of this Regulation, the Commission shall draw up non-binding guidelines in consultation with stakeholders.",
+      "chapter": "VI"
+    },
+    {
+      "number": "39",
+      "title": "Transitional provision",
+      "text": "Accreditation certificates issued before 1 January 2010 may remain valid until the date of their expiry, but no later than 31 December 2014. This Regulation shall, however, apply in the case of their extension or renewal.",
+      "chapter": "VI"
+    },
+    {
+      "number": "40",
+      "title": "Review and reporting",
+      "text": "By 2 September 2013, the Commission shall submit to the European Parliament and to the Council a report on the application of this Regulation, of Directive 2001/95/EC and of any other relevant Community instrument addressing market surveillance. That report shall, in particular, analyse the consistency of Community rules in the field of market surveillance. If appropriate, it shall be accompanied by proposals to amend and/or consolidate the instruments concerned, in the interests of better regulation and simplification. It shall include an evaluation of the extension of the scope of Chapter III of this Regulation to all products.\n\nBy 1 January 2013, and every five years thereafter, the Commission, in cooperation with the Member States, shall produce and submit to the European Parliament and to the Council a report on the implementation of this Regulation.",
+      "chapter": "VI"
+    },
+    {
+      "number": "41",
+      "title": "Penalties",
+      "text": "The Member States shall lay down rules on penalties for economic operators, which may include criminal sanctions for serious infringements, applicable to infringements of the provisions of this Regulation and shall take all measures necessary to ensure that they are implemented. The penalties provided for shall be effective, proportionate and dissuasive and may be increased if the relevant economic operator has previously committed a similar infringement of the provisions of this Regulation. The Member States shall notify the Commission of those provisions by 1 January 2010 and shall notify it without delay of any subsequent amendment affecting them.",
+      "chapter": "VI"
+    },
+    {
+      "number": "42",
+      "title": "Amendment to Directive 2001/95/EC",
+      "text": "Article 8(3) of Directive 2001/95/EC shall be replaced by the following:\n\n‘3.   In the case of products posing a serious risk, the competent authorities shall with due dispatch take the appropriate measures referred to in paragraph 1(b) to (f). The existence of a serious risk shall be determined by the Member States, assessing each individual case on its merits and taking into account the guidelines referred to in point 8 of Annex II.’.",
+      "chapter": "VI"
+    },
+    {
+      "number": "43",
+      "title": "Repeal",
+      "text": "Regulation (EEC) No 339/93 is hereby repealed with effect from 1 January 2010.\n\nReferences to the repealed Regulation shall be construed as references to this Regulation.",
+      "chapter": "VI"
+    },
+    {
+      "number": "44",
+      "title": "Entry into force",
+      "text": "This Regulation shall enter into force on the 20th day after its publication in the Official Journal of the European Union.\n\nIt shall apply from 1 January 2010.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States.",
+      "chapter": "VI"
+    },
+    {
+      "number": "Annex I",
+      "title": "Requirements applicable to the body to be recognised under Article 14",
+      "text": "1.\nThe body recognised under Article 14 of the Regulation (the body), shall be established within the Community.\n2.\nUnder the body's constitution, national accreditation bodies from within the Community shall be entitled to be members of it, provided that they comply with the rules and objectives of the body and with the other conditions set out herein and as agreed with the Commission in the framework agreement.\n3.\nThe body shall consult all relevant stakeholders.\n4.\nThe body shall provide its members with peer evaluation services satisfying the requirements of Articles 10 and 11.\n5.\nThe body shall cooperate with the Commission in accordance with this Regulation."
+    },
+    {
+      "number": "Annex II",
+      "title": "CE marking",
+      "text": "1.\nThe CE marking shall consist of the initials ‘CE’ taking the following form:\n2.\nIf the CE marking is reduced or enlarged, the proportions given in the graduated drawing in paragraph 1 shall be respected.\n3.\nWhere specific legislation does not impose specific dimensions, the CE marking shall be at least 5 mm high."
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "It is necessary to ensure that products benefiting from the free movement of goods within the Community fulfil requirements providing a high level of protection of public interests such as health and safety in general, health and safety at the workplace, protection of consumers, protection of the environment and security, while ensuring that the free movement of products is not restricted to any extent greater than that which is allowed under Community harmonisation legislation or any other relevant Community rules. Provision should, therefore, be made for rules on accreditation, market surveillance, controls of products from third countries and the CE marking."
+    },
+    {
+      "recital_number": 2,
+      "text": "It is necessary to establish an overall framework of rules and principles in relation to accreditation and market surveillance. That framework should not affect the substantive rules of existing legislation setting out the provisions to be observed for the purpose of protecting public interests such as health, safety and protection of consumers and of the environment, but should aim at enhancing their operation."
+    },
+    {
+      "recital_number": 3,
+      "text": "This Regulation should be seen as complementary to Decision No 768/2008/EC of the European Parliament and of the Council of 9 July 2008 on a common framework for the marketing of products (3)."
+    },
+    {
+      "recital_number": 4,
+      "text": "It is very difficult to adopt Community legislation for every product which exists or which may be developed; there is a need for a broad-based, legislative framework of a horizontal nature to deal with such products, to cover lacunae, in particular pending revision of existing specific legislation, and to complement provisions in existing or future specific legislation, in particular with a view to ensuring a high level of protection of health, safety, the environment and consumers, as required by Article 95 of the Treaty."
+    },
+    {
+      "recital_number": 5,
+      "text": "The framework for market surveillance established by this Regulation should complement and strengthen existing provisions in Community harmonisation legislation relating to market surveillance and the enforcement of such provisions. However, in accordance with the principle of lex specialis, this Regulation should apply only in so far as there are no specific provisions with the same objective, nature or effect in other existing or future rules of Community harmonisation legislation. Examples can be found in the following sectors: drug precursors, medical devices, medicinal products for human and veterinary use, motor vehicles and aviation. The corresponding provisions of this Regulation should not therefore apply in the areas covered by such specific provisions."
+    },
+    {
+      "recital_number": 6,
+      "text": "Directive 2001/95/EC of the European Parliament and of the Council of 3 December 2001 on general product safety (4) established rules to ensure the safety of consumer products. Market surveillance authorities should have the possibility of taking the more specific measures available to them under that Directive."
+    },
+    {
+      "recital_number": 7,
+      "text": "However, in order to achieve a higher level of safety for consumer products, the market surveillance mechanisms provided for in Directive 2001/95/EC should be reinforced as regards products presenting a serious risk, in accordance with the principles established by this Regulation. Directive 2001/95/EC should therefore be amended accordingly."
+    },
+    {
+      "recital_number": 8,
+      "text": "Accreditation is part of an overall system, including conformity assessment and market surveillance, designed to assess and ensure conformity with the applicable requirements."
+    },
+    {
+      "recital_number": 9,
+      "text": "The particular value of accreditation lies in the fact that it provides an authoritative statement of the technical competence of bodies whose task is to ensure conformity with the applicable requirements."
+    },
+    {
+      "recital_number": 10,
+      "text": "Accreditation, though so far not regulated at Community level, is carried out in all Member States. The lack of common rules for that activity has resulted in different approaches and differing systems throughout the Community, with the result that the degree of rigour applied in the performance of accreditation has varied between Member States. It is therefore necessary to develop a comprehensive framework for accreditation and to lay down at Community level the principles for its operation and organisation."
+    },
+    {
+      "recital_number": 11,
+      "text": "The establishment of a uniform national accreditation body should be without prejudice to the allocation of functions within Member States."
+    },
+    {
+      "recital_number": 12,
+      "text": "Where Community harmonisation legislation provides for the selection of conformity assessment bodies for its implementation, transparent accreditation, as provided for in this Regulation, ensuring the necessary level of confidence in conformity certificates, should be considered by the national public authorities throughout the Community the preferred means of demonstrating the technical competence of those bodies. However, national authorities may consider that they possess the appropriate means of carrying out this evaluation themselves. In such cases, in order to ensure the appropriate level of credibility of evaluations carried out by other national authorities, they should provide the Commission and the other Member States with the necessary documentary evidence demonstrating the compliance of the conformity assessment bodies evaluated with the relevant regulatory requirements."
+    },
+    {
+      "recital_number": 13,
+      "text": "A system of accreditation which functions by reference to binding rules helps to strengthen mutual confidence between Member States as regards the competence of conformity assessment bodies and consequently the certificates and test reports issued by them. It thereby enhances the principle of mutual recognition and therefore the provisions of this Regulation on accreditation should apply in relation to bodies carrying out conformity assessments in both the regulated and the non-regulated areas. The issue at stake is the quality of certificates and test reports irrespective of whether they fall within the regulated or the non-regulated area, and no distinction should therefore be made between those areas."
+    },
+    {
+      "recital_number": 14,
+      "text": "For the purposes of this Regulation, not-for-profit operation by a national accreditation body should be understood as an activity that is not intended to add any gain to the resources of the body's owners or members. While national accreditation bodies do not have the objective of maximising or distributing profits, they may provide services in return for payment, or receive income. Any excess revenue that results from such services may be used for investment to develop their activities further, as long as it is in line with their main activities. It should accordingly be emphasised that the primary objective of national accreditation bodies should be to support or engage actively in activities that are not intended to produce any gain."
+    },
+    {
+      "recital_number": 15,
+      "text": "Since the purpose of accreditation is to provide an authoritative statement of the competence of a body to perform conformity assessment activities, Member States should not maintain more than one national accreditation body and should ensure that that body is organised in such a way as to safeguard the objectivity and impartiality of its activities. Such national accreditation bodies should operate independently of commercial conformity assessment activities. It is therefore appropriate to provide that Member States ensure that, in the performance of their tasks, national accreditation bodies are deemed to exercise public authority, irrespective of their legal status."
+    },
+    {
+      "recital_number": 16,
+      "text": "For the assessment and continued monitoring of the competence of a conformity assessment body, it is essential to determine its technological knowledge and experience and its ability to carry out assessment. It is therefore necessary that the national accreditation body possess the relevant knowledge, competence and means for the proper performance of its tasks."
+    },
+    {
+      "recital_number": 17,
+      "text": "Accreditation should in principle be operated as a self-supporting activity. Member States should ensure that financial support exists for the fulfilment of special tasks."
+    },
+    {
+      "recital_number": 18,
+      "text": "In those cases where it is not economically meaningful or sustainable for a Member State to establish a national accreditation body, that Member State should have recourse to the national accreditation body of another Member State and should be encouraged to have such recourse to the fullest extent possible."
+    },
+    {
+      "recital_number": 19,
+      "text": "Competition between national accreditation bodies could lead to the commercialisation of their activity, which would be incompatible with their role as the last level of control in the conformity assessment chain. The objective of this Regulation is to ensure that, within the European Union, one accreditation certificate is sufficient for the whole territory of the Union, and to avoid multiple accreditation, which is added cost without added value. National accreditation bodies may find themselves in competition on the markets of third countries, but that must have no effect on their activities inside the Community, or on the cooperation and peer evaluation activities organised by the body recognised under this Regulation."
+    },
+    {
+      "recital_number": 20,
+      "text": "In order to avoid multiple accreditation, to enhance acceptance and recognition of accreditation certificates and to carry out effective monitoring of accredited conformity assessment bodies, conformity assessment bodies should request accreditation by the national accreditation body of the Member State in which they are established. Nevertheless, it is necessary to ensure that a conformity assessment body is able to request accreditation in another Member State in the event that there is no national accreditation body in its own Member State or where the national accreditation body is not competent to provide the accreditation services requested. In such cases, appropriate cooperation and exchange of information between national accreditation bodies should be established."
+    },
+    {
+      "recital_number": 21,
+      "text": "In order to ensure that national accreditation bodies fulfil the requirements and obligations provided for in this Regulation, it is important that Member States support the proper functioning of the accreditation system, monitor their national accreditation bodies regularly and take appropriate corrective measures within a reasonable timeframe where necessary."
+    },
+    {
+      "recital_number": 22,
+      "text": "In order to ensure the equivalence of the level of competence of conformity assessment bodies, to facilitate mutual recognition and to promote the overall acceptance of accreditation certificates and conformity assessment results issued by accredited bodies, it is necessary that national accreditation bodies operate a rigorous and transparent peer evaluation system and regularly undergo such evaluation."
+    },
+    {
+      "recital_number": 23,
+      "text": "This Regulation should provide for the recognition of a single organisation at European level in respect of certain functions in the field of accreditation. The European cooperation for Accreditation (the EA), whose main mission is to promote a transparent and quality-led system for the evaluation of the competence of conformity assessment bodies throughout Europe, manages a peer evaluation system among national accreditation bodies from the Member States and other European countries. That system has proved to be efficient and to provide mutual confidence. The EA should, therefore, be the first body recognised under this Regulation and Member States should ensure that their national accreditation bodies seek and maintain membership of the EA for as long as it is so recognised. At the same time, the possibility of changing the relevant body recognised under this Regulation should be provided for, in case there is a need for it in the future."
+    },
+    {
+      "recital_number": 24,
+      "text": "Effective cooperation among national accreditation bodies is essential for the proper implementation of peer evaluation and with regard to cross-border accreditation. In the interests of transparency, it is, therefore, necessary to provide for an obligation on national accreditation bodies to exchange information among themselves and to provide the national authorities and the Commission with relevant information. Updated and accurate information concerning the availability of accreditation activities operated by national accreditation bodies should also be made public and, therefore, accessible, in particular to conformity assessment bodies."
+    },
+    {
+      "recital_number": 25,
+      "text": "Sectoral accreditation schemes should cover the fields of activity where general requirements for the competence of conformity assessment bodies are not sufficient to ensure the necessary level of protection where specific detailed technology or health and safety-related requirements are imposed. Given the fact that the EA has at its disposal a broad range of technical expertise, it should be requested to develop such schemes, especially for areas covered by Community legislation."
+    },
+    {
+      "recital_number": 26,
+      "text": "For the purpose of ensuring the equivalent and consistent enforcement of Community harmonisation legislation, this Regulation introduces a Community market surveillance framework, defining minimum requirements against the background of the objectives to be achieved by Member States and a framework for administrative cooperation including the exchange of information among Member States."
+    },
+    {
+      "recital_number": 27,
+      "text": "In the case of economic operators in possession of test reports or certificates attesting conformity issued by an accredited conformity assessment body, where the relevant Community harmonisation legislation does not require such reports or certificates, market surveillance authorities should take due account of them when performing checks on product characteristics."
+    },
+    {
+      "recital_number": 28,
+      "text": "Cooperation between competent authorities at national level and across borders in exchanging information, investigating infringements and taking action to bring about their cessation, even before the placing on the market of dangerous products, by reinforcing measures to identify them, mainly in seaports, is essential to the protection of health and safety and to guaranteeing the smooth functioning of the internal market. National consumer protection authorities should cooperate, at national level, with national market surveillance authorities and should exchange information with them relating to products which they suspect present a risk."
+    },
+    {
+      "recital_number": 29,
+      "text": "Risk assessment should take all relevant data into account, including, where available, data on risks that have materialised with respect to the product in question. Account should also be taken of any measures that may have been taken by the economic operators concerned to alleviate the risks."
+    },
+    {
+      "recital_number": 30,
+      "text": "Situations of serious risk posed by a product require rapid intervention, which may entail the withdrawal of the product, its recall or the prohibition of its being made available on the market. In those situations it is necessary to have access to a system of rapid exchange of information between Member States and the Commission. The system provided for in Article 12 of Directive 2001/95/EC has proved its effectiveness and efficiency in the field of consumer products. To avoid unnecessary duplication, that system should be used for the purposes of this Regulation. Moreover, coherent market surveillance throughout the Community requires a comprehensive exchange of information on national activities in this context which goes beyond this system."
+    },
+    {
+      "recital_number": 31,
+      "text": "Information exchanged between competent authorities should be subject to the strictest guarantees of confidentiality and professional secrecy and be handled in accordance with rules on confidentiality pursuant to the applicable national law or, as regards the Commission, Regulation (EC) No 1049/2001 of the European Parliament and of the Council of 30 May 2001 regarding public access to European Parliament, Council and Commission documents (5), in order to ensure that investigations are not compromised and that the reputations of economic operators are not prejudiced. Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the protection of individuals with regard to the processing of personal data and on the free movement of such data (6) and Regulation (EC) No 45/2001 of the European Parliament and of the Council of 18 December 2000 on the protection of individuals with regard to the processing of personal data by the Community institutions and bodies and on the free movement of such data (7) apply in the context of this Regulation."
+    },
+    {
+      "recital_number": 32,
+      "text": "Community harmonisation legislation provides for specific procedures establishing whether or not a national measure restricting the free movement of a product is justified (safeguard clause procedures). Those procedures apply following a rapid exchange of information on products presenting a serious risk."
+    },
+    {
+      "recital_number": 33,
+      "text": "Points of entry at the external borders are well placed to detect unsafe non-conforming products or products to which the CE marking has been affixed falsely or in a misleading manner even before they are placed on the market. An obligation on authorities in charge of the control of products entering the Community market to execute checks on an adequate scale can therefore contribute to a safer market place. In order to increase the effectiveness of such checks, those authorities should receive all the necessary information concerning dangerous non-conforming products from the market surveillance authorities well in advance."
+    },
+    {
+      "recital_number": 34,
+      "text": "Council Regulation (EEC) No 339/93 of 8 February 1993 on checks for conformity with the rules on product safety in the case of products imported from third countries (8) lays down rules regarding the suspension of the release of products by customs authorities and provides for further measures including the involvement of market surveillance authorities. It is therefore appropriate that those provisions, including the involvement of market surveillance authorities, be incorporated in this Regulation."
+    },
+    {
+      "recital_number": 35,
+      "text": "Experience has shown that products which are not released are often re-exported and subsequently enter the Community market at other points of entry, thus undermining the customs authorities' efforts. Market surveillance authorities should therefore be given the means of proceeding with the destruction of products if they deem it appropriate."
+    },
+    {
+      "recital_number": 36,
+      "text": "Within one year of the publication of this Regulation in the Official Journal of the European Union, the Commission should present an in-depth analysis in the realm of consumer safety markings, followed by legislative proposals where necessary."
+    },
+    {
+      "recital_number": 37,
+      "text": "The CE marking, indicating the conformity of a product, is the visible consequence of a whole process comprising conformity assessment in a broad sense. General principles governing the CE marking should be set out in this Regulation so as to make them immediately applicable and to simplify future legislation."
+    },
+    {
+      "recital_number": 38,
+      "text": "The CE marking should be the only marking of conformity indicating that a product is in conformity with Community harmonisation legislation. However, other markings may be used as long as they contribute to the improvement of consumer protection and are not covered by Community harmonisation legislation."
+    },
+    {
+      "recital_number": 39,
+      "text": "It is necessary for Member States to provide for appropriate means of redress in the competent courts and tribunals in respect of measures taken by the competent authorities which restrict the placing on the market of a product or which require its withdrawal or recall."
+    },
+    {
+      "recital_number": 40,
+      "text": "Member States may find it useful to establish cooperation with the stakeholders concerned, including sectoral professional organisations and consumer organisations, in order to take advantage of available market intelligence when establishing, implementing and updating market surveillance programmes."
+    },
+    {
+      "recital_number": 41,
+      "text": "The Member States should lay down rules on penalties applicable to infringements of the provisions of this Regulation and ensure that they are implemented. Those penalties should be effective, proportionate and dissuasive and could be increased if the relevant economic operator has previously committed a similar infringement of the provisions of this Regulation."
+    },
+    {
+      "recital_number": 42,
+      "text": "In order to achieve the objectives of this Regulation, it is necessary for the Community to contribute to the financing of activities required to implement policies in the field of accreditation and market surveillance. Financing should be provided in the form of grants to the body recognised under this Regulation without a call for proposals, in the form of grants after a call for proposals, or by the award of contracts to that or to other bodies, depending on the nature of the activity to be financed and in accordance with Council Regulation (EC, Euratom) No 1605/2002 of 25 June 2002 on the Financial Regulation applicable to the general budget of the European Communities (9) (the Financial Regulation)."
+    },
+    {
+      "recital_number": 43,
+      "text": "For some specialised tasks, such as the production and revision of sectoral accreditation schemes, and for other tasks related to the verification of the technical competence and the facilities of laboratories and certification or inspection bodies, the EA should initially be eligible for Community financing, since it is well adapted to providing the necessary technical expertise in this respect."
+    },
+    {
+      "recital_number": 44,
+      "text": "Given the role of the body recognised under this Regulation in the peer evaluation of accreditation bodies and its ability to assist the Member States with the management of that peer evaluation, the Commission should be in a position to provide grants for the functioning of the secretariat of the body recognised under this Regulation, which should provide ongoing support for accreditation activities at Community level."
+    },
+    {
+      "recital_number": 45,
+      "text": "A partnership agreement should be signed, in accordance with the provisions of the Financial Regulation, between the Commission and the body recognised under this Regulation in order to fix the administrative and financial rules on the financing of accreditation activities."
+    },
+    {
+      "recital_number": 46,
+      "text": "In addition, financing should also be available to bodies other than the body recognised under this Regulation for other activities in the field of conformity assessment, metrology, accreditation and market surveillance, such as the drawing-up and updating of guidelines, inter-comparison activities linked to the operation of safeguard clauses, preliminary or ancillary activities in connection with the implementation of Community legislation in those areas and programmes of technical assistance and cooperation with third countries as well as the enhancement of policies in those areas at Community and international level."
+    },
+    {
+      "recital_number": 47,
+      "text": "This Regulation respects the fundamental rights and observes the principles reflected in the Charter of Fundamental Rights of the European Union."
+    },
+    {
+      "recital_number": 48,
+      "text": "Since the objective of this Regulation, namely to ensure that products on the market covered by Community legislation fulfil requirements providing a high level of protection of health and safety and other public interests while guaranteeing the functioning of the internal market by providing a framework for accreditation and market surveillance, cannot be sufficiently achieved by the Member States and can therefore, by reason of its scale and effects, be better achieved at Community level, the Community may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty. In accordance with the principle of proportionality, as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve that objective,"
+    }
+  ]
+}
