@@ -255,6 +255,8 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32009L0104': { id: 'WORK_EQUIPMENT_DIR', full_name: 'Directive 2009/104/EC on the Use of Work Equipment by Workers at Work', effective_date: '2010-02-03' },
   // Substance restriction applicable to robots as electrical/electronic equipment.
   '32011L0065': { id: 'ROHS_DIR', full_name: 'Directive 2011/65/EU (RoHS) on Restriction of Hazardous Substances in EEE', effective_date: '2013-01-02' },
+  // Battery obligations for mobile/autonomous robots (AMRs, drones, service robots).
+  '32023R1542': { id: 'BATTERIES_REG', full_name: 'Regulation (EU) 2023/1542 on Batteries and Waste Batteries', effective_date: '2024-02-18' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
