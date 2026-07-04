@@ -7,8 +7,8 @@
   "articles": [
     {
       "number": "1",
-      "title": "GENERAL PROVISIONS",
-      "text": "Subject matter and scope\n\n1.   This Regulation lays down rules on the organisation and operation of accreditation of conformity assessment bodies performing conformity assessment activities.\n\n2.   This Regulation provides a framework for the market surveillance of products to ensure that those products fulfil requirements providing a high level of protection of public interests, such as health and safety in general, health and safety at the workplace, the protection of consumers, protection of the environment and security.\n\n3.   This Regulation provides a framework for controls on products from third countries.\n\n4.   This Regulation lays down the general principles of the CE marking.",
+      "title": "Subject matter and scope",
+      "text": "1.   This Regulation lays down rules on the organisation and operation of accreditation of conformity assessment bodies performing conformity assessment activities.\n\n2.   This Regulation provides a framework for the market surveillance of products to ensure that those products fulfil requirements providing a high level of protection of public interests, such as health and safety in general, health and safety at the workplace, the protection of consumers, protection of the environment and security.\n\n3.   This Regulation provides a framework for controls on products from third countries.\n\n4.   This Regulation lays down the general principles of the CE marking.",
       "chapter": "I"
     },
     {
@@ -19,8 +19,8 @@
     },
     {
       "number": "3",
-      "title": "ACCREDITATION",
-      "text": "Scope\n\nThis Chapter shall apply to accreditation, used on a compulsory or voluntary basis, relating to conformity assessment, whether that assessment is compulsory or not, and irrespective of the legal status of the body performing the accreditation.",
+      "title": "Scope",
+      "text": "This Chapter shall apply to accreditation, used on a compulsory or voluntary basis, relating to conformity assessment, whether that assessment is compulsory or not, and irrespective of the legal status of the body performing the accreditation.",
       "chapter": "II"
     },
     {
@@ -91,8 +91,8 @@
     },
     {
       "number": "15",
-      "title": "General provisions",
-      "text": "Scope\n\n1.   Articles 16 to 26 shall apply to products covered by Community harmonisation legislation.\n\n2.   Each of the provisions of Articles 16 to 26 shall apply in so far as there are no specific provisions with the same objective in Community harmonisation legislation.\n\n3.   The application of this Regulation shall not prevent market surveillance authorities from taking more specific measures as provided for in Directive 2001/95/EC.\n\n4.   For the purposes of Articles 16 to 26, a ‘product’ shall mean a substance, preparation or good produced through a manufacturing process other than food, feed, living plants and animals, products of human origin and products of plants and animals relating directly to their future reproduction.\n\n5.   Articles 27, 28 and 29 shall apply to all products covered by Community legislation in so far as other Community legislation does not contain specific provisions relating to the organisation of border controls.",
+      "title": "Scope",
+      "text": "1.   Articles 16 to 26 shall apply to products covered by Community harmonisation legislation.\n\n2.   Each of the provisions of Articles 16 to 26 shall apply in so far as there are no specific provisions with the same objective in Community harmonisation legislation.\n\n3.   The application of this Regulation shall not prevent market surveillance authorities from taking more specific measures as provided for in Directive 2001/95/EC.\n\n4.   For the purposes of Articles 16 to 26, a ‘product’ shall mean a substance, preparation or good produced through a manufacturing process other than food, feed, living plants and animals, products of human origin and products of plants and animals relating directly to their future reproduction.\n\n5.   Articles 27, 28 and 29 shall apply to all products covered by Community legislation in so far as other Community legislation does not contain specific provisions relating to the organisation of border controls.",
       "chapter": "III"
     },
     {
@@ -103,8 +103,8 @@
     },
     {
       "number": "17",
-      "title": "Community market surveillance framework",
-      "text": "Information obligations\n\n1.   Member States shall inform the Commission of their market surveillance authorities and their areas of competence. The Commission shall transmit that information to the other Member States.\n\n2.   Member States shall ensure that the public is aware of the existence, responsibilities and identity of national market surveillance authorities, and of how those authorities may be contacted.",
+      "title": "Information obligations",
+      "text": "1.   Member States shall inform the Commission of their market surveillance authorities and their areas of competence. The Commission shall transmit that information to the other Member States.\n\n2.   Member States shall ensure that the public is aware of the existence, responsibilities and identity of national market surveillance authorities, and of how those authorities may be contacted.",
       "chapter": "III"
     },
     {
@@ -164,7 +164,7 @@
     {
       "number": "27",
       "title": "Controls of products entering the Community market",
-      "text": "Controls of products entering the Community market\n\n1.   The authorities of the Member States in charge of the control of products entering the Community market shall have the powers and resources necessary for the proper performance of their tasks. They shall carry out appropriate checks on the characteristics of products on an adequate scale, in accordance with the principles set out in Article 19(1), before those products are released for free circulation.\n\n2.   Where in a Member State more than one authority is responsible for market surveillance or external border controls, those authorities shall cooperate with each other, by sharing information relevant to their functions and otherwise as appropriate.\n\n3.   The authorities in charge of external border controls shall suspend release of a product for free circulation on the Community market when any of the following findings are made in the course of the checks referred to in paragraph 1:\n\n(a)\n\nthe product displays characteristics which give cause to believe that the product, when properly installed, maintained and used, presents a serious risk to health, safety, the environment or any other public interest referred to in Article 1;\n\n(b)\n\nthe product is not accompanied by the written or electronic documentation required by the relevant Community harmonisation legislation or is not marked in accordance with that legislation;\n\n(c)\n\nthe CE marking has been affixed to the product in a false or misleading manner.\n\nThe authorities in charge of external border controls shall immediately notify the market surveillance authorities of any such suspension.\n\n4.   In the case of perishable products, the authorities in charge of external border controls shall, as far as possible, seek to ensure that any requirements they may impose with regard to the storage of products or the parking of vehicles used for transport are not incompatible with the preservation of those products.\n\n5.   For the purposes of this Section, Article 24 shall apply in respect of authorities in charge of external border controls, without prejudice to the application of Community law providing for more specific systems of cooperation between those authorities.",
+      "text": "1.   The authorities of the Member States in charge of the control of products entering the Community market shall have the powers and resources necessary for the proper performance of their tasks. They shall carry out appropriate checks on the characteristics of products on an adequate scale, in accordance with the principles set out in Article 19(1), before those products are released for free circulation.\n\n2.   Where in a Member State more than one authority is responsible for market surveillance or external border controls, those authorities shall cooperate with each other, by sharing information relevant to their functions and otherwise as appropriate.\n\n3.   The authorities in charge of external border controls shall suspend release of a product for free circulation on the Community market when any of the following findings are made in the course of the checks referred to in paragraph 1:\n\n(a)\n\nthe product displays characteristics which give cause to believe that the product, when properly installed, maintained and used, presents a serious risk to health, safety, the environment or any other public interest referred to in Article 1;\n\n(b)\n\nthe product is not accompanied by the written or electronic documentation required by the relevant Community harmonisation legislation or is not marked in accordance with that legislation;\n\n(c)\n\nthe CE marking has been affixed to the product in a false or misleading manner.\n\nThe authorities in charge of external border controls shall immediately notify the market surveillance authorities of any such suspension.\n\n4.   In the case of perishable products, the authorities in charge of external border controls shall, as far as possible, seek to ensure that any requirements they may impose with regard to the storage of products or the parking of vehicles used for transport are not incompatible with the preservation of those products.\n\n5.   For the purposes of this Section, Article 24 shall apply in respect of authorities in charge of external border controls, without prejudice to the application of Community law providing for more specific systems of cooperation between those authorities.",
       "chapter": "III"
     },
     {
@@ -181,14 +181,14 @@
     },
     {
       "number": "30",
-      "title": "CE MARKING",
-      "text": "General principles of the CE marking\n\n1.   The CE marking shall be affixed only by the manufacturer or his authorised representative.\n\n2.   The CE marking as presented in Annex II shall be affixed only to products to which its affixing is provided for by specific Community harmonisation legislation, and shall not be affixed to any other product.\n\n3.   By affixing or having affixed the CE marking, the manufacturer indicates that he takes responsibility for the conformity of the product with all applicable requirements set out in the relevant Community harmonisation legislation providing for its affixing.\n\n4.   The CE marking shall be the only marking which attests the conformity of the product with the applicable requirements of the relevant Community harmonisation legislation providing for its affixing.\n\n5.   The affixing to a product of markings, signs or inscriptions which are likely to mislead third parties regarding the meaning or form of the CE marking shall be prohibited. Any other marking may be affixed to the product provided that the visibility, legibility and meaning of the CE marking is not thereby impaired.\n\n6.   Without prejudice to Article 41, Member States shall ensure the correct implementation of the regime governing the CE marking and take appropriate action in the event of improper use of the marking. Member States shall also provide for penalties for infringements, which may include criminal sanctions for serious infringements. Those penalties shall be proportionate to the seriousness of the offence and constitute an effective deterrent against improper use.",
+      "title": "General principles of the CE marking",
+      "text": "1.   The CE marking shall be affixed only by the manufacturer or his authorised representative.\n\n2.   The CE marking as presented in Annex II shall be affixed only to products to which its affixing is provided for by specific Community harmonisation legislation, and shall not be affixed to any other product.\n\n3.   By affixing or having affixed the CE marking, the manufacturer indicates that he takes responsibility for the conformity of the product with all applicable requirements set out in the relevant Community harmonisation legislation providing for its affixing.\n\n4.   The CE marking shall be the only marking which attests the conformity of the product with the applicable requirements of the relevant Community harmonisation legislation providing for its affixing.\n\n5.   The affixing to a product of markings, signs or inscriptions which are likely to mislead third parties regarding the meaning or form of the CE marking shall be prohibited. Any other marking may be affixed to the product provided that the visibility, legibility and meaning of the CE marking is not thereby impaired.\n\n6.   Without prejudice to Article 41, Member States shall ensure the correct implementation of the regime governing the CE marking and take appropriate action in the event of improper use of the marking. Member States shall also provide for penalties for infringements, which may include criminal sanctions for serious infringements. Those penalties shall be proportionate to the seriousness of the offence and constitute an effective deterrent against improper use.",
       "chapter": "V"
     },
     {
       "number": "31",
-      "title": "COMMUNITY FINANCING",
-      "text": "Body pursuing an aim of general European interest\n\nThe body recognised under Article 14 shall be considered a body pursuing an aim of general European interest within the meaning of Article 162 of Commission Regulation (EC, Euratom) No 2342/2002 of 23 December 2002 laying down detailed rules for the implementation of Regulation (EC, Euratom) No 1605/2002 (12).",
+      "title": "Body pursuing an aim of general European interest",
+      "text": "The body recognised under Article 14 shall be considered a body pursuing an aim of general European interest within the meaning of Article 162 of Commission Regulation (EC, Euratom) No 2342/2002 of 23 December 2002 laying down detailed rules for the implementation of Regulation (EC, Euratom) No 1605/2002 (12).",
       "chapter": "V"
     },
     {
@@ -229,8 +229,8 @@
     },
     {
       "number": "38",
-      "title": "FINAL PROVISIONS",
-      "text": "Technical guidelines\n\nIn order to facilitate the implementation of this Regulation, the Commission shall draw up non-binding guidelines in consultation with stakeholders.",
+      "title": "Technical guidelines",
+      "text": "In order to facilitate the implementation of this Regulation, the Commission shall draw up non-binding guidelines in consultation with stakeholders.",
       "chapter": "VI"
     },
     {

@@ -257,6 +257,10 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32011L0065': { id: 'ROHS_DIR', full_name: 'Directive 2011/65/EU (RoHS) on Restriction of Hazardous Substances in EEE', effective_date: '2013-01-02' },
   // Battery obligations for mobile/autonomous robots (AMRs, drones, service robots).
   '32023R1542': { id: 'BATTERIES_REG', full_name: 'Regulation (EU) 2023/1542 on Batteries and Waste Batteries', effective_date: '2024-02-18' },
+  // Product-lifecycle bookends for robots as products: eco-design / digital
+  // product passport at the design phase, and WEEE take-back at end of life.
+  '32024R1781': { id: 'ESPR', full_name: 'Regulation (EU) 2024/1781 — Ecodesign for Sustainable Products Regulation', effective_date: '2024-07-18' },
+  '32012L0019': { id: 'WEEE_DIR', full_name: 'Directive 2012/19/EU on Waste Electrical and Electronic Equipment (WEEE)', effective_date: '2012-08-13' },
   '32019R0881': { id: 'CYBERSECURITY_ACT', full_name: 'EU Cybersecurity Act', effective_date: '2019-06-27' },
   '32024R1183': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
   '02014R0910-20241018': { id: 'EIDAS2', full_name: 'European Digital Identity Framework (eIDAS 2.0)', effective_date: '2024-05-20' },
@@ -468,7 +472,7 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
   const allText = doc.body?.textContent || '';
   const lines = allText.split('\n').map(l => l.trim()).filter(l => l);
 
-  let currentArticle: { number: string; title?: string; lines: string[] } | null = null;
+  let currentArticle: { number: string; title?: string; chapterCaption?: string; lines: string[] } | null = null;
   let pendingHeading: string | null = null;
   let expectHeadingLine = false;
 
@@ -490,12 +494,18 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
       if (currentArticle && currentArticle.lines.length > 0) {
         articles.push({
           number: currentArticle.number,
-          title: currentArticle.title,
+          // Prefer the article's OWN caption; the chapter caption carried from a
+          // CHAPTER/SECTION marker is only a fallback for a title-less article.
+          // Applying it as the title up front (the old behaviour) forced the
+          // article's real caption into the body — where build-db prepends the
+          // title, so a chapter-opening article bled "GENERAL PROVISIONS" etc.
+          // into its body (heading-bleed-inv gate).
+          title: currentArticle.title ?? currentArticle.chapterCaption,
           text: currentArticle.lines.join('\n\n'),
           chapter: currentChapter || undefined,
         });
       }
-      currentArticle = { number: articleStart[1], lines: [], title: pendingHeading ?? undefined };
+      currentArticle = { number: articleStart[1], lines: [], chapterCaption: pendingHeading ?? undefined };
       pendingHeading = null;
       continue;
     }
@@ -571,7 +581,7 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
   if (currentArticle && currentArticle.lines.length > 0) {
     articles.push({
       number: currentArticle.number,
-      title: currentArticle.title,
+      title: currentArticle.title ?? currentArticle.chapterCaption,
       text: currentArticle.lines.join('\n\n'),
       chapter: currentChapter || undefined,
     });
