@@ -335,15 +335,67 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32025R0304': { id: 'MICA_ITS_FINANCIAL_ENTITY_FORMS', full_name: 'Commission Implementing Regulation (EU) 2025/304 — ITS on forms for crypto-asset service notifications by financial entities' },
   '32025R0306': { id: 'MICA_ITS_CASP_AUTH_FORMS', full_name: 'Commission Implementing Regulation (EU) 2025/306 — ITS on forms for CASP authorisation applications' },
   '32025R1126': { id: 'MICA_ITS_ART_AUTH_FORMS', full_name: 'Commission Implementing Regulation (EU) 2025/1126 — ITS on forms for ART authorisation applications' },
+  // MDR/IVDR Level 2 — delegated + implementing acts under Regulation (EU)
+  // 2017/745 (MDR) and Regulation (EU) 2017/746 (IVDR). All EUR-Lex OJ documents
+  // (EUR-Lex-Decision-2011-833). Fetched WAF-free via the cellar (--cellar).
+  '32017R2185': { id: 'MDR_IMPL_DEVICE_CODES', full_name: 'Commission Implementing Regulation (EU) 2017/2185 — list of codes and corresponding types of devices for the scope of notified-body designation (MDR/IVDR)', effective_date: '2017-11-26' },
+  '32022R1107': { id: 'IVDR_IMPL_CLASS_D_CS', full_name: 'Commission Implementing Regulation (EU) 2022/1107 — common specifications for certain class D in vitro diagnostic medical devices (IVDR)', effective_date: '2022-07-25' },
+  '32023R0607': { id: 'MDR_AMEND_TRANSITIONAL_607', full_name: 'Regulation (EU) 2023/607 — amending Regulations (EU) 2017/745 and (EU) 2017/746 as regards the transitional provisions for certain medical devices and IVDs', effective_date: '2023-03-20' },
+  '32022R2346': { id: 'MDR_IMPL_ANNEX_XVI_CS', full_name: 'Commission Implementing Regulation (EU) 2022/2346 — common specifications for the groups of products without an intended medical purpose listed in MDR Annex XVI', effective_date: '2023-06-22' },
+  '32022R2347': { id: 'MDR_IMPL_RECLASSIFICATION', full_name: 'Commission Implementing Regulation (EU) 2022/2347 — reclassification of groups of certain active products without an intended medical purpose (MDR)', effective_date: '2023-06-22' },
+  '32021D1182': { id: 'MDR_IMPL_DEC_HARMONISED_STANDARDS', full_name: 'Commission Implementing Decision (EU) 2021/1182 — harmonised standards for medical devices drafted in support of Regulation (EU) 2017/745 (MDR)', effective_date: '2021-07-19' },
+  '32021D1195': { id: 'IVDR_IMPL_DEC_HARMONISED_STANDARDS', full_name: 'Commission Implementing Decision (EU) 2021/1195 — harmonised standards for in vitro diagnostic medical devices drafted in support of Regulation (EU) 2017/746 (IVDR)', effective_date: '2021-07-20' },
 };
 
-async function fetchEurLexHtml(celexId: string, useBrowser = false): Promise<string> {
+/**
+ * Fetch a document's full text from the Publications Office CELLAR, bypassing
+ * the AWS-WAF JS challenge that blocks plain fetch() to eur-lex.europa.eu.
+ *
+ * The cellar (`publications.europa.eu/resource/celex/<CELEX>`) serves the same
+ * OJ-formatted XHTML (same `oj-ti-art` / `oj-normal` CSS structure) that the
+ * legal-content HTML endpoint does, but WITHOUT the WAF, so a headless/CI/
+ * sandbox environment can fetch it directly — no Puppeteer, no browser binary.
+ * The returned XHTML feeds the existing parseArticles/parseAnnexes/parseRecitals
+ * pipeline unchanged (they operate on JSDOM body.textContent, not on the wrapper).
+ *
+ * Works for base CELEX (`32017R2185`), consolidated CELEX (`02021D1182-YYYYMMDD`),
+ * Regulations and Decisions alike. Prefer this over --browser for EU ingestion.
+ */
+async function fetchEurLexViaCellar(celexId: string): Promise<string> {
+  const url = `http://publications.europa.eu/resource/celex/${celexId}`;
+  console.log(`Fetching (cellar, WAF-free): ${url}`);
+
+  const response = await fetch(url, {
+    headers: {
+      // Content-negotiate the XHTML rendering; eng picks the English manifestation.
+      'Accept': 'application/xhtml+xml',
+      'Accept-Language': 'eng',
+      'User-Agent': 'EU-Compliance-MCP/1.0 (+https://github.com/Ansvar-Systems/EU_compliance_MCP)',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Cellar fetch failed: ${response.status} ${response.statusText} for ${celexId}`);
+  }
+
+  const html = await response.text();
+  if (!html || html.length < 500) {
+    throw new Error(`Cellar returned an empty/too-short body (${html.length} bytes) for ${celexId} — no English XHTML manifestation?`);
+  }
+  return html;
+}
+
+async function fetchEurLexHtml(celexId: string, useBrowser = false, useCellar = false): Promise<string> {
+  if (useCellar) {
+    return fetchEurLexViaCellar(celexId);
+  }
+
   if (useBrowser) {
     console.log('Using Puppeteer to bypass WAF...');
     return fetchEurLexWithBrowser(celexId);
   }
 
-  // Fallback to direct fetch (will fail with WAF)
+  // Fallback to direct fetch (will fail with WAF — prefer --cellar or --browser)
   const url = `https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:${celexId}`;
   console.log(`Fetching: ${url}`);
 
@@ -651,13 +703,13 @@ export function parseArticles(html: string, celexId: string): { articles: Articl
   return { articles: deduplicatedArticles, definitions };
 }
 
-async function ingestRegulation(celexId: string, outputPath: string, useBrowser = false): Promise<void> {
+async function ingestRegulation(celexId: string, outputPath: string, useBrowser = false, useCellar = false): Promise<void> {
   const metadata = REGULATION_METADATA[celexId];
   if (!metadata) {
     console.warn(`Unknown CELEX ID: ${celexId}. Using generic metadata.`);
   }
 
-  const html = await fetchEurLexHtml(celexId, useBrowser);
+  const html = await fetchEurLexHtml(celexId, useBrowser, useCellar);
   console.log(`Fetched ${html.length} bytes`);
 
   // Parse recitals BEFORE articles
@@ -790,14 +842,16 @@ const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 if (isMain) {
   const args = process.argv.slice(2);
   const useBrowser = args.includes('--browser');
-  const [celexId, outputPath] = args.filter(arg => arg !== '--browser');
+  const useCellar = args.includes('--cellar');
+  const [celexId, outputPath] = args.filter(arg => arg !== '--browser' && arg !== '--cellar');
 
   if (!celexId || !outputPath) {
-    console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--browser]');
-    console.log('Example: npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json');
-    console.log('Example (with browser): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
+    console.log('Usage: npx tsx scripts/ingest-eurlex.ts <celex_id> <output_file> [--cellar|--browser]');
+    console.log('Example (cellar, WAF-free): npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --cellar');
+    console.log('Example (with browser):     npx tsx scripts/ingest-eurlex.ts 32016R0679 data/seed/gdpr.json --browser');
     console.log('\nOptions:');
-    console.log('  --browser    Use Puppeteer to bypass EUR-Lex WAF challenges');
+    console.log('  --cellar     Fetch via the Publications Office CELLAR (WAF-free; works headless/CI). Preferred.');
+    console.log('  --browser    Use Puppeteer to bypass the EUR-Lex WAF challenge (needs a Chromium binary).');
     console.log('\nKnown CELEX IDs:');
     Object.entries(REGULATION_METADATA).forEach(([id, meta]) => {
       console.log(`  ${id} - ${meta.id} (${meta.full_name})`);
@@ -805,11 +859,13 @@ if (isMain) {
     process.exit(1);
   }
 
-  if (useBrowser) {
+  if (useCellar) {
+    console.log('Cellar mode enabled - fetching via publications.europa.eu (WAF-free)\n');
+  } else if (useBrowser) {
     console.log('Browser mode enabled - using Puppeteer to fetch content\n');
   }
 
-  ingestRegulation(celexId, outputPath, useBrowser).catch(err => {
+  ingestRegulation(celexId, outputPath, useBrowser, useCellar).catch(err => {
     console.error('Error:', err);
     process.exit(1);
   });

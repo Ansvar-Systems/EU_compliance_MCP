@@ -6,7 +6,48 @@
   "effective_date": "2021-05-26",
   "guide_updated": "2026-04-10",
 
-  "delegated_acts": [],
+  "delegated_acts": [
+    {
+      "id": "MDR_IMPL_DEVICE_CODES",
+      "celex_id": "32017R2185",
+      "title": "List of codes and corresponding types of devices (notified-body designation scope)",
+      "article_count": 5,
+      "parent_article": "42",
+      "covers": "The MDA/MDN/MDS/MDT code system (Annexes I-II) that defines the scope of a notified body's designation under MDR/IVDR"
+    },
+    {
+      "id": "MDR_AMEND_TRANSITIONAL_607",
+      "celex_id": "32023R0607",
+      "title": "Extended transitional provisions for legacy devices (amends MDR Art. 120)",
+      "article_count": 3,
+      "parent_article": "120",
+      "covers": "Extends MDD/AIMDD certificate validity and staggers the transition deadlines (class III / implantable IIb to 2027-12-31; other classes to 2028-12-31), subject to Art. 120(3c) conditions"
+    },
+    {
+      "id": "MDR_IMPL_ANNEX_XVI_CS",
+      "celex_id": "32022R2346",
+      "title": "Common specifications for Annex XVI products without an intended medical purpose",
+      "article_count": 10,
+      "parent_article": "Annex XVI",
+      "covers": "Risk-management and safety common specifications (Annexes I-VII) for the Annex XVI product groups (contact lenses, dermal fillers, lipolysis, skin/hair lasers, brain-stimulation equipment)"
+    },
+    {
+      "id": "MDR_IMPL_RECLASSIFICATION",
+      "celex_id": "32022R2347",
+      "title": "Reclassification of certain active products without an intended medical purpose",
+      "article_count": 2,
+      "parent_article": "51",
+      "covers": "Reclassifies Annex XVI active products (high-intensity skin lasers, lipolysis equipment, brain-stimulation devices) into class IIa/IIb, derogating from Annex VIII Section 6.5"
+    },
+    {
+      "id": "MDR_IMPL_DEC_HARMONISED_STANDARDS",
+      "celex_id": "32021D1182",
+      "title": "Harmonised standards for medical devices (MDR presumption of conformity)",
+      "article_count": 3,
+      "parent_article": "8",
+      "covers": "The OJ-listed harmonised standards (Annex) that confer a presumption of conformity under MDR Art. 8. Ingested at the 2021 base version; refresh to consolidated for later additions"
+    }
+  ],
 
   "proportionality": {
     "description": "MDR classifies devices into risk classes (I, IIa, IIb, III) per Annex VIII rules, with ascending conformity assessment requirements. Custom-made and investigational devices have separate regimes.",

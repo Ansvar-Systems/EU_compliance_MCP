@@ -1,0 +1,60 @@
+{
+  "id": "MDR_IMPL_RECLASSIFICATION",
+  "full_name": "Commission Implementing Regulation (EU) 2022/2347 — reclassification of groups of certain active products without an intended medical purpose (MDR)",
+  "celex_id": "32022R2347",
+  "effective_date": "2023-06-22",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2347",
+  "articles": [
+    {
+      "number": "1",
+      "text": "By way of derogation from Section 6.5 of Annex VIII to Regulation (EU) 2017/745, the following groups of active products without an intended medical purpose listed in Annex XVI to that Regulation are reclassified as follows:\n\n(a)\n\nhigh intensity electromagnetic radiation emitting equipment as referred to in Section 5 of Annex XVI to Regulation (EU) 2017/745 that is intended for the use on the human body for skin treatment is reclassified as class IIb, unless it is intended for hair removal only in which case it is reclassified as class IIa;\n\n(b)\n\nequipment intended to be used to reduce, remove or destroy adipose tissue as referred to in Section 4 of Annex XVI to Regulation (EU) 2017/745, is reclassified as class IIb;\n\n(c)\n\nequipment intended for brain stimulation that apply electrical currents or magnetic or electromagnetic fields that penetrate the cranium to modify neuronal activity in the brain as referred to in Section 6 of Annex XVI to Regulation (EU) 2017/745is reclassified as class III."
+    },
+    {
+      "number": "2",
+      "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.\n\nThis Regulation shall be binding in its entirety and directly applicable in all Member States."
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "The classification rules 9 and 10 on active devices in Sections 6.1. and 6.2. of Annex VIII to Regulation (EU) 2017/745 refer to an intended medical purpose, respectively for therapy and diagnosis, and thus cannot be applied to active products without an intended medical purpose referred to in Article 1(2) of that Regulation. Such products are therefore to be classified as class I in accordance with rule 13 in Section 6.5. of Annex VIII to Regulation (EU) 2017/745."
+    },
+    {
+      "recital_number": 2,
+      "text": "By letter of 28 July 2022, certain Member States jointly requested the reclassification of several active products without an intended medical purpose by way of derogation from Annex VIII to Regulation (EU) 2017/745, in order to ensure an appropriate conformity assessment of those active products that is consistent with their inherent risks before their placing on the market."
+    },
+    {
+      "recital_number": 3,
+      "text": "According to available scientific evidence on equipment that emits high intensity electromagnetic radiation, as referred to in Section 5 of Annex XVI to Regulation (EU) 2017/745, intended for use on the human body, such as lasers and intense pulsed light (‘IPL’) equipment, the use of such equipment may cause side effects, for example, superficial burns, inflammation, pain, pigmentation change, erythema, hypertrophic scarring and blisters. Side effects are often indicated as transient, for example, inflammations, but important and long-lasting effects are also reported, such as skin pigmentation changes."
+    },
+    {
+      "recital_number": 4,
+      "text": "High intensity electromagnetic radiation emitting equipment without an intended medical purpose, intended for use on the human body for hair removal, such as lasers and IPL equipmentthat administer energy to or exchange energy with the human body or supply energy that will be absorbed by the human body, should therefore be classified as class IIa. Such classification also corresponds to classification of analogous active devices that have an intended medical purpose and whose functioning and risks profile are similar to those of the equipment without an intended medical purpose in question."
+    },
+    {
+      "recital_number": 5,
+      "text": "High intensity electromagnetic radiation emitting equipment without an intended medical purpose, intended for the use on the human body for skin treatment, such as laser or IPL equipment for skin resurfacing, for scar removal, for tattoo removal, or for treatment of nevi flammei, haemangioma, telangiectasia and pigmented skin areas that administer energy to or exchange energy with the human body or supply energy that will be absorbed by the human body in a potentially hazardous way, taking account of the nature, the density and site of application of the energy, should therefore be classified as class IIb. Such classification also corresponds to classification of analogous active devices that have an intended medical purpose and whose functioning and risks profile are similar to those of the equipment without an intended medical purpose in question."
+    },
+    {
+      "recital_number": 6,
+      "text": "According to available scientific evidence on equipment intended to be used to reduce, remove or destroy adipose tissue, as referred to in Section 4 of Annex XVI to Regulation (EU) 2017/745, such as equipment for liposuction, radiofrequency lipolysis, ultrasound lipolysis, cryolipolyisis, laser lipolysis, infrared and electrical stimulation lipolysis, acoustic shockwave therapy or lipoplasty, the use of such products may cause side effects, for example, local inflammation, erythema, bruising and swelling. Side effects are often indicated as transient, but important and long-lasting effects are also reported, such as paradoxical adipose hyperplasia after cryolipolysis treatment. Those products should therefore be classified as class IIb. Such classification also corresponds to classification of active therapeutic devices whose functioning and risks profile are similar to those of the equipment without an intended medical purpose in question, intended to administer energy to or exchange energy with the human body or supply energy that will be absorbed by the human body in a potentially hazardous way, taking account of the nature, the density and site of application of the energy."
+    },
+    {
+      "recital_number": 7,
+      "text": "According to available scientific evidence on equipment intended for brain stimulation that apply electrical currents or magnetic or electromagnetic fields that penetrate the cranium to modify neuronal activity in the brain as referred to in Section 6 of Annex XVI to Regulation (EU) 2017/745, such as those for transcranial magnetic stimulation or transcranial electric stimulation, the use of such products may cause side effects, for example, atypical brain development, abnormal patterns of brain activity, increase metabolic consumption, fatigue, anxiety, irritability, headaches, muscle twitches, tics, seizures, vertigo and skin irritation at the electrode site. While such equipment is not surgically invasive, the electrical currents or magnetic or electromagnetic fields do penetrate the cranium to modify neuronal activity in the brain. Such modifications can have long-lasting effects and any unintended effects may be difficult to reverse. Such products should therefore be classified as Class III."
+    },
+    {
+      "recital_number": 8,
+      "text": "As a result of reclassification under this Regulation, in accordance with Article 52 of Regulation (EU) 2017/745, a notified body is to be involved in the conformity assessment of the products concerned, to assess and confirm that, among the relevant general safety and performance requirements, the product achieves the intended performance and that the risks posed by the product have been eliminated or reduced as far as possible."
+    },
+    {
+      "recital_number": 9,
+      "text": "The Medical Device Coordination Group has been consulted."
+    },
+    {
+      "recital_number": 10,
+      "text": "The measures provided for in this Regulation are in accordance with the opinion of the Committee on Medical Devices,"
+    }
+  ]
+}

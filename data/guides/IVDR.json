@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "regulation_id": "IVDR",
+  "regulation_name": "In Vitro Diagnostic Medical Devices Regulation",
+  "celex_id": "32017R0746",
+  "effective_date": "2022-05-26",
+  "guide_updated": "2026-07-06",
+
+  "delegated_acts": [
+    {
+      "id": "MDR_IMPL_DEVICE_CODES",
+      "celex_id": "32017R2185",
+      "title": "List of codes and corresponding types of devices (notified-body designation scope)",
+      "article_count": 5,
+      "parent_article": "38",
+      "covers": "The IVD/IVP/IVR/IVS code system (Annex II) that defines the scope of a notified body's designation under IVDR (the same instrument also carries the MDR device codes in Annex I)"
+    },
+    {
+      "id": "IVDR_IMPL_CLASS_D_CS",
+      "celex_id": "32022R1107",
+      "title": "Common specifications for certain class D in vitro diagnostic medical devices",
+      "article_count": 17,
+      "parent_article": "9",
+      "covers": "Common specifications (Annexes I-XIII) for the detection or quantification of the highest-risk markers in class D devices (HIV, HTLV, HCV, HBV, blood grouping ABO/Rh/Kell/Kidd/Duffy, and others)"
+    },
+    {
+      "id": "MDR_AMEND_TRANSITIONAL_607",
+      "celex_id": "32023R0607",
+      "title": "Extended transitional provisions for legacy IVDs (amends IVDR Art. 110)",
+      "article_count": 3,
+      "parent_article": "110",
+      "covers": "Amends the IVDR Art. 110/112 transitional provisions in parallel with the MDR extension; keeps legacy Directive 98/79/EC devices lawfully placed on the market available beyond the original one-year sell-off limit"
+    },
+    {
+      "id": "IVDR_IMPL_DEC_HARMONISED_STANDARDS",
+      "celex_id": "32021D1195",
+      "title": "Harmonised standards for in vitro diagnostic medical devices (IVDR presumption of conformity)",
+      "article_count": 3,
+      "parent_article": "8",
+      "covers": "The OJ-listed harmonised standards (Annex) that confer a presumption of conformity under IVDR Art. 8. Ingested at the 2021 base version; refresh to consolidated for later additions"
+    }
+  ],
+
+  "proportionality": {
+    "description": "IVDR classifies in vitro diagnostic devices into four risk classes (A, B, C, D) per the seven Annex VIII rules, with ascending conformity-assessment scrutiny. The big shift from Directive 98/79/EC: notified-body involvement is now required for roughly 85% of IVDs (only class A non-sterile is self-declared), where the old list-based directive left most IVDs self-certified.",
+    "tiers": [
+      {
+        "name": "class_A",
+        "applies_to": "Low individual and low public-health risk (e.g. instruments, specimen receptacles, buffers, wash solutions, general laboratory reagents)",
+        "key_articles": ["47", "48(9)"],
+        "note": "Self-declaration of conformity (no notified body) for class A. Class A sterile devices require notified-body involvement limited to the aspects relating to establishing, securing and maintaining sterile conditions (Art. 48(9))."
+      },
+      {
+        "name": "class_B",
+        "applies_to": "Moderate individual / low public-health risk — the default class where no other rule applies (e.g. self-testing pregnancy tests, cholesterol, many clinical chemistry analytes)",
+        "key_articles": ["47", "48(7)"],
+        "note": "Notified-body assessment via Annex IX (QMS + technical documentation assessment on a representative basis) or Annex XI. Performance evaluation per Art. 56 and Annex XIII required."
+      },
+      {
+        "name": "class_C",
+        "applies_to": "High individual / moderate public-health risk (e.g. cancer markers, genetic testing, companion diagnostics, infectious-disease tests not in class D, self-tests for serious conditions)",
+        "key_articles": ["47", "48(3-6)"],
+        "note": "Notified-body assessment with technical-documentation scrutiny. Companion diagnostics (class C) additionally require a consultation with the relevant medicinal-product competent authority or EMA (Art. 48(3-4))."
+      },
+      {
+        "name": "class_D",
+        "applies_to": "Highest individual and public-health risk — transmissible agents in blood/tissue/organ donation and life-threatening infectious agents with high propagation risk (e.g. HIV, HBV, HCV, HTLV, blood grouping)",
+        "key_articles": ["47", "48(3-5)", "100"],
+        "note": "Highest scrutiny: notified-body QMS + technical documentation assessment, batch verification, plus EU reference laboratory involvement (Art. 100) for verification of performance and batch testing, and common specifications (Reg (EU) 2022/1107) where adopted."
+      },
+      {
+        "name": "companion_diagnostics",
+        "applies_to": "Devices essential for the safe and effective use of a corresponding medicinal product (Art. 2(7))",
+        "key_articles": ["48(3-4)", "Annex IX 5.2"],
+        "note": "Classified class C at minimum. Conformity assessment requires a scientific-opinion consultation with the medicinal-product authority (national CA or EMA). Cross-references MDR Art. 117(5) where the device is integral to the medicinal product."
+      }
+    ],
+    "derogations": [
+      {
+        "article": "110",
+        "applies_to": "Devices with certificates or declarations under Directive 98/79/EC (IVDD)",
+        "description": "Transitional provisions, amended by Reg (EU) 2022/112 and Reg (EU) 2023/607: staggered dates of application by class (class D to 2025, class C to 2026, class B and class A sterile to 2027) for legacy devices meeting the transitional conditions."
+      },
+      {
+        "article": "54",
+        "applies_to": "Devices essential for health protection with no adequate alternative",
+        "description": "Member States may authorise, on duly justified request, an individual device without completed conformity assessment in the interest of public health or patient safety. Valid only in the authorising Member State; Commission and other Member States must be informed."
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "notified_body_shift_85pct",
+      "severity": "high",
+      "article": "47",
+      "description": "The single biggest IVDR change: under Directive 98/79/EC only ~15% of IVDs needed notified-body involvement; under IVDR roughly 85% do, because classification is now rule-based (Annex VIII) not list-based. Manufacturers who self-certified under the IVDD must not assume the same route survives — reclassify every device against the seven Annex VIII rules first.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "performance_evaluation_three_pillars",
+      "severity": "high",
+      "article": "56",
+      "description": "IVDR 'performance evaluation' (Art. 56, Annex XIII) is not the MDR 'clinical evaluation'. It rests on THREE pillars that must each be demonstrated: scientific validity (the association of the analyte with the clinical condition), analytical performance (the device correctly detects/measures the analyte), and clinical performance (the results correlate with the clinical condition/target population). Missing any pillar is a common certificate-refusal cause.",
+      "detail_level": "quick"
+    },
+    {
+      "id": "class_d_reference_labs",
+      "severity": "high",
+      "article": "100",
+      "description": "Class D devices additionally require EU reference laboratory (EURL) involvement under Art. 100: verification of claimed performance and, where common specifications or batch testing apply, batch verification before release. EURL capacity is limited, so class D conformity timelines must budget for it. Common specifications for class D are set by Reg (EU) 2022/1107.",
+      "detail_level": "full"
+    },
+    {
+      "id": "companion_diagnostics_dual_consult",
+      "severity": "medium",
+      "article": "48(3-4)",
+      "description": "A companion diagnostic (class C) cannot be certified on the IVD track alone: the notified body must obtain a scientific opinion from the competent authority for the associated medicinal product (national authority, or EMA where the medicinal product is centrally authorised). This consultation adds time and must reference the specific medicinal product SmPC.",
+      "detail_level": "full"
+    },
+    {
+      "id": "common_specifications_binding",
+      "severity": "medium",
+      "article": "9",
+      "description": "Where the Commission adopts common specifications (CS) under Art. 9 (e.g. Reg (EU) 2022/1107 for class D detection/quantification of specific agents), manufacturers MUST comply with them unless they can duly justify a solution at least equivalent. CS are not optional guidance — they are the presumed state of the art for the covered devices.",
+      "detail_level": "full"
+    }
+  ],
+
+  "cross_regulation": [
+    {
+      "regulation": "MDR",
+      "relationship": "sister_regulation",
+      "key_provisions": ["MDR Art. 1", "MDR Art. 117(5)"],
+      "note": "Medical Device Regulation (EU) 2017/745 is the companion to IVDR. Same structure and horizontal obligations (PMS, vigilance, UDI, EUDAMED, PRRC) but a different classification system (A-D vs I-III) and different annexes. Devices integral to a medicinal product are addressed by MDR Art. 117(5)."
+    },
+    {
+      "regulation": "AI_ACT",
+      "relationship": "stacking",
+      "key_provisions": ["AI Act Art. 6(1)", "AI Act Annex I"],
+      "note": "AI-based IVDs (e.g. algorithm-driven diagnostic software) are high-risk under AI Act Art. 6(1) (IVDR is in AI Act Annex I). AI Act conformity assessment stacks with IVDR: risk management, data governance, transparency, human oversight, and accuracy/robustness/cybersecurity apply alongside IVDR performance evaluation."
+    },
+    {
+      "regulation": "GDPR",
+      "relationship": "stacking",
+      "key_provisions": ["IVDR Art. 110", "GDPR Art. 9"],
+      "note": "IVDs process health and often genetic data. Performance studies with human samples must comply with GDPR Art. 9 (special-category data) and informed consent; IVDR Art. 110 addresses data protection in EUDAMED and device registries."
+    },
+    {
+      "regulation": "MEDICINAL_PRODUCTS_DIR",
+      "relationship": "complementary",
+      "key_provisions": ["IVDR Art. 48(3-4)", "Directive 2001/83/EC"],
+      "note": "Companion-diagnostic conformity assessment consults the medicinal-product framework (national authority or EMA) to confirm the device is essential for the safe and effective use of the specific medicinal product."
+    }
+  ],
+
+  "key_structures": [
+    {
+      "article": "47",
+      "title": "Classification of devices — the four-class rule system",
+      "description": "Devices are classified as class A, B, C or D by applying the seven implementing rules in Annex VIII, taking account of the intended purpose and the risk to the individual and to public health. The strictest applicable rule/sub-rule sets the class. Disputes between manufacturer and notified body on class are decided by the competent authority.",
+      "detail_level": "full"
+    },
+    {
+      "article": "48",
+      "title": "Conformity assessment procedures — class-dependent",
+      "description": "Class A → self-declaration (Annex II/III technical documentation), with notified-body involvement only for sterile aspects. Class B → Annex IX (QMS + assessment of technical documentation on a representative basis) or Annex XI. Class C → Annex IX with technical-documentation scrutiny (+ companion-diagnostic consultation). Class D → Annex IX + batch verification + EU reference laboratory involvement, or Annex X + Annex XI.",
+      "detail_level": "full"
+    },
+    {
+      "article": "56",
+      "title": "Performance evaluation — scientific validity, analytical and clinical performance",
+      "description": "Performance evaluation must be based on a performance-evaluation plan and demonstrate scientific validity, analytical performance and clinical performance appropriate to the device's intended purpose. It is a continuous process updated with post-market performance follow-up (PMPF) data throughout the lifecycle. Annex XIII sets the methodology; Annex XIV covers performance studies.",
+      "detail_level": "full"
+    },
+    {
+      "article": "100",
+      "title": "EU reference laboratories — class D verification",
+      "description": "For class D devices, EU reference laboratories designated under Art. 100 verify the performance claimed by the manufacturer and the compliance of devices with applicable common specifications, and carry out batch testing where required. Notified bodies must take EURL opinions into account before issuing or renewing a certificate.",
+      "detail_level": "full"
+    }
+  ],
+
+  "key_recitals": [
+    {
+      "number": 4,
+      "clarifies": "Rationale for the risk-based reclassification — the previous list-based directive left the majority of IVDs self-certified; the regulation introduces a rule-based classification to match conformity-assessment scrutiny to actual risk.",
+      "detail_level": "quick"
+    },
+    {
+      "number": 66,
+      "clarifies": "Performance evaluation basis — performance evaluation should follow a defined and methodologically sound procedure demonstrating scientific validity, analytical and clinical performance, using the best available evidence and updated with post-market data.",
+      "detail_level": "full"
+    }
+  ],
+
+  "national_implementation": {
+    "pattern": "IVDR is a regulation (directly applicable). Member States designate competent authorities and notified bodies and set penalties. Search Law MCPs for national medical-device / IVD statutes that supplement IVDR.",
+    "known_examples": [
+      {
+        "country": "DE",
+        "law": "Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+        "note": "The German implementation act supplements both MDR and IVDR — competent authorities (BfArM/PEI), performance studies, penalties and market surveillance."
+      },
+      {
+        "country": "SE",
+        "law": "SFS 2021:600 (Lag om medicintekniska produkter)",
+        "note": "The Swedish medical-devices act covers IVDR alongside MDR, with Läkemedelsverket as competent authority."
+      }
+    ]
+  },
+
+  "evidence_hint": "Call get_evidence_requirements(regulation='IVDR') for per-article audit artifacts. Key artifacts: Technical Documentation (Annexes II-III), Performance Evaluation Report and plan (Art. 56, Annex XIII), Scientific Validity / Analytical Performance / Clinical Performance reports, Risk Management File (Annex I), QMS documentation (Annex IX), Post-Market Surveillance and Performance Follow-up plan (Art. 78-81, Annex XIII Part B), Declaration of Conformity, UDI documentation, and for class D the EU reference laboratory opinion (Art. 100).",
+
+  "timeline": [
+    {
+      "event": "IVDR entered into force",
+      "date": "2017-05-25",
+      "note": "5-year transition period begins"
+    },
+    {
+      "event": "IVDR date of application",
+      "date": "2022-05-26",
+      "note": "IVDR applicable. Repeals Directive 98/79/EC (IVDD)."
+    },
+    {
+      "event": "Extended transition — class D legacy devices",
+      "date": "2025-12-31",
+      "note": "Amended by Reg (EU) 2022/112 and Reg (EU) 2023/607 — staggered date for placing legacy class D devices on the market under the transitional conditions."
+    },
+    {
+      "event": "Extended transition — class C legacy devices",
+      "date": "2026-12-31",
+      "note": "Staggered date for legacy class C devices."
+    },
+    {
+      "event": "Extended transition — class B and class A sterile legacy devices",
+      "date": "2027-12-31",
+      "note": "Staggered date for legacy class B and class A sterile devices."
+    }
+  ],
+
+  "citation_format": "Cite as: IVDR Art. X(Y). For Annex references: IVDR Annex N, Chapter/Section X. For common specifications: Reg (EU) 2022/1107. For MDCG guidance: MDCG YYYY-NN on [topic]."
+}

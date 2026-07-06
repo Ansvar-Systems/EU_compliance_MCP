@@ -1,0 +1,57 @@
+{
+  "id": "MDR_IMPL_DEC_HARMONISED_STANDARDS",
+  "full_name": "Commission Implementing Decision (EU) 2021/1182 — harmonised standards for medical devices drafted in support of Regulation (EU) 2017/745 (MDR)",
+  "celex_id": "32021D1182",
+  "effective_date": "2021-07-19",
+  "eur_lex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021D1182",
+  "articles": [
+    {
+      "number": "1",
+      "text": "The references of harmonised standards for medical devices drafted in support of Regulation (EU) 2017/745 and listed in the Annex to this Decision are hereby published in the Official Journal of the European Union."
+    },
+    {
+      "number": "2",
+      "text": "This Decision shall enter into force on the day of its publication in the Official Journal of the European Union."
+    },
+    {
+      "number": "Annex I",
+      "title": "No",
+      "text": "Reference of the standard\n1.\nEN ISO 10993-23:2021\nBiological evaluation of medical devices - Part 23: Tests for irritation (ISO 10993-23:2021)\n2.\nEN ISO 11135:2014\nSterilization of health care products - Ethylene oxide - Requirements for the development, validation and routine control of a sterilization process for medical devices (ISO 11135:2014)\nEN ISO 11135:2014/A1:2019\n3.\nEN ISO 11137-1:2015\nSterilization of health care products - Radiation - Part 1: Requirements for development, validation and routine control of a sterilization process for medical devices (ISO 11137-1:2006, including Amd 1:2013)\nEN ISO 11137-1:2015/A2:2019\n4.\nEN ISO 11737-2:2020\nSterilization of health care products - Microbiological methods - Part 2: Tests of sterility performed in the definition, validation and maintenance of a sterilization process (ISO 11737-2:2019)\n5.\nEN ISO 25424:2019\nSterilization of health care products - Low temperature steam and formaldehyde - Requirements for development, validation and routine control of a sterilization process for medical devices (ISO 25424:2018)"
+    }
+  ],
+  "definitions": [],
+  "recitals": [
+    {
+      "recital_number": 1,
+      "text": "In accordance with Article 8 of Regulation (EU) 2017/745 of the European Parliament and of the Council (2), devices that are in conformity with the relevant harmonised standards, or the relevant parts of those standards, the references of which have been published in the Official Journal of the European Union, are to be presumed to be in conformity with the requirements of that Regulation covered by those standards or parts thereof."
+    },
+    {
+      "recital_number": 2,
+      "text": "Regulation (EU) 2017/745 repealed Council Directives 90/385/EEC (3) and 93/42/EEC (4) with effect from 26 May 2021."
+    },
+    {
+      "recital_number": 3,
+      "text": "By Commission Implementing Decision C(2021) 2406 (5), the Commission made a request to the European Committee for Standardization (CEN) and the European Committee for Electrotechnical Standardization (Cenelec) for the revision of existing harmonised standards on medical devices developed in support of Directives 90/385/EEC and 93/42/EEC and the drafting of new harmonised standards in support of Regulation (EU) 2017/745."
+    },
+    {
+      "recital_number": 4,
+      "text": "On the basis of the request set out in Implementing Decision C(2021) 2406, CEN revised the existing harmonised standards EN ISO 11135:2014, EN ISO 11137-1:2015, EN ISO 11737-2:2009 and EN ISO 25424:2011, in order to include the latest technical and scientific progress, and to adapt them to the relevant requirements of Regulation (EU) 2017/745. This resulted in the adoption of the new harmonised standards EN ISO 11737-2:2020 and EN ISO 25424:2019, and of the amendments EN ISO 11135:2014/A1:2019 to EN ISO 11135:2014 and EN ISO 11137-1:2015/A2:2019 to EN ISO 11137-1:2015."
+    },
+    {
+      "recital_number": 5,
+      "text": "On the basis of the request set out in the Implementing Decision C(2021) 2406, CEN drafted the new harmonised standard EN ISO 10993-23:2021."
+    },
+    {
+      "recital_number": 6,
+      "text": "The Commission together with CEN has assessed whether the standards revised and drafted by CEN comply with the request set out in Implementing Decision C(2021) 2406."
+    },
+    {
+      "recital_number": 7,
+      "text": "The harmonised standards EN ISO 10993-23:2021, EN ISO 11737-2:2020 and EN ISO 25424:2019 and the amendments EN ISO 11135:2014/A1:2019 to EN ISO 11135:2014 and EN ISO 11137-1:2015/A2:2019 to EN ISO 11137-1:2015 satisfy the requirements which they aim to cover and which are set out in Regulation (EU) 2017/745. It is therefore appropriate to publish the references of those standards in the Official Journal of the European Union."
+    },
+    {
+      "recital_number": 8,
+      "text": "Compliance with a harmonised standard confers a presumption of conformity with the corresponding essential requirements set out in Union harmonisation legislation from the date of publication of the reference of such standard in the Official Journal of the European Union. This Decision should therefore enter into force on the date of its publication,"
+    }
+  ]
+}
