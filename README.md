@@ -1,5 +1,20 @@
 # EU Regulations MCP Server
 
+> ## ⚰️ RETIRED — folded into `ansvar-mcp-fleet` (2026-07-07)
+>
+> This standalone repo is **archived**. The eu-regulations corpus now lives at
+> [`Ansvar-Systems/ansvar-mcp-fleet`](https://github.com/Ansvar-Systems/ansvar-mcp-fleet)
+> under `mcps/eu-regulations/` (fold: fleet PR #594; cutover: deploy PR #653, live 2026-07-07).
+> Production serves the fleet-built image `ghcr.io/ansvar-systems/eu-regulations` with the
+> CI-published `eu-regulations-data-v2` data image — including the 7 MDR/IVDR delegated +
+> implementing acts and the 14 robotics instruments (#109).
+>
+> **All new content and fixes go to the fleet monorepo** (seeds in `mcps/eu-regulations/seed/`,
+> build via `scripts/build-chassis-db.ts`). Open PRs at archive time, for the record:
+> #110 (rail EU-law spine — port its instruments to fleet seeds), #113 (README banner,
+> superseded by this notice), #111 (dependabot), #57 / #4 (stale). The gateway endpoint
+> below still works — it now serves from the fleet deployment.
+
 <!-- ANSVAR-CTA-BEGIN -->
 > ### ▶ Try this MCP instantly via Ansvar Gateway
 > **100 free queries/day · no card required · OAuth signup at [ansvar.eu/gateway](https://ansvar.eu/gateway)**
