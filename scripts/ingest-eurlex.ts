@@ -241,6 +241,16 @@ const REGULATION_METADATA: Record<string, { id: string; full_name: string; effec
   '32014L0035': { id: 'LVD', full_name: 'Low Voltage Directive 2014/35/EU', effective_date: '2016-04-20' },
   '32014L0034': { id: 'ATEX', full_name: 'ATEX Directive 2014/34/EU - Equipment for Potentially Explosive Atmospheres', effective_date: '2016-04-20' },
   '32012R1025': { id: 'STANDARDISATION_REG', full_name: 'Regulation (EU) No 1025/2012 on European Standardisation', effective_date: '2013-01-01' },
+  // Rail — the EU railway cybersecurity vertical (rail-cybersecurity-expertise
+  // cross-references these by CELEX). The Fourth Railway Package interoperability
+  // + safety framework directives, the Common Safety Method for risk evaluation
+  // and assessment (CSM-RA — the legal risk process CLC/TS 50701 cyber risk
+  // assessment plugs into), and the CCS TSI (control-command & signalling /
+  // ERTMS/ETCS/FRMCS). All EUR-Lex, GREEN (Decision 2011/833/EU / CC-BY-4.0).
+  '32016L0797': { id: 'RAIL_INTEROP_DIR', full_name: 'Directive (EU) 2016/797 on the interoperability of the rail system within the European Union (recast)', effective_date: '2016-06-15' },
+  '32016L0798': { id: 'RAIL_SAFETY_DIR', full_name: 'Directive (EU) 2016/798 on railway safety (recast)', effective_date: '2016-06-15' },
+  '32013R0402': { id: 'CSM_RA', full_name: 'Commission Implementing Regulation (EU) No 402/2013 on the common safety method for risk evaluation and assessment (CSM-RA)', effective_date: '2013-05-21' },
+  '32023R1695': { id: 'CCS_TSI', full_name: 'Commission Implementing Regulation (EU) 2023/1695 on the technical specification for interoperability relating to the control-command and signalling subsystems (CCS TSI), repealing Regulation (EU) 2016/919', effective_date: '2023-09-28' },
   // Market-surveillance / accreditation — the enforcement backbone that the CE
   // directives above are policed under (Reg 765/2008 is cited directly by EMC/
   // LVD/ATEX; Reg 2019/1020 governs compliance of products placed on the market).
