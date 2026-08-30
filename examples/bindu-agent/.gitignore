@@ -1,0 +1,14 @@
+# Python virtual env + bytecode cache
+.venv/
+__pycache__/
+*.pyc
+
+# Bindu generates a DID keypair on first run — never commit private keys.
+.bindu/
+
+# Runtime logs
+logs/
+
+# Local environment overrides (the example provides .env.example as a template)
+.env
+.env.local
